@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel, { refreshPaths } from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path';
 
 
 export default defineConfig({
@@ -18,4 +19,9 @@ export default defineConfig({
         }),
         vue(),
     ],
+    resolve: {
+        alias: {
+          '@': resolve(__dirname, 'resources/js'),
+        },
+    },
 });
