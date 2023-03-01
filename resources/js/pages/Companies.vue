@@ -1,14 +1,12 @@
 <template>
 
+        <img-banner>
+            <img  src="../../img/companies-banner.png">
+            <template #text>الشركات الخاصة بمسار التطوير العقاري </template>
+
+        </img-banner>
 
 
-
-    <section class="banner relative">
-
-        <div class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <img class="w-full" src="img/companies-banner.png">
-        <h1 class=" z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 translate-y-3/4">الشركات الخاصة بمسار التطوير العقاري </h1>
-    </section>
 
     <section class="company py-28 bg-background-section">
         <div class="container mx-auto ">
@@ -64,10 +62,13 @@
 
 <script>
 import navbarComponent from '@/components/Navbar.vue'
-import imageBanner from '@/components/ImgBanner.vue'
+import ImgBanner from '@/components/ImgBanner.vue'
 
 export default {
-    components: [navbarComponent, imageBanner]
+    components: {
+        navbarComponent,
+        ImgBanner,
+    }
 }
 </script>
 <style scoped>

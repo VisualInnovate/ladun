@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>main page </title>
-{{----}}
+
     @vite(['resources/css/app.css','resources/js/main.js'])
 
 </head>
