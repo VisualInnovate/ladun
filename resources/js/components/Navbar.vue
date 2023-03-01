@@ -20,7 +20,7 @@
                 @click="mobileMenuOpen = true"
             >
                 <span class="sr-only">Open main menu</span>
-                <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon class="h-6 w-6 text-white" aria-hidden="true" />
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 ltr:right-0 rtl:left-0">
@@ -28,8 +28,8 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
-                class="text-md font-light leading-6 text-white"
-                >{{ item.name }}</a
+                class="text-md font-light leading-6 text-white hover:text-gray-700"
+                >{{ item.name_ar }}</a
             >
         </div>
     </nav>
@@ -53,7 +53,7 @@
                     @click="mobileMenuOpen = false"
                 >
                     <span class="sr-only">Close menu</span>
-                    <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon class="h-6 w-6 text-white" aria-hidden="true" />
                 </button>
             </div>
             <div class="mt-6 flow-root">
@@ -63,8 +63,8 @@
                             v-for="item in navigation"
                             :key="item.name"
                             :href="item.href"
-                            class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-                            >{{ item.name }}</a
+                            class="-mx-3 block rounded-lg py-2 px-3 text-md font-light leading-6 text-white hover:bg-gray-400/10"
+                            >{{ item.name_ar }}</a
                         >
                     </div>
                 </div>
@@ -79,13 +79,13 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = [
-    { name: "Main", href: "#" },
-    { name: "About us", href: "#" },
-    { name: "Companies", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Investors Relations", href: "#" },
-    { name: "Contact us", href: "#" },
-    { name: "Join us", href: "#" },
+    { name: "Main", name_ar:"الرئيسية" ,href: "#" },
+    { name: "About us", name_ar:"نبذة عنا" ,href: "#" },
+    { name: "Companies", name_ar:"الشركات" ,href: "#" },
+    { name: "Projects", name_ar:"المشاريع" ,href: "#" },
+    { name: "Investors Relations", name_ar:"علاقات المستثمرين" ,href: "#" },
+    { name: "Contact us", name_ar:"اتصل بنا" ,href: "#" },
+    { name: "Join us", name_ar:"انضم الينا" ,href: "#" },
 ];
 const mobileMenuOpen = ref(false);
 </script>

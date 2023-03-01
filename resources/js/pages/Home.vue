@@ -12,7 +12,7 @@
             <source src="../../videos/28mb_home_page_video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
-        <img class="z-30 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="../../img/logowithouttext.svg" />
+        <img class="z-30 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  h-48 lg:h-auto" src="../../img/logowithouttext.svg" />
     </header>
 </template>
 
