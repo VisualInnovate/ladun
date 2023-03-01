@@ -1,6 +1,7 @@
 import "./bootstrap";
-
+// import "../css/app.css"
 import { createApp } from "vue";
+import 'flowbite';
 
 import App from "./app.vue";
 
