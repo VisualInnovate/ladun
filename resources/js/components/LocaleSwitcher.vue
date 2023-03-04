@@ -35,7 +35,6 @@ const executeEnCode = () => {
     appLang.setAppLang(i18n.global.locale.value)
     appLang.setAppRtl(true)
     
-
 }
 </script>
 

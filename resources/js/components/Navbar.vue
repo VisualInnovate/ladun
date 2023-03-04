@@ -26,7 +26,7 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
-                class="text-md font-light leading-6 text-white hover:text-gray-700"
+                class="text-md font-normal leading-6 text-white hover:text-gray-700"
                 >{{ $t(item.name) }}</a
             >
         </div>
