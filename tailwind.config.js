@@ -33,6 +33,11 @@ module.exports = {
             translate: {
                 // 4.25: "17rem",
             },
+            backgroundImage: {
+                'subtraction-png': "url('/resources/img/subtraction.png')",
+                'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
+
+            }
         },
         fontSize: {
             xs: "11px",

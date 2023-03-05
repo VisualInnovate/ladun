@@ -6,6 +6,8 @@ const routes = [
 
     { path: "/media-center", component: () => import("@/pages/MediaCenter.vue"), name: 'Media Center', meta:{title:"Media Center"}  },
     { path: "/about", component: () => import("@/pages/AboutPage.vue"), name: 'About Us', meta:{title:"About Us"}  },
+    { path: "/investors-ads", component: () => import("@/pages/InvestorsAds.vue"),name: 'Investors Ads',meta:{title:"investors Ads"}  },
+    { path: "/financial", component: () => import("@/pages/FinancialData.vue"),name: 'Financial',meta:{title:"financial"}  },
 
 ];
 const router = createRouter({
