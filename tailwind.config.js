@@ -27,6 +27,11 @@ module.exports = {
                 "background-overlay": "rgba(0,0,0,0.5)",
                 "background-section": "#FFFDF6",
             },
+            backgroundImage: {
+                'subtraction-png': "url('/resources/img/subtraction.png')",
+                'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
+
+            }
         },
         fontSize: {
             sm: "16px",

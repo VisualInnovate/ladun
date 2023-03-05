@@ -5,7 +5,9 @@ const routes = [
     { path: "/companies", component: () => import("@/pages/Companies.vue"),meta:{title:"Companies"}  },
 
     { path: "/media-center", component: () => import("@/pages/MediaCenter.vue"),meta:{title:"Media Center"}  },
+    { path: "/investors-ads", component: () => import("@/pages/InvestorsAds.vue"),meta:{title:"investors Ads"}  },
     { path: "/about", component: () => import("@/pages/AboutPage.vue"),meta:{title:"About Us"}  },
+    { path: "/financial", component: () => import("@/pages/FinancialData.vue"),meta:{title:"financial"}  },
 
 ];
 const router = createRouter({
