@@ -17,15 +17,21 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+                sans: ["Nunito","Cairo", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 "gray-border": "#B5B5B5",
                 "gray-border-light": "#E6E6E6",
                 "dark-brown": "#AF9744",
                 "light-brown": "#C4A94C",
+                "lightest-brown": "#FFFDF6",
                 "background-overlay": "rgba(0,0,0,0.5)",
                 "background-section": "#FFFDF6",
+                "black": "#2B2B2B",
+                "grey": "#474747",
+            },
+            translate: {
+                // 4.25: "17rem",
             },
             backgroundImage: {
                 'subtraction-png': "url('/resources/img/subtraction.png')",

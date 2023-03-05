@@ -1,38 +1,42 @@
-import { defineConfig } from 'vite';
-import laravel, { refreshPaths } from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path';
-
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
+import vue from "@vitejs/plugin-vue";
+import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from "url";
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            "@": resolve(__dirname, "./resources/js"),
+        },
+    },
     plugins: [
         laravel({
             input: [
-                'resources/css/app.css',
+                "resources/css/app.css",
                 // 'resources/js/app.js',
-                'resources/js/main.js',
-            ],
-            refresh: [
-                ...refreshPaths,
-                'app/Http/Livewire/**',
-                "./node_modules/flowbite/**"
+                "resources/js/main.js",
             ],
         }),
         vue(),
+        // added this vueI18nPlugin to define locales
+        VueI18nPlugin({
+            include: resolve(
+                dirname(fileURLToPath(import.meta.url)),
+                "./resources/js/locales/**"
+            ),
+        }),
     ],
-    resolve: {
-        alias: {
-          '@': resolve(__dirname, 'resources/js'),
-        },
-    },
+
     server: {
         watch: {
-          ignored: ['!**/node_modules/flowbite/**']
-        }
-      },
-      // The watched package must be excluded from optimization,
-      // so that it can appear in the dependency graph and trigger hot reload.
-      optimizeDeps: {
-        exclude: ['flowbite']
-      }
+            ignored: ["!**/node_modules/flowbite/**"],
+        },
+    },
+    // The watched package must be excluded from optimization,
+    // so that it can appear in the dependency graph and trigger hot reload.
+    // optimizeDeps: {
+    //     exclude: ["flowbite"],
+    // },
 });
