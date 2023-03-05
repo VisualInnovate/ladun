@@ -51,7 +51,7 @@
                     <template #head>ملتقى التطوع البلدي</template>
                     <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
                     <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                        class="h-full w-full object-cover img-media-center rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                         src="../../img/media-center.png" alt="">
                 </card-link>
 
