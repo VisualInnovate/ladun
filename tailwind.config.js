@@ -35,12 +35,13 @@ module.exports = {
             },
         },
         fontSize: {
+            xs: "11px",
             sm: "16px",
             base: "18px",
             xl: "20px",
             "2xl": "22px",
             "3xl": "25px",
-            "4xl": "35px",
+            "4xl": "35px", 
         },
     },
 
