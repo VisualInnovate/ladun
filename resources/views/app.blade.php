@@ -15,8 +15,9 @@
 <div id="app">
 
 </div>
+
 <script>
-	const importFlowbiteFunc = function(flowbitePathStr)
+    const importFlowbiteFunc = function(flowbitePathStr)
 {
     const flowbiteScriptEl = document.createElement('script')
     flowbiteScriptEl.setAttribute(
@@ -24,7 +25,7 @@
     )
     document.body.appendChild(flowbiteScriptEl)
 }
-importFlowbiteFunc('../../node_modules/flowbite/dist/flowbite.min.js') // here goes your path to a local flowbite.js you want to import
+importFlowbiteFunc('../../node_modules/flowbite/dist/flowbite.js') // here goes your path to a local flowbite.js you want to import
 </script>
 </body>
 </html>
