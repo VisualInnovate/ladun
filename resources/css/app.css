@@ -17,4 +17,7 @@
     h3 {
         @apply text-xl;
     }
+    p {
+        @apply text-xs;
+    }
 }
