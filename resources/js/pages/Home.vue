@@ -1,4 +1,5 @@
 <template>
+    <!-- header section -->
     <header class="relative flex h-screen overflow-hidden">
         <div class="px-6 pt-6 lg:px-8 w-full">
             <Navbar />
@@ -32,29 +33,27 @@
         {{ $t('scrollDown') }}
         <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2" />
     </button>
-
+    <!-- end of header section -->
+    <!-- Latest Project section -->
     <section>
-        <div class="flex py-10 items-center" >
+        <div class="grid grid-cols-4 gap-4 my-10" >
     
-                <h2 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+                <h2 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
-        
-                <h2 class="flex-initial text-center text-dark-brown px-10">
+                <h2 class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10   after:bg-grey after:rounded after:mr-2 after:my-auto">
                     {{ $t('realEstateManagement') }}
                 </h2>
-                <div class="flex-initial border-l-2 border-grey w-2 h-10 ">
-                     
-                </div>
-                <h2 class="flex-initial text-center text-dark-brown px-10">
+
+                <h2 class=" flex text-dark-brown">
                     {{ $t('realEstateAssetManagement') }}
                 </h2>
     
         </div>
 
-        <div class="flex flex-row container mx-auto py-2 md:flex-nowrap flex-wrap">
+        <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
 
-            <div v-for="index in 3" :key="index" class="rounded-3xl border-2 border-gray-border-light bg-white sm:w-3/4  md:w-full mx-4">
+            <div v-for="index in 4" :key="index" class="rounded-3xl border-2 border-gray-border-light bg-white">
                     <img class="w-full" src="../../img/projects_1.png" alt="Project Photo">
                     <div class="flex items-center">
                         <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3> 
@@ -63,7 +62,7 @@
                             <small class="font-bold">{{ $t('projectLocation') }}</small>
                         </span>
                     </div>
-                    <p class="px-2 text-grey text-sm">{{ $t('projectExampleText') }}</p>
+                    <p class="px-2 text-grey text-xs">{{ $t('projectExampleText') }}</p>
                     <div class="flex justify-end my-4 mx-2">
                         <button class="bg-dark-brown text-white rounded-3xl w-36 h-8">
                             <small>
@@ -90,10 +89,102 @@
             </div>
         </div>
     </section>
+    <!-- End of Latest Project section -->
+
+    <!-- About Us section -->
+    <section class="relative">
+        <div class="flex py-5" >  
+            <h2 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+                {{ $t('AboutLadun') }}
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-3 mx-auto container px-5">
+
+            <p class="px-2 my-auto text-grey text-xs">{{ $t('projectExampleText') }}</p>
+            <div class="grid grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('experienceYears') }}</p></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsUnits') }}</p></div> 
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('affiliate') }}</p></div> 
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/projects_investment.svg" alt="projects_investment" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsInvestment') }}</p></div> 
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsAreas') }}</p></div> 
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                    <img src="../../img/projects_revenue.svg" alt="projects_revenue" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsRevenue') }}</p></div> 
+                </div>
+            </div>
+            <img class="w-full" src="../../img/about_ladun_image.png" alt="About Ladun">
+
+        </div>
+
+        <!-- share your interest -->
+        <div class="rounded-3xl border-2 border-yellow-300 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5">
+            {{ $t('shareYourInterestWithUs') }}
+        </div>
+
+        <!-- dropdown -->
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" justify-between hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50 font-medium text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown text-white rounded-full z-30 absolute w-1/2 h-10 bottom-0 translate-y-[1.5rem] left-1/2 -translate-x-1/2" type="button">{{ $t('choose') }} <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+            </li>
+            </ul>
+        </div>
+
+    </section>
+    <!-- End About Us section -->
+    <!-- footer section -->
+    <LightFooter />
+
 </template>
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
+import LightFooter from "../components/LightFooter.vue"
 import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon } from "@heroicons/vue/24/outline";
 import { MapPinIcon } from "@heroicons/vue/24/solid";
 </script>
+
+<style scoped lang="scss">
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+strong.counter {
+  animation: counter forwards normal 5s ease-in-out;
+  counter-reset: num var(--num);
+}
+strong.counter::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+}
+</style>
