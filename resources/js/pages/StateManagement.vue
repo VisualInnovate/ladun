@@ -120,6 +120,92 @@
 
     </section>
 
+    <section class="relative bg-real-state-managemnt-utility-section bg-cover md:px-16 pt-40 pb-16  text-white flex items-center">
+        <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
+        <div class="z-40   w-full">
+            <h2 class="mb-5 text-light-brown ">high level utility </h2>
+            <p class="text-sm mb-10">for more information please contact on email </p>
+            <div class="flex flex-wrap">
+                <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                    <div class=" p-7 rounded-full bg-white z-20 mb-2">
+                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
+                    </div>
+
+                    <p class="text-sm">garden</p>
+                </div>
+                <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                    <div class=" p-7 rounded-full bg-white z-20 mb-2">
+                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
+                    </div>
+
+                    <p class="text-sm">garden</p>
+                </div>
+                <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                    <div class=" p-7 rounded-full bg-white z-20 mb-2">
+                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
+                    </div>
+
+                    <p class="text-sm">garden</p>
+                </div>
+                <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                    <div class=" p-7 rounded-full bg-white z-20 mb-2">
+                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
+                    </div>
+
+                    <p class="text-sm">garden</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="company-info py-28 bg-background-section">
+
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
+
+                <div class="d-info h-full flex flex-col justify-center">
+                    <h1 class=" text-3xl text-light-brown mb-4">Project </h1>
+                    <p class="mb-24 text-sm">
+                        أصل عقاري يتم إدارته عن طريق لدن للاستثمار ، يقع في عروس البحر الأحمر وفي موقع استراتيجي بشمال
+                        جدة وبالقرب من العديد من مناطق الجذب والخدمات الراقية كان كومباوند أكوا بحلته المميزة والتي
+
+                    </p>
+
+                    <div class="company-button ">
+                        <a class=" special-button text-xl button bg-dark-brown  text-white px-11 py-1 my-5 mb-14 ml-4 rtl:mr-4">
+                            اتصل بنا
+
+                        </a>
+                        <a class=" special-button text-xl button bg-dark-brown w-[80px] text-white px-11 py-1 my-5 mb-14 ml-4 rtl:mr-4">
+                            اتصل بنا
+
+                        </a>
+                        <a class=" special-button text-xl button bg-dark-brown w-[80px] text-white px-11 py-1 my-5 mb-14 ml-4 rtl:mr-4">
+                            اتصل بنا
+
+                        </a>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="img-company-info ">
+                    <img src="../../img/video-real-state-management.png">
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
 
 </template>
 

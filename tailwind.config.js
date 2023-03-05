@@ -37,6 +37,7 @@ module.exports = {
             backgroundImage: {
                 'subtraction-png': "url('/resources/img/subtraction.png')",
                 'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
+                'real-state-managemnt-utility-section': "url('/resources/img/real-managent-utility-section.png')",
 
             }
         },
@@ -47,7 +48,7 @@ module.exports = {
             xl: "20px",
             "2xl": "22px",
             "3xl": "25px",
-            "4xl": "35px", 
+            "4xl": "35px",
         },
     },
 
