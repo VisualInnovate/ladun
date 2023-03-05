@@ -18,4 +18,13 @@ export default {
     residentialLandPlots: "Residential Land Plots",
     areaUnit: "m2",
     unit: "Units",
+    AboutLadun: "About Ladun",
+    experienceYears: "experienceYears",
+    projectsUnits: "projectsUnits",
+    affiliate: "affiliate",
+    projectsInvestment: "projectsInvestment",
+    projectsAreas: "projectsAreas",
+    projectsRevenue: "projectsRevenue",
+    choose: "Choose",
+    shareYourInterestWithUs: "share Your Interest With Us, and we will reply you soon",
 }

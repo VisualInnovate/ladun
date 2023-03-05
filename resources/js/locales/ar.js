@@ -18,4 +18,14 @@ export default {
     residentialLandPlots: "أراضي وحدات سكنية",
     areaUnit: "م2",
     unit: "وحدة",
+    AboutLadun: "عن لدن",
+    experienceYears: "سنوات الخبرة",
+    projectsUnits: "وحدة مطورة وقيد التطوير",
+    affiliate: "شركة تابعة",
+    projectsInvestment: "مشروع استثماري",
+    projectsAreas: "مليون متر مربع إجمالي مساحة المشاريع",
+    projectsRevenue: "مليار ريال سعودي إجمالي قيمة المشاريع",
+    choose: "إختر",
+    shareYourInterestWithUs: "سجل إهتمامك معنا وسنقوم بالرد عليك",
+
 }
