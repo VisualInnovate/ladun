@@ -29,6 +29,7 @@ module.exports = {
                 "background-section": "#FFFDF6",
                 "black": "#2B2B2B",
                 "grey": "#474747",
+                "brown-section": "#2B2B2B",
             },
             translate: {
                 // 4.25: "17rem",

@@ -3,7 +3,7 @@
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
                 <slot />
 
-        <p class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 translate-y-3/4">
+        <p class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
             <slot name="text"/>
         </p>
 

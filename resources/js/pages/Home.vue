@@ -35,21 +35,21 @@
 
     <section>
         <div class="flex py-10 items-center" >
-    
+
                 <h2 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
                     {{ $t('latestProjects') }}
                 </h2>
-        
+
                 <h2 class="flex-initial text-center text-dark-brown px-10">
                     {{ $t('realEstateManagement') }}
                 </h2>
                 <div class="flex-initial border-l-2 border-grey w-2 h-10 ">
-                     
+
                 </div>
                 <h2 class="flex-initial text-center text-dark-brown px-10">
                     {{ $t('realEstateAssetManagement') }}
                 </h2>
-    
+
         </div>
 
         <div class="flex flex-row container mx-auto py-2 md:flex-nowrap flex-wrap">
@@ -57,7 +57,7 @@
             <div v-for="index in 3" :key="index" class="rounded-3xl border-2 border-gray-border-light bg-white sm:w-3/4  md:w-full mx-4">
                     <img class="w-full" src="../../img/projects_1.png" alt="Project Photo">
                     <div class="flex items-center">
-                        <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3> 
+                        <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3>
                         <span class="flex-initial mx-2 text-light-brown">
                             <MapPinIcon class="inline-block h-4 w-4 "/>
                             <small class="font-bold">{{ $t('projectLocation') }}</small>
