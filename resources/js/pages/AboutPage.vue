@@ -1,4 +1,5 @@
 <template>
+        <Navbar />
     <section class="company-info   py-28 bg-background-section">
 
         <div class="container mx-auto">
@@ -216,8 +217,12 @@
             </div>
         </div>
     </section>
+
+    <DarkFooter />
 </template>
 
-<script>
-export default {}
+<script setup>
+import Navbar from "../components/Navbar.vue"
+import DarkFooter from '../components/DarkFooter.vue';
+
 </script>
