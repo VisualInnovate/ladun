@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -10,8 +9,8 @@ module.exports = {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
-        "./node_modules/flowbite/**/*.js",
-        "./node_modules/flowbite/**/*.css",
+        'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
+        'node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
     ],
 
     theme: {
@@ -30,6 +29,9 @@ module.exports = {
                 "black": "#2B2B2B",
                 "grey": "#474747",
                 "brown-section": "#2B2B2B",
+                "light-footer": "#F6F3EB",
+                "light-footer-hr": "#424448",
+                "dark-footer-text-color": "#B4B4B4",
             },
             translate: {
                 // 4.25: "17rem",
@@ -38,7 +40,7 @@ module.exports = {
                 'subtraction-png': "url('/resources/img/subtraction.png')",
                 'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
                 'real-state-managemnt-utility-section': "url('/resources/img/real-managent-utility-section.png')",
-
+                'dark-footer-image': "url('/resources/img/dark_footer/dark_footer_bgImg.png')",
             }
         },
         fontSize: {
@@ -50,11 +52,20 @@ module.exports = {
             "3xl": "25px",
             "4xl": "35px",
         },
+        borderRadius: {
+            'none': '0',
+            DEFAULT: '4px',
+            'md': '0.375rem',
+            'lg': '0.5rem',
+            'xl': '2rem',
+            '2xl': '4rem',
+            'full': '9999px',
+          }
     },
 
     plugins: [
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
-        require("flowbite/plugin"),
+        require('flowbite/plugin'),
     ],
 };
