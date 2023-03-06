@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+
     @vite(['resources/css/app.css','resources/js/main.js'])
 
 </head>
@@ -15,17 +17,5 @@
 <div id="app">
 
 </div>
-
-<script>
-    const importFlowbiteFunc = function(flowbitePathStr)
-{
-    const flowbiteScriptEl = document.createElement('script')
-    flowbiteScriptEl.setAttribute(
-        'src', flowbitePathStr
-    )
-    document.body.appendChild(flowbiteScriptEl)
-}
-importFlowbiteFunc('../../node_modules/flowbite/dist/flowbite.js') // here goes your path to a local flowbite.js you want to import
-</script>
 </body>
 </html>
