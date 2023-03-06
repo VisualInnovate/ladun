@@ -1,13 +1,13 @@
 <template>
     <nav
-        class="z-30 flex items-center justify-between relative"
+        class="z-30 flex items-center justify-between relative bg-background-overlay"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
                 <span class="sr-only">Ladun</span>
                 <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" />
-            </a>
+            </router-link>
         </div>
         
         
@@ -22,12 +22,13 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 ltr:right-0 rtl:left-0">
-            <a
+            <router-link
+
                 v-for="item in navigation"
                 :key="item.name"
-                :href="item.href"
+                :to="item.href"
                 class="text-md font-normal leading-6 text-white hover:text-gray-700"
-                >{{ $t(item.name) }}</a
+                >{{ $t(item.name) }}</router-link
             >
         </div>
         <LocaleSwitcher class="mx-2" />
@@ -81,7 +82,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import LocaleSwitcher from "./LocaleSwitcher.vue";
 const navigation = [
     { name: "main", href: "#" },
-    { name: "aboutUs", href: "#" },
+    { name: "aboutUs", href: { name: 'About Us' } },
     { name: "companies", href: "#" },
     { name: "projects", href: "#" },
     { name: "investorsRelations", href: "#" },
