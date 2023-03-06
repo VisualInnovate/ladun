@@ -1,0 +1,65 @@
+<template>
+    <div class="text-white flex flex-col flex-wrap md:flex-nowrap py-10 px-10 md:pt-24 md:px-24 rounded-t-2xl w-full bg-blend-multiply bg-dark-footer-image bg-black bg-no-repeat bg-cover bg-fixed">
+        <div
+            class="flex justify-between gap-x-36 flex-wrap md:flex-nowrap"
+        >
+        <div class="flex-auto md:max-w-[15rem] py-5 md:py-10">        
+            <div v-for=" button in buttons ">
+                <button class=" w-full border-white border-2 mb-5"><small>{{ button.name }}</small></button>
+            </div>
+            <div class="flex justify-between">
+                <template v-for="icon in icons">
+                    <img :src="`${icon}`" :alt="`${icon}`" class="w-10 h-10" />
+                </template>
+            </div>
+        </div>
+        <div class="flex-auto md:w-64">
+            <div class="flex py-5 md:py-0 gap-3" >
+                <img :src="darkFooterLogo" alrt="darkFooterLogo" /> <h3 class="self-center md:px-5">{{ $t('darkFooterTitle') }}</h3>
+            </div>
+            <p class="text-dark-footer-text-color py-5 md:py-10" >{{ $t('darkFooterText') }}</p>
+            <h3 class="py-2">{{ $t('darkFooterPhone') }}: 920011560 </h3>
+            <h3 class="py-2">{{ $t('darkFooterEmail') }}: investor@ladun.sa</h3>
+        </div>
+    
+        </div>
+        <div class="text-center text-dark-footer-text-color pt-4">{{ $t('copyRights') }}</div>
+    </div>
+</template>
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+import darkFooterLogo from '../../img/dark_footer/logo/dark_footer_logo.svg'
+import linkedinIcon from "../../img/dark_footer/icons/dark_footer_linkedin.svg";
+import twitterIcon from "../../img/dark_footer/icons/dark_footer_twitter.svg";
+import whatsappIcon from "../../img/dark_footer/icons/dark_footer_whatsapp.svg";
+import facebookIcon from "../../img/dark_footer/icons/dark_footer_facebook.svg";
+
+const { t } = useI18n();
+const buttons = [
+    {
+        name:t('mostImportantProjects'),
+        href:'#',
+    },
+    {
+        name:t('companies'),
+        href:'#',
+    },
+    {
+        name:t('contactUs'),
+        href:'#',
+    },
+    {
+        name:t('licenses'),
+        href:'#',
+    },
+]
+
+const icons = [
+    linkedinIcon,
+    twitterIcon,
+    whatsappIcon,
+    facebookIcon,
+];
+
+</script>
