@@ -59,12 +59,12 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a
+                        <router-link
                             v-for="item in navigation"
                             :key="item.name"
-                            :href="item.href"
+                            :to="item.href"
                             class="-mx-3 block rounded-lg py-2 px-3 text-md font-light leading-6 text-white hover:bg-gray-400/10"
-                            >{{ $t(item.name) }}</a
+                            >{{ $t(item.name) }}</router-link
                         >
                     </div>
                 </div>
