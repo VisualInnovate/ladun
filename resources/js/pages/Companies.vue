@@ -1,5 +1,6 @@
 <template>
 
+    <Navbar />
         <img-banner>
             <img  src="../../img/companies-banner.png">
             <template #text>الشركات الخاصة بمسار التطوير العقاري </template>
@@ -61,18 +62,15 @@
         </div>
 
     </section>
+    <DarkFooter />
 </template>
 
-<script>
+<script setup>
 import navbarComponent from '@/components/Navbar.vue'
 import ImgBanner from '@/components/ImgBanner.vue'
+import Navbar from "../components/Navbar.vue"
+import DarkFooter from "../components/DarkFooter.vue";
 
-export default {
-    components: {
-        navbarComponent,
-        ImgBanner,
-    }
-}
 </script>
 <style scoped>
 .img-companies {
