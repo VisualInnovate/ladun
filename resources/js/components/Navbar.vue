@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="z-30 flex items-center justify-between fixed w-full bg-background-overlay"
+        class="z-30 flex items-center justify-between sticky top-0 h-32 w-full bg-background-overlay"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
@@ -35,7 +35,7 @@
     </nav>
     <Dialog as="div" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <DialogPanel
-        class="fixed inset-0 z-10 overflow-y-auto px-6 py-6 lg:hidden"
+        class="fixed top-0 inset-0 z-30 overflow-y-auto px-6 py-6 lg:hidden "
         >
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
