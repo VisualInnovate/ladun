@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="z-30 flex items-center justify-between relative bg-background-overlay"
+        class="z-30 flex items-center justify-between fixed w-full bg-background-overlay"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
@@ -81,13 +81,13 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import LocaleSwitcher from "./LocaleSwitcher.vue";
 const navigation = [
-    { name: "main", href: "#" },
+    { name: "main", href: { name: 'Home' } },
     { name: "aboutUs", href: { name: 'About Us' } },
-    { name: "companies", href: "#" },
-    { name: "projects", href: "#" },
-    { name: "investorsRelations", href: "#" },
-    { name: "contactUs", href: "#" },
-    { name: "joinUs", href: "#" },
+    { name: "companies", href: { name: 'Companies' }  },
+    { name: "projects", href: { name: 'Home' }  },
+    { name: "investorsRelations", href: { name: 'Home' }  },
+    { name: "contactUs", href: { name: 'Contact Us' }  },
+    { name: "joinUs", href: { name: 'Join Us' }  },
 ];
 const mobileMenuOpen = ref(false);
 </script>
