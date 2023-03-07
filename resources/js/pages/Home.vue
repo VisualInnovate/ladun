@@ -51,7 +51,7 @@
 
         <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
 
-            <div v-for="index in 4" :key="index" class="rounded-3xl border-2 border-gray-border-light bg-white">
+            <div v-for="index in 4" :key="index" class="rounded-2xl border-2 border-gray-border-light bg-white">
                     <img class="w-full" src="../../img/projects_1.png" alt="Project Photo">
                     <div class="flex items-center">
                         <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3>
@@ -62,7 +62,7 @@
                     </div>
                     <p class="px-2 text-grey text-xs">{{ $t('projectExampleText') }}</p>
                     <div class="flex justify-end my-4 mx-2">
-                        <button class="bg-dark-brown text-white rounded-3xl w-36 h-8">
+                        <button class="bg-dark-brown text-white rounded-2xl w-36 h-8">
                             <small>
                                 <MagnifyingGlassIcon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 justify-end" />{{ $t('exploreProject') }}
                             </small>
@@ -124,7 +124,7 @@
         </div>
 
         <!-- share your interest -->
-        <div class="rounded-3xl border-2 border-yellow-300 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5">
+        <div class="rounded-2xl border-2 border-yellow-300 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
