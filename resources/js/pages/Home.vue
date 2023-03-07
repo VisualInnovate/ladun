@@ -1,9 +1,7 @@
 <template>
     <!-- header section -->
     <header class="relative flex h-screen overflow-hidden">
-        <div class="px-6 pt-6 lg:px-8 w-full">
-            <Navbar />
-        </div>
+        <Navbar />
         <div
             class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
         ></div>
@@ -24,7 +22,7 @@
             src="../../img/logowithouttext.svg"
         />
         <button
-            class="bg-dark-brown text-white rounded-3xl z-30 absolute top-1/2 ltr:right-0 rtl:left-0 ltr:rotate-90 rtl:-rotate-90 origin-top -translate-y-1/2 ltr:translate-x-1/2 rtl:-translate-x-1/2 w-72 h-10"
+            class="bg-dark-brown text-white rounded-2xl z-30 absolute top-1/2 ltr:right-0 rtl:left-0 ltr:rotate-90 rtl:-rotate-90 origin-top translate-y-1/2 ltr:translate-x-1/2 rtl:-translate-x-1/2 w-72 h-10"
         >
             {{ $t("shareYourInterests") }}
         </button>
