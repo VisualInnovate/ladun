@@ -1,0 +1,1 @@
+import{_ as a}from"./Navbar-4b269149.js";import{_ as o}from"./DarkFooter-c776d6d9.js";import{o as s,c as t,b as e,F as r,a as _}from"./main-f38637f3.js";const n=_("h1",null," Join Us ",-1),u={__name:"JoinUs",setup(c){return(m,i)=>(s(),t(r,null,[e(a),n,e(o)],64))}};export{u as default};

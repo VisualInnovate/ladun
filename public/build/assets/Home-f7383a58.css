@@ -1,1 +1,0 @@
-@property --num{syntax: "<integer>"; initial-value: 0; inherits: false;}strong.counter[data-v-7d52b487]{animation:counter-7d52b487 forwards normal 5s ease-in-out;counter-reset:num var(--num)}strong.counter[data-v-7d52b487]:after{content:counter(num)}@keyframes counter-7d52b487{0%{--num: 0}to{--num: 100}}.custom-dropdown[data-v-7d52b487]{position:absolute}
