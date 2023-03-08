@@ -47,5 +47,17 @@ export default {
     content: "Content",
     sendNow: "Send Now",
     beInTouch: "Be in touch with us, send us your message and we will respond to it as soon as possible.",
-    
+    ext: "ext",
+    fax: "fax",
+    phone: "Phone",
+    location: "Location",
+    followUs: "Follow Us on Social Media Platforms",
+    pleaseFill: "Please fill the following to increase your acceptance chances ",
+    gender: "Gender",
+    academicCertification: "Academic Certification",
+    specialization: "Specialization",
+    position: "Position",
+    uploadCV: "Upload CV",
+    male: "Male",
+    female: "Female",
 }
