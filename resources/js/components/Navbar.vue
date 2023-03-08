@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="z-30 flex items-center justify-between sticky top-0 h-32 w-full bg-background-overlay"
+        class="z-30 flex items-center justify-between sticky top-0 h-32 w-full bg-black"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
