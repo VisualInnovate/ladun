@@ -60,4 +60,11 @@ export default {
     uploadCV: "Upload CV",
     male: "Male",
     female: "Female",
+    easternRegion: "Eastern Region",
+    middleRegion: "Middle Region",
+    westernRegion: "Western Region",
+    northernRegion: "Northern Region",
+    acquaCompound: "Acqua Compound",
+    acquaCompoundText: "acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText ",
+    readMore: "Read more",
 }
