@@ -57,6 +57,12 @@ const routes = [
         name: 'StateManagement',
         meta:{title:"Real State Management"}
     },
+    { 
+        path: "/projects", 
+        component: () => import("@/pages/Projects.vue"),
+        name: 'Projects',
+        meta:{title:"Projects"}
+    },
 
 ];
 const router = createRouter({
