@@ -1,120 +1,604 @@
 <template>
-    <!--
-      This example requires updating your template:
-  
-      ```
-      <html class="h-full bg-gray-100">
-      <body class="h-full">
-      ```
-    -->
-    <div class="min-h-full">
-      <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex h-16 items-center justify-between">
-            <div class="flex items-center">
-              <div class="flex-shrink-0">
-                <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
-              </div>
-              <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
-                  <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+    <Navbar class="bg-black fixed z-50 w-full" />
+    <div class="bg-light-beige-background mb-4 pt-32">
+    <tabs variant="underline" v-model="activeTab" > <!-- class appends to content DIV for all tabs -->
+      <tab v-for="management in data" :name="management.title" :title="$t(management.title)" class="[&>div>div>div>ul]:justify-center">
+        <div class="relative">
+            <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 ">
+              
+            </div>
+            <img :src="management.mainImage.src" :alt="management.mainImage.alt" />
+          </div>
+          <!-- regions -->
+          <tabs variant="underline" v-model="regionActiveTab" class="justify-center" >
+            <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
+              <div class="grid grid-cols-1 gap-5 md:grid-cols-3 mx-2" >
+                <div v-for="project in region.projects" class="rounded-lg border-2 border-gray-border-light bg-white">
+                      <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.src" :alt="project.logo.alt">
+                      <div class="flex flex-col items-center">
+                          <h3 class="flex-initial p-2 font-bold">{{ $t(project.title) }}</h3>
+                          <h4 class="flex-initial flex p-2 text-dark-brown">
+                            <img src="../../img/projects/locationIcon.svg" alt="locationIcon" class="rtl:ml-2 ltr:mr-2" />
+                            {{ $t(region.title) }}
+                          </h4>
+                          <small class="flex-initial mb-2 text-dark-brown">{{ $t(management.title) }}</small>
+                      </div>
+
+                      <div class="grid grid-cols-4 mb-4 ">
+                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 ">{{ $t(project.text) }}
+                        </p>
+                      <div class="flex flex-col justify-end col-start-4 col-end-4">
+                        <button class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs">{{ $t('readMore') }}</button>
+                      </div>
+                      </div>
+
+                      <Carousel :pictures="project.gallery" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
                 </div>
               </div>
-            </div>
-            <div class="hidden md:block">
-              <div class="ml-4 flex items-center md:ml-6">
-                <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <span class="sr-only">View notifications</span>
-                  <BellIcon class="h-6 w-6" aria-hidden="true" />
-                </button>
-  
-                <!-- Profile dropdown -->
-                <Menu as="div" class="relative ml-3">
-                  <div>
-                    <MenuButton class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span class="sr-only">Open user menu</span>
-                      <img class="h-8 w-8 rounded-full" :src="user.imageUrl" alt="" />
-                    </MenuButton>
-                  </div>
-                  <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-                    <MenuItems class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                        <a :href="item.href" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">{{ item.name }}</a>
-                      </MenuItem>
-                    </MenuItems>
-                  </transition>
-                </Menu>
-              </div>
-            </div>
-            <div class="-mr-2 flex md:hidden">
-              <!-- Mobile menu button -->
-              <DisclosureButton class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="sr-only">Open main menu</span>
-                <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-                <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
-              </DisclosureButton>
-            </div>
-          </div>
-        </div>
-  
-        <DisclosurePanel class="md:hidden">
-          <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
-          </div>
-          <div class="border-t border-gray-700 pt-4 pb-3">
-            <div class="flex items-center px-5">
-              <div class="flex-shrink-0">
-                <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
-              </div>
-              <div class="ml-3">
-                <div class="text-base font-medium leading-none text-white">{{ user.name }}</div>
-                <div class="text-sm font-medium leading-none text-gray-400">{{ user.email }}</div>
-              </div>
-              <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="sr-only">View notifications</span>
-                <BellIcon class="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div class="mt-3 space-y-1 px-2">
-              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">{{ item.name }}</DisclosureButton>
-            </div>
-          </div>
-        </DisclosurePanel>
-      </Disclosure>
-  
-      <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-        </div>
-      </header>
-      <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-          <!-- Your content -->
-        </div>
-      </main>
+            </tab>
+          </tabs>
+      </tab>
+  </tabs>
     </div>
-  </template>
-  
-  <script setup>
-  import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-  import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-  
-  const user = {
-    name: 'Tom Cook',
-    email: 'tom@example.com',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  }
-  const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-    { name: 'Reports', href: '#', current: false },
-  ]
-  const userNavigation = [
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
-    { name: 'Sign out', href: '#' },
-  ]
-  </script>
+    <DarkFooter />
+</template>
+
+<script setup>
+import { ref } from "vue";
+import Navbar from "../components/Navbar.vue";
+import DarkFooter from "../components/DarkFooter.vue";
+import { Tabs, Tab, Carousel } from 'flowbite-vue'
+const activeTab = ref('realEstateAssetManagement')
+const regionActiveTab = ref('easternRegion')
+const data = ref([
+  {
+    mainImage: {
+      src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+      alt: 'realEstateManagement'
+    },
+    title: 'realEstateAssetManagement',
+    regions: [
+      {
+        title: 'easternRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of first region in relaEstateAssetManagement
+      {
+        title: 'middleRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of second region in relaEstateAssetManagement
+      {
+        title: 'westernRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of third region in relaEstateAssetManagement
+    ],// end of regions
+  },// end of realEstateAssetManagement
+  {
+    mainImage: {
+      src: new URL('../../img/projects/realEstateManagement.png', import.meta.url).href,
+      alt: 'realEstateManagement'
+    },
+    title: 'realEstateManagement',
+    regions: [
+      {
+        title: 'easternRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of forth project in first region
+        ],// end of projects
+      }, // end of first region in relaEstateAssetManagement
+      {
+        title: 'middleRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of second region in relaEstateAssetManagement
+      {
+        title: 'westernRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of third region in realEstateManagement
+      {
+        title: 'northernRegion',
+        projects: [
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of first project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of second project in first region
+          {
+            logo: {
+              src: new URL('../../img/projects/realEstateAssetManagement.png', import.meta.url).href,
+              alt: 'project_logo'
+            },
+            title: 'acquaCompound',
+            text: 'acquaCompoundText',
+            gallery: [
+              {
+                src: new URL('../../img/projects_1.png', import.meta.url).href,
+                alt: 'project_1'
+              },
+              {
+                src: new URL('../../img/projects_2.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+              {
+                src: new URL('../../img/projects_3.png', import.meta.url).href,
+                alt: 'project_2'
+              },
+            ], // end of gallery
+          }, // end of third project in first region
+        ],// end of projects
+      }, // end of second region in relaEstateAssetManagement
+    ],// end of regions
+  },// end of realEstateManagement
+])
+</script>
