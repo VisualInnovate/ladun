@@ -1,1 +1,0 @@
-import{_ as e}from"./Navbar-306d0521.js";import{_ as t}from"./DarkFooter-aa4c0a93.js";import{o,c as s,b as a,F as c,a as r}from"./main-e63ac474.js";const _=r("h1",null," Contact Us ",-1),u={__name:"ContactUs",setup(n){return(m,l)=>(o(),s(c,null,[a(e),_,a(t)],64))}};export{u as default};
