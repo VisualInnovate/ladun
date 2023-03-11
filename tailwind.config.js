@@ -32,6 +32,7 @@ module.exports = {
                 "light-footer": "#F6F3EB",
                 "light-footer-hr": "#424448",
                 "dark-footer-text-color": "#B4B4B4",
+                "light-beige-background": "#F3EDD4",
             },
             translate: {
                 // 4.25: "17rem",
@@ -41,6 +42,7 @@ module.exports = {
                 'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
                 'real-state-managemnt-utility-section': "url('/resources/img/real-managent-utility-section.png')",
                 'dark-footer-image': "url('/resources/img/dark_footer/dark_footer_bgImg.png')",
+                'about-us-page-image': "url('/resources/img/join_us/join.png')"
             }
         },
         fontSize: {
