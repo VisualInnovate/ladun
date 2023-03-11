@@ -1,6 +1,7 @@
 <template>
+<div>
     <nav
-        class="z-30 flex items-center justify-between sticky top-0 h-32 w-full bg-black"
+        class="z-50 flex items-center justify-between top-0 h-32 w-full"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
@@ -18,7 +19,7 @@
                 @click="mobileMenuOpen = true"
             >
                 <span class="sr-only">Open main menu</span>
-                <Bars3Icon class="h-6 w-6 text-white" aria-hidden="true" />
+                <Bars3Icon v-show="!mobileMenuOpen" class="h-6 w-6 text-white" aria-hidden="true" />
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 ltr:right-0 rtl:left-0">
@@ -33,9 +34,9 @@
         </div>
         <LocaleSwitcher class="mx-2" />
     </nav>
-    <Dialog as="div" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+    <Dialog as="div" @close="mobileMenuOpen = false" :open="mobileMenuOpen" class="z-50">
         <DialogPanel
-        class="fixed top-0 inset-0 z-30 overflow-y-auto px-6 py-6 lg:hidden "
+        class="fixed top-0 inset-0 z-50 overflow-y-auto px-6 py-6 lg:hidden bg-background-overlay w-1/2 "
         >
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
@@ -53,7 +54,7 @@
                     @click="mobileMenuOpen = false"
                 >
                     <span class="sr-only">Close menu</span>
-                    <XMarkIcon class="h-6 w-6 text-white" aria-hidden="true" />
+                    <XMarkIcon class="h-6 w-6 text-white mx-5" aria-hidden="true" />
                 </button>
             </div>
             <div class="mt-6 flow-root">
@@ -71,8 +72,7 @@
             </div>
         </DialogPanel>
     </Dialog>
-    
-
+</div>
 </template>
 
 <script setup>
@@ -84,8 +84,8 @@ const navigation = [
     { name: "main", href: { name: 'Home' } },
     { name: "aboutUs", href: { name: 'About Us' } },
     { name: "companies", href: { name: 'Companies' }  },
-    { name: "projects", href: { name: 'Home' }  },
-    { name: "investorsRelations", href: { name: 'Home' }  },
+    { name: "projects", href: { name: 'Projects' }  },
+    { name: "investorsRelations", href: { name: 'Investors Ads' }  },
     { name: "contactUs", href: { name: 'Contact Us' }  },
     { name: "joinUs", href: { name: 'Join Us' }  },
 ];
