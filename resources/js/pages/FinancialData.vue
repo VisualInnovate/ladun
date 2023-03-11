@@ -1,4 +1,5 @@
 <template>
+    <Navbar class="bg-black" />
     <img-banner>
         <img src="../../img/finncial-banner.png">
         <template #text> البيانات الماليه</template>

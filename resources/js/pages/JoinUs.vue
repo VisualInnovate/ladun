@@ -1,7 +1,7 @@
 <template>
-    <Navbar />
+<Navbar class="bg-black fixed z-50 w-full" />
 
-        <h1 class="m-5">
+        <h1 class="pt-32 mx-5 mb-5">
             {{ $t("joinUs") }}
         </h1>
 
@@ -27,9 +27,9 @@
 
                         <!-- gender -->
                         <!-- flowbit-vue dropdown -->
-                        <dropdown text="Bottom" class="rounded-lg custom-dropdown w-1/2 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown " >
+                        <dropdown text="Bottom" class="hover:cursor-pointer rounded-lg [&>div]:w-full w-1/2 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown " >
                         <template #trigger class="w-full">
-                            <div class="flex justify-between px-4 text-white w-full"><div>{{ $t('gender') }}</div> <svg class="w-4 h-4 ltr:ml-14 rtl:mr-14" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></div>
+                            <div class="flex justify-between px-4 text-white w-full"><div>{{ $t('gender') }}</div> <svg class="my-auto w-4 h-4 ltr:ml-14 rtl:mr-14" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></div>
                         </template>
                         <list-group class="w-full">
                         <list-group-item>
@@ -58,9 +58,7 @@
             
             
         </div>
-        <div class="w-full md:w-1/2 mb-5 ">
-
-            <img src="../../img/join_us/join.png" />
+        <div class="w-full md:w-1/2 mb-5 bg-about-us-page-image bg-no-repeat bg-cover bg-center ">
         </div>
 
     
@@ -73,10 +71,3 @@ import Navbar from "../components/Navbar.vue";
 import DarkFooter from "../components/DarkFooter.vue";
 import { Input, Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
 </script>
-
-<style>
-
-.custom-dropdown > div {
-    width: 100%;
-}
-</style>

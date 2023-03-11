@@ -1,5 +1,6 @@
 <template>
-    <div class="relative img-banner-slot">
+    <Navbar class="bg-black fixed z-50 w-full" />
+    <div class="relative img-banner-slot pt-32">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
@@ -206,13 +207,11 @@
 
     </section>
 
-
+    <DarkFooter />
 </template>
 
-<script>
-export default {}
+<script setup>
+import Navbar from '../components/Navbar.vue';
+import DarkFooter from '../components/DarkFooter.vue';
+
 </script>
-
-<style scoped>
-
-</style>

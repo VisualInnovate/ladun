@@ -1,7 +1,7 @@
 <template>
     <!-- header section -->
+    <Navbar class="fixed z-30 w-full" :class="{ 'bg-black': !view.topOfPage}" />
     <header class="relative flex h-screen overflow-hidden">
-        <Navbar />
         <div
             class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
         ></div>
@@ -18,16 +18,16 @@
             Your browser does not support the video tag.
         </video>
         <img
-            class="z-30 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 lg:h-auto"
+            class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 lg:h-auto"
             src="../../img/logowithouttext.svg"
         />
         <button
-            class="bg-dark-brown text-white rounded-2xl z-30 absolute top-1/2 ltr:right-0 rtl:left-0 ltr:rotate-90 rtl:-rotate-90 origin-top translate-y-1/2 ltr:translate-x-1/2 rtl:-translate-x-1/2 w-72 h-10"
+            class="bg-dark-brown text-white rounded-2xl z-20 absolute top-1/2 ltr:right-0 rtl:left-0 ltr:rotate-90 rtl:-rotate-90 origin-top translate-y-1/2 ltr:translate-x-1/2 rtl:-translate-x-1/2 w-72 h-10"
         >
             {{ $t("shareYourInterests") }}
         </button>
     </header>
-    <button class="bg-dark-brown text-white rounded-full z-30 py-1 absolute w-72 h-14 bottom-0 translate-y-[1.5rem] left-1/2 -translate-x-1/2">
+    <button class="bg-dark-brown text-white rounded-full z-20 py-1 absolute w-72 h-14 bottom-0 translate-y-[1.5rem] left-1/2 -translate-x-1/2">
         {{ $t('scrollDown') }}
         <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2" />
     </button>
@@ -51,8 +51,8 @@
 
         <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
 
-            <div v-for="index in 4" :key="index" class="rounded-2xl border-2 border-gray-border-light bg-white">
-                    <img class="w-full" src="../../img/projects_1.png" alt="Project Photo">
+            <div v-for="index in 4" :key="index" class="rounded-lg border-2 border-gray-border-light bg-white">
+                    <img class="w-full rounded-lg" src="../../img/projects_1.png" alt="Project Photo">
                     <div class="flex items-center">
                         <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3>
                         <span class="flex-initial mx-2 text-light-brown">
@@ -90,7 +90,7 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class="relative">
+    <section class="relative about-section">
         <div class="flex py-5" >
             <h2 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
                 {{ $t('aboutLadun') }}
@@ -101,22 +101,22 @@
             <p class="px-2 my-auto text-grey text-xs">{{ $t('projectExampleText') }}</p>
             <div class="grid grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('experienceYears') }}</p></div>
+                    <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsUnits') }}</p></div>
+                    <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('affiliate') }}</p></div>
+                    <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('affiliate') }}</p></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/projects_investment.svg" alt="projects_investment" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsInvestment') }}</p></div>
+                    <img src="../../img/projects_investment.svg" alt="projects_investment" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsAreas') }}</p></div>
+                    <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsAreas') }}</p></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
-                    <img src="../../img/projects_revenue.svg" alt="projects_revenue" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block">{{ $t('projectsRevenue') }}</p></div>
+                    <img src="../../img/projects_revenue.svg" alt="projects_revenue" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsRevenue') }}</p></div>
                 </div>
             </div>
             <img class="w-full" src="../../img/about_ladun_image.png" alt="About Ladun">
@@ -130,24 +130,22 @@
 
         <!-- dropdown -->
 
-    <dropdown text="Bottom" class="hover:cursor-pointer custom-dropdown w-1/2 h-10 bottom-0 translate-y-[1.5rem] left-1/2 -translate-x-1/2 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown " >
+    <dropdown text="Bottom" class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top -translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown " >
     <template #trigger>
-
-        <span class="w-full inline-flex justify-between px-4 text-white custom-span"><span>{{ $t('choose') }}</span> <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></span>
-
+        <span class="w-full inline-flex justify-between px-4 text-white"><span>{{ $t('choose') }}</span> <svg class="my-auto w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></span>
     </template>
-    <list-group>
+    <list-group class="w-full">
       <list-group-item>
         <template #prefix>
           <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
         </template>
-        Profile
+        Option 1
       </list-group-item>
       <list-group-item>
         <template #prefix>
           <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
         </template>
-        Settings
+        Option 2
       </list-group-item>
     </list-group>
     </dropdown>
@@ -160,14 +158,33 @@
 </template>
 
 <script setup>
+import { onBeforeMount , ref } from 'vue'
 import Navbar from "../components/Navbar.vue";
 import LightFooter from "../components/LightFooter.vue"
 import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon } from "@heroicons/vue/24/outline";
 import { MapPinIcon } from "@heroicons/vue/24/solid";
 import { Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
+
+const view = ref({
+    topOfPage: true
+})
+
+onBeforeMount(()=>{
+    window.addEventListener('scroll', handleScroll)
+})
+
+const handleScroll = () => {
+    if(window.pageYOffset > 0){
+        if(view.value.topOfPage)  view.value.topOfPage = false
+    } else {
+        if(!view.value.topOfPage) view.value.topOfPage = true
+    }
+}
+
 </script>
 
-<style scoped lang="scss">
+<style>
+
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
@@ -190,11 +207,5 @@ strong.counter::after {
     --num: 100;
   }
 }
-.custom-dropdown{
-    position: absolute;
 
-}
-.custom-dropdown ~ div {
-        width: 100%;
-    }
 </style>

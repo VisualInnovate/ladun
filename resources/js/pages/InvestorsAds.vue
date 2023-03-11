@@ -1,9 +1,12 @@
 <template>
-    <img-banner>
-        <img  src="../../img/investors-page.png">
-        <template #text>علاقات المستثمرين  </template>
-
-    </img-banner>
+    <Navbar class="bg-black fixed z-50 w-full" />
+    <div class="pt-32">
+        <img-banner>
+            <img  src="../../img/investors-page.png">
+            <template #text>علاقات المستثمرين  </template>
+    
+        </img-banner>
+    </div>
 
 
     <section class="media-center py-28 bg-background-section">
@@ -63,20 +66,13 @@
         </div>
 
     </section>
-
+    <DarkFooter />
 
 </template>
 
-  <script >
-  import navbarComponent from "@/components/Navbar.vue";
-  import ImgBanner from "@/components/ImgBanner.vue";
-  import CardLink from "@/components/CardLink.vue";
-export default {
-    components: {
-        navbarComponent,
-        ImgBanner,
-        CardLink
-    }
-}
-
-  </script>
+<script setup >
+import Navbar from "@/components/Navbar.vue";
+import ImgBanner from "@/components/ImgBanner.vue";
+import CardLink from "@/components/CardLink.vue";
+import DarkFooter from "../components/DarkFooter.vue";
+</script>

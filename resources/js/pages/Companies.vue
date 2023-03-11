@@ -1,11 +1,13 @@
 <template>
 
-    <Navbar />
-        <img-banner>
-            <img  src="../../img/companies-banner.png">
-            <template #text>الشركات الخاصة بمسار التطوير العقاري </template>
-
-        </img-banner>
+    <Navbar class="bg-black fixed z-50 w-full" />
+        <div class="pt-32">
+            <img-banner>
+               <img  src="../../img/companies-banner.png">
+               <template #text>الشركات الخاصة بمسار التطوير العقاري </template>
+   
+           </img-banner>
+        </div>
 
 
 

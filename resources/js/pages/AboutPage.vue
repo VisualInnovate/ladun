@@ -1,6 +1,6 @@
 <template>
-        <Navbar />
-    <section class="company-info   py-28 bg-background-section">
+        <Navbar class="bg-black fixed z-50 w-full" />
+    <section class="company-info   py-28 bg-background-section pt-36 ">
 
         <div class="container mx-auto">
 

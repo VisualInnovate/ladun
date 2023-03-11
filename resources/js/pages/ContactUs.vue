@@ -1,6 +1,7 @@
 <template>
-    <Navbar />
-    <h1 class="m-5">
+    <Navbar class="bg-black fixed z-50 w-full" />
+    <h1 class="pt-32 mx-5 mb-5">
+
         {{ $t("contactUs") }}
     </h1>
 

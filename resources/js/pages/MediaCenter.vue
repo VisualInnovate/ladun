@@ -1,5 +1,5 @@
 <template>
-
+    <Navbar class="bg-black" />
     <Carousel :pictures="pictures"></Carousel>
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
