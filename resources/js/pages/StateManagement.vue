@@ -124,7 +124,7 @@
     <section
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <div class="z-40   w-full">
+        <div class="z-40   container mx-auto">
             <h2 class="mb-5 text-light-brown ">high level utility </h2>
             <p class="text-sm mb-10">for more information please contact on email </p>
             <div class="flex flex-wrap">
@@ -162,7 +162,7 @@
 
     </section>
 
-    <section class="company-info py-28 bg-background-section">
+    <section class="company-info py-28  pt-20 bg-background-section">
 
         <div class="container mx-auto">
 
@@ -223,7 +223,7 @@
 
 
     </section>
-    <section class="company-info   py-28 bg-background-section  ">
+    <section class="company-info   py-28 pt-16  bg-background-section  ">
 
         <div class="container mx-auto">
 
