@@ -1,18 +1,16 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <div class="bg-light-beige-background mb-4 pt-32">
+    <div class="bg-light-beige-background mb-4 pt-32 [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
     <tabs variant="underline" v-model="activeTab" > <!-- class appends to content DIV for all tabs -->
-      <tab v-for="management in data" :name="management.title" :title="$t(management.title)" class="[&>div>div>div>ul]:justify-center">
+      <tab v-for="management in data" :name="management.title" :title="$t(management.title)" class="[&>div>div>div>ul]:justify-center [&>div>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>div>ul>li>.border-blue-600]:border-dark-brown">
         <div class="relative">
-            <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 ">
-              
-            </div>
+            <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 "></div>
             <img :src="management.mainImage.src" :alt="management.mainImage.alt" />
           </div>
           <!-- regions -->
           <tabs variant="underline" v-model="regionActiveTab" class="justify-center" >
             <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
-              <div class="grid grid-cols-1 gap-5 md:grid-cols-3 mx-2" >
+              <div class="grid grid-cols-1 gap-5 md:grid-cols-3 mx-2 pt-2" >
                 <div v-for="project in region.projects" class="rounded-lg border-2 border-gray-border-light bg-white">
                       <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.src" :alt="project.logo.alt">
                       <div class="flex flex-col items-center">
