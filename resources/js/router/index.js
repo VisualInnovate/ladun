@@ -64,6 +64,13 @@ const routes = [
         meta:{title:"Projects"}
     },
 
+    { 
+        path: "/project-details-section", 
+        component: () => import("@/pages/projectDetailsSection.vue"),
+        name: 'projectDetailsSection',
+        meta:{title:"projectDetailsSection"}
+    },
+
 ];
 const router = createRouter({
     history: createWebHistory(),
