@@ -67,4 +67,5 @@ export default {
     acquaCompound: "Acqua Compound",
     acquaCompoundText: "acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText ",
     readMore: "Read more",
+    financialData: "Financial Data",
 }
