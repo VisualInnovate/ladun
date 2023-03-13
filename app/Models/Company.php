@@ -23,4 +23,5 @@ class Company extends Model implements HasMedia
         'is_published' => 'boolean',
     ];
 
+
 }
