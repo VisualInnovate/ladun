@@ -52,18 +52,17 @@ const routes = [
         meta:{title:"financial"}
     },
     {
-        path: "/real-state-management",
-        component: () => import("@/pages/StateManagement.vue"),
-        name: 'StateManagement',
-        meta:{title:"Real State Management"}
-    },
-    {
         path: "/projects",
         component: () => import("@/pages/Projects.vue"),
         name: 'Projects',
-        meta:{title:"Projects"}
+        meta:{title:"Projects"},
     },
-
+    {
+        path: "/projects/:id",
+        component: () => import("@/pages/Project.vue"),
+        name: 'Project',
+        meta:{title:"Project"}
+    },
 
 
 ];

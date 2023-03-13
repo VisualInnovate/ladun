@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Resources\ProjectResource;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +27,20 @@ Route::get('/companies',function (){
         'company'=>\App\Models\Company::all()
     ]);
 });
+
+
+// projects
+Route::group(['prefix' => 'projects'], function () {
+    // projects list
+    Route::get('/',function (){
+        $projects = Project::with(['downloads', 'project_models', 'location'])->orderBy('id')->get();
+        return ProjectResource::collection($projects);
+    
+    });
+    // project details
+    Route::get('/{id}', function(string $id){
+        $project = Project::where('id', $id)->first();
+        return (new ProjectResource($project));
+    });
+});
+
