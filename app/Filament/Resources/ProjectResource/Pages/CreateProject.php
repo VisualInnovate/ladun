@@ -19,7 +19,7 @@ class CreateProject extends CreateRecord
     protected function getActions(): array
     {
         return [
-            Actions\LocaleSwitcher::make(),
+//            Actions\LocaleSwitcher::make(),
             // ...
         ];
     }
