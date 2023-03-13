@@ -19,6 +19,19 @@ define('LARAVEL_START', microtime(true));
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
+/*for test */
+
+//if (file_exists($m1 = __DIR__.'/../intl/IntlDatePatternGenerator.php')) {
+//    require $m1;
+//}
+
+//if (file_exists($m2 = __DIR__.'/../intl/IntlChar.php')) {
+//    require $m2;
+//}
+//
+//if (file_exists($m3 = __DIR__.'/../intl/intl.php')) {
+//    require $m3;
+//}
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +45,9 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 */
 
 require __DIR__.'/../vendor/autoload.php';
+
+
+
 
 /*
 |--------------------------------------------------------------------------
