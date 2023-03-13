@@ -1,75 +1,70 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-    { 
+    {
         path: "/",
         component: () => import("@/pages/Home.vue"),
         name: 'Home',
         meta:{title:"Home"}
     },
-    { 
-        path: "/companies", 
-        component: () => import("@/pages/Companies.vue"), 
-        name: 'Companies', 
+    {
+        path: "/companies",
+        component: () => import("@/pages/Companies.vue"),
+        name: 'Companies',
         meta:{title:"Companies"}
     },
-    { 
-        path: "/join-us", 
-        component: () => import("@/pages/JoinUs.vue"), 
-        name: 'Join Us', 
+    {
+        path: "/join-us",
+        component: () => import("@/pages/JoinUs.vue"),
+        name: 'Join Us',
         meta:{title:"Join Us"}
     },
-    { 
-        path: "/contact-us", 
-        component: () => import("@/pages/ContactUs.vue"), 
-        name: 'Contact Us', 
+    {
+        path: "/contact-us",
+        component: () => import("@/pages/ContactUs.vue"),
+        name: 'Contact Us',
         meta:{title:"Contact Us"}
     },
 
-    { 
-        path: "/media-center", 
-        component: () => import("@/pages/MediaCenter.vue"), 
-        name: 'Media Center', 
+    {
+        path: "/media-center",
+        component: () => import("@/pages/MediaCenter.vue"),
+        name: 'Media Center',
         meta:{title:"Media Center"}
     },
-    { 
-        path: "/about", 
-        component: () => import("@/pages/AboutPage.vue"), 
-        name: 'About Us', 
+    {
+        path: "/about",
+        component: () => import("@/pages/AboutPage.vue"),
+        name: 'About Us',
         meta:{title:"About Us"}
     },
-    { 
-        path: "/investors-ads", 
+    {
+        path: "/investors-ads",
         component: () => import("@/pages/InvestorsAds.vue"),
         name: 'Investors Ads',
         meta:{title:"investors Ads"}
     },
 
-    { 
-        path: "/financials", 
+    {
+        path: "/financials",
         component: () => import("@/pages/FinancialData.vue"),
         name: 'Financial',
         meta:{title:"financial"}
     },
-    { 
-        path: "/real-state-management", 
+    {
+        path: "/real-state-management",
         component: () => import("@/pages/StateManagement.vue"),
         name: 'StateManagement',
         meta:{title:"Real State Management"}
     },
-    { 
-        path: "/projects", 
+    {
+        path: "/projects",
         component: () => import("@/pages/Projects.vue"),
         name: 'Projects',
         meta:{title:"Projects"}
     },
 
-    { 
-        path: "/project-details-section", 
-        component: () => import("@/pages/projectDetailsSection.vue"),
-        name: 'projectDetailsSection',
-        meta:{title:"projectDetailsSection"}
-    },
+
 
 ];
 const router = createRouter({
