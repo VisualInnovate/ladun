@@ -14,5 +14,5 @@ class Financial extends  Model implements HasMedia
     use InteractsWithMedia;
     use HasTranslations;
     protected $guarded = [];
-    public $translatable = [''];
+    public $translatable = ['title'];
 }

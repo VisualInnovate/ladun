@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->date('financial_date');
             $table->string('financial_file');
+            $table->string('title');
             $table->timestamps();
         });
     }

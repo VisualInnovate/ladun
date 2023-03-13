@@ -35,7 +35,6 @@ export default {
     copyRights: "All Copyrights reservered to Ladun Investing 2023",
     mostImportantProjects: "Most Important Projects",
     licenses: "Licenses",
-    companies: "Companies",
     darkFooterTitle: "Ladun Company for Investment",
     darkFooterText: "Lamn Investment Company was established in 1968 AD and its successes and achievements continued until a Saudi company has become a general shareholder with a capital of (500,000,000) Saudi riyals, and the company owns more than half a century of experience in investment, real estate development and real estate asset management through a group of subsidiaries specialized in contracting, industry and management Residential and commercial complexes, and the company has succeeded in establishing new criteria for developing commercial and residential projects and multi -use projects, with its keenness to maintain the principles of design quality, innovation and sustainability according to the best leading international standards. And dealing with famous contracting companies",
     darkFooterPhone: "Phone",
@@ -68,4 +67,8 @@ export default {
     acquaCompoundText: "acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText ",
     readMore: "Read more",
     financialData: "Financial Data",
+    list_money:"Financial Statements\n",
+    header_finncial:"Private financial statements for the year"
+
+
 }

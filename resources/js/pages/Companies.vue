@@ -37,7 +37,6 @@
 </template>
 
 <script >
-import navbarComponent from '@/components/Navbar.vue'
 import ImgBanner from '@/components/ImgBanner.vue'
 import Navbar from "../components/Navbar.vue"
 import DarkFooter from "../components/DarkFooter.vue";

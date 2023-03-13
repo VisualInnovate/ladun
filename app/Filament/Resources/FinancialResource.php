@@ -6,6 +6,7 @@ use App\Filament\Resources\FinancialResource\Pages;
 use App\Filament\Resources\FinancialResource\RelationManagers;
 use App\Models\Financial;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -32,6 +33,7 @@ class FinancialResource extends Resource
             ->schema([
                 Card::make()
             ->schema([
+                TextInput::make('title')->label(__('title')),
                 DatePicker::make('financial_date'),
                 FileUpload::make('financial_file')->acceptedFileTypes(['application/pdf'])
                 ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
@@ -47,7 +49,9 @@ class FinancialResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('financial_date')->dateTime()
+
+                TextColumn::make('financial_date')->dateTime(),
+                Tables\Columns\TextColumn::make('title')->label(__('title'))->limit('50')->sortable(),
             ])
             ->filters([
                 //

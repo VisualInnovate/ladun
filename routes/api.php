@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::get('/companies',function (){
 
 Route::get('/financials',function (){
     return response ([
-        'financials'=>\App\Models\Financial::with('media')->get()
+        'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
+            return Carbon::parse($val->financial_date)->format('Y');
+        })
     ]);
 });
