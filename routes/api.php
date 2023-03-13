@@ -25,3 +25,10 @@ Route::get('/companies',function (){
         'companies'=>\App\Models\Company::with('media')->get()
     ]);
 });
+
+
+Route::get('/financials',function (){
+    return response ([
+        'financials'=>\App\Models\Financial::with('media')->get()
+    ]);
+});
