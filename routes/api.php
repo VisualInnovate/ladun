@@ -1,6 +1,7 @@
 <?php
 
-use Carbon\Carbon;
+use App\Http\Resources\ProjectResource;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,23 @@ Route::get('/companies',function (){
 
 Route::get('/financials',function (){
     return response ([
-        'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
-            return Carbon::parse($val->financial_date)->format('Y');
-        })
+        'financials'=>\App\Models\Financial::with('media')->get()
     ]);
 });
+
+
+// projects
+Route::group(['prefix' => 'projects'], function () {
+    // projects list
+    Route::get('/',function (){
+        $projects = Project::with(['downloads', 'project_models', 'location'])->orderBy('id')->get();
+        return ProjectResource::collection($projects);
+
+    });
+    // project details
+    Route::get('/{id}', function(string $id){
+        $project = Project::where('id', $id)->first();
+        return (new ProjectResource($project));
+    });
+});
+

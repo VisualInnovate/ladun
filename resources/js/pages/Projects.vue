@@ -11,10 +11,10 @@
           <tabs variant="underline" v-model="regionActiveTab" class="justify-center" >
             <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
               <div class="grid grid-cols-1 gap-5 md:grid-cols-3 mx-2 pt-2" >
-                <div v-for="project in region.projects" class="rounded-lg border-2 border-gray-border-light bg-white">
-                      <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.src" :alt="project.logo.alt">
+                <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
+                      <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.original_url" :alt="project.logo.name">
                       <div class="flex flex-col items-center">
-                          <h3 class="flex-initial p-2 font-bold">{{ $t(project.title) }}</h3>
+                          <h3 class="flex-initial p-2 font-bold">{{ project.title }}</h3>
                           <h4 class="flex-initial flex p-2 text-dark-brown">
                             <img src="../../img/projects/locationIcon.svg" alt="locationIcon" class="rtl:ml-2 ltr:mr-2" />
                             {{ $t(region.title) }}
@@ -23,14 +23,14 @@
                       </div>
 
                       <div class="grid grid-cols-4 mb-4 ">
-                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 ">{{ $t(project.text) }}
+                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text">
                         </p>
                       <div class="flex flex-col justify-end col-start-4 col-end-4">
-                        <button class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs">{{ $t('readMore') }}</button>
+                        <router-link class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
                       </div>
                       </div>
 
-                      <Carousel :pictures="project.gallery" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+                      <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
                 </div>
               </div>
             </tab>
@@ -42,12 +42,28 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Navbar from "../components/Navbar.vue";
 import DarkFooter from "../components/DarkFooter.vue";
 import { Tabs, Tab, Carousel } from 'flowbite-vue'
+import axios from 'axios'
+
+const getGallery = (gallery) => {
+    return Object.values(gallery).map((image)=>{
+      return {
+        src: image.original_url ,
+        alt: image.name
+      }
+  })
+
+
+};
+
+
 const activeTab = ref('realEstateAssetManagement')
 const regionActiveTab = ref('easternRegion')
+
+const fetchedProjects = ref([]);
 const data = ref([
   {
     mainImage: {
@@ -599,4 +615,10 @@ const data = ref([
     ],// end of regions
   },// end of realEstateManagement
 ])
+
+onMounted(async () => {
+  const response = await axios.get('api/projects')
+
+  fetchedProjects.value = response.data.data
+})
 </script>

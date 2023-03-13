@@ -1,18 +1,18 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class="relative img-banner-slot pt-32">
+    <div class=" pt-32"></div>
+    <div class="relative img-banner-slot">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
         <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 ">
-            <img class="w-[30%] md:w-[60%] lg:w-[80%] mx-auto md:mb-3"
-                 src="../../img/img-logo-real-state-managemnt.png">
-            <p class="text-center text-sm md:text-3xl">مجمع اكوا السكني </p>
+            <img class="w-[30%] md:w-[60%] lg:w-[80%] mx-auto md:mb-3 rounded-full"
+                 :src="project?.logo?.original_url">
+            <p class="text-center text-sm md:text-3xl">{{ project.title }}</p>
         </div>
 
     </div>
 <!--    test carsoul  card-->
-
 
     <section class="genaral-info bg-brown-section">
         <div class="container mx-auto ">
@@ -22,28 +22,28 @@
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>Area Of Land</p>
-                        <p class="font-bold">438.124 m2</p>
+                        <p class="font-bold">{{ project?.Land_area }} m2</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Land</p>
-                        <p class="font-bold">438.124 m2</p>
+                        <p>Area Of Building</p>
+                        <p class="font-bold">{{ project?.building_area }} m2</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Land</p>
-                        <p class="font-bold">438.124 m2</p>
+                        <p>Number of Units</p>
+                        <p class="font-bold">{{ project?.units_number }}</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Land</p>
-                        <p class="font-bold">438.124 m2</p>
+                        <p>Number of Models</p>
+                        <p class="font-bold">{{ project?.models_number }}</p>
                     </div>
                 </div>
 
@@ -57,27 +57,27 @@
         <div class="container mx-auto">
             <div class="py-10 w-full lg:w-[60%]">
                 <div
-                    class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-15  lg:grid-cols-6 lg:gap-14 mx-auto flex items-center ">
+                    class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-15  lg:grid-cols-6 lg:gap-14 mx-auto items-center ">
 
 
                     <div class="mx-auto font-bold">
-                        projects
+                        Project
                     </div>
 
                     <div class="mx-auto font-bold">
-                        projects
+                        Utilities
                     </div>
 
                     <div class="mx-auto font-bold">
-                        projects
+                        Downloads
                     </div>
 
                     <div class="mx-auto font-bold">
-                        projects
+                        Project Models
                     </div>
 
                     <div class="mx-auto font-bold">
-                        projects
+                        Location
                     </div>
 
                     <a class="mx-auto font-bold button bg-light-brown text-white  w-full text-center py-2">
@@ -100,19 +100,13 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col ">
-                    <h1 class=" text-3xl mb-4">Project </h1>
-                    <p class="mb-24 text-base">
-                        أصل عقاري يتم إدارته عن طريق لدن للاستثمار ، يقع في عروس البحر الأحمر وفي موقع استراتيجي بشمال
-                        جدة وبالقرب من العديد من مناطق الجذب والخدمات الراقية كان كومباوند أكوا بحلته المميزة والتي
-                        تحتوي أرقى الخدمات التي توفر لقاطنية الراحة والرفاهية التي يستحقونها في بيئة مثالية وعصرية
-                        ومتكاملة
-
-                    </p>
+                    <h1 class=" text-3xl mb-4">{{ project?.title }} </h1>
+                    <p class="mb-24 text-base" v-html="project?.text"></p>
 
                 </div>
 
                 <div class="img-company-info ">
-                    <img src="../../img/video-real-state-management.png">
+                    <img :src="project?.logo?.original_url">
 
                 </div>
 
@@ -123,7 +117,7 @@
 
     </section>
     <section>
-        <vue-carousel :items="gallery" />
+        <vue-carousel v-if="project" :items="getGallery(project?.gallery)" />
     </section>
     <section
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
@@ -137,28 +131,28 @@
                         <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
                     </div>
 
-                    <p class="text-sm">garden</p>
+                    <p class="text-sm">Driver Room</p>
                 </div>
                 <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
                         <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
                     </div>
 
-                    <p class="text-sm">garden</p>
+                    <p class="text-sm">Garden</p>
                 </div>
                 <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
                         <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
                     </div>
 
-                    <p class="text-sm">garden</p>
+                    <p class="text-sm">Cars Parking</p>
                 </div>
                 <div class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
                         <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
                     </div>
 
-                    <p class="text-sm">garden</p>
+                    <p class="text-sm">Swimming Pool</p>
                 </div>
 
             </div>
@@ -370,7 +364,7 @@
                 </div>
 
                 <div class="img-company-info  ">
-                    <Carousel :pictures="gallery"
+                    <Carousel v-if="project" :pictures="getGallery(project?.gallery)"
                               class="about-us-carousel h-[690px] [&>div:first-child]:h-[690px]  [&>div>div>img]:h-[690px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
                 </div>
@@ -516,50 +510,73 @@
 </template>
 
 <script setup>
-import Navbar from '../components/Navbar.vue';
-import {Input, Dropdown, ListGroup, ListGroupItem} from 'flowbite-vue'
-
-import DarkFooter from '../components/DarkFooter.vue';
+import axios from 'axios';
+import { useRoute } from 'vue-router';
+import {ref, onMounted} from 'vue'
+import {Input, Dropdown} from 'flowbite-vue'
 import {ArrowDownTrayIcon} from "@heroicons/vue/24/solid";
-
 import {Tabs, Tab} from 'flowbite-vue'
-
-const activeTab = ref('first')
-
 import {Carousel} from 'flowbite-vue'
-import {PhoneIcon, PlayCircleIcon, MapPinIcon} from "@heroicons/vue/24/solid";
-import {ref, computed, onUpdated} from 'vue'
-
-
+import { MapPinIcon} from "@heroicons/vue/24/solid";
+import Navbar from '../components/Navbar.vue';
+import DarkFooter from '../components/DarkFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
 
-const gallery = ref([
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_1'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_1'
-    },
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-]);
+const route  = useRoute();
+const activeTab = ref('first')
 
+// const gallery = ref([
+//     {
+//         src: new URL('../../img/about-us-info.png', import.meta.url).href,
+//         alt: 'project_1'
+//     },
+//     {
+//         src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
+//         alt: 'project_2'
+//     },
+//     {
+//         src: new URL('../../img/about-us-info.png', import.meta.url).href,
+//         alt: 'project_2'
+//     },
+//     {
+//         src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
+//         alt: 'project_1'
+//     },
+//     {
+//         src: new URL('../../img/about-us-info.png', import.meta.url).href,
+//         alt: 'project_2'
+//     },
+//     {
+//         src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
+//         alt: 'project_2'
+//     },
+// ]);
+
+const getGallery = (gallery) => {
+    if(gallery){
+        return Object.values(gallery).map((image)=>{
+          return {
+            src: image.original_url ,
+            alt: image.name
+          }
+      })
+    }
+    else{
+        return [];
+    }
+
+};
+
+const project = ref({});
+onMounted(async ()=>{
+
+    const response = await axios.get(`/api/projects/${route.params.id}`)
+    
+    project.value = response.data.data
+
+    console.log(project.value)
+
+})
 
 </script>
 
