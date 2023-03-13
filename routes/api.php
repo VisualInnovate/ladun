@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/companies',function (){
     return response ([
-        'company'=>\App\Models\Company::with('media')->get()
+        'companies'=>\App\Models\Company::with('media')->get()
     ]);
 });
