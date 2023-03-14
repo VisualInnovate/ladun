@@ -53,7 +53,7 @@ Route::get('/about-us',function (){
 Route::group(['prefix' => 'projects'], function () {
     // projects list
     Route::get('/',function (){
-        $projects = Project::with(['downloads', 'project_models', 'location'])->orderBy('id')->get();
+        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities'])->orderBy('id')->get();
         return ProjectResource::collection($projects);
 
     });

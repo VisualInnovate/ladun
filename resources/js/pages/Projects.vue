@@ -14,7 +14,7 @@
                 <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
                       <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.original_url" :alt="project.logo.name">
                       <div class="flex flex-col items-center">
-                          <h3 class="flex-initial p-2 font-bold">{{ project.title }}</h3>
+                          <h3 class="flex-initial p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
                           <h4 class="flex-initial flex p-2 text-dark-brown">
                             <img src="../../img/projects/locationIcon.svg" alt="locationIcon" class="rtl:ml-2 ltr:mr-2" />
                             {{ $t(region.title) }}
@@ -23,10 +23,10 @@
                       </div>
 
                       <div class="grid grid-cols-4 mb-4 ">
-                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text">
+                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text[$i18n.locale]">
                         </p>
                       <div class="flex flex-col justify-end col-start-4 col-end-4">
-                        <router-link class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
+                        <router-link class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs text-center flex flex-col justify-center" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
                       </div>
                       </div>
 

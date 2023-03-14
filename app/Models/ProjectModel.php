@@ -19,6 +19,7 @@ class ProjectModel extends  Model implements HasMedia
     protected $fillable = ['title','Land_area','building_area','units_number','floors_number'];
     public $translatable = ['title'];
 
+    // protected $with = ['utilities'];
     public function utilities()
     {
         return $this->belongsToMany(Utility::class, 'project_model_utility');
