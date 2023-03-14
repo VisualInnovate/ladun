@@ -18,16 +18,25 @@ class ProjectResource extends JsonResource
         // return parent::toArray($request);
         return [
            'id' => $this->id,
-           'title' => $this->name,
+           'title' => [
+            'en' => $this->getTranslation('name', 'en'),
+            'ar' => $this->getTranslation('name', 'ar'),
+           ],
            'phone' => $this->phone,
            'email' => $this->email,
-           'address' => $this->address,
-           'text' => $this->content,
+           'address' => [
+            'en' => $this->getTranslation('address', 'en'),
+            'ar' => $this->getTranslation('address', 'ar'),
+           ],
+           'text' => [
+            'en' => $this->getTranslation('content', 'en'),
+            'ar' => $this->getTranslation('content', 'ar'),
+           ],
            'Land_area' => $this->Land_area,
            'building_area' => $this->building_area,
            'units_number' => $this->units_number,
            'models_number' => $this->models_number,
-           'project_models' => $this->project_models,
+           'project_models' => $this->projectModelsWithUtilities,
            'location' => $this->location,
            'utilities' => $this->utilities,
            'gallery' => $this->getMedia('default'),
