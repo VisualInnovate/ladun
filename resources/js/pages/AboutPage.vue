@@ -300,8 +300,8 @@ const gallery = ref([
 
 const about = ref([]);
 
-const getAbouUs = () => {
-    axios.get("/api/about-us").then(res => {
+const getAbouUs =async () => {
+    await axios.get("/api/about-us").then(res => {
         about.value = res.data.aboutUs
         if(res.data.aboutUs[0].media.length)
             res.data.aboutUs[0].media.forEach((el)=>{
@@ -316,8 +316,8 @@ const getAbouUs = () => {
     })
 }
 
-onBeforeMount(()=>{
-    getAbouUs()
+onBeforeMount(async()=>{
+    await getAbouUs()
 })
 
 </script>
