@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Resources\ProjectResource;
+use App\Models\Brief;
 use App\Models\Project;
+use App\Models\Structure;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -45,10 +47,9 @@ Route::get('/investors',function (){
     ]);
 });
 
-Route::get('/about-us',function (){
-    return response ([
-        'aboutUs'=>\App\Models\Brief::with('media')->get()
-    ]);
+Route::get('/about',function (){
+    $briefs = Brief::with('media')->get();
+    return response ($briefs);
 });
 
 Route::post('/contact',[\App\Http\Controllers\SendEmailController::class,'contact']);
@@ -67,5 +68,15 @@ Route::group(['prefix' => 'projects'], function () {
         $project = Project::where('id', $id)->first();
         return (new ProjectResource($project));
     });
+});
+
+// board of directors
+
+Route::get('/structure',function (){
+    $structure = Structure::all();
+    return response([
+        'structure' => $structure,
+    ]);
+
 });
 
