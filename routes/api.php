@@ -2,6 +2,7 @@
 
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +32,9 @@ Route::get('/companies',function (){
 
 Route::get('/financials',function (){
     return response ([
-        'financials'=>\App\Models\Financial::with('media')->get()
+        'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
+            return Carbon::parse($val->financial_date)->format('Y');
+        })
     ]);
 });
 
@@ -47,6 +50,8 @@ Route::get('/about-us',function (){
         'aboutUs'=>\App\Models\Brief::with('media')->get()
     ]);
 });
+
+Route::post('/contact',[\App\Http\Controllers\SendEmailController::class,'contact']);
 
 
 // projects
