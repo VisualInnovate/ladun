@@ -4,7 +4,7 @@
         <img-banner>
             <img  src="../../img/investors-page.png">
             <template #text>علاقات المستثمرين  </template>
-    
+
         </img-banner>
     </div>
 
@@ -14,53 +14,15 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
-                <card-link >
+                <card-link v-for="investor in investors">
                     <template #date>الخميس 15 مايو 2022</template>
-                    <template #head>ملتقى التطوع البلدي</template>
-                    <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
+                    <template #head>{{investor.title[$i18n.locale]}}</template>
+                    <template #text> <div v-html="investor.content[$i18n.locale]"></div></template>
                     <img
                         class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                        src="../../img/investor-section.png" alt="">
+                        :src="investor.media[0].original_url" alt="">
                 </card-link>
 
-                <card-link >
-                    <template #date>الخميس 15 مايو 2022</template>
-                    <template #head>ملتقى التطوع البلدي</template>
-                    <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
-                    <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                        src="../../img/investor-section.png" alt="">
-                </card-link>
-
-
-                <card-link >
-                    <template #date>الخميس 15 مايو 2022</template>
-                    <template #head>ملتقى التطوع البلدي</template>
-                    <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
-                    <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                        src="../../img/investor-section.png" alt="">
-                </card-link>
-
-
-                <card-link >
-                    <template #date>الخميس 15 مايو 2022</template>
-                    <template #head>ملتقى التطوع البلدي</template>
-                    <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
-                    <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                        src="../../img/investor-section.png" alt="">
-                </card-link>
-
-
-                <card-link >
-                    <template #date>الخميس 15 مايو 2022</template>
-                    <template #head>ملتقى التطوع البلدي</template>
-                    <template #text> لدن للاستثمار الراعي والشريك الأساسي في ملتقى التطوع البلدي الأول في مكة المكرمة</template>
-                    <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                        src="../../img/investor-section.png" alt="">
-                </card-link>
 
             </div>
         </div>
@@ -70,9 +32,36 @@
 
 </template>
 
-<script setup >
+<script  >
 import Navbar from "@/components/Navbar.vue";
 import ImgBanner from "@/components/ImgBanner.vue";
 import CardLink from "@/components/CardLink.vue";
 import DarkFooter from "../components/DarkFooter.vue";
+
+export default {
+    data(){
+      return{
+          investors:[]
+      }
+    },
+    components:{
+        Navbar,ImgBanner,CardLink,DarkFooter
+    },
+    methods:{
+        getAllInvestors(){
+            axios.get("/api/investors").then(res =>{
+                this.investors=res.data.investors
+                console.log(this.investors)
+
+            })
+        }
+    },
+    mounted() {
+        this.getAllInvestors()
+
+    }
+
+
+}
+
 </script>

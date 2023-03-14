@@ -42,6 +42,12 @@ Route::get('/investors',function (){
     ]);
 });
 
+Route::get('/about-us',function (){
+    return response ([
+        'aboutUs'=>\App\Models\Brief::with('media')->get()
+    ]);
+});
+
 
 // projects
 Route::group(['prefix' => 'projects'], function () {

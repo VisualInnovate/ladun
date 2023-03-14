@@ -47,7 +47,7 @@ export default {
       }
     },
     components:{
-        navbarComponent,ImgBanner,Navbar,DarkFooter
+     ImgBanner,Navbar,DarkFooter
     },
     methods: {
 
