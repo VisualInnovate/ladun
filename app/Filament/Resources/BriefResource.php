@@ -83,7 +83,10 @@ class BriefResource extends Resource
         ];
     }
 
-
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
     protected static function getNavigationGroup(): ?string
     {
         return __('About Ladun');

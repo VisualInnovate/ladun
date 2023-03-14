@@ -11,15 +11,9 @@
 
                 </div>
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-3xl mb-4 text-center md:text-start">About ladun investment </h1>
+                    <h1 class="font-bold text-3xl mb-4 text-center md:text-start">{{about[0].title[$i18n.locale]}} </h1>
                     <p class="mb-24 text-2xl">
-                        تأسست شركة لدن للاستثمارعام 1968م وتوالت نجاحاتها وإنجازاتها حتى أصبحت شركة سعودية مساهمة عامة
-                        برأس مال وقدره (500,000,000) ريال سعودي، وتملك الشركة ما يزيد عن نصف قرن من الخبرة في الاستثمار
-                        والتطوير العقاري وإدارة الأصول العقارية من خلال مجموعة من الشركات التابعة المتخصصة في المقاولات
-                        والصناعة وإدارة المجمعات السكنية والتجارية، وقد نجحت الشركة في إرساء معايير جديدة لتطوير
-                        المشاريع التجارية والسكنية والمشاريع متعددة الإستخدامات، مع حرصها على الحفاظ على مبادئ جودة
-                        التصميم والابتكار والاستدامة طبقاً لأفضل المعايير العالمية الرائدة . والتعامل مع الشركات
-                        المقاولات المشهورة
+                        {{about[0].content[$i18n.locale]}}
 
                     </p>
                     <div class="company-button flex items-center  flex-wrap w-full">
@@ -298,44 +292,33 @@ import Navbar from "../components/Navbar.vue"
 import DarkFooter from '../components/DarkFooter.vue';
 import {Carousel} from 'flowbite-vue'
 import {PhoneIcon, PlayCircleIcon} from "@heroicons/vue/24/solid";
-import {ref , onMounted} from 'vue'
+import {ref  , onBeforeMount} from 'vue'
 
 const gallery = ref([
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_1'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_1'
-    },
-    {
-        src: new URL('../../img/about-us-info.png', import.meta.url).href,
-        alt: 'project_2'
-    },
-    {
-        src: new URL('../../img/about_ladun_image.png', import.meta.url).href,
-        alt: 'project_2'
-    },
+
 ]);
 
 const about = ref([]);
 
 const getAbouUs = () => {
-    axios.get("/api/investors").then(res => {
+    axios.get("/api/about-us").then(res => {
         about.value = res.data.aboutUs
-        console.log(about.value)
+        if(res.data.aboutUs[0].media.length)
+            res.data.aboutUs[0].media.forEach((el)=>{
+
+                gallery.value.push({'src':el.original_url,'alt':el.name})
+
+            })
+        else
+            gallery.value.push({'src':"/storage/brief.png",'alt':"brief"})
+        console.log(gallery.value)
 
     })
 }
+
+onBeforeMount(()=>{
+    getAbouUs()
+})
 
 </script>
 
