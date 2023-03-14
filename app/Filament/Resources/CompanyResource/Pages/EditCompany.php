@@ -15,7 +15,7 @@ class EditCompany extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
-//            Actions\LocaleSwitcher::make(),
+            Actions\LocaleSwitcher::make(),
         ];
     }
 }

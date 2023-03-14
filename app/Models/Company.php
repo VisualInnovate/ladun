@@ -15,8 +15,8 @@ class Company extends Model implements HasMedia
     use InteractsWithMedia;
     use HasTranslations;
 
-    protected $fillable = ['title','slug','content','is_published'];
- public $translatable = ['title','slug','content'];
+    protected $fillable = ['title', 'slug', 'content', 'is_published'];
+    public $translatable = ['title', 'slug', 'content'];
 
 
     protected $casts = [

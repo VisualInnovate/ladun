@@ -14,7 +14,7 @@ class EditBrief extends EditRecord
     protected function getActions(): array
     {
         return [
-//            Actions\LocaleSwitcher::make(),
+            Actions\LocaleSwitcher::make(),
             Actions\DeleteAction::make(),
         ];
     }

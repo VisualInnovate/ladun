@@ -36,6 +36,13 @@ Route::get('/financials',function (){
 });
 
 
+Route::get('/investors',function (){
+    return response ([
+        'investors'=>\App\Models\Investor::with('media')->get()
+    ]);
+});
+
+
 // projects
 Route::group(['prefix' => 'projects'], function () {
     // projects list

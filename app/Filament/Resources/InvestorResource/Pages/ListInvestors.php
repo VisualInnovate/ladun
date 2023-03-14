@@ -16,7 +16,7 @@ class ListInvestors extends ListRecords
     {
         return [
 
-//            Actions\LocaleSwitcher::make(),
+            Actions\LocaleSwitcher::make(),
             Actions\CreateAction::make(),
         ];
     }

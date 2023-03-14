@@ -9,8 +9,6 @@
            </img-banner>
         </div>
 
-
-
     <section class="company py-28 bg-background-section">
         <div class="container mx-auto ">
             <div class="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1  lg:gap-20 md:gap-32   ">
@@ -23,6 +21,7 @@
 
                     <div class="flex content-start flex-row justify-start w-full">
                         <a class=" special-button button bg-dark-brown text-white px-4 py-2 my-5 mb-14 ml-4 rtl:mr-4">زيارة
+
                             الموقع </a>
                     </div>
                 </div>

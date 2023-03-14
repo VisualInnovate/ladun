@@ -14,7 +14,7 @@ class ListCompanies extends ListRecords
     protected function getActions(): array
     {
         return [
-//            Actions\LocaleSwitcher::make(),
+            Actions\LocaleSwitcher::make(),
             Actions\CreateAction::make(),
         ];
     }
