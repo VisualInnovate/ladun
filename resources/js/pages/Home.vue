@@ -39,7 +39,7 @@
                 <h2 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
-                <h2 class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10   after:bg-grey after:rounded after:mr-2 after:my-auto">
+                <h2 class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
                     {{ $t('realEstateManagement') }}
                 </h2>
 
@@ -51,36 +51,36 @@
 
         <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
 
-            <div v-for="index in 4" :key="index" class="rounded-lg border-2 border-gray-border-light bg-white">
-                    <img class="w-full rounded-lg" src="../../img/projects_1.png" alt="Project Photo">
+            <div v-for="project in latestProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
+                    <img class="w-full rounded-lg" v-if="project.logo" :src="project.logo.original_url" alt="Project Photo">
                     <div class="flex items-center">
-                        <h3 class="flex-initial p-2">{{ $t('projectExampleTitle') }}</h3>
+                        <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
                         <span class="flex-initial mx-2 text-light-brown">
                             <MapPinIcon class="inline-block h-4 w-4 "/>
-                            <small class="font-bold">{{ $t('projectLocation') }}</small>
+                            <small class="font-bold" v-if="project.location">{{ project.location.city }}</small>
                         </span>
                     </div>
-                    <p class="px-2 text-grey text-xs">{{ $t('projectExampleText') }}</p>
+                    <p class="px-2 text-grey text-xs" v-html="project.text[$i18n.locale]"></p>
                     <div class="flex justify-end my-4 mx-2">
-                        <button class="bg-dark-brown text-white rounded-2xl w-36 h-8">
+                        <button class="bg-dark-brown text-white rounded-2xl w-36 h-8" @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                             <small>
                                 <MagnifyingGlassIcon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 justify-end" />{{ $t('exploreProject') }}
                             </small>
                         </button>
                     </div>
 
-                    <div class="flex m-2">
-                        <div class="flex-initial w-40">
+                    <div class="flex flex-wrap m-2">
+                        <div>
                             <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small>{{ $t('residentialLandPlots') }}</small>
+                            <small class="whitespace-nowrap text-gray-500">{{ $t('residentialLandPlots') }}</small>
                         </div>
-                        <div class="flex-initial w-14">
+                        <div>
                             <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small>{{ $t('areaUnit') }}</small>
+                            <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}  {{ $t('areaUnit') }}</small>
                         </div>
-                        <div class="flex-initial w-14">
+                        <div>
                             <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small>{{ $t('unit') }}</small>
+                            <small class="whitespace-nowrap text-gray-500">{{ project.units_number }} {{ $t('unit') }}</small>
                         </div>
                     </div>
 
@@ -98,7 +98,7 @@
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-3 mx-auto container px-5">
 
-            <p class="px-2 my-auto text-grey text-xs">{{ $t('projectExampleText') }}</p>
+            <p class="px-2 my-auto text-grey text-xs" v-if="aboutData.content" v-html="aboutData.content[$i18n.locale]" ></p>
             <div class="grid grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
                     <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('experienceYears') }}</p></div>
@@ -144,19 +144,35 @@
 </template>
 
 <script setup>
-import { onBeforeMount , ref } from 'vue'
+import { onBeforeMount , ref, reactive } from 'vue'
 import Navbar from "../components/Navbar.vue";
 import LightFooter from "../components/LightFooter.vue"
 import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon } from "@heroicons/vue/24/outline";
 import { MapPinIcon } from "@heroicons/vue/24/solid";
-import { Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
+import { Dropdown } from 'flowbite-vue'
+import axios from 'axios';
 
 const view = ref({
     topOfPage: true
 })
 
+const latestProjects = ref([])
+
+const aboutData = ref([])
 onBeforeMount(()=>{
     window.addEventListener('scroll', handleScroll)
+    axios.get('/api/projects/latest')
+    .then((response) => {
+        latestProjects.value = response.data.data
+        console.log(latestProjects.value)  
+    })
+    .catch(error => console.log(error))
+
+    axios.get('/api/about')
+    .then((response) => {
+        aboutData.value = response.data[0]
+    })
+    .catch(error => console.log(error))
 })
 
 const handleScroll = () => {

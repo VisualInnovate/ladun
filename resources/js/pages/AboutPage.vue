@@ -68,21 +68,15 @@
 
                                 />
                                 <h5
-                                    class="mb-1 text-xl font-medium text-gray-900 dark:text-white font-bold"
+                                    class="mb-1 text-xl text-gray-900 dark:text-white font-bold"
                                 >
                                     {{ employee.name[$i18n.locale] }}
                                 </h5>
                                 <span
-                                    class="text-sm text-gray-500 dark:text-gray-400 text-light-brown"
+                                    class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                 >
-                                <div class="flex text-center mt-2">
-                                    يحمل شهادة الماجستير في إدارة الأعمال كما
-                                    لديه العديد من الخبرات المهنية التي تتجاوز
-                                    30 عاماً. تنقل خلالها في العديد من الشركات
-                                    في مجال الصناعة والتطوير العقاري والاستثمار
-                                    المالي.
-                                </div>
+                                <div class="flex text-center mt-2" v-html="employee.qualification[$i18n.locale]"></div>
                             </div>
                         </div>
                     </div>

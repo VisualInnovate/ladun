@@ -63,11 +63,19 @@ Route::group(['prefix' => 'projects'], function () {
         return ProjectResource::collection($projects);
 
     });
+    // latest 4 projects
+    Route::get('/latest',function (){
+        $latest = Project::orderBy('created_at', 'DESC')
+        ->take(4)
+        ->get();
+        return ProjectResource::collection($latest);
+    });
     // project details
     Route::get('/{id}', function(string $id){
         $project = Project::where('id', $id)->first();
         return (new ProjectResource($project));
     });
+
 });
 
 // board of directors
