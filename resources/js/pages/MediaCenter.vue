@@ -78,7 +78,7 @@
         </div>
     </section>
 
-
+    <DarkFooter />
 </template>
 
 <script setup>
