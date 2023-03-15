@@ -132,7 +132,7 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
                 <div class="d-info h-full flex flex-col ">
-                    <h1 class=" text-5xl mb-6">{{ $t('project') }}</h1>
+                    <h1 class=" text-4xl mb-6">{{ project.title[$i18n.locale] }}</h1>
                     <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
@@ -202,7 +202,7 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class=" text-5xl text-light-brown mb-6">{{$t('Download_Project_Files')}}</h1>
+                    <h1 class=" text-4xl text-light-brown mb-6">{{$t('Download_Project_Files')}}</h1>
                     <p class="mb-20 text-3xl">
                        {{$t('Download_Project_Files_p')}}
                     </p>
@@ -246,7 +246,7 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-5xl mb-4 text-center md:text-start">{{$t('Project_Models')}} </h1>
+                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{$t('Project_Models')}} </h1>
                     <tabs variant="underline" v-model="activeTab" class="p-5 text-3xl">
                         <!-- class appends to content DIV for all tabs -->
                         <tab v-for="model in project.project_models" :name="model.title['en']"
@@ -294,7 +294,7 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-5xl mb-4 text-center md:text-start">{{$t('Location')}} </h1>
+                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{$t('Location')}} </h1>
                     <p class="mb-24 text-4xl text-dark-brown">
                         {{ project.Land_area[$i18n.locale]}}
 
