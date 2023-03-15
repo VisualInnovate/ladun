@@ -87,7 +87,7 @@ export default {
     Units_Number:"عدد الشقق",
     Location:"الموقع",
     banner_company:"الشركات الخاصة بمسار التطوير العقاري",
-    viste:"زيارة الموقع"
+    visit:"زيارة الموقع"
 
 
 
