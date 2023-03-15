@@ -10,8 +10,8 @@
           <!-- regions -->
           <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10" >
             <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
-              <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" >
-                <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
+              <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto max-w-7xl [&>div]:h-[45rem]" >
+                <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white relative mx-2">
                       <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.original_url" :alt="project.logo.name">
                       <div class="flex flex-col items-center">
                           <h3 class="flex-initial p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
@@ -23,14 +23,15 @@
                       </div>
 
                       <div class="grid grid-cols-4 mb-4 ">
-                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text[$i18n.locale]">
+                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text[$i18n.locale].slice(0, 200)+' ...'">
                         </p>
                       <div class="flex flex-col justify-end col-start-4 col-end-4">
-                        <router-link class="bg-dark-brown text-white rounded-md h-6 w-20 text-xs text-center flex flex-col justify-center" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
+                        <router-link class="bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
                       </div>
                       </div>
-
-                      <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+                      <div class="absolute bottom-0 w-full">
+                        <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                      </div>
                 </div>
               </div>
             </tab>

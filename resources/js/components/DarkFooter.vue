@@ -17,7 +17,7 @@
             <div class="flex py-5 md:py-0 gap-3" >
                 <img :src="darkFooterLogo" alrt="darkFooterLogo" /> <h3 class="self-center md:px-5">{{ $t('darkFooterTitle') }}</h3>
             </div>
-            <p class="text-dark-footer-text-color py-5 md:py-10" >{{ $t('darkFooterText') }}</p>
+            <p class="text-dark-footer-text-color py-5 md:py-10 text-justify" >{{ $t('darkFooterText') }}</p>
             <h3 class="py-2">{{ $t('darkFooterPhone') }}: 920011560 </h3>
             <h3 class="py-2">{{ $t('darkFooterEmail') }}: investor@ladun.sa</h3>
         </div>

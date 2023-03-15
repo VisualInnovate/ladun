@@ -2,34 +2,34 @@
     <div class="bg-light-footer text-grey ">
         
         <div class="grid grid-cols-1 md:grid-cols-8 mt-10 px-11 py-12">
-            <div class="flex flex-col mx-auto">
-                <img :src="DarkLogo" alt="Logo_darK" class="w-28 mb-5" />
+            <div class="flex flex-col mx-auto ">
+                <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
                 <div class="inline-flex justify-between w-28">
                     <template v-for="icon in icons">
                         <img :src="`${icon}`" :alt="`${icon}`" class="w-4 h-6" />
                     </template>
                 </div>
             </div>
-            <div class="flex flex-col justify-between h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between h-32 pt-8">
                 <small>{{ $t('aboutLadun') }}</small>
                 <small>{{ $t('whoWeAre') }}</small>
                 <small>{{ $t('aboutOurCompany') }}</small>
             </div>
-            <div class="flex flex-col justify-between h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between h-32 pt-8">
                 <small>{{ $t('projects') }}</small>
                 <small>{{ $t('realEstateManagement') }}</small>
                 <small>{{ $t('realEstateAssetManagement') }}</small>
             </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between md:h-32 pt-8">
                 <small>{{ $t('investorsRelations') }}</small>
             </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between md:h-32 pt-8">
                 <small>{{ $t('mediaCenter') }}</small>
             </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between md:h-32 pt-8">
                 <small>{{ $t('joinUs') }}</small>
             </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8 text-center">
+            <div class="flex flex-col justify-between md:h-32 pt-8">
                 <small>{{ $t('contactUs') }}</small>
             </div>
             <div class="flex flex-col-reverse justify-between md:h-32 pt-8">

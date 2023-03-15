@@ -73,6 +73,7 @@ export default {
     finncial_banner:"Financial Statements",
     call_us:"Call Us",
     video:"video",
+    boradOfDirectors: "Board Of Directors",
     project:"project",
     gallary_project:"gallery of the project",
     high_level_utility:"high level utility",
@@ -87,7 +88,7 @@ export default {
     Units_Number:"Units Number",
     Location:"Location",
     banner_company:"Real estate development companies",
-    visit:"visit website"
+    visit:"visit website",
 
 
 
