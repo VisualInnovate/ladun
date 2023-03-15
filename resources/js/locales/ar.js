@@ -72,7 +72,25 @@ export default {
     investor_banner:"علاقات الستثمرين",
     finncial_banner:"البيانات المالية ",
     call_us:"اتصل بنا",
-    video:"فيديو"
+    video:"فيديو",
+    project:"مشروع",
+    gallary_project:"معرض صور المشـــروع",
+    high_level_utility:"خدمات عاليه المستوي",
+    high_level_utility_p:"لمزيد من المعلومات يرجى الاتصال على البريد الإلكتروني",
+    Download_Project_Files:"حمل ملفات المشروع",
+    Download_Project_Files_p:"أصل عقاري يتم إدارته عن طريق لدن للاستثمار ، يقع في عروس البحر الأحمر وفي موقع استراتيجي بشمال\n" +
+        "                        جدة وبالقرب من العديد من مناطق الجذب والخدمات الراقية كان كومباوند أكوا بحلته المميزة والتي\n",
+    Project_Models:"نماذج المشروع",
+    Land_Area:"مساحة الارض",
+    Building_Area:"مساحة المبني",
+    Floors_Number:"عدد الطوابق",
+    Units_Number:"عدد الشقق",
+    Location:"الموقع",
+    banner_company:"الشركات الخاصة بمسار التطوير العقاري"
+
+
+
+
 
 
 }

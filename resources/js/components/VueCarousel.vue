@@ -1,7 +1,7 @@
 <template>
-    <carousel :items-to-show="5" >
+    <carousel :items-to-show="2" >
         <slide v-for="(item,index) in items" :key="index" >
-            <img :src="item.src" :alt="item.alt" class="h-48 w-48" />
+            <img :src="item.src " :alt="item.alt" class="h-[400px] w-[500px]" />
         </slide>
 
         <template #addons>

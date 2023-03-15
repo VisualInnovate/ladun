@@ -72,7 +72,22 @@ export default {
     investor_banner:"Investor Relations",
     finncial_banner:"Financial Statements",
     call_us:"Call Us",
-    video:"video"
+    video:"video",
+    project:"project",
+    gallary_project:"gallery of the project",
+    high_level_utility:"high level utility",
+    high_level_utility_p:"for more information please contact on email",
+    Download_Project_Files:"Download Project Files",
+    Download_Project_Files_p:"A real estate asset that is managed by Laden Investments, located in the Bride of the Red Sea and in a strategic location in the North\n" +
+        " Jeddah and near many attractions and high-end services, the Aqua Compound was distinguished by its distinctive style, which",
+    Project_Models:"Project Models",
+    Land_Area:"Land Area",
+    Building_Area:"Building Area",
+    Floors_Number:"Floors Number",
+    Units_Number:"Units Number",
+    Location:"Location",
+    banner_company:"Real estate development companies"
+
 
 
 

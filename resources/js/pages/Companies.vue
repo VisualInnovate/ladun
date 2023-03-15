@@ -4,7 +4,7 @@
         <div class="pt-32">
             <img-banner>
                <img  src="../../img/companies-banner.png">
-               <template #text>الشركات الخاصة بمسار التطوير العقاري </template>
+               <template #text>{{$t('banner_company')}} </template>
 
            </img-banner>
         </div>
@@ -17,7 +17,7 @@
                 <div v-for =" company in companies" :key="company.id" class="rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 sm:w-3/4  md:w-full mx-auto">
                     <img class="img-companies rounded-full mb-6" :src="company.media[0].original_url" alt="Sunset in the mountains">
                     <h3 class="text-2xl font-bold"  >  {{company.title[$i18n.locale]}} </h3>
-                    <p class="text-base px-7 pb-6 pt-3 " v-html="company.content[$i18n.locale]">    </p>
+                    <p class="text-base px-7 pb-6 pt-3 text-justify" v-html="company.content[$i18n.locale]">    </p>
 
                     <div class="flex content-start flex-row justify-start w-full">
                         <a class=" special-button button bg-dark-brown text-white px-4 py-2 my-5 mb-14 ml-4 rtl:mr-4">زيارة
