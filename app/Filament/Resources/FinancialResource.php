@@ -70,7 +70,10 @@ class FinancialResource extends Resource
             //
         ];
     }
-
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
     public static function getPages(): array
     {
         return [
