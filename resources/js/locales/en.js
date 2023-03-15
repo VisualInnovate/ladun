@@ -70,7 +70,8 @@ export default {
     list_money:"Financial Statements",
     header_finncial:"Private financial statements for the year",
     investor_banner:"Investor Relations",
-    finncial_banner:"Financial Statements"
+    finncial_banner:"Financial Statements",
+    call_us:"Call Us"
 
 
 
