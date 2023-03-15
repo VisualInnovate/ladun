@@ -1,8 +1,8 @@
 <template>
-    <Navbar class="bg-black fixed z-50 w-full"/>
+    <Navbar class="bg-black fixed z-50 w-full" />
     <img-banner>
         <img src="../../img/finncial-banner.png">
-        <template #text> البيانات الماليه</template>
+        <template #text>{{$t('finncial_banner')}}</template>
 
     </img-banner>
 
@@ -26,8 +26,10 @@
                        :href="'storage/'+item.financial_file"
                         class=" mx-4 w-60 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
                         <div class="flex flex-col items-center ">
-                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="../../img/company.png"
-                                 alt="Bonnie image"/>
+                            <div class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
+                                <img class=" w-12 h-12 " src="../../img/financial-logo.png"
+                                      alt="Bonnie image"/>
+                            </div>
                             <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">{{$t('list_money')}}</h5>
                             <span class="text-sm text-gray-500 dark:text-gray-400">{{item.title[$i18n.locale]}}</span>
                             <div class="flex  space-x-3 text-dark-brown font-bold">
@@ -43,6 +45,8 @@
 
     </section>
 
+    <DarkFooter />
+
 </template>
 
 <script >
@@ -50,6 +54,7 @@
 import Navbar from "@/components/Navbar.vue";
 import ImgBanner from "@/components/ImgBanner.vue";
 import i18n from "../plugins/i18n";
+import DarkFooter from '../components/DarkFooter.vue';
 
 
 export default {
@@ -59,7 +64,7 @@ export default {
         }
     },
     components:{
-      Navbar ,ImgBanner
+      Navbar ,ImgBanner,DarkFooter
     },
     data(){
         return{

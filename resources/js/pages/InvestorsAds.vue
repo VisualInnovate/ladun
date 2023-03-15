@@ -3,7 +3,7 @@
     <div class="pt-32">
         <img-banner>
             <img  src="../../img/investors-page.png">
-            <template #text>علاقات المستثمرين  </template>
+            <template #text>{{$t('investor_banner')}}  </template>
 
         </img-banner>
     </div>
@@ -14,7 +14,7 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <card-link v-for="investor in investors">
-                    <template #date>الخميس 15 مايو 2022</template>
+<!--                    <template #date>الخميس 15 مايو 2022</template>-->
                     <template #head>{{investor.title[$i18n.locale]}}</template>
                     <template #text> <div v-html="investor.content[$i18n.locale]"></div></template>
                     <img

@@ -1,5 +1,6 @@
 <template>
-    <Navbar class="bg-black" />
+    <Navbar class="bg-black fixed z-50 w-full" />
+
     <Carousel :pictures="pictures"></Carousel>
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
@@ -78,13 +79,14 @@
         </div>
     </section>
 
-
+    <DarkFooter />
 </template>
 
 <script setup>
 import CardLink from "@/components/CardLink.vue";
 import { Carousel } from "flowbite-vue";
-
+import Navbar from "../components/Navbar.vue"
+import DarkFooter from '../components/DarkFooter.vue';
 const projects_1 = new URL('../../img/projects_1.png', import.meta.url).href
 const projects_2 = new URL('../../img/projects_2.png', import.meta.url).href
 const projects_3 = new URL('../../img/projects_3.png', import.meta.url).href

@@ -67,8 +67,12 @@ export default {
     acquaCompoundText: "acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText ",
     readMore: "Read more",
     financialData: "Financial Data",
-    list_money:"Financial Statements\n",
-    header_finncial:"Private financial statements for the year"
+    list_money:"Financial Statements",
+    header_finncial:"Private financial statements for the year",
+    investor_banner:"Investor Relations",
+    finncial_banner:"Financial Statements"
+
+
 
 
 }
