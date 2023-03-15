@@ -1,8 +1,8 @@
 <template>
-    <Navbar class="bg-black fixed z-50 w-full"/>
+    <Navbar class="bg-black fixed z-50 w-full" />
     <img-banner>
         <img src="../../img/finncial-banner.png">
-        <template #text> البيانات الماليه</template>
+        <template #text>{{$t('finncial_banner')}}</template>
 
     </img-banner>
 
