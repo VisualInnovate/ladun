@@ -86,7 +86,8 @@ export default {
     Floors_Number:"Floors Number",
     Units_Number:"Units Number",
     Location:"Location",
-    banner_company:"Real estate development companies"
+    banner_company:"Real estate development companies",
+    visit:"visit website"
 
 
 

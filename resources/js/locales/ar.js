@@ -86,7 +86,9 @@ export default {
     Floors_Number:"عدد الطوابق",
     Units_Number:"عدد الشقق",
     Location:"الموقع",
-    banner_company:"الشركات الخاصة بمسار التطوير العقاري"
+    banner_company:"الشركات الخاصة بمسار التطوير العقاري",
+    viste:"زيارة الموقع"
+
 
 
 
