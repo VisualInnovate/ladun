@@ -43,26 +43,26 @@ module.exports = {
                 'real-state-managemnt-utility-section': "url('/resources/img/real-managent-utility-section.png')",
                 'dark-footer-image': "url('/resources/img/dark_footer/dark_footer_bgImg.png')",
                 'about-us-page-image': "url('/resources/img/join_us/join.png')"
+            }  ,fontSize: {
+                xs: "11px",
+                sm: "16px",
+                base: "18px",
+                xl: "20px",
+                "2xl": "22px",
+                "3xl": "25px",
+                "4xl": "35px",
+            }, borderRadius: {
+                'none': '0',
+                DEFAULT: '4px',
+                'md': '0.375rem',
+                'lg': '0.5rem',
+                'xl': '2rem',
+                '2xl': '4rem',
+                'full': '9999px',
             }
         },
-        fontSize: {
-            xs: "11px",
-            sm: "16px",
-            base: "18px",
-            xl: "20px",
-            "2xl": "22px",
-            "3xl": "25px",
-            "4xl": "35px",
-        },
-        borderRadius: {
-            'none': '0',
-            DEFAULT: '4px',
-            'md': '0.375rem',
-            'lg': '0.5rem',
-            'xl': '2rem',
-            '2xl': '4rem',
-            'full': '9999px',
-          }
+
+
     },
 
     plugins: [

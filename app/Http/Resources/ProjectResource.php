@@ -32,7 +32,10 @@ class ProjectResource extends JsonResource
             'en' => $this->getTranslation('content', 'en'),
             'ar' => $this->getTranslation('content', 'ar'),
            ],
-           'Land_area' => $this->Land_area,
+           'land_area' => [
+               'en' => $this->getTranslation('Land_area', 'en'),
+               'ar' => $this->getTranslation('Land_area', 'ar'),
+           ],
            'building_area' => $this->building_area,
            'units_number' => $this->units_number,
            'models_number' => $this->models_number,
@@ -41,6 +44,7 @@ class ProjectResource extends JsonResource
            'utilities' => $this->utilities,
            'gallery' => $this->getMedia('default'),
            'logo' => $this->getMedia('projects')->first(),
+           'attachment' => env('APP_URL').'/storage/'.$this->attachment,
            'downloads' => $this->downloads,
         ];
     }

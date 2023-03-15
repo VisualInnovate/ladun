@@ -66,11 +66,8 @@ class ProjectResource extends Resource
                     SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))
             ->multiple()
             ->enableReordering(),
-            FileUpload::make('attachment')->label(__('attachment'))->acceptedFileTypes(['application/pdf'])
-            ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-            })->directory('form-attachments')->multiple()
-            ->enableDownload(),
+                FileUpload::make('attachment')
+                ,
             TextInput::make('Land_area')->label(__('Land_area'))->required(),
             TextInput::make('building_area')->label(__('building_area'))
             ->required()

@@ -11,13 +11,14 @@
                 </div>
                 <div class="d-info h-full flex flex-col justify-center">
                     <h1
+
                         class="font-bold text-3xl mb-4 text-center md:text-start"
                         v-if="about.title"
                     >
                         {{ about.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-24 text-2xl text-center md:text-start" v-if="about.content">
-                        {{ about.content[$i18n.locale] }}
+                    <p class="mb-24 text-2xl   text-justify"  v-if="about.content" v-html="about.content[$i18n.locale]">
+
                     </p>
                     <div
                         class="company-button flex items-center flex-wrap w-full justify-center md:justify-start"

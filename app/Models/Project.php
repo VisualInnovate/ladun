@@ -16,7 +16,7 @@ class Project extends  Model implements HasMedia
     use InteractsWithMedia;
     use HasTranslations;
     protected $fillable = ['name','slug','phone','email','address','attachment','content','is_published','Land_area','building_area','units_number','models_number'];
-    public $translatable = ['name','slug','address','content'];
+    public $translatable = ['name','slug','address','content','Land_area'];
     protected $casts = [
         'is_published' => 'boolean',
         'attachment' => 'array',

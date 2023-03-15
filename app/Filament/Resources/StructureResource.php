@@ -84,6 +84,10 @@ class StructureResource extends Resource
             'edit' => Pages\EditStructure::route('/{record}/edit'),
         ];
     }
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
     protected static function getNavigationGroup(): ?string
     {
         return __('About Ladun');
