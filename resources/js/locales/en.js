@@ -71,7 +71,8 @@ export default {
     header_finncial:"Private financial statements for the year",
     investor_banner:"Investor Relations",
     finncial_banner:"Financial Statements",
-    call_us:"Call Us"
+    call_us:"Call Us",
+    video:"video"
 
 
 

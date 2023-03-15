@@ -71,7 +71,8 @@ export default {
     header_finncial:"البيانات المالية الخاصة لعام",
     investor_banner:"علاقات الستثمرين",
     finncial_banner:"البيانات المالية ",
-    call_us:"اتصل بنا"
+    call_us:"اتصل بنا",
+    video:"فيديو"
 
 
 }

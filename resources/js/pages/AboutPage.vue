@@ -37,7 +37,7 @@
                                 src="../../img/play-button.png"
                                 class="rtl:ml-2 ltr:mr-2 h-[60px] w-[60px]"
                             />
-                            <span class="font-bold text-3xl">Video</span>
+                            <span class="font-bold text-3xl">{{$t('video')}}</span>
                         </a>
                     </div>
                 </div>
