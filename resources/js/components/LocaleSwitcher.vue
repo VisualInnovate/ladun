@@ -3,7 +3,7 @@
 import { computed } from 'vue'
 import i18n from '../plugins/i18n';
 
-import { FlagIcon } from "@heroicons/vue/24/solid";
+import { GlobeAltIcon } from "@heroicons/vue/24/solid";
 
 import { useAppLangStore } from '../stores/AppLang';
 
@@ -27,20 +27,20 @@ const executeArCode = () => {
     i18n.global.locale.value = 'en'
     appLang.setAppLang(i18n.global.locale.value)
     appLang.setAppRtl(false)
-    
+
 }
 
 const executeEnCode = () => {
     i18n.global.locale.value = 'ar'
     appLang.setAppLang(i18n.global.locale.value)
     appLang.setAppRtl(true)
-    
+
 }
 </script>
 
 <template>
     <button @click="changeLocale">
-      <FlagIcon class="h-6 w-6 text-white" />
+      <GlobeAltIcon class="h-8 w-8 text-white" />
     </button>
 </template>
 
