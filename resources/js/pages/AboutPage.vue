@@ -50,9 +50,9 @@
         <div class="container mx-auto flex justify-center">
             <div
                 class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20"
-                
+
             >
-            <template v-for="employee in structure">            
+            <template v-for="employee in structure">
                 <div
                     class="max-w-sm border-2 border-gray-border-light rounded-xl p-2"
                 >
@@ -139,10 +139,12 @@ onBeforeMount(async () => {
     // await getAbouUs()
     const response = await axios.get("/api/about");
     about.value = response.data[0];
-    if (!response.data[0].media.length) {
-        gallery.value[0] = { src: "/storage/brief.png", alt: "brief" }; // aboutUs[0] for about us
-    }
     gallery.value = getGallery(about.value.media);
+
+    if (!response.data[0].media.length) {
+        gallery.value.push({ src: "/storage/brief.png", alt: "brief" }); // aboutUs[0] for about us
+    }
+    console.log(gallery.value)
 
     const structureResponse = await axios.get('/api/structure')
 
