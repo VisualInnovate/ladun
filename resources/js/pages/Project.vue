@@ -296,7 +296,7 @@
                 <div class="d-info h-full flex flex-col justify-center">
                     <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{$t('Location')}} </h1>
                     <p class="mb-24 text-4xl text-dark-brown">
-                        {{ project.land_area[$i18n.locale]}}
+                        {{ project.Land_area[$i18n.locale]}}
 
                     </p>
 
@@ -328,14 +328,8 @@
     <section class="text-center py-28" id="ask_us">
         <div class="container mx-auto">
             <h2 class="mb-5">للإستفسارات والملاحظات</h2>
-            <p>
-                لجميع الاستفسارات المتعلقة بمشاريع لدن يرجى الاتصال بنا على الرقم
-                المجاني: 920011560
-            </p>
-            <p>
-                في حال الاتصال من خارج المملكة العربية السعودية، يرجى الاتصال بنا
-                على الرقم 9692001156
-            </p>
+            <p>{{ $t('forAllInquiries') }}</p>
+            <p>{{ $t('outsideSaudia') }}</p>
 
             <div
                 class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w-"
@@ -356,7 +350,7 @@
                                         <div
                                             class="flex justify-between px-4 text-white w-full"
                                         >
-                                            <div>اختر طلبك</div>
+                                            <div>{{ $('chooseYourInquiry') }}</div>
                                             <svg
                                                 class="my-auto w-4 h-4 ltr:ml-14 rtl:mr-14"
                                                 aria-hidden="true"
@@ -425,7 +419,7 @@
 <script setup>
 
 import {useRoute} from 'vue-router';
-import {ref, onBeforeMount, computed} from 'vue'
+import {ref, onBeforeMount} from 'vue'
 import {Input, Dropdown} from 'flowbite-vue'
 import {ArrowDownTrayIcon} from "@heroicons/vue/24/solid";
 import {Tabs, Tab} from 'flowbite-vue'

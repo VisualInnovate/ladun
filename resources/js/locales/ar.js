@@ -73,6 +73,7 @@ export default {
     finncial_banner:"البيانات المالية ",
     call_us:"اتصل بنا",
     video:"فيديو",
+    boradOfDirectors: "أعضاء مجلس الإدارة",
     project:"مشروع",
     gallary_project:"معرض صور المشـــروع",
     high_level_utility:"خدمات عاليه المستوي",
@@ -87,6 +88,9 @@ export default {
     Units_Number:"عدد الشقق",
     Location:"الموقع",
     banner_company:"الشركات الخاصة بمسار التطوير العقاري",
+    chooseYourInquiry: "إختر طلبك",
+    forAllInquiries: "لجميع الاستفسارات المتعلقة بمشاريع لدن يرجى الاتصال بنا على الرقم المجاني: 920011560",
+    outsideSaudia: "في حال الاتصال من خارج المملكة العربية السعودية، يرجى الاتصال بنا على الرقم 9692001156",
     visit:"زيارة الموقع"
 
 
