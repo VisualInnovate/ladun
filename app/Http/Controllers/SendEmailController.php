@@ -13,7 +13,7 @@ class SendEmailController extends Controller
     {
 
         $data=$request->validated();
-            Mail::to("hello@hello.com")->send(new MailableName($data));
+            Mail::to("ladun@visualinnovate.net")->send(new MailableName($data));
             return response(['message'=>"success",'status'=>'200','data'=>$request->validated()]);
     }
 }

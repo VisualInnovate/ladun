@@ -33,7 +33,7 @@ class MailableName extends Mailable
     public function envelope()
     {
         return new Envelope(
-//            from: $this->data['email'],
+            from: $this->data['email'],
             subject:$this->data['subject']
         );
     }
