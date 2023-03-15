@@ -16,19 +16,19 @@
                     >
                         {{ about.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-24 text-2xl" v-if="about.content">
+                    <p class="mb-24 text-2xl text-center md:text-start" v-if="about.content">
                         {{ about.content[$i18n.locale] }}
                     </p>
                     <div
-                        class="company-button flex items-center flex-wrap w-full"
+                        class="company-button flex items-center flex-wrap w-full justify-center md:justify-start"
                     >
                         <a
-                            class="flex items-center special-button text-2xl button bg-dark-brown text-white px-11 py-2 my-5 rtl:ml-28 ltr:mr-28 ml-4 rtl:mr-4 w-48"
+                            class="flex items-center special-button text-2xl button bg-dark-brown text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-48 "
                         >
                             <PhoneIcon
                                 class="h-6 w-6 rtl:ml-2 ltr:mr-2 text-white"
                             />
-                            <span>اتصل بنا</span>
+                            <span>{{$t('call_us')}}</span>
                         </a>
 
                         <a class="flex text-dark-brown items-center">
@@ -37,7 +37,7 @@
                                 src="../../img/play-button.png"
                                 class="rtl:ml-2 ltr:mr-2 h-[60px] w-[60px]"
                             />
-                            <span class="font-bold text-3xl">Video</span>
+                            <span class="font-bold text-3xl">{{$t('video')}}</span>
                         </a>
                     </div>
                 </div>
