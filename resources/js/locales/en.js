@@ -69,7 +69,7 @@ export default {
     financialData: "Financial Data",
     list_money:"Financial Statements",
     header_finncial:"Private financial statements for the year",
-    investor_banner:"investor relations",
+    investor_banner:"Investor Relations",
     finncial_banner:"Financial Statements"
 
 

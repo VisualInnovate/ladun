@@ -1,5 +1,6 @@
 <template>
-    <Navbar class="bg-black" />
+    <Navbar class="bg-black fixed z-50 w-full" />
+
     <Carousel :pictures="pictures"></Carousel>
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
