@@ -92,5 +92,5 @@ export default {
     chooseYourInquiry: "Choose your Inquiry",
     forAllInquiries: "For all inquiries related to Laden projects, please call us toll free: 920011560",
     outsideSaudia: "If you are calling from outside the Kingdom of Saudi Arabia, please call us at 9692001156",
-
+    inquiriesNotes: "For Inquiries and Notes",
 }

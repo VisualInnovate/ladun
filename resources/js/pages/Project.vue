@@ -327,7 +327,7 @@
     <!-- ask_us -->
     <section class="text-center py-28" id="ask_us">
         <div class="container mx-auto">
-            <h2 class="mb-5">للإستفسارات والملاحظات</h2>
+            <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <p>{{ $t('forAllInquiries') }}</p>
             <p>{{ $t('outsideSaudia') }}</p>
 
@@ -434,7 +434,6 @@ import axios from 'axios';
 const route = useRoute();
 
 const activeTab = ref()
-const URL = ref()
 
 
 const getGallery = (gallery) => {
