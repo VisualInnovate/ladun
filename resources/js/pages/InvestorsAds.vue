@@ -8,7 +8,6 @@
         </img-banner>
     </div>
 
-
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
 
