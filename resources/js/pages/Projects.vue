@@ -8,9 +8,9 @@
             <img :src="management.mainImage.src" :alt="management.mainImage.alt" />
           </div>
           <!-- regions -->
-          <tabs variant="underline" v-model="regionActiveTab" class="justify-center" >
+          <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10" >
             <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
-              <div class="grid grid-cols-1 gap-5 md:grid-cols-3 mx-2 pt-2" >
+              <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" >
                 <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
                       <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.original_url" :alt="project.logo.name">
                       <div class="flex flex-col items-center">
@@ -30,7 +30,7 @@
                       </div>
                       </div>
 
-                      <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+                      <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
                 </div>
               </div>
             </tab>

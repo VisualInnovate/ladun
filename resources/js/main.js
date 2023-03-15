@@ -8,6 +8,7 @@ import App from "./app.vue";
 import axios from 'axios'
 import VueScrollTo from 'vue-scrollto'
 
+import 'animate.css';
 
 const axiosInstance = axios.create({
     withCredentials: true,

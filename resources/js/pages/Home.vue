@@ -1,6 +1,6 @@
 <template>
     <!-- header section -->
-    <Navbar class="fixed z-30 w-full" :class="{ 'bg-black': !view.topOfPage}" />
+        <Navbar class="fixed z-30 w-full animate__animated animate__backInDown" :class="{ 'bg-black': !view.topOfPage}" />
     <header class="relative flex h-screen overflow-hidden">
         <div
             class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
@@ -17,33 +17,45 @@
             />
             Your browser does not support the video tag.
         </video>
-        <img
-            class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-48 lg:h-auto"
-            src="../../img/logowithouttext.svg"
-        />
-        <button
-            class="bg-dark-brown text-white rounded-2xl z-20 absolute top-1/2 ltr:right-0 rtl:left-0 ltr:rotate-90 rtl:-rotate-90 origin-top translate-y-1/2 ltr:translate-x-1/2 rtl:-translate-x-1/2 w-72 h-10"
-        >
-            {{ $t("shareYourInterests") }}
-        </button>
+        
+
+        
+
+        <div class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+            <img
+                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn"
+                src="../../img/logowithouttext.svg"
+            />
+            <h1 class="z-50 text-white fadeinoutElement" >شركة لدن للإستثمار</h1>
+        </div>
+        <div class="animate__animated animate__fadeInUp z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
+            <button
+                class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2"
+            >
+                {{ $t("shareYourInterests") }}
+            </button>
+        </div>
     </header>
-    <button class="bg-dark-brown text-white rounded-full z-20 py-1 absolute w-72 h-14 bottom-0 translate-y-[1.5rem] left-1/2 -translate-x-1/2">
-        {{ $t('scrollDown') }}
-        <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2" />
-    </button>
+    <div class="flex justify-center">
+        <button class="bg-dark-brown text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp">
+            {{ $t('scrollDown') }}
+            <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2" />
+        </button>
+    </div>
     <!-- end of header section -->
     <!-- Latest Project section -->
     <section>
         <div class="grid grid-cols-4 gap-4 my-10" >
 
-                <h2 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
+                <h2 class="animate__animated animate__fadeInLeft flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
-                <h2 class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
+
+                <h2 class="animate__animated animate__fadeInLeft flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
                     {{ $t('realEstateManagement') }}
                 </h2>
 
-                <h2 class=" flex text-dark-brown">
+                <h2 class="animate__animated animate__fadeInLeft flex text-dark-brown">
                     {{ $t('realEstateAssetManagement') }}
                 </h2>
 
@@ -92,30 +104,30 @@
     <!-- About Us section -->
     <section class="relative about-section">
         <div class="flex py-5" >
-            <h2 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+            <h2 class="animate__animated animate__fadeInLeft flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-3 mx-auto container px-5">
 
             <p class="px-2 my-auto text-grey text-xs" v-if="aboutData.content" v-html="aboutData.content[$i18n.locale]" ></p>
-            <div class="grid grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('affiliate') }}</p></div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_investment.svg" alt="projects_investment" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsAreas') }}</p></div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 sm:w-48 w-20 gap-1  md:grid-cols-3">
+                <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_revenue.svg" alt="projects_revenue" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('projectsRevenue') }}</p></div>
                 </div>
             </div>
@@ -144,7 +156,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount , ref, reactive } from 'vue'
+import { onBeforeMount , ref, onMounted } from 'vue'
 import Navbar from "../components/Navbar.vue";
 import LightFooter from "../components/LightFooter.vue"
 import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon } from "@heroicons/vue/24/outline";
@@ -155,6 +167,7 @@ import axios from 'axios';
 const view = ref({
     topOfPage: true
 })
+
 
 const latestProjects = ref([])
 
@@ -183,10 +196,26 @@ const handleScroll = () => {
     }
 }
 
+onMounted(()=>{
+    document.documentElement.style.setProperty('--animate-duration', '3s');
+})
+
 </script>
 
-<style>
+<style scoped>
+.fadeinoutElement{
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+}
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
