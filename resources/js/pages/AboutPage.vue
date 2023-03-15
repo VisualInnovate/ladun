@@ -46,7 +46,7 @@
     </section>
 
     <section class="company-manager py-24 bg-background-section">
-        <h1 class="text-center font-bold mb-12 text-3xl">Board of Directors</h1>
+        <h1 class="text-center font-bold mb-12 text-3xl">{{ $t('boradOfDirectors') }}</h1>
         <div class="container mx-auto flex justify-center">
             <div
                 class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20"

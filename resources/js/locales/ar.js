@@ -72,7 +72,8 @@ export default {
     investor_banner:"علاقات الستثمرين",
     finncial_banner:"البيانات المالية ",
     call_us:"اتصل بنا",
-    video:"فيديو"
+    video:"فيديو",
+    boradOfDirectors: "أعضاء مجلس الإدارة",
 
 
 }

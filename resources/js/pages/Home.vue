@@ -47,15 +47,15 @@
     <section>
         <div class="grid grid-cols-4 gap-4 my-10" >
 
-                <h2 class="animate__animated animate__fadeInLeft flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
+                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
 
-                <h2 class="animate__animated animate__fadeInLeft flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
+                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
                     {{ $t('realEstateManagement') }}
                 </h2>
 
-                <h2 class="animate__animated animate__fadeInLeft flex text-dark-brown">
+                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex text-dark-brown">
                     {{ $t('realEstateAssetManagement') }}
                 </h2>
 
@@ -72,7 +72,7 @@
                             <small class="font-bold" v-if="project.location">{{ project.location.city }}</small>
                         </span>
                     </div>
-                    <p class="px-2 text-grey text-xs" v-html="project.text[$i18n.locale]"></p>
+                    <p class="px-2 text-grey text-xs" v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
                     <div class="flex justify-end my-4 mx-2">
                         <button class="bg-dark-brown text-white rounded-2xl w-36 h-8" @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                             <small>
@@ -165,7 +165,9 @@ import { Dropdown } from 'flowbite-vue'
 import axios from 'axios';
 
 const view = ref({
-    topOfPage: true
+    topOfPage: true,
+    latestProjectsSection: true,
+    aboutLadunSection: true,
 })
 
 

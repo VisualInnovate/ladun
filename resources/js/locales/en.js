@@ -72,8 +72,8 @@ export default {
     investor_banner:"Investor Relations",
     finncial_banner:"Financial Statements",
     call_us:"Call Us",
-    video:"video"
-
+    video:"video",
+    boradOfDirectors: "Board Of Directors",
 
 
 
