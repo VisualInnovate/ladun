@@ -6,12 +6,12 @@
     RewriteEngine On
 
     # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    
+#    RewriteCond %{HTTP:Authorization} .
+#    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
     # Redirect any requests to build/assets to public/build/assets folder
     RewriteRule ^/build/assets.*$ /public/build/assets [R=301,L]
-    
+
     # For all URL starting with /css, /fonts, /images, /videos, /img or /js
     RewriteCond %{REQUEST_URI} ^/?(css|fonts|img|images|js|videos)(/.*)?$ [NC]
     RewriteRule ^.*$ /public/build/assets/%1%2 [L]
