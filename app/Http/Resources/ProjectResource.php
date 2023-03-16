@@ -38,7 +38,13 @@ class ProjectResource extends JsonResource
            'models_number' => $this->models_number,
            'project_models' => $this->projectModelsWithUtilities,
            'location' => $this->location,
-           'utilities' => $this->utilities,
+           'utilities' => $this->utilities->map(function($util){
+            return [
+                'id' => $util->id,
+                'title' => $util->title,
+                'image' => $util->media()->first(),
+            ];
+           }),
            'gallery' => $this->getMedia('default'),
            'logo' => $this->getMedia('projects')->first(),
            'attachment' => env('APP_URL').'/storage/'.$this->attachment,
