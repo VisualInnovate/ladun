@@ -132,11 +132,10 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
                 <div class="d-info h-full flex flex-col ">
-                    <h1 class=" text-4xl mb-6">{{ project.title[$i18n.locale] }}</h1>
+                    <h1 class=" text-4xl mb-6">{{project.title[$i18n.locale]}}</h1>
                     <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-
                 <div class="img-company-info  ">
                     <img class="w-full" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
@@ -153,8 +152,8 @@
     <!-- gallery section -->
     <section class="py-12 pb-16">
         <div class="container mx-auto">
-            <div class="flex flex-wrap">
-                <div class="w-[20%] flex items-center">
+            <div class=" flex lg:flex-row  flex-col">
+                <div class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start">
                     <p class="text-dark-brown text-5xl">{{ $t('gallary_project') }}</p>
                 </div>
                 <div class="flex flex-row-reverse w-[80%]">
@@ -177,10 +176,11 @@
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <div class="z-40   container mx-auto">
-            <h2 class="mb-5 text-light-brown text-4xl">{{$t('high_level_utility')}} </h2>
-            <p class="mb-10 text-3xl">{{$t('high_level_utility_p')}} </p>
+            <h2 class="mb-5 text-light-brown text-4xl">{{ $t('high_level_utility') }} </h2>
+            <p class="mb-10 text-3xl">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap">
-                <div v-for="utility in project.utilities" :key="utility.id" class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                <div v-for="utility in project.utilities" :key="utility.id"
+                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
                         <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40" alt="">
                     </div>
@@ -202,9 +202,9 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class=" text-4xl text-light-brown mb-6">{{$t('Download_Project_Files')}}</h1>
+                    <h1 class=" text-4xl text-light-brown mb-6">{{ $t('Download_Project_Files') }}</h1>
                     <p class="mb-20 text-3xl">
-                       {{$t('Download_Project_Files_p')}}
+                        {{ $t('Download_Project_Files_p') }}
                     </p>
 
                     <div class="company-button ">
@@ -246,14 +246,14 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{$t('Project_Models')}} </h1>
+                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
                     <tabs variant="underline" v-model="activeTab" class="p-5 text-3xl">
                         <!-- class appends to content DIV for all tabs -->
                         <tab v-for="model in project.project_models" :name="model.title['en']"
                              :title="model.title[$i18n.locale]"
-                        class="text-3xl">
+                             class="text-3xl">
                             <div class="text mb-5">
-                                <p class="mb-3">{{$t('Land_Area')}}: {{ model.Land_area }}</p>
+                                <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
                                 <p class="mb-3">{{ $t('Building Area') }}: {{ model.building_area }}</p>
                                 <p class="mb-3">{{ $t('Floors Number') }}: {{ model.floors_number }}</p>
                                 <p>{{ $t('Units Number') }}: {{ model.units_number }}</p>
@@ -294,13 +294,13 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{$t('Location')}} </h1>
-                    <p class="mb-24 text-4xl text-dark-brown">
-                        {{ project.Land_area[$i18n.locale]}}
+                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
+                    <p class="mb-24 text-4xl text-dark-brown" v-if="project.land_area[$i18n.locale]">
+                        {{ project.land_area[$i18n.locale] }}
 
                     </p>
 
-                    <p class="flex "  v-if="project.address">
+                    <p class="flex " v-if="project.address">
                         <MapPinIcon class="w-6 h-6 text-black"/>
                         {{ project.address[$i18n.locale] }}
                     </p>
@@ -350,7 +350,7 @@
                                         <div
                                             class="flex justify-between px-4 text-white w-full"
                                         >
-                                            <div>{{ $('chooseYourInquiry') }}</div>
+                                            <div>{{ $t('chooseYourInquiry') }}</div>
                                             <svg
                                                 class="my-auto w-4 h-4 ltr:ml-14 rtl:mr-14"
                                                 aria-hidden="true"
@@ -416,10 +416,10 @@
     <DarkFooter/>
 </template>
 
-<script setup>
+<script>
 
 import {useRoute} from 'vue-router';
-import {ref, onBeforeMount} from 'vue'
+
 import {Input, Dropdown} from 'flowbite-vue'
 import {ArrowDownTrayIcon} from "@heroicons/vue/24/solid";
 import {Tabs, Tab} from 'flowbite-vue'
@@ -428,41 +428,50 @@ import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
 import DarkFooter from '../components/DarkFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
-import axios from 'axios';
 
-
-const route = useRoute();
-
-const activeTab = ref()
-const URL = ref()
-
-
-const getGallery = (gallery) => {
-    if (gallery) {
-        return Object.values(gallery).map((image) => {
-            return {
-                src: image.original_url,
-                alt: image.name
+export default {
+    components: {
+        Input, Dropdown, DarkFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute
+    },
+    data() {
+        return {
+            activeTab: '',
+            URL: '',
+            route: '',
+            project: {},
+        }
+    },
+    methods: {
+        getGallery(gallery) {
+            if (gallery) {
+                return Object.values(gallery).map((image) => {
+                    return {
+                        src: image.original_url,
+                        alt: image.name
+                    }
+                })
+            } else {
+                return [];
             }
+
+        },
+    },
+    created() {
+
+      axios.get(`/api/projects/${this.$route.params.id}`).then(res =>{
+            this.project = res.data.data
+          this.activeTab = this.project.project_models[0].title['en']
+          // console.log(this.project)
         })
-    } else {
-        return [];
+
+      //
+      //   this.activeTab = this.project.project_models[0].title['en']
+    console.log(this.project)
+
     }
+}
 
-};
 
-
-const project = ref({});
-onBeforeMount(async () => {
-
-    const response = await axios.get(`/api/projects/${route.params.id}`)
-
-    project.value = response.data.data
-    console.log(project)
-
-    activeTab.value = project.value.project_models[0].title['en']
-
-})
 
 </script>
 
