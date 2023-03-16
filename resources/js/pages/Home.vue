@@ -47,15 +47,15 @@
     <section>
         <div class="grid grid-cols-4 gap-4 my-10" >
 
-                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
+                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
 
-                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
+                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
                     {{ $t('realEstateManagement') }}
                 </h2>
 
-                <h2 :class="{ 'bg-black': !view.latestProjectsSection}" class="animate__animated animate__fadeInLeft flex text-dark-brown">
+                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-dark-brown">
                     {{ $t('realEstateAssetManagement') }}
                 </h2>
 
@@ -104,14 +104,14 @@
     <!-- About Us section -->
     <section class="relative about-section">
         <div class="flex py-5" >
-            <h2 class="animate__animated animate__fadeInLeft flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+            <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-3 mx-auto container px-5">
 
             <p class="px-2 my-auto text-grey text-xs" v-if="aboutData.content" v-html="aboutData.content[$i18n.locale]" ></p>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container px-5 justify-items-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto" /> <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong><p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
@@ -193,8 +193,12 @@ onBeforeMount(()=>{
 const handleScroll = () => {
     if(window.pageYOffset > 0){
         if(view.value.topOfPage)  view.value.topOfPage = false
+        if(view.value.latestProjectsSection)  view.value.latestProjectsSection = false
+        if(view.value.aboutLadunSection)  view.value.aboutLadunSection = false
     } else {
         if(!view.value.topOfPage) view.value.topOfPage = true
+        if(!view.value.latestProjectsSection) view.value.latestProjectsSection = true
+        if(!view.value.aboutLadunSection) view.value.aboutLadunSection = true
     }
 }
 

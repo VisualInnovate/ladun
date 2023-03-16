@@ -19,7 +19,7 @@ export default {
     areaUnit: "m2",
     unit: "Units",
     aboutLadun: "About Ladun",
-    experienceYears: "experienceYears",
+    experienceYears: "Experience Years",
     projectsUnits: "projects Units",
     affiliate: "affiliate",
     projectsInvestment: "projects Investment",
