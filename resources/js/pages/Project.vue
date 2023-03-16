@@ -21,7 +21,7 @@
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Land</p>
+                        <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
@@ -58,15 +58,13 @@
         <div class="container mx-auto">
             <div class="py-10 w-full lg:w-[60%]">
                 <div
-                    class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-15  lg:grid-cols-6 lg:gap-14 mx-auto items-center ">
-
-
+                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
                     <div class="mx-auto font-bold">
                         <a href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
                         }">
-                            Project
+                            {{ $t('project') }}
                         </a>
                     </div>
 
@@ -75,7 +73,7 @@
                             el: '#utilities',
                             offset: -128
                         }">
-                            Utilities
+                            {{ $t('utilities') }}
                         </a>
                     </div>
 
@@ -84,7 +82,7 @@
                             el: '#downloads',
                             offset: -128
                         }">
-                            Downloads
+                            {{ $t('downloads') }}
                         </a>
                     </div>
 
@@ -93,7 +91,7 @@
                             el: '#project_models',
                             offset: -128
                         }">
-                            Project Models
+                            {{ $t('projectModels') }}
                         </a>
                     </div>
 
@@ -102,7 +100,7 @@
                             el: '#location',
                             offset: -128
                         }">
-                            Location
+                            {{ $t('location') }}
                         </a>
                     </div>
 
@@ -112,7 +110,7 @@
                             el: '#ask_us',
                             offset: -128
                         }">
-                        Ask Us
+                        {{ $t('askUs') }}
                     </a>
 
 
@@ -299,14 +297,14 @@
 
                 <div class="d-info h-full flex flex-col justify-center">
                     <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
-                    <p class="mb-24 text-4xl text-dark-brown" >
-                        {{ project.land_area }}
+                    <p class="mb-24 text-4xl text-dark-brown" v-if="project.location" >
+                        {{ project.location.city }}
 
                     </p>
 
-                    <p class="flex " v-if="project.address">
+                    <p class="flex " v-if="project.location.address">
                         <MapPinIcon class="w-6 h-6 text-black"/>
-                        {{ project.address[$i18n.locale] }}
+                        {{ project.location.address }}
                     </p>
 
                 </div>
@@ -410,7 +408,7 @@
             </div>
 
             <p dir="">
-                اذا واجهتك أي مشكلة في التقديم <a href="#" class="text-dark-brown">راسلنا الآن</a>
+                {{ $t('ifYouFaceAProplem') }}<a href="#" class="text-dark-brown">{{ $t('sendUsNow') }}</a>
             </p>
         </div>
 

@@ -49,7 +49,7 @@ export default {
     ext: "تحويلة",
     fax: "الفاكس",
     phone: "الهاتف",
-    location: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
+    location: "الموقع",
     followUs: "تابعنا على منصات التواصل الإجتماعي",
     pleaseFill: "برجاء مليء البيانات التالية لزيادة فرص قبولك",
     gender: "النوع",
@@ -74,7 +74,7 @@ export default {
     call_us:"اتصل بنا",
     video:"فيديو",
     boradOfDirectors: "أعضاء مجلس الإدارة",
-    project:"مشروع",
+    project:"المشروع",
     gallary_project:"معرض صور المشـــروع",
     high_level_utility:"خدمات عاليه المستوي",
     high_level_utility_p:"لمزيد من المعلومات يرجى الاتصال على البريد الإلكتروني",
@@ -93,11 +93,11 @@ export default {
     outsideSaudia: "في حال الاتصال من خارج المملكة العربية السعودية، يرجى الاتصال بنا على الرقم 9692001156",
     inquiriesNotes: "للإستفسارات والملاحظات",
     visit:"زيارة الموقع",
-
-
-
-
-
-
-
+    areaOfLand: "مساحة الأرض",
+    utilities: "المرافق",
+    downloads: "التنزيلات",
+    projectModels: "نماذج المشروع",
+    askUs: "للاستفسارات",
+    ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
+    sendUsNow: "راسلنا الآن"
 }
