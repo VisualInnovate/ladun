@@ -618,7 +618,7 @@ const data = ref([
 ])
 
 onMounted(async () => {
-  const response = await axios.get('api/projects')
+  const response = await axios.get('/api/projects')
 
   fetchedProjects.value = response.data.data
 })

@@ -32,10 +32,7 @@ class ProjectResource extends JsonResource
             'en' => $this->getTranslation('content', 'en'),
             'ar' => $this->getTranslation('content', 'ar'),
            ],
-           'land_area' => [
-               'en' => $this->getTranslation('Land_area', 'en'),
-               'ar' => $this->getTranslation('Land_area', 'ar'),
-           ],
+           'land_area' => $this->Land_area,
            'building_area' => $this->building_area,
            'units_number' => $this->units_number,
            'models_number' => $this->models_number,
