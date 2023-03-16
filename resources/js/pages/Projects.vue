@@ -11,7 +11,7 @@
           <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10" >
             <tab v-for="region in management.regions" :name="region.title" :title="$t(region.title)">
               <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto max-w-7xl [&>div]:h-[45rem]" >
-                <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white relative mx-2">
+                <div v-for="project in fetchedProjects" class="rounded-lg border-2 border-gray-border-light bg-white relative mx-2 h-[210px]">
                       <img class="w-20 h-20 rounded-full mx-auto my-3" :src="project.logo.original_url" :alt="project.logo.name">
                       <div class="flex flex-col items-center">
                           <h3 class="flex-initial p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
@@ -30,7 +30,7 @@
                       </div>
                       </div>
                       <div class="absolute bottom-0 w-full">
-                        <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                        <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div:first-child]:h-[243px] [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
                       </div>
                 </div>
               </div>
