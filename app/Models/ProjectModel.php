@@ -22,7 +22,7 @@ class ProjectModel extends  Model implements HasMedia
     // protected $with = ['utilities'];
     public function utilities()
     {
-        return $this->belongsToMany(Utility::class, 'project_model_utility');
+        return $this->belongsToMany(Utility::class, 'project_model_utility')->with('media');
     }
 
     public function project()

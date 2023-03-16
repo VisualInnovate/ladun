@@ -21,28 +21,29 @@
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Land</p>
+                        <p>{{ $t('Land_Area') }}</p>
+
                         <p class="font-bold">{{ project.Land_area }} m2</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
-                        <p>Area Of Building</p>
+                        <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
-                        <p>Number of Units</p>
+                        <p>{{$t('Floors_Number')}}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
-                        <p>Number of Models</p>
+                        <p>{{ $t('Units_Number')}}</p>
                         <p class="font-bold">{{ project.models_number }}</p>
                     </div>
                 </div>
@@ -133,7 +134,7 @@
 
                 <div class="d-info h-full flex flex-col ">
                     <h1 class=" text-4xl mb-6">{{project.title[$i18n.locale]}}</h1>
-                    <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
+                    <p class="mb-24 text-3xl text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
                 <div class="img-company-info  ">
@@ -182,10 +183,10 @@
                 <div v-for="utility in project.utilities" :key="utility.id"
                      class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
-                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40" alt="">
+                        <img :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40" alt="">
                     </div>
 
-                    <p class="text-sm">Driver Room</p>
+                    <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
                 </div>
 
 
@@ -264,7 +265,7 @@
                                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
                                     <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
-                                        <img src="../../img/icon-utility.png" class="w-[35px] h-[35px] z-40">
+                                        <img :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40">
                                         <!--                                            add dinamic img -->
                                     </div>
 
@@ -461,12 +462,12 @@ export default {
       axios.get(`/api/projects/${this.$route.params.id}`).then(res =>{
             this.project = res.data.data
           this.activeTab = this.project.project_models[0].title['en']
-          // console.log(this.project)
+          console.log(res.data.data)
         })
 
       //
       //   this.activeTab = this.project.project_models[0].title['en']
-    console.log(this.project)
+    // console.log(this.project)
 
     }
 }

@@ -58,7 +58,7 @@
                     class="max-w-sm border-2 border-gray-border-light rounded-xl p-2"
                 >
                     <div
-                        class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7"
+                        class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
                     >
                         <div class="flex justify-center px-4 pt-4">
                             <div class="flex flex-col items-center pb-10">
@@ -77,7 +77,7 @@
                                     class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                 >
-                                <div class="flex text-center mt-2" v-html="employee.qualification[$i18n.locale]"></div>
+                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale].slice(0,250)+'...'"></div>
                             </div>
                         </div>
                     </div>
