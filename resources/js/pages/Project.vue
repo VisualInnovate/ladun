@@ -179,7 +179,10 @@
             <h2 class="mb-5 text-light-brown text-4xl">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-3xl">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap">
-                <div v-for="utility in project.utilities" :key="utility.id"
+                <div 
+                v-if="project.utilities"
+                v-for="utility in project.utilities" :key="utility.id"
+
                      class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
                         <img :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40" alt="">
@@ -260,6 +263,7 @@
                             </div>
                             <div class="flex flex-wrap">
                                 <div
+                                    v-if="model.utilities"
                                     v-for="utility in model.utilities"
                                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
