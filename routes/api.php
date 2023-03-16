@@ -59,7 +59,7 @@ Route::post('/contact',[\App\Http\Controllers\SendEmailController::class,'contac
 Route::group(['prefix' => 'projects'], function () {
     // projects list
     Route::get('/',function (){
-        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities'])->orderBy('id')->get();
+        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities'])->where('is_published','=',1)->orderBy('id')->get();
         return ProjectResource::collection($projects);
 
     });

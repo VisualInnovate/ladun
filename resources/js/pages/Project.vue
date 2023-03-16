@@ -177,7 +177,7 @@
             <h2 class="mb-5 text-light-brown text-4xl">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-3xl">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap">
-                <div 
+                <div
                 v-if="project.utilities"
                 v-for="utility in project.utilities" :key="utility.id"
 

@@ -17,9 +17,9 @@
             />
             Your browser does not support the video tag.
         </video>
-        
 
-        
+
+
 
         <div class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <img
@@ -37,14 +37,18 @@
         </div>
     </header>
     <div class="flex justify-center">
-        <button class="bg-dark-brown text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp">
+        <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp" href="#" v-scroll-to="{
+                            el: '#project-latest',
+                            offset: -128
+                        }">
             {{ $t('scrollDown') }}
             <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2" />
-        </button>
+        </a>
     </div>
+
     <!-- end of header section -->
     <!-- Latest Project section -->
-    <section>
+    <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10" >
 
                 <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
@@ -102,7 +106,7 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class="relative about-section">
+    <section class="relative about-section" >
         <div class="flex py-5" >
             <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
                 {{ $t('aboutLadun') }}
@@ -179,7 +183,7 @@ onBeforeMount(()=>{
     axios.get('/api/projects/latest')
     .then((response) => {
         latestProjects.value = response.data.data
-        // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)  
+        // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
     })
     .catch(error => console.log(error))
 
