@@ -1,36 +1,62 @@
 <template>
     <div class="bg-light-footer text-grey ">
         
-        <div class="grid grid-cols-1 md:grid-cols-8 mt-10 px-11 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-9 mt-10 px-11 py-12">
             <div class="flex flex-col mx-auto ">
                 <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
-                <div class="inline-flex justify-between w-28">
+                <div class="inline-flex justify-between">
                     <template v-for="icon in icons">
-                        <img :src="`${icon}`" :alt="`${icon}`" class="w-4 h-6" />
+                        <a :href="icon.href" target="_blank" >
+                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 h-6" />
+                        </a>
                     </template>
                 </div>
             </div>
+            <div></div>
             <div class="flex flex-col justify-between h-32 pt-8">
-                <small>{{ $t('aboutLadun') }}</small>
-                <small>{{ $t('whoWeAre') }}</small>
-                <small>{{ $t('aboutOurCompany') }}</small>
+                <router-link :to="{ name: 'About Us' }">
+                    <small>{{ $t('aboutLadun') }}</small>
+                </router-link>
+                <router-link :to="{ name: 'About Us' }">
+                    <small>{{ $t('whoWeAre') }}</small>
+                </router-link>
+                <router-link :to="{ name: 'About Us' }">
+                    <small>{{ $t('aboutOurCompany') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col justify-between h-32 pt-8">
-                <small>{{ $t('projects') }}</small>
-                <small>{{ $t('realEstateManagement') }}</small>
-                <small>{{ $t('realEstateAssetManagement') }}</small>
+                <router-link :to="{ name: 'Projects' }">
+
+                    <small>{{ $t('projects') }}</small>
+                </router-link>
+                <router-link :to="{ name: 'Projects' }">
+
+                    <small>{{ $t('realEstateManagement') }}</small>
+                </router-link>
+                <router-link :to="{ name: 'Projects' }">
+
+                    <small>{{ $t('realEstateAssetManagement') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col justify-between md:h-32 pt-8">
-                <small>{{ $t('investorsRelations') }}</small>
+                <router-link :to="{ name: 'Investors Ads' }">
+                    <small>{{ $t('investorsRelations') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col justify-between md:h-32 pt-8">
-                <small>{{ $t('mediaCenter') }}</small>
+                <router-link :to="{ name: 'Media Center' }">
+                    <small>{{ $t('mediaCenter') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col justify-between md:h-32 pt-8">
-                <small>{{ $t('joinUs') }}</small>
+                <router-link :to="{ name: 'Join Us' }">
+                    <small>{{ $t('joinUs') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col justify-between md:h-32 pt-8">
-                <small>{{ $t('contactUs') }}</small>
+                <router-link :to="{ name: 'Contact Us' }">
+                    <small>{{ $t('contactUs') }}</small>
+                </router-link>
             </div>
             <div class="flex flex-col-reverse justify-between md:h-32 pt-8">
                 <div class="inline-flex">
@@ -67,10 +93,32 @@ import youtubeIcon from "../../img/light_footer_youtube.svg";
 import whatsappIcon from "../../img/light_footer_whatsapp.svg";
 
 const icons = [
-    facebookIcon,
-    instagramIcon,
-    twitterIcon,
-    youtubeIcon,
-    linkedinIcon,
+    {
+        image:facebookIcon ,
+        href: 'https://www.facebook.com/Ladun.KSA',
+    },
+    {
+        image:instagramIcon ,
+        href: '',
+    },
+    {
+        image:twitterIcon ,
+        href: 'https://twitter.com/Ladun_sa',
+    },
+    {
+        image:youtubeIcon ,
+        href: 'https://www.youtube.com/channel/UCNZqi9-p_HGDp_v7YtKsybg',
+    },
+    {
+        image:linkedinIcon ,
+        href: 'https://www.linkedin.com/company/ladun',
+    },
+
 ];
 </script>
+
+<style scoped>
+a:hover{
+    text-decoration: underline;
+}
+</style>
