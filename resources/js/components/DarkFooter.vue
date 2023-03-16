@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white flex flex-col flex-wrap md:flex-nowrap py-10 px-10 md:pt-24 md:px-24 rounded-t-2xl w-full bg-blend-multiply bg-dark-footer-image bg-black bg-no-repeat bg-cover bg-fixed">
+    <div class="text-white flex flex-col flex-wrap md:flex-nowrap py-10 px-10 rounded-t-2xl w-full bg-blend-multiply bg-dark-footer-image bg-black bg-no-repeat bg-cover bg-fixed">
         <div
             class="flex justify-between gap-x-36 flex-wrap md:flex-nowrap"
         >
