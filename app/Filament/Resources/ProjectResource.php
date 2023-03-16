@@ -66,7 +66,9 @@ class ProjectResource extends Resource
                     SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))
             ->multiple()
             ->enableReordering(),
-                FileUpload::make('attachment')
+                FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                    return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
+                })
                 ,
             TextInput::make('Land_area')->label(__('Land_area'))->required(),
             TextInput::make('building_area')->label(__('building_area'))
@@ -175,6 +177,8 @@ class ProjectResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
