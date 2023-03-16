@@ -6,7 +6,7 @@
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
         <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <img class="w-[30%] md:w-[60%] lg:w-[80%] mx-auto md:mb-3 rounded-full"
+            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full"
                  v-if="project.logo"
                  :src="project.logo.original_url">
             <p class="text-center text-sm md:text-3xl" v-if="project.title">{{ project.title[$i18n.locale] }}</p>

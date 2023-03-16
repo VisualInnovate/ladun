@@ -30,7 +30,7 @@
                       </div>
                       </div>
                       <div class="absolute bottom-0 w-full">
-                        <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                        <Carousel :pictures="getGallery(project.gallery)" class="[&>div>div>img]:h-full [&>div:first-child]:h-[243px] [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
                       </div>
                 </div>
               </div>
