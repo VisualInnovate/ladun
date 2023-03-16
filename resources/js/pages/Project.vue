@@ -185,7 +185,7 @@
 
                      class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
-                        <img :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40" alt="">
+                        <img :src="utility.image.original_url" class="w-[35px] h-[35px] z-40" alt="">
                     </div>
 
                     <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
