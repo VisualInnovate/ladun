@@ -21,9 +21,8 @@
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
-                        <p>{{ $t('Land_Area') }}</p>
-
-                        <p class="font-bold">{{ project.Land_area }} m2</p>
+                        <p>Area Of Land</p>
+                        <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
@@ -133,8 +132,8 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
                 <div class="d-info h-full flex flex-col ">
-                    <h1 class=" text-4xl mb-6">{{project.title[$i18n.locale]}}</h1>
-                    <p class="mb-24 text-3xl text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
+                    <h1 class=" text-4xl mb-6" v-if="project.title">{{project.title[$i18n.locale]}}</h1>
+                    <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
                 <div class="img-company-info  ">
@@ -255,9 +254,9 @@
                              class="text-3xl">
                             <div class="text mb-5">
                                 <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
-                                <p class="mb-3">{{ $t('Building Area') }}: {{ model.building_area }}</p>
-                                <p class="mb-3">{{ $t('Floors Number') }}: {{ model.floors_number }}</p>
-                                <p>{{ $t('Units Number') }}: {{ model.units_number }}</p>
+                                <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
+                                <p class="mb-3">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
+                                <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
                             </div>
                             <div class="flex flex-wrap">
                                 <div
@@ -296,8 +295,8 @@
 
                 <div class="d-info h-full flex flex-col justify-center">
                     <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
-                    <p class="mb-24 text-4xl text-dark-brown" v-if="project.land_area[$i18n.locale]">
-                        {{ project.land_area[$i18n.locale] }}
+                    <p class="mb-24 text-4xl text-dark-brown" >
+                        {{ project.land_area }}
 
                     </p>
 
@@ -457,17 +456,15 @@ export default {
 
         },
     },
-    created() {
+    beforeMount() {
 
-      axios.get(`/api/projects/${this.$route.params.id}`).then(res =>{
-            this.project = res.data.data
+      axios.get(`/api/projects/${this.$route.params.id}`)
+      .then(res =>{
+        this.project = res.data.data
           this.activeTab = this.project.project_models[0].title['en']
           console.log(res.data.data)
         })
-
-      //
-      //   this.activeTab = this.project.project_models[0].title['en']
-    // console.log(this.project)
+        .catch((error) => console.log(error))
 
     }
 }

@@ -64,7 +64,7 @@
         <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
 
             <div v-for="project in latestProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
-                    <img class="w-full rounded-lg" v-if="project.logo" :src="project.logo.original_url" alt="Project Photo">
+                    <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment" alt="Project Photo">
                     <div class="flex items-center">
                         <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
                         <span class="flex-initial mx-2 text-light-brown">
@@ -179,7 +179,7 @@ onBeforeMount(()=>{
     axios.get('/api/projects/latest')
     .then((response) => {
         latestProjects.value = response.data.data
-        console.log(latestProjects.value)  
+        // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)  
     })
     .catch(error => console.log(error))
 
