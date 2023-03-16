@@ -185,7 +185,7 @@
 
                      class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
-                        <img :src="utility.image.original_url" class="w-[35px] h-[35px] z-40" alt="">
+                        <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40" alt="">
                     </div>
 
                     <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
@@ -268,7 +268,7 @@
                                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
                                     <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
-                                        <img :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40">
+                                        <img v-if="utility.media[0]" :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40">
                                         <!--                                            add dinamic img -->
                                     </div>
 
@@ -464,6 +464,7 @@ export default {
 
       axios.get(`/api/projects/${this.$route.params.id}`)
       .then(res =>{
+        // this.project = Vue.util.extend({}, res.data.data)
         this.project = res.data.data
           this.activeTab = this.project.project_models[0].title['en']
           console.log(res.data.data)
