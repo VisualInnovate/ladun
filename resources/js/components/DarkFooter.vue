@@ -9,8 +9,10 @@
             </div>
             <div class="flex justify-between">
                 <template v-for="icon in icons">
-                    <img :src="`${icon}`" :alt="`${icon}`" class="w-10 h-10" />
-                </template>
+                        <a :href="icon.href" target="_blank" >
+                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-10 h-10" />
+                        </a>
+                    </template>
             </div>
         </div>
         <div class="flex-auto md:w-64">
@@ -34,7 +36,6 @@ import linkedinIcon from "../../img/dark_footer/icons/dark_footer_linkedin.svg";
 import twitterIcon from "../../img/dark_footer/icons/dark_footer_twitter.svg";
 import whatsappIcon from "../../img/dark_footer/icons/dark_footer_whatsapp.svg";
 import facebookIcon from "../../img/dark_footer/icons/dark_footer_facebook.svg";
-
 const { t } = useI18n();
 const buttons = [
     {
@@ -56,10 +57,23 @@ const buttons = [
 ]
 
 const icons = [
-    linkedinIcon,
-    twitterIcon,
-    whatsappIcon,
-    facebookIcon,
+    {
+        image:linkedinIcon ,
+        href: 'https://www.linkedin.com/company/ladun',
+    },
+    {
+        image:twitterIcon ,
+        href: 'https://twitter.com/Ladun_sa',
+    },
+    {
+        image:whatsappIcon ,
+        href: 'https://wa.me/920011560',
+    },
+    {
+        image:facebookIcon ,
+        href: 'https://www.facebook.com/Ladun.KSA',
+    },
+
 ];
 
 </script>

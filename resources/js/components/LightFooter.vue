@@ -61,7 +61,9 @@
             <div class="flex flex-col-reverse justify-between md:h-32 pt-8">
                 <div class="inline-flex">
                     <p>920011560</p>
-                    <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6 mx-2" />
+                    <a href="https://wa.me/920011560" target="_blank">
+                        <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6 mx-2" />
+                    </a>
                 </div>
             </div>
         
@@ -99,7 +101,7 @@ const icons = [
     },
     {
         image:instagramIcon ,
-        href: '',
+        href: 'https://www.instagram.com/ladun_sa/',
     },
     {
         image:twitterIcon ,
