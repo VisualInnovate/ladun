@@ -1,12 +1,12 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <section class="company-info py-28 bg-background-section pt-36">
+    <section class="company-info py-28 bg-background-section pt-52">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
-                <div class="img-company-info" v-if="gallery">
+                <div class="img-company-info flex justify-center" v-if="gallery">
                     <Carousel
                         :pictures="gallery"
-                        class="about-us-carousel h-[690px] [&>div:first-child]:h-[690px] [&>div>div>img]:h-[690px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
+                        class="about-us-carousel h-[670px] w-[90%] [&>div:first-child]:h-[670px] [&>div>div>img]:h-[670px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
                     />
                 </div>
                 <div class="d-info h-full flex flex-col justify-center">
@@ -17,7 +17,7 @@
                     >
                         {{ about.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-24 text-2xl   text-justify"  v-if="about.content" v-html="about.content[$i18n.locale]">
+                    <p class="mb-24 text-2xl   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-10	"  v-if="about.content" v-html="about.content[$i18n.locale]">
 
                     </p>
                     <div
@@ -77,7 +77,7 @@
                                     class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                 >
-                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale].slice(0,250)+'...'"></div>
+                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale]+'...'"></div>
                             </div>
                         </div>
                     </div>

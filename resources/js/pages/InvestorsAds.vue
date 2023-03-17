@@ -16,7 +16,7 @@
                 <card-link v-for="investor in investors">
 <!--                    <template #date>الخميس 15 مايو 2022</template>-->
                     <template #head>{{investor.title[$i18n.locale]}}</template>
-                    <template #text> <div v-html="investor.content[$i18n.locale]"></div></template>
+                    <template #text> <div v-html="investor.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                     <img
                         class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                         :src="investor.media[0].original_url" alt="">

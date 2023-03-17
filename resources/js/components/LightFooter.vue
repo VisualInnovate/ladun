@@ -1,6 +1,6 @@
 <template>
     <div class="bg-light-footer text-grey ">
-        
+
         <div class="grid grid-cols-1 md:grid-cols-9 mt-10 px-11 py-12">
             <div class="flex flex-col mx-auto ">
                 <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
@@ -66,7 +66,7 @@
                     </a>
                 </div>
             </div>
-        
+
         </div>
         <hr class="border-gray-300 mx-11"/>
         <div class="mx-11 py-5 flex justify-center">
@@ -88,7 +88,7 @@
 <script setup>
 import DarkLogo from "../../img/ladun_logo_dark.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
-import twitterIcon from "../../img/light_footer_twitter.svg";
+// import twitterIcon from "../../img/light_footer_twitter.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";
 import linkedinIcon from "../../img/light_footer_linkedin.svg";
 import youtubeIcon from "../../img/light_footer_youtube.svg";

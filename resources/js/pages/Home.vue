@@ -155,7 +155,7 @@
     </section>
     <!-- End About Us section -->
     <!-- footer section -->
-    <LightFooter />
+<!--    <LightFooter />-->
 
 </template>
 
@@ -207,6 +207,7 @@ const handleScroll = () => {
 }
 
 onMounted(()=>{
+    console.log("hello")
     document.documentElement.style.setProperty('--animate-duration', '3s');
 })
 

@@ -37,13 +37,19 @@ Route::get('/financials',function (){
         'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
         })
-    ])->orderBy('created_at', 'ASC');
+    ]);
 });
 
 
 Route::get('/investors',function (){
     return response ([
         'investors'=>\App\Models\Investor::with('media')->get()
+    ]);
+});
+
+Route::get('/media-center',function (){
+    return response ([
+        'mediaCenter'=>\App\Models\MediaCenter::with('media')->get()
     ]);
 });
 

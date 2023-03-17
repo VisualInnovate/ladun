@@ -12,7 +12,7 @@
 
                 <header class="flex flex-wrap justify-between items-center mb-5">
                     <div
-                        class="bg-subtraction-ltr-png rtl:bg-subtraction-png h-16 w-[80%] flex items-center rtl:pr-8  ltr:pl-8 text-xl">
+                        class="ltr:bg-subtraction-ltr-png rtl:bg-subtraction-png h-16 w-[70%] flex items-center rtl:pr-8  ltr:pl-8 text-xl">
                         {{$t('header_finncial')}}
                     </div>
                     <div class="year flex items-center text-[50px] font-bold " dir="rtl">
