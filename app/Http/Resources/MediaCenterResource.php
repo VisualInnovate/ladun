@@ -22,7 +22,7 @@ class MediaCenterResource extends JsonResource
             ],
             'created_at'=>Carbon::parse($this->created_at)->format('d/m/Y'),
             'id'=>$this->id,
-            'media'=>$this->media,
+            'media'=>$this->media[0],
             'title'=>[
                 'en' => $this->getTranslation('title', 'en'),
                 'ar' => $this->getTranslation('title', 'ar'),

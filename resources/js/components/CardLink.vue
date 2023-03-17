@@ -17,9 +17,7 @@
 export default {
     name: "CardLink",
 
-    mounted() {
-        console.log(this.imgSrc)
-    }
+
 }
 </script>
 
