@@ -155,7 +155,7 @@
     </section>
     <!-- End About Us section -->
     <!-- footer section -->
-<!--    <LightFooter />-->
+    <LightFooter />
 
 </template>
 
