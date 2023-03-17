@@ -12,7 +12,8 @@
                     <template #head>{{item.title[$i18n.locale]}}</template>
                     <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                     <img
-                        class="h-full object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                        class="md:h-full object-cover img-media-center
+                         rounded-t-lg  w-full md:w-48 md:rounded-none md:rounded-l-lg"
                         :src="item.media[0].original_url" alt="">
                 </card-link>
 
