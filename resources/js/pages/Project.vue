@@ -131,7 +131,7 @@
 
                 <div class="d-info h-full flex flex-col ">
                     <h1 class=" text-4xl mb-6" v-if="project.title">{{project.title[$i18n.locale]}}</h1>
-                    <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
+                    <p class="mb-24 text-3xl text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
                 <div class="img-company-info  ">

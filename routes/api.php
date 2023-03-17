@@ -48,8 +48,10 @@ Route::get('/investors',function (){
 });
 
 Route::get('/media-center',function (){
+    $media=\App\Models\MediaCenter::with('media')->get();
+    $media->parsed_date=Carbon::parse($media->craeted_at)->format('d/m/Y');
     return response ([
-        'mediaCenter'=>\App\Models\MediaCenter::with('media')->get()
+        'mediaCenter'=>$media
     ]);
 });
 

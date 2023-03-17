@@ -88,7 +88,7 @@
 <script setup>
 import DarkLogo from "../../img/ladun_logo_dark.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
-// import twitterIcon from "../../img/light_footer_twitter.svg";
+import twitterIcon from "../../img/light_footer_twitter.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";
 import linkedinIcon from "../../img/light_footer_linkedin.svg";
 import youtubeIcon from "../../img/light_footer_youtube.svg";

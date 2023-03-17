@@ -8,7 +8,7 @@
             <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <card-link v-for="item in media" @click="details(item.id)">
-                    <template #date>{{item.created_at}}</template>
+                    <template #date>{{item.parsed_date}}</template>
                     <template #head>{{item.title[$i18n.locale]}}</template>
                     <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                     <img

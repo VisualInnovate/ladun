@@ -18,8 +18,5 @@ class MediaCenter extends Model implements HasMedia
     protected $fillable = ['title','content'];
     public $translatable = ['title','content'];
 
-    public function getCreatedAtAttribute($value)
-    {
-        return Carbon::parse($value)->format('d/m/Y');
-    }
+
 }
