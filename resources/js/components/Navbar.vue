@@ -16,11 +16,11 @@
         <div class="flex lg:flex-1 rtl:mr-10 ltr:ml-10">
             <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
                 <span class="sr-only">Ladun</span>
-                <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-36" />
+                <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-32" />
             </router-link>
         </div>
 
-        <div class="hidden lg:flex lg:gap-x-12 ltr:right-0 rtl:left-0 ltr:mr-10 rtl:ml-10">
+        <div class="hidden lg:flex lg:gap-x-7 ltr:right-0 rtl:left-0 ltr:mr-5 rtl:ml-5">
 
             <template
             v-for="item in navigation"

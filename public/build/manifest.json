@@ -3,13 +3,13 @@
     "file": "assets/ImgBanner-bb96c7c7.css",
     "src": "ImgBanner.css"
   },
-  "_CardLink-39f7e94e.js": {
-    "file": "assets/CardLink-39f7e94e.js",
+  "_CardLink-de284659.js": {
+    "file": "assets/CardLink-de284659.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_DarkFooter-04b58ec0.js": {
+  "_DarkFooter-507138ea.js": {
     "assets": [
       "assets/dark_footer_logo-06458faf.svg",
       "assets/dark_footer_linkedin-775b4ac4.svg",
@@ -17,31 +17,31 @@
       "assets/dark_footer_whatsapp-80ed9c56.svg",
       "assets/dark_footer_facebook-a39dc3d7.svg"
     ],
-    "file": "assets/DarkFooter-04b58ec0.js",
+    "file": "assets/DarkFooter-507138ea.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_ImgBanner-f7e66991.js": {
+  "_ImgBanner-65e339a6.js": {
     "css": [
       "assets/ImgBanner-bb96c7c7.css"
     ],
-    "file": "assets/ImgBanner-f7e66991.js",
+    "file": "assets/ImgBanner-65e339a6.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_Navbar-08b390a1.js": {
+  "_Navbar-ec772247.js": {
     "assets": [
       "assets/logo-0a387a5b.svg"
     ],
-    "file": "assets/Navbar-08b390a1.js",
+    "file": "assets/Navbar-ec772247.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-e721ad47.css",
+    "file": "assets/app-3533fc1b.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -246,7 +246,7 @@
     "src": "resources/img/video-real-state-management.png"
   },
   "resources/js/main.css": {
-    "file": "assets/main-9af8101c.css",
+    "file": "assets/main-91fc664f.css",
     "src": "resources/js/main.css"
   },
   "resources/js/main.js": {
@@ -258,7 +258,7 @@
       "assets/subtraction-8ea56c03.png"
     ],
     "css": [
-      "assets/main-9af8101c.css"
+      "assets/main-91fc664f.css"
     ],
     "dynamicImports": [
       "resources/js/pages/Home.vue",
@@ -272,7 +272,7 @@
       "resources/js/pages/Projects.vue",
       "resources/js/pages/Project.vue"
     ],
-    "file": "assets/main-fc886c46.js",
+    "file": "assets/main-cb2f62ce.js",
     "isEntry": true,
     "src": "resources/js/main.js"
   },
@@ -280,10 +280,10 @@
     "assets": [
       "assets/play-button-682e1928.png"
     ],
-    "file": "assets/AboutPage-593c060e.js",
+    "file": "assets/AboutPage-d232f214.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -300,11 +300,11 @@
     "css": [
       "assets/Companies-064861a6.css"
     ],
-    "file": "assets/Companies-9097175b.js",
+    "file": "assets/Companies-513299e0.js",
     "imports": [
-      "_ImgBanner-f7e66991.js",
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_ImgBanner-65e339a6.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -320,10 +320,10 @@
       "assets/instagram-3ca67b19.svg",
       "assets/twitter-a9319b75.svg"
     ],
-    "file": "assets/ContactUs-b5772d83.js",
+    "file": "assets/ContactUs-9d7af9f2.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -334,12 +334,12 @@
       "assets/finncial-banner-035dab5d.png",
       "assets/financial-logo-770a3116.png"
     ],
-    "file": "assets/FinancialData-66af33ba.js",
+    "file": "assets/FinancialData-a58d8c18.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_ImgBanner-f7e66991.js",
+      "_Navbar-ec772247.js",
+      "_ImgBanner-65e339a6.js",
       "resources/js/main.js",
-      "_DarkFooter-04b58ec0.js"
+      "_DarkFooter-507138ea.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/FinancialData.vue"
@@ -363,10 +363,10 @@
     "css": [
       "assets/Home-650f8489.css"
     ],
-    "file": "assets/Home-a047e4c8.js",
+    "file": "assets/Home-264a31eb.js",
     "imports": [
       "resources/js/main.js",
-      "_Navbar-08b390a1.js"
+      "_Navbar-ec772247.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Home.vue"
@@ -375,22 +375,22 @@
     "assets": [
       "assets/investors-page-50d242b8.png"
     ],
-    "file": "assets/InvestorsAds-b36e1716.js",
+    "file": "assets/InvestorsAds-5848c8c3.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_ImgBanner-f7e66991.js",
-      "_CardLink-39f7e94e.js",
-      "_DarkFooter-04b58ec0.js",
+      "_Navbar-ec772247.js",
+      "_ImgBanner-65e339a6.js",
+      "_CardLink-de284659.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/InvestorsAds.vue"
   },
   "resources/js/pages/JoinUs.vue": {
-    "file": "assets/JoinUs-6bb16255.js",
+    "file": "assets/JoinUs-e90e0ae4.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -409,11 +409,11 @@
     "css": [
       "assets/MediaCenter-46346ccf.css"
     ],
-    "file": "assets/MediaCenter-acf76371.js",
+    "file": "assets/MediaCenter-549f2827.js",
     "imports": [
-      "_CardLink-39f7e94e.js",
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_CardLink-de284659.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -435,11 +435,11 @@
     "css": [
       "assets/Project-3df69408.css"
     ],
-    "file": "assets/Project-4a9e50f5.js",
+    "file": "assets/Project-0c99a0b7.js",
     "imports": [
       "resources/js/main.js",
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js"
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Project.vue"
@@ -453,10 +453,10 @@
       "assets/projects_3-85fe373b.png",
       "assets/realEstateManagement-e8c3a153.png"
     ],
-    "file": "assets/Projects-20bf9a2c.js",
+    "file": "assets/Projects-8736ef66.js",
     "imports": [
-      "_Navbar-08b390a1.js",
-      "_DarkFooter-04b58ec0.js",
+      "_Navbar-ec772247.js",
+      "_DarkFooter-507138ea.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
