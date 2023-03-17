@@ -23,7 +23,7 @@
 
         <div class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <img
-                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn"
+                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn mx-auto"
                 src="../../img/logowithouttext.svg"
             />
             <h1 class="z-50 text-white fadeinoutElement" >شركة لدن للإستثمار</h1>
