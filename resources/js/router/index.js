@@ -63,6 +63,12 @@ const routes = [
         name: 'Project',
         meta:{title:"Project"}
     },
+    {
+        path: "/media-center/:id",
+        component: () => import("@/pages/MediaCenterDetails.vue"),
+        name: 'Media Center Details',
+        meta:{title:"Media Center Details"}
+    },
 
 
 ];

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('media_centers', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('content');
+            $table->longText('content');
             $table->timestamps();
         });
     }

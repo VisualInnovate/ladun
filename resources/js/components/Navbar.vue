@@ -56,7 +56,7 @@
             </template>
 
         </div>
-        <LocaleSwitcher class="md:rtl:mr-10 md:rtl:ml-2 md:ltr:ml-10 md:ltr:mr-2 mx-2 ltr:pr-10 rtl:pl-10" />
+        <LocaleSwitcher class="md:rtl:mr-5 md:rtl:ml-2 md:ltr:ml-5 md:ltr:mr-2 mx-2 ltr:pr-10 rtl:pl-10" />
     </nav>
     <Dialog as="div" @close="mobileMenuOpen = false" :open="mobileMenuOpen" class="z-50">
         <DialogPanel

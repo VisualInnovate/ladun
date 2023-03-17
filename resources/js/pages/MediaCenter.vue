@@ -6,7 +6,7 @@
         <div class="container mx-auto">
             <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
-                <card-link v-for="item in media">
+                <card-link v-for="item in media" @click="details(item.id)">
                     <template #date>{{item.created_at}}</template>
                     <template #head>{{item.title[$i18n.locale]}}</template>
                     <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
@@ -29,9 +29,11 @@ import { Carousel } from "flowbite-vue";
 import Navbar from "../components/Navbar.vue"
 import DarkFooter from '../components/DarkFooter.vue';
 import {ref, onBeforeMount, onMounted} from "vue";
+import { useRouter  } from 'vue-router'
+
 import axios from "axios";
 
-
+const router = useRouter()
 const media = ref({})
 const projects_1 = new URL('../../img/banner-mediaCenter.png', import.meta.url).href
 const projects_2 = new URL('../../img/real-state-management-banner.png', import.meta.url).href
@@ -53,7 +55,17 @@ const pictures = [
     {
         src: projects_3,
         alt: 'Picture 3',
-    },
+    },]
+
+
+    const details=(id)=>{
+        router.push({
+            name:"Media Center Details",
+            params:{
+                id:id
+            }
+        })
+    }
 
 
     onBeforeMount(()=>{
@@ -64,11 +76,13 @@ const pictures = [
         })
     })
 
-];
+
 </script>
 
 <style>
 .img-media-center {
     width: 250px;
 }
+
+
 </style>

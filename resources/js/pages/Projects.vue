@@ -23,7 +23,7 @@
                       </div>
 
                       <div class="grid grid-cols-4 mb-4 ">
-                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text[$i18n.locale].slice(0, 200)+' ...'">
+                        <p class="px-2 text-grey text-xs col-start-1 col-end-4 " v-html="project.text[$i18n.locale].slice(0, 185)+' ...'">
                         </p>
                       <div class="flex flex-col justify-end col-start-4 col-end-4">
                         <router-link class="bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2" :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}</router-link>
