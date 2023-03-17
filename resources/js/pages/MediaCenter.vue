@@ -1,7 +1,8 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
+    <div class="pt-[123px]"></div>
 
-    <Carousel :pictures="pictures" class="h-[100vh] [&>div:first-child]:h-[100vh] [&>div>div>img]:h-[100vh] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
+    <Carousel :pictures="pictures" class="h-[calc(100vh-128px)]  [&>div:first-child]:h-[calc(100vh-128px)] [&>div>div>img]:h-[calc(100vh-128px)] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
             <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>

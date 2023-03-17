@@ -53,6 +53,12 @@ Route::get('/media-center',function (){
     ]);
 });
 
+Route::post('/media-center/{id}',function ($id){
+    return response ([
+        'mediaCenter'=>\App\Models\MediaCenter::find($id)->with('media')->get()
+    ]);
+});
+
 Route::get('/about',function (){
     $briefs = Brief::with('media')->get();
     return response ($briefs);
