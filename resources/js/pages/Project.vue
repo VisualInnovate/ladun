@@ -59,7 +59,7 @@
             <div class="py-10 w-full lg:w-[60%]">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
@@ -68,7 +68,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#utilities',
                             offset: -128
@@ -77,7 +77,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#downloads',
                             offset: -128
@@ -86,7 +86,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#project_models',
                             offset: -128
@@ -95,7 +95,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#location',
                             offset: -128
