@@ -99,5 +99,6 @@ export default {
     projectModels: "نماذج المشروع",
     askUs: "للاستفسارات",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
-    sendUsNow: "راسلنا الآن"
+    sendUsNow: "راسلنا الآن",
+    submitted:"تم ادخال الداتا بنجاح "
 }

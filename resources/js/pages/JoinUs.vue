@@ -39,9 +39,9 @@
 
                             <select id="countries"  v-model="joinUs.gender"
                                     class="bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected value="choosen">Choose a gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option selected value="choosen">{{ $t('gender') }}</option>
+                                <option value="Male">{{ $t('male') }}</option>
+                                <option value="Female">{{ $t('female') }}/option>
                             </select>
                             <div class="text-red-500 " v-if="error.gender">{{error.gender[0]}}</div>
 
@@ -120,7 +120,8 @@ export default {
                 'jop': '',
                 'cv': ''
             },
-            error:{}
+            error:{},
+            success:''
         }
     },
     methods: {
@@ -142,6 +143,8 @@ export default {
             })
                 .then((response) => {
                     console.log(response.data)
+                    this.error={}
+                    this.success=this.$t('submitted')
                 })
                 .catch((e) => {
 
