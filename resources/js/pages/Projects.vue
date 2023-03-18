@@ -5,7 +5,7 @@
     <tab v-for="department in fetchedData" :name="department.title['en']" :title="department.title[$i18n.locale]" class="[&>div>div>div>ul]:justify-center [&>div>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>div>ul>li>.border-blue-600]:border-dark-brown">
       <div class="relative">
           <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 "></div>
-          <img :src="department.mainImage.src" :alt="department.mainImage.alt" />
+          <img :src="department.mainImage.src" :alt="department.mainImage.alt" class="w-full"/>
       </div>
         <!-- regions -->
         <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10 " >
