@@ -129,12 +129,12 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
-                <div class="d-info h-full flex flex-col justify-center" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
+                <div class="d-info h-full flex flex-col justify-center anim" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                     <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">{{project.title[$i18n.locale]}}</h1>
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info  "
+                <div class="img-company-info  anim"
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft'">
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
@@ -477,5 +477,8 @@ export default {
 
 </script>
 
-
-
+<style scoped>
+.anim{
+    animation-delay: 0.8s
+}
+</style>
