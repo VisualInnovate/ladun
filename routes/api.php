@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Resources\DepartmentResource;
 use App\Http\Resources\MediaCenterResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Brief;
+use App\Models\Department;
 use App\Models\Project;
 use App\Models\Structure;
 use Carbon\Carbon;
@@ -100,6 +102,11 @@ Route::get('/structure',function (){
     return response([
         'structure' => $structure,
     ]);
-
 });
 
+// departments
+
+Route::get('/departments', function(){
+    $departs = Department::all();
+    return DepartmentResource::collection($departs);
+});

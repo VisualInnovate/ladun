@@ -69,7 +69,12 @@ const routes = [
         name: 'Media Center Details',
         meta:{title:"Media Center Details"}
     },
-
+    {
+        path: "/projects-new",
+        component: () => import("@/pages/ProjectsNew.vue"),
+        name: 'Projects New',
+        meta:{title:"Projects New"},
+    },
 
 ];
 const router = createRouter({
