@@ -59,7 +59,7 @@ class MediaCenterResource extends Resource
 
                 TextColumn::make('created_at')->label(__('created_at'))->dateTime(),
 
-                SpatieMediaLibraryImageColumn::make('attachments')->label(__('attachments'))->collection('attachments'),
+                SpatieMediaLibraryImageColumn::make('cv')->label(__('attachments'))->collection('attachments'),
 
             ])
             ->filters([
