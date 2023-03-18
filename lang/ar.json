@@ -36,7 +36,13 @@
     "building_area" : "مساحة البناء",
     "units_number":"عدد الوحدات" ,
     "models_number": "عدد النموذج",
-    "Media Center": "الممركز الاعلامي"
-
-
+    "Media Center": "المركز الاعلامي",
+    "Department" : "القسم",
+    "Region" : "المنطقة",
+    "Departments" : "الأقسام",
+    "Regions": "المناطق",
+    "Department title": "عنوان القسم",
+    "Department image": "صورة القسم",
+    "Add Department": "إضافة قسم",
+    "Assign Region": "اربط المشروع بالمنطقة"
 }

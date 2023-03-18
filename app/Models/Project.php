@@ -15,12 +15,30 @@ class Project extends  Model implements HasMedia
     use HasFactory ;
     use InteractsWithMedia;
     use HasTranslations;
-    protected $fillable = ['name','slug','phone','email','address','attachment','content','is_published','Land_area','building_area','units_number','models_number'];
+    protected $fillable = 
+    [
+        'name',
+        'slug',
+        'phone',
+        'email',
+        'address',
+        'attachment',
+        'content',
+        'is_published',
+        'Land_area',
+        'building_area',
+        'units_number',
+        'models_number',
+        // 'department_id',
+        'region_id'
+    ];
     public $translatable = ['name','slug','address','content','Land_area'];
     protected $casts = [
         'is_published' => 'boolean',
         'attachment' => 'array',
         // 'tags' => 'array',
+        // 'departments' => 'array',
+        // 'regions' => 'array'
     ];
 
     public function utilities()
@@ -44,5 +62,14 @@ class Project extends  Model implements HasMedia
     public function location()
     {
         return $this->hasOne(Location::class);
+    }
+
+    // public function department()
+    // {
+    //     return $this->belongsTo(Department::class, 'department_id');
+    // }
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
     }
 }

@@ -4,7 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
+use App\Models\Department;
 use App\Models\Project;
+use App\Models\Region;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,6 +15,7 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
+use Doctrine\DBAL\Schema\Schema;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\MultiSelect;
 use Illuminate\Support\Str;
@@ -28,6 +31,7 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Repeater;
 
@@ -52,37 +56,46 @@ class ProjectResource extends Resource
                 ->afterStateUpdated(function (Closure $set, $state) {
                     $set('slug', Str::slug($state));
                 })->required(),
+
             TextInput::make('slug')->label(__('slug'))->required(),
+
             TextInput::make('phone')->label(__('phone'))
             ->tel()
             ->telRegex('/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
             ->required(),
+
             TextInput::make('email')->label(__('email'))
             ->email(),
+
             TextInput::make('address')->label(__('address'))
             ->required(),
 
-                    SpatieMediaLibraryFileUpload::make('Main_image')->label(__('Main_image'))->collection('projects'),
-                    SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))
+            SpatieMediaLibraryFileUpload::make('Main_image')->label(__('Main_image'))->collection('projects'),
+            SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))
             ->multiple()
             ->enableReordering(),
-                FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                    return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-                })
-                ,
+
+            FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
+            }),
+
             TextInput::make('Land_area')->label(__('Land_area'))->required(),
             TextInput::make('building_area')->label(__('building_area'))
             ->required()
             ->numeric(),
+
             TextInput::make('units_number')->label(__('units_number'))
             ->required()
             ->numeric(),
+
             TextInput::make('models_number')->label(__('models_number'))
             ->required()
             ->numeric(),
+
             CheckboxList::make('utilities')->label(__('utilities'))
                 ->relationship('utilities', 'title')->columns(3),
-                        RichEditor::make('content')->label(__('content'))->columns(2),
+
+            RichEditor::make('content')->label(__('content'))->columns(2),
 
 
             Toggle::make('is_published')->label(trans('is_published')),
@@ -90,6 +103,20 @@ class ProjectResource extends Resource
 
             ])
             ->columns(3),
+
+            //===========================
+            // Department for peoject
+            //=======================
+            Fieldset::make('Assign Region')->label(__('Assign Region'))->columns(2)
+            ->schema([
+
+                // region
+                Select::make('region_id')->label(__('Region'))
+                ->options(Region::all()->pluck('title', 'id'))
+                ->relationship('region', 'title')
+                ->getOptionLabelFromRecordUsing(fn (Region $record) => "{$record->title}, {$record->department->title}"),
+
+            ]),
 
             //===========================
             // Downloads field for peoject
