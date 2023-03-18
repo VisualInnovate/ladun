@@ -14,7 +14,7 @@
                         <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                         <img
                             class="md:h-full object-cover img-media-center
-                         rounded-t-lg  w-full md:w-48 md:rounded-none md:rounded-l-lg"
+                         lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg  w-full md:w-48 rounded-b-lg md:rounded-b-none "
                             :src="item.media[0].original_url" alt="">
                     </card-link>
 
@@ -87,9 +87,7 @@ const pictures = [
 </script>
 
 <style>
-.img-media-center {
-    width: 250px;
-}
+
 
 
 </style>

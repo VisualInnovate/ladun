@@ -18,7 +18,7 @@
                     <div v-if="success!='' " class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
                         {{success}}
                     </div>
-                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit">
+                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit"  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                         <div class="flex justify-center gap-x-5">
 
                             <input type="text" id="" aria-describedby="helper-text-explanation"
