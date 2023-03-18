@@ -6,7 +6,7 @@
 
     </img-banner>
 
-    <section class="media-center py-28 bg-background-section" class="pt-32">
+    <section class="media-center py-28 bg-background-section pt-32" >
         <div class="container mx-auto">
             <div v-for="(financial,index ) in financials" :key="index" class="mb-12">
 

@@ -15,6 +15,9 @@
                     <div class="text-dark-brown py-10 px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
+                    <div v-if="success!='' " class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                        {{success}}
+                    </div>
                     <form class="grid gap-y-10 mx-5" @submit.prevent="submit">
                         <div class="flex justify-center gap-x-5">
 
