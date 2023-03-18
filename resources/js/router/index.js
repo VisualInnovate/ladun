@@ -75,6 +75,12 @@ const routes = [
         name: 'Projects New',
         meta:{title:"Projects New"},
     },
+    {
+        path: "/latest-new",
+        component: () => import("@/pages/Latest.vue"),
+        name: 'Latest New',
+        meta:{title:"Latest New"},
+    },
 
 ];
 const router = createRouter({

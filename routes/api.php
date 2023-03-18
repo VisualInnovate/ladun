@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Resources\DepartmentResource;
+use App\Http\Resources\LatestProjectsResource;
 use App\Http\Resources\MediaCenterResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Brief;
@@ -109,4 +110,11 @@ Route::get('/structure',function (){
 Route::get('/departments', function(){
     $departs = Department::all();
     return DepartmentResource::collection($departs);
+});
+
+Route::get('/departments/latest/projects', function(){
+
+    $departs = Department::all();
+
+    return LatestProjectsResource::collection($departs);
 });
