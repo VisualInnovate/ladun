@@ -67,7 +67,8 @@ Route::get('/about',function (){
 });
 
 Route::post('/contact',[\App\Http\Controllers\SendEmailController::class,'contact']);
-
+Route::post('/join-us',[\App\Http\Controllers\JoinUsController::class,'store']);
+Route::get('/join-us',[\App\Http\Controllers\JoinUsController::class,'index']);
 
 // projects
 Route::group(['prefix' => 'projects'], function () {
