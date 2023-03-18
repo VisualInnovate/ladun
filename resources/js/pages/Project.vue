@@ -129,12 +129,13 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
-                <div class="d-info h-full flex flex-col justify-center">
+                <div class="d-info h-full flex flex-col justify-center" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                     <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">{{project.title[$i18n.locale]}}</h1>
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info  ">
+                <div class="img-company-info  "
+                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft'">
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
 
@@ -297,7 +298,7 @@
 
                 <div class="d-info h-full flex flex-col justify-center">
                     <h1 class="font-bold text-xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
-                    <p class="mb-24 text-lg text-dark-brown" v-if="project.location" >
+                    <p class="mb-12 text-lg text-dark-brown" v-if="project.location" >
                         {{ project.location.city }}
 
                     </p>
@@ -310,7 +311,7 @@
                 </div>
 
                 <div class="img-company-info  ">
-                    <iframe class="w-full h-[450px]"
+                    <iframe class="w-full h-[370px]"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.312148166532!2d46.668574651149!3d24.681794158394528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1678629276760!5m2!1sen!2seg"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
