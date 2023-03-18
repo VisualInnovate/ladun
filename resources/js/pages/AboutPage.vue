@@ -73,7 +73,7 @@
                                     class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                 >
-                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale]+'...'"></div>
+                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale]"></div>
                             </div>
                         </div>
                     </div>
