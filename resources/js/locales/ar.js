@@ -100,5 +100,5 @@ export default {
     askUs: "للاستفسارات",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
     sendUsNow: "راسلنا الآن",
-    submitted:"تم ادخال الداتا بنجاح "
+    "Join Us":"تم ادخال الداتا بنجاح "
 }

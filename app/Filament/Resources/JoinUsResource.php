@@ -72,8 +72,22 @@ class JoinUsResource extends Resource
     {
         return [
             'index' => Pages\ListJoinUs::route('/'),
-            'create' => Pages\CreateJoinUs::route('/create'),
-            'edit' => Pages\EditJoinUs::route('/{record}/edit'),
+
         ];
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return __('Join Us');
+    }
+
+    public static function getLabel(): ?string
+    {
+        return __('Join Us');
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return __('Join Us');
     }
 }
