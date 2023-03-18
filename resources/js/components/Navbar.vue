@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav
-            class="z-50 flex items-center justify-between top-0 h-32 w-full max-w-[1500px] mx-auto" aria-label="Global">
+            class="z-50 flex items-center justify-between top-0 h-[92px] w-full max-w-[1500px] mx-auto" aria-label="Global">
 
             <div class="flex lg:hidden mx-2">
                 <button
@@ -16,7 +16,7 @@
             <div class="flex lg:flex-1 rtl:mr-10 ltr:ml-10">
                 <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
                     <span class="sr-only">Ladun</span>
-                    <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-32" />
+                    <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-28" />
                 </router-link>
             </div>
 

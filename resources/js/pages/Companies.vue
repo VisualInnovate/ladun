@@ -1,7 +1,7 @@
 <template>
 
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class="pt-32">
+    <div class="pt-20">
         <div class="relative img-banner-slot">
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
             <img class="w-full" src="../../img/companies-banner.png">

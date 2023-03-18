@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <div class="pt-32">
+    <div class="pt-22">
         <img-banner>
             <img  src="../../img/investors-page.png">
             <template #text>{{$t('investor_banner')}}  </template>
