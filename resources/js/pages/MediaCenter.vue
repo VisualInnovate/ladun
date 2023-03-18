@@ -10,7 +10,7 @@
                 <template v-if="media.length">
                     <card-link v-for="item in media" :key="item.id" @click="details(item.id)">
                         <!--                    <template #date>{{item.creted_at}}</template>-->
-                        <template #head>{{item.title[$i18n.locale]}}</template>
+                        <template #head>{{item.title[$i18n.locale.slice(0,50)]}}</template>
                         <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                         <img
                             class="md:h-full object-cover img-media-center
