@@ -3,9 +3,9 @@
         <div
             class="flex justify-between gap-x-36 flex-wrap md:flex-nowrap"
         >
-        <div class="flex-auto md:max-w-[15rem] py-5 md:py-10">        
+        <div class="flex-auto md:max-w-[15rem] py-5 md:py-10">
             <div v-for=" button in buttons ">
-                <button class=" w-full border-white border-2 mb-5"><small>{{ button.name }}</small></button>
+               <router-link :to="button.href"><button class=" w-full border-white border-2 mb-5"><small>{{ button.name }}</small></button></router-link>
             </div>
             <div class="flex justify-between">
                 <template v-for="icon in icons">
@@ -23,7 +23,7 @@
             <h3 class="py-2">{{ $t('darkFooterPhone') }}: 920011560 </h3>
             <h3 class="py-2">{{ $t('darkFooterEmail') }}: investor@ladun.sa</h3>
         </div>
-    
+
         </div>
         <div class="text-center text-dark-footer-text-color pt-4">{{ $t('copyRights') }}</div>
     </div>
@@ -40,19 +40,19 @@ const { t } = useI18n();
 const buttons = [
     {
         name:t('mostImportantProjects'),
-        href:'#',
+        href:{ name: 'Projects' },
     },
     {
         name:t('companies'),
-        href:'#',
+        href:{ name: 'Companies' },
     },
     {
         name:t('contactUs'),
-        href:'#',
+        href:{ name: 'Contact Us' },
     },
     {
         name:t('licenses'),
-        href:'#',
+        href:{ name: 'Projects' },
     },
 ]
 
