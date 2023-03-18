@@ -5,15 +5,15 @@
         <div class="container mx-auto">
             <div class="flex flex-wrap">
                 <div class="w-[20%]">
-                    <img v-if="comp.media"
+                    <img v-if="media[0].media"
                          class="rounded-xl w-full"
-                         :src="comp.media[0].original_url" alt="">
+                         :src="media[0].media[0].original_url" alt="">
                 </div>
 
 
                 <div class="w-[80%] ltr:pl-12 rtl:pr-12">
-                    <h1 v-if="comp.title">{{ media.title[$i18n.locale] }}</h1>
-                    <p v-if="comp.title" v-html="media.content[$i18n.locale]"></p>
+                    <h1 v-if="media[0].title">{{ media[0].title[$i18n.locale] }}</h1>
+                    <p v-if="media[0].title" v-html="media[0].content[$i18n.locale]"></p>
 
                 </div>
             </div>
@@ -57,7 +57,7 @@ export default {
     },
     computed:{
         comp(){
-          return   this.media
+          return   this.media[0]
         }
     },
 

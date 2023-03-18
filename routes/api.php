@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Resources\MediaCenterResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Brief;
 use App\Models\Project;
