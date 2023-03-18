@@ -15,10 +15,13 @@
                     <div class="text-dark-brown py-10 px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
-                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit">
+                    <div v-if="success!='' " class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                        {{success}}
+                    </div>
+                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit"  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                         <div class="flex justify-center gap-x-5">
 
-                            <input type="text" id="helper-text" aria-describedby="helper-text-explanation"
+                            <input type="text" id="" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.name"
                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('fullName')">
@@ -31,7 +34,7 @@
 
                         </div>
                         <div class="flex justify-center gap-x-5">
-                            <input type="text" id="helper-text" aria-describedby="helper-text-explanation"
+                            <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.phone"
                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('mobile')">
@@ -39,9 +42,9 @@
 
                             <select id="countries"  v-model="joinUs.gender"
                                     class="bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected value="choosen">Choose a gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option selected value="choosen">{{ $t('gender') }}</option>
+                                <option value="Male">{{ $t('male') }}</option>
+                                <option value="Female">{{ $t('female') }}</option>
                             </select>
                             <div class="text-red-500 " v-if="error.gender">{{error.gender[0]}}</div>
 
@@ -120,7 +123,8 @@ export default {
                 'jop': '',
                 'cv': ''
             },
-            error:{}
+            error:{},
+            success:''
         }
     },
     methods: {
@@ -142,6 +146,8 @@ export default {
             })
                 .then((response) => {
                     console.log(response.data)
+                    this.error={}
+                    this.success=this.$t('submitted')
                 })
                 .catch((e) => {
 

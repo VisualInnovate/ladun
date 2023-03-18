@@ -3,17 +3,17 @@
     <Carsoul/>
     <section class="py-28">
         <div class="container mx-auto">
-            <div class="flex flex-wrap">
-                <div class="w-[20%]">
+            <div class=" flex flex-wrap flex-col lg:flex-row  ">
+                <div class= " lg:w-[30%] w-[100%] mb-10 lg:mb-0">
                     <img v-if="media[0].media"
                          class="rounded-xl w-full"
                          :src="media[0].media[0].original_url" alt="">
                 </div>
 
 
-                <div class="w-[80%] ltr:pl-12 rtl:pr-12">
-                    <h1 v-if="media[0].title">{{ media[0].title[$i18n.locale] }}</h1>
-                    <p v-if="media[0].title" v-html="media[0].content[$i18n.locale]"></p>
+                <div class="lg:w-[70%] w-[100%] ltr:pl-12 rtl:pr-12">
+                    <h1 v-if="media[0].title" class="font-bold text-dark-brown mb-5">{{ media[0].title[$i18n.locale] }}</h1>
+                    <p v-if="media[0].title" v-html="media[0].content[$i18n.locale]" class="text-justify text-lg"></p>
 
                 </div>
             </div>

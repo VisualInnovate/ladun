@@ -6,13 +6,13 @@
 
     </img-banner>
 
-    <section class="media-center py-28 bg-background-section">
+    <section class="media-center py-28 bg-background-section pt-32" >
         <div class="container mx-auto">
             <div v-for="(financial,index ) in financials" :key="index" class="mb-12">
 
-                <header class="flex flex-wrap justify-between items-center mb-5">
+                <header class="flex flex-wrap justify-between items-center mb-5  " :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                     <div
-                        class="ltr:bg-subtraction-ltr-png rtl:bg-subtraction-png h-16 w-[70%] flex items-center rtl:pr-8  ltr:pl-8 text-xl">
+                        class="ltr:bg-subtraction-ltr-png rtl:bg-subtraction-png h-16 w-[80%] flex items-center rtl:pr-8  ltr:pl-8 text-xl">
                         {{$t('header_finncial')}}
                     </div>
                     <div class="year flex items-center text-[50px] font-bold " dir="rtl">
@@ -24,7 +24,8 @@
 
                     <a v-for="item in financial"
                        :href="'storage/'+item.financial_file"
-                        class=" mx-4 w-60 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
+
+                        class="animate__animated animate__bounceIn mx-4 w-60 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
                         <div class="flex flex-col items-center ">
                             <div class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"

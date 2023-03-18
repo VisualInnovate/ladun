@@ -16,7 +16,7 @@
                     <div class="text-dark-brown py-10 px-5 text-sm">
                         {{ $t('beInTouch') }}
                     </div>
-                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit">
+                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                         <div class="flex justify-center gap-x-5">
 
                             <input v-model="contact.name" type="text" id="helper-text" aria-describedby="helper-text-explanation" class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown" :placeholder="$t('fullName')">
@@ -38,7 +38,7 @@
                         <button type="submit" class="bg-dark-brown h-10 mb-10 mx-2 text-white ">{{ $t('sendNow') }}</button>
                     </form>
                 </div>
-                <div class="flex flex-col gap-y-5 py-2">
+                <div class="flex flex-col gap-y-5 py-2" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/location.png" />
                         <p class="my-auto">{{ $t('location') }}</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="w-full md:w-1/2 mx-2 mb-5 ">
 
-                <img src="../../img/contact_us/map.png" class="drop-shadow-[-2rem_2rem_rgba(0,0,0,0.05)]" />
+                <img src="../../img/contact_us/map.png" class="drop-shadow-[-2rem_2rem_rgba(0,0,0,0.05)]" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>
                 <div class="mt-10 text-center">
                     {{ $t('followUs') }}
                     <div class="flex justify-between px-10 mt-10">

@@ -10,11 +10,11 @@
                 <template v-if="media.length">
                     <card-link v-for="item in media" :key="item.id" @click="details(item.id)">
                         <!--                    <template #date>{{item.creted_at}}</template>-->
-                        <template #head>{{item.title[$i18n.locale]}}</template>
+                        <template #head>{{item.title[$i18n.locale].slice(0,20)+'...'}}</template>
                         <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                         <img
                             class="md:h-full object-cover img-media-center
-                         rounded-t-lg  w-full md:w-48 md:rounded-none md:rounded-l-lg"
+                         lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg  w-full md:w-48 rounded-b-lg md:rounded-b-none "
                             :src="item.media[0].original_url" alt="">
                     </card-link>
 
@@ -41,27 +41,14 @@ import axios from "axios";
 
 const router = useRouter()
 const media = ref({})
-const projects_1 = new URL('../../img/banner-mediaCenter.png', import.meta.url).href
 const projects_2 = new URL('../../img/real-state-management-banner.png', import.meta.url).href
-const projects_3 = new URL('../../img/banner-mediaCenter.png', import.meta.url).href
-const projects_4 = new URL('../../img/real-managent-utility-section.png', import.meta.url).href
 const pictures = [
-    {
-        src: projects_1,
-        alt: 'Picture 1',
-    },
-    {
-        src: projects_4,
-        alt: 'Picture 4',
-    },
+
     {
         src: projects_2,
         alt: 'Picture 2',
     },
-    {
-        src: projects_3,
-        alt: 'Picture 3',
-    },]
+  ]
 
 
     const details=(id)=>{
@@ -87,9 +74,7 @@ const pictures = [
 </script>
 
 <style>
-.img-media-center {
-    width: 250px;
-}
+
 
 
 </style>
