@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <section class="company-info py-28 bg-background-section pt-52">
+    <section class="company-info py-24 bg-background-section pt-40">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <div class="img-company-info flex justify-center  "    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'" v-if="gallery">
