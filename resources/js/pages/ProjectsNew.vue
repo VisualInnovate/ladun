@@ -6,7 +6,7 @@
         <div class="relative">
             <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 "></div>
             <img :src="department.mainImage.src" :alt="department.mainImage.alt" />
-          </div>
+        </div>
           <!-- regions -->
           <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10 " >
             <tab v-for="region in department.regions" :name="region.title['en']" :title="region.title[$i18n.locale]">
