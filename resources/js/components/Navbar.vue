@@ -14,7 +14,7 @@
                     <Bars3Icon v-show="!mobileMenuOpen" class="h-6 w-6 text-white" aria-hidden="true"/>
                 </button>
             </div>
-            <div class="flex lg:flex-1 rtl:mr-10 ltr:ml-10">
+            <div class="flex lg:flex-1 ">
                 <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
                     <span class="sr-only">Ladun</span>
                     <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-[6.5rem]"/>
