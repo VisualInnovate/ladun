@@ -44,6 +44,12 @@ const routes = [
         name: 'Investors Ads',
         meta:{title:"investors Ads"}
     },
+    {
+        path: "/investors-ads/:id",
+        component: () => import("@/pages/InvestorRelation.vue"),
+        name: 'Investors Relation',
+        meta:{title:"Investors Relation"}
+    },
 
     {
         path: "/financials",
@@ -81,6 +87,16 @@ const routes = [
         name: 'Latest New',
         meta:{title:"Latest New"},
     },
+    {
+        path: "/pages/:slug",
+        component: () => import("@/pages/Page.vue"),
+        name: 'Page',
+        beforeEnter: (to, from, next) => {
+            document.title = to.params.slug
+            return next()
+        }
+    },
+
 
 ];
 const router = createRouter({
