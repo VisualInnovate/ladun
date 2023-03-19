@@ -69,14 +69,20 @@
 
             </div>
             <div class="w-full md:w-1/2 mx-2 mb-5 ">
-
+                
                 <img src="../../img/contact_us/map.png" class="drop-shadow-[-2rem_2rem_rgba(0,0,0,0.05)]" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>
                 <div class="mt-10 text-center">
                     {{ $t('followUs') }}
                     <div class="flex justify-between px-10 mt-10">
-                        <img class="h-10" src="../../img/contact_us/icons/facebook.svg" alt="facebook icon" />
-                        <img class="h-10" src="../../img/contact_us/icons/instagram.svg" alt="instagram icon" />
-                        <img class="h-10" src="../../img/contact_us/icons/twitter.svg" alt="twitter icon" />
+                        <a href="https://www.facebook.com/Ladun.KSA" target="_blank">
+                            <img class="h-10" src="../../img/contact_us/icons/facebook.svg" alt="facebook icon" />
+                        </a>
+                        <a href="https://www.instagram.com/ladun_sa/" target="_blank">
+                            <img class="h-10" src="../../img/contact_us/icons/instagram.svg" alt="instagram icon" />
+                        </a>
+                        <a href="https://twitter.com/Ladun_sa" target="_blank">
+                            <img class="h-10" src="../../img/contact_us/icons/twitter.svg" alt="twitter icon" />
+                        </a>
                     </div>
                 </div>
             </div>
