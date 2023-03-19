@@ -6,7 +6,8 @@
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
         <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full"
+            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full "
+                 id="logo-project"
                  v-if="project.logo"
                  :src="project.logo.original_url">
             <p class="text-center text-sm md:text-3xl" v-if="project.title">{{ project.title[$i18n.locale] }}</p>
@@ -18,31 +19,31 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
 
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
-                        <p>{{$t('Floors_Number')}}</p>
+                        <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  ">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
-                        <p>{{ $t('Units_Number')}}</p>
+                        <p>{{ $t('Units_Number') }}</p>
                         <p class="font-bold">{{ project.models_number }}</p>
                     </div>
                 </div>
@@ -129,13 +130,15 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
-                <div class="d-info h-full flex flex-col justify-center anim" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
-                    <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">{{project.title[$i18n.locale]}}</h1>
+                <div class="d-info h-full flex flex-col justify-center anim right"
+                >
+                    <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">
+                        {{ project.title[$i18n.locale] }}</h1>
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info  anim"
-                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft'">
+                <div class="img-company-info left anim" id="project_img"
+                >
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
 
@@ -152,10 +155,11 @@
     <section class="py-12 pb-16">
         <div class="container mx-auto">
             <div class=" flex lg:flex-row  flex-col">
-                <div class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start">
+                <div
+                    class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start right">
                     <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>
                 </div>
-                <div class="flex flex-row-reverse w-[80%]">
+                <div class="flex flex-row-reverse w-[80%] left">
                     <div class="w-[90%]">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
@@ -174,17 +178,18 @@
         id="utilities"
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <div class="z-40   container mx-auto">
+        <div class="z-40   container mx-auto ">
             <h2 class="mb-5 text-light-brown text-3xl">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-lg">{{ $t('high_level_utility_p') }} </p>
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap right">
                 <div
-                v-if="project.utilities"
-                v-for="utility in project.utilities" :key="utility.id"
+                    v-if="project.utilities"
+                    v-for="utility in project.utilities" :key="utility.id"
 
-                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                    class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
                     <div class=" p-7 rounded-full bg-white z-20 mb-2">
-                        <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40" alt="">
+                        <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40"
+                             alt="">
                     </div>
 
                     <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
@@ -203,7 +208,7 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
-                <div class="d-info h-full flex flex-col justify-center">
+                <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class=" text-3xl text-light-brown mb-6">{{ $t('Download_Project_Files') }}</h1>
                     <p class="mb-20 text-lg text-justify">
                         {{ $t('Download_Project_Files_p') }}
@@ -228,7 +233,7 @@
 
                 </div>
 
-                <div class="img-company-info ">
+                <div class="img-company-info left">
                     <img src="../../img/video-real-state-management.png">
 
                 </div>
@@ -247,7 +252,7 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
-                <div class="d-info h-full flex flex-col justify-center">
+                <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class="font-bold text-2xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
                     <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
                         <!-- class appends to content DIV for all tabs -->
@@ -267,7 +272,8 @@
                                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
                                     <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
-                                        <img v-if="utility.media[0]" :src="utility.media[0].original_url" class="w-[35px] h-[35px] z-40">
+                                        <img v-if="utility.media[0]" :src="utility.media[0].original_url"
+                                             class="w-[35px] h-[35px] z-40">
                                         <!--                                            add dinamic img -->
                                     </div>
 
@@ -280,7 +286,7 @@
                     </tabs>
                 </div>
 
-                <div class="img-company-info  ">
+                <div class="img-company-info  left">
                     <Carousel :pictures="getGallery(project.gallery)"
                               class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
@@ -296,9 +302,9 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
-                <div class="d-info h-full flex flex-col justify-center">
+                <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class="font-bold text-xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
-                    <p class="mb-12 text-lg text-dark-brown" v-if="project.location" >
+                    <p class="mb-12 text-lg text-dark-brown" v-if="project.location">
                         {{ project.location.city }}
 
                     </p>
@@ -310,7 +316,7 @@
 
                 </div>
 
-                <div class="img-company-info  ">
+                <div class="img-company-info  left">
                     <iframe class="w-full h-[370px]"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.312148166532!2d46.668574651149!3d24.681794158394528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1678629276760!5m2!1sen!2seg"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -431,6 +437,8 @@ import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
 import DarkFooter from '../components/DarkFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
+import {ref} from "vue";
+import {element} from "tw-elements/dist/src/js/util";
 
 export default {
     components: {
@@ -442,6 +450,7 @@ export default {
             URL: '',
             route: '',
             project: {},
+
         }
     },
     methods: {
@@ -458,27 +467,92 @@ export default {
             }
 
         },
+
+    },
+    computed: {
+        locale() {
+            return this.$i18n.locale
+        }
     },
     beforeMount() {
 
-      axios.get(`/api/projects/${this.$route.params.id}`)
-      .then(res =>{
-        // this.project = Vue.util.extend({}, res.data.data)
-        this.project = res.data.data
-          this.activeTab = this.project.project_models[0].title['en']
-          console.log(res.data.data)
-        })
-        .catch((error) => console.log(error))
 
-    }
+        axios.get(`/api/projects/${this.$route.params.id}`)
+            .then(res => {
+                // this.project = Vue.util.extend({}, res.data.data)
+                this.project = res.data.data
+                this.activeTab = this.project.project_models[0].title['en']
+                console.log(res.data.data)
+            })
+            .catch((error) => console.log(error))
+
+    }, mounted() {
+
+
+        window.addEventListener('scroll', function () {
+            let utility_project = document.getElementsByClassName('utility-group')
+            // document.getElementById('logo-project').
+            if (window.scrollY > 0) {
+                document.getElementById('logo-project').classList.add('animate__animated', 'animate__backInDown');
+
+                for (let i = 0; i < utility_project.length; i++)
+                    utility_project[i].classList.add('animate__animated', 'animate__backInDown')
+            } else {
+                document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
+                for (let i = 0; i < utility_project.length; i++)
+                    utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
+            }
+
+            let right = document.getElementsByClassName('right')
+            let left = document.getElementsByClassName('left')
+
+            // let project_description = document.getElementById('project_description')
+            Array.from(right).forEach(function (element) {
+                if (window.scrollY >= element.offsetTop - 800) {
+                    if (this.locale == 'en')
+                        element.classList.add('animate__animated', 'animate__fadeInLeft')
+                    else
+                        element.classList.add('animate__animated', 'animate__fadeInRight')
+
+                } else {
+                    if (this.locale == 'en')
+                        element.classList.remove('animate__animated', 'animate__fadeInLeft')
+                    else
+                        element.classList.remove('animate__animated', 'animate__fadeInRight')
+
+                }
+            }.bind(this));
+
+
+            Array.from(left).forEach(function (element) {
+                if (window.scrollY >= element.offsetTop - 100) {
+                    if (this.locale == 'en')
+                        element.classList.add('animate__animated', 'animate__fadeInRight')
+
+                    else
+                        element.classList.add('animate__animated', 'animate__fadeInLeft')
+
+                } else {
+                    if (this.locale == 'en')
+
+                        element.classList.remove('animate__animated', 'animate__fadeInRight')
+                    else
+                        element.classList.remove('animate__animated', 'animate__fadeInLeft')
+                }
+            }.bind(this));
+
+        }.bind(this))
+
+
+
+
+
 }
-
+}
 
 
 </script>
 
 <style scoped>
-.anim{
-    animation-delay: 0.8s
-}
+
 </style>

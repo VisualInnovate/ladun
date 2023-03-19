@@ -22,11 +22,11 @@
 
 
                 <div v-for=" company in companies" :key="company.id"
-                     class="animate__animated animate__fadeInUp rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 sm:w-3/4  md:w-full mx-auto">
-                    <img class="img-companies rounded-full mb-6" :src="company.media[0].original_url"
+                     class="animate__animated animate__fadeInUp hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
+                    <img class="img-companies w-[120px] h-[120px] rounded-full mb-4 " :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
-                    <h3 class="text-xl font-bold"> {{ company.title[$i18n.locale] }} </h3>
-                    <p class="text-base px-7 pb-6 pt-3 text-justify"
+                    <h3 class="justify-center font-bold text-[16x]" > {{ company.title[$i18n.locale] }} </h3>
+                    <p class=" px-7 pb-6 pt-3 text-justify"
                        v-html="company.content[$i18n.locale].slice(0,200)+ '...'"></p>
 
                     <div class="flex content-start flex-row justify-start w-full">
@@ -77,9 +77,6 @@ export default {
 
 </script>
 <style scoped>
-.img-companies {
-    width: 160px;
-    height: 160px;
-}
+
 
 </style>
