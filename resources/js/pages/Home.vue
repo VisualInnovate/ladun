@@ -23,7 +23,7 @@
 
         <div class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <img
-                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn"
+                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn mx-auto"
                 src="../../img/logowithouttext.svg"
             />
             <h1 class="z-50 text-white fadeinoutElement" >شركة لدن للإستثمار</h1>
@@ -50,58 +50,60 @@
     <!-- Latest Project section -->
     <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10" >
-
                 <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
 
-                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex justify-end text-center text-dark-brown after:content-['']  after:w-1 after:h-10 ltr:after:ml-6 rtl:after:mr-4  after:bg-grey after:rounded after:mr-2 after:my-auto">
-                    {{ $t('realEstateManagement') }}
-                </h2>
-
-                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-dark-brown">
-                    {{ $t('realEstateAssetManagement') }}
-                </h2>
-
         </div>
-
-        <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
-
-            <div v-for="project in latestProjects" class="rounded-lg border-2 border-gray-border-light bg-white">
-                    <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment" alt="Project Photo">
-                    <div class="flex items-center">
-                        <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
-                        <span class="flex-initial mx-2 text-light-brown">
-                            <MapPinIcon class="inline-block h-4 w-4 "/>
-                            <small class="font-bold" v-if="project.location">{{ project.location.city }}</small>
-                        </span>
-                    </div>
-                    <p class="px-2 text-grey text-xs" v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                    <div class="flex justify-end my-4 mx-2">
-                        <button class="bg-dark-brown text-white rounded-2xl w-36 h-8" @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                            <small>
-                                <MagnifyingGlassIcon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 justify-end" />{{ $t('exploreProject') }}
-                            </small>
-                        </button>
-                    </div>
-
-                    <div class="flex flex-wrap m-2">
-                        <div>
-                            <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small class="whitespace-nowrap text-gray-500">{{ $t('residentialLandPlots') }}</small>
+        <div  class="[&>div>div>ul]:justify-center [&>div>div>ul>li]:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
+        <tabs variant="underline" v-model="activeTab">
+            <!-- class appends to content DIV for all tabs -->
+            <tab
+                v-for="department in fetchedData"
+                :name="department.title['en']"
+                :title="department.title[$i18n.locale]"
+                
+            >
+            <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5" >
+                <div v-for="project in department.latest" class="rounded-lg border-2 border-gray-border-light bg-white">
+                        <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment" alt="Project Photo">
+                        <div class="flex items-center">
+                            <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
+                            <span class="flex-initial mx-2 text-light-brown">
+                                <MapPinIcon class="inline-block h-4 w-4 "/>
+                                <small class="font-bold" v-if="project.location">{{ project.location.city }}</small>
+                            </span>
                         </div>
-                        <div>
-                            <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}  {{ $t('areaUnit') }}</small>
+                        <p class="px-2 text-grey text-xs" v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
+                        <div class="flex justify-end my-4 mx-2">
+                            <button class="bg-dark-brown text-white rounded-2xl w-36 h-8" @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
+                                <small>
+                                    <MagnifyingGlassIcon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 justify-end" />{{ $t('exploreProject') }}
+                                </small>
+                            </button>
                         </div>
-                        <div>
-                            <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                            <small class="whitespace-nowrap text-gray-500">{{ project.units_number }} {{ $t('unit') }}</small>
+    
+                        <div class="flex flex-wrap m-2">
+                            <div>
+                                <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                <small class="whitespace-nowrap text-gray-500">{{ $t('residentialLandPlots') }}</small>
+                            </div>
+                            <div>
+                                <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}  {{ $t('areaUnit') }}</small>
+                            </div>
+                            <div>
+                                <BuildingOffice2Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                <small class="whitespace-nowrap text-gray-500">{{ project.units_number }} {{ $t('unit') }}</small>
+                            </div>
                         </div>
-                    </div>
-
+    
+                </div>
             </div>
-        </div>
+
+            </tab>
+        </tabs>
+    </div>
     </section>
     <!-- End of Latest Project section -->
 
@@ -160,12 +162,13 @@
 </template>
 
 <script setup>
-import { onBeforeMount , ref, onMounted } from 'vue'
+import { onBeforeMount , ref } from 'vue'
 import Navbar from "../components/Navbar.vue";
 import LightFooter from "../components/LightFooter.vue"
 import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon } from "@heroicons/vue/24/outline";
 import { MapPinIcon } from "@heroicons/vue/24/solid";
 import { Dropdown } from 'flowbite-vue'
+import { Tabs, Tab } from "flowbite-vue";
 import axios from 'axios';
 
 const view = ref({
@@ -174,6 +177,8 @@ const view = ref({
     aboutLadunSection: true,
 })
 
+const activeTab = ref("");
+const fetchedData = ref([]);
 
 const latestProjects = ref([])
 
@@ -206,7 +211,11 @@ const handleScroll = () => {
     }
 }
 
-onMounted(()=>{
+onBeforeMount(async ()=>{
+    const response = await axios.get("/api/departments/latest/projects");
+    fetchedData.value = response.data.data;
+    
+    activeTab.value = fetchedData.value[0].title["en"];
     document.documentElement.style.setProperty('--animate-duration', '3s');
 })
 

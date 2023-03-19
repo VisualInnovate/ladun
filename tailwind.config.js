@@ -59,9 +59,12 @@ module.exports = {
                 'xl': '2rem',
                 '2xl': '4rem',
                 'full': '9999px',
-            }
-        },
+            },
 
+        },
+        container: {
+            padding: '2rem',
+        },
 
     },
 

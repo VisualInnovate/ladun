@@ -1,15 +1,15 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <section class="company-info py-28 bg-background-section pt-36">
+    <section class="company-info py-24 bg-background-section pt-40">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
-                <div class="img-company-info" v-if="gallery">
+                <div class="img-company-info flex justify-center  "    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'" v-if="gallery">
                     <Carousel
                         :pictures="gallery"
-                        class="about-us-carousel h-[690px] [&>div:first-child]:h-[690px] [&>div>div>img]:h-[690px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
+                        class="about-us-carousel h-[450px] w-[90%] [&>div:first-child]:h-[450px] [&>div>div>img]:h-[450px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
                     />
                 </div>
-                <div class="d-info h-full flex flex-col justify-center">
+                <div class="d-info h-full flex flex-col justify-center"  :class="($i18n.locale=='en' )  ?  'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <h1
 
                         class="font-bold text-3xl mb-4 text-center md:text-start"
@@ -17,22 +17,18 @@
                     >
                         {{ about.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-24 text-2xl   text-justify"  v-if="about.content" v-html="about.content[$i18n.locale]">
+                    <p class="mb-4 text-xl   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	"  v-if="about.content" v-html="about.content[$i18n.locale]">
 
                     </p>
                     <div
-                        class="company-button flex items-center flex-wrap w-full justify-center md:justify-start"
-                    >
-                        <a
-                            class="flex items-center special-button text-2xl button bg-dark-brown text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-48 "
-                        >
+                        class="company-button flex items-center flex-wrap w-full justify-center md:justify-start">
+                        <a class="flex items-center special-button text-2xl button bg-dark-brown hover:bg-green-500 cursor-pointer text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-48 ">
                             <PhoneIcon
-                                class="h-6 w-6 rtl:ml-2 ltr:mr-2 text-white"
-                            />
+                                class="h-6 w-6 rtl:ml-2 ltr:mr-2 text-white "/>
                             <span>{{$t('call_us')}}</span>
                         </a>
 
-                        <a class="flex text-dark-brown items-center">
+                        <a class="flex text-dark-brown items-center hover:hover:text-red-500 cursor-pointer">
                             <!--                            <PlayCircleIcon class="h-16 w-16 rtl:ml-2 ltr:mr-2   "/>-->
                             <img
                                 src="../../img/play-button.png"
@@ -55,7 +51,7 @@
             >
             <template v-for="employee in structure">
                 <div
-                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2"
+                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 animate__animated animate__fadeInUp"
                 >
                     <div
                         class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
@@ -77,7 +73,7 @@
                                     class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                 >
-                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale].slice(0,250)+'...'"></div>
+                                <div class="flex text-justify mt-2" v-html="employee.qualification[$i18n.locale]"></div>
                             </div>
                         </div>
                     </div>

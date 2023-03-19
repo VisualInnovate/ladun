@@ -1,6 +1,6 @@
 <template>
-    <a href="#"
-       class="md:w-auto w-3/4 mx-auto card-link-slot flex flex-col ml-auto items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <div id="card"
+       class="animate__animated animate__backInUp cursor-pointer w-[90%] mx-auto card-link-slot flex flex-col ml-auto items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
         <div class="flex flex-col justify-between p-4 pt-1 leading-normal ">
             <p class="mb-7"><slot name="date"/></p>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><slot name="head"/></h5>
@@ -10,16 +10,14 @@
 
 
 
-    </a>
+    </div>
 </template>
 
 <script>
 export default {
     name: "CardLink",
 
-    mounted() {
-        console.log(this.imgSrc)
-    }
+
 }
 </script>
 

@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     {
         path: "/",
-        component: () => import("@/pages/Home.vue"),
+        component: () => import("../pages/Home.vue"),
         name: 'Home',
         meta:{title:"Home"}
     },
@@ -63,7 +63,24 @@ const routes = [
         name: 'Project',
         meta:{title:"Project"}
     },
-
+    {
+        path: "/media-center/:id",
+        component: () => import("@/pages/MediaCenterDetails.vue"),
+        name: 'Media Center Details',
+        meta:{title:"Media Center Details"}
+    },
+    {
+        path: "/projects-new",
+        component: () => import("@/pages/ProjectsNew.vue"),
+        name: 'Projects New',
+        meta:{title:"Projects New"},
+    },
+    {
+        path: "/latest-new",
+        component: () => import("@/pages/Latest.vue"),
+        name: 'Latest New',
+        meta:{title:"Latest New"},
+    },
 
 ];
 const router = createRouter({

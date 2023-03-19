@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Resources\DepartmentResource;
+use App\Http\Resources\LatestProjectsResource;
+use App\Http\Resources\MediaCenterResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Brief;
+use App\Models\Department;
 use App\Models\Project;
 use App\Models\Structure;
 use Carbon\Carbon;
@@ -37,7 +41,7 @@ Route::get('/financials',function (){
         'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
         })
-    ])->orderBy('created_at', 'ASC');
+    ]);
 });
 
 
@@ -47,13 +51,27 @@ Route::get('/investors',function (){
     ]);
 });
 
+Route::get('/media-center',function (){
+
+    return response ([
+        'mediaCenter'=>\App\Models\MediaCenter::with('media')->get()
+    ]);
+});
+
+Route::post('/media-center/{id}',function ($id){
+    return response ([
+        'mediaCenter'=>\App\Models\MediaCenter::find($id)->with('media')->get()
+    ]);
+});
+
 Route::get('/about',function (){
     $briefs = Brief::with('media')->get();
     return response ($briefs);
 });
 
 Route::post('/contact',[\App\Http\Controllers\SendEmailController::class,'contact']);
-
+Route::post('/join-us',[\App\Http\Controllers\JoinUsController::class,'store']);
+Route::get('/join-us',[\App\Http\Controllers\JoinUsController::class,'index']);
 
 // projects
 Route::group(['prefix' => 'projects'], function () {
@@ -85,6 +103,18 @@ Route::get('/structure',function (){
     return response([
         'structure' => $structure,
     ]);
-
 });
 
+// departments
+
+Route::get('/departments', function(){
+    $departs = Department::all();
+    return DepartmentResource::collection($departs);
+});
+
+Route::get('/departments/latest/projects', function(){
+
+    $departs = Department::all();
+
+    return LatestProjectsResource::collection($departs);
+});

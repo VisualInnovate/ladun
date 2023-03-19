@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class=" pt-32"></div>
+    <div class=" pt-[76px]"></div>
     <div class="relative img-banner-slot">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="w-full" src="../../img/real-state-management-banner.png">
@@ -59,7 +59,7 @@
             <div class="py-10 w-full lg:w-[60%]">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
@@ -68,7 +68,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#utilities',
                             offset: -128
@@ -77,7 +77,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#downloads',
                             offset: -128
@@ -86,7 +86,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#project_models',
                             offset: -128
@@ -95,7 +95,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold">
+                    <div class="mx-auto font-bold mb-3 md:mb-0">
                         <a href="#" v-scroll-to="{
                             el: '#location',
                             offset: -128
@@ -129,13 +129,14 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
-                <div class="d-info h-full flex flex-col ">
-                    <h1 class=" text-4xl mb-6" v-if="project.title">{{project.title[$i18n.locale]}}</h1>
-                    <p class="mb-24 text-3xl" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
+                <div class="d-info h-full flex flex-col justify-center anim" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
+                    <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">{{project.title[$i18n.locale]}}</h1>
+                    <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info  ">
-                    <img class="w-full" :src="project.attachment" alt="">
+                <div class="img-company-info  anim"
+                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft'">
+                    <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
 
                 </div>
@@ -152,7 +153,7 @@
         <div class="container mx-auto">
             <div class=" flex lg:flex-row  flex-col">
                 <div class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start">
-                    <p class="text-dark-brown text-5xl">{{ $t('gallary_project') }}</p>
+                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>
                 </div>
                 <div class="flex flex-row-reverse w-[80%]">
                     <div class="w-[90%]">
@@ -174,8 +175,8 @@
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <div class="z-40   container mx-auto">
-            <h2 class="mb-5 text-light-brown text-4xl">{{ $t('high_level_utility') }} </h2>
-            <p class="mb-10 text-3xl">{{ $t('high_level_utility_p') }} </p>
+            <h2 class="mb-5 text-light-brown text-3xl">{{ $t('high_level_utility') }} </h2>
+            <p class="mb-10 text-lg">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap">
                 <div
                 v-if="project.utilities"
@@ -203,8 +204,8 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class=" text-4xl text-light-brown mb-6">{{ $t('Download_Project_Files') }}</h1>
-                    <p class="mb-20 text-3xl">
+                    <h1 class=" text-3xl text-light-brown mb-6">{{ $t('Download_Project_Files') }}</h1>
+                    <p class="mb-20 text-lg text-justify">
                         {{ $t('Download_Project_Files_p') }}
                     </p>
 
@@ -247,12 +248,12 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
-                    <tabs variant="underline" v-model="activeTab" class="p-5 text-3xl">
+                    <h1 class="font-bold text-2xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
+                    <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
                         <!-- class appends to content DIV for all tabs -->
                         <tab v-for="model in project.project_models" :name="model.title['en']"
                              :title="model.title[$i18n.locale]"
-                             class="text-3xl">
+                             class="text-lg">
                             <div class="text mb-5">
                                 <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
                                 <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
@@ -281,7 +282,7 @@
 
                 <div class="img-company-info  ">
                     <Carousel :pictures="getGallery(project.gallery)"
-                              class="about-us-carousel h-[690px] [&>div:first-child]:h-[690px]  [&>div>div>img]:h-[690px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+                              class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
                 </div>
             </div>
@@ -296,8 +297,8 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
 
                 <div class="d-info h-full flex flex-col justify-center">
-                    <h1 class="font-bold text-4xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
-                    <p class="mb-24 text-4xl text-dark-brown" v-if="project.location" >
+                    <h1 class="font-bold text-xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
+                    <p class="mb-12 text-lg text-dark-brown" v-if="project.location" >
                         {{ project.location.city }}
 
                     </p>
@@ -310,7 +311,7 @@
                 </div>
 
                 <div class="img-company-info  ">
-                    <iframe class="w-full h-[550px]"
+                    <iframe class="w-full h-[370px]"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.312148166532!2d46.668574651149!3d24.681794158394528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1678629276760!5m2!1sen!2seg"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -476,5 +477,8 @@ export default {
 
 </script>
 
-
-
+<style scoped>
+.anim{
+    animation-delay: 0.8s
+}
+</style>

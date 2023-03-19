@@ -40,7 +40,7 @@ const executeEnCode = () => {
 
 <template>
     <button @click="changeLocale">
-      <GlobeAltIcon class="h-8 w-8 text-white" />
+      <GlobeAltIcon class="h-7 w-7 text-white" />
     </button>
 </template>
 

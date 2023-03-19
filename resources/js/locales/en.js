@@ -99,5 +99,7 @@ export default {
     projectModels: "Project Models",
     askUs: "Ask us",
     ifYouFaceAProplem: "If You face A problem, please ",
-    sendUsNow: "email us now"
+    sendUsNow: "email us now",
+    submitted:"data submitted successfully"
+
 }
