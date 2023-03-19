@@ -2,7 +2,7 @@
     <Navbar class="bg-black fixed z-50 w-full" />
     <div class="pt-[73px]"></div>
 
-    <Carousel :pictures="pictures" class="h-[calc(50vh-73px)]  [&>div:first-child]:h-[calc(50vh-73px)] [&>div>div>img]:h-[calc(50vh-73px)] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
+    <Carousel :pictures="pictures" class="h-[calc(60vh-73px)]  [&>div:first-child]:h-[calc(60vh-73px)] [&>div>div>img]:h-[calc(60vh-73px)] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
             <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>
