@@ -23,7 +23,7 @@
 
                 <div v-for=" company in companies" :key="company.id"
                      class="animate__animated animate__fadeInUp rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 sm:w-3/4  md:w-full mx-auto">
-                    <img class="img-companies rounded-full mb-6" :src="company.media[0].original_url"
+                    <img class="img-companies rounded-full mb-4" :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
                     <h3 class="text-xl font-bold"> {{ company.title[$i18n.locale] }} </h3>
                     <p class="text-base px-7 pb-6 pt-3 text-justify"
