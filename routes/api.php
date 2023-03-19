@@ -50,6 +50,11 @@ Route::get('/investors',function (){
         'investors'=>\App\Models\Investor::with('media')->get()
     ]);
 });
+Route::get('/investors/{id}',function ($id){
+    return response ([
+        'investor'=>\App\Models\Investor::where('id', $id)->with('media')->first()
+    ]);
+});
 
 Route::get('/media-center',function (){
 
@@ -117,4 +122,15 @@ Route::get('/departments/latest/projects', function(){
     $departs = Department::all();
 
     return LatestProjectsResource::collection($departs);
+});
+
+// pages api 
+
+Route::get('/pages/{slug}', function($slug){
+    $page = Brief::with('media')->get()->filter(function($val) use ($slug){
+        return $val->getTranslation('slug', 'en') == $slug;
+    })->first();
+    return response([
+        'page' => $page,
+    ]);
 });
