@@ -51,7 +51,7 @@
             >
             <template v-for="employee in structure">
                 <div
-                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 animate__animated animate__fadeInUp"
+                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 " id="strucre"
                 >
                     <div
                         class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
@@ -128,6 +128,18 @@ const getGallery = (gallery) => {
 
 onBeforeMount(async () => {
     // await getAbouUs()
+    window.addEventListener('scroll', function () {
+        // animate__animated animate__fadeInUp
+        let strucre = document.getElementById('strucre')
+        if (window.scrollY >= strucre.offsetTop -200) {
+            strucre.classList.add('animate__animated', 'animate__fadeInUp')
+
+        }
+        else {
+            strucre.classList.remove('animate__animated', 'animate__fadeInUp')
+
+        }
+    })
     const response = await axios.get("/api/about");
     about.value = response.data[0];
     gallery.value = getGallery(about.value.media);

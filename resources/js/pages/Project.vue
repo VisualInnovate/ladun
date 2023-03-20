@@ -544,50 +544,6 @@ export default {
                 }
             }
 
-            // Array.from(right).forEach(function (element) {
-            //     if (window.scrollY >= element.offsetTop - 800) {
-            //         if (this.locale == 'en')
-            //         {
-            //             element.classList.add('animate__animated', 'animate__fadeInLeft')
-            //         }
-            //
-            //         else
-            //         {
-            //             element.classList.add('animate__animated', 'animate__fadeInRight')
-            //         }
-            //
-            //
-            //     } else {
-            //         if (this.locale == 'en'){
-            //             element.classList.remove('animate__animated', 'animate__fadeInLeft')
-            //         }
-            //
-            //         else
-            //         {
-            //             element.classList.remove('animate__animated', 'animate__fadeInRight')
-            //         }
-            //
-            //
-            //     }
-            // }.bind(this));
-            //
-            //
-            // Array.from(left).forEach(function (element) {
-            //     if (window.scrollY >= element.offsetTop - 100) {
-            //         if (this.locale == 'en')
-            //             element.classList.add('animate__animated', 'animate__fadeInRight')
-            //
-            //         else
-            //             element.classList.add('animate__animated', 'animate__fadeInLeft')
-            //
-            //     } else {
-            //         if (this.locale == 'en')
-            //
-            //             element.classList.remove('animate__animated', 'animate__fadeInRight')
-            //         else
-            //             element.classList.remove('animate__animated', 'animate__fadeInLeft')
-            //     }
-            // }.bind(this));
 
         }.bind(this))
 
