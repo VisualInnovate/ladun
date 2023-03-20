@@ -44,14 +44,13 @@ class CompanyResource extends Resource
                             ->afterStateUpdated(function (Closure $set, $state) {
                                 $set('slug', Str::slug($state));
                             })->required(),
+                        TextInput::make('url')->label(__('url'))->afterStateHydrated(function (TextInput $component, $state) {
+                            $component->state('https://'.$state);
+                        }),
                         TextInput::make('slug')->label(__('slug'))->required(),
                         SpatieMediaLibraryFileUpload::make('thumbnail')->label(__('thumbnail'))->collection('companies'),
                         RichEditor::make('content')->label(__('content')),
-
-
                         Toggle::make('is_published')->label(__('is_published')),
-
-
                     ])
             ]);
     }
