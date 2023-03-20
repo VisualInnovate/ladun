@@ -141,17 +141,13 @@ onBeforeMount(async () => {
         console.log(strucre.length)
         for (let i = 0; i < strucre.length; i++) {
             if (window.scrollY >= header_strucre.offsetTop - 700) {
-                if ($i18n.local == 'en')
 
-                    strucre[i].classList.add('animate__animated', 'animate__fadeInLeft')
-                else
                     strucre[i].classList.add('animate__animated', 'animate__fadeInLeft')
 
             } else {
-                if ($i18n.local == 'en')
-                    strucre[i].classList.remove('animate__animated', 'animate__fadeInLeft')
 
-                else
+
+
                     strucre[i].classList.remove('animate__animated', 'animate__fadeInLeft')
 
             }
