@@ -133,7 +133,7 @@ onBeforeMount(async () => {
     gallery.value = getGallery(about.value.media);
 
     if (!response.data[0].media.length) {
-        gallery.value.push({ src: "/storage/brief.png", alt: "brief" }); // aboutUs[0] for about us
+        gallery.value.push({ src: "/storage/image_placeholder.jpg", alt: "brief" }); // aboutUs[0] for about us
     }
     console.log(gallery.value)
 

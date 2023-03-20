@@ -16,6 +16,7 @@
 export default {
     name: "ImgBanner",
     data(){
+        return {}
     }
 }
 </script>

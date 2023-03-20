@@ -19,6 +19,9 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Resources\Concerns\Translatable;
+use Illuminate\Support\Str;
+use Closure;
+
 
 class BriefResource extends Resource
 {
@@ -33,7 +36,12 @@ class BriefResource extends Resource
             ->schema([
                 Card::make()
             ->schema([
-                    TextInput::make('title')->required(),
+                    TextInput::make('title')->label(__('title'))->reactive()
+                    ->afterStateUpdated(function (Closure $set, $state) {
+                        $set('slug', Str::slug($state,'-'));
+                    })->required(),
+
+                    TextInput::make('slug')->label(__('slug'))->disabled(),
 
                     RichEditor::make('content'),
 
@@ -41,8 +49,6 @@ class BriefResource extends Resource
                     ->multiple()
                     ->enableReordering(),
             ])
-
-
             ]);
     }
 
@@ -50,7 +56,8 @@ class BriefResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title'),
+                TextColumn::make('title')->label('Title'),
+                TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 TextColumn::make('content')->limit(50)->html(),
                 TextColumn::make('created_at')->dateTime(),
 
@@ -89,17 +96,17 @@ class BriefResource extends Resource
     }
     protected static function getNavigationGroup(): ?string
     {
-        return __('About Ladun');
+        return __('pages');
     }
 
     public static function getLabel(): ?string
     {
-        return __('About us');
+        return __('page');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('About us');
+        return __('pages');
     }
 
     public static function getNavigationSort(): ?int

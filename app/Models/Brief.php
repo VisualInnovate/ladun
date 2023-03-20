@@ -18,5 +18,5 @@ class Brief extends Model implements HasMedia
     use HasTranslations;
 
     protected $guarded = [];
-    public $translatable = ['title','content'];
+    public $translatable = ['title','content', 'slug'];
 }

@@ -52,7 +52,7 @@ const buttons = [
     },
     {
         name:t('licenses'),
-        href:{ name: 'Projects' },
+        href:{ name: 'Page', params: { slug: 'license-and-agreement' } },
     },
 ]
 
