@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Resources\Tables\Columns;
 use App\Filament\Resources\JoinUsResource\Pages;
 use App\Filament\Resources\JoinUsResource\RelationManagers;
 use App\Models\JoinUs;
@@ -10,10 +11,12 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\HtmlString;
 
 class JoinUsResource extends Resource
 {
@@ -46,7 +49,14 @@ class JoinUsResource extends Resource
 
                     TextColumn::make('created_at')->label(__('created_at'))->dateTime(),
 
-                    SpatieMediaLibraryImageColumn::make('join')->label(__('attachments'))->collection('join'),
+                    TextColumn::make('join')->label(__('attachments'))->formatStateUsing( function (JoinUs $record){
+                        $htmlString = new HtmlString(
+                            "<a href='{$record->media('join')->first()?->getUrl()}' target='_blank' rel='noreferrer'  class='custom-blue'>{$record->media('join')->first()?->name}</a>"
+                        );
+                        return $htmlString;  
+                                               
+                     })
+                    ,
 
                 ]
             )

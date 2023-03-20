@@ -74,7 +74,7 @@
                             <div class="text-red-500 " v-if="error.jop">{{error.jop[0]}}</div>
 
                             <input type="file" id="file" aria-describedby="helper-text-explanation"
-                                   @change="setFile" ref="file"
+                                   @change="handleFile" ref="file"
                                    class=" w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('uploadCV')">
                             <div class="text-red-500 " v-if="error.cv">{{error.cv[0]}}</div>
@@ -121,7 +121,7 @@ export default {
                 'qualification': '',
                 'specialization': '',
                 'jop': '',
-                'cv': ''
+                'cv': null,
             },
             error:{},
             success:''
@@ -155,7 +155,7 @@ export default {
 
                 })
         },
-        setFile() {  //this fun set file in join us properity
+        handleFile() {  //this fun set file in join us properity
             this.joinUs.cv = this.$refs.file.files[0]
             console.log(this.joinUs.cv)
         }
