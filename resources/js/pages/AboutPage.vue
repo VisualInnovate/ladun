@@ -51,7 +51,7 @@
             >
             <template v-for="employee in structure">
                 <div
-                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 " id="strucre"
+                    class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 strucre"
                 >
                     <div
                         class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
@@ -130,13 +130,15 @@ onBeforeMount(async () => {
     // await getAbouUs()
     window.addEventListener('scroll', function () {
         // animate__animated animate__fadeInUp
-        let strucre = document.getElementById('strucre')
+        let strucre = document.getElementsByClassName('strucre')
+        for(let i = 0 ;i<strucre.length ;i++ )
         if (window.scrollY >= strucre.offsetTop -200) {
-            strucre.classList.add('animate__animated', 'animate__fadeInUp')
+
+            strucre[i].classList.add('animate__animated', 'animate__fadeInUp')
 
         }
         else {
-            strucre.classList.remove('animate__animated', 'animate__fadeInUp')
+            strucre[i].classList.remove('animate__animated', 'animate__fadeInUp')
 
         }
     })

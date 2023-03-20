@@ -510,10 +510,10 @@ export default {
             let right = document.getElementsByClassName('right')
             let left = document.getElementsByClassName('left')
 
-            console.log(left.length)
+            // console.log(left.length)
             for(let i=0 ;i < right.length ; i++)
             {
-                if (window.scrollY >= right[i].offsetTop -300) {
+                if (window.scrollY >= right[i].offsetTop -600) {
                     if (this.locale == 'en')
                     {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft')
