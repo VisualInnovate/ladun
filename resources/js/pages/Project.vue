@@ -1,14 +1,15 @@
 <template>
-    <Navbar class=" fixed z-50 w-full"  :class="{ 'bg-black': !top}"/>
+    <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
         <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full animate__animated animate__backInDown "
-                 id="logo-project"
-                 v-if="project.logo"
-                 :src="project.logo.original_url">
+            <img
+                class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full animate__animated animate__backInDown "
+                id="logo-project"
+                v-if="project.logo"
+                :src="project.logo.original_url">
             <p class="text-center text-sm md:text-3xl" v-if="project.title">{{ project.title[$i18n.locale] }}</p>
         </div>
 
@@ -18,28 +19,32 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
 
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
+                <div
+                    class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div
+                    class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div
+                    class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown" >
+                <div
+                    class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Units_Number') }}</p>
@@ -449,7 +454,7 @@ export default {
             URL: '',
             route: '',
             project: {},
-            top:1
+            top: 1
 
         }
     },
@@ -489,7 +494,6 @@ export default {
     }, mounted() {
 
 
-
         window.addEventListener('scroll', function () {
             let utility_project = document.getElementsByClassName('utility-group')
             document.getElementById('logo-project')
@@ -509,11 +513,10 @@ export default {
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
             }
-            let carsoul= document.getElementById('carsoul-project')
-            if (window.scrollY >= carsoul.offsetTop -1000) {
+            let carsoul = document.getElementById('carsoul-project')
+            if (window.scrollY >= carsoul.offsetTop - 1000) {
                 carsoul.classList.add('animate__animated', 'animate__backInUp')
-            }
-            else {
+            } else {
                 carsoul.classList.remove('animate__animated', 'animate__backInUp')
 
             }
@@ -522,47 +525,29 @@ export default {
             let left = document.getElementsByClassName('left')
 
             // console.log(left.length)
-            for(let i=0 ;i < right.length ; i++)
-            {
-                if (window.scrollY >= right[i].offsetTop -550) {
-                    if (this.locale == 'en')
-                    {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
-                    }
-
-                    else
-                    {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+            for (let i = 0; i < right.length; i++) {
+                if (window.scrollY >= right[i].offsetTop - 550) {
+                    if (this.locale == 'en') {
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                    } else {
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                     }
 
 
                 } else {
-                    if (this.locale == 'en')
-                    {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
+                    if (this.locale == 'en') {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                    } else {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                     }
-
-                    else
-                    {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
-                    }
-
-
                 }
             }
-
-
         }.bind(this))
-
-
-
-
-
-}
+    }
 }
 
 
