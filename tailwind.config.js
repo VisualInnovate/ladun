@@ -11,12 +11,13 @@ module.exports = {
         "./resources/**/*.vue",
         'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
         'node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
+        "./node_modules/flowbite/**/*.js"
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Nunito","Cairo", ...defaultTheme.fontFamily.sans],
+                sans: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 "gray-border": "#B5B5B5",

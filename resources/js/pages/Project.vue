@@ -451,7 +451,7 @@ export default {
             URL: '',
             route: '',
             project: {},
-            top:1
+            top: 1
 
         }
     },
@@ -491,7 +491,6 @@ export default {
     }, mounted() {
 
 
-
         window.addEventListener('scroll', function () {
             let utility_project = document.getElementsByClassName('utility-group')
             document.getElementById('logo-project')
@@ -511,11 +510,10 @@ export default {
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
             }
-            let carsoul= document.getElementById('carsoul-project')
-            if (window.scrollY >= carsoul.offsetTop -1000) {
+            let carsoul = document.getElementById('carsoul-project')
+            if (window.scrollY >= carsoul.offsetTop - 1000) {
                 carsoul.classList.add('animate__animated', 'animate__backInUp')
-            }
-            else {
+            } else {
                 carsoul.classList.remove('animate__animated', 'animate__backInUp')
 
             }
@@ -524,47 +522,29 @@ export default {
             let left = document.getElementsByClassName('left')
 
             // console.log(left.length)
-            for(let i=0 ;i < right.length ; i++)
-            {
-                if (window.scrollY >= right[i].offsetTop -550) {
-                    if (this.locale == 'en')
-                    {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
-                    }
-
-                    else
-                    {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+            for (let i = 0; i < right.length; i++) {
+                if (window.scrollY >= right[i].offsetTop - 550) {
+                    if (this.locale == 'en') {
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                    } else {
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                     }
 
 
                 } else {
-                    if (this.locale == 'en')
-                    {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
+                    if (this.locale == 'en') {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                    } else {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                     }
-
-                    else
-                    {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
-                    }
-
-
                 }
             }
-
-
         }.bind(this))
-
-
-
-
-
-}
+    }
 }
 
 

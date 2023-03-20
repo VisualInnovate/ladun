@@ -197,11 +197,11 @@ import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon} fr
 import {MapPinIcon} from "@heroicons/vue/24/solid";
 import {Dropdown} from 'flowbite-vue'
 import {Tabs, Tab} from "flowbite-vue";
-import {useI18n} from 'vue-i18n'
+import i18n from '../plugins/i18n'
 
 import axios from 'axios';
 
-const i18n = useI18n()
+// const i18n = useI18n()
 const view = ref({
     topOfPage: true,
     latestProjectsSection: true,
@@ -251,7 +251,7 @@ onBeforeMount(async () => {
 
         for (let i = 0; i < latest_project.length; i++) {
             if (window.scrollY >= latest_project_header.offsetTop - 700) {
-                if (i18n.locale.value == 'en')
+                if (i18n.global.locale.value == 'en')
                     latest_project[i].classList.add('animate__animated', 'animate__fadeInLeft')
                 else
                     latest_project[i].classList.add('animate__animated', 'animate__fadeInRight')
@@ -259,7 +259,7 @@ onBeforeMount(async () => {
 
             } else {
 
-                if (i18n.locale.value == 'en')
+                if (i18n.global.locale.value == 'en')
                     latest_project[i].classList.remove('animate__animated', 'animate__fadeInLeft')
                 else
                     latest_project[i].classList.remove('animate__animated', 'animate__fadeInRight')
