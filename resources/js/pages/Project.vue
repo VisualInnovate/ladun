@@ -1,45 +1,47 @@
 <template>
     <Navbar class=" fixed z-50 w-full"  :class="{ 'bg-black': !top}"/>
-    <div class="relative img-banner-slot">
+    <div class="relative img-banner-slot h-[50vh] md:h-auto">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <img class="w-full" src="../../img/real-state-management-banner.png">
+        <img class="h-[50vh] md:h-auto" src="../../img/real-state-management-banner.png">
 
-        <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full animate__animated animate__backInDown "
-                 id="logo-project"
-                 v-if="project.logo"
-                 :src="project.logo.original_url">
-            <p class="text-center text-sm md:text-3xl" v-if="project.title">{{ project.title[$i18n.locale] }}</p>
+        <div class="z-40 text-white absolute top-40 md:top-60 -translate-y-1/2 text-justify">
+            <div class="flex md:mx-20 mx-5">
+                <img class="w-[45%] lg:w-[60%] animate__animated animate__backInDown"
+                     id="logo-project"
+                     v-if="project.logo"
+                     :src="project.logo.original_url">
+                <h2 class="my-auto mx-3 animate__animated animate__backInDown" v-if="project.title">{{ project.title[$i18n.locale] }}</h2>
+            </div>
         </div>
 
     </div>
 
-    <section class="genaral-info bg-brown-section">
+    <section class="genaral-info bg-background-overlay">
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
 
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
+                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown" >
+                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown" >
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Units_Number') }}</p>

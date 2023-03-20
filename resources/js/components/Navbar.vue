@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav
-            class="z-50 flex items-center justify-between top-0 h-[76px] w-full max-w-[1500px] mx-auto"
+            class="z-50 flex items-center py-4 top-0 h-[90px] w-full max-w-[1500px] mx-auto"
             aria-label="Global">
 
             <div class="flex lg:hidden mx-2">
@@ -14,14 +14,14 @@
                     <Bars3Icon v-show="!mobileMenuOpen" class="h-6 w-6 text-white" aria-hidden="true"/>
                 </button>
             </div>
-            <div class="flex lg:flex-1 ">
+            <div class="flex">
                 <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
                     <span class="sr-only">Ladun</span>
                     <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-[6.5rem]"/>
                 </router-link>
             </div>
 
-            <div class="hidden lg:flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-5 rtl:ml-5 text-[13px]">
+            <div class="hidden lg:flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-5 rtl:ml-5 lg:mx-6 text-[13px]">
 
                 <template
                     v-for="item in navigation"
