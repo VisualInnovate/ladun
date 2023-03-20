@@ -131,7 +131,7 @@ onBeforeMount(async () => {
     window.addEventListener('scroll', function () {
         // animate__animated animate__fadeInUp
         let strucre = document.getElementsByClassName('strucre')
-        for(let i = 0 ;i<strucre.length ;i++ )
+        for(let i = 0 ;i < strucre.length ;i++ )
         if (window.scrollY >= strucre.offsetTop -200) {
 
             strucre[i].classList.add('animate__animated', 'animate__fadeInUp')

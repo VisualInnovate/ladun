@@ -156,10 +156,10 @@
         <div class="container mx-auto">
             <div class=" flex lg:flex-row  flex-col">
                 <div
-                    class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start right">
+                    class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
                     <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>
                 </div>
-                <div class="flex flex-row-reverse w-[80%] left">
+                <div class="flex flex-row-reverse w-[80%] " id="carsoul-project">
                     <div class="w-[90%]">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
@@ -506,6 +506,14 @@ export default {
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
             }
+            let carsoul= document.getElementById('carsoul-project')
+            if (window.scrollY >= carsoul.offsetTop -1000) {
+                carsoul.classList.add('animate__animated', 'animate__backInUp')
+            }
+            else {
+                carsoul.classList.remove('animate__animated', 'animate__backInUp')
+
+            }
 
             let right = document.getElementsByClassName('right')
             let left = document.getElementsByClassName('left')
@@ -513,31 +521,31 @@ export default {
             // console.log(left.length)
             for(let i=0 ;i < right.length ; i++)
             {
-                if (window.scrollY >= right[i].offsetTop -800) {
+                if (window.scrollY >= right[i].offsetTop -550) {
                     if (this.locale == 'en')
                     {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft')
-                        left[i].classList.add('animate__animated', 'animate__fadeInRight')
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
                     }
 
                     else
                     {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight')
-                        left[i].classList.add('animate__animated', 'animate__fadeInLeft')
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
                     }
 
 
                 } else {
                     if (this.locale == 'en')
                     {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInRight')
+                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
                     }
 
                     else
                     {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInRight')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft')
+                        right[i].classList.remove('animate__animated', 'animate__fadeInRight','animate__slow')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft','animate__slow')
                     }
 
 
