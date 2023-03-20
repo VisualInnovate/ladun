@@ -271,7 +271,6 @@ onBeforeMount(async () => {
     fetchedData.value = response.data.data;
 
     activeTab.value = fetchedData.value[0].title["en"];
-    document.documentElement.style.setProperty('--animate-duration', '3s');
 })
 
 </script>
