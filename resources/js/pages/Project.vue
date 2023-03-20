@@ -64,8 +64,8 @@
             <div class="py-10 w-full lg:w-[60%]">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
-                    <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a href="#" v-scroll-to="{
+                    <div class="mx-auto font-bold mb-3 md:mb-0 ">
+                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
                         }">
@@ -73,8 +73,8 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a href="#" v-scroll-to="{
+                    <div class="mx-auto font-bold mb-3 md:mb-0 ">
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
                             el: '#utilities',
                             offset: -128
                         }">
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
                             el: '#downloads',
                             offset: -128
                         }">
@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
                             el: '#project_models',
                             offset: -128
                         }">
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
                             el: '#location',
                             offset: -128
                         }">
@@ -528,21 +528,21 @@ export default {
             for (let i = 0; i < right.length; i++) {
                 if (window.scrollY >= right[i].offsetTop - 550) {
                     if (this.locale == 'en') {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft')
+                        left[i].classList.add('animate__animated', 'animate__fadeInRight')
                     } else {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
-                        left[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight')
+                        left[i].classList.add('animate__animated', 'animate__fadeInLeft')
                     }
 
 
                 } else {
                     if (this.locale == 'en') {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
+                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInRight')
                     } else {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInRight', 'animate__slow')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__slow')
+                        right[i].classList.remove('animate__animated', 'animate__fadeInRight')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft')
                     }
                 }
             }
