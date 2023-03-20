@@ -17,7 +17,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+                sans: ["SuisseIntl-Regular", ...defaultTheme.fontFamily.sans],
+                // suisseIntl: ["SuisseIntl-Regular", "sans"],
             },
             colors: {
                 "gray-border": "#B5B5B5",

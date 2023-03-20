@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "SuisseIntl-Regular";
+    src: url("../fonts/SuisseIntl-Regular.ttf");
+  }
 
 @layer base {
 
     body {
         @apply bg-lightest-brown;
+        /* @apply font-suisseIntl; */
     }
     h1 {
         @apply text-3xl ;
