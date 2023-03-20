@@ -1,6 +1,6 @@
 export default {
     main:"الرئيسية",
-    aboutUs:"نبذة عنا",
+    aboutUs:"عن لدن",
     projects:"المشاريع",
     investorsRelations:"علاقات المستثمرين",
     contactUs:"تواصل معنا",
