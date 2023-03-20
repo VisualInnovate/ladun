@@ -168,8 +168,12 @@ const navigation = [
                 href: {name: 'Financial'}
             },
             {
-                name: "investorsRelations",
+                name: "companyAds",
                 href: {name: 'Investors Ads'}
+            },
+            {
+                name: "contactWithInvestorsRelations",
+                href: {name: 'About Us'}
             }
         ]
     },

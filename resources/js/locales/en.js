@@ -3,7 +3,7 @@ export default {
     aboutUs:"About us",
     companies:"Companies",
     projects:"Projects",
-    investorsRelations:"Investors Relations",
+    companyAds:"Company Ads",
     contactUs:"Contact us",
     joinUs:"Join us",
     shareYourInterests: "Share Your Interests",
@@ -100,6 +100,8 @@ export default {
     askUs: "Ask us",
     ifYouFaceAProplem: "If You face A problem, please ",
     sendUsNow: "email us now",
-    submitted:"data submitted successfully"
+    submitted:"data submitted successfully",
+    investorsRelations: "Investors Relations",
+    contactWithInvestorsRelations: "Contact With InvestorsRelations",
 
 }

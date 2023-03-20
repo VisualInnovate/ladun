@@ -2,7 +2,7 @@ export default {
     main:"الرئيسية",
     aboutUs:"نبذة عنا",
     projects:"المشاريع",
-    investorsRelations:"علاقات المستثمرين",
+    companyAds:"إعلانات الشركة",
     contactUs:"تواصل معنا",
     joinUs:"انضم إلينا",
     shareYourInterests: "سجل اهتماماتك",
@@ -100,5 +100,7 @@ export default {
     askUs: "للاستفسارات",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
     sendUsNow: "راسلنا الآن",
-    "Join Us":"تم ادخال الداتا بنجاح "
+    "Join Us":"تم ادخال الداتا بنجاح ",
+    investorsRelations: "علاقات المستثمرين",
+    contactWithInvestorsRelations: "تواصل مع علاقات المستثمرين",
 }
