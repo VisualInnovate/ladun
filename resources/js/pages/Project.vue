@@ -6,7 +6,7 @@
         <img class="w-full" src="../../img/real-state-management-banner.png">
 
         <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full "
+            <img class="w-[30%] md:w-[45%] lg:w-[60%] mx-auto md:mb-3 rounded-full animate__animated animate__backInDown "
                  id="logo-project"
                  v-if="project.logo"
                  :src="project.logo.original_url">
@@ -19,28 +19,28 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
 
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group ">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group">
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown" >
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Units_Number') }}</p>
@@ -130,14 +130,14 @@
 
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-20">
 
-                <div class="d-info h-full flex flex-col justify-center anim right"
+                <div class="d-info h-full flex flex-col justify-center  right"
                 >
                     <h1 class=" text-2xl mb-6 font-extrabold " v-if="project.title">
                         {{ project.title[$i18n.locale] }}</h1>
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info left anim" id="project_img"
+                <div class="img-company-info left " id="project_img"
                 >
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
@@ -181,7 +181,7 @@
         <div class="z-40   container mx-auto ">
             <h2 class="mb-5 text-light-brown text-3xl">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-lg">{{ $t('high_level_utility_p') }} </p>
-            <div class="flex flex-wrap right">
+            <div class="flex flex-wrap ">
                 <div
                     v-if="project.utilities"
                     v-for="utility in project.utilities" :key="utility.id"
@@ -233,7 +233,7 @@
 
                 </div>
 
-                <div class="img-company-info left">
+                <div class="left">
                     <img src="../../img/video-real-state-management.png">
 
                 </div>
@@ -491,8 +491,12 @@ export default {
 
         window.addEventListener('scroll', function () {
             let utility_project = document.getElementsByClassName('utility-group')
-            // document.getElementById('logo-project').
-            if (window.scrollY > 0) {
+            document.getElementById('logo-project')
+            if (window.scrollY == 0) {
+                document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
+                for (let i = 0; i < utility_project.length; i++)
+                    utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
+
                 document.getElementById('logo-project').classList.add('animate__animated', 'animate__backInDown');
 
                 for (let i = 0; i < utility_project.length; i++)
@@ -506,40 +510,40 @@ export default {
             let right = document.getElementsByClassName('right')
             let left = document.getElementsByClassName('left')
 
-            // let project_description = document.getElementById('project_description')
-            Array.from(right).forEach(function (element) {
-                if (window.scrollY >= element.offsetTop - 800) {
+            // console.log(left.length)
+            for(let i=0 ;i < right.length ; i++)
+            {
+                if (window.scrollY >= right[i].offsetTop -800) {
                     if (this.locale == 'en')
-                        element.classList.add('animate__animated', 'animate__fadeInLeft')
+                    {
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft')
+                        left[i].classList.add('animate__animated', 'animate__fadeInRight')
+                    }
+
                     else
-                        element.classList.add('animate__animated', 'animate__fadeInRight')
+                    {
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight')
+                        left[i].classList.add('animate__animated', 'animate__fadeInLeft')
+                    }
+
 
                 } else {
                     if (this.locale == 'en')
-                        element.classList.remove('animate__animated', 'animate__fadeInLeft')
+                    {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInRight')
+                    }
+
                     else
-                        element.classList.remove('animate__animated', 'animate__fadeInRight')
+                    {
+                        right[i].classList.remove('animate__animated', 'animate__fadeInRight')
+                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft')
+                    }
+
 
                 }
-            }.bind(this));
+            }
 
-
-            Array.from(left).forEach(function (element) {
-                if (window.scrollY >= element.offsetTop - 100) {
-                    if (this.locale == 'en')
-                        element.classList.add('animate__animated', 'animate__fadeInRight')
-
-                    else
-                        element.classList.add('animate__animated', 'animate__fadeInLeft')
-
-                } else {
-                    if (this.locale == 'en')
-
-                        element.classList.remove('animate__animated', 'animate__fadeInRight')
-                    else
-                        element.classList.remove('animate__animated', 'animate__fadeInLeft')
-                }
-            }.bind(this));
 
         }.bind(this))
 
