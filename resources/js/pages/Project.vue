@@ -1,6 +1,5 @@
 <template>
-    <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class=" pt-[76px]"></div>
+    <Navbar class=" fixed z-50 w-full"  :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="w-full" src="../../img/real-state-management-banner.png">
@@ -450,6 +449,7 @@ export default {
             URL: '',
             route: '',
             project: {},
+            top:1
 
         }
     },
@@ -489,10 +489,12 @@ export default {
     }, mounted() {
 
 
+
         window.addEventListener('scroll', function () {
             let utility_project = document.getElementsByClassName('utility-group')
             document.getElementById('logo-project')
             if (window.scrollY == 0) {
+                this.top = 1
                 document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
@@ -502,6 +504,7 @@ export default {
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.add('animate__animated', 'animate__backInDown')
             } else {
+                this.top = 0
                 document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
                 for (let i = 0; i < utility_project.length; i++)
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')

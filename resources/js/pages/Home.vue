@@ -19,13 +19,6 @@
         </video>
 
 
-        <div class="z-20 justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-            <img
-                class=" h-48 lg:h-auto animate__animated animate__fadeIn animate__zoomIn mx-auto"
-                src="../../img/logowithouttext.svg"
-            />
-            <h1 class="z-50 text-white fadeinoutElement">شركة لدن للإستثمار</h1>
-        </div>
         <div class="animate__animated animate__fadeInUp z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
             <button
                 class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2"
@@ -131,7 +124,7 @@
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-3 mx-auto container px-5">
 
-            <p class="px-2 my-auto text-grey text-xs" v-if="aboutData.content"
+            <p class="px-2 my-auto text-grey text-justify text-xs" v-if="aboutData.content"
                v-html="aboutData.content[$i18n.locale]"></p>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                 <div class="grid grid-cols-2 justify-center ">
