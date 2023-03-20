@@ -513,7 +513,7 @@ export default {
             // console.log(left.length)
             for(let i=0 ;i < right.length ; i++)
             {
-                if (window.scrollY >= right[i].offsetTop -600) {
+                if (window.scrollY >= right[i].offsetTop -800) {
                     if (this.locale == 'en')
                     {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft')
