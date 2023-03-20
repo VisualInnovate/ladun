@@ -50,7 +50,7 @@
     <!-- Latest Project section -->
     <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10" >
-                <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
+                <h2 id="latest_project_header" :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}" class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                     {{ $t('latestProjects') }}
                 </h2>
 
@@ -62,10 +62,10 @@
                 v-for="department in fetchedData"
                 :name="department.title['en']"
                 :title="department.title[$i18n.locale]"
-                
+
             >
             <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5" >
-                <div v-for="project in department.latest" class="rounded-lg border-2 border-gray-border-light bg-white">
+                <div v-for="project in department.latest" class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
                         <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment" alt="Project Photo">
                         <div class="flex items-center">
                             <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
@@ -82,7 +82,7 @@
                                 </small>
                             </button>
                         </div>
-    
+
                         <div class="flex flex-wrap m-2">
                             <div>
                                 <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
@@ -97,7 +97,7 @@
                                 <small class="whitespace-nowrap text-gray-500">{{ project.units_number }} {{ $t('unit') }}</small>
                             </div>
                         </div>
-    
+
                 </div>
             </div>
 
@@ -212,9 +212,29 @@ const handleScroll = () => {
 }
 
 onBeforeMount(async ()=>{
+    window.addEventListener('scroll', function () {
+        // animate__animated animate__fadeInUp
+        let latest_project = document.getElementsByClassName('latest_project')
+        let latest_project_header = document.getElementById('latest_project_header')
+
+        for (let i = 0; i < latest_project.length; i++) {
+            if (window.scrollY >= latest_project_header.offsetTop - 700) {
+
+                latest_project[i].classList.add('animate__animated', 'animate__fadeInLeft')
+
+            } else {
+
+
+
+                latest_project[i].classList.remove('animate__animated', 'animate__fadeInLeft')
+
+            }
+        }
+
+    })
     const response = await axios.get("/api/departments/latest/projects");
     fetchedData.value = response.data.data;
-    
+
     activeTab.value = fetchedData.value[0].title["en"];
     document.documentElement.style.setProperty('--animate-duration', '3s');
 })
