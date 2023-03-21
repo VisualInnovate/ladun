@@ -39,13 +39,13 @@
     </tab>
 </tabs>
   </div>
-  <DarkFooter />
+  <LightFooter />
 </template>
 
 <script setup>
 import { ref, onBeforeMount } from "vue";
 import Navbar from "../components/Navbar.vue";
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue";
 import { Tabs, Tab, Carousel } from 'flowbite-vue'
 import axios from 'axios'
 

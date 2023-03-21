@@ -98,18 +98,18 @@
 
     </div>
 
-    <DarkFooter/>
+    <LightFooter/>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue";
 import {Input, Dropdown, ListGroup, ListGroupItem} from 'flowbite-vue'
 
 
 export default {
     components: {
-        Navbar, DarkFooter, Input, Dropdown, ListGroup, ListGroupItem
+        Navbar, LightFooter, Input, Dropdown, ListGroup, ListGroupItem
     },
     data() {
         return {

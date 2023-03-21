@@ -27,7 +27,7 @@
         </div>
 
     </section>
-    <DarkFooter />
+    <LightFooter />
 
 </template>
 
@@ -35,7 +35,7 @@
 import Navbar from "@/components/Navbar.vue";
 import ImgBanner from "@/components/ImgBanner.vue";
 import CardLink from "@/components/CardLink.vue";
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue";
 
 export default {
     data() {
@@ -44,7 +44,7 @@ export default {
       }
     },
     components:{
-        Navbar,ImgBanner,CardLink,DarkFooter
+        Navbar,ImgBanner,CardLink,LightFooter
     },
     methods:{
         getAllInvestors(){

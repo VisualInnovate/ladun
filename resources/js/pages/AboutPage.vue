@@ -88,18 +88,16 @@
             </div>
         </div>
     </section>
-
-    <DarkFooter/>
+    <LightFooter />
 </template>
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue"
 import {Carousel} from "flowbite-vue";
 import {PhoneIcon} from "@heroicons/vue/24/solid";
 import {ref, onBeforeMount} from "vue";
 import axios from "axios";
-import {getElementFromSelector} from "tw-elements/dist/src/js/util";
 
 const gallery = ref([]);
 
