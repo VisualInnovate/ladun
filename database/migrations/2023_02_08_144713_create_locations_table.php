@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('city');
             $table->string('address');
-            $table->text('link');
+            $table->string('longtude');
+            $table->string('Latitude');
             $table->foreignId('project_id')->constrained();
             $table->timestamps();
         });
