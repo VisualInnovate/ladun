@@ -45,4 +45,4 @@ npm run dev
 ### email: admin@admin.com
 ### password: password
 ## Website
-### open browser in localhost:8000/
+### open browser in localhost:8000
