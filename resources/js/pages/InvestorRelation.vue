@@ -26,12 +26,12 @@
             </div>
         </div>
     </section>
-    <DarkFooter />
+    <LightFooter />
 </template>
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue";
 import { ref, onBeforeMount } from "vue";
 import { useRoute } from "vue-router";
 

@@ -6,7 +6,7 @@
 
         <div class="z-40 text-white absolute top-40 md:top-60 -translate-y-1/2 text-justify">
             <div class="flex md:mx-20 mx-5">
-                <img class="w-[45%] lg:w-[60%] animate__animated animate__backInDown"
+                <img class="w-[30%] animate__animated animate__backInDown"
                      id="logo-project"
                      v-if="project.logo"
                      :src="project.logo.original_url">
@@ -420,7 +420,7 @@
     </section>
 
 
-    <DarkFooter/>
+    <LightFooter/>
 </template>
 
 <script>
@@ -433,14 +433,14 @@ import {Tabs, Tab} from 'flowbite-vue'
 import {Carousel} from 'flowbite-vue'
 import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
-import DarkFooter from '../components/DarkFooter.vue';
+import LightFooter from '../components/LightFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
 import {ref} from "vue";
 import {element} from "tw-elements/dist/src/js/util";
 
 export default {
     components: {
-        Input, Dropdown, DarkFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute
+        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute
     },
     data() {
         return {

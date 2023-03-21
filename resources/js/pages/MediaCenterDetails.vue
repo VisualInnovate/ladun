@@ -23,20 +23,20 @@
 
     </section>
 
-    <DarkFooter/>
+    <LightFooter/>
 
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue"
-import DarkFooter from '../components/DarkFooter.vue';
+import LightFooter from '../components/LightFooter.vue';
 import Carsoul from '../components/CarsoulWithPadding.vue';
 import axios from "axios";
 
 
 export default {
     components: {
-        Navbar, DarkFooter, Carsoul
+        Navbar, LightFooter, Carsoul
     },
     data() {
         return {

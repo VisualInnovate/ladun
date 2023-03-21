@@ -46,7 +46,7 @@
 
     </section>
 
-    <DarkFooter />
+    <LightFooter />
 
 </template>
 
@@ -55,7 +55,7 @@
 import Navbar from "@/components/Navbar.vue";
 import ImgBanner from "@/components/ImgBanner.vue";
 import i18n from "../plugins/i18n";
-import DarkFooter from '../components/DarkFooter.vue';
+import LightFooter from '../components/LightFooter.vue';
 
 
 export default {
@@ -65,7 +65,7 @@ export default {
         }
     },
     components:{
-      Navbar ,ImgBanner,DarkFooter
+      Navbar ,ImgBanner,LightFooter
     },
     data(){
         return{

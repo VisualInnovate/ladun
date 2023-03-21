@@ -40,13 +40,13 @@
         </div>
 
     </section>
-    <DarkFooter/>
+    <LightFooter/>
 </template>
 
 <script>
 import ImgBanner from '@/components/ImgBanner.vue'
 import Navbar from "../components/Navbar.vue"
-import DarkFooter from "../components/DarkFooter.vue";
+import LightFooter from "../components/LightFooter.vue";
 
 export default {
 
@@ -56,7 +56,7 @@ export default {
         }
     },
     components: {
-        ImgBanner, Navbar, DarkFooter
+        ImgBanner, Navbar, LightFooter
     },
     methods: {
 

@@ -26,14 +26,14 @@
         </div>
     </section>
 
-    <DarkFooter />
+    <LightFooter />
 </template>
 
 <script setup>
 import CardLink from "@/components/CardLink.vue";
 import { Carousel } from "flowbite-vue";
 import Navbar from "../components/Navbar.vue"
-import DarkFooter from '../components/DarkFooter.vue';
+import LightFooter from '../components/LightFooter.vue';
 import {ref, onBeforeMount, onMounted} from "vue";
 import { useRouter  } from 'vue-router'
 
