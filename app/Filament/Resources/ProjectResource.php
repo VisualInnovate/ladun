@@ -175,8 +175,7 @@ class ProjectResource extends Resource
     ->schema([
         TextInput::make('city')->required(),
             TextInput::make('address')->required(),
-            TextInput::make('Latitude')->required(),
-            TextInput::make('Longitude')->required()
+            TextInput::make('link')->required(),
     ])
 
     ->collapsed(),
