@@ -3,16 +3,14 @@
 import {computed} from 'vue'
 import i18n from '../plugins/i18n';
 import {Dropdown, ListGroup, ListGroupItem} from 'flowbite-vue'
-import { ref, onBeforeMount } from "vue";
-
-import {GlobeAltIcon} from "@heroicons/vue/24/solid";
+import { ref } from "vue";
 
 import {useAppLangStore} from '../stores/AppLang';
 
 const appLang = useAppLangStore()
 
 const currentLang = ref("English")
-const secondLang = ref("Arabic")
+const secondLang = ref("العربية")
 const localeBtn = computed({
     get() {
         if (appLang.appLang == 'en') return 'ar'
@@ -26,10 +24,10 @@ const localeBtn = computed({
 const changeLocale = () => {
     if (i18n.global.locale.value == 'ar') {
         currentLang.value = "English"
-        secondLang.value = "Arabic"
+        secondLang.value = "العربية"
         executeArCode()
     } else {
-        currentLang.value = "Arabic"
+        currentLang.value = "العربية"
         secondLang.value = "English"
         executeEnCode()
 
