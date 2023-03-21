@@ -1,5 +1,6 @@
 <template>
-    <section class="company-manager py-24 bg-background-section">
+    <Navbar class="bg-black fixed z-50 w-full"/>
+    <section class="company-manager py-36 bg-background-section">
         <h1 class="text-center font-bold mb-12 text-3xl">{{ $t('boradOfDirectors') }}</h1>
         <div class="container mx-auto flex justify-center">
             <div
@@ -41,17 +42,22 @@
             </div>
         </div>
     </section>
+    <LightFooter />
 </template>
 
 <script>
 import axios from "axios";
-
+import Navbar from "../components/Navbar.vue";
+import LightFooter from "../components/LightFooter.vue"
 export default {
     name: "highboard",
     data(){
         return{
             structure:{}
         }
+    },
+    components:{
+        Navbar,LightFooter
     },
     mounted() {
 
@@ -66,7 +72,7 @@ export default {
             let header_strucre = document.getElementById('header-strucre')
             console.log(strucre.length)
             for (let i = 0; i < strucre.length; i++) {
-                if (window.scrollY >= header_strucre.offsetTop - 700) {
+                if (window.scrollY >= header_strucre.offsetTop - 100) {
                     strucre[i].classList.add('animate__animated', 'animate__fadeInLeft')
                 } else {
 
