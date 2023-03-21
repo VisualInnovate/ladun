@@ -1,4 +1,8 @@
+## Requirements
 
+- php 8.1
+- make sure inl extension in enabled in your php.ini file if using xampp, check link below
+https://arjunphp.com/install-intl-extension-xampp/
 ## Installation
 
 ### clone the repo
