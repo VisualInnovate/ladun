@@ -23,7 +23,7 @@ export default {
     projectsUnits: "projects Units",
     affiliate: "affiliate",
     projectsInvestment: "projects Investment",
-    projectsAreas: "projects Areas",
+    projectsAreas: "Developed residential units",
     projectsRevenue: "projects Revenue",
     choose: "Choose",
     shareYourInterestWithUs: "share Your Interest With Us, and we will reply you soon",

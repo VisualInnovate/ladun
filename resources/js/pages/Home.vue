@@ -152,11 +152,7 @@
                     <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
                         <p class="block text-xs">{{ $t('projectsAreas') }}</p></div>
                 </div>
-                <div class="grid grid-cols-2 justify-center ">
-                    <img src="../../img/projects_revenue.svg" alt="projects_revenue" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
-                        <p class="block text-xs">{{ $t('projectsRevenue') }}</p></div>
-                </div>
+
             </div>
             <img class="w-full" src="../../img/about_ladun_image.png" alt="About Ladun">
 

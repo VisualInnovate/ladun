@@ -22,7 +22,7 @@ export default {
     projectsUnits: "وحدة مطورة وقيد التطوير",
     affiliate: "شركة تابعة",
     projectsInvestment: "مشروع استثماري",
-    projectsAreas: "مليون متر مربع إجمالي مساحة المشاريع",
+    projectsAreas: "وحدات سكنية تم تطويرها",
     projectsRevenue: "مليار ريال سعودي إجمالي قيمة المشاريع",
     choose: "إختر",
     shareYourInterestWithUs: "سجل إهتمامك معنا وسنقوم بالرد عليك",
