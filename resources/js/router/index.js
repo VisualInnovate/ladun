@@ -39,6 +39,12 @@ const routes = [
         meta:{title:"About Us"}
     },
     {
+        path: "/investors-relations-contact",
+        component: () => import("@/pages/contactWithInvestorsRelations.vue"),
+        name: 'Contact With Investors Relations',
+        meta:{title:"Contact With Investors Relations"}
+    },
+    {
         path: "/investors-ads",
         component: () => import("@/pages/InvestorsAds.vue"),
         name: 'Investors Ads',

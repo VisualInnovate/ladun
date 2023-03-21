@@ -173,7 +173,7 @@ const navigation = [
             },
             {
                 name: "contactWithInvestorsRelations",
-                href: {name: 'About Us'}
+                href: {name: 'Contact With Investors Relations'}
             }
         ]
     },
