@@ -156,7 +156,12 @@ const navigation = [
             {
                 name: "mediaCenter",
                 href: {name: 'Media Center'}
-            }
+            },
+            {
+                name: "highboard",
+                href: {name: 'highboard'}
+            },
+
         ]
     },
     {name: "companies", href: {name: 'Companies'}, dropdown: false},

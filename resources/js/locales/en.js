@@ -104,5 +104,6 @@ export default {
     submitted:"data submitted successfully",
     investorsRelations: "Investors Relations",
     contactWithInvestorsRelations: "Contact With InvestorsRelations",
+    highboard:"highboard"
 
 }

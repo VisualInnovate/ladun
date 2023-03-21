@@ -94,6 +94,12 @@ const routes = [
         meta:{title:"Latest New"},
     },
     {
+        path: "/highboard",
+        component: () => import("@/pages/highboard.vue"),
+        name: 'highboard',
+        meta:{title:"High Board"},
+    },
+    {
         path: "/pages/:slug",
         component: () => import("@/pages/Page.vue"),
         name: 'Page',
