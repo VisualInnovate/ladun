@@ -306,13 +306,13 @@
                 <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class="font-bold text-xl mb-4 text-center md:text-start">{{ $t('Location') }} </h1>
                     <p class="mb-12 text-lg text-dark-brown" v-if="project.location">
-                        {{ project.location.city }}
+                        {{ project.location.city[$i18n.locale] }}
 
                     </p>
 
                     <p class="flex " v-if="project.location.address">
                         <MapPinIcon class="w-6 h-6 text-black"/>
-                        {{ project.location.address }}
+                        {{ project.location.address[$i18n.locale]  }}
                     </p>
 
                 </div>
