@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
-            $table->id();
-            $table->string('city');
-            $table->string('address');
-            $table->text('link');
-            $table->foreignId('project_id')->constrained();
-            $table->timestamps();
-        });
+        if (Schema::hasColumns('locations',['Latitude','Longitude'])){
+            Schema::table('locations',function (Blueprint $table){
+                $table->dropColumn('Longitude');
+                $table->dropColumn('Latitude');
+                $table->text('link');
+            });
+        }
     }
 
     /**
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locations');
+        //
     }
 };

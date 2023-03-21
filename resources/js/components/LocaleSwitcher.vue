@@ -11,7 +11,7 @@ import {useAppLangStore} from '../stores/AppLang';
 
 const appLang = useAppLangStore()
 
-const currentLang = ref("english")
+const currentLang = ref("English")
 const secondLang = ref("Arabic")
 const localeBtn = computed({
     get() {
