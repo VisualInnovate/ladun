@@ -72,4 +72,12 @@ class Project extends  Model implements HasMedia
     {
         return $this->belongsTo(Region::class);
     }
+    public function phases()
+    {
+        return $this->hasMany(Phase::class);
+    }
+    public function units()
+    {
+        return $this->hasMany(Unit::class);
+    }
 }

@@ -123,19 +123,17 @@ class ProjectResource extends Resource
             //=======================
 
             Section::make('Downloads  ')
-
             ->schema([
                 Repeater::make('members')
                 ->relationship('downloads')
                 ->schema([
                     TextInput::make('name')->required(),
                     FileUpload::make('project_attachment')->acceptedFileTypes(['application/pdf'])
-->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-    return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-})->directory('Download-attachments'),
+                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
+                    })->directory('Download-attachments'),
                 ])
                 ->columns(2)
-
 
             ])
             ->collapsed(),
@@ -196,8 +194,6 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 IconColumn::make('is_published')->label(trans('is_published'))->boolean(),
                 SpatieMediaLibraryImageColumn::make('Main_image')->label(__('Main_image'))->collection('projects'),
-
-
             ])
             ->filters([
                 //

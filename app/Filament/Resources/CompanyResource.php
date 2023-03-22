@@ -44,7 +44,7 @@ class CompanyResource extends Resource
                             ->afterStateUpdated(function (Closure $set, $state) {
                                 $set('slug', Str::slug($state));
                             })->required(),
-                        TextInput::make('url')->label(__('url'))->afterStateHydrated(function (TextInput $component, $state) {
+                        TextInput::make('url')->label(__('url'))->afterStateHydrated(function(TextInput $component, $state) {
                             $component->state('https://'.$state);
                         }),
                         TextInput::make('slug')->label(__('slug'))->required(),
