@@ -11,6 +11,7 @@ use App\Models\Structure;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +62,14 @@ Route::get('/media-center',function (){
     return response ([
         'mediaCenter'=>\App\Models\MediaCenter::with('media')->get()
     ]);
+});
+
+
+Route::post('/uploadCsv',function (Request $request){
+
+   Excel::import(new \App\Imports\ProjectImport, $request->file );
+   return response(['message'=>'success']);
+
 });
 
 Route::post('/media-center/{id}',function ($id){
@@ -124,7 +133,7 @@ Route::get('/departments/latest/projects', function(){
     return LatestProjectsResource::collection($departs);
 });
 
-// pages api 
+// pages api
 
 Route::get('/pages/{slug}', function($slug){
     $page = Brief::with('media')->get()->filter(function($val) use ($slug){
