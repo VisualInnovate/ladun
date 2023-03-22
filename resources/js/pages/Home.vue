@@ -169,12 +169,12 @@
         <dropdown text="Bottom"
                   class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
             <template #trigger>
-                <span class="w-full inline-flex justify-between px-4 text-white"><span>{{ $t('choose') }}</span> <svg
-                    class="my-auto w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"
-                                                                                 stroke-linejoin="round"
-                                                                                 stroke-width="2"
-                                                                                 d="M19 9l-7 7-7-7"></path></svg></span>
+                <span class="w-full inline-flex justify-between px-4 text-white">
+                    <span>{{ $t('choose') }}</span>
+                    <svg class="my-auto w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </span>
             </template>
         </dropdown>
 
@@ -194,6 +194,19 @@ import {MapPinIcon} from "@heroicons/vue/24/solid";
 import {Dropdown} from 'flowbite-vue'
 import {Tabs, Tab} from "flowbite-vue";
 import i18n from '../plugins/i18n'
+import { Modal } from 'flowbite-vue'
+
+
+
+
+const isShowModal = ref(false)
+function closeModal() {
+    isShowModal.value = false
+}
+function showModal() {
+    isShowModal.value = true
+}
+
 
 import axios from 'axios';
 
