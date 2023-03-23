@@ -263,7 +263,21 @@ function showModal() {
     isShowModal.value = true
 }
 
+function getData(){
+    axios.get('/api/projects/latest')
+        .then((response) => {
+            latestProjects.value = response.data.data
+            // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
+        })
+        .catch(error => console.log(error))
 
+    axios.get('/api/about')
+        .then((response) => {
+            aboutData.value = response.data[0]
+        })
+        .catch(error => console.log(error))
+}
+getData()
 import axios from 'axios';
 
 // const i18n = useI18n()
@@ -281,19 +295,10 @@ const latestProjects = ref([])
 const aboutData = ref([])
 onBeforeMount(() => {
     window.addEventListener('scroll', handleScroll)
-    axios.get('/api/projects/latest')
-        .then((response) => {
-            latestProjects.value = response.data.data
-            // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
-        })
-        .catch(error => console.log(error))
 
-    axios.get('/api/about')
-        .then((response) => {
-            aboutData.value = response.data[0]
-        })
-        .catch(error => console.log(error))
 })
+
+
 
 const handleScroll = () => {
     if (window.pageYOffset > 0) {
