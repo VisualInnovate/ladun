@@ -49,6 +49,7 @@ class ProjectResource extends JsonResource
            'logo' => $this->getMedia('projects')->first(),
            'attachment' => env('APP_URL').'/storage/'.$this->attachment,
            'downloads' => $this->downloads,
+           'phases' => $this->phases,
            'created_at' => $this->created_at,
         ];
     }
