@@ -175,8 +175,7 @@
     <!-- project phases section -->
     <section id="project_phases">
         <h1 class="container text-3xl text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" >
-
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" v-if="project.phases" >
               <div v-for="phase in project.phases" class="animate__animated animate__fadeInUp rounded-xl border-2 border-gray-border-light bg-white relative mx-2 ">
                     <div class="flex flex-col bg-black text-gray-300">
                         <h3 class="flex-initial p-2 ">{{ phase.name[$i18n.locale] }}</h3>
@@ -186,7 +185,7 @@
                         </p>
                     </div>
               </div>
-            </div>
+        </div>
     </section>
     <!-- gallery section -->
     <section class="py-12 pb-16">
