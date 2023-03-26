@@ -530,7 +530,7 @@ export default {
                     utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
             }
             let carsoul = document.getElementById('carsoul-project')
-            if (window.scrollY >= carsoul.offsetTop - 1000) {
+            if (window.scrollY >= carsoul.offsetTop - 1300) {
                 carsoul.classList.add('animate__animated', 'animate__backInUp')
             } else {
                 carsoul.classList.remove('animate__animated', 'animate__backInUp')
