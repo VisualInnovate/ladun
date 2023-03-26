@@ -148,7 +148,7 @@
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info left " id="project_img"
+                <div class="img-company-info  " id="project_img"
                 >
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
@@ -255,7 +255,7 @@
 
                 </div>
 
-                <div class="left">
+                <div class="">
                     <img src="../../img/video-real-state-management.png">
 
                 </div>
@@ -308,7 +308,7 @@
                     </tabs>
                 </div>
 
-                <div class="img-company-info  left">
+                <div class="img-company-info  ">
                     <Carousel :pictures="getGallery(project.gallery)"
                               class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
@@ -338,7 +338,7 @@
 
                 </div>
 
-                <div class="img-company-info  left">
+                <div class="img-company-info  ">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
                         width="500" height="340" style="border:0;" allowfullscreen="" loading="lazy"
@@ -540,28 +540,18 @@ export default {
             }
 
             let right = document.getElementsByClassName('right')
-            let left = document.getElementsByClassName('left')
+
 
             // console.log(left.length)
             for (let i = 0; i < right.length; i++) {
-                if (window.scrollY >= right[i].offsetTop - 550) {
+                if (window.scrollY >= right[i].offsetTop - 700) {
                     if (this.locale == 'en') {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft')
-                        left[i].classList.add('animate__animated', 'animate__fadeInRight')
                     } else {
                         right[i].classList.add('animate__animated', 'animate__fadeInRight')
-                        left[i].classList.add('animate__animated', 'animate__fadeInLeft')
                     }
 
 
-                } else {
-                    if (this.locale == 'en') {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInLeft')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInRight')
-                    } else {
-                        right[i].classList.remove('animate__animated', 'animate__fadeInRight')
-                        left[i].classList.remove('animate__animated', 'animate__fadeInLeft')
-                    }
                 }
             }
         }.bind(this))
