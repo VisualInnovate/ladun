@@ -1,5 +1,5 @@
 <template>
-    <Navbar class=" fixed z-50 w-full"  :class="{ 'bg-black': !top}"/>
+    <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot h-[50vh] md:h-auto">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="h-[50vh] md:h-auto" src="../../img/real-state-management-banner.png">
@@ -10,7 +10,8 @@
                      id="logo-project"
                      v-if="project.logo"
                      :src="project.logo.original_url">
-                <h2 class="my-auto mx-3 animate__animated animate__backInDown" v-if="project.title">{{ project.title[$i18n.locale] }}</h2>
+                <h2 class="my-auto mx-3 animate__animated animate__backInDown" v-if="project.title">
+                    {{ project.title[$i18n.locale] }}</h2>
             </div>
         </div>
 
@@ -20,28 +21,32 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
 
-                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <img class="w-auto mx-auto" src="../../img/icon-area.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown" >
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
                     <div class="my-auto mx-auto">
                         <p>{{ $t('Units_Number') }}</p>
@@ -62,7 +67,8 @@
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
                     <div class="mx-auto font-bold mb-3 md:mb-0 ">
-                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
+                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
                         }">
@@ -71,7 +77,8 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0 ">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
                             el: '#utilities',
                             offset: -128
                         }">
@@ -80,7 +87,8 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
                             el: '#downloads',
                             offset: -128
                         }">
@@ -89,7 +97,8 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
                             el: '#project_models',
                             offset: -128
                         }">
@@ -98,7 +107,8 @@
                     </div>
 
                     <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100" href="#" v-scroll-to="{
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
                             el: '#location',
                             offset: -128
                         }">
@@ -158,7 +168,18 @@
             <div class=" flex lg:flex-row  flex-col">
                 <div
                     class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
-                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>
+                    <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
+                    <div v-if="$i18n.locale=='en'">
+                        <div class="flex items-center">
+                            <p class="text-dark-brown text-2xl ">MEDIA </p>
+                            <div class="w-[29px] h-[3px] bg-dark-brown  mx-5"></div>
+                        </div>
+                        <p class="text-dark-brown text-4xl ml-4"> Project </p>
+                        <p class="text-dark-brown text-4xl ml-4">Gallery</p>
+                    </div>
+                    <p class="text-dark-brown text-4xl" v-else>
+                        معرض صور المشـــروع
+                    </p>
                 </div>
                 <div class="flex flex-row-reverse w-[80%] " id="carsoul-project">
                     <div class="w-[90%]">
@@ -312,13 +333,16 @@
 
                     <p class="flex " v-if="project.location">
                         <MapPinIcon class="w-6 h-6 text-black"/>
-                        {{ project.location.address[$i18n.locale]  }}
+                        {{ project.location.address[$i18n.locale] }}
                     </p>
 
                 </div>
 
                 <div class="img-company-info  left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
                     <!--                    map location  langtud and  -->

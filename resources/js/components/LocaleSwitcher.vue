@@ -10,11 +10,20 @@ import {useAppLangStore} from '../stores/AppLang';
 const appLang = useAppLangStore()
 
 const currentLang = ref("English")
-const secondLang = ref("العربية")
+
 const localeBtn = computed({
     get() {
-        if (appLang.appLang == 'en') return 'ar'
-        else return 'en'
+        if (i18n.global.locale.value == 'en') return 'English'
+        else return 'العربية'
+    },
+    set(val) {
+        appLang.appLang = val
+    }
+})
+const secondLang = computed({
+    get() {
+        if (i18n.global.locale.value== 'en') return 'العربية'
+        else return 'English'
     },
     set(val) {
         appLang.appLang = val
@@ -23,12 +32,10 @@ const localeBtn = computed({
 
 const changeLocale = () => {
     if (i18n.global.locale.value == 'ar') {
-        currentLang.value = "English"
-        secondLang.value = "العربية"
+
         executeArCode()
     } else {
-        currentLang.value = "العربية"
-        secondLang.value = "English"
+
         executeEnCode()
     }
 

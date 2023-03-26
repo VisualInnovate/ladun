@@ -9,7 +9,7 @@
             >
                 <template v-for="employee in structure">
                     <div
-                        class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 strucre"
+                        class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 strucre animate__animated animate__fadeInUp"
                     >
                         <div
                             class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
@@ -66,22 +66,6 @@ export default {
             this.structure = res.data.structure
         })
 
-        window.addEventListener('scroll', function () {
-            // animate__animated animate__fadeInUp
-            let strucre = document.getElementsByClassName('strucre')
-            let header_strucre = document.getElementById('header-strucre')
-            console.log(strucre.length)
-            for (let i = 0; i < strucre.length; i++) {
-                if (window.scrollY >= header_strucre.offsetTop - 100) {
-                    strucre[i].classList.add('animate__animated', 'animate__fadeInLeft')
-                } else {
-
-                    strucre[i].classList.remove('animate__animated', 'animate__fadeInLeft')
-
-                }
-            }
-
-        })
     }
 }
 </script>
