@@ -297,7 +297,7 @@
     </section>
 
     <!-- location -->
-    <section class="company-info   py-28 bg-background-section" id="location">
+    <section class="py-28" id="location">
 
         <div class="container mx-auto">
 
@@ -310,7 +310,7 @@
 
                     </p>
 
-                    <p class="flex " v-if="project.location.address">
+                    <p class="flex " v-if="project.location">
                         <MapPinIcon class="w-6 h-6 text-black"/>
                         {{ project.location.address[$i18n.locale]  }}
                     </p>
