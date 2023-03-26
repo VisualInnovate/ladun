@@ -148,7 +148,7 @@
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info left " id="project_img"
+                <div class="img-company-info  " id="project_img"
                 >
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->

@@ -1,6 +1,6 @@
 <template>
   <Navbar class="bg-black fixed z-50 w-full" />
-  <div class="bg-light-beige-background mb-4 pt-32 [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
+  <div class=" mb-4 pt-32 [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
   <tabs variant="underline" v-model="activeTab" > <!-- class appends to content DIV for all tabs -->
     <tab v-for="department in fetchedData" :name="department.title['en']" :title="department.title[$i18n.locale]" class="[&>div>div>div>ul]:justify-center [&>div>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>div>ul>li>.border-blue-600]:border-dark-brown">
       <div class="relative">
