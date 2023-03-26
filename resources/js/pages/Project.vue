@@ -181,7 +181,7 @@
                         معرض صور المشـــروع
                     </p>
                 </div>
-                <div class="flex flex-row-reverse w-[80%] " id="carsoul-project">
+                <div class="flex flex-row-reverse w-[80%] right " id="carsoul-project">
                     <div class="w-[90%]">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
@@ -515,27 +515,11 @@ export default {
             document.getElementById('logo-project')
             if (window.scrollY == 0) {
                 this.top = 1
-                document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
-                for (let i = 0; i < utility_project.length; i++)
-                    utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
-
-                document.getElementById('logo-project').classList.add('animate__animated', 'animate__backInDown');
-
-                for (let i = 0; i < utility_project.length; i++)
-                    utility_project[i].classList.add('animate__animated', 'animate__backInDown')
             } else {
                 this.top = 0
-                document.getElementById('logo-project').classList.remove('animate__animated', 'animate__backInDown');
-                for (let i = 0; i < utility_project.length; i++)
-                    utility_project[i].classList.remove('animate__animated', 'animate__backInDown')
-            }
-            let carsoul = document.getElementById('carsoul-project')
-            if (window.scrollY >= carsoul.offsetTop - 1300) {
-                carsoul.classList.add('animate__animated', 'animate__backInUp')
-            } else {
-                carsoul.classList.remove('animate__animated', 'animate__backInUp')
 
             }
+
 
             let right = document.getElementsByClassName('right')
 
@@ -544,9 +528,9 @@ export default {
             for (let i = 0; i < right.length; i++) {
                 if (window.scrollY >= right[i].offsetTop - 710) {
                     if (this.locale == 'en') {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft')
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
                     } else {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight')
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
                     }
 
 
