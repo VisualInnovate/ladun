@@ -169,7 +169,7 @@
                 <div
                     class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
                     <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
-                    <div v-if="$i18n.locale=='en'">
+                    <div v-if="$i18n.locale=='en'" class="right">
                         <div class="flex items-center">
                             <p class="text-dark-brown text-2xl ">MEDIA </p>
                             <div class="w-[29px] h-[3px] bg-dark-brown  mx-5"></div>
@@ -177,11 +177,11 @@
                         <p class="text-dark-brown text-4xl ml-4"> Project </p>
                         <p class="text-dark-brown text-4xl ml-4">Gallery</p>
                     </div>
-                    <p class="text-dark-brown text-4xl" v-else>
+                    <p class="text-dark-brown text-4xl right" v-else>
                         معرض صور المشـــروع
                     </p>
                 </div>
-                <div class="flex flex-row-reverse w-[80%] right " id="carsoul-project">
+                <div class="flex flex-row-reverse w-[80%]  " id="carsoul-project">
                     <div class="w-[90%]">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
