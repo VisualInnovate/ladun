@@ -201,15 +201,15 @@
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <div class="z-40   container mx-auto ">
-            <h2 class="mb-5 text-light-brown text-3xl">{{ $t('high_level_utility') }} </h2>
-            <p class="mb-10 text-lg">{{ $t('high_level_utility_p') }} </p>
+            <h2 class="mb-5 text-light-brown text-3xl ">{{ $t('high_level_utility') }} </h2>
+            <p class="mb-10 text-lg ">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap ">
                 <div
                     v-if="project.utilities"
                     v-for="utility in project.utilities" :key="utility.id"
 
                     class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
-                    <div class=" p-7 rounded-full bg-white z-20 mb-2">
+                    <div class=" p-7 rounded-full bg-white z-20 mb-2 right">
                         <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40"
                              alt="">
                     </div>
@@ -343,8 +343,6 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
                         width="500" height="340" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
                     <!--                    map location  langtud and  -->
                 </div>
 
@@ -544,7 +542,7 @@ export default {
 
             // console.log(left.length)
             for (let i = 0; i < right.length; i++) {
-                if (window.scrollY >= right[i].offsetTop - 740) {
+                if (window.scrollY >= right[i].offsetTop - 710) {
                     if (this.locale == 'en') {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft')
                     } else {
