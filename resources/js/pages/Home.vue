@@ -68,7 +68,9 @@
                                 <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
                                 <span class="flex-initial mx-2 text-light-brown">
                                 <MapPinIcon class="inline-block h-4 w-4 "/>
-                                <small class="font-bold" v-if="project.location">{{ project.location.city[$i18n.locale] }}</small>
+                                <small class="font-bold" v-if="project.location">{{
+                                        project.location.city[$i18n.locale]
+                                    }}</small>
                             </span>
                             </div>
                             <p class="px-2 text-grey text-xs"
@@ -166,75 +168,42 @@
 
         <!-- dropdown -->
 
-        <dropdown text="Bottom"
-                  class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
-            <template #trigger>
-                <span class="w-full inline-flex justify-between px-4 text-white">
-                    <span>{{ $t('choose') }}</span>
-                    <svg class="my-auto w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </span>
-            </template>
-            <list-group>
-                <list-group-item >
-                    <template #prefix>
-                        <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
-                    </template>
-                    Profile
-                </list-group-item>
-                <list-group-item>
-                    <template #prefix>
-                        <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
-                    </template>
-                    Settings
-                </list-group-item>
-                <list-group-item>
-                    <template #prefix>
-                        <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"></path></svg>
-                    </template>
-                    Messages
-                </list-group-item>
-                <list-group-item>
-                    <template #prefix>
-                        <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
-                    </template>
-                    Download
-                </list-group-item>
-            </list-group>
-        </dropdown>
+<!--       <dropdown-->
+<!--                 class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">-->
+<!--            <template #trigger>-->
+<!--                <span class="w-full inline-flex justify-between px-4 text-white">-->
+<!--                    <span>{{ $t('choose') }}</span>-->
+<!--                    <svg class="my-auto w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"-->
+<!--                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">-->
+<!--                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+<!--                          d="M19 9l-7 7-7-7"></path></svg>-->
+<!--                </span>-->
+<!--            </template>-->
+<!--            <list-group class="w-full">-->
+
+<!--&lt;!&ndash;                <div class="mx-11 font-bold">{{ $t('ownership') }}</div>&ndash;&gt;-->
+
+<!--                <list-group-item class="mx-24" @click="showModal">{{ $t('easternRegion') }}</list-group-item>-->
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('middleRegion') }}</list-group-item>-->
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('westernRegion') }}</list-group-item>-->
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('northernRegion') }}</list-group-item>-->
+
+<!--&lt;!&ndash;                <div class="mx-11 font-bold">{{ $t('rent') }}</div>&ndash;&gt;-->
+
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('middleRegion') }}</list-group-item>-->
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('westernRegion') }}</list-group-item>-->
+<!--                <list-group-item class="mx-24"  @click="showModal">{{ $t('northernRegion') }}</list-group-item>-->
+
+
+<!--            </list-group>-->
+<!--        </dropdown>-->
 
     </section>
 
-<!--    <button @click="showModal" type="button" class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">-->
-<!--        Show modal-->
-<!--    </button>-->
-    <Modal :size="size" v-if="isShowModal" @close="closeModal">
-        <template #header>
-            <div class="flex items-center text-lg">
-                Terms of Service
-            </div>
-        </template>
-        <template #body>
-            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-            </p>
-            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-            </p>
-        </template>
-        <template #footer>
-            <div class="flex justify-between">
-                <button @click="closeModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
-                    Decline
-                </button>
-                <button @click="closeModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    I accept
-                </button>
-            </div>
-        </template>
-    </Modal>
-    <!-- Main modal -->
+<Modal :formShow="isShowModal"/>
+
+
+
     <!-- End About Us section -->
     <!-- footer section -->
     <LightFooter/>
@@ -249,36 +218,15 @@ import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon} fr
 import {MapPinIcon} from "@heroicons/vue/24/solid";
 import {Tabs, Tab} from "flowbite-vue";
 import i18n from '../plugins/i18n'
-import { Modal } from 'flowbite-vue'
-import { Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
-
+import {Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
+import axios from 'axios';
+import Modal from '../components/Modal.vue'
 
 
 
 const isShowModal = ref(false)
-function closeModal() {
-    isShowModal.value = false
-}
-function showModal() {
-    isShowModal.value = true
-}
 
-function getData(){
-    axios.get('/api/projects/latest')
-        .then((response) => {
-            latestProjects.value = response.data.data
-            // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
-        })
-        .catch(error => console.log(error))
 
-    axios.get('/api/about')
-        .then((response) => {
-            aboutData.value = response.data[0]
-        })
-        .catch(error => console.log(error))
-}
-getData()
-import axios from 'axios';
 
 // const i18n = useI18n()
 const view = ref({
@@ -298,8 +246,27 @@ onBeforeMount(() => {
 
 })
 
+function closeModal() {
+    isShowModal.value = false
+}
+function showModal() {
+    isShowModal.value = true
+}
+function getData(){
+    axios.get('/api/projects/latest')
+        .then((response) => {
+            latestProjects.value = response.data.data
+            // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
+        })
+        .catch(error => console.log(error))
 
-
+    axios.get('/api/about')
+        .then((response) => {
+            aboutData.value = response.data[0]
+        })
+        .catch(error => console.log(error))
+}
+getData()
 const handleScroll = () => {
     if (window.pageYOffset > 0) {
         if (view.value.topOfPage) view.value.topOfPage = false
@@ -313,6 +280,7 @@ const handleScroll = () => {
 }
 
 onBeforeMount(async () => {
+
 
     window.addEventListener('scroll', function () {
         // animate__animated animate__fadeInUp
