@@ -64,9 +64,11 @@
                              class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
                             <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
                                  alt="Project Photo">
-                            <div class="flex items-center">
-                                <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
-
+                            <div class="flex flex-col p-2">
+                                <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
+                                <div class="text-dark-brown flex">
+                                    <MapPinIcon class="h-4 w-4" />  <small v-if="project.location"> {{ project.location.address[$i18n.locale] }}</small>
+                                </div>
                             </div>
                             <p class="px-2 text-grey text-xs"
                                v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
@@ -130,9 +132,9 @@
                         <p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
-                    <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
+                    <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
                     <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
-                        <p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
+                        <p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
@@ -140,14 +142,14 @@
                         <p class="block text-xs">{{ $t('affiliate') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
-                    <img src="../../img/projects_investment.svg" alt="projects_investment" class="my-auto mx-auto"/>
+                    <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
                     <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
-                        <p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
+                        <p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
                     <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
-                        <p class="block text-xs">{{ $t('projectsAreas') }}</p></div>
+                        <p class="block text-xs">{{ $t('unitsUnderProcess') }}</p></div>
                 </div>
 
             </div>

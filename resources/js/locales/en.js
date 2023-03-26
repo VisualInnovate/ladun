@@ -20,10 +20,10 @@ export default {
     unit: "Units",
     aboutLadun: "About Ladun",
     experienceYears: "Experience Years",
-    projectsUnits: "projects Units",
-    affiliate: "affiliate",
-    projectsInvestment: "projects Investment",
-    projectsAreas: "Developed residential units",
+    projectsUnits: "Units Done",
+    affiliate: "Subsidiaries",
+    projectsInvestment: "Investment Projects",
+    unitsUnderProcess: "Units Under Process",
     projectsRevenue: "projects Revenue",
     choose: "Choose",
     shareYourInterestWithUs: "share Your Interest With Us, and we will reply you soon",
@@ -112,5 +112,7 @@ export default {
     LastName:"Last Name",
     PhoneNumber:"Phone Number",
     Email:"Email",
+    projectPhases: "Project Phases",
+    summaryAboutTheCompany: "Brief About The Company"
 
 }

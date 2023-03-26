@@ -61,13 +61,13 @@
 
 
     <!-- navigation -->
-    <section class="bg-white drop-shadow-md">
+    <section class="bg-white drop-shadow-md text-sm">
         <div class="container mx-auto">
             <div class="py-10 w-full lg:w-[60%]">
                 <div
-                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mx-auto items-center ">
-                    <div class="mx-auto font-bold mb-3 md:mb-0 ">
-                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 mx-auto items-center ">
+                    <div class="mx-auto mb-3 md:mb-0 ">
+                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#project',
                             offset: -128
@@ -75,9 +75,19 @@
                             {{ $t('project') }}
                         </a>
                     </div>
+                    <!-- project phases -->
+                    <div class="mx-auto mb-3 md:mb-0 ">
+                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
+                            el: '#project_phases',
+                            offset: -128
+                        }">
+                            {{ $t('projectPhases') }}
+                        </a>
+                    </div>
 
-                    <div class="mx-auto font-bold mb-3 md:mb-0 ">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                    <div class="mx-auto mb-3 md:mb-0 ">
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#utilities',
                             offset: -128
@@ -86,8 +96,8 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                    <div class="mx-auto mb-3 md:mb-0">
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#downloads',
                             offset: -128
@@ -96,8 +106,8 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                    <div class="mx-auto mb-3 md:mb-0">
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#project_models',
                             offset: -128
@@ -106,8 +116,8 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto font-bold mb-3 md:mb-0">
-                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[4px] after:rounded-lg after:bg-black after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                    <div class="mx-auto mb-3 md:mb-0">
+                        <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#location',
                             offset: -128
@@ -117,7 +127,7 @@
                     </div>
 
                     <a
-                        class="mx-auto font-bold button bg-light-brown text-white  w-full text-center py-2"
+                        class="mx-auto button bg-light-brown text-white  w-full text-center py-2 hover:bg-dark-brown hover:shadow"
                         href="#" v-scroll-to="{
                             el: '#ask_us',
                             offset: -128
@@ -162,6 +172,22 @@
 
     </section>
 
+    <!-- project phases section -->
+    <section id="project_phases">
+        <h1 class="container text-3xl text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" >
+
+              <div v-for="phase in project.phases" class="animate__animated animate__fadeInUp rounded-xl border-2 border-gray-border-light bg-white relative mx-2 ">
+                    <div class="flex flex-col bg-black text-gray-300">
+                        <h3 class="flex-initial p-2 ">{{ phase.name[$i18n.locale] }}</h3>
+
+                        <p class="px-2 col-start-1 col-end-4 ">
+                            this is number of units
+                        </p>
+                    </div>
+              </div>
+            </div>
+    </section>
     <!-- gallery section -->
     <section class="py-12 pb-16">
         <div class="container mx-auto">

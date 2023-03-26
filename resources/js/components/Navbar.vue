@@ -150,16 +150,16 @@ const navigation = [
     {
         name: "aboutUs", href: '#', dropdown: true, dropdownItems: [
             {
-                name: "aboutUs",
+                name: "summaryAboutTheCompany",
                 href: {name: 'About Us'}
-            },
-            {
-                name: "mediaCenter",
-                href: {name: 'Media Center'}
             },
             {
                 name: "highboard",
                 href: {name: 'highboard'}
+            },
+            {
+                name: "mediaCenter",
+                href: {name: 'Media Center'}
             },
 
         ]
