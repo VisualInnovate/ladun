@@ -1,7 +1,7 @@
 export default {
     main:"Home",
     aboutUs:"About us",
-    companies:"Companies",
+    companies:"Subsidiaries",
     projects:"Projects",
     companyAds:"Company Ads",
     contactUs:"Contact us",

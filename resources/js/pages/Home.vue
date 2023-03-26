@@ -66,21 +66,16 @@
                                  alt="Project Photo">
                             <div class="flex items-center">
                                 <h3 class="flex-initial p-2">{{ project.title[$i18n.locale] }}</h3>
-                                <span class="flex-initial mx-2 text-light-brown">
-                                <MapPinIcon class="inline-block h-4 w-4 "/>
-                                <small class="font-bold" v-if="project.location">{{
-                                        project.location.city[$i18n.locale]
-                                    }}</small>
-                            </span>
+
                             </div>
                             <p class="px-2 text-grey text-xs"
                                v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                            <div class="flex justify-center my-4 mx-2">
-                                <button class="bg-dark-brown text-white rounded-2xl w-36 h-8"
+                            <div class="flex justify-end my-4 mx-2">
+                                <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
                                         @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                                    <small>
+                                    <small class="text-center">
                                         <MagnifyingGlassIcon
-                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 justify-end"/>
+                                            class="inline-block h-4 w-4  justify-end"/>
                                         {{ $t('exploreProject') }}
                                     </small>
                                 </button>

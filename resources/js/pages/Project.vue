@@ -19,36 +19,36 @@
 
     <section class="genaral-info bg-background-overlay">
         <div class="container mx-auto ">
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-10 ">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
 
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
-                    <img class="w-auto mx-auto" src="../../img/icon-area.png">
-                    <div class="my-auto mx-auto">
+                    <img class="w-[24%] mx-auto" src="../../img/icon-area.png">
+                    <div class="my-auto mx-auto text-[14px]">
                         <p>{{ $t('areaOfLand') }}</p>
                         <p class="font-bold">{{ project.land_area }} m2</p>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <img class="w-auto mx-auto" src="../../img/area-svgrepo-com.png">
-                    <div class="my-auto mx-auto">
+                    <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png">
+                    <div class="my-auto mx-auto text-[14px]">
                         <p>{{ $t('Building_Area') }}</p>
                         <p class="font-bold">{{ project.building_area }} m2</p>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <img class="w-auto mx-auto" src="../../img/buildings-icon.png">
-                    <div class="my-auto mx-auto">
+                    <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png">
+                    <div class="my-auto mx-auto text-[14px]">
                         <p>{{ $t('Floors_Number') }}</p>
                         <p class="font-bold">{{ project.units_number }}</p>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <img class="w-auto mx-auto" src="../../img/pyramid-icon.png">
-                    <div class="my-auto mx-auto">
+                    <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png">
+                    <div class="my-auto mx-auto text-[14px]">
                         <p>{{ $t('Units_Number') }}</p>
                         <p class="font-bold">{{ project.models_number }}</p>
                     </div>
