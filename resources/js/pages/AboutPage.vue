@@ -143,9 +143,6 @@ onBeforeMount(async () => {
                     strucre[i].classList.add('animate__animated', 'animate__fadeInLeft')
 
             } else {
-
-
-
                     strucre[i].classList.remove('animate__animated', 'animate__fadeInLeft')
 
             }

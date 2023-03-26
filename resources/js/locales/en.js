@@ -104,6 +104,13 @@ export default {
     submitted:"data submitted successfully",
     investorsRelations: "Investors Relations",
     contactWithInvestorsRelations: "Contact With InvestorsRelations",
-    highboard:"highboard"
+    highboard:"highboard",
+    ownership:"Ownership",
+    rent:"Rent",
+    FirstName:"First Name",
+    FatherName:"Father Name",
+    LastName:"Last Name",
+    PhoneNumber:"Phone Number",
+    Email:"Email",
 
 }
