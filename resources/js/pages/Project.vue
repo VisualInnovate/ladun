@@ -174,8 +174,6 @@
                             <p class="text-dark-brown text-2xl ">MEDIA </p>
                             <div class="w-[29px] h-[3px] bg-dark-brown  mx-5"></div>
                         </div>
-
-
                         <p class="text-dark-brown text-4xl ml-4"> Project </p>
                         <p class="text-dark-brown text-4xl ml-4">Gallery</p>
                     </div>
