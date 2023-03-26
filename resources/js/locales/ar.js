@@ -97,7 +97,7 @@ export default {
     utilities: "المرافق",
     downloads: "التنزيلات",
     projectModels: "نماذج المشروع",
-    askUs: "للاستفسارات",
+    askUs: "استفسر الآن",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
     sendUsNow: "راسلنا الآن",
     "Join Us":"تم ادخال الداتا بنجاح ",
