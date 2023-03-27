@@ -6,7 +6,7 @@
 
         <div class="z-40 text-white absolute top-40 md:top-60 -translate-y-1/2 text-justify">
             <div class="flex md:mx-20 mx-5">
-                <img class="w-[30%] animate__animated animate__backInDown"
+                <img class="animate__animated animate__backInDown max-w-[150px]"
                      id="logo-project"
                      v-if="project.logo"
                      :src="project.logo.original_url">
