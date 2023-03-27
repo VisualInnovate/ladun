@@ -11,7 +11,7 @@
         <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10 " >
           <tab v-for="region in department.regions" :name="region.title['en']" :title="region.title[$i18n.locale]">
             <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto   [&>div]:h-[532px]" >
-              <div v-for="project in region.projects" class="animate__animated animate__fadeInUp rounded-xl border-2 border-gray-border-light bg-white relative mx-2 ">
+              <div v-for="project in region.projects" class=" rounded-xl border-2 border-gray-border-light bg-white relative mx-2 " :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                     <img class="w-20 h-20 rounded-full mx-auto my-3 mb-0" :src="project.logo.original_url" :alt="project.logo.name">
                     <div class="flex flex-col items-center">
                         <h3 class="flex-initial p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>

@@ -20,7 +20,8 @@
         <div class="container mx-auto ">
             <div class="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1  lg:gap-20 md:gap-32   ">
                 <div v-for=" company in companies" :key="company.id"
-                     class="animate__animated animate__fadeInUp hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
+                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
+                     class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
                     <img class="img-companies w-[120px] h-[120px] rounded-full mb-4 " :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
                     <h3 class="justify-center font-bold text-[16x]" > {{ company.title[$i18n.locale] }} </h3>
