@@ -187,7 +187,7 @@ const navigation = [
 ];
 const mobileMenuOpen = ref(false);
 onMounted(()=>{
-    var pathArray = window.location.pathname.split('/');
+    var pathArray = window.location.pathname.split('/'); // here i get link to add some style in active link unfortunately not the best way i will upgrade next time
     if (pathArray[1]== "about" || pathArray[1]== "highboard" || pathArray[1]== "media-center" ) {
         document.getElementById('aboutUs').style['color']='#eeb013'
     }
@@ -204,7 +204,7 @@ onMounted(()=>{
 </script>
 
 <style lang="scss" scoped>
-.router-link-active{
+.router-link-active{//put some style in active link in navbar
     color: #eeb013;
 }
 </style>
