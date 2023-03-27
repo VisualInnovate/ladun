@@ -100,6 +100,12 @@ const routes = [
         meta:{title:"High Board"},
     },
     {
+        path: "/utilities",
+        component: () => import("@/pages/utilities.vue"),
+        name: 'utilities',
+        meta:{title:"Utilities"},
+    },
+    {
         path: "/pages/:slug",
         component: () => import("@/pages/Page.vue"),
         name: 'Page',

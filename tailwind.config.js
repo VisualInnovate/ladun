@@ -44,7 +44,7 @@ module.exports = {
                 'subtraction-ltr-png': "url('/resources/img/subtraction-ltr.png')",
                 'real-state-managemnt-utility-section': "url('/resources/img/real-managent-utility-section.png')",
                 'dark-footer-image': "url('/resources/img/dark_footer/dark_footer_bgImg.png')",
-                'about-us-page-image': "url('/resources/img/join_us/join.png')"
+                'about-us-page-image': "url('/resources/img/joinus.jpg')"
             }  ,fontSize: {
                 xs: "11px",
                 sm: "16px",
