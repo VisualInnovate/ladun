@@ -133,6 +133,14 @@ Route::get('/departments/latest/projects', function(){
     return LatestProjectsResource::collection($departs);
 });
 
+Route::get('/units',function (){
+    return response ([
+        'units'=>\App\Models\Unit::all()
+    ]);
+
+
+});
+
 // pages api
 
 Route::get('/pages/{slug}', function($slug){

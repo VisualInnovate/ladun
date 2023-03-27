@@ -187,3 +187,9 @@ const navigation = [
 ];
 const mobileMenuOpen = ref(false);
 </script>
+
+<style lang="scss" scoped>
+.router-link-active{
+    color: #eeb013;
+}
+</style>
