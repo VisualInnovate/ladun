@@ -43,7 +43,7 @@
     <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10">
             <h2 id="latest_project_header"
-                :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.latestProjectsSection}"
+
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
             </h2>
@@ -117,7 +117,9 @@
     <section class="relative about-section" id="aboutSection">
         <div class="flex py-5">
             <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
-                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 "
+                id="aboutLadunHeader"
+                >
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
@@ -251,11 +253,9 @@ const handleScroll = () => {
     if (window.pageYOffset > 0) {
         if (view.value.topOfPage) view.value.topOfPage = false
         if (view.value.latestProjectsSection) view.value.latestProjectsSection = false
-        if (view.value.aboutLadunSection) view.value.aboutLadunSection = false
     } else {
         if (!view.value.topOfPage) view.value.topOfPage = true
         if (!view.value.latestProjectsSection) view.value.latestProjectsSection = true
-        if (!view.value.aboutLadunSection) view.value.aboutLadunSection = true
     }
 }
 
@@ -266,6 +266,7 @@ onBeforeMount(async () => {
         // animate__animated animate__fadeInUp
         let latest_project = document.getElementsByClassName('latest_project')
         let latest_project_header = document.getElementById('latest_project_header')
+        let aboutLadunHeader = this.document.getElementById('aboutLadunHeader')
 
         for (let i = 0; i < latest_project.length; i++) {
             if (window.scrollY >= latest_project_header.offsetTop - 700) {
@@ -283,6 +284,22 @@ onBeforeMount(async () => {
                     latest_project[i].classList.remove('animate__animated', 'animate__fadeInRight')
             }
         }
+
+
+        if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)){
+                if (i18n.global.locale.value == 'en')
+                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInLeft')
+                else
+                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInRight')
+
+
+            } else {
+
+                if (i18n.global.locale.value == 'en')
+                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInLeft')
+                else
+                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInRight')
+            }
 
     })
     const response = await axios.get("/api/departments/latest/projects");
