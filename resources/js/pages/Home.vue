@@ -72,7 +72,7 @@
                             </div>
                             <p class="px-2 text-grey text-xs"
                                v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                            <div class="flex justify-end my-4 mx-2">
+                            <div class="flex justify-center my-4 mx-2">
                                 <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
                                         @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                                     <small class="text-center">

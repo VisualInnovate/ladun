@@ -1,27 +1,65 @@
 <template>
-    <carousel :items-to-show="2">
-        <slide v-for="slide in 10" :key="slide">
-            <div  class=" rounded-xl border-2 border-gray-border-light bg-white relative mx-2 " :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
-                <img class="w-20 h-20 rounded-full mx-auto my-3 mb-0" src="../../img/company.png" >
-                <div class="flex flex-col items-center">
-                    <h3 class="flex-initial p-2 font-bold">{{ slide }}</h3>
-                    <h4 class="flex-initial flex p-2 text-dark-brown">
-                        <img src="../../img/projects/locationIcon.svg" alt="locationIcon" class="rtl:ml-2 ltr:mr-2" />
-                        {{ slide }}
-                    </h4>
-                    <small class="flex-initial mb-2 text-dark-brown">{{ slide}}</small>
-                </div>
+    <Navbar class="bg-black fixed z-50 w-full"/>
+    <div class="pt-[4rem]">
+        <div class="relative img-banner-slot">
+            <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
+            <img class="w-full" src="../../img/companies-banner.png">
 
-                <div class="grid grid-cols-4 mb-4 ">
-                    <p class="px-2 text-grey text-xs col-start-1 col-end-4 ">
-                        {{slide}}
-                    </p>
-                    <div class="flex flex-col justify-end col-start-4 col-end-4">
+            <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
+                <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
+
+                     src="../../img/ladun-logo-banner.png">
+            </div>
+
+        </div>
+    </div>
+
+    <carousel :items-to-show="2">
+        <slide v-for="unit in units" :key="slide">
+            <div
+                 class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
+                <img class="w-full rounded-lg"  src="../../img/projects_3.png"
+                     alt="Project Photo">
+                <div class="flex flex-col p-2">
+                    <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
+                    <div class="text-dark-brown flex">
+                        <MapPinIcon class="h-4 w-4" />  <small v-if="project.location"> {{ project.location.address[$i18n.locale] }}</small>
                     </div>
                 </div>
-                <div class="absolute bottom-0 w-full">
-                    {{slide}}
+                <p class="px-2 text-grey text-xs"
+                   v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
+                <div class="flex justify-end my-4 mx-2">
+                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
+                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
+                        <small class="text-center">
+                            <MagnifyingGlassIcon
+                                class="inline-block h-4 w-4  justify-end"/>
+                            {{ $t('exploreProject') }}
+                        </small>
+                    </button>
                 </div>
+
+                <div class="flex flex-wrap m-2">
+                    <div>
+                        <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                        <small class="whitespace-nowrap text-gray-500">{{
+                                $t('residentialLandPlots')
+                            }}</small>
+                    </div>
+                    <div>
+                        <BuildingOffice2Icon
+                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                        <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
+                            {{ $t('areaUnit') }}</small>
+                    </div>
+                    <div>
+                        <BuildingOffice2Icon
+                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                        <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
+                            {{ $t('unit') }}</small>
+                    </div>
+                </div>
+
             </div>
         </slide>
         <template #addons>
@@ -36,11 +74,24 @@
 
 import 'vue3-carousel/dist/carousel.css'
 import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel'
+import Navbar from "../components/Navbar.vue"
+
 
 export default {
     name: "utilities",
+    data(){
+      return{
+          units:{}
+      }
+    },
     components: {
-        Carousel, Slide, Pagination, Navigation
+        Carousel, Slide, Pagination, Navigation,Navbar
+    },
+    beforeMount() {
+        axios.get("/api/units").then(res =>{
+            this.units=res.data.units
+            console.log(this.units)
+        })
     }
 }
 </script>
