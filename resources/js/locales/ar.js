@@ -114,5 +114,8 @@ export default {
     projectPhases: "مراحل المشروع",
     summaryAboutTheCompany: "نبذة عن الشركة",
     submit:'حفظ',
-    interst:'ارسل اهتمامك'
+    interst:'ارسل اهتمامك',
+    SR:" ريال سعودي ",
+    book:"احجز الان",
+    superlux:"شقة سوبر لوكس"
 }

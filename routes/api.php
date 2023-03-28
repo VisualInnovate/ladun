@@ -135,7 +135,7 @@ Route::get('/departments/latest/projects', function(){
 
 Route::get('/units',function (){
     return response ([
-        'units'=>\App\Models\Unit::all()
+        'units'=>\App\Models\Unit::get()->groupBy('type')
     ]);
 
 

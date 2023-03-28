@@ -13,60 +13,51 @@
 
         </div>
     </div>
+<div class="container mx-auto py-10" >
+    <div v-for="(unit , key) in units">
+        <h2 class="mb-5">{{ key }}</h2>
+        <carousel :items-to-show="4">
+            <slide v-for="item in unit" :key="unit.id">
+                <div
+                    class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
+                    <img class="w-full rounded-lg"  src="../../img/projects_3.png"
+                         alt="Project Photo">
+                    <div class="flex flex-col p-2">
+                        <h3 class="ltr:text-start rtl:text-end mb-1">{{$t('superlux')}}</h3>
+                        <div class="text-dark-brown flex rtl:flex-row-reverse">
+                            <small > {{ item.price}}</small> <span class="mx-1">
+                        {{ $t('SR')}}
+                    </span>
 
-    <carousel :items-to-show="2">
-        <slide v-for="unit in units" :key="slide">
-            <div
-                 class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
-                <img class="w-full rounded-lg"  src="../../img/projects_3.png"
-                     alt="Project Photo">
-                <div class="flex flex-col p-2">
-                    <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
-                    <div class="text-dark-brown flex">
-                        <MapPinIcon class="h-4 w-4" />  <small v-if="project.location"> {{ project.location.address[$i18n.locale] }}</small>
+                        </div>
                     </div>
-                </div>
-                <p class="px-2 text-grey text-xs"
-                   v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                <div class="flex justify-end my-4 mx-2">
-                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
-                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                        <small class="text-center">
-                            <MagnifyingGlassIcon
-                                class="inline-block h-4 w-4  justify-end"/>
-                            {{ $t('exploreProject') }}
-                        </small>
-                    </button>
-                </div>
 
-                <div class="flex flex-wrap m-2">
-                    <div>
-                        <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                        <small class="whitespace-nowrap text-gray-500">{{
-                                $t('residentialLandPlots')
-                            }}</small>
+                    <div class="flex flex-wrap m-2 justify-between rtl:flex-row-reverse">
+                        <div>
+                            <BuildingOffice2Icon
+                                class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                            <small class="whitespace-nowrap text-gray-500">{{ item.area }}
+                                {{ $t('areaUnit') }}</small>
+                        </div>
+                        <div class="">
+                            <MapPinIcon
+                                class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                            <small class="whitespace-nowrap text-gray-500">{{ item.location_in_project }}</small>
+                        </div>
+                        <button class="bg-dark-brown text-white rounded-lg px-4 py-[5px] text-[11px]">{{$t('book')}}</button>
                     </div>
-                    <div>
-                        <BuildingOffice2Icon
-                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                        <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
-                            {{ $t('areaUnit') }}</small>
-                    </div>
-                    <div>
-                        <BuildingOffice2Icon
-                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                        <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
-                            {{ $t('unit') }}</small>
-                    </div>
-                </div>
 
-            </div>
-        </slide>
-        <template #addons>
-            <navigation/>
-            <pagination/>
-        </template>
-    </carousel>
+                </div>
+            </slide>
+            <template #addons>
+                <navigation/>
+                <pagination/>
+            </template>
+        </carousel>
+    </div>
+
+</div>
+
 
 </template>
 
@@ -75,8 +66,8 @@
 import 'vue3-carousel/dist/carousel.css'
 import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel'
 import Navbar from "../components/Navbar.vue"
-
-
+import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon} from "@heroicons/vue/24/outline";
+import {MapPinIcon} from "@heroicons/vue/24/solid";
 export default {
     name: "utilities",
     data(){
@@ -85,7 +76,7 @@ export default {
       }
     },
     components: {
-        Carousel, Slide, Pagination, Navigation,Navbar
+        Carousel, Slide, Pagination, Navigation,Navbar,BuildingOffice2Icon,MapPinIcon
     },
     beforeMount() {
         axios.get("/api/units").then(res =>{

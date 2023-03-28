@@ -115,7 +115,11 @@ export default {
     projectPhases: "Project Phases",
     summaryAboutTheCompany: "Brief About The Company",
     submit:'submit',
-    interst:'share your interest'
+    interst:'share your interest',
+    SR:" SR ",
+    book:"Book Now",
+    superlux:"Super Lux apartment"
+
 
 
 }
