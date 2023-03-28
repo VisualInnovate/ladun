@@ -117,4 +117,7 @@ export default {
     interst:'ارسل اهتمامك',
     doneUnits: "وحدة منتهية",
     seeMore: 'مشاهدة التفاصيل',
+    SR:" ريال سعودي ",
+    book:"احجز الان",
+    superlux:"شقة سوبر لوكس"
 }

@@ -112,6 +112,12 @@ const routes = [
         meta:{title:"Phase"},
     },
     {
+        path: "/upload",
+        component: () => import("@/pages/UploadExcel.vue"),
+        name: 'upload',
+        meta:{title:"uploads"},
+    },
+    {
         path: "/pages/:slug",
         component: () => import("@/pages/Page.vue"),
         name: 'Page',

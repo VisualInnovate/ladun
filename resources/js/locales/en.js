@@ -118,5 +118,10 @@ export default {
     interst:'share your interest',
     doneUnits: "Done Units",
     seeMore: "See More",
+    SR:" SR ",
+    book:"Book Now",
+    superlux:"Super Lux apartment"
+
+
 
 }
