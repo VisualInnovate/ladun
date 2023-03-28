@@ -70,7 +70,7 @@ class ProjectResource extends Resource
             TextInput::make('address')->label(__('address'))
             ->required(),
 
-            SpatieMediaLibraryFileUpload::make('Main_image')->label(__('Main_image'))->collection('projects'),
+            SpatieMediaLibraryFileUpload::make('Main Image')->label(__('Main Image'))->collection('projects'),
             SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))
             ->multiple()
             ->enableReordering(),
@@ -193,7 +193,7 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('name')->label(__('name'))->limit('50')->sortable(),
                 Tables\Columns\TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 IconColumn::make('is_published')->label(trans('is_published'))->boolean(),
-                SpatieMediaLibraryImageColumn::make('Main_image')->label(__('Main_image'))->collection('projects'),
+                SpatieMediaLibraryImageColumn::make('Main Image')->label(__('Main Image'))->collection('projects'),
             ])
             ->filters([
                 //

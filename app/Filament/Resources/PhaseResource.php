@@ -39,11 +39,11 @@ class PhaseResource extends Resource
         return $form
 
             ->schema([
-                TextInput::make('name')->label(__('Phase Name')),
-                TextInput::make('long')->label(__('Longitude')),
-                TextInput::make('lat')->label(__('Latitude')),
+                TextInput::make('name')->label(__('Phase Name'))->required(),
+                TextInput::make('long')->label(__('Longitude'))->required(),
+                TextInput::make('lat')->label(__('Latitude'))->required(),
                 // projects
-                Select::make('project_id')->label(__('Project'))
+                Select::make('project_id')->label(__('Project'))->required()
                 // ->multiple()
                 ->options(Project::all()->pluck('name', 'id'))
                 ->relationship('project', 'name')
@@ -59,22 +59,20 @@ class PhaseResource extends Resource
                 //======================
                 Section::make('units')->schema([
                     Repeater::make('units')
-                    // ->relationship('units')
                     ->relationship('units')
-                    // ->relationship('projectUnits')
                     ->schema([
-                        TextInput::make('type'),
-                        TextInput::make('price'),
-                        TextInput::make('area'),
-                        TextInput::make('beds'),
-                        TextInput::make('long'),
-                        TextInput::make('lat'),
-                        TextInput::make('location_in_project'),
-                        TextInput::make('state'),
-                        TextInput::make('delivery_date'),
-                        TextInput::make('construction_code'),
-                        TextInput::make('parking_code'),
-                        TextInput::make('tenant_id'),
+                        TextInput::make('type')->required(),
+                        TextInput::make('price')->required(),
+                        TextInput::make('area')->required(),
+                        TextInput::make('beds')->required(),
+                        TextInput::make('long')->required(),
+                        TextInput::make('lat')->required(),
+                        TextInput::make('location_in_project')->required(),
+                        TextInput::make('state')->required(),
+                        TextInput::make('delivery_date')->required(),
+                        TextInput::make('construction_code')->required(),
+                        TextInput::make('parking_code')->required(),
+                        TextInput::make('tenant_id')->required(),
                         // projects
                         // TextInput::make('project_id')->label(__('project'))
                         
@@ -84,11 +82,11 @@ class PhaseResource extends Resource
                         //         // return 'hello';
                         //     });
                         // }),
-                        Select::make('project_id')->label(__('Project'))
-                        // ->multiple()
-                        ->options(Project::all()->pluck('name', 'id'))
-                        ->relationship('project', 'name')
-                        ->getOptionLabelFromRecordUsing(fn (Project $record) => "{$record->name}"),
+                        // Select::make('project_id')->label(__('Project'))
+                        // // ->multiple()
+                        // ->options(Project::all()->pluck('name', 'id'))
+                        // ->relationship('project', 'name')
+                        // ->getOptionLabelFromRecordUsing(fn (Project $record) => "{$record->name}"),
                     ])->columns(2)
                 ])->collapsed()
             ])->columns(1);

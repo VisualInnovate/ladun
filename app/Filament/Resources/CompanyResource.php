@@ -48,7 +48,7 @@ class CompanyResource extends Resource
                             $component->state('https://'.$state);
                         }),
                         TextInput::make('slug')->label(__('slug'))->required(),
-                        SpatieMediaLibraryFileUpload::make('thumbnail')->label(__('thumbnail'))->collection('companies'),
+                        SpatieMediaLibraryFileUpload::make('thumbnail')->hint('image size should not exceed 2Mb')->label(__('Main Image'))->collection('companies'),
                         RichEditor::make('content')->label(__('content')),
                         Toggle::make('is_published')->label(__('is_published')),
                     ])
@@ -63,7 +63,7 @@ class CompanyResource extends Resource
                 Tables\Columns\TextColumn::make('title')->label(__('title'))->limit('50')->sortable(),
                 Tables\Columns\TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 Tables\Columns\BooleanColumn::make('is_published')->label(__('is_published')),
-                SpatieMediaLibraryImageColumn::make('thumbnail')->label(__('thumbnail'))->collection('companies'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->label(__('Main Image'))->collection('companies'),
             ])
             ->filters([
                 //
@@ -109,6 +109,6 @@ class CompanyResource extends Resource
 
     public static function getPluralLabel(): ?string
     {
-        return __('Company');
+        return __('Companies');
     }
 }
