@@ -90,7 +90,7 @@
 
 
             </div>
-            <div class="w-full md:w-1/2 mb-5 bg-about-us-page-image bg-no-repeat bg-cover bg-center ">
+            <div class="w-full md:w-1/2 mb-5 bg-about-us-page-image bg-no-repeat bg-cover bg-center h-[555px] rounded-lg">
             </div>
 
 

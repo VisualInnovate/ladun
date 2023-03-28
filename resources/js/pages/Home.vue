@@ -1,6 +1,6 @@
 <template>
     <!-- header section -->
-    <Navbar class="fixed z-30 w-full animate__animated animate__backInDown" :class="{ 'bg-black': !view.topOfPage}"/>
+    <Navbar class="fixed z-30 w-full animate__animated animate__backInDown animate__slow" :class="{ 'bg-black': !view.topOfPage}"/>
     <header class="relative flex h-screen overflow-hidden">
         <div
             class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
@@ -19,7 +19,7 @@
         </video>
 
 
-        <div class="animate__animated animate__fadeInUp z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
+        <div class="animate__animated animate__fadeInUp animate__slow z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
             <button
                 class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2"
             >
@@ -28,7 +28,7 @@
         </div>
     </header>
     <div class="flex justify-center">
-        <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp"
+        <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp animate__slow"
            href="#" v-scroll-to="{
                             el: '#project-latest',
                             offset: -128
@@ -43,7 +43,7 @@
     <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10">
             <h2 id="latest_project_header"
-                :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}"
+
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
             </h2>
@@ -72,7 +72,7 @@
                             </div>
                             <p class="px-2 text-grey text-xs"
                                v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                            <div class="flex justify-end my-4 mx-2">
+                            <div class="flex justify-center my-4 mx-2">
                                 <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
                                         @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                                     <small class="text-center">
@@ -114,10 +114,12 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class="relative about-section">
+    <section class="relative about-section" id="aboutSection">
         <div class="flex py-5">
-            <h2 :class="{ 'animate__animated animate__fadeInLeft': !view.latestProjectsSection}"
-                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 ">
+            <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
+                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 "
+                id="aboutLadunHeader"
+                >
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
@@ -128,27 +130,27 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number1" :from="0" :to="50" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
                         <p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number2" :from="0" :to="15" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
                         <p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number3" :from="0" :to="11" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
                         <p class="block text-xs">{{ $t('affiliate') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number4" :from="0" :to="250" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
                         <p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl  counter text-dark-brown">+</strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number5" :from="0" :to="19673" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
                         <p class="block text-xs">{{ $t('unitsUnderProcess') }}</p></div>
                 </div>
 
@@ -172,7 +174,7 @@
 
     <!-- End About Us section -->
     <!-- footer section -->
-    <LightFooter/>
+    <LightFooter id="footerSection"/>
 
 </template>
 
@@ -192,7 +194,11 @@ import Modal from '../components/Modal.vue'
 
 const isShowModal = ref(false)
 
-
+const number1 = ref(null)
+const number2 = ref(null)
+const number3 = ref(null)
+const number4 = ref(null)
+const number5 = ref(null)
 
 // const i18n = useI18n()
 const view = ref({
@@ -209,7 +215,6 @@ const latestProjects = ref([])
 const aboutData = ref([])
 onBeforeMount(() => {
     window.addEventListener('scroll', handleScroll)
-
 })
 
 function closeModal() {
@@ -234,14 +239,23 @@ function getData(){
 }
 getData()
 const handleScroll = () => {
+    let aboutSection = document.getElementById('aboutSection')
+    let footerSection = document.getElementById('footerSection')
+
+    if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)){
+        number1.value.restart()
+        number2.value.restart()
+        number3.value.restart()
+        number4.value.restart()
+        number5.value.restart()
+    }
+
     if (window.pageYOffset > 0) {
         if (view.value.topOfPage) view.value.topOfPage = false
         if (view.value.latestProjectsSection) view.value.latestProjectsSection = false
-        if (view.value.aboutLadunSection) view.value.aboutLadunSection = false
     } else {
         if (!view.value.topOfPage) view.value.topOfPage = true
         if (!view.value.latestProjectsSection) view.value.latestProjectsSection = true
-        if (!view.value.aboutLadunSection) view.value.aboutLadunSection = true
     }
 }
 
@@ -252,6 +266,7 @@ onBeforeMount(async () => {
         // animate__animated animate__fadeInUp
         let latest_project = document.getElementsByClassName('latest_project')
         let latest_project_header = document.getElementById('latest_project_header')
+        let aboutLadunHeader = this.document.getElementById('aboutLadunHeader')
 
         for (let i = 0; i < latest_project.length; i++) {
             if (window.scrollY >= latest_project_header.offsetTop - 700) {
@@ -269,6 +284,22 @@ onBeforeMount(async () => {
                     latest_project[i].classList.remove('animate__animated', 'animate__fadeInRight')
             }
         }
+
+
+        if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)){
+                if (i18n.global.locale.value == 'en')
+                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInLeft')
+                else
+                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInRight')
+
+
+            } else {
+
+                if (i18n.global.locale.value == 'en')
+                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInLeft')
+                else
+                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInRight')
+            }
 
     })
     const response = await axios.get("/api/departments/latest/projects");
@@ -303,28 +334,5 @@ onBeforeMount(async () => {
     }
 }
 
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-
-strong.counter {
-    animation: counter forwards normal 5s ease-in-out;
-    counter-reset: num var(--num);
-}
-
-strong.counter::after {
-    content: counter(num);
-}
-
-@keyframes counter {
-    from {
-        --num: 0;
-    }
-    to {
-        --num: 100;
-    }
-}
 
 </style>

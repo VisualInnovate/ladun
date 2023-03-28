@@ -112,5 +112,7 @@ export default {
     PhoneNumber:"رقم الهاتف",
     Email:"الايميل",
     projectPhases: "مراحل المشروع",
-    summaryAboutTheCompany: "نبذة عن الشركة"
+    summaryAboutTheCompany: "نبذة عن الشركة",
+    submit:'حفظ',
+    interst:'ارسل اهتمامك'
 }

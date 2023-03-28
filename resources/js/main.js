@@ -7,6 +7,7 @@ import i18n from "@/plugins/i18n";
 import App from "./app.vue";
 import axios from 'axios'
 import VueScrollTo from 'vue-scrollto'
+import VueNumber from "vue-number-animation";
 
 import 'animate.css';
 
@@ -23,6 +24,7 @@ app.use(router);
 app.use(pinia);
 app.use(i18n);
 app.use(VueScrollTo)
+app.use(VueNumber)
 app.config.globalProperties.$axios = { ...axiosInstance }
 
 app.mount("#app");

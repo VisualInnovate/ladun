@@ -113,6 +113,9 @@ export default {
     PhoneNumber:"Phone Number",
     Email:"Email",
     projectPhases: "Project Phases",
-    summaryAboutTheCompany: "Brief About The Company"
+    summaryAboutTheCompany: "Brief About The Company",
+    submit:'submit',
+    interst:'share your interest'
+
 
 }
