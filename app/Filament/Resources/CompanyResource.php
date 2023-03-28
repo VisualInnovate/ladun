@@ -48,7 +48,7 @@ class CompanyResource extends Resource
                             $component->state('https://'.$state);
                         }),
                         TextInput::make('slug')->label(__('slug'))->required(),
-                        SpatieMediaLibraryFileUpload::make('thumbnail')->hint('image size should not exceed 2Mb')->label(__('Main Image'))->collection('companies'),
+                        SpatieMediaLibraryFileUpload::make('thumbnail')->hint('image dimension should not exceed 120px * 120px')->label(__('Main Image'))->collection('companies'),
                         RichEditor::make('content')->label(__('content')),
                         Toggle::make('is_published')->label(__('is_published')),
                     ])

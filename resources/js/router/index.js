@@ -106,6 +106,12 @@ const routes = [
         meta:{title:"units"},
     },
     {
+        path: "/phases/:id",
+        component: () => import("@/pages/Phase.vue"),
+        name: 'Phase',
+        meta:{title:"Phase"},
+    },
+    {
         path: "/pages/:slug",
         component: () => import("@/pages/Page.vue"),
         name: 'Page',

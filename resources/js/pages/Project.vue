@@ -173,20 +173,25 @@
     </section>
 
     <!-- project phases section -->
-    <section id="project_phases">
-        <h1 class="container text-3xl text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto" v-if="project.phases" >
-              <div v-for="phase in project.phases" class="animate__animated animate__fadeInUp rounded-xl border-2 border-gray-border-light bg-white relative mx-2 ">
-                    <div class="flex flex-col bg-black text-gray-300">
-                        <h3 class="flex-initial p-2 ">{{ phase.name[$i18n.locale] }}</h3>
+    <section id="project_phases" class="py-16 ">
+        <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto" v-if="project.phases" >
 
-                        <p class="px-2 col-start-1 col-end-4 ">
-                            this is number of units
+                <div class="drop-shadow-md" v-for="phase in project.phases" >
+                    <div class="bg-black text-white  p-5">
+                        <h3 class="pb-2 ">{{ phase.name[$i18n.locale] }}</h3>
+
+                        <p>
+                            (x) <span class="text-gray-300 ">{{ $t('doneUnits') }}</span>
                         </p>
                     </div>
-              </div>
+                    <div class="bg-white text-black p-5">
+                        <router-link :to="{name: 'Phase', params: { id: phase.id }}" class="flex justify-end hover:text-dark-brown ltr:hover:after:content-['\2192'] rtl:hover:after:content-['\2190'] hover:after:px-2">{{ $t('seeMore') }}</router-link>
+                    </div>
+                </div>
         </div>
     </section>
+
     <!-- gallery section -->
     <section class="py-12 pb-16">
         <div class="container mx-auto">

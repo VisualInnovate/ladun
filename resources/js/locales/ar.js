@@ -114,5 +114,7 @@ export default {
     projectPhases: "مراحل المشروع",
     summaryAboutTheCompany: "نبذة عن الشركة",
     submit:'حفظ',
-    interst:'ارسل اهتمامك'
+    interst:'ارسل اهتمامك',
+    doneUnits: "وحدة منتهية",
+    seeMore: 'مشاهدة التفاصيل',
 }
