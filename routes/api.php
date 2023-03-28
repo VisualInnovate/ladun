@@ -66,7 +66,9 @@ Route::get('/media-center',function (){
 
 
 Route::post('/uploadCsv',function (Request $request){
-
+    $validated = $request->validate([
+        'file' => 'required|file',
+    ]);
    Excel::import(new \App\Imports\ProjectImport, $request->file );
    return response(['message'=>'success']);
 
