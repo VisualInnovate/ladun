@@ -278,12 +278,6 @@ onBeforeMount(async () => {
                     latest_project[i].classList.add('animate__animated', 'animate__fadeInRight')
 
 
-            } else {
-
-                if (i18n.global.locale.value == 'en')
-                    latest_project[i].classList.remove('animate__animated', 'animate__fadeInLeft')
-                else
-                    latest_project[i].classList.remove('animate__animated', 'animate__fadeInRight')
             }
         }
 
@@ -295,12 +289,6 @@ onBeforeMount(async () => {
                     aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInRight')
 
 
-            } else {
-
-                if (i18n.global.locale.value == 'en')
-                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInLeft')
-                else
-                    aboutLadunHeader.classList.remove('animate__animated', 'animate__fadeInRight')
             }
 
     })
