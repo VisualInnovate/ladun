@@ -211,6 +211,7 @@ const activeTab = ref("");
 const fetchedData = ref([]);
 
 const latestProjects = ref([])
+var flag =1;
 
 const aboutData = ref([])
 onBeforeMount(() => {
@@ -242,7 +243,8 @@ const handleScroll = () => {
     let aboutSection = document.getElementById('aboutSection')
     let footerSection = document.getElementById('footerSection')
 
-    if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)){
+    if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300) && flag){
+        flag=0
         number1.value.restart()
         number2.value.restart()
         number3.value.restart()

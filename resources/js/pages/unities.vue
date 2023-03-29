@@ -13,7 +13,7 @@
     </div>
 <div class="container mx-auto py-10" >
     <div v-for="(unit , key) in units">
-        <h2 class="mb-5">{{ key }}</h2>
+        <h2 class="mb-5">{{ unit[0].type[$i18n.locale]}}</h2>
         <carousel :items-to-show="4">
             <slide v-for="item in unit" :key="unit.id">
                 <div
@@ -21,7 +21,7 @@
                     <img class="w-full rounded-lg"  src="../../img/projects_3.png"
                          alt="Project Photo">
                     <div class="flex flex-col p-2">
-                        <h3 class="ltr:text-start rtl:text-end mb-1">{{$t('superlux')}}</h3>
+                        <h3 class="ltr:text-start rtl:text-end mb-1">{{item.name[$i18n.locale]}}</h3>
                         <div class="text-dark-brown flex rtl:flex-row-reverse">
                             <small > {{ item.price}}</small> <span class="mx-1">
                         {{ $t('SR')}}

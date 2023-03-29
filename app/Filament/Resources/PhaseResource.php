@@ -25,7 +25,7 @@ use Closure;
 
 class PhaseResource extends Resource
 {
-    use Translatable;   
+    use Translatable;
     protected static ?string $model = Phase::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
@@ -33,7 +33,7 @@ class PhaseResource extends Resource
     protected static ?int $NavigationSort = 1;
 
     public $project_id;
-    
+
     public static function form(Form $form): Form
     {
         return $form
@@ -52,7 +52,7 @@ class PhaseResource extends Resource
                 //     $set('units.project_id', $state);
                 // })
                 ,
-                
+
 
                 //=====================
                 // Models of Projects
@@ -62,6 +62,7 @@ class PhaseResource extends Resource
                     ->relationship('units')
                     ->schema([
                         TextInput::make('type')->required(),
+                        TextInput::make('name')->required(),
                         TextInput::make('price')->required(),
                         TextInput::make('area')->required(),
                         TextInput::make('beds')->required(),
@@ -75,7 +76,7 @@ class PhaseResource extends Resource
                         TextInput::make('tenant_id')->required(),
                         // projects
                         // TextInput::make('project_id')->label(__('project'))
-                        
+
                         // ->afterStateHydrated(function(TextInput $component, $state){
                         //     $component->state(function(Closure $get){
                         //         return $get('lat');
@@ -115,14 +116,14 @@ class PhaseResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -131,7 +132,7 @@ class PhaseResource extends Resource
             'edit' => Pages\EditPhase::route('/{record}/edit'),
         ];
     }
-    
+
     public static function getTranslatableLocales(): array
     {
         return ['en', 'ar'];
@@ -155,5 +156,5 @@ class PhaseResource extends Resource
     {
         return 0;
     }
-    
+
 }

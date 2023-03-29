@@ -16,9 +16,10 @@ class Unit extends Model implements HasMedia
 
     protected $guarded = [];
 
-    protected $fillable = 
+    protected $fillable =
     [
         'type',
+        'name',
         'price',
         'area',
         'beds',
@@ -35,7 +36,8 @@ class Unit extends Model implements HasMedia
     ];
 
     public $translatable = [
-        // 'name'
+        'type',
+        'name',
     ];
 
     protected $casts = [
