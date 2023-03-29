@@ -6,9 +6,7 @@
             <img class="w-full" src="../../img/companies-banner.png">
 
             <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
-                <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
-
-                     src="../../img/ladun-logo-banner.png">
+                <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 " src="../../img/ladun-logo-banner.png">
             </div>
 
         </div>
@@ -79,7 +77,7 @@ export default {
         Carousel, Slide, Pagination, Navigation,Navbar,BuildingOffice2Icon,MapPinIcon
     },
     beforeMount() {
-        axios.get("/api/units").then(res =>{
+        axios.get(`/api/units/${this.$route.params.id}`).then(res =>{
             this.units=res.data.units
             console.log(this.units)
         })

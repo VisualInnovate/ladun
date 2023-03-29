@@ -186,7 +186,7 @@
                         </p>
                     </div>
                     <div class="bg-white text-black p-5">
-                        <router-link :to="{name: 'Phase', params: { id: phase.id }}" class="flex justify-end hover:text-dark-brown ltr:hover:after:content-['\2192'] rtl:hover:after:content-['\2190'] hover:after:px-2">{{ $t('seeMore') }}</router-link>
+                        <router-link :to="{name: 'units', params: { id: phase.id }}" class="flex justify-end hover:text-dark-brown ltr:hover:after:content-['\2192'] rtl:hover:after:content-['\2190'] hover:after:px-2">{{ $t('seeMore') }}</router-link>
                     </div>
                 </div>
         </div>

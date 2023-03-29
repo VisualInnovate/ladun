@@ -135,9 +135,9 @@ Route::get('/departments/latest/projects', function(){
     return LatestProjectsResource::collection($departs);
 });
 
-Route::get('/units',function (){
+Route::get('/units/{id}',function ($id){
     return response ([
-        'units'=>\App\Models\Unit::get()->groupBy('type')
+        'units'=>\App\Models\Unit::where('phase_id',$id)->get()->groupBy('type')
     ]);
 
 

@@ -100,7 +100,7 @@ const routes = [
         meta:{title:"High Board"},
     },
     {
-        path: "/units",
+        path: "/units/:id",
         component: () => import("@/pages/unities.vue"),
         name: 'units',
         meta:{title:"units"},
