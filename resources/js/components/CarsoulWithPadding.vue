@@ -1,7 +1,7 @@
 <template>
     <div class="pt-[73px]"></div>
 
-    <Carousel :pictures="pictures" class="h-[calc(60vh-73px)]  [&>div:first-child]:h-[calc(60vh-73px)] [&>div>div>img]:h-[calc(60vh-73px)] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
+    <Carousel :pictures="pictures" class="h-[360px] md:h-[500px] [&>div:first-child]:h-[360px] [&>div>div>img]:h-[360px] [&>div:first-child]:md:h-[500px] [&>div>div>img]:md:h-[500px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
 </template>
 
 <script setup>

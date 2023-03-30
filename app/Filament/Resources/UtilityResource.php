@@ -31,7 +31,9 @@ class UtilityResource extends Resource
                 Fieldset::make('add Utilities')
                 ->schema([
                     TextInput::make('title')->label(__('Utility_title')),
-                    SpatieMediaLibraryFileUpload::make('Utility_image')->collection('utility'),
+                    SpatieMediaLibraryFileUpload::make('Utility_image')
+                    ->hint('max image size 35px * 35px')
+                    ->collection('utility'),
                 ])
                 ->columns(1)
             ]);

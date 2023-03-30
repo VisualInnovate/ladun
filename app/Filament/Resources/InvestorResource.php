@@ -60,7 +60,9 @@ class InvestorResource extends Resource
 
             TextColumn::make('created_at')->label(__('created_at'))->dateTime(),
 
-            SpatieMediaLibraryImageColumn::make('attachments')->label(__('attachments'))->collection('attachments'),
+            SpatieMediaLibraryImageColumn::make('attachments')
+            ->hint('min image size 450px * 640px')
+            ->label(__('attachments'))->collection('attachments'),
 
             ])
             ->filters([

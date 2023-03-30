@@ -38,6 +38,7 @@ class MediaCenterResource extends Resource
                         RichEditor::make('content')->label(__('content')),
 
                         SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))->collection('attachments')
+                            ->hint('min image size 350px * 1520px')
                             ->multiple()
                             ->enableReordering(),
 
