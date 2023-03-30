@@ -24,8 +24,8 @@
                      class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
                     <img class="img-companies w-[120px] h-[120px] rounded-full mb-4 " :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
-                    <h3 class="justify-center font-bold text-[16x] px-2" > {{ company.title[$i18n.locale] }} </h3>
-                    <p class=" px-7 pb-6 pt-3 text-justify"
+                    <h3 class="justify-center font-bold text-[16x] px-2 md:px-5 " > {{ company.title[$i18n.locale] }} </h3>
+                    <p class=" px-2 md:px-5 pb-6 pt-3 text-justify"
                        v-html="company.content[$i18n.locale].slice(0,200)+ '...'"></p>
 
                     <div class="flex content-start flex-row justify-start w-full">
