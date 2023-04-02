@@ -398,58 +398,41 @@
                         <div class="text-dark-brown py-10 px-5 text-sm">
                             {{ $t("pleaseFill") }}
                         </div>
-                        <form class="grid gap-y-10 mx-5">
+                        <form class="grid gap-y-10 mx-5" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                             <div class="flex justify-center gap-x-5">
+                                <input type=hidden name="oid" value="00D3G0000008knU">
+                                <input type=hidden name="retURL" value="https://www.ladun.sa">
+                                <input type="hidden" id="00N3G00000FV0J9" maxlength="255" name="00N3G00000FV0J9" size="20"  />  <!-- Object Of Interest --><!-- This field should not appear to the user and shall be filled automatically -->
                                 <!-- choose your inquiry -->
-                                <dropdown
-                                    text="Bottom"
-                                    class="hover:cursor-pointer rounded-lg [&>div]:w-full w-1/2 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50 dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800 bg-dark-brown"
-                                >
-                                    <template #trigger class="w-full">
-                                        <div
-                                            class="flex justify-between px-4 text-white w-full"
-                                        >
-                                            <div>{{ $t('chooseYourInquiry') }}</div>
-                                            <svg
-                                                class="my-auto w-4 h-4 ltr:ml-14 rtl:mr-14"
-                                                aria-hidden="true"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M19 9l-7 7-7-7"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                    </template>
-                                </dropdown>
                                 <input
                                     type="text"
-                                    id="helper-text"
+                                    id="first_name" maxlength="40" name="first_name"
                                     aria-describedby="helper-text-explanation"
                                     class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('mobile')"
+                                    :placeholder="$t('FirstName')"
+                                />
+                                <input
+                                    type="text"
+                                    id="last_name" maxlength="80" name="last_name"
+                                    aria-describedby="helper-text-explanation"
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    :placeholder="$t('LastName')"
                                 />
                             </div>
                             <div class="flex justify-center gap-x-5">
                                 <input
                                     type="text"
-                                    id="helper-text"
+                                    id="mobile" maxlength="40" name="mobile"
                                     aria-describedby="helper-text-explanation"
                                     class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('fullName')"
+                                    :placeholder="$t('PhoneNumber')"
                                 />
                                 <input
                                     type="email"
-                                    id="helper-text"
+                                    id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
                                     class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('email')"
+                                    :placeholder="$t('Email')"
                                 />
                             </div>
 

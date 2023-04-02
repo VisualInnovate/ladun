@@ -35,21 +35,26 @@
             </div>
         </template>
             <template #body>
-                    <Input size="md" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
-                    <Input size="md" :placeholder="$t('FatherName')" :label="$t('FatherName')"/>
-                    <Input size="md" :placeholder="$t('LastName')" :label="$t('LastName')"/>
-                    <Input size="md" :placeholder="$t('PhoneNumber')" :label="$t('PhoneNumber')"/>
-                    <Input size="md" :placeholder="$t('Email')" :label="$t('Email')"/>
+                <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+                    <input type=hidden name="oid" value="00D3G0000008knU">
+                    <input type=hidden name="retURL" value="https://www.ladun.sa">
+                    <Input size="md" maxlength="40" name="first_name" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
+                    <Input size="md"  maxlength="80" name="last_name" :placeholder="$t('LastName')" :label="$t('LastName')"/>
+
+                    <Input size="md" maxlength="40" name="mobile" :placeholder="$t('PhoneNumber')" :label="$t('PhoneNumber')"/>
+                    <Input size="md" maxlength="80" name="email" :placeholder="$t('Email')" :label="$t('Email')"/>
+
+                    <input type="hidden" id="00N3G00000FV0J9" maxlength="255" name="00N3G00000FV0J9" size="20"  /><br>  <!-- Object Of Interest --><!-- This field should not appear to the user and shall be filled automatically -->
+                    <input type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="submit">
+                </form>
 
 
             </template>
             <template #footer>
                 <div class="flex justify-between">
 
-                    <button @click="closeModal" type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        {{$t('submit')}}
-                    </button>
+
                 </div>
             </template>
     </Modal>
