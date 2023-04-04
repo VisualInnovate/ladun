@@ -38,7 +38,7 @@ class InvestorResource extends Resource
 
                     RichEditor::make('content')->label(__('content')),
 
-                    SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))->collection('attachments')
+                    SpatieMediaLibraryFileUpload::make('attachments')->hint('min image size 450px * 640px')->label(__('attachments'))->collection('attachments')
                     ->multiple()
                     ->enableReordering(),
 
@@ -61,7 +61,7 @@ class InvestorResource extends Resource
             TextColumn::make('created_at')->label(__('created_at'))->dateTime(),
 
             SpatieMediaLibraryImageColumn::make('attachments')
-            ->hint('min image size 450px * 640px')
+
             ->label(__('attachments'))->collection('attachments'),
 
             ])
