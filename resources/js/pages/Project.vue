@@ -63,7 +63,7 @@
     <!-- navigation -->
     <section class="bg-white drop-shadow-md text-sm">
         <div class="container mx-auto">
-            <div class="py-10 w-full lg:w-[60%]">
+            <div class="py-10 w-full lg:w-[66%]">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 mx-auto items-center ">
                     <div class="mx-auto mb-3 md:mb-0 ">
