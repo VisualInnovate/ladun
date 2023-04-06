@@ -177,7 +177,7 @@
         <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto" v-if="project.phases" >
 
-                <div class="drop-shadow-md" v-for="phase in project.phases" >
+                <div class="drop-shadow-md right" v-for="phase in project.phases"  >
                     <div class="bg-black text-white  p-5">
                         <h3 class="pb-2 ">{{ phase.name[$i18n.locale] }}</h3>
 
