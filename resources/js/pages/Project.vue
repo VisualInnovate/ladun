@@ -158,7 +158,7 @@
                     <p class="mb-12 text-lg text-justify" v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                <div class="img-company-info  " id="project_img"
+                <div class="img-company-info  left" id="project_img"
                 >
                     <img class="w-full max-h-[430px]" :src="project.attachment" alt="">
                     <!--     will change  project will added in filament-->
@@ -207,7 +207,7 @@
                         معرض صور المشـــروع
                     </p>
                 </div>
-                <div class="flex flex-row-reverse w-[80%]  " id="carsoul-project">
+                <div class="flex flex-row-reverse w-[80%]  left" id="carsoul-project">
                     <div class="w-[90%]">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
@@ -284,7 +284,7 @@
 
                 </div>
 
-                <div class="">
+                <div class="left">
                     <img src="../../img/video-real-state-management.png">
 
                 </div>
@@ -337,7 +337,7 @@
                     </tabs>
                 </div>
 
-                <div class="img-company-info  ">
+                <div class="img-company-info  left">
                     <Carousel :pictures="getGallery(project.gallery)"
                               class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
@@ -367,7 +367,7 @@
 
                 </div>
 
-                <div class="img-company-info  ">
+                <div class="img-company-info  left">
                     <iframe class="w-full h-[350px]"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
                          style="border:0;" allowfullscreen="" loading="lazy"
@@ -534,6 +534,7 @@ export default {
 
 
             let right = document.getElementsByClassName('right')
+            let left = document.getElementsByClassName('left')
             let utility= document.getElementById('utility')
 
 
@@ -556,6 +557,18 @@ export default {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
                     } else {
                         right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                    }
+
+
+                }
+            }
+            for (let i = 0; i < left.length; i++) {
+                console.log(left[i].offsetTop )
+                if (window.scrollY >= left[i].offsetTop - 710) {
+                    if (this.locale == 'en') {
+                        left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                    } else {
+                        left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
                     }
 
 
