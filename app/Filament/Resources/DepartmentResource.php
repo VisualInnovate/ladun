@@ -43,6 +43,7 @@ class DepartmentResource extends Resource
             ->schema([
                 TextInput::make('title')->label(__('Department title')),
                 SpatieMediaLibraryFileUpload::make('Department image')
+                ->hint('minimum image dimension 400px * 1520px for mid size')
                 ->label(__('Department image'))
                 ->collection('department'),
             ])

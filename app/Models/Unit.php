@@ -30,7 +30,6 @@ class Unit extends Model implements HasMedia
         'delivery_date',
         'construction_code',
         'parking_code',
-        'tenant_id',
         'phase_id',
         'is_published' => 'boolean',
     ];

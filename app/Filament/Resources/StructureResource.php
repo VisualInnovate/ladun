@@ -37,6 +37,7 @@ class StructureResource extends Resource
                         TextInput::make('name')->required(),
                         TextInput::make('position')->required(),
                         FileUpload::make('image')
+                        ->hint('max image size 120px * 120px')
                         ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),

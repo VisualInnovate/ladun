@@ -22,6 +22,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
+use Filament\Forms\Components\DatePicker;
 
 class PhaseResource extends Resource
 {
@@ -70,10 +71,9 @@ class PhaseResource extends Resource
                         TextInput::make('lat')->required(),
                         TextInput::make('location_in_project')->required(),
                         TextInput::make('state')->required(),
-                        TextInput::make('delivery_date')->required(),
+                        DatePicker::make('delivery_date')->required(),
                         TextInput::make('construction_code')->required(),
                         TextInput::make('parking_code')->required(),
-                        TextInput::make('tenant_id')->required(),
                         // projects
                         // TextInput::make('project_id')->label(__('project'))
 

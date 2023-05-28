@@ -61,7 +61,9 @@ class BriefResource extends Resource
                 TextColumn::make('content')->limit(50)->html(),
                 TextColumn::make('created_at')->dateTime(),
 
-            SpatieMediaLibraryImageColumn::make('about')->collection('about'),
+            SpatieMediaLibraryImageColumn::make('about')
+            ->hint('image dimension should not exceed 267px  * 466px')
+            ->collection('about'),
             ])
             ->filters([
                 //
