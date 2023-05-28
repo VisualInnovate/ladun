@@ -63,7 +63,7 @@
     <!-- navigation -->
     <section class="bg-white drop-shadow-md text-sm">
         <div class="container mx-auto">
-            <div class="py-10 w-full lg:w-[60%]">
+            <div class="py-10 w-full lg:w-[60%] ">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 mx-auto items-center ">
                     <div class="mx-auto mb-3 md:mb-0 ">
@@ -175,7 +175,7 @@
     <!-- project phases section -->
     <section id="project_phases" class="py-16 ">
         <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto" v-if="project.phases" >
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases" >
 
                 <div class="drop-shadow-md" v-for="phase in project.phases" >
                     <div class="bg-black text-white  p-5">
@@ -230,7 +230,7 @@
         id="utilities"
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <div class="z-40   container mx-auto ">
+        <div class="z-40   container mx-auto  right">
             <h2 class="mb-5 text-light-brown text-3xl ">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-lg ">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap ">
@@ -393,7 +393,7 @@
             <div
                 class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w-"
             >
-                <div class="flex-auto md:w-1/2">
+                <div class="flex-auto md:w-1/2 right">
                     <div class="bg-black rounded-lg mb-14">
                         <div class="text-dark-brown py-10 px-5 text-sm">
                             {{ $t("pleaseFill") }}
