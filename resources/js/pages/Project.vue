@@ -224,23 +224,26 @@
     <!-- utilities section  will fetch from API-->
     <section
         id="utilities"
-        class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
+        class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center right">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <div class="z-40   container mx-auto  right  ">
-            <h2 class="mb-5 text-light-brown text-3xl ">{{ $t('high_level_utility') }} </h2>
-            <p class="mb-10 text-lg ">{{ $t('high_level_utility_p') }} </p>
-            <div class="flex flex-wrap ">
-                <div
-                    v-if="project.utilities"
-                    v-for="utility in project.utilities" :key="utility.id"
+        <div class="z-40   container mx-auto    ">
+            <div id="utility">
+                <h2 class="mb-5 text-light-brown text-3xl ">{{ $t('high_level_utility') }} </h2>
+                <p class="mb-10 text-lg ">{{ $t('high_level_utility_p') }} </p>
+                <div class="flex flex-wrap ">
+                    <div
+                        v-if="project.utilities"
+                        v-for="utility in project.utilities" :key="utility.id"
 
-                    class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
-                    <div class=" p-7 rounded-full bg-white z-20 mb-2 right">
-                        <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40"
-                             alt="">
+                        class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[90px]">
+                        <div class=" p-7 rounded-full bg-white z-20 mb-2 right">
+                            <img v-if="utility.image" :src="utility.image.original_url" class="w-[35px] h-[35px] z-40"
+                                 alt="">
+                        </div>
+
+                        <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
                     </div>
 
-                    <p class="text-sm">{{ utility.title[$i18n.locale] }} </p>
                 </div>
 
 
@@ -531,10 +534,23 @@ export default {
 
 
             let right = document.getElementsByClassName('right')
+            let utility= document.getElementById('utility')
 
+
+            if (window.scrollY >= utility.offsetTop - 210) {
+
+                if (this.locale == 'en') {
+                    utility.classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                } else {
+                    utility.classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                }
+
+
+            }
 
             // console.log(left.length)
             for (let i = 0; i < right.length; i++) {
+                console.log(right[i].offsetTop )
                 if (window.scrollY >= right[i].offsetTop - 710) {
                     if (this.locale == 'en') {
                         right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
