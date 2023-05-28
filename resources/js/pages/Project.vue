@@ -226,7 +226,7 @@
         id="utilities"
         class="relative bg-real-state-managemnt-utility-section bg-cover  pt-40 pb-16  text-white flex items-center">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <div class="z-40   container mx-auto  right">
+        <div class="z-40   container mx-auto  right  ">
             <h2 class="mb-5 text-light-brown text-3xl ">{{ $t('high_level_utility') }} </h2>
             <p class="mb-10 text-lg ">{{ $t('high_level_utility_p') }} </p>
             <div class="flex flex-wrap ">
