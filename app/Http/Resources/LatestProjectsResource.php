@@ -32,8 +32,8 @@ class LatestProjectsResource extends JsonResource
             $allProjects->push(...ProjectResource::collection(
                 Project::where('region_id', $region->id)->get()
             ));
-              
+
         });
-        return $allProjects->sortByDesc('created_at')->values()->take(4);
+        return $allProjects->sortByDesc('created_at')->values();
     }
 }
