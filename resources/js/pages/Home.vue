@@ -52,7 +52,7 @@
 
         </div>
         <div
-            class="[&>div>div>ul]:justify-center [&>div>div>ul>li]:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
+            class="[&>div>div>ul]:justify-center  [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab
@@ -61,7 +61,7 @@
                     :title="department.title[$i18n.locale]"
 
                 >
-                    <carousel :items-to-show="4"  :autoplay="2000">
+                    <carousel :items-to-show="4"  :autoplay="2000" :wrap-around="true">
 
 
                         <slide v-for="project in department.latest" :key="project.id">
