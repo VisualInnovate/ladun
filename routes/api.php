@@ -100,7 +100,7 @@ Route::group(['prefix' => 'projects'], function () {
     // latest 4 projects
     Route::get('/latest',function (){
         $latest = Project::orderBy('created_at', 'DESC')
-        ->take(4)
+
         ->get();
         return ProjectResource::collection($latest);
     });

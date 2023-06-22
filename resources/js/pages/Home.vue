@@ -1,6 +1,7 @@
 <template>
     <!-- header section -->
-    <Navbar class="fixed z-30 w-full animate__animated animate__backInDown animate__slow" :class="{ 'bg-black': !view.topOfPage}"/>
+    <Navbar class="fixed z-30 w-full animate__animated animate__backInDown animate__slow"
+            :class="{ 'bg-black': !view.topOfPage}"/>
     <header class="relative flex h-screen overflow-hidden">
         <div
             class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
@@ -19,7 +20,8 @@
         </video>
 
 
-        <div class="animate__animated animate__fadeInUp animate__slow z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
+        <div
+            class="animate__animated animate__fadeInUp animate__slow z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
             <button
                 class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2"
             >
@@ -59,54 +61,69 @@
                     :title="department.title[$i18n.locale]"
 
                 >
-                    <div class="grid grid-cols-1 gap-5 md:gap-10 md:grid-cols-3 lg:grid-cols-4 mx-auto container px-5">
-                        <div v-for="project in department.latest"
-                             class="rounded-lg border-2 border-gray-border-light bg-white latest_project">
-                            <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
-                                 alt="Project Photo">
-                            <div class="flex flex-col p-2">
-                                <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
-                                <div class="text-dark-brown flex">
-                                    <MapPinIcon class="h-4 w-4" />  <small v-if="project.location"> {{ project.location.address[$i18n.locale] }}</small>
+                    <carousel :items-to-show="4"  :autoplay="2000">
+
+
+                        <slide v-for="project in department.latest" :key="project.id">
+                            <div
+                                class="rounded-lg border-2 border-gray-border-light bg-white latest_project w-[400px]">
+                                <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
+                                     alt="Project Photo">
+                                <div class="flex flex-col p-2">
+                                    <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
+                                    <div class="text-dark-brown flex">
+                                        <MapPinIcon class="h-4 w-4"/>
+                                        <small v-if="project.location"> {{
+                                                project.location.address[$i18n.locale]
+                                            }}</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="px-2 text-grey text-xs"
-                               v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                            <div class="flex justify-center my-4 mx-2">
-                                <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
-                                        @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                                    <small class="text-center">
-                                        <MagnifyingGlassIcon
-                                            class="inline-block h-4 w-4  justify-end"/>
-                                        {{ $t('exploreProject') }}
-                                    </small>
-                                </button>
+                                <p class="px-2 text-grey text-xs"
+                                   v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
+                                <div class="flex justify-center my-4 mx-2">
+                                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
+                                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
+                                        <small class="text-center">
+                                            <MagnifyingGlassIcon
+                                                class="inline-block h-4 w-4  justify-end"/>
+                                            {{ $t('exploreProject') }}
+                                        </small>
+                                    </button>
+                                </div>
+
+                                <div class="flex flex-wrap m-2">
+                                    <div>
+                                        <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                        <small class="whitespace-nowrap text-gray-500">{{
+                                                $t('residentialLandPlots')
+                                            }}</small>
+                                    </div>
+                                    <div>
+                                        <BuildingOffice2Icon
+                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                        <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
+                                            {{ $t('areaUnit') }}</small>
+                                    </div>
+                                    <div>
+                                        <BuildingOffice2Icon
+                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                        <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
+                                            {{ $t('unit') }}</small>
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div class="flex flex-wrap m-2">
-                                <div>
-                                    <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                    <small class="whitespace-nowrap text-gray-500">{{
-                                            $t('residentialLandPlots')
-                                        }}</small>
-                                </div>
-                                <div>
-                                    <BuildingOffice2Icon
-                                        class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                    <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
-                                        {{ $t('areaUnit') }}</small>
-                                </div>
-                                <div>
-                                    <BuildingOffice2Icon
-                                        class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                    <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
-                                        {{ $t('unit') }}</small>
-                                </div>
-                            </div>
+                        </slide>
+<!--                     -->
+                            <template #addons>
+                                <navigation/>
+                                <pagination/>
+                            </template>
 
-                        </div>
-                    </div>
 
+
+                    </carousel>
                 </tab>
             </tabs>
         </div>
@@ -119,7 +136,7 @@
             <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
                 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 "
                 id="aboutLadunHeader"
-                >
+            >
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
@@ -130,27 +147,37 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number1" :from="0" :to="50" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
+                        <number ref="number1" :from="0" :to="50" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                    </strong>
                         <p class="block text-xs">{{ $t('experienceYears') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number2" :from="0" :to="15" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
+                        <number ref="number2" :from="0" :to="15" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                    </strong>
                         <p class="block text-xs">{{ $t('projectsInvestment') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number3" :from="0" :to="11" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
+                        <number ref="number3" :from="0" :to="11" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                    </strong>
                         <p class="block text-xs">{{ $t('affiliate') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number4" :from="0" :to="250" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
+                        <number ref="number4" :from="0" :to="250" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                    </strong>
                         <p class="block text-xs">{{ $t('projectsUnits') }}</p></div>
                 </div>
                 <div class="grid grid-cols-2 justify-center ">
                     <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
-                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+<number ref="number5" :from="0" :to="19673" :delay="3" :duration="3" easing="Power1.easeOut" /></strong>
+                    <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
+                        <number ref="number5" :from="0" :to="19673" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                    </strong>
                         <p class="block text-xs">{{ $t('unitsUnderProcess') }}</p></div>
                 </div>
 
@@ -168,8 +195,7 @@
 
     </section>
 
-<Modal :formShow="isShowModal"/>
-
+    <Modal :formShow="isShowModal"/>
 
 
     <!-- End About Us section -->
@@ -186,10 +212,11 @@ import {MagnifyingGlassIcon, ChevronDownIcon, BuildingOffice2Icon, Bars3Icon} fr
 import {MapPinIcon} from "@heroicons/vue/24/solid";
 import {Tabs, Tab} from "flowbite-vue";
 import i18n from '../plugins/i18n'
-import {Dropdown, ListGroup, ListGroupItem } from 'flowbite-vue'
+import {Dropdown, ListGroup, ListGroupItem} from 'flowbite-vue'
 import axios from 'axios';
 import Modal from '../components/Modal.vue'
-
+import 'vue3-carousel/dist/carousel.css'
+import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel'
 
 
 const isShowModal = ref(false)
@@ -211,7 +238,7 @@ const activeTab = ref("");
 const fetchedData = ref([]);
 
 const latestProjects = ref([])
-var flag =1;
+var flag = 1;
 
 const aboutData = ref([])
 onBeforeMount(() => {
@@ -221,10 +248,12 @@ onBeforeMount(() => {
 function closeModal() {
     isShowModal.value = false
 }
+
 function showModal() {
     isShowModal.value = true
 }
-function getData(){
+
+function getData() {
     axios.get('/api/projects/latest')
         .then((response) => {
             latestProjects.value = response.data.data
@@ -238,13 +267,14 @@ function getData(){
         })
         .catch(error => console.log(error))
 }
+
 getData()
 const handleScroll = () => {
     let aboutSection = document.getElementById('aboutSection')
     let footerSection = document.getElementById('footerSection')
 
-    if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300) && flag){
-        flag=0
+    if (scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300) && flag) {
+        flag = 0
         number1.value.restart()
         number2.value.restart()
         number3.value.restart()
@@ -282,14 +312,14 @@ onBeforeMount(async () => {
         }
 
 
-        if(scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)){
-                if (i18n.global.locale.value == 'en')
-                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInLeft')
-                else
-                    aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInRight')
+        if (scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300)) {
+            if (i18n.global.locale.value == 'en')
+                aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInLeft')
+            else
+                aboutLadunHeader.classList.add('animate__animated', 'animate__fadeInRight')
 
 
-            }
+        }
 
     })
     const response = await axios.get("/api/departments/latest/projects");

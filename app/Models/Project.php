@@ -15,7 +15,7 @@ class Project extends  Model implements HasMedia
     use HasFactory ;
     use InteractsWithMedia;
     use HasTranslations;
-    protected $fillable = 
+    protected $fillable =
     [
         'name',
         'slug',
