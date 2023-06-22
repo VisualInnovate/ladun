@@ -352,6 +352,9 @@ onBeforeMount(async () => {
 </script>
 
 <style scoped>
+*{
+    font-family: sans-serif !important;
+}
 .fadeinoutElement {
     -webkit-animation: fadeinout 4s linear forwards;
     animation: fadeinout 4s linear forwards;
