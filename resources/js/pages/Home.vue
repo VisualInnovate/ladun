@@ -61,66 +61,66 @@
                     :title="department.title[$i18n.locale]"
 
                 >
-                    <carousel :items-to-show="4"  :autoplay="2000" :wrap-around="true">
+                    <carousel v-bind="settings" :autoplay="2000" :wrap-around="true"  :breakpoints="breakpoints">
 
+                            <slide v-for="project in department.latest" :key="project.id">
 
-                        <slide v-for="project in department.latest" :key="project.id">
-                            <div
-                                class="rounded-lg border-2 border-gray-border-light bg-white latest_project w-[400px]">
-                                <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
-                                     alt="Project Photo">
-                                <div class="flex flex-col p-2">
-                                    <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
-                                    <div class="text-dark-brown flex">
-                                        <MapPinIcon class="h-4 w-4"/>
-                                        <small v-if="project.location"> {{
-                                                project.location.address[$i18n.locale]
-                                            }}</small>
+                                <div
+                                    class="rounded-lg border-2 border-gray-border-light bg-white latest_project mx-5">
+                                    <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
+                                         alt="Project Photo">
+                                    <div class="flex flex-col p-2">
+                                        <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
+                                        <div class="text-dark-brown flex">
+                                            <MapPinIcon class="h-4 w-4"/>
+                                            <small v-if="project.location"> {{
+                                                    project.location.address[$i18n.locale]
+                                                }}</small>
+                                        </div>
                                     </div>
+                                    <p class="px-2 text-grey text-xs"
+                                       v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
+                                    <div class="flex justify-center my-4 mx-2">
+                                        <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
+                                                @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
+                                            <small class="text-center">
+                                                <MagnifyingGlassIcon
+                                                    class="inline-block h-4 w-4  justify-end"/>
+                                                {{ $t('exploreProject') }}
+                                            </small>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex flex-wrap m-2">
+                                        <div>
+                                            <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                            <small class="whitespace-nowrap text-gray-500">{{
+                                                    $t('residentialLandPlots')
+                                                }}</small>
+                                        </div>
+                                        <div>
+                                            <BuildingOffice2Icon
+                                                class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                            <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
+                                                {{ $t('areaUnit') }}</small>
+                                        </div>
+                                        <div>
+                                            <BuildingOffice2Icon
+                                                class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                            <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
+                                                {{ $t('unit') }}</small>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <p class="px-2 text-grey text-xs"
-                                   v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
-                                <div class="flex justify-center my-4 mx-2">
-                                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
-                                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                                        <small class="text-center">
-                                            <MagnifyingGlassIcon
-                                                class="inline-block h-4 w-4  justify-end"/>
-                                            {{ $t('exploreProject') }}
-                                        </small>
-                                    </button>
-                                </div>
+                            </slide>
 
-                                <div class="flex flex-wrap m-2">
-                                    <div>
-                                        <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{
-                                                $t('residentialLandPlots')
-                                            }}</small>
-                                    </div>
-                                    <div>
-                                        <BuildingOffice2Icon
-                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
-                                            {{ $t('areaUnit') }}</small>
-                                    </div>
-                                    <div>
-                                        <BuildingOffice2Icon
-                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
-                                            {{ $t('unit') }}</small>
-                                    </div>
-                                </div>
 
-                            </div>
-
-                        </slide>
-<!--                     -->
-                            <template #addons>
-                                <navigation/>
-                                <pagination/>
-                            </template>
-
+                        <!--                     -->
+                        <template #addons>
+                            <navigation/>
+                            <pagination/>
+                        </template>
 
 
                     </carousel>
@@ -236,6 +236,24 @@ const view = ref({
 
 const activeTab = ref("");
 const fetchedData = ref([]);
+
+const settings={
+    itemsToShow: 1,
+    snapAlign: 'center',
+}
+
+const breakpoints= {
+    // 700px and up
+    700: {
+        itemsToShow: 2,
+        snapAlign: 'center',
+    },
+    // 1024 and up
+    1024: {
+        itemsToShow: 4,
+        snapAlign: 'center',
+    },
+}
 
 const latestProjects = ref([])
 var flag = 1;
