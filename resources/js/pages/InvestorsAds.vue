@@ -2,7 +2,7 @@
     <Navbar class="bg-black fixed z-50 w-full" />
     <div class="pt-22">
         <img-banner>
-            <img  src="../../img/investors-page.png">
+            <img class="p-2"  src="../../img/investors-page.png">
             <template #text>{{$t('investor_banner')}}  </template>
 
         </img-banner>

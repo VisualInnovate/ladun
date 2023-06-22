@@ -1,7 +1,7 @@
 <template>
     <div class="bg-light-footer text-grey ">
 
-        <div class="grid grid-cols-1 md:grid-cols-9 mt-10 px-11 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-8 mt-10 px-11 py-12">
             <div class="flex flex-col mx-auto ">
                 <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
                 <div class="inline-flex justify-between">
@@ -58,8 +58,8 @@
                     <small>{{ $t('contactUs') }}</small>
                 </router-link>
             </div>
-            <div class="flex flex-col-reverse justify-between md:h-32 pt-8">
-                <div class="inline-flex">
+            <div class="flex flex-col-reverse justify-between md:h-17 mt-4 text-center pt-2">
+                <div class="flex items-center justify-center">
                     <p>920011560</p>
                     <a href="https://wa.me/920011560" target="_blank">
                         <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6 mx-2" />

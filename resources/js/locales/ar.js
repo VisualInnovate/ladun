@@ -52,7 +52,7 @@ export default {
     location: "الموقع",
     followUs: "تابعنا على منصات التواصل الإجتماعي",
     pleaseFill: "برجاء مليء البيانات التالية لزيادة فرص قبولك",
-    gender: "النوع",
+    gender: "الجنس",
     academicCertification: "المؤهل التعليمي",
     specialization: "مجال التخصص",
     position: "المسمى الوظيفي",
