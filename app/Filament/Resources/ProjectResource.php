@@ -158,6 +158,11 @@ class ProjectResource extends Resource
             TextInput::make('floors_number')->required(),
             CheckboxList::make('utilities')->label(__('utilities'))
             ->relationship('utilities', 'title'),
+            SpatieMediaLibraryFileUpload::make('attachments')
+                ->hint('min image dimension 400px * 707px')
+                ->label(__('attachments'))
+                ->multiple()
+                ->enableReordering(),
         ])
         ->columns(2)
 

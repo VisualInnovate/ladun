@@ -56,7 +56,7 @@ class Project extends  Model implements HasMedia
     }
     public function projectModelsWithUtilities()
     {
-        return $this->hasMany(ProjectModel::class)->with('utilities');
+        return $this->hasMany(ProjectModel::class)->with('utilities','media');
     }
 
     public function location()

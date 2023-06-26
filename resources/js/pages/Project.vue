@@ -303,7 +303,7 @@
 
         <div class="container mx-auto">
 
-            <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
+            <div class="">
 
                 <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class="font-bold text-2xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
@@ -311,39 +311,46 @@
                         <!-- class appends to content DIV for all tabs -->
                         <tab v-for="model in project.project_models" :name="model.title['en']"
                              :title="model.title[$i18n.locale]"
-                             class="text-lg">
-                            <div class="text mb-5">
-                                <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
-                                <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
-                                <p class="mb-3">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
-                                <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
-                            </div>
-                            <div class="flex flex-wrap">
-                                <div
-                                    v-if="model.utilities"
-                                    v-for="utility in model.utilities"
-                                    class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
+                             class="text-lg [&>div]:grid [&>div]:grid-cols-1 [&>div]:gap-12 [&>div]:lg:grid-cols-2 [&>div]:lg:gap-2">
+                            <div>
+                                <div class="text mb-5">
+                                    <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
+                                    <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
+                                    <p class="mb-3">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
+                                    <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
+                                </div>
+                                <div class="flex flex-wrap">
+                                    <div
+                                        v-if="model.utilities"
+                                        v-for="utility in model.utilities"
+                                        class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
-                                    <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
-                                        <img v-if="utility.media[0]" :src="utility.media[0].original_url"
-                                             class="w-[35px] h-[35px] z-40">
-                                        <!--                                            add dinamic img -->
+                                        <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
+                                            <img v-if="utility.media[0]" :src="utility.media[0].original_url"
+                                                 class="w-[35px] h-[35px] z-40">
+                                            <!--                                            add dinamic img -->
+                                        </div>
+
+                                        <p class="text-sm whitespace-nowrap">{{ utility.title[$i18n.locale] }}</p>
+
                                     </div>
 
-                                    <p class="text-sm whitespace-nowrap">{{ utility.title[$i18n.locale] }}</p>
-
                                 </div>
+
                             </div>
+
+                            <div class="  left">
+                                <Carousel :pictures="getGallery(model.media)"
+                                          class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+
+                            </div>
+
                         </tab>
 
                     </tabs>
                 </div>
 
-                <div class="img-company-info  left">
-                    <Carousel :pictures="getGallery(project.gallery)"
-                              class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
-                </div>
             </div>
         </div>
     </section>
