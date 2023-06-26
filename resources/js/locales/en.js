@@ -120,7 +120,8 @@ export default {
     seeMore: "See More",
     SR:" SR ",
     book:"Book Now",
-    superlux:"Super Lux apartment"
+    superlux:"Super Lux apartment",
+    achieve_percentage:"achievement percentage"
 
 
 

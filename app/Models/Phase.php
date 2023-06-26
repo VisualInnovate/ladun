@@ -20,6 +20,7 @@ class Phase extends Model implements HasMedia
         'long',
         'lat',
         'project_id',
+        'achieve_percentage',
         'is_published' => 'boolean',
     ];
 

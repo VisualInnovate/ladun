@@ -43,6 +43,7 @@ class PhaseResource extends Resource
                 TextInput::make('name')->label(__('Phase Name'))->required(),
                 TextInput::make('long')->label(__('Longitude'))->required(),
                 TextInput::make('lat')->label(__('Latitude'))->required(),
+                TextInput::make('achieve_percentage')->label(__('Achieve Percentage'))->required()->numeric(),
                 // projects
                 Select::make('project_id')->label(__('Project'))->required()
                 // ->multiple()

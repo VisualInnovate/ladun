@@ -119,5 +119,6 @@ export default {
     seeMore: 'مشاهدة التفاصيل',
     SR:" ريال سعودي ",
     book:"احجز الان",
-    superlux:"شقة سوبر لوكس"
+    superlux:"شقة سوبر لوكس",
+    achieve_percentage:"نسه الانجاز"
 }

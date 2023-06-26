@@ -181,8 +181,10 @@
                     <div class="bg-black text-white  p-5">
                         <h3 class="pb-2 ">{{ phase.name[$i18n.locale] }}</h3>
                     </div>
-                    <div class="bg-white text-black p-5">
-                        <router-link :to="{name: 'units', params: { id: phase.id }}" class="flex justify-end hover:text-dark-brown ltr:hover:after:content-['\2192'] rtl:hover:after:content-['\2190'] hover:after:px-2">{{ $t('seeMore') }}</router-link>
+                    <div class="bg-white  p-5 text-light-brown">
+                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>
+
+
                     </div>
                 </div>
         </div>
@@ -469,12 +471,13 @@ import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
 import LightFooter from '../components/LightFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
+import { Progress } from 'flowbite-vue'
 import {ref} from "vue";
 import {element} from "tw-elements/dist/src/js/util";
 
 export default {
     components: {
-        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute
+        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute,Progress
     },
     data() {
         return {
