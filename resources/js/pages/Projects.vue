@@ -14,7 +14,7 @@
                 <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10 ">
                     <tab v-for="region in department.regions" :name="region.title['en']"
                          :title="region.title[$i18n.locale]">
-                        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto   [&>div]:lg:h-[532px]  [&>div]:md:h-[625px] [&>div]:h-[573px]">
+                        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto   [&>div]:lg:h-[564px]  [&>div]:md:h-[625px] [&>div]:h-[550px]">
 
                             <div v-for="project in region.projects"
                                  class=" rounded-xl border-2 border-gray-border-light bg-white relative mx-2 "
