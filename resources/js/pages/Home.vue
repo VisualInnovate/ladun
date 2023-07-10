@@ -52,13 +52,14 @@
 
         </div>
         <div
-            class="[&>div>div>ul]:justify-center  [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black ">
+            class="[&>div>div>ul]:justify-center  [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black [&>div>div>ul>li>div]:font-bold">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab
                     v-for="department in fetchedData"
                     :name="department.title['en']"
                     :title="department.title[$i18n.locale]"
+                    class=""
 
                 >
                     <carousel v-bind="settings" :autoplay="2000" :wrap-around="true" :breakpoints="breakpoints">
@@ -78,7 +79,7 @@
                                             }}</small>
                                     </div>
                                 </div>
-                                <p class="px-2 text-grey text-xs"
+                                <p class="px-2 text-grey text-sm"
                                    v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
                                 <div class="flex justify-center my-4 mx-2">
                                     <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"

@@ -28,7 +28,7 @@
                     <p class=" px-2 md:px-5 pb-6 pt-3 text-justify"
                        v-html="company.content[$i18n.locale].slice(0,200)+ '...'"></p>
 
-                    <div class="flex content-start flex-row justify-start w-full">
+                    <div class="flex content-start flex-row justify-center w-full">
                         <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown text-white px-4 py-2 my-5 mb-14 ml-4 rtl:mr-4">{{ $t('visit') }} </a>
                     </div>
                 </div>
