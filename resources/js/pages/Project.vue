@@ -185,7 +185,7 @@
 
 <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
 
-                        <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="#AF9744"
+                        <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="#AF9744" animationDuration="1s"
                                            rounded></CircleProgressBar>
                         <h5 class="pb-2 text-center mt-4">{{ phase.name[$i18n.locale] }}</h5>
 

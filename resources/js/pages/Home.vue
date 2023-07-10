@@ -23,7 +23,10 @@
         <div
             class="animate__animated animate__fadeInUp animate__slow z-20 absolute top-1/2 ltr:right-0 rtl:left-0  translate-y-1/2 ">
             <button
-                class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2"
+                class="bg-dark-brown text-white rounded-2xl  w-72 h-10 ltr:rotate-90 rtl:-rotate-90 origin-top ltr:translate-x-1/2 rtl:-translate-x-1/2" v-scroll-to="{
+                            el: '#form',
+                            offset: -128
+                        }"
             >
                 {{ $t("shareYourInterests") }}
             </button>
@@ -141,8 +144,8 @@
                 {{ $t('aboutLadun') }}
             </h2>
         </div>
-        <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2 mx-auto container px-5">
-            <div>
+        <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2 mx-auto container px-5 ">
+            <div class="right">
                 <p class="px-2 my-auto text-grey text-justify text-xl mb-7" v-if="aboutData.content"
                    v-html="aboutData.content[$i18n.locale]"></p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
@@ -185,14 +188,14 @@
                 </div>
             </div>
 
-            <img class="w-[91%]" src="../../img/about_ladun_image.png" alt="About Ladun">
+            <img class="w-[91%] left" src="../../img/about_ladun_image.png" alt="About Ladun">
         </div>
 
 
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5">
+            class="rounded-2xl border-2 border-yellow-300 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
@@ -321,6 +324,34 @@ onBeforeMount(async () => {
         let latest_project = document.getElementsByClassName('latest_project')
         let latest_project_header = document.getElementById('latest_project_header')
         let aboutLadunHeader = this.document.getElementById('aboutLadunHeader')
+        let right = document.getElementsByClassName('right')
+        let left = document.getElementsByClassName('left')
+
+
+        for (let i = 0; i < right.length; i++) {
+            console.log(right[i].offsetTop )
+            if (window.scrollY >= right[i].offsetTop - 400) {
+                if (this.locale == 'en') {
+                    right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                } else {
+                    right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                }
+
+
+            }
+        }
+        for (let i = 0; i < left.length; i++) {
+            console.log(left[i].offsetTop )
+            if (window.scrollY >= left[i].offsetTop - 400) {
+                if (this.locale == 'en') {
+                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                } else {
+                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                }
+
+
+            }
+        }
 
         for (let i = 0; i < latest_project.length; i++) {
             if (window.scrollY >= latest_project_header.offsetTop - 700) {
