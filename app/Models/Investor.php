@@ -19,4 +19,7 @@ class Investor extends Model implements HasMedia
 
     protected $fillable = ['title','content'];
     public $translatable = ['title','content'];
+    protected $casts=[
+      "created_at"=>'date:Y/m/d'
+    ];
 }

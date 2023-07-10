@@ -8,6 +8,7 @@ import App from "./app.vue";
 import axios from 'axios'
 import VueScrollTo from 'vue-scrollto'
 import VueNumber from "vue-number-animation";
+// import '@/vue3-m-circle-progress-bar/style.css'
 
 import 'animate.css';
 

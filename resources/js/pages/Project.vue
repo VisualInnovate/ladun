@@ -248,16 +248,21 @@
     </section>
 
     <!-- project phases section -->
-    <section id="project_phases" class="py-16 ">
+    <section id="project_phases " class="py-16 ">
         <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases" >
 
-                <div class="drop-shadow-md right" v-for="phase in project.phases"  >
-                    <div class="bg-black text-white  p-5">
-                        <h3 class="pb-2 ">{{ phase.name[$i18n.locale] }}</h3>
-                    </div>
-                    <div class="bg-white  p-5 text-light-brown">
-                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>
+                <div class="drop-shadow-md right bg-white" v-for="phase in project.phases"  >
+
+
+                    <div class="bg-white  p-5 font-bold ">
+
+
+<!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
+
+                        <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="#AF9744" animationDuration="1s"
+                                           rounded></CircleProgressBar>
+                        <h5 class="pb-2 text-center mt-4">{{ phase.name[$i18n.locale] }}</h5>
 
 
                     </div>
@@ -557,9 +562,12 @@ import { Progress } from 'flowbite-vue'
 import {ref} from "vue";
 import {element} from "tw-elements/dist/src/js/util";
 
+
+import { CircleProgressBar } from 'circle-progress.vue';
+
 export default {
     components: {
-        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute,Progress
+        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute,Progress,CircleProgressBar
     },
     data() {
         return {
@@ -667,5 +675,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>

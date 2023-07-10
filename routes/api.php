@@ -48,7 +48,7 @@ Route::get('/financials',function (){
 
 Route::get('/investors',function (){
     return response ([
-        'investors'=>\App\Models\Investor::with('media')->get()
+        'investors'=>\App\Models\Investor::with('media')->orderBy('created_at','ASC')->get()
     ]);
 });
 Route::get('/investors/{id}',function ($id){
