@@ -35,7 +35,7 @@
             </div>
         </template>
             <template #body>
-                <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class="" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D3G0000008knU">
                     <input type=hidden name="retURL" value="http://google.com">

@@ -122,13 +122,13 @@ export default {
     book:"Book Now",
     superlux:"Super Lux apartment",
     achieve_percentage:"achievement percentage",
-    facilities:"facilities",
-    commercial:"commercial",
-    investment:"investment",
-    government:"government",
-    educational:"educational",
-    trade:"trade",
-    gardens:"gardens",
-    mosque:" mosque_numbers"
+    facilities:"facilities and services",
+    commercial:"commercial number",
+    investment:"investment number",
+    government:"government number",
+    educational:"educational number",
+    trade:"trade number",
+    gardens:"gardens number",
+    mosque:" mosque numbers"
 
 }
