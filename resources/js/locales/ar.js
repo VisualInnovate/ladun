@@ -128,6 +128,7 @@ export default {
     educational:"التعليمية",
     trade:"تجارة",
     gardens:"حدائق",
-    mosque:"عدد المساجد"
+    mosque:"عدد المساجد",
+    other:"اخري"
 
 }
