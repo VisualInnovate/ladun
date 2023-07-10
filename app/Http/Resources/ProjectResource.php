@@ -38,6 +38,14 @@ class ProjectResource extends JsonResource
            'models_number' => $this->models_number,
            'project_models' => $this->projectModelsWithUtilities,
            'location' => $this->location,
+            'facilities'=>$this->facilities,
+            'commercial'=>$this->commercial,
+            'investment'=>$this->investment,
+            'government'=>$this->government,
+            'educational'=>$this->educational,
+            'trade'=>$this->trade,
+            'gardens'=>$this->gardens,
+            'mosque'=>$this->mosque,
            'utilities' => $this->utilities->map(function($util){
             return [
                 'id' => $util->id,
