@@ -23,7 +23,7 @@
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
                      class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center  pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
                     <div>
-                        <img class="img-companies  rounded-full mb-4 " :src="company.media[0].original_url"
+                        <img class="img-companies w-[200px] h-[200px] rounded-full mb-4 "  :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
                     </div>
                     <div class="text-center">
