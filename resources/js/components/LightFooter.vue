@@ -1,7 +1,7 @@
 <template>
     <div class="bg-light-footer text-grey ">
 
-        <div class="grid grid-cols-1 md:grid-cols-8 mt-10 px-11 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-8  px-11 py-12">
             <div class="flex flex-col mx-auto ">
                 <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
                 <div class="inline-flex justify-between">

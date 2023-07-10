@@ -19,54 +19,50 @@
 
     <section class="genaral-info bg-white">
         <div class="container mx-auto ">
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
+            <div class="grid grid-cols-1  gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
 
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('areaOfLand') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} m2</p>
-                        </div>
+                        <img  class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png"  >
+                    <div class="my-auto mx-auto text-[14px]">
+                        <p class="text-black ">{{ $t('areaOfLand') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.land_area }} m2</p>
+                    </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg ">{{ $t('Building_Area') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.building_area }} m2</p>
-                        </div>
+                        <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png" >
+                    <div class="my-auto mx-auto text-[14px]">
+                        <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.building_area }} m2</p>
+                    </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[20%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('Floors_Number') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
-                        </div>
+                        <img class="w-[20%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png" >
+                    <div class="my-auto mx-auto text-[14px]">
+                        <p class="text-black ">{{ $t('Floors_Number') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
+                    </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('Units_Number') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
-                        </div>
+                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
+                    <div class="my-auto mx-auto text-[14px]">
+                        <p class="text-black ">{{ $t('Units_Number') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
+                    </div>
                     </div>
                 </div>
 
@@ -74,12 +70,11 @@
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg ">{{ $t('facilities') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
-                        </div>
+                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png" >
+                    <div class="my-auto mx-auto text-[14px]">
+                        <p class="text-black  ">{{ $t('facilities') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
+                    </div>
                     </div>
                 </div>
 
@@ -90,76 +85,71 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg ">{{ $t('commercial') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
+                        <p class="text-black  ">{{ $t('commercial') }}</p>
+                        <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
                         </div>
-                    </div>
+                        </div>
                 </div>
 
                 <div
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('investment') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
-                        </div>
+                class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                   <div class="grid grid-cols-1 md:grid-cols-2">
+                    <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png" >
+                    <div class="my-auto mx-auto text-[14px]">
+                    <p class="text-black ">{{ $t('investment') }}</p>
+                    <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
                     </div>
-                </div>
+                   </div>
+            </div>
 
-                <div
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('government') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
-                        </div>
-                    </div>
-                </div>
+            <div
+            class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+            <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png" >
+            <div class="my-auto mx-auto text-[14px]">
+                <p class="text-black text-center">{{ $t('government') }}</p>
+                <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
+            </div>
+            </div>
+        </div>
 
-                <div
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <diV class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('educational') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
-                        </div>
-                    </diV>
-                </div>
+        <div
+        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+        <diV class="grid grid-cols-1 md:grid-cols-2">
+        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
+        <div class="my-auto mx-auto text-[14px]">
+            <p class="text-black text-center">{{ $t('educational') }}</p>
+            <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
+        </div>
+        </diV>
+    </div>
 
-                <div
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg">{{ $t('gardens') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
-                        </div>
-                    </div>
-                </div>
+    <div
+        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png" >
+        <div class="my-auto mx-auto text-[14px]">
+            <p class="text-black ">{{ $t('gardens') }}</p>
+            <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
+        </div>
+        </div>
+    </div>
 
-                <div
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
-                        <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-lg ">{{ $t('mosque') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
-                        </div>
-                    </div>
-                </div>
+    <div
+        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png" >
+        <div class="my-auto mx-auto text-[14px]">
+            <p class="text-black  ">{{ $t('mosque') }}</p>
+            <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
+        </div>
+        </div>
+    </div>
 
 
             </div>

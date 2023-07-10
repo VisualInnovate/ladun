@@ -121,13 +121,13 @@ export default {
     book:"احجز الان",
     superlux:"شقة سوبر لوكس",
     achieve_percentage:"نسه الانجاز",
-    facilities:"مرافق",
+    facilities:"المرافق والخدمات",
     commercial:"تجاري",
     investment:"استثمار",
-    government:"الحكومة",
-    educational:"التعليمية",
-    trade:"تجارة",
-    gardens:"حدائق",
+    government:"عدد المرافق الحكوميه",
+    educational:"عدد المرافق التعليمية",
+    trade:"عدد المرافق التجارية",
+    gardens:"عدد حدائق",
     mosque:"عدد المساجد",
     other:"اخري"
 
