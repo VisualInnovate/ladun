@@ -18,18 +18,22 @@
 
     <section class="company py-28 bg-background-section">
         <div class="container mx-auto ">
-            <div class="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1  lg:gap-20 md:gap-32   ">
+            <div class="grid lg:grid-cols-1 ">
                 <div v-for=" company in companies" :key="company.id"
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center flex-col pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
-                    <img class="img-companies w-[120px] h-[120px] rounded-full mb-4 " :src="company.media[0].original_url"
+                     class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light flex content-center  pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
+                    <div>
+                        <img class="img-companies w-[120px] h-[120px] rounded-full mb-4 " :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
-                    <h3 class="justify-center font-bold text-[16x] px-2 md:px-5 " > {{ company.title[$i18n.locale] }} </h3>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="justify-center font-bold text-[16x] px-2 md:px-5 " > {{ company.title[$i18n.locale] }} </h3>
                     <p class=" px-2 md:px-5 pb-6 pt-3 text-justify"
-                       v-html="company.content[$i18n.locale].slice(0,200)+ '...'"></p>
+                       v-html="company.content[$i18n.locale]"></p>
 
                     <div class="flex content-start flex-row justify-center w-full">
                         <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown text-white px-4 py-2 my-5 mb-14 ml-4 rtl:mr-4">{{ $t('visit') }} </a>
+                    </div>
                     </div>
                 </div>
 
