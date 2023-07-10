@@ -156,6 +156,15 @@ class ProjectResource extends Resource
             TextInput::make('building_area')->required(),
             TextInput::make('units_number')->required(),
             TextInput::make('floors_number')->required(),
+            TextInput::make('facilities')->required(),
+            TextInput::make('commercial')->required(),
+            TextInput::make('investment')->required(),
+            TextInput::make('government')->required(),
+            TextInput::make('educational')->required(),
+            TextInput::make('trade')->required(),
+            TextInput::make('gardens')->required(),
+            TextInput::make('mosque')->required(),
+
             CheckboxList::make('utilities')->label(__('utilities'))
             ->relationship('utilities', 'title'),
             SpatieMediaLibraryFileUpload::make('attachments')

@@ -30,7 +30,19 @@ class Project extends  Model implements HasMedia
         'units_number',
         'models_number',
         // 'department_id',
-        'region_id'
+        'region_id',
+
+
+        'facilities',
+        'commercial',
+        'investment',
+        'government',
+        'educational',
+        'trade',
+        'gardens',
+        'mosque'
+
+
     ];
     public $translatable = ['name','slug','address','content','Land_area'];
     protected $casts = [
