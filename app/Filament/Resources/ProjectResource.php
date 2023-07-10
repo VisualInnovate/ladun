@@ -216,7 +216,7 @@ class ProjectResource extends Resource
         TextInput::make('city')->required(),
             TextInput::make('address')->required(),
         TextInput::make('Latitude')->required(),
-        TextInput::make('Longitude')->required()
+        TextInput::make('longtude')->required()
     ])
 
     ->collapsed(),

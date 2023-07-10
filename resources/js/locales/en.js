@@ -121,8 +121,14 @@ export default {
     SR:" SR ",
     book:"Book Now",
     superlux:"Super Lux apartment",
-    achieve_percentage:"achievement percentage"
-
-
+    achieve_percentage:"achievement percentage",
+    facilities:"facilities",
+    commercial:"commercial",
+    investment:"investment",
+    government:"government",
+    educational:"educational",
+    trade:"trade",
+    gardens:"gardens",
+    mosque:" mosque_numbers"
 
 }

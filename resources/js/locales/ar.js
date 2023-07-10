@@ -120,5 +120,14 @@ export default {
     SR:" ريال سعودي ",
     book:"احجز الان",
     superlux:"شقة سوبر لوكس",
-    achieve_percentage:"نسه الانجاز"
+    achieve_percentage:"نسه الانجاز",
+    facilities:"مرافق",
+    commercial:"تجاري",
+    investment:"استثمار",
+    government:"الحكومة",
+    educational:"التعليمية",
+    trade:"تجارة",
+    gardens:"حدائق",
+    mosque:"عدد المساجد"
+
 }
