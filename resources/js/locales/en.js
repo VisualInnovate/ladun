@@ -129,6 +129,8 @@ export default {
     educational:"educational number",
     trade:"trade number",
     gardens:"gardens number",
-    mosque:" mosque numbers"
+    mosque:" mosque numbers",
+    other:"Other"
+
 
 }

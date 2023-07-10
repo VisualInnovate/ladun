@@ -70,7 +70,7 @@
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png" >                    
+                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png" >
                     <div class="my-auto mx-auto text-[14px]">
                         <p class="text-black  ">{{ $t('facilities') }}</p>
                         <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
@@ -81,8 +81,9 @@
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                        <div class="grid grid-cols-1 md:grid-cols-2">
-                            <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png" >                    
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
                         <div class="my-auto mx-auto text-[14px]">
                         <p class="text-black  ">{{ $t('commercial') }}</p>
                         <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
@@ -94,14 +95,14 @@
                 class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                 <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                    <div class="grid grid-cols-1 md:grid-cols-2">
-                    <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png" >                
+                    <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png" >
                     <div class="my-auto mx-auto text-[14px]">
                     <p class="text-black ">{{ $t('investment') }}</p>
                     <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
                     </div>
                    </div>
             </div>
-            
+
             <div
             class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
             <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
@@ -150,7 +151,7 @@
         </div>
     </div>
 
-   
+
             </div>
 
         </div>
@@ -272,23 +273,24 @@
     <!-- project phases section -->
     <section id="project_phases " class="py-16 ">
         <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases" >
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases">
 
-                <div class="drop-shadow-md right bg-white" v-for="phase in project.phases"  >
-
-
-                    <div class="bg-white  p-5 font-bold ">
+            <div class=" right " v-for="phase in project.phases">
 
 
-<!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
-
-                        <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="#AF9744" animationDuration="1s"
-                                           rounded></CircleProgressBar>
-                        <h5 class="pb-2 text-center mt-4">{{ phase.name[$i18n.locale] }}</h5>
+                <div class="  p-5 font-bold ">
 
 
-                    </div>
+                    <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
+
+                    <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="#AF9744"
+                                       animationDuration="1s"
+                                       rounded></CircleProgressBar>
+                    <h5 class="pb-2 text-center mt-4">{{ phase.name[$i18n.locale] }}</h5>
+
+
                 </div>
+            </div>
         </div>
     </section>
 
@@ -480,9 +482,9 @@
 
                 <div class="img-company-info  left">
                     <iframe class="w-full h-[350px]"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
-                         style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!--                    map location  langtud and  -->
                 </div>
 
@@ -508,27 +510,56 @@
                         <div class="text-dark-brown py-10 px-5 text-sm">
                             {{ $t("pleaseFill") }}
                         </div>
-                        <form class="grid gap-y-10 mx-5" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                        <form class="grid gap-y-10 mx-5"
+                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                              method="POST">
+                            <div class="flex justify-center gap-x-5">
+                                <select
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+
+                                >
+                                    <option> {{ $t('easternRegion') }}</option>
+                                    <option> {{ $t('middleRegion') }}</option>
+                                    <option> {{ $t('westernRegion') }}</option>
+                                    <option> {{ $t('northernRegion') }}</option>
+
+
+                                </select>
+
+
+                                <select
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                >
+                                    <option> {{ $t('ownership') }}</option>
+                                    <option> {{ $t('rent') }}</option>
+                                    <option> {{ $t('other') }}</option>
+
+
+                                </select>
+                            </div>
                             <div class="flex justify-center gap-x-5">
                                 <input type=hidden name="oid" value="00D3G0000008knU">
                                 <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
-                                <input  id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20" type="hidden"  />  <!-- Object Of Interest --><!-- This field should not appear to the user and shall be filled automatically -->
+                                <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
+                                       type="hidden"/>  <!-- Object Of Interest -->
+                                <!-- This field should not appear to the user and shall be filled automatically -->
                                 <!-- choose your inquiry -->
-                                <input
-                                    type="text"
-                                    id="first_name" maxlength="40" name="first_name"
-                                    aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('FirstName')"
-                                />
-                                <input
-                                    type="text"
-                                    id="last_name" maxlength="80" name="last_name"
-                                    aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('LastName')"
-                                />
-                            </div>
+
+                                    <input
+                                        type="text"
+                                        id="first_name" maxlength="40" name="first_name"
+                                        aria-describedby="helper-text-explanation"
+                                        class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                        :placeholder="$t('FirstName')"
+                                    />
+                                    <input
+                                        type="text"
+                                        id="last_name" maxlength="80" name="last_name"
+                                        aria-describedby="helper-text-explanation"
+                                        class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                        :placeholder="$t('LastName')"
+                                    />
+                                </div>
                             <div class="flex justify-center gap-x-5">
                                 <input
                                     type="text"
@@ -580,16 +611,28 @@ import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
 import LightFooter from '../components/LightFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
-import { Progress } from 'flowbite-vue'
+import {Progress} from 'flowbite-vue'
 import {ref} from "vue";
 import {element} from "tw-elements/dist/src/js/util";
 
 
-import { CircleProgressBar } from 'circle-progress.vue';
+import {CircleProgressBar} from 'circle-progress.vue';
 
 export default {
     components: {
-        Input, Dropdown, LightFooter, MapPinIcon, Navbar, VueCarousel, Carousel, ArrowDownTrayIcon, Tabs, Tab, useRoute,Progress,CircleProgressBar
+        Input,
+        Dropdown,
+        LightFooter,
+        MapPinIcon,
+        Navbar,
+        VueCarousel,
+        Carousel,
+        ArrowDownTrayIcon,
+        Tabs,
+        Tab,
+        useRoute,
+        Progress,
+        CircleProgressBar
     },
     data() {
         return {
@@ -650,15 +693,15 @@ export default {
 
             let right = document.getElementsByClassName('right')
             let left = document.getElementsByClassName('left')
-            let utility= document.getElementById('utility')
+            let utility = document.getElementById('utility')
 
 
             if (window.scrollY >= utility.offsetTop - 210) {
 
                 if (this.locale == 'en') {
-                    utility.classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                    utility.classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                 } else {
-                    utility.classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                    utility.classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
                 }
 
 
@@ -666,24 +709,24 @@ export default {
 
             // console.log(left.length)
             for (let i = 0; i < right.length; i++) {
-                console.log(right[i].offsetTop )
+                console.log(right[i].offsetTop)
                 if (window.scrollY >= right[i].offsetTop - 710) {
                     if (this.locale == 'en') {
-                        right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                        right[i].classList.add('animate__animated', 'animate__fadeInLeft', 'animate__slow')
                     } else {
-                        right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                        right[i].classList.add('animate__animated', 'animate__fadeInRight', 'animate__slow')
                     }
 
 
                 }
             }
             for (let i = 0; i < left.length; i++) {
-                console.log(left[i].offsetTop )
+                console.log(left[i].offsetTop)
                 if (window.scrollY >= left[i].offsetTop - 710) {
                     if (this.locale == 'en') {
-                        left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__zoomIn', 'animate__slow')
                     } else {
-                        left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                        left[i].classList.add('animate__animated', 'animate__zoomIn', 'animate__slow')
                     }
 
 
