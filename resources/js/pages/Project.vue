@@ -25,44 +25,48 @@
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img  class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png"  >
-                    <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black ">{{ $t('areaOfLand') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.land_area }} m2</p>
-                    </div>
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('areaOfLand') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} m2</p>
+                        </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png" >
-                    <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.building_area }} m2</p>
-                    </div>
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.building_area }} m2</p>
+                        </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[20%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png" >
-                    <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black ">{{ $t('Floors_Number') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
-                    </div>
+                        <img class="w-[20%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('Floors_Number') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
+                        </div>
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
-                    <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black ">{{ $t('Units_Number') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
-                    </div>
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('Units_Number') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -70,11 +74,12 @@
                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png" >
-                    <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black  ">{{ $t('facilities') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
-                    </div>
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black  ">{{ $t('facilities') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -85,71 +90,76 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
                         <div class="my-auto mx-auto text-[14px]">
-                        <p class="text-black  ">{{ $t('commercial') }}</p>
-                        <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
+                            <p class="text-black  ">{{ $t('commercial') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
                         </div>
-                        </div>
+                    </div>
                 </div>
 
                 <div
-                class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-                <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                   <div class="grid grid-cols-1 md:grid-cols-2">
-                    <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png" >
-                    <div class="my-auto mx-auto text-[14px]">
-                    <p class="text-black ">{{ $t('investment') }}</p>
-                    <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('investment') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
+                        </div>
                     </div>
-                   </div>
-            </div>
+                </div>
 
-            <div
-            class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-            <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png" >
-            <div class="my-auto mx-auto text-[14px]">
-                <p class="text-black text-center">{{ $t('government') }}</p>
-                <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
-            </div>
-            </div>
-        </div>
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black text-center">{{ $t('government') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div
-        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-        <diV class="grid grid-cols-1 md:grid-cols-2">
-        <img class="w-[35%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
-        <div class="my-auto mx-auto text-[14px]">
-            <p class="text-black text-center">{{ $t('educational') }}</p>
-            <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
-        </div>
-        </diV>
-    </div>
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                    <diV class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black text-center">{{ $t('educational') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
+                        </div>
+                    </diV>
+                </div>
 
-    <div
-        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png" >
-        <div class="my-auto mx-auto text-[14px]">
-            <p class="text-black ">{{ $t('gardens') }}</p>
-            <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
-        </div>
-        </div>
-    </div>
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('gardens') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div
-        class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
-        <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <img class="w-[24%] md:w-[50%] m-auto" src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png" >
-        <div class="my-auto mx-auto text-[14px]">
-            <p class="text-black  ">{{ $t('mosque') }}</p>
-            <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
-        </div>
-        </div>
-    </div>
+                <div
+                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black  ">{{ $t('mosque') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -510,79 +520,86 @@
                         <div class="text-dark-brown py-10 px-5 text-sm">
                             {{ $t("pleaseFill") }}
                         </div>
+                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
+                        <!--                              method="POST"-->
                         <form class="grid gap-y-10 mx-5"
-                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-                              method="POST">
-                            <div class="flex justify-center gap-x-5">
-                                <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
 
-                                >
-                                    <option> {{ $t('easternRegion') }}</option>
-                                    <option> {{ $t('middleRegion') }}</option>
-                                    <option> {{ $t('westernRegion') }}</option>
-                                    <option> {{ $t('northernRegion') }}</option>
-
-
-                                </select>
-
-
-                                <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                >
-                                    <option> {{ $t('ownership') }}</option>
-                                    <option> {{ $t('rent') }}</option>
-                                    <option> {{ $t('other') }}</option>
-
-
-                                </select>
-                            </div>
-                            <div class="flex justify-center gap-x-5">
-                                <input type=hidden name="oid" value="00D3G0000008knU">
-                                <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
-                                <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
-                                       type="hidden"/>  <!-- Object Of Interest -->
-                                <!-- This field should not appear to the user and shall be filled automatically -->
-                                <!-- choose your inquiry -->
-
-                                    <input
-                                        type="text"
-                                        id="first_name" maxlength="40" name="first_name"
-                                        aria-describedby="helper-text-explanation"
-                                        class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                        :placeholder="$t('FirstName')"
-                                    />
-                                    <input
-                                        type="text"
-                                        id="last_name" maxlength="80" name="last_name"
-                                        aria-describedby="helper-text-explanation"
-                                        class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                        :placeholder="$t('LastName')"
-                                    />
-                                </div>
-                            <div class="flex justify-center gap-x-5">
-                                <input
-                                    type="text"
-                                    id="mobile" maxlength="40" name="mobile"
-                                    aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('PhoneNumber')"
-                                />
-                                <input
-                                    type="email"
-                                    id="email" maxlength="80" name="email"
-                                    aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('Email')"
-                                />
-                            </div>
-
-                            <button
-                                type="submit"
-                                class="bg-dark-brown h-10 mb-10 mx-2 text-white"
+                        >
+                        <div class="flex justify-center gap-x-5">
+                            <select
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                v-model="region"
                             >
-                                {{ $t("sendNow") }}
-                            </button>
+                                <option value="Eastern"> {{ $t('easternRegion') }}</option>
+                                <option value="Middle"> {{ $t('middleRegion') }}</option>
+                                <option value="Northern"> {{ $t('westernRegion') }}</option>
+                                <option value="Western"> {{ $t('northernRegion') }}</option>
+
+
+                            </select>
+
+
+                            <select
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                v-model="status"
+                            >
+                                <option value="Buy"> {{ $t('ownership') }}</option>
+                                <option value="Rent"> {{ $t('rent') }}</option>
+                                <option value="Other"> {{ $t('other') }}</option>
+
+
+                            </select>
+                        </div>
+                        <div class="flex justify-center gap-x-5">
+                            <input type=hidden name="oid" value="00D3G0000008knU">
+                            <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
+                            <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
+                                   type="hidden"/>  <!-- Object Of Interest -->
+                            <!-- This field should not appear to the user and shall be filled automatically -->
+                            <!-- choose your inquiry -->
+
+                            <input
+                                type="text"
+                                id="first_name" maxlength="40" name="first_name"
+                                aria-describedby="helper-text-explanation"
+                                v-model="first_name"
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                :placeholder="$t('FirstName')"
+                            />
+                            <input
+                                type="text"
+                                id="last_name" maxlength="80" name="last_name"
+                                aria-describedby="helper-text-explanation"
+                                v-model="last_name"
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                :placeholder="$t('LastName')"
+                            />
+                        </div>
+                        <div class="flex justify-center gap-x-5">
+                            <input
+                                type="text"
+                                id="mobile" maxlength="40" name="mobile"
+                                v-model="mobile"
+                                aria-describedby="helper-text-explanation"
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                :placeholder="$t('PhoneNumber')"
+                            />
+                            <input
+                                type="email"
+                                id="email" maxlength="80" name="email"
+                                aria-describedby="helper-text-explanation"
+                                v-model="email"
+                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                :placeholder="$t('Email')"
+                            />
+                        </div>
+
+                        <button
+                            type="submit" @click="submit"
+                            class="bg-dark-brown h-10 mb-10 mx-2 text-white"
+                        >
+                            {{ $t("sendNow") }}
+                        </button>
                         </form>
                     </div>
                 </div>
@@ -640,7 +657,15 @@ export default {
             URL: '',
             route: '',
             project: {},
-            top: 1
+            top: 1,
+            first_name:"",
+            last_name:"",
+            mobile:"",
+            email:"",
+            region:"Eastern",
+            status:"Buy"
+
+
 
         }
     },
@@ -658,6 +683,25 @@ export default {
             }
 
         },
+        submit() {
+            // alert(this.status)
+            axios.post(`https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`,{
+                "first_name":this.first_name,
+                "last_name":this.last_name,
+                "mobile":this.mobile,
+                "email":this.email,
+                "oid":"00D3G0000008knU",
+                "retURL":"http://google.com",
+                "00N3G00000IEQrA":this.status+"-"+this.region+" Region",
+                "00N3G00000FV0J9":'',
+
+            })
+                .then(res => {
+                    // this.project = Vue.util.extend({}, res.data.data)
+
+                })
+                .catch((error) => console.log(error))
+        }
 
     },
     computed: {
