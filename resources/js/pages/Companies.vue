@@ -5,13 +5,10 @@
         <div class="relative img-banner-slot">
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
             <img class="w-full" src="../../img/companies-banner.png">
-
             <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
                 <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
-
                      src="../../img/ladun-logo-banner.png">
             </div>
-
         </div>
     </div>
 
@@ -28,7 +25,7 @@
                         
                          <!-- <img class="img-companies m-auto rounded-full mb-4" src="http://demo.ladun.sa//storage/57/SWeEzUEcaAIL6kATPyjmpRonsY7Gx7-metaMURheW1hdC5wbmc=-.png" alt="Sunset in the mountains"> -->
                     </div>
-                    <div class="text-center w-[80%]">
+                    <div class="text-center w-full md:w-[80%]">
                         <h3 class="justify-center font-bold text-[16x] px-2 py-2 md:px-5 my-5 " > {{ company.title[$i18n.locale] }} </h3>
                         <p class=" px-2 md:px-5 pb-6 pt-6  text-justify"
                         v-html="company.content[$i18n.locale]"></p>
@@ -38,12 +35,8 @@
                     </div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
-
     </section>
     <LightFooter/>
 </template>
