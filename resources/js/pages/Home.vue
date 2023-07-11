@@ -135,7 +135,7 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class="relative about-section mt-10" id="aboutSection">
+    <section class="relative about-section mt-12" id="aboutSection">
         <div class="flex py-5">
             <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
                 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 "
@@ -195,7 +195,7 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-10 bg-gray-100 w-3/4 h-14 mx-auto text-center font-light py-2 my-5" id="form">
+            class="rounded-2xl border-2 border-yellow-300 mt-12 bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
