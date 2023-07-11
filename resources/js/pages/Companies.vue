@@ -22,15 +22,16 @@
                 <div v-for=" company in companies" :key="company.id"
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
                      class=" hover:border-dark-brown rounded-2xl overflow-hidden border-solid border-2 border-gray-border-light md:flex content-center  pt-5 items-center bg-white mb-12 w-[90%]  md:w-[85%] mx-auto">
-                    <div class="w-[20%]">
-                        <img class="img-companies  rounded-full mb-4 "  :src="company.media[0].original_url"
+                    <div class="w-full md:w-[20%]  m-auto">
+                        <img class="img-companies  rounded-full mb-4 m-auto"  :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
+                         <p class=" px-2 md:px-5 pb-6 pt-6  text-justify"
+                         v-html="company.content[$i18n.locale]"></p>
                          <!-- <img class="img-companies m-auto rounded-full mb-4" src="http://demo.ladun.sa//storage/57/SWeEzUEcaAIL6kATPyjmpRonsY7Gx7-metaMURheW1hdC5wbmc=-.png" alt="Sunset in the mountains"> -->
                     </div>
                     <div class="text-center w-[80%]">
-                        <h3 class="justify-center font-bold text-[16x] px-2 md:px-5 " > {{ company.title[$i18n.locale] }} </h3>
-                    <p class=" px-2 md:px-5 pb-6 pt-6  text-justify"
-                       v-html="company.content[$i18n.locale]"></p>
+                        <h3 class="justify-center font-bold text-[16x] px-2 py-2 md:px-5 my-5 " > {{ company.title[$i18n.locale] }} </h3>
+                   
 
                     <div class="flex content-start flex-row justify-center w-full">
                         <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown text-white px-4 py-2 my-5  ml-4 rtl:mr-4">{{ $t('visit') }} </a>
