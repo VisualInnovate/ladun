@@ -14,16 +14,16 @@
 
             <div class="mx-11 font-bold">{{ $t('ownership') }}</div>
 
-            <list-group-item class="mx-24" @click="showModal">{{ $t('easternRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal">{{ $t('middleRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal">{{ $t('westernRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal">{{ $t('northernRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Buy-Eastern Region')">{{ $t('easternRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Buy-Middle Region')">{{ $t('middleRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Buy-Western Region')">{{ $t('westernRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Buy-Northern Region')">{{ $t('northernRegion') }}</list-group-item>
 
             <div class="mx-11 font-bold">{{ $t('rent') }}</div>
-
-            <list-group-item class="mx-24" @click="showModal">{{ $t('middleRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal">{{ $t('westernRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal">{{ $t('northernRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Buy-Eastern Region')">{{ $t('easternRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Rent-Middle Region')">{{ $t('middleRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Rent-Western Region')">{{ $t('westernRegion') }}</list-group-item>
+            <list-group-item class="mx-24" @click="showModal('Rent-Northern Region')">{{ $t('northernRegion') }}</list-group-item>
 
 
         </list-group>
@@ -39,6 +39,8 @@
 
                     <input type=hidden name="oid" value="00D3G0000008knU">
                     <input type=hidden name="retURL" value="http://google.com">
+                    <input type=hidden name="00N3G00000IEQrA" :value="data">
+                    <input type=hidden name="00N3G00000FV0J9" value="">
                     <Input size="md" maxlength="40" name="first_name" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
                     <Input size="md"  maxlength="80" name="last_name" :placeholder="$t('LastName')" :label="$t('LastName')"/>
 
@@ -68,7 +70,8 @@ import {Input} from 'flowbite-vue'
 export default {
     data() {
         return {
-            isShowModal: false
+            isShowModal: false,
+            data:''
         }
     },
     props: ['formShow'],
@@ -79,8 +82,11 @@ export default {
         closeModal() {
             this.isShowModal = false
         },
-        showModal() {
+        showModal(data) {
             this.isShowModal = true
+            console.log(this.data)
+
+            this.data=data
         }
     },
     mounted() {
