@@ -525,31 +525,7 @@
                         <form class="grid gap-y-10 mx-5"
 
                         >
-                        <div class="flex justify-center gap-x-5">
-                            <select
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                v-model="region"
-                            >
-                                <option value="Eastern"> {{ $t('easternRegion') }}</option>
-                                <option value="Middle"> {{ $t('middleRegion') }}</option>
-                                <option value="Northern"> {{ $t('westernRegion') }}</option>
-                                <option value="Western"> {{ $t('northernRegion') }}</option>
 
-
-                            </select>
-
-
-                            <select
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                v-model="status"
-                            >
-                                <option value="Buy"> {{ $t('ownership') }}</option>
-                                <option value="Rent"> {{ $t('rent') }}</option>
-                                <option value="Other"> {{ $t('other') }}</option>
-
-
-                            </select>
-                        </div>
                         <div class="flex justify-center gap-x-5">
                             <input type=hidden name="oid" value="00D3G0000008knU">
                             <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
@@ -593,7 +569,32 @@
                                 :placeholder="$t('Email')"
                             />
                         </div>
+                            <div class="flex justify-center gap-x-5">
 
+                                <select
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    v-model="status"
+                                >
+                                    <option value="Buy"> {{ $t('ownership') }}</option>
+                                    <option value="Rent"> {{ $t('rent') }}</option>
+                                    <option value="Other"> {{ $t('other') }}</option>
+
+
+                                </select>
+
+                                <select
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    v-model="region"
+                                >
+                                    <option value="Eastern"> {{ $t('easternRegion') }}</option>
+                                    <option value="Middle"> {{ $t('middleRegion') }}</option>
+                                    <option value="Northern"> {{ $t('westernRegion') }}</option>
+                                    <option value="Western"> {{ $t('northernRegion') }}</option>
+
+
+                                </select>
+
+                            </div>
                         <button
                             type="submit" @click="submit"
                             class="bg-dark-brown h-10 mb-10 mx-2 text-white"
