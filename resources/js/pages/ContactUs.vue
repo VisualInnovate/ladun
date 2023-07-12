@@ -42,29 +42,26 @@
 
                     >
                         <div class="flex justify-center gap-x-5">
-                            <select
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                v-model="region"
-                            >
-                                <option value="Eastern"> {{ $t('easternRegion') }}</option>
-                                <option value="Middle"> {{ $t('middleRegion') }}</option>
-                                <option value="Northern"> {{ $t('westernRegion') }}</option>
-                                <option value="Western"> {{ $t('northernRegion') }}</option>
+                            <input
+                            type="text"
+                            id="first_name" maxlength="40" name="first_name"
+                            aria-describedby="helper-text-explanation"
+                            v-model="first_name"
+                            class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                            :placeholder="$t('FirstName')"
+                        />
+                            
+                           
+                            <input
+                            type="text"
+                            id="mobile" maxlength="40" name="mobile"
+                            v-model="mobile"
+                            aria-describedby="helper-text-explanation"
+                            class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                            :placeholder="$t('PhoneNumber')"
+                        />
 
-
-                            </select>
-
-
-                            <select
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                v-model="status"
-                            >
-                                <option value="Buy"> {{ $t('ownership') }}</option>
-                                <option value="Rent"> {{ $t('rent') }}</option>
-                                <option value="Other"> {{ $t('other') }}</option>
-
-
-                            </select>
+                           
                         </div>
                         <div class="flex justify-center gap-x-5">
                             <input type=hidden name="oid" value="00D3G0000008knU">
@@ -75,31 +72,13 @@
                             <!-- choose your inquiry -->
 
                             <input
-                                type="text"
-                                id="first_name" maxlength="40" name="first_name"
-                                aria-describedby="helper-text-explanation"
-                                v-model="first_name"
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                :placeholder="$t('FirstName')"
-                            />
-                            <input
-                                type="text"
-                                id="last_name" maxlength="80" name="last_name"
-                                aria-describedby="helper-text-explanation"
-                                v-model="last_name"
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                :placeholder="$t('LastName')"
-                            />
-                        </div>
-                        <div class="flex justify-center gap-x-5">
-                            <input
-                                type="text"
-                                id="mobile" maxlength="40" name="mobile"
-                                v-model="mobile"
-                                aria-describedby="helper-text-explanation"
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                :placeholder="$t('PhoneNumber')"
-                            />
+                            type="text"
+                            id="last_name" maxlength="80" name="last_name"
+                            aria-describedby="helper-text-explanation"
+                            v-model="last_name"
+                            class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                            :placeholder="$t('LastName')"
+                        />
                             <input
                                 type="email"
                                 id="email" maxlength="80" name="email"
@@ -108,6 +87,32 @@
                                 class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('Email')"
                             />
+                           
+                        </div>
+                        <div class="flex justify-center gap-x-5">
+                            <select
+                            class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                            v-model="region"
+                        >
+                            <option value="Eastern"> {{ $t('easternRegion') }}</option>
+                            <option value="Middle"> {{ $t('middleRegion') }}</option>
+                            <option value="Northern"> {{ $t('westernRegion') }}</option>
+                            <option value="Western"> {{ $t('northernRegion') }}</option>
+
+
+                        </select>
+                            
+                          
+                            <select
+                            class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                            v-model="status"
+                        >
+                            <option value="Buy"> {{ $t('ownership') }}</option>
+                            <option value="Rent"> {{ $t('rent') }}</option>
+                            <option value="Other"> {{ $t('other') }}</option>
+
+
+                        </select>
                         </div>
 
                         <button

@@ -25,7 +25,7 @@ export default {
     unitsUnderProcess: "وحدات سكنية جاري تطويرها",
     projectsRevenue: "مليار ريال سعودي إجمالي قيمة المشاريع",
     choose: "إختر",
-    shareYourInterestWithUs: "سجل إهتمامك معنا وسنقوم بالرد عليك",
+    shareYourInterestWithUs: "سجل اهتمامك معنا وسيتم التواصل معكم قريبا !",
     whoWeAre: "من نحن",
     aboutOurCompany: "عن شركتنا",
     mediaCenter: "المركز الإعلامي",
@@ -129,6 +129,6 @@ export default {
     trade:"عدد المرافق التجارية",
     gardens:"عدد الحدائق",
     mosque:"عدد الجوامع و المساجد",
-    other:"اخري"
+    other:"اخر"
 
 }
