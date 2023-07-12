@@ -326,8 +326,6 @@ onBeforeMount(async () => {
         let aboutLadunHeader = this.document.getElementById('aboutLadunHeader')
         let right = document.getElementsByClassName('right')
         let left = document.getElementsByClassName('left')
-
-
         for (let i = 0; i < right.length; i++) {
             console.log(right[i].offsetTop )
             if (window.scrollY >= right[i].offsetTop - 700) {
@@ -336,8 +334,6 @@ onBeforeMount(async () => {
                 } else {
                     right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow','animate__delay-2s')
                 }
-
-
             }
         }
         for (let i = 0; i < left.length; i++) {

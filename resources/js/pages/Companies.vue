@@ -45,7 +45,6 @@
 import ImgBanner from '@/components/ImgBanner.vue'
 import Navbar from "../components/Navbar.vue"
 import LightFooter from "../components/LightFooter.vue";
-
 export default {
 
     data() {
