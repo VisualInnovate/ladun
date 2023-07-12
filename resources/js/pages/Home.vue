@@ -330,11 +330,11 @@ onBeforeMount(async () => {
 
         for (let i = 0; i < right.length; i++) {
             console.log(right[i].offsetTop )
-            if (window.scrollY >= right[i].offsetTop - 400) {
+            if (window.scrollY >= right[i].offsetTop - 700) {
                 if (this.locale == 'en') {
-                    right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow')
+                    right[i].classList.add('animate__animated', 'animate__fadeInLeft','animate__slow' ,'animate__delay-2s')
                 } else {
-                    right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow')
+                    right[i].classList.add('animate__animated', 'animate__fadeInRight','animate__slow','animate__delay-2s')
                 }
 
 
@@ -342,11 +342,11 @@ onBeforeMount(async () => {
         }
         for (let i = 0; i < left.length; i++) {
             console.log(left[i].offsetTop )
-            if (window.scrollY >= left[i].offsetTop - 400) {
+            if (window.scrollY >= left[i].offsetTop - 700) {
                 if (this.locale == 'en') {
-                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow','animate__delay-2s')
                 } else {
-                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow')
+                    left[i].classList.add('animate__animated', 'animate__zoomIn','animate__slow','animate__delay-2s')
                 }
 
 
