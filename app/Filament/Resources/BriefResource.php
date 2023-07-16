@@ -43,11 +43,12 @@ class BriefResource extends Resource
 
                     TextInput::make('slug')->label(__('slug'))->disabled(),
 
-                    RichEditor::make('content'),
+                    RichEditor::make('content')->required(),
 
                     SpatieMediaLibraryFileUpload::make('about')->collection('about')
                     ->multiple()
-                    ->enableReordering(),
+                        ->hint('image dimension should not exceed 267px  * 466px')
+                    ->enableReordering()->required(),
             ])
             ]);
     }
@@ -62,7 +63,7 @@ class BriefResource extends Resource
                 TextColumn::make('created_at')->dateTime(),
 
             SpatieMediaLibraryImageColumn::make('about')
-            ->hint('image dimension should not exceed 267px  * 466px')
+
             ->collection('about'),
             ])
             ->filters([
