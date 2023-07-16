@@ -35,12 +35,12 @@ class MediaCenterResource extends Resource
                     ->schema([
                         TextInput::make('title')->label(__('title'))->required(),
 
-                        RichEditor::make('content')->label(__('content')),
+                        RichEditor::make('content')->label(__('content'))->required(),
 
                         SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))->collection('attachments')
                             ->hint('min image size 350px * 1520px')
                             ->multiple()
-                            ->enableReordering(),
+                            ->enableReordering()->required(),
 
 
 
@@ -68,6 +68,8 @@ class MediaCenterResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),

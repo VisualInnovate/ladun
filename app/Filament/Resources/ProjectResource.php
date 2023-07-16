@@ -165,7 +165,7 @@ class ProjectResource extends Resource
                     FileUpload::make('project_attachment')->acceptedFileTypes(['application/pdf'])
                     ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                         return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-                    })->directory('Download-attachments'),
+                    })->directory('Download-attachments')->required(),
                 ])
                 ->columns(2)
 

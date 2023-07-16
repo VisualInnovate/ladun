@@ -14,7 +14,7 @@
                         <template #text> <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div></template>
                         <img
                             class="md:h-full object-cover img-media-center
-                         lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg  w-full md:w-48 rounded-b-lg md:rounded-b-none "
+                         lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg  w-full md:w-48 rounded-b-lg md:rounded-b-none rtl:pl-2 ltr:pr-2"
                             :src="item.media[0].original_url" alt="">
                     </card-link>
 

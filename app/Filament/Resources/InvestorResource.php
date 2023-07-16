@@ -36,11 +36,11 @@ class InvestorResource extends Resource
                 ->schema([
                     TextInput::make('title')->label(__('title'))->required(),
 
-                    RichEditor::make('content')->label(__('content')),
+                    RichEditor::make('content')->label(__('content'))->required(),
 
                     SpatieMediaLibraryFileUpload::make('attachments')->hint('min image size 450px * 640px')->label(__('attachments'))->collection('attachments')
                     ->multiple()
-                    ->enableReordering(),
+                    ->enableReordering()->required(),
 
 
 
@@ -70,6 +70,8 @@ class InvestorResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
