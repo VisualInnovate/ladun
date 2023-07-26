@@ -83,47 +83,36 @@ class ProjectResource extends Resource
                 return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
             }),
 
-            TextInput::make('Land_area')->label(__('Land_area'))->required(),
+            TextInput::make('Land_area')->label(__('Land_area')),
             TextInput::make('building_area')->label(__('building_area'))
-            ->required()
             ->numeric(),
 
             TextInput::make('units_number')->label(__('units_number'))
-            ->required()
             ->numeric(),
 
             TextInput::make('models_number')->label(__('models_number'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('facilities')->label(__('facilities'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('commercial')->label(__('commercial'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('investment')->label(__('investment'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('government')->label(__('government'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('educational')->label(__('educational'))
-            ->required()
             ->numeric(),
 
                  TextInput::make('trade')->label(__('models_number'))
-            ->required()
             ->numeric(),
                  TextInput::make('gardens')->label(__('gardens'))
-            ->required()
             ->numeric(),
                  TextInput::make('mosque')->label(__('mosque'))
-            ->required()
             ->numeric(),
 
             CheckboxList::make('utilities')->label(__('utilities'))
