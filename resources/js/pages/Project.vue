@@ -281,7 +281,7 @@
     </section>
 
     <!-- project phases section -->
-    <section id="project_phases " class="py-16 ">
+    <section id="project_phases " class="py-16 " v-if="project.phases.length">
         <h1 class="container text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases">
 
@@ -413,7 +413,7 @@
     </section>
 
     <!-- project models -->
-    <section class="company-info   py-28 pt-16  bg-background-section " id="project_models">
+    <section class="company-info   py-28 pt-16  bg-background-section " id="project_models" v-if="project.project_models.length">
 
         <div class="container mx-auto">
 
