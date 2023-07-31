@@ -160,28 +160,28 @@
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number2" :from="0" :to="setting.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('projectsInvestment') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number3" :from="0" :to="setting.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number3" :from="0" :to="setting?.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('affiliate') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number4" :from="0" :to="setting.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('projectsUnits') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number5" :from="0" :to="setting.developing_buildings" :delay="3" :duration="3"
+                            <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('unitsUnderProcess') }}</p></div>
