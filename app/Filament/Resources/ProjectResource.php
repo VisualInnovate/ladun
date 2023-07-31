@@ -118,7 +118,7 @@ class ProjectResource extends Resource
             CheckboxList::make('utilities')->label(__('utilities'))
                 ->relationship('utilities', 'title')->columns(3),
 
-            RichEditor::make('content')->label(__('content'))->columns(2),
+            RichEditor::make('content')->columnSpanFull()->label(__('content')),
 
 
             Toggle::make('is_published')->label(trans('is_published')),

@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use PhpOffice\PhpSpreadsheet\Settings;
 
 class BriefSeeder extends Seeder
 {
@@ -32,6 +33,7 @@ class BriefSeeder extends Seeder
             ->setTranslation('title', 'ar', 'من نحن ')
             ->setTranslation('content', 'ar', 'من نحن محتوي');
         $brief->save();
+
 
 
 

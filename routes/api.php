@@ -143,6 +143,11 @@ Route::get('/units/{id}',function ($id){
 
 });
 
+
+Route::get("/settings",function (){
+    return response(["settings"=>\App\Models\setting::all()]);
+});
+
 // pages api
 
 Route::get('/pages/{slug}', function($slug){

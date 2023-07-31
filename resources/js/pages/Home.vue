@@ -82,8 +82,9 @@
                                             }}</small>
                                     </div>
                                 </div>
-                                <p class="px-2 text-grey text-sm"
+                                <p class="px-2 text-grey text-sm text-start"
                                    v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
+
                                 <div class="flex justify-center my-4 mx-2">
                                     <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
                                             @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
@@ -152,35 +153,35 @@
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number1" :from="0" :to="50" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number1" :from="0" :to="setting?.experience" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('experienceYears') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number2" :from="0" :to="15" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number2" :from="0" :to="setting.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('projectsInvestment') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number3" :from="0" :to="11" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number3" :from="0" :to="setting.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('affiliate') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number4" :from="0" :to="250" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number4" :from="0" :to="setting.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('projectsUnits') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto text-center"><strong class="text-xl text-dark-brown">+
-                            <number ref="number5" :from="0" :to="19673" :delay="3" :duration="3"
+                            <number ref="number5" :from="0" :to="setting.developing_buildings" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-xl">{{ $t('unitsUnderProcess') }}</p></div>
@@ -233,6 +234,8 @@ const number2 = ref(null)
 const number3 = ref(null)
 const number4 = ref(null)
 const number5 = ref(null)
+const setting= ref(null)
+
 
 // const i18n = useI18n()
 const view = ref({
@@ -318,6 +321,10 @@ const handleScroll = () => {
 
 onBeforeMount(async () => {
 
+    const res = await axios.get(`/api/settings`);
+    setting.value = res.data.settings[0];
+
+    console.log(setting.value)
 
     window.addEventListener('scroll', function () {
         // animate__animated animate__fadeInUp

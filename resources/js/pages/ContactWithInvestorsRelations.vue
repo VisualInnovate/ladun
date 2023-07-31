@@ -31,14 +31,14 @@
 
                     <div class="flex flex-col">
                         <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
-                            <p class="font-bold inline">{{ $t('phone') }}</p> <span>: 920011560 </span>
-                            <p class="font-bold inline">{{ $t('ext') }}</p><span> : 1555</span>
+                            <p class="font-bold inline">{{ $t('phone') }}</p> <span>: {{settings[0].phone}} </span>
+                            <p class="font-bold inline">{{ $t('ext') }}</p><span> : {{settings[0].convert}}</span>
                         </div>
                         <div class="my-auto">
-                            <p class="font-bold inline">{{ $t('fax') }}</p><span> : 4888567 - 011</span>
+                            <p class="font-bold inline">{{ $t('fax') }}</p><span> : {{settings[0].fax}}</span>
                         </div>
                         <div class="my-auto">
-                            <p class="font-bold inline">{{ $t('email') }}</p><span> : r.alkathami@ladun.sa</span>
+                            <p class="font-bold inline">{{ $t('email') }}</p><span> : {{settings[0].email}}</span>
                         </div>
                     </div>
                 </div>
@@ -55,4 +55,18 @@ import Navbar from "@/components/Navbar.vue";
 import ImgBanner from "@/components/ImgBanner.vue";
 import LightFooter from "../components/LightFooter.vue";
 import DarkLogo from "../../img/ladun_logo_dark.png";
+
+import { ref, onBeforeMount } from "vue";
+import axios from "axios";
+const settings= ref('')
+
+onBeforeMount(async () => {
+
+    const response = await axios.get(`/api/settings`);
+    settings.value = response.data.settings;
+
+    console.log(settings.value)
+
+});
+
 </script>

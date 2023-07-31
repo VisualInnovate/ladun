@@ -43,6 +43,8 @@ class BriefResource extends Resource
 
                     TextInput::make('slug')->label(__('slug'))->disabled(),
 
+                    TextInput::make('video')->label(__('video link')),
+
                     RichEditor::make('content')->required(),
 
                     SpatieMediaLibraryFileUpload::make('about')->collection('about')
@@ -60,6 +62,7 @@ class BriefResource extends Resource
                 TextColumn::make('title')->label('Title'),
                 TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 TextColumn::make('content')->limit(50)->html(),
+                TextColumn::make("video")->label("video link"),
                 TextColumn::make('created_at')->dateTime(),
 
             SpatieMediaLibraryImageColumn::make('about')

@@ -32,7 +32,7 @@
                             <span>{{ $t('call_us') }}</span>
                         </a>
 
-                        <a class="flex text-dark-brown items-center hover:hover:text-red-500 cursor-pointer">
+                        <a :href="about.video" class="flex text-dark-brown items-center hover:hover:text-red-500 cursor-pointer">
                             <!--                            <PlayCircleIcon class="h-16 w-16 rtl:ml-2 ltr:mr-2   "/>-->
                             <img
                                 src="../../img/play-button.png"
