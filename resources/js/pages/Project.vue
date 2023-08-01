@@ -378,7 +378,7 @@
                 <div class="d-info h-full flex flex-col justify-center right">
                     <h1 class=" text-3xl text-light-brown mb-6">{{ $t('Download_Project_Files') }}</h1>
                     <p class="mb-20 text-lg text-justify">
-                        {{ project.downloads_text[$i18n.locale] }}
+                        {{ project?.downloads_text[$i18n.locale] }}
                     </p>
 
                     <div class="company-button ">
@@ -401,7 +401,7 @@
                 </div>
 
                 <div class="left">
-                    <img :src="project.download_image.original_url">
+                    <img :src="project?.download_image?.original_url">
 
                 </div>
 
