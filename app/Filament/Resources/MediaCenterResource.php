@@ -34,7 +34,9 @@ class MediaCenterResource extends Resource
                 Card::make()
                     ->schema([
                         TextInput::make('title')->label(__('title'))->required(),
-
+                        SpatieMediaLibraryFileUpload::make('Download image')
+                            ->hint('max image dimension 150px * 150px')
+                            ->label(__('Main Image'))->collection('download_media_center'),
                         RichEditor::make('content')->label(__('content'))->required(),
 
                         SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))->collection('attachments')
@@ -54,6 +56,7 @@ class MediaCenterResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')->label(__('title')),
+
                 TextColumn::make('content')->label(__('content'))->limit(50)->html(),
 
 

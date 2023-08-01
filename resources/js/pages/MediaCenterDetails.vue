@@ -7,16 +7,33 @@
                 <div class= " lg:w-[30%] w-[100%] mb-10 lg:mb-0">
                     <img v-if="media[0]"
                          class="rounded-xl w-full"
-                         :src="media[0].media[0].original_url" alt="">
+                         :src="media[0].media[1].original_url" alt="">
                 </div>
 
 
                 <div class="lg:w-[70%] w-[100%] ltr:pl-12 rtl:pr-12">
                     <h1 v-if="media[0]" class="font-bold text-dark-brown mb-5">{{ media[0].title[$i18n.locale] }}</h1>
                     <p v-if="media[0]" v-html="media[0].content[$i18n.locale]" class="text-justify text-lg"></p>
+                    <div class="company-button ">
+                        <div class="flex flex-wrap justify-between" v-if="media[0].media[0].original_url">
+
+                                <a :href="`${media[0].media[0].original_url}`" target="_blank"
+                                   class="hover:bg-green-400 hover:cursor-pointer special-button text-xl button bg-dark-brown  rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
+                                    <ArrowDownTrayIcon class="text-white w-6 h-6 rtl:ml-6 ltr:mr-6"/>
+                                    {{ media[0].media[0].name}}
+                                </a>
+
+
+
+                        </div>
+
+
+                    </div>
 
                 </div>
+
             </div>
+
 
 
         </div>
@@ -44,7 +61,7 @@ export default {
             computedData:{}
         }
 
-    }, 
+    },
     methods: {
         getData() {
             axios.post(`/api/media-center/${this.$route.params.id}`).then(res => {
