@@ -45,7 +45,7 @@ class Project extends  Model implements HasMedia
 
 
     ];
-    public $translatable = ['name','slug','address','content','Land_area'];
+    public $translatable = ['name','slug','address','content','Land_area', 'downloads_text'];
     protected $casts = [
         'is_published' => 'boolean',
         'attachment' => 'array',

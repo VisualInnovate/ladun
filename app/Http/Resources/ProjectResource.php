@@ -55,6 +55,11 @@ class ProjectResource extends JsonResource
            }),
            'gallery' => $this->getMedia('default'),
            'logo' => $this->getMedia('projects')->first(),
+           'download_image' => $this->getMedia('download_image')->first(),
+           'downloads_text' => [
+               'en' => $this->getTranslation('downloads_text', 'en'),
+               'ar' => $this->getTranslation('downloads_text', 'ar'),
+           ],
            'attachment' => env('APP_URL').'/storage/'.$this->attachment,
            'downloads' => $this->downloads,
            'phases' => $this->phases,

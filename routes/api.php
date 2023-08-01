@@ -76,7 +76,7 @@ Route::post('/uploadCsv',function (Request $request){
 
 Route::post('/media-center/{id}',function ($id){
     return response ([
-        'mediaCenter'=>\App\Models\MediaCenter::find($id)->with('media')->get()
+        'mediaCenter'=>\App\Models\MediaCenter::where('id', $id)->with('media')->get()
     ]);
 });
 
