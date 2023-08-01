@@ -145,8 +145,12 @@ class ProjectResource extends Resource
             // Downloads field for peoject
             //=======================
 
-            Section::make('Downloads  ')
+            Section::make('Downloads')
             ->schema([
+                TextInput::make('downloads_text')->label(__('content')),
+                SpatieMediaLibraryFileUpload::make('attachment')
+                    ->hint('min image dimension 400px * 707px')
+                    ->label(__('attachments')),
                 Repeater::make('members')
                 ->relationship('downloads')
                 ->schema([
@@ -159,7 +163,7 @@ class ProjectResource extends Resource
                 ->columns(2)
 
             ])
-            ->collapsed(),
+          ,
 
 
     //=====================

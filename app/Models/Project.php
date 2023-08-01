@@ -31,6 +31,7 @@ class Project extends  Model implements HasMedia
         'models_number',
         // 'department_id',
         'region_id',
+        'downloads_text',
 
 
         'facilities',

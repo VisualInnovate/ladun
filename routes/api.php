@@ -93,7 +93,7 @@ Route::get('/join-us',[\App\Http\Controllers\JoinUsController::class,'index']);
 Route::group(['prefix' => 'projects'], function () {
     // projects list
     Route::get('/',function (){
-        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities'])->where('is_published','=',1)->orderBy('id')->get();
+        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities','media'])->where('is_published','=',1)->orderBy('id')->get();
         return ProjectResource::collection($projects);
 
     });
