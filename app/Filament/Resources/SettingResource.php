@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource\RelationManagers;
-use App\Models\Setting;
+use App\Models\setting;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SettingResource extends Resource
 {
-    protected static ?string $model = Setting::class;
+    protected static ?string $model = setting::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -28,7 +28,12 @@ class SettingResource extends Resource
                 TextInput::make('phone')->required(),
                 TextInput::make('fax')->required(),
                 TextInput::make('email')->required(),
-                TextColumn::make('convert')->label(__("convert")),
+                TextInput::make('convert')->label(__("convert")),
+                TextInput::make('experience')->label(__("experience")),
+                TextInput::make('project')->label(__("projects number")),
+                TextInput::make('companies')->label(__("companies number")),
+                TextInput::make('developed_buildings')->label(__("developed buildings")),
+                TextInput::make('developing_buildings')->label(__("developing buildings")),
 
             ]);
     }
@@ -42,6 +47,11 @@ class SettingResource extends Resource
                 TextColumn::make('fax')->label(__("fax")),
                 TextColumn::make('email')->label(__("email")),
                 TextColumn::make('convert')->label(__("convert")),
+                TextColumn::make('experience')->label(__("experience")),
+                TextColumn::make('project')->label(__("projects number")),
+                TextColumn::make('companies')->label(__("companies number")),
+                TextColumn::make('developed_buildings')->label(__("developed buildings")),
+                TextColumn::make('developing_buildings')->label(__("developing buildings")),
 
 
             ])

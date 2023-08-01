@@ -52,9 +52,12 @@
     "Phase": "المرحلة",
     "Phases": "المراحل",
     "Achieve Percentage": "نسبه الانجاز",
-    "phone": "الرقم الهاتف",
     "fax": "الفاكس",
-    "email": "البريد الالكتروني",
     "convert": "التحويله",
-    "video link": "رابط الفيديو"
+    "video link": "رابط الفيديو",
+    "projects number": "عدد المشاريع",
+    "companies number": "عدد الشركات",
+    "developed buildings": "عدد وحدات سكنية تم تطويرها",
+    "developing buildings": "عدد وحدات سكنية قيد التطوير"
+
 }
