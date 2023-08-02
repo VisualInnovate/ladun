@@ -7,7 +7,7 @@
                 <div class= " lg:w-[30%] w-[100%] mb-10 lg:mb-0">
                     <img v-if="media[0]"
                          class="rounded-xl w-full"
-                         :src="media[0].media[1].original_url" alt="">
+                         :src="getpic(media[0]).original_url" alt="">
                 </div>
 
 
@@ -15,12 +15,12 @@
                     <h1 v-if="media[0]" class="font-bold text-dark-brown mb-5">{{ media[0].title[$i18n.locale] }}</h1>
                     <p v-if="media[0]" v-html="media[0].content[$i18n.locale]" class="text-justify text-lg"></p>
                     <div class="company-button ">
-                        <div class="flex flex-wrap justify-between" v-if="media[0].media[0].original_url">
+                        <div class="flex flex-wrap justify-between" v-if="media[0]">
 
-                                <a :href="`${media[0].media[0].original_url}`" target="_blank"
+                                <a :href="`${getFile(media[0]).original_url}`"
                                    class="hover:bg-green-400 hover:cursor-pointer special-button text-xl button bg-dark-brown  rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
                                     <ArrowDownTrayIcon class="text-white w-6 h-6 rtl:ml-6 ltr:mr-6"/>
-                                    {{ media[0].media[0].name}}
+                                    {{ getFile(media[0]).name}}
                                 </a>
 
 
@@ -68,7 +68,13 @@ export default {
                 this.media = res.data.mediaCenter
                 console.log(this.media)
             })
+        },
+         getpic(media) {
+            return media.media[0].collection_name=='attachments'?media.media[0]:media.media[1]
+        },getFile(media) {
+            return media.media[0].collection_name=='attachments'?media.media[1]:media.media[0]
         }
+
     },
     created() {
         this.getData()

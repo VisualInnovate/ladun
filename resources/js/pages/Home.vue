@@ -303,11 +303,11 @@ const handleScroll = () => {
 
     if (scrollY > (footerSection.offsetTop - aboutSection.offsetTop + 300) && flag) {
         flag = 0
-        number1.value.restart()
-        number2.value.restart()
-        number3.value.restart()
-        number4.value.restart()
-        number5.value.restart()
+        // number1.value.restart()
+        // number2.value.restart()
+        // number3.value.restart()
+        // number4.value.restart()
+        // number5.value.restart()
     }
 
     if (window.pageYOffset > 0) {
