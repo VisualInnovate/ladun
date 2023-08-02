@@ -7,7 +7,7 @@
                 <div class= " lg:w-[30%] w-[100%] mb-10 lg:mb-0">
                     <img v-if="media[0]"
                          class="rounded-xl w-full"
-                         :src="getpic(media[0]).original_url" alt="">
+                         :src="getpic(media[0])?.original_url" alt="">
                 </div>
 
 
@@ -17,10 +17,10 @@
                     <div class="company-button ">
                         <div class="flex flex-wrap justify-between" v-if="media[0]">
 
-                                <a :href="`${getFile(media[0]).original_url}`"
+                                <a :href="`${getFile(media[0])?.original_url}`"
                                    class="hover:bg-green-400 hover:cursor-pointer special-button text-xl button bg-dark-brown  rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
                                     <ArrowDownTrayIcon class="text-white w-6 h-6 rtl:ml-6 ltr:mr-6"/>
-                                    {{ getFile(media[0]).name}}
+                                    {{ getFile(media[0])?.name}}
                                 </a>
 
 
