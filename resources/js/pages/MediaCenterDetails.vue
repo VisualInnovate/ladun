@@ -17,7 +17,7 @@
                     <div class="company-button ">
                         <div class="flex flex-wrap justify-between" v-if="media[0]">
 
-                                <a :href="`${getFile(media[0])?.original_url}`"
+                                <a :href="`${getFile(media[0])?.original_url}`" target="_blank"
                                    class="hover:bg-green-400 hover:cursor-pointer special-button text-xl button bg-dark-brown  rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
                                     <ArrowDownTrayIcon class="text-white w-6 h-6 rtl:ml-6 ltr:mr-6"/>
                                     {{ getFile(media[0])?.name}}

@@ -82,7 +82,7 @@
                                             }}</small>
                                     </div>
                                 </div>
-                                <p class="px-2 text-grey text-sm text-start"
+                                <p class="px-2 text-grey text-sm rtl:text-start ltr:text-end"
                                    v-html="project.text[$i18n.locale].slice(0, 200)+' ...'"></p>
 
                                 <div class="flex justify-center my-4 mx-2">

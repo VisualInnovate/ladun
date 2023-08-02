@@ -34,8 +34,7 @@ class MediaCenterResource extends Resource
                 Card::make()
                     ->schema([
                         TextInput::make('title')->label(__('title'))->required(),
-                        SpatieMediaLibraryFileUpload::make('Download image')
-                            ->hint('max image dimension 150px * 150px')
+                        SpatieMediaLibraryFileUpload::make('Download image')->acceptedFileTypes(['application/pdf'])
                             ->label(__('Main Image'))->collection('download_media_center'),
                         RichEditor::make('content')->label(__('content'))->required(),
 
