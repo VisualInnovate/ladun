@@ -1,6 +1,14 @@
 <template>
+    <div class="">
+        <RouterView />
 
-            <RouterView />
+        <a href="" class="fixed ltr:right-14 ltr:bottom-16 z-10 " >
+            <img src="../img/whatsaap.png" class="w-16 h-16 ">
+        </a>
+    </div>
+
+
+
 
 </template>
 
