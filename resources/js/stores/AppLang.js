@@ -3,8 +3,8 @@ import { useStorage } from "@vueuse/core";
 
 export const useAppLangStore = defineStore('appLangStore', {
     state: ()=>({
-        appLang: useStorage('appLang', 'en'),
-        isRtl: useStorage('isRtl', false),
+        appLang: useStorage('appLang', 'ar'),
+        isRtl: useStorage('isRtl', true),
     }),
     getters: {
         getAppLang() {return this.appLang},
@@ -16,7 +16,7 @@ export const useAppLangStore = defineStore('appLangStore', {
         },
         setAppRtl(isRtl) {
             this.isRtl = isRtl
-            isRtl?document.body.dir='rtl':document.body.dir='ltr' 
+            isRtl?document.body.dir='rtl':document.body.dir='ltr'
         }
     }
 })
