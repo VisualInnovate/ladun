@@ -129,6 +129,6 @@ export default {
     trade:"عدد المرافق التجارية",
     gardens:"عدد الحدائق",
     mosque:"عدد الجوامع و المساجد",
-    other:"اخرى"
+    other:"اخرى",
 
 }

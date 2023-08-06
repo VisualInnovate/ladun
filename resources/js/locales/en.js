@@ -130,7 +130,7 @@ export default {
     trade:"trade number",
     gardens:"gardens number",
     mosque:" mosque numbers",
-    other:"Other"
+    other:"Other",
 
 
 }
