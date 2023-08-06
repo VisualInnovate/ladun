@@ -35,7 +35,7 @@ class MediaCenterResource extends Resource
                     ->schema([
                         TextInput::make('title')->label(__('title'))->required(),
                         SpatieMediaLibraryFileUpload::make('Download image')->acceptedFileTypes(['application/pdf'])
-                            ->label(__('Main Image'))->collection('download_media_center'),
+                            ->label(__('pdf'))->collection('download_media_center'),
                         RichEditor::make('content')->label(__('content'))->required(),
 
                         SpatieMediaLibraryFileUpload::make('attachments')->label(__('attachments'))->collection('attachments')

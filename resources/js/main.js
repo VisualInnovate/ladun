@@ -27,5 +27,5 @@ app.use(i18n);
 app.use(VueScrollTo)
 app.use(VueNumber)
 app.config.globalProperties.$axios = { ...axiosInstance }
-document.body.dir='rtl'
+// document.body.dir='rtl'
 app.mount("#app");
