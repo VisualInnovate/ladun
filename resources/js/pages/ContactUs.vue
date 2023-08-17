@@ -13,7 +13,7 @@
 
             <div class="flex-auto md:w-1/2 ">
                 <div class="bg-black rounded-lg mb-14">
-                    <div class="text-dark-brown py-10 px-5 text-sm">
+                    <div class="text-dark-brown py-10 rounded-2xl px-5 text-sm">
                         {{ $t('beInTouch') }}
                     </div>
                     <!--                    <form class="grid gap-y-10 mx-5" @submit.prevent="submit" :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">-->
@@ -50,7 +50,7 @@
                                 class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('FirstName')"
                             />
-                           
+
                             <input
                             type="text"
                             id="mobile" maxlength="40" name="mobile"
@@ -60,7 +60,7 @@
                             :placeholder="$t('PhoneNumber')"
                         />
 
-                           
+
                         </div>
                         <div class="flex justify-center gap-x-5">
                             <input type=hidden name="oid" value="00D3G0000008knU">
@@ -77,7 +77,7 @@
                             class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                             :placeholder="$t('LastName')"
                         />
-                            
+
                             <input
                                 type="email"
                                 id="email" maxlength="80" name="email"
@@ -86,7 +86,7 @@
                                 class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('Email')"
                             />
-                           
+
                         </div>
                         <div class="flex justify-center gap-x-5">
                             <select
@@ -110,14 +110,14 @@
 
 
                             </select>
-                            
-                           
-                           
+
+
+
                         </div>
 
                         <button
                             type="submit" @click="submit"
-                            class="bg-dark-brown h-10 mb-10 mx-2 text-white"
+                            class="bg-dark-brown h-10 mb-10 mx-2 rounded-3xl text-white"
                         >
                             {{ $t("sendNow") }}
                         </button>

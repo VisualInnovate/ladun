@@ -6,9 +6,10 @@
                 <div class="img-company-info flex justify-center  "
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
                      v-if="gallery">
+
                     <Carousel
                         :pictures="gallery"
-                        class="about-us-carousel h-[450px] w-[90%] [&>div:first-child]:h-[450px] [&>div>div>img]:h-[450px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
+                        class="about-us-carousel rounded-3xl h-[450px] w-[90%] [&>div:first-child]:h-[450px] [&>div>div>img]:h-[450px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
                     />
                 </div>
                 <div class="d-info h-full flex flex-col justify-center"
@@ -26,13 +27,13 @@
                     </p>
                     <div
                         class="company-button flex items-center flex-wrap w-full justify-center md:justify-start">
-                        <a class="flex items-center special-button text-2xl button bg-dark-brown hover:bg-green-500 cursor-pointer text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-[200px] ">
+                        <a class="flex items-center special-button text-2xl button rounded-3xl bg-dark-brown hover:bg-[#5d5a2e] cursor-pointer text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-[200px] ">
                             <PhoneIcon
                                 class="h-6 w-6 rtl:ml-2 ltr:mr-2 text-white "/>
                             <span>{{ $t('call_us') }}</span>
                         </a>
 
-                        <a :href="about.video" target="_blank" class="flex text-dark-brown items-center hover:hover:text-red-500 cursor-pointer">
+                        <a v-if="about.video" :href="about.video" target="_blank" class="flex text-dark-brown items-center hover:text-[#5d5a2e] cursor-pointer">
                             <!--                            <PlayCircleIcon class="h-16 w-16 rtl:ml-2 ltr:mr-2   "/>-->
                             <img
                                 src="../../img/play-button.png"

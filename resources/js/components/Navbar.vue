@@ -13,14 +13,14 @@
                     <Bars3Icon v-show="!mobileMenuOpen" class="h-6 w-6 text-white" aria-hidden="true"/>
                 </button>
             </div>
-            <div class="flex">
-                <router-link :to="{ name: 'Home' }" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Ladun</span>
-                    <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 w-[6.5rem]"/>
+            <div class="flex pt-2">
+                <router-link :to="{ name: 'Home' }" class="flex -m-1.5 p-1.5">
+                    <!-- <span class="sr-only">Ladun</span> -->
+                    <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 pt-2 w-[7.5rem]"/>
                 </router-link>
             </div>
 
-            <div class="hidden lg:flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-auto rtl:ml-auto  text-[16px]">
+            <div style="font-family: SuisseIntl-Regular;" class="hidden lg:flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-auto rtl:ml-auto m-auto text-lg">
 
                 <template
                     v-for="item in navigation"
@@ -66,11 +66,11 @@
                 class="fixed top-0 inset-0 z-50 overflow-y-auto px-6 py-6 lg:hidden bg-background-overlay w-1/2 "
             >
                 <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <a href="#" class="-m-1.5 p-1.5 ">
                         <span class="sr-only">Ladun</span>
                         <img
                             aria-hidden="true"
-                            class="h-10"
+                            class="h-10 pt-4"
                             src="../../img/logo.svg"
                             alt=""
                         />

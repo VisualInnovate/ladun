@@ -12,7 +12,7 @@
         >
             <div class="flex-auto md:w-1/2 ">
                 <div class="bg-black rounded-lg mb-14">
-                    <div class="text-dark-brown py-10 px-5 text-sm">
+                    <div class="text-dark-brown py-10 roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
                     <div v-if="success!='' " class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
@@ -41,7 +41,7 @@
                             <div class="text-red-500 " v-if="error.phone">{{error.phone[0]}}</div>
 
                             <select id="countries"  v-model="joinUs.gender"
-                                    class="bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    class="bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected value="choosen">{{ $t('gender') }}</option>
                                 <option value="Male">{{ $t('male') }}</option>
                                 <option value="Female">{{ $t('female') }}</option>
@@ -81,7 +81,7 @@
 
                         </div>
 
-                        <button type="submit" class="bg-dark-brown h-10 mb-10 mx-2 text-white ">{{
+                        <button type="submit" class="bg-dark-brown rounded-3xl h-10 mb-10 mx-2 text-white ">{{
                                 $t('sendNow')
                             }}
                         </button>
