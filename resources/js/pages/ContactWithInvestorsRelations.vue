@@ -31,14 +31,16 @@
 
                     <div class="flex flex-col">
                         <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
-                            <p class="font-bold inline">{{ $t('phone') }}</p> <span>: {{settings[0].phone}} </span>
-                            <p class="font-bold inline">{{ $t('ext') }}</p><span> : {{settings[0].convert}}</span>
+                            <p class="font-bold inline">{{ $t('phone') }}</p> <a class="underline" target="_blank" href="https://wa.me/920011560">: {{settings[0].phone}} </a>
+
+
+                            <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline" :href="settings[0].convert" target="_blank"> : {{settings[0].convert}}</a>
                         </div>
                         <div class="my-auto">
-                            <p class="font-bold inline">{{ $t('fax') }}</p><span> : {{settings[0].fax}}</span>
+                            <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" :href="settings[0].fax" target="_blank"> : {{settings[0].fax}}</a>
                         </div>
                         <div class="my-auto">
-                            <p class="font-bold inline">{{ $t('email') }}</p><span> : {{settings[0].email}}</span>
+                            <p class="font-bold inline">{{ $t('email') }}</p><a class="underline" target="_blank" :href="settings[0].email"> : {{settings[0].email}}</a>
                         </div>
                     </div>
                 </div>

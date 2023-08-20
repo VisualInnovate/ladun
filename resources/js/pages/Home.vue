@@ -65,7 +65,7 @@
                     class=""
 
                 >
-                    <carousel v-bind="settings" :autoplay="2000" :wrap-around="true" :breakpoints="breakpoints">
+                    <carousel v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
                         <slide v-for="project in department.latest" :key="project.id">
 
@@ -85,16 +85,7 @@
                                 <p class="px-2 text-grey text-sm ltr:text-start rtl:text-end"
                                    v-html="project.text[$i18n.locale].slice(0, 200)"></p>
 
-                                <div class="flex justify-center my-4 mx-2">
-                                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
-                                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                                        <small class="text-center">
-                                            <MagnifyingGlassIcon
-                                                class="inline-block h-4 w-4  justify-end"/>
-                                            {{ $t('exploreProject') }}
-                                        </small>
-                                    </button>
-                                </div>
+
 
                                 <div class="flex flex-wrap m-2">
                                     <div>
@@ -116,6 +107,16 @@
                                             {{ $t('unit') }}</small>
                                     </div>
                                 </div>
+                                <div class="flex justify-center my-4 mx-2">
+                                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
+                                            @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
+                                        <small class="text-center">
+                                            <MagnifyingGlassIcon
+                                                class="inline-block h-4 w-4  justify-end"/>
+                                            {{ $t('exploreProject') }}
+                                        </small>
+                                    </button>
+                                </div>
 
                             </div>
                         </slide>
@@ -123,7 +124,12 @@
 
                         <!--                     -->
                         <template #addons>
-                            <navigation/>
+                            <navigation>
+                                <template #next>
+                                    <svg fill="#AF9744" height="34px" width="34px" version="1.1" id="XMLID_287_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve" stroke="#AF9744"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="next"> <g> <polygon points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 "></polygon> </g> </g> </g></svg>                                </template>
+                                <template #prev>
+                                    <svg fill="#AF9744" height="34px" width="34px" version="1.1" id="XMLID_54_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve" stroke="#AF9744"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="previous"> <g> <polygon points="17.2,23.7 5.4,12 17.2,0.3 18.5,1.7 8.4,12 18.5,22.3 "></polygon> </g> </g> </g></svg>                                </template>
+                                </navigation>
                             <pagination/>
                         </template>
 
@@ -260,7 +266,7 @@ const breakpoints = {
     },
     // 1024 and up
     1024: {
-        itemsToShow: 4,
+        itemsToShow: 3,
         snapAlign: 'center',
     },
 }

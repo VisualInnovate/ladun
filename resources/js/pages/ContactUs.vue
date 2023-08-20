@@ -128,17 +128,17 @@
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/location.png"/>
-                        <p class="my-auto">{{ $t('location') }}</p>
+                        <a  href="geo:latitude,longitude" target="_blank" class="underline my-auto">{{ $t('location') }}</a>
                     </div>
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/phone.png"/>
                         <div class="flex flex-col">
                             <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
-                                <p class="font-bold inline">{{ $t('phone') }}</p> <span>: 920011560 </span>
-                                <p class="font-bold inline">{{ $t('ext') }}</p><span> : 1555</span>
+                                <p class="font-bold inline">{{ $t('phone') }}</p> <a  class="underline" target="_blank" href="https://wa.me/920011560">: 920011560 </a>
+                                <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  href="tel:+4888567,1555" target="_blank"> : 1555</a>
                             </div>
                             <div class="my-auto">
-                                <p class="font-bold inline">{{ $t('fax') }}</p><span> : 4888567 - 011</span>
+                                <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" href="tel:+4888567"> : 4888567 - 011</a>
                             </div>
                         </div>
 
@@ -146,7 +146,7 @@
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/email.png"/>
                         <div class="my-auto flex flex-row">
-                            <p class="font-bold">{{ $t('email') }}</p><span> : investor@ladun.com</span>
+                            <p class="font-bold">{{ $t('email') }}</p><a href="investor@ladun.com" class="underline "> : investor@ladun.com</a>
                         </div>
 
                     </div>

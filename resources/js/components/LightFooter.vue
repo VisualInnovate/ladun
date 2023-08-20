@@ -60,8 +60,9 @@
             </div>
             <div class="flex flex-col-reverse justify-between md:h-17 mt-4 text-center pt-2">
                 <div class="flex items-center justify-center">
-                    <p>920011560</p>
-                    <a href="https://wa.me/920011560" target="_blank">
+
+                    <a class="flex" href="https://wa.me/920011560" target="_blank">
+                        <p>920011560</p>
                         <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6 mx-2" />
                     </a>
                 </div>

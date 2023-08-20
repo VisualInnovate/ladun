@@ -4,12 +4,12 @@
         <h1 class="text-center font-bold mb-12 text-3xl">{{ $t('boradOfDirectors') }}</h1>
         <div class="container mx-auto flex justify-center">
             <div
-                class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20" id="header-strucre"
+                class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20" id="header-strucre"
 
             >
                 <template v-for="employee in structure">
                     <div
-                        class="max-w-sm border-2 border-gray-border-light rounded-xl p-2 strucre animate__animated animate__fadeInUp"
+                        class="max-w-sm  rounded-xl p-2 strucre animate__animated animate__fadeInUp"
                     >
                         <div
                             class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"

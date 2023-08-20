@@ -9,11 +9,12 @@
             <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <template v-if="media.length">
-                    <card-link v-for="item in media" :key="item.id" @click="details(item.id)">
+                    <card-link v-for="item in media" :key="item.id" >
                         <!--                    <template #date>{{item.creted_at}}</template>-->
                         <template #head>{{ item.title[$i18n.locale].slice(0, 20) + '...' }}</template>
                         <template #text>
                             <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div>
+                            <div> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown">{{$t('readMore')}} ...</button></div>
                         </template>
                         <img
                             class="md:h-full object-cover img-media-center

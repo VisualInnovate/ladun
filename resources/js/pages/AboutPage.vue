@@ -9,7 +9,7 @@
 
                     <Carousel
                         :pictures="gallery"
-                        class="about-us-carousel rounded-3xl h-[450px] w-[90%] [&>div:first-child]:h-[450px] [&>div>div>img]:h-[450px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
+                        class="about-us-carousel rounded-3xl h-[450px] w-[90%] [&>div:first-child]:h-[450px] [&>div>div>img]:h-[450px] [&>div>div>img]:rounded-3xl [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"
                     />
                 </div>
                 <div class="d-info h-full flex flex-col justify-center"
