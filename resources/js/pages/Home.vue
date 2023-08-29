@@ -75,9 +75,9 @@
                                      alt="Project Photo">
                                 <div class="flex  flex-row-reverse">
                                     
-                                    <div><h3 class=" ">{{ project.title[$i18n.locale] }}</h3></div>
+                                    <div><h3 class=" py-2">{{ project.title[$i18n.locale] }}</h3></div>
                                     
-                                    <div class="text-dark-brown  ">
+                                    <div class="text-dark-brown py-2  ">
                                         <MapPinIcon class="h-6 w-6"/>
                                         <small v-if="project.location"> {{
                                                 project.location.address[$i18n.locale]
