@@ -6,10 +6,7 @@
             <tab v-for="department in fetchedData" :name="department.title['en']"
                  :title="department.title[$i18n.locale]"
                  class="[&>div>div>div>ul]:justify-center [&>div>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>div>ul>li>.border-blue-600]:border-dark-brown">
-                <div class="relative">
-                    <div class="absolute w-full h-full top-0 left-0 bg-background-overlay z-20 "></div>
-                    <img :src="department.mainImage.src" :alt="department.mainImage.alt" class="w-full"/>
-                </div>
+               
                 <!-- regions -->
                 <tabs variant="underline" v-model="regionActiveTab" class="justify-center py-10 ">
                     <tab v-for="region in department.regions" :name="region.title['en']"
@@ -17,10 +14,16 @@
                         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto   [&>div]:lg:h-[574px]  [&>div]:md:h-[635px] [&>div]:h-[560px]">
 
                             <div v-for="project in region.projects"
-                                 class=" rounded-xl border-2 border-gray-border-light bg-white relative mx-2 "
+                                 class=" rounded-xl  bg-white relative mx-2 "
                                  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
-                                <img class="w-20 h-20 rounded-full mx-auto my-3 mb-0" :src="project.logo?.original_url"
-                                     :alt="project.logo?.name">
+                                 <div class=" bottom-0 w-full">
+                                    <Carousel :pictures="getGallery(project.gallery)"
+                                              class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px]  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                                </div>
+                                <div class=" bg-white">
+                                    <img class="absolute top-[10%] w-24 h-24 bg-white rounded-lg mx-auto my-3 mb-0" :src="project.logo?.original_url"
+                                    :alt="project.logo?.name">
+                                </div>
                                 <div class="flex flex-col items-center">
                                     <h3 class="flex-initial p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
                                     <h4 class="flex-initial flex p-2 text-dark-brown">
@@ -44,10 +47,7 @@
                                         :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}
                                     </router-link>
                                 </div>
-                                <div class="absolute bottom-0 w-full">
-                                    <Carousel :pictures="getGallery(project.gallery)"
-                                              class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px]  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
-                                </div>
+                               
                             </div>
                         </div>
                     </tab>

@@ -62,57 +62,65 @@
                     v-for="department in fetchedData"
                     :name="department.title['en']"
                     :title="department.title[$i18n.locale]"
-                    class=""
+                    class="my-2"
 
                 >
-                    <carousel v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
+                    <carousel  v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
-                        <slide v-for="project in department.latest" :key="project.id">
+                        <slide class="" v-for="project in department.latest" :key="project.id">
 
                             <div
-                                class="rounded-lg border-2 border-gray-border-light bg-white latest_project mx-5">
-                                <img class="w-full rounded-lg" v-if="project.attachment" :src="project.attachment"
+                                class="rounded-xlg h-full w-full  bg-white latest_project mx-5">
+                                <img class="w-full rounded-xl" v-if="project.attachment"  :src="project.attachment"
                                      alt="Project Photo">
-                                <div class="flex flex-col p-2">
-                                    <h3 class="flex-initial">{{ project.title[$i18n.locale] }}</h3>
-                                    <div class="text-dark-brown flex">
-                                        <MapPinIcon class="h-4 w-4"/>
+                                <div class="flex  flex-row-reverse">
+                                    
+                                    <div><h3 class=" py-2">{{ project.title[$i18n.locale] }}</h3></div>
+                                    
+                                    <div class="text-dark-brown py-2  ">
+                                        <MapPinIcon class="h-6 w-6"/>
                                         <small v-if="project.location"> {{
                                                 project.location.address[$i18n.locale]
                                             }}</small>
                                     </div>
                                 </div>
-                                <p class="px-2 text-grey text-sm ltr:text-start rtl:text-end"
+                                <div>
+                                    <p class="p-2 text-grey text-sm ltr:text-start rtl:text-end"
                                    v-html="project.text[$i18n.locale].slice(0, 200)"></p>
-
-
-
-                                <div class="flex flex-wrap m-2">
-                                    <div>
-                                        <Bars3Icon class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{
-                                                $t('residentialLandPlots')
-                                            }}</small>
-                                    </div>
-                                    <div>
-                                        <BuildingOffice2Icon
-                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{ project.Land_area }}
-                                            {{ $t('areaUnit') }}</small>
-                                    </div>
-                                    <div>
-                                        <BuildingOffice2Icon
-                                            class="inline-block h-4 w-4 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        <small class="whitespace-nowrap text-gray-500">{{ project.units_number }}
-                                            {{ $t('unit') }}</small>
-                                    </div>
                                 </div>
-                                <div class="flex justify-center my-4 mx-2">
-                                    <button class="bg-dark-brown text-white text-center rounded-2xl w-36 h-8"
+
+
+
+                                <div class=" flex justify-between  ltr:text-start rtl:text-end w-full  ">
+                                    
+                                    <div class="">
+                                        <small class=" text-gray-500 px-2">{{
+                                            $t('residentialLandPlots')
+                                        }}</small>
+                                        <Bars3Icon class="inline-block h-6 w-6 text-light-brown"/>
+                                       
+                                    </div>
+                                    <div >
+                                        <small class="whitespace-nowrap text-gray-500 px-2">{{ project.Land_area }}
+                                            {{ $t('areaUnit') }}</small>
+                                        <BuildingOffice2Icon
+                                            class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                        
+                                    </div>
+                                    <div>
+                                        <small class="whitespace-nowrap text-gray-500 px-2">{{ project.units_number }}
+                                            {{ $t('unit') }}</small>
+                                        <BuildingOffice2Icon
+                                            class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/>
+                                       
+                                    </div>
+                                </div> 
+                                <div class=" ltr:text-end rtl:text-start w-full my-4 mx-2">
+                                    <button class="bg-dark-brown text-white  rounded-2xl w-36 h-8"
                                             @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
-                                        <small class="text-center">
+                                        <small class="">
                                             <MagnifyingGlassIcon
-                                                class="inline-block h-4 w-4  justify-end"/>
+                                                class="inline-block h-6 w-6 "/>
                                             {{ $t('exploreProject') }}
                                         </small>
                                     </button>
@@ -130,7 +138,7 @@
                                 <template #prev>
                                     <svg fill="#AF9744" height="34px" width="34px" version="1.1" id="XMLID_54_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve" stroke="#AF9744"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="previous"> <g> <polygon points="17.2,23.7 5.4,12 17.2,0.3 18.5,1.7 8.4,12 18.5,22.3 "></polygon> </g> </g> </g></svg>                                </template>
                                 </navigation>
-                            <pagination/>
+                            
                         </template>
 
 

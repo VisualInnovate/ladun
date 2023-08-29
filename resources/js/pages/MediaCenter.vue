@@ -2,11 +2,10 @@
     <Navbar class="bg-black fixed z-50 w-full"/>
     <div class="pt-[73px]"></div>
 
-    <Carousel :pictures="pictures"
-              class="h-[calc(60vh-73px)]  [&>div:first-child]:h-[calc(60vh-73px)] [&>div>div>img]:h-[calc(60vh-73px)] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1"></Carousel>
+   
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
-            <h1 class="text-3xl text-center mb-7">المركز الاعلامي</h1>
+            <h1 class="text-4xl text-center mb-7">المركز الاعلامي</h1>
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <template v-if="media.length">
                     <card-link v-for="item in media" :key="item.id" >
@@ -14,7 +13,8 @@
                         <template #head>{{ item.title[$i18n.locale].slice(0, 20) + '...' }}</template>
                         <template #text>
                             <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div>
-                            <div> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown">{{$t('readMore')}} ...</button></div>
+                            <div class="flex flex-row-reverse"> <button @click="details(item.id)" class="w-[100px] bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2">{{$t('readMore')}} ...</button></div>
+                            
                         </template>
                         <img
                             class="md:h-full object-cover img-media-center
