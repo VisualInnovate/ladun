@@ -15,11 +15,12 @@
                 <card-link v-for="investor in investors" :key="investor.id" >
 <!--                    <template #date>الخميس 15 مايو 2022</template>-->
                     <template #head>{{investor.title[$i18n.locale]}}</template>
-
+                    <!--  -->
                     <template #text>
                         <div class="text-sm mb-2">{{investor.created_at}}</div>
                         <div v-html="investor.content[$i18n.locale].slice(0,100)+'...'"></div>
-                        <div> <button @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown">{{$t('readMore')}} ...</button></div>
+                        <div class="flex flex-row-reverse"> <button @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class="w-[100px] p-2 bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2">{{$t('readMore')}} ...</button></div>
+
                     </template>
                     <img
                         class="object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"

@@ -80,7 +80,7 @@ export default {
     boradOfDirectors: "أعضاء مجلس الإدارة",
     project: "المشروع",
     gallary_project: "معرض صور المشـــروع",
-    high_level_utility: "خدمات عاليه المستوي",
+    high_level_utility: "خدمات  المشروع",
     high_level_utility_p:
         "لمزيد من المعلومات يرجى الاتصال على البريد الإلكتروني",
     Download_Project_Files: "حمل ملفات المشروع",
@@ -119,7 +119,7 @@ export default {
     LastName: "اسم العائلة",
     PhoneNumber: "رقم الهاتف",
     Email: "الايميل",
-    projectPhases: "مراحل المشروع",
+    projectPhases: " نسبه انجاز المشروع",
     summaryAboutTheCompany: "نبذة عن الشركة",
     submit: "حفظ",
     interst: "ارسل اهتمامك",
