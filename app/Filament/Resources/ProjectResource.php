@@ -108,13 +108,13 @@ class ProjectResource extends Resource
                  TextInput::make('educational')->label(__('educational'))
             ->numeric(),
 
-                 TextInput::make('trade')->label(__('models_number'))
+                 TextInput::make('trade')->label(__('trade'))
             ->numeric(),
                  TextInput::make('gardens')->label(__('gardens'))
             ->numeric(),
-                 TextInput::make('mosque')->label(__('mosque'))
-            ->numeric(),
-
+                 TextInput::make('mosque')->label(__('mosque'))->numeric() ,
+              TextInput::make('video')->label(__('video'))   ,
+                     TextInput::make('project_video')->label(__('project_video')),
             CheckboxList::make('utilities')->label(__('utilities'))
                 ->relationship('utilities', 'title')->columns(3),
 

@@ -36,6 +36,8 @@
     "building_area" : "مساحة البناء",
     "units_number":"عدد الوحدات" ,
     "models_number": "عدد النموذج",
+    "video": "فيديو المشروع",
+    "project_video": "فيديو360 ",
     "Media Center": "المركز الاعلامي",
     "Department" : "القسم",
     "Region" : "المنطقة",

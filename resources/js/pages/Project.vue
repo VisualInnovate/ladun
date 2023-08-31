@@ -67,7 +67,7 @@
                             {{ $t('projectPhases') }}
                         </a>
                     </div>
-
+  
                     <div class="mx-auto mb-3 md:mb-0 ">
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -97,7 +97,9 @@
                             {{ $t('projectModels') }}
                         </a>
                     </div>
+  
 
+ 
                     <div class="mx-auto mb-3 md:mb-0">
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -445,7 +447,17 @@
             </div>
         </div>
     </section>
-
+    <!-- Video -->
+       <section class="">
+   <div class="container mx-auto">
+      
+           <video width="320" height="240" controls>
+     
+      <source src="{{ project.video }}" type=video/mp4>
+    </video>
+        </div>
+           </section>
+       <!-- end Video -->
     <!-- location -->
     <section class="company-info   py-20 bg-[white]" id="location">
 
