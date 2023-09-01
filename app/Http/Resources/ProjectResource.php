@@ -46,6 +46,8 @@ class ProjectResource extends JsonResource
             'trade'=>$this->trade,
             'gardens'=>$this->gardens,
             'mosque'=>$this->mosque,
+            'video'=>$this->video,
+            'project_video'=>$this->project_video,
            'utilities' => $this->utilities->map(function($util){
             return [
                 'id' => $util->id,

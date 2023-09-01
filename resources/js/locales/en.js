@@ -138,6 +138,8 @@ export default {
     educational: "educational number",
     trade: "trade number",
     gardens: "gardens number",
+    video: "Video 360",
+    project_video: "Project Video",
     mosque: " mosque numbers",
     other: "Other",
     click_search: "click to search",

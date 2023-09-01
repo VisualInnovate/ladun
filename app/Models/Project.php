@@ -41,7 +41,9 @@ class Project extends  Model implements HasMedia
         'educational',
         'trade',
         'gardens',
-        'mosque'
+        'mosque',
+        'project_video',
+        'video',
 
 
     ];
