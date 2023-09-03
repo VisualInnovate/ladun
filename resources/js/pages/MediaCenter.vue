@@ -2,19 +2,18 @@
     <Navbar class="bg-black fixed z-50 w-full"/>
     <div class="pt-[73px]"></div>
 
-   
+
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
-            <h1 class="text-4xl text-center mb-7">المركز الاعلامي</h1>
-            <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
+            <h1 class="text-4xl text-center  mb-10">المركز الاعلامي</h1>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-8">
                 <template v-if="media.length">
                     <card-link v-for="item in media" :key="item.id" >
                         <!--                    <template #date>{{item.creted_at}}</template>-->
                         <template #head>{{ item.title[$i18n.locale].slice(0, 20) + '...' }}</template>
                         <template #text>
                             <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div>
-                            <div class="flex flex-row-reverse"> <button @click="details(item.id)" class="w-[100px] bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2">{{$t('readMore')}} ...</button></div>
-                            
+                            <div class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }} ...</button></div>
                         </template>
                         <img
                             class="md:h-full object-cover img-media-center
@@ -37,7 +36,7 @@ import CardLink from "@/components/CardLink.vue";
 import {Carousel} from "flowbite-vue";
 import Navbar from "../components/Navbar.vue"
 import LightFooter from '../components/LightFooter.vue';
-import {ref, onBeforeMount, onMounted} from "vue";
+import {ref, onBeforeMount, onMounted, computed} from "vue";
 import {useRouter} from 'vue-router'
 
 import axios from "axios";
@@ -66,6 +65,7 @@ const details = (id) => {
 const getpic = (media) => {
     return media.media[0].collection_name=='attachments'?media.media[0].original_url:media.media[1].original_url
 }
+
 
 
 onBeforeMount(() => {

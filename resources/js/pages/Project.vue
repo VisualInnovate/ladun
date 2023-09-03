@@ -4,15 +4,13 @@
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="h-[50vh] md:h-auto w-[100%]" src="../../img/real-state-management-banner.png">
 
-        <div class="z-40 text-white absolute top-40 md:top-60 -translate-y-1/2 text-justify">
-            <div class="flex md:mx-20 mx-5">
-                <img class="animate__animated animate__backInDown max-w-[150px]"
+        <div class="z-40 text-white absolute top-[100%] -translate-y-[100%] right-[3%] -translate-x-[100%] text-justify">
+
+                <img class="animate__animated animate__backInDown max-w-[170px] "
                      id="logo-project"
                      v-if="project.logo"
                      :src="project.logo.original_url">
-                <h2 class="my-auto mx-3 animate__animated animate__backInDown" v-if="project.title">
-                    {{ project.title[$i18n.locale] }}</h2>
-            </div>
+
         </div>
 
     </div>
@@ -22,18 +20,18 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full flex py-4  "
+                <div class=" h-full flex justify-between py-4  "
                 >
-                    <div class=" ltr mx-auto px-4" style="border-right: 2px solid #AF9751;">
+                    <div class="  mx-auto px-4" style="border-right: 2px solid #AF9751;">
                         <p class="text-2xl font-bold truncate">التطوير العقاري</p>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
                             <p class="text-lg">معتمد برقم</p>
                     </div>
-                    <p class="mb-12 text-sm px-2 text-justify " v-if="project.text" v-html="project.text[$i18n.locale]"></p>
+                    <p class=" w-[90%] mb-12 text-sm px-2  text-right " v-if="project.text" v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-                
+
 
 
             </div>
@@ -67,7 +65,7 @@
                             {{ $t('projectPhases') }}
                         </a>
                     </div>
-  
+
                     <div class="mx-auto mb-3 md:mb-0 ">
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -97,9 +95,9 @@
                             {{ $t('projectModels') }}
                         </a>
                     </div>
-  
 
- 
+
+
                     <div class="mx-auto mb-3 md:mb-0">
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -281,12 +279,12 @@
 
 
     <!-- navigation -->
-   
+
 
     <!-- project section -->
        <!-- project phases section -->
     <section id="project_phases " class="py-16 bg-[white]" v-if="project.phases.length">
-        <h1 class="container font-bold text-light-brown mb-6">{{ $t('projectPhases') }}</h1>
+        <h1 class="container font-bold text-light-brown mb-6 mx-auto">{{ $t('projectPhases') }}</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto right" v-if="project.phases">
 
             <div class=" right " v-for="phase in project.phases">
@@ -314,7 +312,7 @@
         <div class="container mx-auto">
             <div class=" ">
                 <div
-                    class="lg:w-[20%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
+                    class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
                     <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
                     <div v-if="$i18n.locale=='en'" class="right">
                         <div class="flex items-center">
@@ -332,7 +330,7 @@
                     <div class="w-[100%] m-auto">
                         <vue-carousel  :items="getGallery(project.gallery)"/>
                     </div>
-                    
+
 
                 </div>
 
@@ -344,8 +342,8 @@
 
     <!-- utilities section  -->
     <!-- utilities section  will fetch from API-->
-    <section class="bg-[white] py-[3%]">
-        <div class="container ">
+    <section class="bg-[white]  py-[3%]">
+        <div class="container  mx-auto">
             <h2 class="text-3xl font-bold text-light-brown ">{{$t("high_level_utility")}}</h2>
             <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-20 gap-5 lg:w-[70%] m-auto py-[3%]">
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
@@ -357,7 +355,7 @@
                     <p class="mx-4 text-2xl"> ارصفة <br>طرق</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M810.946385 398.138063V127.312332L763.491287 0H399.541305l-45.158883 127.567467v345.069997h76.54048v115.065854h0.127568v121.444229c19.262687 4.847564 37.75997 13.394584 54.34374 25.896195l28.957815 21.941605v-43.500507h83.811826c42.862669-15.308096 91.338306-10.715667 130.88422 14.032422V587.703318h78.198857v151.550151l5.485401-4.209727c23.089711-17.476743 50.134014-27.427005 77.816155-29.850787v-117.489637h109.197751V398.138063h-188.79985zM453.629911 76.54048h256.79331l19.517823 52.302661H435.005061L453.629911 76.54048z m-22.834576 319.684071V203.980379h303.61057v192.244172H641.664357v-104.73289h-113.79018v104.73289h-97.078842z m214.951181 284.347883h-131.394491v-30.871327h131.394491v30.871327z m0-63.783733h-131.394491v-29.085383h131.394491v29.085383z m277.459239-105.625862H507.463382V474.550976h415.742373v36.611863zM776.375601 1023.984054a112.004236 112.004236 0 0 1-67.865892-22.707009l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887538 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887537 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-49.496177 37.504835a38.244726 38.244726 0 1 1-46.179422-60.977249l49.496177-37.504835c39.928617-30.23349 95.803167-30.23349 135.604216 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117803 0l37.887538-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887537 28.70268a38.244726 38.244726 0 1 1-46.179422 60.977249l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-37.887537 28.70268a112.259371 112.259371 0 0 1-67.865893 22.707009zM776.375601 878.046872a112.004236 112.004236 0 0 1-67.865892-22.707009l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887538 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887537 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-49.496177 37.504835a38.244726 38.244726 0 1 1-46.179422-60.977249l49.496177-37.504835c39.928617-30.23349 95.6756-30.361057 135.604216 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117803 0l37.887538-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887537 28.70268a38.244726 38.244726 0 1 1-46.179422 60.977249l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-37.887537 28.70268a112.259371 112.259371 0 0 1-67.865893 22.707009zM179.870128 741.294548C80.622639 741.294548 0 660.671909 0 561.42442c0-17.221608 0-69.651837 86.10804-210.231185l93.762088-153.208527 93.762088 153.208527c86.10804 140.706916 86.10804 193.137144 86.10804 210.231185 0 99.247489-80.750206 179.870128-179.870128 179.870128z m0-396.607253l-28.447545 46.434557C83.811826 501.467711 76.54048 547.009297 76.54048 561.42442c0 56.89509 46.30699 103.329648 103.329648 103.329648s103.329648-46.30699 103.329648-103.329648c0-14.415124-7.271346-59.956709-74.882103-170.302568l-28.447545-46.434557zM220.436582 592.16818m-28.319977 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0ZM138.538269 563.97577m-28.319978 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0ZM192.116605 494.834203m-28.319978 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0Z"></path></g></svg> 
+                <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M810.946385 398.138063V127.312332L763.491287 0H399.541305l-45.158883 127.567467v345.069997h76.54048v115.065854h0.127568v121.444229c19.262687 4.847564 37.75997 13.394584 54.34374 25.896195l28.957815 21.941605v-43.500507h83.811826c42.862669-15.308096 91.338306-10.715667 130.88422 14.032422V587.703318h78.198857v151.550151l5.485401-4.209727c23.089711-17.476743 50.134014-27.427005 77.816155-29.850787v-117.489637h109.197751V398.138063h-188.79985zM453.629911 76.54048h256.79331l19.517823 52.302661H435.005061L453.629911 76.54048z m-22.834576 319.684071V203.980379h303.61057v192.244172H641.664357v-104.73289h-113.79018v104.73289h-97.078842z m214.951181 284.347883h-131.394491v-30.871327h131.394491v30.871327z m0-63.783733h-131.394491v-29.085383h131.394491v29.085383z m277.459239-105.625862H507.463382V474.550976h415.742373v36.611863zM776.375601 1023.984054a112.004236 112.004236 0 0 1-67.865892-22.707009l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887538 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887537 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-49.496177 37.504835a38.244726 38.244726 0 1 1-46.179422-60.977249l49.496177-37.504835c39.928617-30.23349 95.803167-30.23349 135.604216 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117803 0l37.887538-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887537 28.70268a38.244726 38.244726 0 1 1-46.179422 60.977249l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-37.887537 28.70268a112.259371 112.259371 0 0 1-67.865893 22.707009zM776.375601 878.046872a112.004236 112.004236 0 0 1-67.865892-22.707009l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887538 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887537-28.70268c-12.756747-9.695127-30.488625-9.56756-43.117804 0l-37.887537 28.70268c-39.928617 30.23349-95.6756 30.361057-135.604217 0l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-49.496177 37.504835a38.244726 38.244726 0 1 1-46.179422-60.977249l49.496177-37.504835c39.928617-30.23349 95.6756-30.361057 135.604216 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117804 0l37.887537-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887538 28.70268c12.756747 9.56756 30.488625 9.56756 43.117803 0l37.887538-28.70268c39.928617-30.23349 95.6756-30.361057 135.604217 0l37.887537 28.70268a38.244726 38.244726 0 1 1-46.179422 60.977249l-37.887538-28.70268c-12.756747-9.56756-30.488625-9.56756-43.117804 0l-37.887537 28.70268a112.259371 112.259371 0 0 1-67.865893 22.707009zM179.870128 741.294548C80.622639 741.294548 0 660.671909 0 561.42442c0-17.221608 0-69.651837 86.10804-210.231185l93.762088-153.208527 93.762088 153.208527c86.10804 140.706916 86.10804 193.137144 86.10804 210.231185 0 99.247489-80.750206 179.870128-179.870128 179.870128z m0-396.607253l-28.447545 46.434557C83.811826 501.467711 76.54048 547.009297 76.54048 561.42442c0 56.89509 46.30699 103.329648 103.329648 103.329648s103.329648-46.30699 103.329648-103.329648c0-14.415124-7.271346-59.956709-74.882103-170.302568l-28.447545-46.434557zM220.436582 592.16818m-28.319977 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0ZM138.538269 563.97577m-28.319978 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0ZM192.116605 494.834203m-28.319978 0a28.319978 28.319978 0 1 0 56.639955 0 28.319978 28.319978 0 1 0-56.639955 0Z"></path></g></svg>
                  <p class="mx-4 text-2xl">صرف  <br>طرق</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
@@ -365,7 +363,7 @@
                      <p class="mx-4 text-2xl">شبكة  <br> فايبر</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>battery-negative</title> <path d="M12.563 1c-0.937 0-1.25 0.211-1.25 1.25v0.937h-2.813c-1.847 0-2.187 0.341-2.187 2.187v23.438c0 1.847 0.341 2.187 2.187 2.187h15c1.847 0 2.187-0.341 2.187-2.187v-23.438c0-1.847-0.341-2.187-2.187-2.187h-2.813v-0.937c0-1.038-0.312-1.25-1.25-1.25h-6.875zM8.5 7.563c0-2.5-0.312-2.187 2.187-2.187 1.25 0 9.688 0 10.625 0 2.5 0 2.187-0.312 2.187 2.187 0 1.25 0 17.813 0 19.063 0 2.5 0.312 2.187-2.187 2.187-1.25 0-9.375 0-10.625 0-2.5 0-2.187 0.312-2.187-2.187 0-1.251 0-17.813 0-19.063zM10.687 14.75h10.625c0.345 0 0.625 0.28 0.625 0.625v3.125c0 0.345-0.28 0.625-0.625 0.625h-10.625c-0.345 0-0.625-0.28-0.625-0.625v-3.125c0-0.345 0.28-0.625 0.625-0.625z"></path> </g></svg>  
+                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>battery-negative</title> <path d="M12.563 1c-0.937 0-1.25 0.211-1.25 1.25v0.937h-2.813c-1.847 0-2.187 0.341-2.187 2.187v23.438c0 1.847 0.341 2.187 2.187 2.187h15c1.847 0 2.187-0.341 2.187-2.187v-23.438c0-1.847-0.341-2.187-2.187-2.187h-2.813v-0.937c0-1.038-0.312-1.25-1.25-1.25h-6.875zM8.5 7.563c0-2.5-0.312-2.187 2.187-2.187 1.25 0 9.688 0 10.625 0 2.5 0 2.187-0.312 2.187 2.187 0 1.25 0 17.813 0 19.063 0 2.5 0.312 2.187-2.187 2.187-1.25 0-9.375 0-10.625 0-2.5 0-2.187 0.312-2.187-2.187 0-1.251 0-17.813 0-19.063zM10.687 14.75h10.625c0.345 0 0.625 0.28 0.625 0.625v3.125c0 0.345-0.28 0.625-0.625 0.625h-10.625c-0.345 0-0.625-0.28-0.625-0.625v-3.125c0-0.345 0.28-0.625 0.625-0.625z"></path> </g></svg>
                     <p class="mx-4 text-2xl">شبكه  <br>كهرباء</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
@@ -380,7 +378,7 @@
                     <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19.3278 16C20.3478 15.1745 21 13.9119 21 12.4969C21 10.6503 19.8893 8.94488 18.3 8.25C18.1317 5.32251 15.684 3 12.6893 3C10.3514 3 8.34694 4.48637 7.5 6.5C4.8 6.9375 3 9.20008 3 11.6493C3 13.1613 3.63296 14.5269 4.65065 15.5M8 18V20M8 12V14M12 19V21M16 18V20M16 12V14M12 13V15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     <p class="mx-4 text-2xl">تصريف  <br>الامطار</p>
                 </div>
-                
+
             </div>
 
         </div>
@@ -389,7 +387,7 @@
     </section>
 
     <!-- downloads sections -->
-   
+
 
     <!-- project models -->
     <section class="company-info   py-28 pt-16  bg-background-section " id="project_models" v-if="project.project_models.length">
@@ -434,7 +432,7 @@
 
                             <div class="  left">
                                 <Carousel :pictures="getGallery(model.media)"
-                                          class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+                                     id="images"     class="about-us-carousel w-full   [&>div<li<img]:w-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
                             </div>
 
@@ -448,15 +446,25 @@
         </div>
     </section>
     <!-- Video -->
-       <section class="">
-   <div class="container mx-auto">
-      
-           <video width="320" height="240" controls>
-     
-      <source src="{{ project.video }}" type=video/mp4>
-    </video>
-        </div>
-           </section>
+
+    <section class="">
+        <div class="lg:w-[80%] mx-auto text-4xl text-light-brown"><p> الفديو</p></div>
+        <div class="container mx-auto">
+            <video class="mx-auto w-[70%] h-[70%] rounded-xl"  controls>
+                 <source :src="videoo" type="video/mp4">
+            </video>
+         </div>
+         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+    </section>
+
+    <section class="py-[1%]">
+        <div class="container mx-auto">
+            <video class="mx-auto w-[70%] h-[70%] rounded-xl"  controls>
+                 <source :src="videoo" type="video/mp4">
+            </video>
+         </div>
+         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+    </section>
        <!-- end Video -->
     <!-- location -->
     <section class="company-info   py-20 bg-[white]" id="location">
@@ -474,7 +482,6 @@
                         {{ project.location.city[$i18n.locale] }}
 
                     </p>
-                
                     <!-- <p class="flex " v-if="project.location.address">
                         <MapPinIcon class="w-6 h-6 text-black"/>
                         {{ project.location.address[$i18n.locale] }}
@@ -496,28 +503,28 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
 
     </section>
-    <section class="company-info  bg-[white]" id="downloads">
+    <section class=" company-info  bg-[white]" id="downloads">
 
         <div class="container mx-auto">
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{$t("Download_Project_Files")}}</p>
-                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
+                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 lg:grid-cols-3 m-auto">
                 <div class="flex">
-                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
+                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     <p class="text-2xl p-2 font-bold my-auto">الكتيب الترويجي</p>
                 </div>
                 <div class="flex">
-                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
+                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     <p class="text-2xl p-2 font-bold my-auto"> المخطط العام</p>
                 </div>
                 <div class="flex">
-                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
+                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     <p class="text-2xl p-2 font-bold my-auto"> منشور واتساب</p>
                 </div>
             </div>
-            
+
         </div>
 
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
@@ -682,7 +689,8 @@ export default {
             mobile:"",
             email:"",
             region:"Eastern",
-            status:"Buy"
+            status:"Buy",
+            videoo:""
 
 
 
@@ -735,6 +743,8 @@ export default {
             .then(res => {
                 // this.project = Vue.util.extend({}, res.data.data)
                 this.project = res.data.data
+                this.videoo =this.project.video
+                console.log(this.project.video)
                 this.activeTab = this.project.project_models[0].title['en']
                 console.log(res.data.data)
             })
@@ -804,5 +814,7 @@ export default {
 
 <style scoped>
 
-
+.carousel  img {
+    width: 100%;
+}
 </style>

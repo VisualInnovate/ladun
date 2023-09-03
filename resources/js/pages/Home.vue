@@ -48,14 +48,12 @@
     <section id="project-latest">
         <div class="grid grid-cols-4 gap-4 my-10">
             <h2 id="latest_project_header"
-
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
             </h2>
-
         </div>
         <div
-            class="[&>div>div>ul]:justify-center  [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black [&>div>div>ul>li>div]:font-bold">
+            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 [&>div>div>ul>li>.border-blue-600]:border-black [&>div>div>ul>li>.text-blue-600]:text-black [&>div>div>ul>li>div]:font-bold">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab
@@ -67,65 +65,63 @@
                 >
                     <carousel  v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
-                        <slide class="" v-for="project in department.latest" :key="project.id">
+                        <slide v-for="project in department.latest" :key="project.id" class="" >
 
                             <div
-                                class="rounded-xlg h-full w-full  bg-white latest_project mx-5">
-                                <img class="w-full rounded-xl" v-if="project.attachment"  :src="project.attachment"
+                                class=" w-full lg:w-[80%] h-full rounded-xl bg-[#f6f5f5] latest_project mx-5">
+                                <img style="border: 1px solid #d9d5d5;height:250px;" class="w-full  rounded-xl" v-if="project.attachment" :src="project.attachment"
                                      alt="Project Photo">
-                                <div class="flex  flex-row-reverse">
-                                    
-                                    <div><h3 class=" py-2">{{ project.title[$i18n.locale] }}</h3></div>
-                                    
-                                    <div class="text-dark-brown py-2  ">
-                                        <MapPinIcon class="h-6 w-6"/>
-                                        <small v-if="project.location"> {{
+                                <div class="flex   text-right p-2">
+
+                                   <div class="flex w-full flex-row-reverse ">
+
+                                    <h3 class="   text-2xl font-bold ">{{ project.title[$i18n.locale] }}</h3>
+                                    <div class="text-dark-brown ">
+                                        <small class=" text-right" v-if="project.location"> {{
                                                 project.location.address[$i18n.locale]
                                             }}</small>
+                                        <MapPinIcon class="h-8 w-8 "/>
                                     </div>
+                                   </div>
                                 </div>
-                                <div>
-                                    <p class="p-2 text-grey text-sm ltr:text-start rtl:text-end"
+                                <div class="">
+                                    <p class="p-2 h-32 text-grey text-sm ltr:text-start rtl:text-end"
                                    v-html="project.text[$i18n.locale].slice(0, 200)"></p>
-                                </div>
+                                <div class=" flex justify-between   ltr:text-start rtl:text-end w-full  ">
 
-
-
-                                <div class=" flex justify-between  ltr:text-start rtl:text-end w-full  ">
-                                    
                                     <div class="">
                                         <small class=" text-gray-500 px-2">{{
                                             $t('residentialLandPlots')
                                         }}</small>
                                         <Bars3Icon class="inline-block h-6 w-6 text-light-brown"/>
-                                       
+
                                     </div>
-                                    <div >
+                                    <div class="flex" >
                                         <small class="whitespace-nowrap text-gray-500 px-2">{{ project.Land_area }}
                                             {{ $t('areaUnit') }}</small>
                                         <BuildingOffice2Icon
                                             class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                        
+
                                     </div>
-                                    <div>
+                                    <div >
                                         <small class="whitespace-nowrap text-gray-500 px-2">{{ project.units_number }}
                                             {{ $t('unit') }}</small>
                                         <BuildingOffice2Icon
                                             class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/>
-                                       
+
                                     </div>
-                                </div> 
-                                <div class=" ltr:text-end rtl:text-start w-full my-4 mx-2">
-                                    <button class="bg-dark-brown text-white  rounded-2xl w-36 h-8"
+                                </div>
+                                <div class=" ltr:text-end rtl:text-start w-full my-4 ">
+                                    <button class="bg-dark-brown text-white mx-4 rounded-2xl w-36 h-8"
                                             @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                                         <small class="">
                                             <MagnifyingGlassIcon
-                                                class="inline-block h-6 w-6 "/>
+                                                class="inline-block h-6 w-6  "/>
                                             {{ $t('exploreProject') }}
                                         </small>
                                     </button>
                                 </div>
-
+                                </div>
                             </div>
                         </slide>
 
@@ -138,7 +134,7 @@
                                 <template #prev>
                                     <svg fill="#AF9744" height="34px" width="34px" version="1.1" id="XMLID_54_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve" stroke="#AF9744"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="previous"> <g> <polygon points="17.2,23.7 5.4,12 17.2,0.3 18.5,1.7 8.4,12 18.5,22.3 "></polygon> </g> </g> </g></svg>                                </template>
                                 </navigation>
-                            
+
                         </template>
 
 
@@ -187,14 +183,14 @@
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
-                        <div class="my-auto text-center"><strong class="text-4xl text-dark-brown">+
+                        <div class="my-auto  text-center"><strong class="text-4xl text-dark-brown">+
                             <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-sm">{{ $t('projectsUnits') }}</p></div>
                     </div>
                     <div class="grid grid-cols-2 justify-center ">
                         <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
-                        <div class="my-auto text-center"><strong class="text-4xl text-dark-brown">+
+                        <div class="my-auto text-center"><strong class="text-4xl truncate text-dark-brown">+
                             <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
@@ -298,6 +294,7 @@ function showModal() {
 function getData() {
     axios.get('/api/projects/latest')
         .then((response) => {
+            console.log(response)
             latestProjects.value = response.data.data
             // console.log(Object.values(latestProjects.value[0].gallery)[0].original_url)
         })
