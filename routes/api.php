@@ -38,8 +38,13 @@ Route::get('/companies',function (){
 
 
 Route::get('/financials',function (){
+
+
+    $financials = \App\Models\Financial::orderBy('created_at','DESC')->get();
+
+
     return response ([
-        'financials'=>\App\Models\Financial::get() ->groupBy(function($val) {
+        'financials'=>$financials->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
         })
     ]);

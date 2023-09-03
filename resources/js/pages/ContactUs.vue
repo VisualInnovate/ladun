@@ -145,7 +145,6 @@
 
 
         </div>
-    </div>
 
     <LightFooter/>
 </template>

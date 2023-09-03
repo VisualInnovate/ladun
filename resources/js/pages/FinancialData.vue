@@ -8,6 +8,7 @@
 
     <section class="media-center py-28 bg-background-section pt-32" >
         <div class="container mx-auto">
+<!--            {{financials}}-->
             <div v-for="(financial,index ) in financials" :key="index" class="mb-12">
 
                 <header class="flex flex-wrap justify-between items-center mb-5  " :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
@@ -76,6 +77,21 @@ export default {
         getAllFincials(){
             axios.get("/api/financials").then(res =>{
                 this.financials=res.data.financials
+                // const reverseBaseonValues = Object.values(res.data.financials).reverse();
+                // var reverseBaseonKeys = Object.keys(res.data.financials).reverse();
+                // // console.log(reverseBaseonKeys)
+                // var i = 0;
+                //
+                // reverseBaseonValues.forEach((elem)=>{
+                //     let obj = {}
+                //     obj[reverseBaseonKeys[i]]=elem
+                //     this.financials.push(obj);
+                //     i+=1
+                // }
+            // )
+                // this.financials.map((elem)=>{
+                //     elem
+                // })
                 console.log(this.financials)
 
             })
