@@ -27,6 +27,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <h1 class="text-4xl text-center  mb-10">{{$t('projects')}}</h1>
 
