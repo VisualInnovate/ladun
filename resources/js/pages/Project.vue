@@ -450,7 +450,7 @@
     <section class="bg-[white]">
         <div class="lg:w-[80%] mx-auto text-4xl text-light-brown"><p> الفديو</p></div>
         <div class="container mx-auto">
-            <video class="mx-auto w-[70%] h-[70%] rounded-xl"  controls>
+            <video class="mx-auto w-[70%] h-[70%] rounded-xl"  crossorigin playsinline controls>
                  <source :src="videoo" type="video/mp4">
             </video>
          </div>
