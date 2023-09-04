@@ -13,7 +13,7 @@
                         <template #head>{{ item.title[$i18n.locale].slice(0, 20) + '...' }}</template>
                         <template #text>
                             <div v-html="item.content[$i18n.locale].slice(0,100)+'...'"></div>
-                            <div class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }} ...</button></div>
+                            <div class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }}</button></div>
                         </template>
                         <img
                             class="md:h-full object-cover img-media-center

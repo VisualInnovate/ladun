@@ -8,23 +8,31 @@
         </h1>
 
         <div
-            class="flex justify-between  flex-wrap md:flex-nowrap mx-10 my-5"
+            class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5"
         >
 
             <div class="flex-auto  ">
-                <div>
-                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                    <div class="bg-black rounded-lg ">
-                    <div class="text-dark-brown py-10 rounded-2xl px-5 text-lg">
-                        {{ $t('beInTouch') }}
-                    </div>
-
-
-                    <form class="grid gap-y-12 mx-5"
-
-                    >
-                        <div class="flex justify-center gap-x-5">
-                            <input
+                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                    <div class="bg-black rounded-lg h-[100%] lg:h-[90%]">
+                        <div class="text-dark-brown py-10 rounded-2xl text-lg px-5 text-sm">
+                            {{ $t('beInTouch') }}
+                        </div>
+                        
+    
+                        <form class="grid gap-y-12 mx-5"
+    
+                        >
+                            <div class="flex justify-center gap-x-5">
+                                <input
+                                    type="text"
+                                    id="first_name" maxlength="40" name="first_name"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="first_name"
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    :placeholder="$t('FirstName')"
+                                />
+    
+                                <input
                                 type="text"
                                 id="mobile" maxlength="40" name="mobile"
                                 v-model="mobile"
@@ -32,8 +40,8 @@
                                 class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('PhoneNumber')"
                             />
-
-
+    
+    
                             </div>
                             <div class="flex justify-center gap-x-5">
                                 <input type=hidden name="oid" value="00D3G0000008knU">
@@ -50,7 +58,7 @@
                                 class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('LastName')"
                             />
-
+    
                                 <input
                                     type="email"
                                     id="email" maxlength="80" name="email"
@@ -59,7 +67,7 @@
                                     class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
-
+    
                             </div>
                             <div class="flex justify-center gap-x-5">
                                 <select
@@ -69,8 +77,8 @@
                                 <option value="Buy"> {{ $t('ownership') }}</option>
                                 <option value="Rent"> {{ $t('rent') }}</option>
                                 <option value="Other"> {{ $t('other') }}</option>
-
-
+    
+    
                             </select>
                                 <select
                                     class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
@@ -80,14 +88,14 @@
                                     <option value="Middle"> {{ $t('middleRegion') }}</option>
                                     <option value="Northern"> {{ $t('westernRegion') }}</option>
                                     <option value="Western"> {{ $t('northernRegion') }}</option>
-
-
+    
+    
                                 </select>
-
-
-
+    
+    
+    
                             </div>
-
+    
                             <button
                                 type="submit" @click="submit"
                                 class="bg-dark-brown h-10 mb-10 mx-2 rounded-3xl text-white"
@@ -95,22 +103,14 @@
                                 {{ $t("sendNow") }}
                             </button>
                         </form>
-
+    
                     </div>
                     <div class="w-full  ">
 
                         <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"
                              :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>
-
+                        
                     </div>
-                </div>
-                <div class="w-full  h-full ">
-
-                <img class="h-full w-full" src="../../img/contact_us/map.png"
-                    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>
-
-                </div>
-                </div>
                 </div>
                 <div class="flex flex-col gap-y-5 py-2"
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
@@ -142,9 +142,11 @@
 
 
             </div>
+            
 
 
         </div>
+    </div>
 
     <LightFooter/>
 </template>

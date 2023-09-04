@@ -390,7 +390,7 @@
 
 
     <!-- project models -->
-    <section class="company-info   py-28 pt-16  bg-background-section " id="project_models" v-if="project.project_models.length">
+    <section class="company-info   py-20 pt-16  bg-background-section " id="project_models" v-if="project.project_models.length">
 
         <div class="container mx-auto">
 
@@ -447,7 +447,7 @@
     </section>
     <!-- Video -->
 
-    <section class="">
+    <section class="bg-[white]">
         <div class="lg:w-[80%] mx-auto text-4xl text-light-brown"><p> الفديو</p></div>
         <div class="container mx-auto">
             <video class="mx-auto w-[70%] h-[70%] rounded-xl"  controls>
@@ -457,7 +457,7 @@
          <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section class="py-[1%]">
+    <section class="py-[3%] bg-[white]">
         <div class="container mx-auto">
             <video class="mx-auto w-[70%] h-[70%] rounded-xl"  controls>
                  <source :src="videoo" type="video/mp4">
