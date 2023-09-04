@@ -20,6 +20,12 @@ const routes = [
         meta:{title:"Join Us"}
     },
     {
+        path: "/search/:q/:local",
+        component: () => import("@/pages/search.vue"),
+        name: 'search',
+        meta:{title:"search"}
+    },
+    {
         path: "/contact-us",
         component: () => import("@/pages/ContactUs.vue"),
         name: 'Contact Us',
