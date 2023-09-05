@@ -1,7 +1,8 @@
 export default {
     main: "Home",
     Image: "Images",
-    modale: "modales",
+    modale: "Models",
+    project360: "project 360",
     aboutUs: "About us",
     companies: "Subsidiaries",
     projects: "Projects",
@@ -80,7 +81,7 @@ export default {
     investor_banner: "Investor Relations",
     finncial_banner: "Financial Statements",
     call_us: "Call Us",
-    video: "video",
+    video: "video project",
     boradOfDirectors: "Board Of Directors",
     project: "Project",
     gallary_project: "Media Project Gallery",
@@ -144,5 +145,5 @@ export default {
     mosque: " mosque numbers",
     other: "Other",
     click_search: "click to search",
-    reports: "Annual Reports"
+    reports: "Annual Reports",
 };

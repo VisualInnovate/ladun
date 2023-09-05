@@ -106,7 +106,8 @@ export default {
     areaOfLand: "المساحه الخام",
     utilities: "خدمات المشروع",
     downloads: "التنزيلات",
-    projectModels: "جوله افتراضيه 360 ",
+    project360: "جوله افتراضيه 360",
+
     askUs: "استفسر الآن",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
     sendUsNow: "راسلنا الآن",
@@ -141,5 +142,9 @@ export default {
     mosque: "عدد الجوامع و المساجد",
     other: "اخرى",
     click_search: "ابحث هنا ",
+<<<<<<< HEAD
     reports:"التقارير السنوية"
+=======
+    reports: "التارير السنوية",
+>>>>>>> 117d3a0 (new commit 4)
 };
