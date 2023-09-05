@@ -1,5 +1,6 @@
 export default {
     main: "Home",
+    Image: "Images",
     aboutUs: "About us",
     companies: "Subsidiaries",
     projects: "Projects",

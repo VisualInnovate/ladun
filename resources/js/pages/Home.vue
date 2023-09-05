@@ -76,13 +76,13 @@
                                    <div class="flex w-full flex-row-reverse ">
                                     <div class="text-dark-brown flex">
                                         <small class=" text-right my-auto " > {{
-                                                
+
                                             }}</small>
                                         <MapPinIcon class="h-8 w-8 "/>
-                                        
+
                                     </div>
                                     <h3 class="   text-2xl font-bold ">{{ project.title[$i18n.locale] }}</h3>
-                                    
+
                                    </div>
                                 </div>
                                 <div class="">
@@ -158,7 +158,7 @@
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2  mx-auto container px-5 ">
             <div class="right">
-                <p class="px-2 my-auto text-grey text-justify text-3xl mb-7" v-if="aboutData.content"
+                <p class="px-2 my-auto text-grey text-justify text-xl mb-7" v-if="aboutData.content"
                    v-html="aboutData.content[$i18n.locale]"></p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                     <div class="grid grid-cols-2 justify-center ">
@@ -400,7 +400,7 @@ onBeforeMount(async () => {
 
 <style scoped>
 *{
-    font-family: sans-serif !important;
+
 }
 .fadeinoutElement {
     -webkit-animation: fadeinout 4s linear forwards;
