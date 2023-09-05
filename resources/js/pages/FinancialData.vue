@@ -99,7 +99,7 @@
                        <div class="grid  grid-cols-4  ">
                            <div class="card flex flex-wrap lg:flex-nowrap  ">
                                <a v-for="item in financial"
-                                  :href="'storage/'+item.financial_file"
+                                  :href="'storage/'+item.year_file"
 
                                   class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
                                    <div class="flex flex-col items-center ">
@@ -184,6 +184,7 @@ export default {
                         i += 1
                     }
                 )
+                i=0
                 reverseBaseonValues2.forEach((elem) => {
                         let obj = {}
                         obj[reverseBaseonKeys2[i]] = elem
@@ -193,7 +194,7 @@ export default {
                 )
 
 
-                console.log(this.financials)
+                console.log(reverseBaseonKeys2)
 
             })
         }
