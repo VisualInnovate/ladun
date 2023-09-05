@@ -77,9 +77,10 @@ export default {
     investor_banner: "علاقات الستثمرين",
     finncial_banner: "البيانات المالية ",
     call_us: "اتصل بنا",
-    video: "فيديو",
+    video: "الفيديو",
+    modale: "النماذج",
     boradOfDirectors: "أعضاء مجلس الإدارة",
-    project: "المشروع",
+    project: "نسبه الانجاز",
     gallary_project: "معرض صور المشـــروع",
     high_level_utility: "خدمات  المشروع",
     high_level_utility_p:

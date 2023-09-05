@@ -1,6 +1,7 @@
 export default {
     main: "Home",
     Image: "Images",
+    modale: "modales",
     aboutUs: "About us",
     companies: "Subsidiaries",
     projects: "Projects",
