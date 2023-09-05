@@ -163,3 +163,11 @@ Route::get('/pages/{slug}', function($slug){
         'page' => $page,
     ]);
 });
+
+
+Route::post('/search ',function (Request $request){
+    return response([
+       'projects'=> ProjectResource::collection(Project::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->get()) ,
+       'mediaCenter'=>  \App\Models\MediaCenter::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->get()
+    ]);
+});

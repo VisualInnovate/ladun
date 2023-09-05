@@ -125,8 +125,7 @@
                                         class="relative after:content-[''] after:absolute after:w-full after:h-[1px] after:rounded-lg after:bg-white after:-bottom-1 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                                     >
                                         {{ $t(item.name) }}
-                                    </router-link
-                                    >
+                                    </router-link>
                                 </div>
                             </template>
                         </div>
