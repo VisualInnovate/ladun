@@ -9,6 +9,7 @@
     <section class="media-center py-28 bg-background-section pt-32">
         <div class="container mx-auto">
             <!--            {{financials}}-->
+
             <div v-for="f  in financials" :key="index" class="mb-12">
                 <div v-for="(financial,index ) in f">
 
@@ -22,10 +23,12 @@
                             <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
                                 index[0]
                             }}{{ index[1] }}</span>
+
                         </div>
                     </header>
 
                     <div class="card w-[80%] flex">
+
 
                         <a v-for="item in financial"
                            :href="'storage/'+item.financial_file"
@@ -51,6 +54,13 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
         </div>
 
 
@@ -79,6 +89,7 @@ export default {
     },
     data() {
         return {
+
             financials: []
         }
     },
@@ -99,14 +110,35 @@ export default {
                     }
                 )
 
+
                 console.log(this.financials)
+
+            })
+        },
+         getAllYears() {
+            axios.get("/api/years").then(res => {
+                // this.years=res.data.years
+                const reverseBaseonValues = Object.values(res.data.years).reverse();
+                var reverseBaseonKeys = Object.keys(res.data.years).reverse();
+                // console.log(reverseBaseonKeys)
+                var i = 0;
+
+                reverseBaseonValues.forEach((elem) => {
+                        let obj = {}
+                        obj[reverseBaseonKeys[i]] = elem
+                        this.years.push(obj);
+                        i += 1
+                    }
+                )
+
+                console.log(this.years)
 
             })
         }
     },
     mounted() {
-        this.getAllFincials()
-
+        this.getAllFincials(),
+        this.getAllYears()
     }
 }
 
