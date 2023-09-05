@@ -793,7 +793,8 @@ export default {
             status: "Buy",
             videoo: "",
             recompute: 0,
-            rephases: []
+            rephases: [],
+            flag : 0
 
 
         }
@@ -838,8 +839,9 @@ export default {
             return this.$i18n.locale
         },
         phases() {
-            if(this.recompute==3)
+            if(this.recompute>=3 && this.flag)
             {
+                this.flag = 1
                 let i=0
                 this.project.phases.forEach((elem)=>{
                     elem.achieve_percentage=this.rephases[i]
