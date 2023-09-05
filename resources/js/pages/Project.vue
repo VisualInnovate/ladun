@@ -863,7 +863,7 @@ export default {
                 this.project = res.data.data
                 this.videoo = this.project.video
                 console.log(this.project.video)
-                this.activeTab = this.project.project_models[0].title['en']
+                this.activeTab = this.project?.project_models[0]?.title['en']
 
                 this.project.phases.forEach((elem)=>{
                     this.rephases.push(elem.achieve_percentage)
