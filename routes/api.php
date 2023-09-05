@@ -56,6 +56,18 @@ Route::get('/financials',function (){
     ]);
 });
 
+Route::get('/years',function (){
+
+
+    $financials = \App\Models\Year::orderBy('created_at','DESC')->get();
+
+
+    return response ([
+        'years'=>$financials->groupBy(function($val) {
+            return Carbon::parse($val->year_date)->format('Y');
+        })
+    ]);
+});
 
 Route::get('/investors',function (){
     return response ([
