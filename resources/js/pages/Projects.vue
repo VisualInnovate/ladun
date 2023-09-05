@@ -16,8 +16,9 @@
                                  class=" rounded-xl  bg-[#fff8f8]  mx-2 "
                                  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                  <div class="w-full relative z-10">
-                                    <Carousel navigationEnabled="false" :pictures="getGallery(project.gallery)"
-                                              class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px]  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                                    
+                                    <Carousel :autoplay="false" :pictures="getGallery(project.gallery)"
+                                              class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px] [&>button>span]:hidden [&>div>button]:hidden  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
                                 </div>
                                 <img class="w-20 h-20 z-20 absolute top-[10%] mx-auto my-3 mb-0" :src="project.logo?.original_url"
                                      :alt="project.logo?.name">
@@ -33,7 +34,7 @@
                                 </div>
 
                                 <div class="grid grid-cols-4 mb-4 ">
-                                    <p class="px-2 text-grey text-sm col-start-1 col-end-4 "
+                                    <p class="px-2 h-32 text-grey text-sm col-start-1 col-end-4 "
                                        v-html="project.text[$i18n.locale].slice(0, 110)+' ...'">
                                     </p>
 
