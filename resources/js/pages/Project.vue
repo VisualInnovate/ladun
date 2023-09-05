@@ -838,7 +838,7 @@ export default {
             return this.$i18n.locale
         },
         phases() {
-            if(this.recompute==5)
+            if(this.recompute==10)
             {
                 let i=0
                 this.project.phases.forEach((elem)=>{
