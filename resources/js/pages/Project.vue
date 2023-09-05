@@ -728,10 +728,10 @@
         <div class="container mx-auto">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <div
-                class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w-"
+                class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
             >
                 <div class="flex-auto md:w-1/2 right">
-                    <div class="bg-black rounded-lg mb-14">
+                    <div class="bg-black rounded-lg mb-14 pt-12">
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->

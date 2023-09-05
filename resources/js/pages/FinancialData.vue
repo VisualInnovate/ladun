@@ -29,12 +29,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="year flex items-center text-[50px] font-bold " dir="rtl">
-                                    <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                        index[0]
-                                    }}{{ index[1] }}</span>
-
-                                </div>
                             </header>
 
                             <div class="grid  grid-cols-4  ">
@@ -50,12 +44,11 @@
                                                      alt="Bonnie image"/>
                                             </div>
                                             <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
-                                                {{ $t('list_money') }}
-                                            </h5>
-                                            <span
-                                                class="text-sm text-gray-500 dark:text-gray-400">{{
+                                                {{
                                                     item.title[$i18n.locale]
-                                                }}</span>
+                                                }}
+                                            </h5>
+
                                             <div class="flex  space-x-3 text-dark-brown font-bold">
                                                 {{ index }}
                                             </div>
@@ -76,7 +69,7 @@
                        <header class="flex flex-wrap justify-between items-center mb-5  "
                                :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                            <div
-                               class=" h-16 w-[90%] flex items-center px-4 text-xl  justify-between">
+                               class=" h-16 w-[80%] flex items-center px-4 text-xl  justify-between">
                                <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
                                    <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
                                        {{ $t('reports') }}
@@ -109,12 +102,11 @@
                                                 alt="Bonnie image"/>
                                        </div>
                                        <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
-                                           {{ $t('list_money') }}
-                                       </h5>
-                                       <span
-                                           class="text-sm text-gray-500 dark:text-gray-400">{{
+                                           {{
                                                item.title[$i18n.locale]
-                                           }}</span>
+                                           }}
+                                       </h5>
+
                                        <div class="flex  space-x-3 text-dark-brown font-bold">
                                            {{ index }}
                                        </div>
