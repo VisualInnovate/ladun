@@ -9,110 +9,126 @@
     <section class="media-center py-28 bg-background-section pt-32">
         <div class="container mx-auto">
             <!--            {{financials}}-->
+            <div class="flex">
+                <div>
+                    <div v-for="f  in financials" :key="index" class="mb-12">
+                        <div v-for="(financial,index ) in f">
 
-            <div v-for="f  in financials" :key="index" class="mb-12">
-                <div v-for="(financial,index ) in f">
-
-                    <header class="flex flex-wrap justify-between items-center mb-5  "
-                            :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
-                        <div
-                            class=" h-16 w-[90%] flex items-center px-4 text-xl  justify-between">
-                          <div class="w-[49%]  flex bg-[#E6E6E6] justify-between p-2">
-                            <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">  {{ $t('header_finncial') }}</div>
-                            <div class="flex  lg:hidden">
-                                <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                index[0]
-                            }}{{ index[1] }}</span>
-                            </div>
-                          </div>
-                           <div class="w-[49%] mx- flex bg-[#E6E6E6] justify-between p-2">
-                            <div class="bg-[#E6E6E6] w-[49%]  text-center my-auto truncate	">  {{ $t('التقارير السنويه') }}</div>
-                            <div class="flex  lg:hidden">
-                                <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                index[0]
-                            }}{{ index[1] }}</span>
-                            </div>
-                           </div>
-                        </div>
-                        <div class="year flex items-center text-[50px] font-bold " dir="rtl">
-                            <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                index[0]
-                            }}{{ index[1] }}</span>
-
-                        </div>
-                    </header>
-
-                    <div class="grid  grid-cols-2  " >
-                        <div class="card flex flex-wrap lg:flex-nowrap  ">
-                    <a v-for="item in financial"
-                    :href="'storage/'+item.financial_file"
-
-<<<<<<< HEAD
-
-                        <a v-for="item in financial"
-                           :href="'storage/'+item.financial_file"
-
-                           class="animate__animated animate__bounceIn mx-4 w-60 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
-                            <div class="flex flex-col items-center ">
+                            <header class="flex flex-wrap justify-between items-center mb-5  "
+                                    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                 <div
-                                    class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
-                                    <img class=" w-12 h-12 " src="../../img/financial-logo.png"
-                                         alt="Bonnie image"/>
+                                    class=" h-16 w-[90%] flex items-center px-4 text-xl  justify-between">
+                                    <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
+                                        <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
+                                            {{ $t('header_finncial') }}
+                                        </div>
+                                        <div class="flex  lg:hidden">
+                                            <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
+                                                index[0]
+                                            }}{{ index[1] }}</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
-                                    {{ $t('list_money') }}
-                                </h5>
-                                <span
-                                    class="text-sm text-gray-500 dark:text-gray-400">{{
-                                        item.title[$i18n.locale]
-                                    }}</span>
-                                <div class="flex  space-x-3 text-dark-brown font-bold">
-                                    {{ index }}
-                                </div>
-=======
-                    class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
-                        <div class="flex flex-col items-center ">
-                            <div
-                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
-                                <img class=" w-12 h-12 " src="../../img/financial-logo.png"
-                                    alt="Bonnie image"/>
->>>>>>> c21b3f4 (new commit)
-                            </div>
-                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
-                                {{ $t('list_money') }}
-                            </h5>
-                            <span
-                                class="text-sm text-gray-500 dark:text-gray-400">{{ item.title[$i18n.locale] }}</span>
-                            <div class="flex  space-x-3 text-dark-brown font-bold">
-                                {{ index }}
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="justify-items-start card card flex flex-wrap lg:flex-nowrap " >
-                        <a v-for="item in financial"
-                    :href="'storage/'+item.financial_file"
+                                <div class="year flex items-center text-[50px] font-bold " dir="rtl">
+                                    <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
+                                        index[0]
+                                    }}{{ index[1] }}</span>
 
-                    class="animate__animated animate__bounceIn mx-4 w-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
-                        <div class="flex flex-col items-center ">
-                            <div
-                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
-                                <img class=" w-12 h-12 " src="../../img/financial-logo.png"
-                                    alt="Bonnie image"/>
+                                </div>
+                            </header>
+
+                            <div class="grid  grid-cols-4  ">
+                                <div class="card flex flex-wrap lg:flex-nowrap  ">
+                                    <a v-for="item in financial"
+                                       :href="'storage/'+item.financial_file"
+
+                                       class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
+                                        <div class="flex flex-col items-center ">
+                                            <div
+                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
+                                                <img class=" w-12 h-12 " src="../../img/financial-logo.png"
+                                                     alt="Bonnie image"/>
+                                            </div>
+                                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
+                                                {{ $t('list_money') }}
+                                            </h5>
+                                            <span
+                                                class="text-sm text-gray-500 dark:text-gray-400">{{
+                                                    item.title[$i18n.locale]
+                                                }}</span>
+                                            <div class="flex  space-x-3 text-dark-brown font-bold">
+                                                {{ index }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="justify-items-start card card flex flex-wrap lg:flex-nowrap ">
+                                </div>
                             </div>
-                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
-                                {{ $t('list_money') }}
-                            </h5>
-                            <span
-                                class="text-sm text-gray-500 dark:text-gray-400">{{ item.title[$i18n.locale] }}</span>
-                            <div class="flex  space-x-3 text-dark-brown font-bold">
-                                {{ index }}
-                            </div>
+
                         </div>
-                    </a>
-                    </div>
                     </div>
                 </div>
+           <div>
+               <div v-for="f  in reports" :key="index" class="mb-12">
+                   <div v-for="(financial,index ) in f">
+
+                       <header class="flex flex-wrap justify-between items-center mb-5  "
+                               :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
+                           <div
+                               class=" h-16 w-[90%] flex items-center px-4 text-xl  justify-between">
+                               <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
+                                   <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
+                                       {{ $t('reports') }}
+                                   </div>
+                                   <div class="flex  lg:hidden">
+                                       <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
+                                           index[0]
+                                       }}{{ index[1] }}</span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="year flex items-center text-[50px] font-bold " dir="rtl">
+                               <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
+                                   index[0]
+                               }}{{ index[1] }}</span>
+
+                           </div>
+                       </header>
+
+                       <div class="grid  grid-cols-4  ">
+                           <div class="card flex flex-wrap lg:flex-nowrap  ">
+                               <a v-for="item in financial"
+                                  :href="'storage/'+item.financial_file"
+
+                                  class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
+                                   <div class="flex flex-col items-center ">
+                                       <div
+                                           class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
+                                           <img class=" w-12 h-12 " src="../../img/financial-logo.png"
+                                                alt="Bonnie image"/>
+                                       </div>
+                                       <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
+                                           {{ $t('list_money') }}
+                                       </h5>
+                                       <span
+                                           class="text-sm text-gray-500 dark:text-gray-400">{{
+                                               item.title[$i18n.locale]
+                                           }}</span>
+                                       <div class="flex  space-x-3 text-dark-brown font-bold">
+                                           {{ index }}
+                                       </div>
+                                   </div>
+                               </a>
+                           </div>
+                           <div class="justify-items-start card card flex flex-wrap lg:flex-nowrap ">
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+
             </div>
 
 
@@ -183,8 +199,7 @@ export default {
         }
     },
     mounted() {
-        this.getAllFincials(),
-            this.getAllYears()
+        this.getAllFincials()
     }
 }
 

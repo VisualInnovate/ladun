@@ -140,4 +140,5 @@ export default {
     mosque: "عدد الجوامع و المساجد",
     other: "اخرى",
     click_search: "ابحث هنا ",
+    reports:"التارير السنوية"
 };
