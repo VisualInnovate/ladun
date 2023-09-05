@@ -41,12 +41,18 @@ Route::get('/financials',function (){
 
 
     $financials = \App\Models\Financial::orderBy('created_at','DESC')->get();
+    $financials = \App\Models\Financial::orderBy('created_at','DESC')->get();
 
 
     return response ([
         'financials'=>$financials->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
-        })
+        }),
+        'reports'=>$financials->groupBy(function($val) {
+            return Carbon::parse($val->financial_date)->format('Y');
+        }),
+
+
     ]);
 });
 
