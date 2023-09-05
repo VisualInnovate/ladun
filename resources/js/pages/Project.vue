@@ -287,14 +287,12 @@
         <h1 class="container font-bold text-light-brown mb-6 mx-auto">{{ $t('projectPhases') }}</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto " v-if="project.phases">
 
-            <div class="  " v-for="phase in phases">
+            <div class=" progress " v-for="phase in phases">
 
 
                 <div class="  p-5 font-bold ">
 
-
                     <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
-
                     <CircleProgressBar :value="phase.achieve_percentage" :max="100" percentage colorUnfilled="black"
                                        animationDuration="1s"
                                        rounded></CircleProgressBar>
@@ -554,7 +552,7 @@
 
                 <div class="img-company-info lg:w-[90%] m-auto left">
                     <iframe class="w-full h-[350px]"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8622.087051923865!2d46.67816517503699!3d24.68767766179772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b4ad55d0b%3A0x9724c2fb9fb4fce6!2sLadun%20Investment!5e0!3m2!1sen!2seg!4v1679391697436!5m2!1sen!2seg"
+                            :src="mapLink"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!--                    map location  langtud and  -->
@@ -840,26 +838,20 @@ export default {
             return this.$i18n.locale
         },
         phases() {
-            if(this.recompute==1)
-            {
-                this.project.phases.forEach((elem)=>{
-                    elem.achieve_percentage=0
-
-
-                })
-                console.log(this.rephases)
-            }
-
-            if(this.recompute==2)
+            if(this.recompute==5)
             {
                 let i=0
                 this.project.phases.forEach((elem)=>{
                     elem.achieve_percentage=this.rephases[i]
                     i++
                 })
+                console.log(this.rephases)
             }
 
             return this.project.phases
+        },
+        mapLink(){
+            return `https://maps.google.com/maps?key=AIzaSyDWxa_rbz7ccvjsvxmbPR5Q_AEK14-D0sk&q=${this.project.location.Latitude},${this.project.location.Longitude}&hl=es&z=14&amp&output=embed`
         }
     },
     beforeMount() {
@@ -875,6 +867,11 @@ export default {
 
                 this.project.phases.forEach((elem)=>{
                     this.rephases.push(elem.achieve_percentage)
+                })
+                this.project.phases.forEach((elem)=>{
+                    elem.achieve_percentage=0
+
+
                 })
                 console.log(this.rephases)
             })
@@ -925,6 +922,8 @@ export default {
                 }
             }
             console.log(progress)
+
+
             for (let i = 0; i < progress.length; i++) {
                 console.log(progress[i].offsetTop)
                 if (window.scrollY >= progress[i].offsetTop - 710) {
@@ -932,6 +931,8 @@ export default {
 
                 }
             }
+
+
             for (let i = 0; i < left.length; i++) {
                 console.log(left[i].offsetTop)
                 if (window.scrollY >= left[i].offsetTop - 710) {
