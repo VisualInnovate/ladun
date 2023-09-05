@@ -22,11 +22,7 @@
                                         <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
                                             {{ $t('header_finncial') }}
                                         </div>
-                                        <div class="flex  lg:hidden">
-                                            <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                                index[0]
-                                            }}{{ index[1] }}</span>
-                                        </div>
+
                                     </div>
                                 </div>
                             </header>
@@ -69,16 +65,12 @@
                        <header class="flex flex-wrap justify-between items-center mb-5  "
                                :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                            <div
-                               class=" h-16 w-[80%] flex items-center px-4 text-xl  justify-between">
+                               class=" h-16 w-[70%] flex items-center px-4 text-xl  justify-between">
                                <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
                                    <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
                                        {{ $t('reports') }}
                                    </div>
-                                   <div class="flex  lg:hidden">
-                                       <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
-                                           index[0]
-                                       }}{{ index[1] }}</span>
-                                   </div>
+
                                </div>
                            </div>
                            <div class="year flex items-center text-[50px] font-bold " dir="rtl">
