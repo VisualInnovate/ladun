@@ -794,7 +794,7 @@ export default {
             videoo: "",
             recompute: 0,
             rephases: [],
-            flag : 0
+            flag : 1
 
 
         }
@@ -841,7 +841,7 @@ export default {
         phases() {
             if(this.recompute>=3 && this.flag)
             {
-                this.flag = 1
+                this.flag = 0
                 let i=0
                 this.project.phases.forEach((elem)=>{
                     elem.achieve_percentage=this.rephases[i]
