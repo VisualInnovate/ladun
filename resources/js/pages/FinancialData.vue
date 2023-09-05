@@ -44,7 +44,9 @@
                                     {{ $t('list_money') }}
                                 </h5>
                                 <span
-                                    class="text-sm text-gray-500 dark:text-gray-400">{{ item.title[$i18n.locale] }}</span>
+                                    class="text-sm text-gray-500 dark:text-gray-400">{{
+                                        item.title[$i18n.locale]
+                                    }}</span>
                                 <div class="flex  space-x-3 text-dark-brown font-bold">
                                     {{ index }}
                                 </div>
@@ -54,11 +56,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
 
         </div>
@@ -90,7 +87,8 @@ export default {
     data() {
         return {
 
-            financials: []
+            financials: [],
+            reports: []
         }
     },
     methods: {
@@ -99,6 +97,9 @@ export default {
                 // this.financials=res.data.financials
                 const reverseBaseonValues = Object.values(res.data.financials).reverse();
                 var reverseBaseonKeys = Object.keys(res.data.financials).reverse();
+
+                const reverseBaseonValues2 = Object.values(res.data.reports).reverse();
+                var reverseBaseonKeys2 = Object.keys(res.data.reports).reverse();
                 // console.log(reverseBaseonKeys)
                 var i = 0;
 
@@ -109,36 +110,23 @@ export default {
                         i += 1
                     }
                 )
-
-
-                console.log(this.financials)
-
-            })
-        },
-         getAllYears() {
-            axios.get("/api/years").then(res => {
-                // this.years=res.data.years
-                const reverseBaseonValues = Object.values(res.data.years).reverse();
-                var reverseBaseonKeys = Object.keys(res.data.years).reverse();
-                // console.log(reverseBaseonKeys)
-                var i = 0;
-
-                reverseBaseonValues.forEach((elem) => {
+                reverseBaseonValues2.forEach((elem) => {
                         let obj = {}
-                        obj[reverseBaseonKeys[i]] = elem
-                        this.years.push(obj);
+                        obj[reverseBaseonKeys2[i]] = elem
+                        this.reports.push(obj);
                         i += 1
                     }
                 )
 
-                console.log(this.years)
+
+                console.log(this.financials)
 
             })
         }
     },
     mounted() {
         this.getAllFincials(),
-        this.getAllYears()
+            this.getAllYears()
     }
 }
 

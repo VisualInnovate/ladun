@@ -488,6 +488,62 @@
             </div>
         </div>
     </section>
+
+    <section class="company-info   py-28 pt-16  bg-background-section " id="project_models" v-if="project.project_models.length">
+
+        <div class="container mx-auto">
+
+            <div class="">
+
+                <div class="d-info h-full flex flex-col justify-center right">
+                    <h1 class="font-bold text-2xl mb-4 text-center md:text-start">{{ $t('Project_Models') }} </h1>
+                    <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
+                        <!-- class appends to content DIV for all tabs -->
+                        <tab v-for="model in project.project_models" :name="model.title['en']"
+                             :title="model.title[$i18n.locale]"
+                             class="text-lg [&>div]:grid [&>div]:grid-cols-1 [&>div]:gap-12 [&>div]:lg:grid-cols-2 [&>div]:lg:gap-2">
+                            <div>
+                                <div class="text mb-5">
+                                    <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
+                                    <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
+                                    <p class="mb-3">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
+                                    <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
+                                </div>
+                                <div class="flex flex-wrap">
+                                    <div
+                                        v-if="model.utilities"
+                                        v-for="utility in model.utilities"
+                                        class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
+
+                                        <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
+                                            <img v-if="utility.media[0]" :src="utility.media[0].original_url"
+                                                 class="w-[35px] h-[35px] z-40">
+                                            <!--                                            add dinamic img -->
+                                        </div>
+
+                                        <p class="text-sm whitespace-nowrap">{{ utility.title[$i18n.locale] }}</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="  left">
+                                <Carousel :pictures="getGallery(model.media)"
+                                          class="about-us-carousel h-[400px] [&>div:first-child]:h-[400px]  [&>div>div>img]:h-[400px] [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
+
+                            </div>
+
+                        </tab>
+
+                    </tabs>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
     <!-- Video -->
 
     <section class="bg-[white]">
@@ -643,9 +699,7 @@
             >
                 <div class="flex-auto md:w-1/2 right">
                     <div class="bg-black rounded-lg mb-14">
-                        <div class="text-dark-brown py-10 px-5 text-sm">
-                            {{ $t("pleaseFill") }}
-                        </div>
+
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->
                         <form class="grid gap-y-10 mx-5"
