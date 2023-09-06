@@ -146,4 +146,5 @@ export default {
     other: "Other",
     click_search: "click to search",
     reports: "Annual Reports",
+    Investment_project: "Investment project",
 };

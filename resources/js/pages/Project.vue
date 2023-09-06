@@ -44,13 +44,13 @@
 
     <section class=" text-sm m-auto ">
         <div class="container mx-auto pb-4">
-            <div class=" w-full  m-auto lg:w-[90%]">
+            <div class=" w-full  m-auto lg:w-[80%]">
                 <div
-                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-10 mx-auto items-center ">
-                    <div class="mx-auto mb-3 md:mb-0 flex">
+                    class="w-full grid grid-cols-2  lg:flex lg:justify-between gap-5 mx-auto items-center ">
+                    <div class="mx-auto mb-3 md:mb-0 flex truncate">
                         <svg class="my-auto" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#AF9751" d="M600.704 64a32 32 0 0 1 30.464 22.208l35.2 109.376c14.784 7.232 28.928 15.36 42.432 24.512l112.384-24.192a32 32 0 0 1 34.432 15.36L944.32 364.8a32 32 0 0 1-4.032 37.504l-77.12 85.12a357.12 357.12 0 0 1 0 49.024l77.12 85.248a32 32 0 0 1 4.032 37.504l-88.704 153.6a32 32 0 0 1-34.432 15.296L708.8 803.904c-13.44 9.088-27.648 17.28-42.368 24.512l-35.264 109.376A32 32 0 0 1 600.704 960H423.296a32 32 0 0 1-30.464-22.208L357.696 828.48a351.616 351.616 0 0 1-42.56-24.64l-112.32 24.256a32 32 0 0 1-34.432-15.36L79.68 659.2a32 32 0 0 1 4.032-37.504l77.12-85.248a357.12 357.12 0 0 1 0-48.896l-77.12-85.248A32 32 0 0 1 79.68 364.8l88.704-153.6a32 32 0 0 1 34.432-15.296l112.32 24.256c13.568-9.152 27.776-17.408 42.56-24.64l35.2-109.312A32 32 0 0 1 423.232 64H600.64zm-23.424 64H446.72l-36.352 113.088-24.512 11.968a294.113 294.113 0 0 0-34.816 20.096l-22.656 15.36-116.224-25.088-65.28 113.152 79.68 88.192-1.92 27.136a293.12 293.12 0 0 0 0 40.192l1.92 27.136-79.808 88.192 65.344 113.152 116.224-25.024 22.656 15.296a294.113 294.113 0 0 0 34.816 20.096l24.512 11.968L446.72 896h130.688l36.48-113.152 24.448-11.904a288.282 288.282 0 0 0 34.752-20.096l22.592-15.296 116.288 25.024 65.28-113.152-79.744-88.192 1.92-27.136a293.12 293.12 0 0 0 0-40.256l-1.92-27.136 79.808-88.128-65.344-113.152-116.288 24.96-22.592-15.232a287.616 287.616 0 0 0-34.752-20.096l-24.448-11.904L577.344 128zM512 320a192 192 0 1 1 0 384 192 192 0 0 1 0-384zm0 64a128 128 0 1 0 0 256 128 128 0 0 0 0-256z"></path></g></svg>
 
-                        <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                        <a class="  truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#project_phases',
                             offset: -128
@@ -70,9 +70,9 @@
                             {{ $t('projectPhases') }}
                         </a>
                     </div> -->
-                    <div class="mx-auto mb-3 md:mb-0 flex ">
+                    <div class="mx-auto mb-3 md:mb-0 flex truncate">
                         <svg  width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M904.630857 240.054857c0.950857-9.435429-7.021714-19.382857-16.676571-24.283428L461.531429 2.633143a24.137143 24.137143 0 0 0-21.796572 0L13.531429 215.771429c-15.872 10.386286-13.385143 33.426286-13.385143 35.84V706.56c0 8.411429 4.388571 16.310857 11.702857 20.772571 0 0 417.060571 252.050286 424.228571 255.268572 14.628571 7.241143 23.844571 5.266286 30.72 1.755428L605.622857 904.045714c11.849143-6.948571 12.8-17.481143 11.264-35.693714-1.536-18.139429-17.408-28.013714-29.037714-21.284571-11.702857 6.656-103.497143 61.952-103.497143 61.952V493.568L852.114286 279.405714l38.692571-23.405714c7.68-4.973714 12.726857-11.337143 13.750857-15.945143z m-486.4 663.917714L63.780571 687.908571V290.230857L418.157714 493.714286v410.185143z m32.402286-476.525714L113.517714 236.324571 450.633143 67.876571l337.042286 168.448-337.042286 191.122286z m554.276571 335.872l-189.44 113.737143c-10.605714 7.387429-21.796571-0.877714-21.796571-0.877714-1.024-0.219429-188.635429-112.859429-188.635429-112.859429a18.139429 18.139429 0 0 1-8.850285-15.579428v-203.337143c0-6.582857 3.364571-18.066286 16.822857-23.259429l183.808-101.668571a18.870857 18.870857 0 0 1 16.091428 0l184.027429 101.668571h-1.462857c0.512 0 1.243429 0 1.755428 0.292572l4.754286 2.413714c5.997714 2.852571 11.556571 8.045714 11.556571 15.36v208.457143a18.432 18.432 0 0 1-8.630857 15.652571zM667.209143 540.818286l136.630857 76.726857 138.605714-76.726857L803.84 464.457143 667.209143 540.818286z m163.84 277.942857l139.702857-84.260572V582.802286l-139.702857 79.213714v156.672z m-49.517714-2.486857V662.747429l-136.996572-77.531429v148.48l136.996572 82.651429z" fill="#AF9751"></path></g></svg>
-                        <a class="relative px-1 inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                        <a class="relative truncate px-1 inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#serves',
                             offset: -128
@@ -128,14 +128,14 @@
                             el: '#video3d',
                             offset: -128
                         }">
-                            {{ $t('projectModels') }}
+                            {{ $t('project360') }}
                         </a>
                     </div>
 
 
 
 
-                    <div class="mx-auto ml-4 mb-3 md:mb-0 flex">
+                    <div class="mx-auto mb-3 md:mb-0 flex">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.1198 22 8.79986 22H12.5M14 11H8M10 15H8M16 7H8M15 19L18 22M18 22L21 19M18 22V16" stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -147,7 +147,7 @@
                     </div>
 
                     <a
-                        class="mx-auto button bg-light-brown text-white rounded-2xl w-full text-center py-2 hover:bg-dark-brown hover:shadow"
+                        class="mx-auto button bg-light-brown text-white rounded-2xl  text-center p-2 hover:bg-dark-brown hover:shadow"
                         href="#" v-scroll-to="{
                             el: '#ask_us',
                             offset: -128
@@ -482,22 +482,18 @@
                                                  class="w-[35px] h-[35px] z-40">
                                             <!--                                            add dinamic img -->
                                         </div>
-
                                         <p class="text-sm whitespace-nowrap">{{ utility.title[$i18n.locale] }}</p>
-
                                     </div>
-
                                 </div>
 
                             </div>
 
                             <div class="  left">
                                 <Carousel :pictures="getGallery(model.media)"
-                                          id="images"
-                                          class="about-us-carousel w-full   [&>div<li<img]:w-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
-
+                                        id="images"
+                                        class="about-us-carousel w-full   [&>div<li<img]:w-full [&>div>but
+                                        ton]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
                             </div>
-
                         </tab>
 
                     </tabs>
@@ -514,7 +510,7 @@
                 <div >
                     <div
                     class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
-                    <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
+                    <!--                  <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
                     <div class="flex">
                      <svg class="my-auto" width="36px" height="36px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path> </g></svg>
                     <p class="text-dark-brown text-4xl right" >
@@ -527,8 +523,6 @@
                     <div class="w-[100%] m-auto">
                         <vue-carousel :items="getGallery(project.gallery)"/>
                     </div>
-
-
                 </div>
 
             </div>

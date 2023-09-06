@@ -21,10 +21,11 @@ export default {
     unit: "وحدة",
     aboutLadun: "عن لدن",
     experienceYears: "سنوات الخبرة",
-    projectsUnits: "وحدات سكنية تم تطويرها",
-    affiliate: "شركاتنا التابعة ",
-    projectsInvestment: "المشاريع الاستثمارية ",
-    unitsUnderProcess: "وحدات سكنية جاري تطويرها",
+    projectsUnits: " وحـــــــــــــدة مطـــــــــورة  ",
+    waiting: "وقــــــــــــيد التطـــــــــوير",
+    affiliate: " شركة تابعة ",
+    projectsInvestment: "مليار ريال سعودي إجمالي قيمة المشاريع ",
+    unitsUnderProcess: "   مليون متر مربع   إجمالي مساحة المشاريع",
     projectsRevenue: "مليار ريال سعودي إجمالي قيمة المشاريع",
     choose: "إختر",
     shareYourInterestWithUs: "سجل اهتمامك معنا وسيتم التواصل معكم قريبا !",
@@ -142,9 +143,6 @@ export default {
     mosque: "عدد الجوامع و المساجد",
     other: "اخرى",
     click_search: "ابحث هنا ",
-<<<<<<< HEAD
-    reports:"التقارير السنوية"
-=======
-    reports: "التارير السنوية",
->>>>>>> 117d3a0 (new commit 4)
+    reports: "التقارير السنوية",
+    Investment_project: "مشروع استثماري",
 };
