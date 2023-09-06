@@ -16,7 +16,7 @@
                                  class=" rounded-xl  bg-[#fff8f8]  mx-2 "
                                  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                  <div class="w-full relative z-10">
-                                    
+
                                     <Carousel :autoplay="false" :pictures="getGallery(project.gallery)"
                                               class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px] [&>button>span]:hidden [&>div>button]:hidden  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
                                 </div>
