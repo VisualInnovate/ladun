@@ -220,7 +220,7 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1  gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
 
-                <div v-if="project.land_area "
+                <div v-if="project.land_area && project.land_area!=0"
 
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
@@ -233,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="project.building_area "
+                <div v-if="project.building_area && project.building_area!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="project.units_number "
+                <div v-if="project.units_number && project.units_number!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -257,7 +257,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="project.models_number "
+                <div v-if="project.models_number && project.models_number!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -270,7 +270,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.facilities "
+                <div v-if="project.facilities && project.facilities!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -283,7 +283,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.commercial "
+                <div v-if="project.commercial && project.commercial!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -296,7 +296,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.investment "
+                <div v-if="project.investment && project.investment!=0"
 
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
@@ -310,7 +310,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.government "
+                <div v-if="project.government && project.government!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -323,7 +323,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.government "
+                <div v-if="project.government && project.government!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <diV class="grid grid-cols-1 md:grid-cols-2">
@@ -336,7 +336,7 @@
                     </diV>
                 </div>
 
-                <div v-if="project.gardens "
+                <div v-if="project.gardens && project.gardens!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -349,7 +349,7 @@
                     </div>
                 </div>
 
-                <div v-if="project.mosque "
+                <div v-if="project.mosque && project.mosque!=0"
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
@@ -408,8 +408,8 @@
     <section id="serves" class="bg-[white]  py-[3%]">
         <div class="container  mx-auto">
             <div class="flex">
-                <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1" style="color: rgba(25,83,177,1)"
+                     xmlns="http://www.w3.org/2000/svg" fill="#213350">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -435,7 +435,7 @@
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                         fill="#000000" class="bi bi-signpost-split">
+                         fill="rgba(25,83,177,1)" class="bi bi-signpost-split">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                         <g id="SVGRepo_iconCarrier">
@@ -446,7 +446,7 @@
                     <p class="mx-4 text-2xl"> {{ $t('sidewalks') }} <br>{{ $t('roads') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1"
+                    <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="rgba(25,83,177,1)" class="icon" version="1.1"
                          xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -801,9 +801,10 @@
 
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
-    <section class=" company-info  bg-[white]" id="downloads">
 
-        <div class="container mx-auto" v-if="project.partner_image != '' && project.partner_image">
+    <section class=" company-info  bg-[white]" v-if="project.partner_image != '' && project.partner_image">
+
+        <div class="container mx-auto" >
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("partners") }}</p>
                 <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -836,7 +837,8 @@
                 class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
             >
                 <div class="flex-auto md:w-1/2 right">
-                    <div class="bg-black rounded-lg mb-14 pt-12">
+                    <div class="bg-[#57565B] rounded-lg mb-14 pt-12" >
+                        <h3 class="text-center mb-5 text-white">{{$t('pleaseFill')}}</h3>
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->

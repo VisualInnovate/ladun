@@ -59,7 +59,7 @@ export default {
     location: "Location",
     followUs: "Follow Us on Social Media Platforms",
     pleaseFill:
-        "Please fill the following to increase your acceptance chances ",
+        "Please fill the below ",
     gender: "Gender",
     academicCertification: "Academic Certification",
     specialization: "Specialization",
