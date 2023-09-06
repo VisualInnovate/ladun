@@ -142,6 +142,26 @@ export default {
     mosque: "عدد الجوامع و المساجد",
     other: "اخرى",
     click_search: "ابحث هنا ",
-    reports:"التقارير السنوية"
+    reports:"التقارير السنوية",
+    realState: "التطوير العقاري",
+    certified : "معتمد برقم",
+    video_360:"جوله افتراضيه 360",
+    paved:"معبدة",
+
+
+
+    roads:"طرق",
+    sidewalks:"ارصفة",
+    sanitation:"صرف",
+    fiber:"فايبر",
+    network:"شبكة",
+    electric:'كهرباء',
+    lighting:'اضائة',
+    water:'مياه',
+
+    rain:'امطار',
+    drainage:'تصريف'
+
+
 
 };

@@ -53,7 +53,7 @@
             </h2>
         </div>
         <div
-            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
+            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab

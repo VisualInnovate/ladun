@@ -83,7 +83,7 @@ export default {
     call_us: "Call Us",
     video: "video project",
     boradOfDirectors: "Board Of Directors",
-    project: "Project",
+    project: "Completion rate",
     gallary_project: "Media Project Gallery",
     high_level_utility: "high level utility",
     high_level_utility_p: "for more information please contact on email",
@@ -106,7 +106,7 @@ export default {
         "If you are calling from outside the Kingdom of Saudi Arabia, please call us at 9692001156",
     inquiriesNotes: "For Inquiries and Notes",
     areaOfLand: "Area of Land",
-    utilities: "Facilities",
+    utilities: "Project services",
     downloads: "Downloads",
     projectModels: "Project Models",
     askUs: "INQUIRE NOW",
@@ -146,4 +146,20 @@ export default {
     other: "Other",
     click_search: "click to search",
     reports: "Annual Reports",
+
+    realState:"Real State",
+    certified:"certified By Number",
+    video_360:"360 virtual tour",
+    paved:"paved",
+    roads:"roads",
+    sidewalks:"sidewalks",
+    sanitation:"sanitation",
+    fiber:"fiber",
+    network:"network",
+    electric:'electric',
+    lighting:'lighting',
+    water:'water',
+
+    rain:'Rain',
+    drainage:'drainage'
 };
