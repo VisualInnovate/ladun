@@ -9,7 +9,7 @@
     <section class="media-center py-28 bg-background-section pt-32">
         <div class="container mx-auto">
             <!--            {{financials}}-->
-            <div class="flex">
+            <div class="flex flex-wrap">
                 <div>
                     <div v-for="f  in financials" :key="index" class="mb-12">
                         <div v-for="(financial,index ) in f">

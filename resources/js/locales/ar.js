@@ -142,9 +142,6 @@ export default {
     mosque: "عدد الجوامع و المساجد",
     other: "اخرى",
     click_search: "ابحث هنا ",
-<<<<<<< HEAD
     reports:"التقارير السنوية"
-=======
-    reports: "التارير السنوية",
->>>>>>> 117d3a0 (new commit 4)
+
 };
