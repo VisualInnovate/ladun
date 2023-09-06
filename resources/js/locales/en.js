@@ -88,6 +88,7 @@ export default {
     high_level_utility: "high level utility",
     high_level_utility_p: "for more information please contact on email",
     Download_Project_Files: "Download Project Files",
+    partners: "partners project",
     Download_Project_Files_p:
         "A real estate asset that is managed by Laden Investments, located in the Bride of the Red Sea and in a strategic location in the North\n" +
         " Jeddah and near many attractions and high-end services, the Aqua Compound was distinguished by its distinctive style, which",

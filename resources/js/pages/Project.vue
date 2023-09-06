@@ -4,12 +4,13 @@
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
         <img class="h-[50vh] md:h-auto w-[100%]" src="../../img/real-state-management-banner.png">
 
-        <div class="z-40 text-white absolute top-[100%] -translate-y-[100%] right-[3%] -translate-x-[100%] text-justify">
+        <div
+            class="z-40 text-white absolute top-[100%] -translate-y-[100%] right-[3%] -translate-x-[100%] text-justify">
 
-                <img class="animate__animated animate__backInDown max-w-[170px] "
-                     id="logo-project"
-                     v-if="project.logo"
-                     :src="project.logo.original_url">
+            <img class="animate__animated animate__backInDown max-w-[170px] "
+                 id="logo-project"
+                 v-if="project.logo"
+                 :src="project.logo.original_url">
 
         </div>
 
@@ -23,16 +24,15 @@
                 <div class=" h-full flex justify-between py-4  "
                 >
                     <div class="  mx-auto px-4" style="border-right: 2px solid #AF9751;">
-                        <p class="text-2xl font-bold truncate">{{$t('realState')}}</p>
+                        <p class="text-2xl font-bold truncate">{{ $t('realState') }}</p>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
-                        <p class="text-lg">{{$t('certified')}}</p>
+                        <p class="text-lg">{{ $t('certified') }}</p>
                     </div>
                     <p class=" w-[90%] mb-12 text-sm px-2 py-4 text-right " v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
 
                 </div>
-
 
 
             </div>
@@ -47,8 +47,9 @@
             <div class=" w-full  m-auto ">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 mx-auto items-center ">
-                    <div class="mx-auto mb-3 md:mb-0 flex"  v-if="project.phases.length">
-                        <svg class="my-auto" width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#AF9751" d="M600.704 64a32 32 0 0 1 30.464 22.208l35.2 109.376c14.784 7.232 28.928 15.36 42.432 24.512l112.384-24.192a32 32 0 0 1 34.432 15.36L944.32 364.8a32 32 0 0 1-4.032 37.504l-77.12 85.12a357.12 357.12 0 0 1 0 49.024l77.12 85.248a32 32 0 0 1 4.032 37.504l-88.704 153.6a32 32 0 0 1-34.432 15.296L708.8 803.904c-13.44 9.088-27.648 17.28-42.368 24.512l-35.264 109.376A32 32 0 0 1 600.704 960H423.296a32 32 0 0 1-30.464-22.208L357.696 828.48a351.616 351.616 0 0 1-42.56-24.64l-112.32 24.256a32 32 0 0 1-34.432-15.36L79.68 659.2a32 32 0 0 1 4.032-37.504l77.12-85.248a357.12 357.12 0 0 1 0-48.896l-77.12-85.248A32 32 0 0 1 79.68 364.8l88.704-153.6a32 32 0 0 1 34.432-15.296l112.32 24.256c13.568-9.152 27.776-17.408 42.56-24.64l35.2-109.312A32 32 0 0 1 423.232 64H600.64zm-23.424 64H446.72l-36.352 113.088-24.512 11.968a294.113 294.113 0 0 0-34.816 20.096l-22.656 15.36-116.224-25.088-65.28 113.152 79.68 88.192-1.92 27.136a293.12 293.12 0 0 0 0 40.192l1.92 27.136-79.808 88.192 65.344 113.152 116.224-25.024 22.656 15.296a294.113 294.113 0 0 0 34.816 20.096l24.512 11.968L446.72 896h130.688l36.48-113.152 24.448-11.904a288.282 288.282 0 0 0 34.752-20.096l22.592-15.296 116.288 25.024 65.28-113.152-79.744-88.192 1.92-27.136a293.12 293.12 0 0 0 0-40.256l-1.92-27.136 79.808-88.128-65.344-113.152-116.288 24.96-22.592-15.232a287.616 287.616 0 0 0-34.752-20.096l-24.448-11.904L577.344 128zM512 320a192 192 0 1 1 0 384 192 192 0 0 1 0-384zm0 64a128 128 0 1 0 0 256 128 128 0 0 0 0-256z"></path></g></svg>
+                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.phases.length">
+                        <img src="../../img/project_percentage.png" style="width: 28px;height: 28px">
+
 
                         <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -60,8 +61,17 @@
 
                     </div>
 
-                    <div class=" mx-auto mb-3 md:mb-0 flex " v-if="project.project_models.length" >
-                        <svg  width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M904.630857 240.054857c0.950857-9.435429-7.021714-19.382857-16.676571-24.283428L461.531429 2.633143a24.137143 24.137143 0 0 0-21.796572 0L13.531429 215.771429c-15.872 10.386286-13.385143 33.426286-13.385143 35.84V706.56c0 8.411429 4.388571 16.310857 11.702857 20.772571 0 0 417.060571 252.050286 424.228571 255.268572 14.628571 7.241143 23.844571 5.266286 30.72 1.755428L605.622857 904.045714c11.849143-6.948571 12.8-17.481143 11.264-35.693714-1.536-18.139429-17.408-28.013714-29.037714-21.284571-11.702857 6.656-103.497143 61.952-103.497143 61.952V493.568L852.114286 279.405714l38.692571-23.405714c7.68-4.973714 12.726857-11.337143 13.750857-15.945143z m-486.4 663.917714L63.780571 687.908571V290.230857L418.157714 493.714286v410.185143z m32.402286-476.525714L113.517714 236.324571 450.633143 67.876571l337.042286 168.448-337.042286 191.122286z m554.276571 335.872l-189.44 113.737143c-10.605714 7.387429-21.796571-0.877714-21.796571-0.877714-1.024-0.219429-188.635429-112.859429-188.635429-112.859429a18.139429 18.139429 0 0 1-8.850285-15.579428v-203.337143c0-6.582857 3.364571-18.066286 16.822857-23.259429l183.808-101.668571a18.870857 18.870857 0 0 1 16.091428 0l184.027429 101.668571h-1.462857c0.512 0 1.243429 0 1.755428 0.292572l4.754286 2.413714c5.997714 2.852571 11.556571 8.045714 11.556571 15.36v208.457143a18.432 18.432 0 0 1-8.630857 15.652571zM667.209143 540.818286l136.630857 76.726857 138.605714-76.726857L803.84 464.457143 667.209143 540.818286z m163.84 277.942857l139.702857-84.260572V582.802286l-139.702857 79.213714v156.672z m-49.517714-2.486857V662.747429l-136.996572-77.531429v148.48l136.996572 82.651429z" fill="#AF9751"></path></g></svg>
+                    <div class=" mx-auto mb-3 md:mb-0 flex " v-if="project.project_models.length">
+                        <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M904.630857 240.054857c0.950857-9.435429-7.021714-19.382857-16.676571-24.283428L461.531429 2.633143a24.137143 24.137143 0 0 0-21.796572 0L13.531429 215.771429c-15.872 10.386286-13.385143 33.426286-13.385143 35.84V706.56c0 8.411429 4.388571 16.310857 11.702857 20.772571 0 0 417.060571 252.050286 424.228571 255.268572 14.628571 7.241143 23.844571 5.266286 30.72 1.755428L605.622857 904.045714c11.849143-6.948571 12.8-17.481143 11.264-35.693714-1.536-18.139429-17.408-28.013714-29.037714-21.284571-11.702857 6.656-103.497143 61.952-103.497143 61.952V493.568L852.114286 279.405714l38.692571-23.405714c7.68-4.973714 12.726857-11.337143 13.750857-15.945143z m-486.4 663.917714L63.780571 687.908571V290.230857L418.157714 493.714286v410.185143z m32.402286-476.525714L113.517714 236.324571 450.633143 67.876571l337.042286 168.448-337.042286 191.122286z m554.276571 335.872l-189.44 113.737143c-10.605714 7.387429-21.796571-0.877714-21.796571-0.877714-1.024-0.219429-188.635429-112.859429-188.635429-112.859429a18.139429 18.139429 0 0 1-8.850285-15.579428v-203.337143c0-6.582857 3.364571-18.066286 16.822857-23.259429l183.808-101.668571a18.870857 18.870857 0 0 1 16.091428 0l184.027429 101.668571h-1.462857c0.512 0 1.243429 0 1.755428 0.292572l4.754286 2.413714c5.997714 2.852571 11.556571 8.045714 11.556571 15.36v208.457143a18.432 18.432 0 0 1-8.630857 15.652571zM667.209143 540.818286l136.630857 76.726857 138.605714-76.726857L803.84 464.457143 667.209143 540.818286z m163.84 277.942857l139.702857-84.260572V582.802286l-139.702857 79.213714v156.672z m-49.517714-2.486857V662.747429l-136.996572-77.531429v148.48l136.996572 82.651429z"
+                                    fill="#AF9751"></path>
+                            </g>
+                        </svg>
                         <a class="relative px-1 inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#serves',
@@ -71,7 +81,7 @@
                         </a>
                     </div>
                     <div class="mx-auto mb-3 md:mb-0 flex truncate" v-if="project.phases.length">
-                        <svg width="20px" height="20px" viewBox="0 0 6.3500002 6.3500002" id="svg1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs1970"></defs> <g id="layer1" style="display:inline"> <path d="m 2.5032059,-0.0095735 c -0.043217,-6.35e-4 -0.0909,0.00531 -0.1493441,0.024289 C 2.2369795,0.0525379 2.1848433,0.1094109 2.1259683,0.1650936 2.0670958,0.2207129 2.0130256,0.2808305 1.9606037,0.3407933 1.8557572,0.4607694 1.7291409,0.5919178 1.7440793,0.5810887 1.7590282,0.5703466 1.5965582,0.6493864 1.4500399,0.7118302 1.3767847,0.7430018 1.3005529,0.7771219 1.2293826,0.8156998 1.1582044,0.8544035 1.0898255,0.885282 1.0175096,0.9846817 0.9451937,1.0840436 0.9358089,1.159797 0.9208732,1.2394466 0.9059507,1.319096 0.8985953,1.400403 0.8914171,1.479742 0.8770502,1.6384195 0.8500416,1.8161314 0.8557619,1.7985856 c 0.00572,-0.017558 -0.07988,0.1429176 -0.1617478,0.2795696 -0.040934,0.068351 -0.082447,0.141311 -0.1173056,0.214457 -0.034859,0.073146 -0.069638,0.1380463 -0.069763,0.2609662 -1.217e-4,0.1229198 0.03557,0.1882605 0.070279,0.2614827 0.034711,0.073247 0.07651,0.1434605 0.1173057,0.2118733 0.081592,0.1368131 0.1663991,0.2976496 0.1607158,0.2800863 -0.00569,-0.017526 0.019526,0.1632389 0.033589,0.3219442 0.00704,0.079296 0.014684,0.1606161 0.029456,0.2402954 0.014764,0.079742 0.022966,0.1557634 0.095083,0.2552817 0.072115,0.099531 0.1412954,0.130652 0.2123916,0.1694987 0.071099,0.038784 0.1469443,0.071021 0.2201413,0.1023191 0.1463886,0.062722 0.3099884,0.1442029 0.2950712,0.1333254 -0.014922,-0.010713 0.109855,0.1175901 0.2144581,0.2377115 0.0523,0.060092 0.1060847,0.1214847 0.1648486,0.1772502 0.058759,0.055816 0.1110827,0.1117997 0.2278909,0.1498616 0.1168056,0.03815 0.190463,0.023744 0.2707852,0.013435 0.080328,-0.010432 0.1605915,-0.026186 0.2382282,-0.043925 0.1552734,-0.035351 0.3341952,-0.068207 0.3157432,-0.068213 -0.018441,-1.85e-5 0.1595093,0.03148 0.3147086,0.06718 0.077602,0.017849 0.1568874,0.035993 0.2371963,0.046509 0.08029,0.010893 0.1544188,0.024387 0.2713012,-0.013436 C 4.1130209,5.0582357 4.1651597,5.0033666 4.2240321,4.9477472 4.2829046,4.8921276 4.3395598,4.8298801 4.3919791,4.7699803 4.4968281,4.6500042 4.6208595,4.521427 4.6059211,4.5322686 4.5909722,4.543008 4.7555086,4.4639712 4.9020269,4.4015274 4.9752821,4.3703558 5.0494475,4.3357186 5.1206178,4.2971408 5.1917933,4.258437 5.2601749,4.2280628 5.3324908,4.1286758 5.4048041,4.0293137 5.4141915,3.9535603 5.4291272,3.8739109 5.4440497,3.7942615 5.4514051,3.7129545 5.4585806,3.6336155 5.4729475,3.4749377 5.4999562,3.2946422 5.4942385,3.312188 5.4885235,3.3297458 5.5741162,3.1692831 5.6559863,3.0326187 5.69692,2.9642673 5.7384331,2.8938913 5.7732919,2.8207451 5.8081508,2.7475992 5.8429303,2.6827115 5.8430546,2.5597792 5.8431763,2.4368593 5.807484,2.3715183 5.7727734,2.2982965 5.7380653,2.2250492 5.6967824,2.152252 5.6559863,2.0838392 5.5743941,1.9470137 5.4890712,1.7882568 5.4947545,1.8058201 5.500443,1.8233461 5.4752282,1.6425809 5.4611656,1.4838759 5.4541542,1.404454 5.4464812,1.3232598 5.4317096,1.2435805 5.4169458,1.163838 5.4087437,1.0878171 5.3366262,0.9882988 5.2645114,0.8887679 5.1953308,0.8581762 5.1242346,0.8193169 5.0531358,0.7805332 4.977285,0.7458378 4.9040933,0.7144138 4.7577047,0.6516914 4.5941022,0.5728705 4.6090221,0.5836723 4.6239446,0.5943853 4.499683,0.4630319 4.39508,0.3428602 4.3427798,0.282768 4.2884767,0.2219049 4.2297154,0.1661267 4.1709567,0.1103108 4.1186327,0.0543271 4.0018218,0.0162652 3.8850188,-0.0218851 3.8113668,-0.0055365 3.7310393,0.004896 3.6507118,0.0153285 3.5704478,0.0315991 3.4928111,0.0493378 3.3375377,0.0846891 3.1586212,0.1174185 3.1770679,0.1175506 3.1955094,0.1175694 3.0175559,0.0834873 2.8623566,0.0477876 2.784757,0.0299388 2.7054693,0.0138614 2.6251629,0.0033458 2.5850177,-0.002102 2.5464229,-0.0089361 2.5032059,-0.0095735 Z m 0.6810957,1.3916462 a 0.26407552,0.26514563 1.664302 0 1 0.2098067,0.1069702 l 0.3064404,0.4149617 0.5167657,0.1953371 a 0.26407552,0.26514563 1.664302 0 1 0.1209225,0.403076 L 4.0395461,2.9240974 4.0142255,3.4780688 A 0.26407552,0.26514563 1.664302 0 1 3.6721272,3.7188812 L 3.1791343,3.563335 2.6468667,3.7090625 A 0.26407552,0.26514563 1.664302 0 1 2.3109702,3.4548146 L 2.3068427,2.9364998 2.0050537,2.4734789 A 0.26407552,0.26514563 1.664302 0 1 2.1404463,2.0760872 L 2.6324046,1.9133065 2.9781198,1.4807747 a 0.26407552,0.26514563 1.664302 0 1 0.1865524,-0.098185 0.26407552,0.26514563 1.664302 0 1 0.019632,-5.292e-4 z" id="path802" style="color:#AF9751;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#AF9751;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#AF9751;solid-opacity:1;vector-effect:none;fill:#AF9751;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#AF9751"></path> <path d="m 1.32395,4.6940153 v 0.8454266 c 0,0.22689 0.085796,0.4353634 0.2320264,0.5999633 0.073102,0.0823 0.1640284,0.155757 0.2831888,0.1953369 0.1191578,0.0396 0.2710842,0.033444 0.396875,-0.029456 L 3.1755175,5.8365814 4.1149947,6.3052865 a 0.26460996,0.26460996 0 0 0 0.1188561,0.027389 c 0.4351602,0 0.7932315,-0.3580833 0.7932315,-0.7932332 V 4.6976326 c -0.1063255,0.047962 -0.2399666,0.1090639 -0.2284096,0.1007693 0.01696,-0.0123 -0.1239096,0.1336209 -0.2428795,0.2697509 -0.059468,0.06796 -0.1238859,0.1384379 -0.1906852,0.2015381 -0.066799,0.0631 -0.1257724,0.1255652 -0.2583815,0.168465 -0.1326198,0.0429 -0.2168922,0.027386 -0.3079909,0.014986 -0.09112,-0.011999 -0.1806178,-0.03241 -0.2687188,-0.05271 -0.1760908,-0.0405 -0.3779838,-0.075984 -0.3570843,-0.075964 0.020929,0 -0.1824646,0.036898 -0.3586348,0.076998 -0.08809,0.0201 -0.1791679,0.038326 -0.2702666,0.050126 -0.09113,0.0117 -0.1744398,0.027797 -0.306959,-0.015502 C 2.1045317,5.3929098 2.0448735,5.3293743 1.9781747,5.2660743 1.9114944,5.2028043 1.8504047,5.133253 1.7911063,5.0650529 1.6724248,4.9287629 1.5313251,4.7831021 1.5482267,4.795302 1.5595777,4.803572 1.4276667,4.741909 1.32395,4.6940153 Z" id="path804" style="color:#AF9751;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#AF9751;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#AF9751;solid-opacity:1;vector-effect:none;fill:#AF9751;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#AF9751"></path> </g> </g></svg>
+                        <img src="../../img/models_icon.png" style="width: 26px;height: 26px">
                         <a class="  truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#modale',
@@ -80,8 +90,16 @@
                             {{ $t('modale') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex"  v-if="project.gallery.length">
-                        <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path> </g></svg>
+                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery.length">
+                        <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                             fill="none">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path>
+                            </g>
+                        </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#images',
@@ -91,7 +109,26 @@
                         </a>
                     </div>
                     <div class="mx-auto mb-3 md:mb-0 flex" v-if="videoo!='' && videoo">
-                        <svg class="px-1" width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z" stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        <svg class="px-1" width="26px" height="26px" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
+                                      stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                                <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path
+                                    d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
+                                    stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#video',
@@ -101,8 +138,10 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex truncate" v-if="project.project_video!='' && project.project_video">
-                        <svg width="24px" height="24px" class="mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.51018 14.9907C4.15862 16.831 5.38765 18.4108 7.01208 19.492C8.63652 20.5732 10.5684 21.0972 12.5165 20.9851C14.4647 20.873 16.3237 20.1308 17.8133 18.8704C19.303 17.61 20.3426 15.8996 20.7756 13.997C21.2086 12.0944 21.0115 10.1026 20.214 8.32177C19.4165 6.54091 18.0617 5.06746 16.3539 4.12343C14.6461 3.17941 12.6777 2.81593 10.7454 3.08779C7.48292 3.54676 5.32746 5.91142 3 8M3 8V2M3 8H9" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <div class="mx-auto  mb-3 md:mb-0 flex truncate"
+                         v-if="project.project_video!='' && project.project_video">
+                        <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+
                         <a class="px-1 truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#video3d',
@@ -113,7 +152,21 @@
                     </div>
 
                     <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
-                        <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#location',
@@ -124,10 +177,18 @@
                     </div>
 
 
-
-
                     <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.1198 22 8.79986 22H12.5M14 11H8M10 15H8M16 7H8M15 19L18 22M18 22L21 19M18 22V16" stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.1198 22 8.79986 22H12.5M14 11H8M10 15H8M16 7H8M15 19L18 22M18 22L21 19M18 22V16"
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#downloads',
@@ -161,7 +222,7 @@
 
                 <div v-if="project.land_area "
 
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
@@ -173,7 +234,7 @@
                     </div>
                 </div>
                 <div v-if="project.building_area "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
@@ -185,7 +246,7 @@
                     </div>
                 </div>
                 <div v-if="project.units_number "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[20%] md:w-[50%] m-auto"
@@ -197,9 +258,9 @@
                     </div>
                 </div>
                 <div v-if="project.models_number "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div  class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
                         <div class="my-auto mx-auto text-[14px]">
@@ -210,7 +271,7 @@
                 </div>
 
                 <div v-if="project.facilities "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
@@ -223,7 +284,7 @@
                 </div>
 
                 <div v-if="project.commercial "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
@@ -237,7 +298,7 @@
 
                 <div v-if="project.investment "
 
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
@@ -250,7 +311,7 @@
                 </div>
 
                 <div v-if="project.government "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
@@ -263,7 +324,7 @@
                 </div>
 
                 <div v-if="project.government "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <diV class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
@@ -276,7 +337,7 @@
                 </div>
 
                 <div v-if="project.gardens "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
@@ -289,7 +350,7 @@
                 </div>
 
                 <div v-if="project.mosque "
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
@@ -315,10 +376,10 @@
     <!-- project section -->
     <!-- project phases section -->
     <section id="project_phases" class="py-16 bg-[white]" v-if="project.phases.length">
-      <div class="flex w-[80%] m-auto">
-        <svg class="my-auto " width="33px" height="33px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#AF9751" d="M600.704 64a32 32 0 0 1 30.464 22.208l35.2 109.376c14.784 7.232 28.928 15.36 42.432 24.512l112.384-24.192a32 32 0 0 1 34.432 15.36L944.32 364.8a32 32 0 0 1-4.032 37.504l-77.12 85.12a357.12 357.12 0 0 1 0 49.024l77.12 85.248a32 32 0 0 1 4.032 37.504l-88.704 153.6a32 32 0 0 1-34.432 15.296L708.8 803.904c-13.44 9.088-27.648 17.28-42.368 24.512l-35.264 109.376A32 32 0 0 1 600.704 960H423.296a32 32 0 0 1-30.464-22.208L357.696 828.48a351.616 351.616 0 0 1-42.56-24.64l-112.32 24.256a32 32 0 0 1-34.432-15.36L79.68 659.2a32 32 0 0 1 4.032-37.504l77.12-85.248a357.12 357.12 0 0 1 0-48.896l-77.12-85.248A32 32 0 0 1 79.68 364.8l88.704-153.6a32 32 0 0 1 34.432-15.296l112.32 24.256c13.568-9.152 27.776-17.408 42.56-24.64l35.2-109.312A32 32 0 0 1 423.232 64H600.64zm-23.424 64H446.72l-36.352 113.088-24.512 11.968a294.113 294.113 0 0 0-34.816 20.096l-22.656 15.36-116.224-25.088-65.28 113.152 79.68 88.192-1.92 27.136a293.12 293.12 0 0 0 0 40.192l1.92 27.136-79.808 88.192 65.344 113.152 116.224-25.024 22.656 15.296a294.113 294.113 0 0 0 34.816 20.096l24.512 11.968L446.72 896h130.688l36.48-113.152 24.448-11.904a288.282 288.282 0 0 0 34.752-20.096l22.592-15.296 116.288 25.024 65.28-113.152-79.744-88.192 1.92-27.136a293.12 293.12 0 0 0 0-40.256l-1.92-27.136 79.808-88.128-65.344-113.152-116.288 24.96-22.592-15.232a287.616 287.616 0 0 0-34.752-20.096l-24.448-11.904L577.344 128zM512 320a192 192 0 1 1 0 384 192 192 0 0 1 0-384zm0 64a128 128 0 1 0 0 256 128 128 0 0 0 0-256z"></path></g></svg>
-        <h1 class="my-auto font-bold text-light-brown  ">{{ $t('projectPhases') }}</h1>
-      </div>
+        <div class="flex w-[80%] m-auto">
+            <img src="../../img/project_percentage.png" style="width: 30px;height: 30px">
+            <h1 class="my-auto font-bold text-light-brown  ">{{ $t('projectPhases') }}</h1>
+        </div>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto " v-if="project.phases">
 
             <div class=" progress " v-for="phase in phases">
@@ -327,12 +388,15 @@
                 <div class="  p-5 font-bold ">
 
                     <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
-                    <CircleProgressBar :value="phase.achieve_percentage " style="color: #213350" :max="100" percentage colorUnfilled="rgba(25,83,177,1)"
+                    <CircleProgressBar :value="phase.achieve_percentage " style="color: #213350" :max="100" percentage
+                                       colorUnfilled="rgba(25,83,177,1)"
                                        animationDuration="2s"
                                        rounded>
                     </CircleProgressBar>
 
-                    <h5 class="pb-2 text-center mt-4 font-light"  style="color: #213350">{{ phase.name[$i18n.locale] }}</h5>
+                    <h5 class="pb-2 text-center mt-4 font-light" style="color: #213350">{{
+                            phase.name[$i18n.locale]
+                        }}</h5>
 
 
                 </div>
@@ -341,12 +405,21 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section id="serves" class="bg-[white]  py-[3%]" >
+    <section id="serves" class="bg-[white]  py-[3%]">
         <div class="container  mx-auto">
-           <div class="flex">
-            <svg  width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M904.630857 240.054857c0.950857-9.435429-7.021714-19.382857-16.676571-24.283428L461.531429 2.633143a24.137143 24.137143 0 0 0-21.796572 0L13.531429 215.771429c-15.872 10.386286-13.385143 33.426286-13.385143 35.84V706.56c0 8.411429 4.388571 16.310857 11.702857 20.772571 0 0 417.060571 252.050286 424.228571 255.268572 14.628571 7.241143 23.844571 5.266286 30.72 1.755428L605.622857 904.045714c11.849143-6.948571 12.8-17.481143 11.264-35.693714-1.536-18.139429-17.408-28.013714-29.037714-21.284571-11.702857 6.656-103.497143 61.952-103.497143 61.952V493.568L852.114286 279.405714l38.692571-23.405714c7.68-4.973714 12.726857-11.337143 13.750857-15.945143z m-486.4 663.917714L63.780571 687.908571V290.230857L418.157714 493.714286v410.185143z m32.402286-476.525714L113.517714 236.324571 450.633143 67.876571l337.042286 168.448-337.042286 191.122286z m554.276571 335.872l-189.44 113.737143c-10.605714 7.387429-21.796571-0.877714-21.796571-0.877714-1.024-0.219429-188.635429-112.859429-188.635429-112.859429a18.139429 18.139429 0 0 1-8.850285-15.579428v-203.337143c0-6.582857 3.364571-18.066286 16.822857-23.259429l183.808-101.668571a18.870857 18.870857 0 0 1 16.091428 0l184.027429 101.668571h-1.462857c0.512 0 1.243429 0 1.755428 0.292572l4.754286 2.413714c5.997714 2.852571 11.556571 8.045714 11.556571 15.36v208.457143a18.432 18.432 0 0 1-8.630857 15.652571zM667.209143 540.818286l136.630857 76.726857 138.605714-76.726857L803.84 464.457143 667.209143 540.818286z m163.84 277.942857l139.702857-84.260572V582.802286l-139.702857 79.213714v156.672z m-49.517714-2.486857V662.747429l-136.996572-77.531429v148.48l136.996572 82.651429z" fill="#AF9751"></path></g></svg>
-            <h2 class="text-3xl font-bold text-light-brown ">{{ $t("high_level_utility") }}</h2>
-           </div>
+            <div class="flex">
+                <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M904.630857 240.054857c0.950857-9.435429-7.021714-19.382857-16.676571-24.283428L461.531429 2.633143a24.137143 24.137143 0 0 0-21.796572 0L13.531429 215.771429c-15.872 10.386286-13.385143 33.426286-13.385143 35.84V706.56c0 8.411429 4.388571 16.310857 11.702857 20.772571 0 0 417.060571 252.050286 424.228571 255.268572 14.628571 7.241143 23.844571 5.266286 30.72 1.755428L605.622857 904.045714c11.849143-6.948571 12.8-17.481143 11.264-35.693714-1.536-18.139429-17.408-28.013714-29.037714-21.284571-11.702857 6.656-103.497143 61.952-103.497143 61.952V493.568L852.114286 279.405714l38.692571-23.405714c7.68-4.973714 12.726857-11.337143 13.750857-15.945143z m-486.4 663.917714L63.780571 687.908571V290.230857L418.157714 493.714286v410.185143z m32.402286-476.525714L113.517714 236.324571 450.633143 67.876571l337.042286 168.448-337.042286 191.122286z m554.276571 335.872l-189.44 113.737143c-10.605714 7.387429-21.796571-0.877714-21.796571-0.877714-1.024-0.219429-188.635429-112.859429-188.635429-112.859429a18.139429 18.139429 0 0 1-8.850285-15.579428v-203.337143c0-6.582857 3.364571-18.066286 16.822857-23.259429l183.808-101.668571a18.870857 18.870857 0 0 1 16.091428 0l184.027429 101.668571h-1.462857c0.512 0 1.243429 0 1.755428 0.292572l4.754286 2.413714c5.997714 2.852571 11.556571 8.045714 11.556571 15.36v208.457143a18.432 18.432 0 0 1-8.630857 15.652571zM667.209143 540.818286l136.630857 76.726857 138.605714-76.726857L803.84 464.457143 667.209143 540.818286z m163.84 277.942857l139.702857-84.260572V582.802286l-139.702857 79.213714v156.672z m-49.517714-2.486857V662.747429l-136.996572-77.531429v148.48l136.996572 82.651429z"
+                            fill="#AF9751"></path>
+                    </g>
+                </svg>
+                <h2 class="text-3xl font-bold text-light-brown ">{{ $t("high_level_utility") }}</h2>
+            </div>
             <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-20 gap-5 lg:w-[70%] m-auto py-[3%]">
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg fill="#000000" width="64px" height="64px" viewBox="0 0 24 24"
@@ -358,7 +431,7 @@
                                 d="M7.97,2.242l-5,20A1,1,0,0,1,2,23a1.025,1.025,0,0,1-.244-.03,1,1,0,0,1-.727-1.212l5-20a1,1,0,1,1,1.94.484Zm10-.484a1,1,0,1,0-1.94.484l5,20A1,1,0,0,0,22,23a1.017,1.017,0,0,0,.243-.03,1,1,0,0,0,.728-1.212ZM12,1a1,1,0,0,0-1,1V6a1,1,0,0,0,2,0V2A1,1,0,0,0,12,1Zm0,7.912a1,1,0,0,0-1,1v4.176a1,1,0,1,0,2,0V9.912A1,1,0,0,0,12,8.912ZM12,17a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V18A1,1,0,0,0,12,17Z"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{$t('roads')}} <br>{{ $t('paved') }}</p>
+                    <p class="mx-4 text-2xl">{{ $t('roads') }} <br>{{ $t('paved') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
@@ -370,7 +443,7 @@
                                 d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl"> {{$t('sidewalks')}} <br>{{$t('roads')}}</p>
+                    <p class="mx-4 text-2xl"> {{ $t('sidewalks') }} <br>{{ $t('roads') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1"
@@ -383,7 +456,7 @@
                         </g>
                     </svg>
 
-                    <p v-if="$i18n.locale == 'en' " class="mx-4 text-2xl">{{$t('sanitation')}} </p>
+                    <p v-if="$i18n.locale == 'en' " class="mx-4 text-2xl">{{ $t('sanitation') }} </p>
                     <p v-if="$i18n.locale == 'ar' " class="mx-4 text-2xl">صرف <br>صحي</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
@@ -406,23 +479,58 @@
                             </g>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{$t('network')}} <br> {{$t('fiber')}}</p>
+                    <p class="mx-4 text-2xl">{{ $t('network') }} <br> {{ $t('fiber') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>battery-negative</title> <path d="M12.563 1c-0.937 0-1.25 0.211-1.25 1.25v0.937h-2.813c-1.847 0-2.187 0.341-2.187 2.187v23.438c0 1.847 0.341 2.187 2.187 2.187h15c1.847 0 2.187-0.341 2.187-2.187v-23.438c0-1.847-0.341-2.187-2.187-2.187h-2.813v-0.937c0-1.038-0.312-1.25-1.25-1.25h-6.875zM8.5 7.563c0-2.5-0.312-2.187 2.187-2.187 1.25 0 9.688 0 10.625 0 2.5 0 2.187-0.312 2.187 2.187 0 1.25 0 17.813 0 19.063 0 2.5 0.312 2.187-2.187 2.187-1.25 0-9.375 0-10.625 0-2.5 0-2.187 0.312-2.187-2.187 0-1.251 0-17.813 0-19.063zM10.687 14.75h10.625c0.345 0 0.625 0.28 0.625 0.625v3.125c0 0.345-0.28 0.625-0.625 0.625h-10.625c-0.345 0-0.625-0.28-0.625-0.625v-3.125c0-0.345 0.28-0.625 0.625-0.625z"></path> </g></svg>
-                    <p class="mx-4 text-2xl">{{$t('network')}}  <br>{{$t('electric')}}</p>
+                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"><title>battery-negative</title>
+                            <path
+                                d="M12.563 1c-0.937 0-1.25 0.211-1.25 1.25v0.937h-2.813c-1.847 0-2.187 0.341-2.187 2.187v23.438c0 1.847 0.341 2.187 2.187 2.187h15c1.847 0 2.187-0.341 2.187-2.187v-23.438c0-1.847-0.341-2.187-2.187-2.187h-2.813v-0.937c0-1.038-0.312-1.25-1.25-1.25h-6.875zM8.5 7.563c0-2.5-0.312-2.187 2.187-2.187 1.25 0 9.688 0 10.625 0 2.5 0 2.187-0.312 2.187 2.187 0 1.25 0 17.813 0 19.063 0 2.5 0.312 2.187-2.187 2.187-1.25 0-9.375 0-10.625 0-2.5 0-2.187 0.312-2.187-2.187 0-1.251 0-17.813 0-19.063zM10.687 14.75h10.625c0.345 0 0.625 0.28 0.625 0.625v3.125c0 0.345-0.28 0.625-0.625 0.625h-10.625c-0.345 0-0.625-0.28-0.625-0.625v-3.125c0-0.345 0.28-0.625 0.625-0.625z"></path>
+                        </g>
+                    </svg>
+                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('electric') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 10V11.5M12 14H12.01M10 16.584V18.9996C10 20.1042 10.8954 20.9996 12 20.9996C13.1046 20.9996 14 20.1042 14 18.9996L14 16.584M12 3V4M18.3643 5.63574L17.6572 6.34285M5.63574 5.63574L6.34285 6.34285M4 12H3M21 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                    <p class="mx-4 text-2xl">{{$t('network')}}  <br>{{$t('lighting')}}</p>
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M12 10V11.5M12 14H12.01M10 16.584V18.9996C10 20.1042 10.8954 20.9996 12 20.9996C13.1046 20.9996 14 20.1042 14 18.9996L14 16.584M12 3V4M18.3643 5.63574L17.6572 6.34285M5.63574 5.63574L6.34285 6.34285M4 12H3M21 12H20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('lighting') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 14.7C21 18.1794 19.0438 21 15.5 21C11.9562 21 10 18.1794 10 14.7C10 11.2206 15.5 3 15.5 3C15.5 3 21 11.2206 21 14.7Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8 8.2C8 9.7464 7.11083 11 5.5 11C3.88917 11 3 9.7464 3 8.2C3 6.6536 5.5 3 5.5 3C5.5 3 8 6.6536 8 8.2Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                <p class="mx-4 text-2xl">{{$t('network')}}  <br>{{$t('water')}} </p>
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M21 14.7C21 18.1794 19.0438 21 15.5 21C11.9562 21 10 18.1794 10 14.7C10 11.2206 15.5 3 15.5 3C15.5 3 21 11.2206 21 14.7Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M8 8.2C8 9.7464 7.11083 11 5.5 11C3.88917 11 3 9.7464 3 8.2C3 6.6536 5.5 3 5.5 3C5.5 3 8 6.6536 8 8.2Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('water') }} </p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19.3278 16C20.3478 15.1745 21 13.9119 21 12.4969C21 10.6503 19.8893 8.94488 18.3 8.25C18.1317 5.32251 15.684 3 12.6893 3C10.3514 3 8.34694 4.48637 7.5 6.5C4.8 6.9375 3 9.20008 3 11.6493C3 13.1613 3.63296 14.5269 4.65065 15.5M8 18V20M8 12V14M12 19V21M16 18V20M16 12V14M12 13V15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                    <p class="mx-4 text-2xl">{{$t('rain')}}  <br> {{$t('drainage')}}</p>
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M19.3278 16C20.3478 15.1745 21 13.9119 21 12.4969C21 10.6503 19.8893 8.94488 18.3 8.25C18.1317 5.32251 15.684 3 12.6893 3C10.3514 3 8.34694 4.48637 7.5 6.5C4.8 6.9375 3 9.20008 3 11.6493C3 13.1613 3.63296 14.5269 4.65065 15.5M8 18V20M8 12V14M12 19V21M16 18V20M16 12V14M12 13V15"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    <p class="mx-4 text-2xl">{{ $t('rain') }} <br> {{ $t('drainage') }}</p>
                 </div>
 
             </div>
@@ -440,25 +548,25 @@
     <!-- utilities section  will fetch from API-->
 
 
-    <!-- downloads sections -->
-
-
     <!-- project models -->
-    <section id="modale" class="company-info   py-20 pt-16  bg-background-section "  v-if="project.project_models.length">
+    <section id="modale" class="company-info   py-20 pt-16  bg-background-section "
+             v-if="project.project_models.length">
 
         <div class="container mx-auto">
 
             <div class="">
 
                 <div class="d-info h-full flex flex-col justify-center right">
-                  <div class="flex">
-                      <svg class="my-auto" width="26px" height="26px" viewBox="0 0 6.3500002 6.3500002" id="svg1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs1970"></defs> <g id="layer1" style="display:inline"> <path d="m 2.5032059,-0.0095735 c -0.043217,-6.35e-4 -0.0909,0.00531 -0.1493441,0.024289 C 2.2369795,0.0525379 2.1848433,0.1094109 2.1259683,0.1650936 2.0670958,0.2207129 2.0130256,0.2808305 1.9606037,0.3407933 1.8557572,0.4607694 1.7291409,0.5919178 1.7440793,0.5810887 1.7590282,0.5703466 1.5965582,0.6493864 1.4500399,0.7118302 1.3767847,0.7430018 1.3005529,0.7771219 1.2293826,0.8156998 1.1582044,0.8544035 1.0898255,0.885282 1.0175096,0.9846817 0.9451937,1.0840436 0.9358089,1.159797 0.9208732,1.2394466 0.9059507,1.319096 0.8985953,1.400403 0.8914171,1.479742 0.8770502,1.6384195 0.8500416,1.8161314 0.8557619,1.7985856 c 0.00572,-0.017558 -0.07988,0.1429176 -0.1617478,0.2795696 -0.040934,0.068351 -0.082447,0.141311 -0.1173056,0.214457 -0.034859,0.073146 -0.069638,0.1380463 -0.069763,0.2609662 -1.217e-4,0.1229198 0.03557,0.1882605 0.070279,0.2614827 0.034711,0.073247 0.07651,0.1434605 0.1173057,0.2118733 0.081592,0.1368131 0.1663991,0.2976496 0.1607158,0.2800863 -0.00569,-0.017526 0.019526,0.1632389 0.033589,0.3219442 0.00704,0.079296 0.014684,0.1606161 0.029456,0.2402954 0.014764,0.079742 0.022966,0.1557634 0.095083,0.2552817 0.072115,0.099531 0.1412954,0.130652 0.2123916,0.1694987 0.071099,0.038784 0.1469443,0.071021 0.2201413,0.1023191 0.1463886,0.062722 0.3099884,0.1442029 0.2950712,0.1333254 -0.014922,-0.010713 0.109855,0.1175901 0.2144581,0.2377115 0.0523,0.060092 0.1060847,0.1214847 0.1648486,0.1772502 0.058759,0.055816 0.1110827,0.1117997 0.2278909,0.1498616 0.1168056,0.03815 0.190463,0.023744 0.2707852,0.013435 0.080328,-0.010432 0.1605915,-0.026186 0.2382282,-0.043925 0.1552734,-0.035351 0.3341952,-0.068207 0.3157432,-0.068213 -0.018441,-1.85e-5 0.1595093,0.03148 0.3147086,0.06718 0.077602,0.017849 0.1568874,0.035993 0.2371963,0.046509 0.08029,0.010893 0.1544188,0.024387 0.2713012,-0.013436 C 4.1130209,5.0582357 4.1651597,5.0033666 4.2240321,4.9477472 4.2829046,4.8921276 4.3395598,4.8298801 4.3919791,4.7699803 4.4968281,4.6500042 4.6208595,4.521427 4.6059211,4.5322686 4.5909722,4.543008 4.7555086,4.4639712 4.9020269,4.4015274 4.9752821,4.3703558 5.0494475,4.3357186 5.1206178,4.2971408 5.1917933,4.258437 5.2601749,4.2280628 5.3324908,4.1286758 5.4048041,4.0293137 5.4141915,3.9535603 5.4291272,3.8739109 5.4440497,3.7942615 5.4514051,3.7129545 5.4585806,3.6336155 5.4729475,3.4749377 5.4999562,3.2946422 5.4942385,3.312188 5.4885235,3.3297458 5.5741162,3.1692831 5.6559863,3.0326187 5.69692,2.9642673 5.7384331,2.8938913 5.7732919,2.8207451 5.8081508,2.7475992 5.8429303,2.6827115 5.8430546,2.5597792 5.8431763,2.4368593 5.807484,2.3715183 5.7727734,2.2982965 5.7380653,2.2250492 5.6967824,2.152252 5.6559863,2.0838392 5.5743941,1.9470137 5.4890712,1.7882568 5.4947545,1.8058201 5.500443,1.8233461 5.4752282,1.6425809 5.4611656,1.4838759 5.4541542,1.404454 5.4464812,1.3232598 5.4317096,1.2435805 5.4169458,1.163838 5.4087437,1.0878171 5.3366262,0.9882988 5.2645114,0.8887679 5.1953308,0.8581762 5.1242346,0.8193169 5.0531358,0.7805332 4.977285,0.7458378 4.9040933,0.7144138 4.7577047,0.6516914 4.5941022,0.5728705 4.6090221,0.5836723 4.6239446,0.5943853 4.499683,0.4630319 4.39508,0.3428602 4.3427798,0.282768 4.2884767,0.2219049 4.2297154,0.1661267 4.1709567,0.1103108 4.1186327,0.0543271 4.0018218,0.0162652 3.8850188,-0.0218851 3.8113668,-0.0055365 3.7310393,0.004896 3.6507118,0.0153285 3.5704478,0.0315991 3.4928111,0.0493378 3.3375377,0.0846891 3.1586212,0.1174185 3.1770679,0.1175506 3.1955094,0.1175694 3.0175559,0.0834873 2.8623566,0.0477876 2.784757,0.0299388 2.7054693,0.0138614 2.6251629,0.0033458 2.5850177,-0.002102 2.5464229,-0.0089361 2.5032059,-0.0095735 Z m 0.6810957,1.3916462 a 0.26407552,0.26514563 1.664302 0 1 0.2098067,0.1069702 l 0.3064404,0.4149617 0.5167657,0.1953371 a 0.26407552,0.26514563 1.664302 0 1 0.1209225,0.403076 L 4.0395461,2.9240974 4.0142255,3.4780688 A 0.26407552,0.26514563 1.664302 0 1 3.6721272,3.7188812 L 3.1791343,3.563335 2.6468667,3.7090625 A 0.26407552,0.26514563 1.664302 0 1 2.3109702,3.4548146 L 2.3068427,2.9364998 2.0050537,2.4734789 A 0.26407552,0.26514563 1.664302 0 1 2.1404463,2.0760872 L 2.6324046,1.9133065 2.9781198,1.4807747 a 0.26407552,0.26514563 1.664302 0 1 0.1865524,-0.098185 0.26407552,0.26514563 1.664302 0 1 0.019632,-5.292e-4 z" id="path802" style="color:#AF9751;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#AF9751;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#AF9751;solid-opacity:1;vector-effect:none;fill:#AF9751;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#AF9751"></path> <path d="m 1.32395,4.6940153 v 0.8454266 c 0,0.22689 0.085796,0.4353634 0.2320264,0.5999633 0.073102,0.0823 0.1640284,0.155757 0.2831888,0.1953369 0.1191578,0.0396 0.2710842,0.033444 0.396875,-0.029456 L 3.1755175,5.8365814 4.1149947,6.3052865 a 0.26460996,0.26460996 0 0 0 0.1188561,0.027389 c 0.4351602,0 0.7932315,-0.3580833 0.7932315,-0.7932332 V 4.6976326 c -0.1063255,0.047962 -0.2399666,0.1090639 -0.2284096,0.1007693 0.01696,-0.0123 -0.1239096,0.1336209 -0.2428795,0.2697509 -0.059468,0.06796 -0.1238859,0.1384379 -0.1906852,0.2015381 -0.066799,0.0631 -0.1257724,0.1255652 -0.2583815,0.168465 -0.1326198,0.0429 -0.2168922,0.027386 -0.3079909,0.014986 -0.09112,-0.011999 -0.1806178,-0.03241 -0.2687188,-0.05271 -0.1760908,-0.0405 -0.3779838,-0.075984 -0.3570843,-0.075964 0.020929,0 -0.1824646,0.036898 -0.3586348,0.076998 -0.08809,0.0201 -0.1791679,0.038326 -0.2702666,0.050126 -0.09113,0.0117 -0.1744398,0.027797 -0.306959,-0.015502 C 2.1045317,5.3929098 2.0448735,5.3293743 1.9781747,5.2660743 1.9114944,5.2028043 1.8504047,5.133253 1.7911063,5.0650529 1.6724248,4.9287629 1.5313251,4.7831021 1.5482267,4.795302 1.5595777,4.803572 1.4276667,4.741909 1.32395,4.6940153 Z" id="path804" style="color:#AF9751;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#AF9751;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#AF9751;solid-opacity:1;vector-effect:none;fill:#AF9751;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#AF9751"></path> </g> </g></svg>
-                    <h1 class=" my-auto font-bold text-3xl  text-center md:text-start text-[#AF9744]">{{ $t('modale') }} </h1>
-                  </div>
-                    <div class=" [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
+                    <div class="flex">
+                        <img src="../../img/models_icon.png" style="width: 26px;height: 26px">
+                        <h1 class=" my-auto font-bold text-3xl  text-center md:text-start text-[#AF9744]">
+                            {{ $t('modale') }} </h1>
+                    </div>
+                    <div
+                        class=" [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
 
 
-                        <tabs variant="underline" v-model="activeTab" class="p-5 text-lg" >
+                        <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
                             <!-- class appends to content DIV for all tabs -->
                             <tab v-for="model in project.project_models" :name="model.title['en']"
                                  :title="model.title[$i18n.locale]"
@@ -505,7 +613,6 @@
 
                 </div>
 
-
             </div>
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
@@ -515,17 +622,26 @@
     <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery.length">
         <div class="container mx-auto">
             <div class=" ">
-                <div >
+                <div>
                     <div
-                    class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
-                    <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
-                    <div class="flex">
-                     <svg class="my-auto" width="36px" height="36px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path> </g></svg>
-                    <p class="text-dark-brown text-4xl right" >
-                        {{ $t("Image") }}
-                    </p>
+                        class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
+                        <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
+                        <div class="flex">
+                            <svg class="my-auto" width="36px" height="36px" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path>
+                                </g>
+                            </svg>
+                            <p class="text-dark-brown text-4xl right">
+                                {{ $t("Image") }}
+                            </p>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="flex  w-[85%] m-auto " id="carsoul-project">
                     <div class="w-[100%] m-auto">
@@ -545,24 +661,43 @@
     <!-- Video -->
 
     <section id="video" class="bg-[white]" v-if="videoo!='' && videoo">
-       <div class="flex mx-auto w-[80%]">
+        <div class="flex mx-auto w-[80%]">
 
-        <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z" stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        <div class="my-auto text-3xl text-light-brown"><p> {{$t("video")}}</p></div>
-       </div>
+            <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
+                          stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                    <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                    <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                    <path
+                        d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
+                        stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+            </svg>
+            <div class="my-auto text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+        </div>
         <div class="container mx-auto">
-            <video class="mx-auto w-[70%] h-[70%] rounded-xl"  crossorigin playsinline controls>
-                 <source :src="videoo" type="video/mp4">
+            <video class="mx-auto w-[70%] h-[70%] rounded-xl" crossorigin playsinline controls>
+                <source :src="videoo" type="video/mp4">
             </video>
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
     <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video!='' && project.project_video">
-       <div class="flex mx-auto w-[80%]">
-        <svg width="34px" height="34px" class="my-auto px-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.51018 14.9907C4.15862 16.831 5.38765 18.4108 7.01208 19.492C8.63652 20.5732 10.5684 21.0972 12.5165 20.9851C14.4647 20.873 16.3237 20.1308 17.8133 18.8704C19.303 17.61 20.3426 15.8996 20.7756 13.997C21.2086 12.0944 21.0115 10.1026 20.214 8.32177C19.4165 6.54091 18.0617 5.06746 16.3539 4.12343C14.6461 3.17941 12.6777 2.81593 10.7454 3.08779C7.48292 3.54676 5.32746 5.91142 3 8M3 8V2M3 8H9" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        <div class=" my-auto text-3xl text-light-brown "><p> {{$t("project360")}}</p></div>
-       </div>
+        <div class="flex mx-auto w-[80%]">
+            <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+
+            <div class=" my-auto text-3xl text-light-brown "><p> {{ $t("project360") }}</p></div>
+        </div>
         <div class="container mx-auto">
             <video class="mx-auto w-[70%] h-[70%] rounded-xl" controls>
                 <source :src="project.project_video" type="video/mp4">
@@ -644,7 +779,8 @@
                 </svg>
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 lg:grid-cols-3 m-auto">
-                <a :href="`/storage/${download.project_attachment}`" target="_blank" class="flex" v-for="download in project.downloads">
+                <a :href="`/storage/${download.project_attachment}`" target="_blank" class="flex"
+                   v-for="download in project.downloads">
                     <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -656,8 +792,34 @@
                                   stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </svg>
-                    <p class="text-2xl p-2 font-bold my-auto">{{download.name[$i18n.locale]}}</p>
+                    <p class="text-2xl p-2 font-bold my-auto">{{ download.name[$i18n.locale] }}</p>
                 </a>
+
+            </div>
+
+        </div>
+
+        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+    </section>
+    <section class=" company-info  bg-[white]" id="downloads">
+
+        <div class="container mx-auto" v-if="project.partner_image != '' && project.partner_image">
+            <div class="flex pb-[5%]">
+                <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("partners") }}</p>
+                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
+                            stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="lg:w-[90%]  mx-auto">
+                <img :src="project.partner_image.original_url" style="width: 70%;height:300px">
 
             </div>
 
@@ -824,7 +986,7 @@ export default {
             videoo: "",
             recompute: 0,
             rephases: [],
-            flag : 1
+            flag: 1
 
 
         }
@@ -869,12 +1031,11 @@ export default {
             return this.$i18n.locale
         },
         phases() {
-            if(this.recompute>=3 && this.flag)
-            {
+            if (this.recompute >= 3 && this.flag) {
                 this.flag = 0
-                let i=0
-                this.project.phases.forEach((elem)=>{
-                    elem.achieve_percentage=this.rephases[i]
+                let i = 0
+                this.project.phases.forEach((elem) => {
+                    elem.achieve_percentage = this.rephases[i]
                     i++
                 })
                 console.log(this.rephases)
@@ -882,7 +1043,7 @@ export default {
 
             return this.project.phases
         },
-        mapLink(){
+        mapLink() {
             return `https://maps.google.com/maps?key=AIzaSyDWxa_rbz7ccvjsvxmbPR5Q_AEK14-D0sk&q=${this.project.location.Latitude},${this.project.location.Longitude}&hl=es&z=14&amp&output=embed`
         }
     },
@@ -897,11 +1058,11 @@ export default {
                 console.log(this.project.video)
                 this.activeTab = this.project?.project_models[0]?.title['en']
 
-                this.project.phases.forEach((elem)=>{
+                this.project.phases.forEach((elem) => {
                     this.rephases.push(elem.achieve_percentage)
                 })
-                this.project.phases.forEach((elem)=>{
-                    elem.achieve_percentage=0
+                this.project.phases.forEach((elem) => {
+                    elem.achieve_percentage = 0
 
 
                 })
@@ -990,7 +1151,7 @@ export default {
     width: 100%;
 }
 
-.circle-progress__percentage{
+.circle-progress__percentage {
     color:
 }
 </style>
