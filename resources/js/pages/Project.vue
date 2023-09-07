@@ -177,7 +177,7 @@
                     </div>
 
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads">
+                    <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads.length">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -763,7 +763,7 @@
     </section>
     <section class=" company-info  bg-[white]" id="downloads">
 
-        <div class="container mx-auto" v-if="project.downloads">
+        <div class="container mx-auto" v-if="project.downloads.length">
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("Download_Project_Files") }}</p>
                 <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
