@@ -761,9 +761,9 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
 
     </section>
-    <section class=" company-info  bg-[white]" id="downloads">
+    <section class=" company-info  bg-[white]" id="downloads" v-if="project.downloads.length">
 
-        <div class="container mx-auto" v-if="project.downloads.length">
+        <div class="container mx-auto" >
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("Download_Project_Files") }}</p>
                 <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
