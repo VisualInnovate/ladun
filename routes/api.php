@@ -185,7 +185,7 @@ Route::get('/pages/{slug}', function($slug){
 
 Route::post('/search ',function (Request $request){
     return response([
-       'projects'=> ProjectResource::collection(Project::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->get()) ,
-       'mediaCenter'=>  \App\Models\MediaCenter::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->get()
+       'projects'=> ProjectResource::collection(Project::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->orWhere('name->'.$request->local, 'LIKE','%'.$request->q.'%')->get()) ,
+       'mediaCenter'=>  \App\Models\MediaCenter::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->orWhere('title->'.$request->local, 'LIKE','%'.$request->q.'%')->get()
     ]);
 });
