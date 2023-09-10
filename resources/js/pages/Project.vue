@@ -61,7 +61,7 @@
 
                     </div>
 
-                    <div class=" mx-auto mb-3 md:mb-0 flex " v-if="project.project_models.length">
+                    <div class=" mx-auto mb-3 md:mb-0 flex " >
                         <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
