@@ -75,8 +75,11 @@
                                 <div class="flex   text-right p-2">
 
                                    <div class="flex w-full flex-row-reverse ">
+
                                     <h3 class=" px-2  text-2xl font-bold text-[#636463] ">{{ project.title[$i18n.locale] }}</h3>
                                     <div class="text-dark-brown flex">
+                                        <h3 class="flex-initial my-auto text-[#AF9744] text-xs font-bold p-2 ">{{ project.address[$i18n.locale] }}</h3>
+
                                         <small class=" text-right my-auto " > {{
 
                                             }}</small>
