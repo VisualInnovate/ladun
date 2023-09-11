@@ -32,7 +32,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/companies',function (){
     return response ([
-        'companies'=>\App\Models\Company::with('media')->get()
+        'companies'=>\App\Models\Company::with('media')->orderByDesc('created_at')->get()
     ]);
 });
 
@@ -72,7 +72,7 @@ Route::get('/years',function (){
 
 Route::get('/investors',function (){
     return response ([
-        'investors'=>\App\Models\Investor::with('media')->orderBy('created_at','ASC')->get()
+        'investors'=>\App\Models\Investor::with('media')->orderBy('created_at','DESC')->get()
     ]);
 });
 Route::get('/investors/{id}',function ($id){
@@ -84,7 +84,7 @@ Route::get('/investors/{id}',function ($id){
 Route::get('/media-center',function (){
 
     return response ([
-        'mediaCenter'=>\App\Models\MediaCenter::with('media')->get()
+        'mediaCenter'=>\App\Models\MediaCenter::with('media')->orderBy('created_at','DESC')->get()
     ]);
 });
 
@@ -117,7 +117,7 @@ Route::get('/join-us',[\App\Http\Controllers\JoinUsController::class,'index']);
 Route::group(['prefix' => 'projects'], function () {
     // projects list
     Route::get('/',function (){
-        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities','media'])->where('is_published','=',1)->orderBy('id')->get();
+        $projects = Project::with(['downloads', 'projectModelsWithUtilities', 'location', 'utilities','media'])->where('is_published','=',1)->orderBy('created_at','DESC')->get();
         return ProjectResource::collection($projects);
 
     });
