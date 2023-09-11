@@ -30,6 +30,7 @@ function showtext() {
 
 }
 
+
 function searchvalue() {
     console.log(value.value)
     axios.post("/api/search", {
@@ -75,6 +76,7 @@ const secondLang = computed({
     }
 })
 
+
 const changeLocale = () => {
     if (i18n.global.locale.value == 'ar') {
 
@@ -100,6 +102,13 @@ const executeEnCode = () => {
     appLang.setAppRtl(true)
 
 }
+const clear = () => {
+    console.log("efew")
+    return show.value = !(show.value)
+
+
+
+}
 </script>
 
 <template>
@@ -107,21 +116,21 @@ const executeEnCode = () => {
 
         <div v-if="show" class="relative animate__animated animate__backInDown">
 
-            <svg @click="searchvalue()" class="absolute z-30 cursor-pointer top-[8%] left-1 w-[24px] h-[24px] "
+            <svg @click="searchvalue()" class="absolute z-30 cursor-pointer top-[50%] -translate-y-[50%]  left-1 w-[24px] h-[24px] "
                  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24"
                  style="fill:#1A1A1A;">
                 <path
                     d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"></path>
             </svg>
-            <Input :placeholder='$t("click_search")' class="text-center text-base w-48 h-10 focus:ring-0"
+             <Input :placeholder='$t("click_search")' class="text-center text-base w-48 h-10 focus:ring-0"
                    v-model="value">
                 <template #prefix>
                 </template>
 
             </Input>
         </div>
-        <div class="m-auto px-2" @click="showtext()">
-            <svg class="cursor-pointer" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+        <div class="m-auto px-2" >
+            <svg @click="showtext()" v-if="!show" class="cursor-pointer" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg" transform="rotate(90)">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -131,6 +140,7 @@ const executeEnCode = () => {
                         stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </g>
             </svg>
+            <svg class="cursor-pointer" v-if="show" @click="showtext()" fill="#ffffff" width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M7.004 23.087l7.08-7.081-7.07-7.071L8.929 7.02l7.067 7.069L23.084 7l1.912 1.913-7.089 7.093 7.075 7.077-1.912 1.913-7.074-7.073L8.917 25z"></path></g></svg>
         </div>
         <div class="m-auto">
             <dropdown
