@@ -123,6 +123,8 @@ class ProjectResource extends Resource
                         TextInput::make('project_video')->label(__('project_video')),
                         CheckboxList::make('utilities')->label(__('utilities'))
                             ->relationship('utilities', 'title')->columns(3),
+                        TextInput::make('number')->label(__('number'))
+                            ->numeric(),
 
                         RichEditor::make('content')->columnSpanFull()->label(__('content')),
 

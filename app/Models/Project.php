@@ -44,7 +44,8 @@ class Project extends  Model implements HasMedia
         'mosque',
         'project_video',
         'video',
-        'type'
+        'type',
+        'number'
 
 
     ];

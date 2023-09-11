@@ -34,6 +34,8 @@ class SettingResource extends Resource
                 TextInput::make('companies')->label(__("companies number")),
                 TextInput::make('developed_buildings')->label(__("developed buildings")),
                 TextInput::make('developing_buildings')->label(__("developing buildings")),
+                TextInput::make('investments')->label(__('investments'))
+                    ->numeric(),
 
             ]);
     }

@@ -40,6 +40,7 @@ class ProjectResource extends JsonResource
            'building_area' => $this->building_area,
            'units_number' => $this->units_number,
            'models_number' => $this->models_number,
+           'number' => $this->number,
            'project_models' => $this->projectModelsWithUtilities,
            'location' => $this->location,
             'facilities'=>$this->facilities,

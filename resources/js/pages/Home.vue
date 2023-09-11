@@ -215,7 +215,7 @@
                     <div class="grid grid-cols-3 justify-center ">
                         <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number2" :from="0" :to="setting?.investments" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-sm" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
                     </div>
