@@ -16,7 +16,7 @@
             <div class="flex pt-2">
                 <router-link :to="{ name: 'Home' }" class="flex -m-1.5 p-1.5">
                     <!-- <span class="sr-only">Ladun</span> -->
-                    <img v-show="!mobileMenuOpen" src="../../img/logo.svg" alt="" class="p-5 pt-4 w-[7.5rem]"/>
+                    <img v-show="!mobileMenuOpen" src="../../img/logo.png" alt="" class="p-5 pt-4 w-[11rem]"/>
                 </router-link>
             </div>
 
