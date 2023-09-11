@@ -48,183 +48,179 @@ class ProjectResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            Fieldset::make('Add Project')
-
             ->schema([
-                TextInput::make('name')->label(__('name'))->reactive()
-                ->afterStateUpdated(function (Closure $set, $state) {
-                    $set('slug', Str::slug($state));
-                })->required(),
+                Fieldset::make('Add Project')
+                    ->schema([
+                        TextInput::make('name')->label(__('name'))->reactive()
+                            ->afterStateUpdated(function (Closure $set, $state) {
+                                $set('slug', Str::slug($state));
+                            })->required(),
 
-            TextInput::make('slug')->label(__('slug'))->required(),
+                        TextInput::make('slug')->label(__('slug'))->required(),
 
-            TextInput::make('phone')->label(__('phone'))
-            ->tel()
-            ->telRegex('/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
-            ->required(),
+                        TextInput::make('phone')->label(__('phone'))
+                            ->tel()
+                            ->telRegex('/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
+                            ->required(),
 
-            TextInput::make('email')->label(__('email'))
-            ->email(),
+                        TextInput::make('email')->label(__('email'))
+                            ->email(),
 
-            TextInput::make('address')->label(__('address'))
-            ->required(),
+                        TextInput::make('address')->label(__('address'))
+                            ->required(),
+                        TextInput::make('type')->label(__('type'))
+                            ->required(),
 
-            SpatieMediaLibraryFileUpload::make('Main Image')
-            ->hint('max image dimension 150px * 150px')
-            ->label(__('Main Image'))->collection('projects'),
-                SpatieMediaLibraryFileUpload::make('Project partners')
-
-            ->hint('max image dimension 150px * 150px')
-            ->label(__('Project partners'))->collection('project_partners'),
-
-
-            SpatieMediaLibraryFileUpload::make('attachments')
-            ->hint('min image dimension 400px * 707px')
-            ->label(__('attachments'))
-            ->multiple()
-            ->enableReordering(),
-
-            FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-            }),
-
-            TextInput::make('Land_area')->label(__('Land_area')),
-            TextInput::make('building_area')->label(__('building_area'))
-            ->numeric(),
-
-            TextInput::make('units_number')->label(__('units_number'))
-            ->numeric(),
-
-            TextInput::make('models_number')->label(__('models_number'))
-            ->numeric(),
-
-                 TextInput::make('facilities')->label(__('facilities'))
-            ->numeric(),
-
-                 TextInput::make('commercial')->label(__('commercial'))
-            ->numeric(),
-
-                 TextInput::make('investment')->label(__('investment'))
-            ->numeric(),
-
-                 TextInput::make('government')->label(__('government'))
-            ->numeric(),
-
-                 TextInput::make('educational')->label(__('educational'))
-            ->numeric(),
-
-                 TextInput::make('trade')->label(__('trade'))
-            ->numeric(),
-                 TextInput::make('gardens')->label(__('gardens'))
-            ->numeric(),
-                 TextInput::make('mosque')->label(__('mosque'))->numeric() ,
-              TextInput::make('video')->label(__('video'))   ,
-                     TextInput::make('project_video')->label(__('project_video')),
-            CheckboxList::make('utilities')->label(__('utilities'))
-                ->relationship('utilities', 'title')->columns(3),
-
-            RichEditor::make('content')->columnSpanFull()->label(__('content')),
+                        SpatieMediaLibraryFileUpload::make('Main Image')
+                            ->hint('max image dimension 150px * 150px')
+                            ->label(__('Main Image'))->collection('projects'),
+                        SpatieMediaLibraryFileUpload::make('Project partners')
+                            ->hint('max image dimension 150px * 150px')
+                            ->label(__('Project partners'))->collection('project_partners'),
 
 
-            Toggle::make('is_published')->label(trans('is_published')),
+                        SpatieMediaLibraryFileUpload::make('attachments')
+                            ->hint('min image dimension 400px * 707px')
+                            ->label(__('attachments'))
+                            ->multiple()
+                            ->enableReordering(),
+
+                        FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                            return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
+                        }),
+
+                        TextInput::make('Land_area')->label(__('Land_area')),
+                        TextInput::make('building_area')->label(__('building_area'))
+                            ->numeric(),
+
+                        TextInput::make('units_number')->label(__('units_number'))
+                            ->numeric(),
+
+                        TextInput::make('models_number')->label(__('models_number'))
+                            ->numeric(),
+
+                        TextInput::make('facilities')->label(__('facilities'))
+                            ->numeric(),
+
+                        TextInput::make('commercial')->label(__('commercial'))
+                            ->numeric(),
+
+                        TextInput::make('investment')->label(__('investment'))
+                            ->numeric(),
+
+                        TextInput::make('government')->label(__('government'))
+                            ->numeric(),
+
+                        TextInput::make('educational')->label(__('educational'))
+                            ->numeric(),
+
+                        TextInput::make('trade')->label(__('trade'))
+                            ->numeric(),
+                        TextInput::make('gardens')->label(__('gardens'))
+                            ->numeric(),
+                        TextInput::make('mosque')->label(__('mosque'))->numeric(),
+                        TextInput::make('video')->label(__('video')),
+                        TextInput::make('project_video')->label(__('project_video')),
+                        CheckboxList::make('utilities')->label(__('utilities'))
+                            ->relationship('utilities', 'title')->columns(3),
+
+                        RichEditor::make('content')->columnSpanFull()->label(__('content')),
 
 
-            ])
-            ->columns(3),
-
-            //===========================
-            // Department for peoject
-            //=======================
-            Fieldset::make('Assign Region')->label(__('Assign Region'))->columns(2)
-            ->schema([
-
-                // region
-                Select::make('region_id')->label(__('Region'))
-                ->options(Region::all()->pluck('title', 'id'))
-                ->relationship('region', 'title')
-                ->getOptionLabelFromRecordUsing(fn (Region $record) => "{$record->title}, {$record->department->title}"),
-
-            ]),
-
-            //===========================
-            // Downloads field for peoject
-            //=======================
-
-            Section::make('Downloads')
-            ->schema([
-                TextInput::make('downloads_text')->label(__('content')),
-                SpatieMediaLibraryFileUpload::make('Download image')
-                    ->hint('max image dimension 150px * 150px')
-                    ->label(__('Main Image'))->collection('download_image'),
-                Repeater::make('members')
-                ->relationship('downloads')
-                ->schema([
-                    TextInput::make('name')->required(),
-                    FileUpload::make('project_attachment')->acceptedFileTypes(['application/pdf'])
-                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                        return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
-                    })->directory('Download-attachments')->required(),
-                ])
-                ->columns(2)
-
-            ])
-          ,
+                        Toggle::make('is_published')->label(trans('is_published')),
 
 
-    //=====================
-    // Models of Projects
-    //======================
-    Section::make('Models ')
-    ->schema([
-        Repeater::make('Models')
-         ->relationship('project_models')
-        ->schema([
-            TextInput::make('title')->required(),
-            TextInput::make('Land_area')->required(),
-            TextInput::make('building_area')->required(),
-            TextInput::make('units_number')->required(),
-            TextInput::make('floors_number')->required(),
+                    ])
+                    ->columns(3),
+
+                //===========================
+                // Department for peoject
+                //=======================
+                Fieldset::make('Assign Region')->label(__('Assign Region'))->columns(2)
+                    ->schema([
+
+                        // region
+                        Select::make('region_id')->label(__('Region'))
+                            ->options(Region::all()->pluck('title', 'id'))
+                            ->relationship('region', 'title')
+                            ->getOptionLabelFromRecordUsing(fn(Region $record) => "{$record->title}, {$record->department->title}"),
+
+                    ]),
+
+                //===========================
+                // Downloads field for peoject
+                //=======================
+
+                Section::make('Downloads')
+                    ->schema([
+                        TextInput::make('downloads_text')->label(__('content')),
+                        SpatieMediaLibraryFileUpload::make('Download image')
+                            ->hint('max image dimension 150px * 150px')
+                            ->label(__('Main Image'))->collection('download_image'),
+                        Repeater::make('members')
+                            ->relationship('downloads')
+                            ->schema([
+                                TextInput::make('name')->required(),
+                                FileUpload::make('project_attachment')->acceptedFileTypes(['application/pdf'])
+                                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                                        return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
+                                    })->directory('Download-attachments')->required(),
+                            ])
+                            ->columns(2)
+
+                    ])
+                ,
 
 
-
-            CheckboxList::make('utilities')->label(__('utilities'))
-            ->relationship('utilities', 'title'),
-            SpatieMediaLibraryFileUpload::make('attachments')
-                ->hint('min image dimension 400px * 707px')
-                ->label(__('attachments'))
-                ->multiple()
-                ->enableReordering(),
-        ])
-        ->columns(2)
-
-
-    ])
-    ->collapsed(),
-
-
-    //=====================
-    // Locations for  Projects
-    //======================
+                //=====================
+                // Models of Projects
+                //======================
+                Section::make('Models ')
+                    ->schema([
+                        Repeater::make('Models')
+                            ->relationship('project_models')
+                            ->schema([
+                                TextInput::make('title')->required(),
+                                TextInput::make('Land_area')->required(),
+                                TextInput::make('building_area')->required(),
+                                TextInput::make('units_number')->required(),
+                                TextInput::make('floors_number')->required(),
 
 
-    Section::make('Locations')
-    ->relationship('location')
-    ->description('Description')
-    ->schema([
-        TextInput::make('city')->required(),
-            TextInput::make('address')->required(),
-        TextInput::make('Latitude')->required(),
-        TextInput::make('Longitude')->required()
-    ])
-
-    ->collapsed(),
+                                CheckboxList::make('utilities')->label(__('utilities'))
+                                    ->relationship('utilities', 'title'),
+                                SpatieMediaLibraryFileUpload::make('attachments')
+                                    ->hint('min image dimension 400px * 707px')
+                                    ->label(__('attachments'))
+                                    ->multiple()
+                                    ->enableReordering(),
+                            ])
+                            ->columns(2)
 
 
+                    ])
+                    ->collapsed(),
 
 
-        ]);
-}
+                //=====================
+                // Locations for  Projects
+                //======================
+
+
+                Section::make('Locations')
+                    ->relationship('location')
+                    ->description('Description')
+                    ->schema([
+                        TextInput::make('city')->required(),
+                        TextInput::make('address')->required(),
+                        TextInput::make('Latitude')->required(),
+                        TextInput::make('Longitude')->required()
+                    ])
+                    ->collapsed(),
+
+
+            ]);
+    }
 
     public static function table(Table $table): Table
     {
@@ -291,11 +287,6 @@ class ProjectResource extends Resource
     {
         return self::getModel()::count();
     }
-
-
-
-
-
 
 
 }

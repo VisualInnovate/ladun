@@ -12,7 +12,7 @@
         >
             <div class="flex-auto md:w-1/2 ">
                 <div class="bg-[#57565B] rounded-lg mb-14 pt-12" >
-                    <div class="text-dark-brown py-10 roun px-5 text-sm">
+                    <div class="text-dark-brown  roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
                     <div v-if="success!='' " class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">

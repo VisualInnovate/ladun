@@ -44,10 +44,11 @@ class Project extends  Model implements HasMedia
         'mosque',
         'project_video',
         'video',
+        'type'
 
 
     ];
-    public $translatable = ['name','slug','address','content','Land_area', 'downloads_text'];
+    public $translatable = ['name','slug','address','content','Land_area', 'downloads_text','type'];
     protected $casts = [
         'is_published' => 'boolean',
         'attachment' => 'array',

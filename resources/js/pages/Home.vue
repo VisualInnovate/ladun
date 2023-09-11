@@ -115,7 +115,7 @@
                                     </div>
                                     <div  class="flex my-auto">
                                         <small class=" text-gray-900 px-2">{{
-                                            $t('residentialLandPlots')
+                                                project?.type[$i18n.locale]
                                         }}</small>
                                         <img class="w-6 h-6" src="../rrr.jpeg">
                                             <!-- <svg class="my-auto" width="32px" height="32px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.5 7.5H20.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 12H17.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 16.5H20.5" stroke="#000000" stroke-linecap="round"></path> </g></svg> -->
