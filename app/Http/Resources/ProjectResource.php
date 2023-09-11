@@ -70,6 +70,7 @@ class ProjectResource extends JsonResource
            ],
            'attachment' => env('APP_URL').'/storage/'.$this->attachment,
            'downloads' => $this->downloads,
+           'department' => $this->region->department,
            'phases' => $this->phases,
            'created_at' => $this->created_at,
         ];

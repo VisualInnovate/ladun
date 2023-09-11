@@ -21,16 +21,18 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full flex justify-between py-4  "
+                <div class=" h-full  justify-between py-4  "
                 >
-                    <div class="  mx-auto px-4" style="border-right: 2px solid #AF9751;">
-                        <p class="text-2xl font-bold truncate">{{ $t('realState') }}</p>
+                    <div class="  mx-auto px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
+                        <p class="text-2xl font-bold truncate"  v-if="project.department">{{ project.department.title[$i18n.locale]}}</p>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
                         <p class="text-lg">{{ $t('certified') }}</p>
+                        <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
+                                                                        v-html="project.number"></p>
                     </div>
-                    <p class=" w-[90%] mb-12 text-sm px-2 py-4 text-right " v-if="project.number"
-                       v-html="project.number"></p>
+
+
 
                 </div>
 
@@ -699,9 +701,10 @@
             <div class=" my-auto text-3xl text-light-brown "><p> {{ $t("project360") }}</p></div>
         </div>
         <div class="container mx-auto">
-            <video class="mx-auto w-[70%] h-[70%] rounded-xl" controls>
-                <source :src="project.project_video" type="video/mp4">
-            </video>
+            <div class="w-[70%] h-[70%] ">
+                {{project.project_video}}
+            </div>
+
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
