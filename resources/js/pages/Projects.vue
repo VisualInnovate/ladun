@@ -67,7 +67,7 @@
 
                                     </div>
                                     <div class="flex my-auto">
-                                        <img class="h-10 w-10" src="../sdsd.jpeg">
+                                        <img class="h-9 w-9" src="../../img/buildings-icon.png">
                                         <small class="whitespace-nowrap my-auto text-gray-500 px-2">{{ project.units_number }}
                                             {{ $t('unit') }}</small>
 
