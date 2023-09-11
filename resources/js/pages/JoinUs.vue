@@ -11,7 +11,7 @@
             class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5"
         >
             <div class="flex-auto md:w-1/2 ">
-                <div class="bg-black rounded-lg mb-14">
+                <div class="bg-[#57565B] rounded-lg mb-14 pt-12" >
                     <div class="text-dark-brown py-10 roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>

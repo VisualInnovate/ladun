@@ -46,6 +46,7 @@ Route::get('/financials',function (){
 
     return response ([
         'financials'=>$financials->groupBy(function($val) {
+
             return Carbon::parse($val->financial_date)->format('Y');
         }),
         'reports'=>$year->groupBy(function($val) {
