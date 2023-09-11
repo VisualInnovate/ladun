@@ -97,7 +97,7 @@
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
                                            </small>
                                         </div>
-                                            <img class="h-9 w-9" src="../../img/buildings-icon.png">
+                                            <img class="h-6 w-6" src="../../img/buildings-icon.png">
 
                                             <!-- <BuildingOffice2Icon
                                             class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
