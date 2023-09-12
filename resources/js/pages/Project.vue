@@ -21,7 +21,7 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full  justify-between py-4  "
+                <div class=" h-full justify-between items-center py-4 flex"
                 >
                     <div class="  mx-auto px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
                         <p class="text-2xl font-bold truncate"  v-if="project.department">{{ project.department.title[$i18n.locale]}}</p>
@@ -31,7 +31,7 @@
                         <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
                                                                         v-html="project.number"></p>
                     </div>
-                     <p class=" w-[90%] mb-12 text-sm px-2 py-4 text-right " v-if="project.text"
+                     <p class=" w-[90%] mb-12 text-xl px-2 py-4 text-right " v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
 
 
