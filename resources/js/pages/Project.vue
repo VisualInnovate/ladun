@@ -31,7 +31,7 @@
                         <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
                                                                         v-html="project.number"></p>
                     </div>
-                     <p class=" w-[90%] mb-12 text-xl px-2 py-4  h-full " v-if="project.text"
+                     <p class=" w-[90%] mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
 
 
