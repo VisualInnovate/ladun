@@ -15,10 +15,11 @@
 
     <section class="company py-28 bg-background-section">
         <div class=" px-[5%] mx-auto ">
-            <div class="grid lg:grid-cols-4 gap-3 w-full ">
+            <div class="grid lg:grid-cols-4 gap-3 w-full " >
                 <div v-for=" company in companies" :key="company.id"
+
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class=" rounded-2xl overflow-hidden  border-gray-border-light  content-center p-2  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
+                     class=" rounded-2xl border border-light-brown overflow-hidden  border-gray-border-light  content-center p-2  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[50%]  m-auto">
                         <img class="img-companies  rounded-full border-2 mb-4 m-auto"  :src="company.media[0].original_url"
                          alt="Sunset in the mountains">

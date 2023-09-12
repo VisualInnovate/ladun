@@ -17,11 +17,14 @@
                                  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                  <div class="w-full relative z-10">
 
-                                    <Carousel :autoplay="false" :pictures="getGallery(project.gallery)"
+
+                                    <router-link :to="{name: 'Project', params: { id: project.id }}">
+                                        <Carousel :autoplay="false" :pictures="getGallery(project.gallery)"
                                               class="[&>div>div>img]:h-full [&>div:first-child]:lg:h-[243px] [&>button>span]:hidden [&>div>button]:hidden  [&>div>button]:mx-2 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1 "/>
+                                    </router-link>
+
                                 </div>
-                                <img class="w-20 h-20 z-20 absolute top-[10%] mx-auto my-3 mb-0" :src="project.logo?.original_url"
-                                     :alt="project.logo?.name">
+
                                 <!-- <div class="flex flex-col items-center">
 
                                     <h4 class="flex-initial flex p-2 text-dark-brown">
@@ -33,7 +36,9 @@
                                         class="flex-initial mb-2 text-dark-brown">{{ department.title[$i18n.locale] }}</small>
                                 </div> -->
                                <div class="flex">
-                                <h3 class="flex-initial my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
+                                <router-link :to="{name: 'Project', params: { id: project.id }}">
+                                    <h3 class="flex-initial my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
+                                    </router-link>
                                 <svg class="my-auto" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#AF9744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#AF9744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                                    <h6 class="flex-initial my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>
                                </div>
@@ -80,7 +85,7 @@
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <router-link
-                                        class="w-[100px] bg-dark-brown text-white rounded-2xl h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2"
+                                        class="w-[100px] bg-dark-brown text-white rounded-2xl h-8 max-w-20  text-center flex flex-col justify-center mx-2 "
                                         :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}
                                     </router-link>
                                 </div>
@@ -104,6 +109,7 @@ import {Tabs, Tab, Carousel} from 'flowbite-vue'
 import axios from 'axios'
 
 const getGallery = (gallery) => {
+    console.log(gallery)
     return Object.values(gallery).map((image) => {
         return {
             src: image.original_url,
@@ -126,6 +132,7 @@ onBeforeMount(async () => {
     const response = await axios.get('/api/departments')
 console.log(response)
     fetchedData.value = response.data.data
+
 
     activeTab.value = fetchedData.value[0].title['en']
     regionActiveTab.value = fetchedData.value[0].regions[0].title['en']

@@ -5,7 +5,7 @@
         <img class="h-[50vh] md:h-auto w-[100%]" src="../../img/real-state-management-banner.png">
 
         <div
-            class="z-40 text-white absolute top-[100%] -translate-y-[100%] right-[3%] -translate-x-[100%] text-justify">
+            class="z-40 text-white absolute top-[100%] m-auto -translate-y-[100%] rtl:right-[3%] ltr:left-[20%] -translate-x-[100%] text-justify">
 
             <img class="animate__animated animate__backInDown max-w-[170px] "
                  id="logo-project"
@@ -24,10 +24,11 @@
                 <div class=" h-full justify-between items-center py-4 flex"
                 >
                     <div class="  mx-auto px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
-                        <p class="text-2xl font-bold truncate"  v-if="project.department">{{ project.department.title[$i18n.locale]}}</p>
+
+                        <router-link to="/projects"><p class="text-2xl font-bold truncate"  v-if="project.department">{{ project.department.title[$i18n.locale]}}</p></router-link>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
-                        <p class="text-lg">{{ $t('certified') }}</p>
+                        <p v-if="project.number" class="text-lg">{{ $t('certified') }}</p>
                         <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
                                                                         v-html="project.number"></p>
                     </div>
@@ -435,7 +436,7 @@
                                 d="M7.97,2.242l-5,20A1,1,0,0,1,2,23a1.025,1.025,0,0,1-.244-.03,1,1,0,0,1-.727-1.212l5-20a1,1,0,1,1,1.94.484Zm10-.484a1,1,0,1,0-1.94.484l5,20A1,1,0,0,0,22,23a1.017,1.017,0,0,0,.243-.03,1,1,0,0,0,.728-1.212ZM12,1a1,1,0,0,0-1,1V6a1,1,0,0,0,2,0V2A1,1,0,0,0,12,1Zm0,7.912a1,1,0,0,0-1,1v4.176a1,1,0,1,0,2,0V9.912A1,1,0,0,0,12,8.912ZM12,17a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V18A1,1,0,0,0,12,17Z"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('roads') }} <br>{{ $t('paved') }}</p>
+                    <p class="mx-4 text-xl">{{ $t('roads') }} <br>{{ $t('paved') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
@@ -447,7 +448,7 @@
                                 d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl"> {{ $t('sidewalks') }} <br>{{ $t('roads') }}</p>
+                    <p class="mx-4 text-xl"> {{ $t('sidewalks') }} <br>{{ $t('roads') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1"
@@ -460,8 +461,8 @@
                         </g>
                     </svg>
 
-                    <p v-if="$i18n.locale == 'en' " class="mx-4 text-2xl">{{ $t('sanitation') }} </p>
-                    <p v-if="$i18n.locale == 'ar' " class="mx-4 text-2xl">صرف <br>صحي</p>
+                    <p v-if="$i18n.locale == 'en' " class="mx-4 text-xl">{{ $t('sanitation') }} </p>
+                    <p v-if="$i18n.locale == 'ar' " class="mx-4 text-xl">صرف <br>صحي</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -483,7 +484,7 @@
                             </g>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('network') }} <br> {{ $t('fiber') }}</p>
+                    <p class="mx-4 text-xl">{{ $t('network') }} <br> {{ $t('fiber') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg fill="#000000" width="64px" height="64px" viewBox="0 0 32 32" version="1.1"
@@ -495,7 +496,7 @@
                                 d="M12.563 1c-0.937 0-1.25 0.211-1.25 1.25v0.937h-2.813c-1.847 0-2.187 0.341-2.187 2.187v23.438c0 1.847 0.341 2.187 2.187 2.187h15c1.847 0 2.187-0.341 2.187-2.187v-23.438c0-1.847-0.341-2.187-2.187-2.187h-2.813v-0.937c0-1.038-0.312-1.25-1.25-1.25h-6.875zM8.5 7.563c0-2.5-0.312-2.187 2.187-2.187 1.25 0 9.688 0 10.625 0 2.5 0 2.187-0.312 2.187 2.187 0 1.25 0 17.813 0 19.063 0 2.5 0.312 2.187-2.187 2.187-1.25 0-9.375 0-10.625 0-2.5 0-2.187 0.312-2.187-2.187 0-1.251 0-17.813 0-19.063zM10.687 14.75h10.625c0.345 0 0.625 0.28 0.625 0.625v3.125c0 0.345-0.28 0.625-0.625 0.625h-10.625c-0.345 0-0.625-0.28-0.625-0.625v-3.125c0-0.345 0.28-0.625 0.625-0.625z"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('electric') }}</p>
+                    <p class="mx-4 text-xl">{{ $t('network') }} <br>{{ $t('electric') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -507,7 +508,7 @@
                                 stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('lighting') }}</p>
+                    <p class="mx-4 text-xl">{{ $t('network') }} <br>{{ $t('lighting') }}</p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -522,7 +523,7 @@
                                 stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('network') }} <br>{{ $t('water') }} </p>
+                    <p class="mx-4 text-xl">{{ $t('network') }} <br>{{ $t('water') }} </p>
                 </div>
                 <div style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -534,7 +535,7 @@
                                 stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </svg>
-                    <p class="mx-4 text-2xl">{{ $t('rain') }} <br> {{ $t('drainage') }}</p>
+                    <p class="mx-4 text-xl">{{ $t('rain') }} <br> {{ $t('drainage') }}</p>
                 </div>
 
             </div>
@@ -921,7 +922,7 @@
             </div>
 
             <p dir="">
-                {{ $t('ifYouFaceAProplem') }}<a href="#" class="text-dark-brown">{{ $t('sendUsNow') }}</a>
+                {{ $t('ifYouFaceAProplem') }} <router-link to="/contact-us"> <a href="#" class="text-dark-brown">{{ $t('sendUsNow') }}</a></router-link>
             </p>
         </div>
 

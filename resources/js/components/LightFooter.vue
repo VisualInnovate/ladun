@@ -3,7 +3,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-8  px-11 py-12">
             <div class="flex flex-col mx-auto ">
-                <img :src="DarkLogo" alt="Logo_darK" class=" mb-5" />
+                <img :src="DarkLogo" alt="Logo_darK" class=" mb-5  h-[52%]" />
                 <div class="inline-flex justify-between">
                     <template v-for="icon in icons">
                         <a :href="icon.href" target="_blank" >
@@ -87,7 +87,7 @@
 </template>
 
 <script setup>
-import DarkLogo from "../../img/ladun_logo_dark.png";
+import DarkLogo from "../../img/png ladun vertical-01.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
 import twitterIcon from "../../img/light_footer_twitter.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";

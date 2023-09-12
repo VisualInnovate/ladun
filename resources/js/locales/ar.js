@@ -67,7 +67,7 @@ export default {
     easternRegion: "المنطقة الشرقية",
     middleRegion: "المنطقة الوسطى",
     westernRegion: "المنطقة الغربية",
-    northernRegion: "المنطقة الشمالية",
+    SouthernRegion: "المنطقة الجنوبية",
     acquaCompound: "مجمع أكوا السكني",
     acquaCompoundText:
         " النص الخاص ب مجمع أكوا السكني النص الخاص ب مجمع أكوا السكني النص الخاص ب مجمع أكوا السكني النص الخاص ب مجمع أكوا السكني النص الخاص ب مجمع أكوا السكني النص الخاص ب مجمع أكوا السكني ",
@@ -144,27 +144,23 @@ export default {
     other: "اخرى",
     click_search: "ابحث هنا ",
     Investment_project: "مشروع استثماري",
-    reports:"التقارير السنوية",
+    reports: "التقارير السنوية",
     realState: "التطوير العقاري",
-    certified : "معتمد برقم",
-    video_360:"جوله افتراضيه 360",
-    paved:"معبدة",
-
+    certified: "معتمد برقم",
+    video_360: "جوله افتراضيه 360",
+    paved: "معبدة",
 
     partners: "شركاء المشروع",
 
-    roads:"طرق",
-    sidewalks:"ارصفة",
-    sanitation:"صرف",
-    fiber:"فايبر",
-    network:"شبكة",
-    electric:'كهرباء',
-    lighting:'اضائة',
-    water:'مياه',
+    roads: "طرق",
+    sidewalks: "ارصفة",
+    sanitation: "صرف",
+    fiber: "فايبر",
+    network: "شبكة",
+    electric: "كهرباء",
+    lighting: "اضائة",
+    water: "مياه",
 
-    rain:'امطار',
-    drainage:'تصريف'
-
-
-
+    rain: "امطار",
+    drainage: "تصريف",
 };

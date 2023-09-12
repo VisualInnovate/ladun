@@ -167,7 +167,7 @@
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2  mx-auto lg:w-[95%] px-5 ">
             <div class="right">
-                <p class="px-2 my-auto text-grey text-justify text-xl mb-7" v-if="aboutData.content"
+                <p class="px-2 my-auto text-grey text-justify text-lg mb-7" v-if="aboutData.content"
                    v-html="aboutData.content[$i18n.locale]"></p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                     <div class="grid grid-cols-3 justify-center ">
