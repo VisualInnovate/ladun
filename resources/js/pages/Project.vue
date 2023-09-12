@@ -623,7 +623,6 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-
     <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery.length">
         <div class="container mx-auto">
             <div class=" ">
@@ -650,7 +649,8 @@
                 </div>
                 <div class="flex  w-[85%] m-auto " id="carsoul-project">
                     <div class="w-[100%] m-auto">
-                        <vue-carousel :items="getGallery(project.gallery)"/>
+
+                        <Carousel :pictures="getGallery(project.gallery)"/>
                     </div>
 
 
@@ -854,7 +854,7 @@
                                     id="first_name" maxlength="40" name="first_name"
                                     aria-describedby="helper-text-explanation"
                                     v-model="first_name"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('FirstName')"
                                 />
                                 <input
@@ -862,7 +862,7 @@
                                     id="last_name" maxlength="80" name="last_name"
                                     aria-describedby="helper-text-explanation"
                                     v-model="last_name"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('LastName')"
                                 />
                             </div>
@@ -872,7 +872,7 @@
                                     id="mobile" maxlength="40" name="mobile"
                                     v-model="mobile"
                                     aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full md:w-1/2 bg-gray-50 border rounded-3xl border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('PhoneNumber')"
                                 />
                                 <input
@@ -880,14 +880,14 @@
                                     id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
                                     v-model="email"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
                             </div>
                             <div class="flex justify-center gap-x-5">
 
                                 <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="status"
                                 >
                                     <option value="Buy"> {{ $t('ownership') }}</option>
@@ -898,7 +898,7 @@
                                 </select>
 
                                 <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="region"
                                 >
                                     <option value="Eastern"> {{ $t('easternRegion') }}</option>
@@ -912,7 +912,7 @@
                             </div>
                             <button
                                 type="submit" @click="submit"
-                                class="bg-dark-brown h-10 mb-10 mx-2 text-white"
+                                class="bg-dark-brown mb-[1%] py-2 m-auto text-white lg:w-[45%] rounded-3xl"
                             >
                                 {{ $t("sendNow") }}
                             </button>
@@ -989,8 +989,11 @@ export default {
         }
     },
     methods: {
-        getGallery(gallery) {
+         getGallery(gallery) {
+
             if (gallery) {
+                console.log("ce")
+                console.log(gallery)
                 return Object.values(gallery).map((image) => {
                     return {
                         src: image.original_url,
@@ -1067,7 +1070,8 @@ export default {
             })
             .catch((error) => console.log(error))
 
-    }, mounted() {
+    },
+    mounted() {
 
 
         window.addEventListener('scroll', function () {
