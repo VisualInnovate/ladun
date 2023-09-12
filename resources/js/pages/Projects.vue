@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <router-link
-                                        class="w-[100px] bg-dark-brown text-white rounded-md h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2"
+                                        class="w-[100px] bg-dark-brown text-white rounded-2xl h-6 max-w-20 text-xs text-center flex flex-col justify-center mx-2"
                                         :to="{name: 'Project', params: { id: project.id }}">{{ $t('readMore') }}
                                     </router-link>
                                 </div>
