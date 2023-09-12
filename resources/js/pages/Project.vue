@@ -31,6 +31,8 @@
                         <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
                                                                         v-html="project.number"></p>
                     </div>
+                     <p class=" w-[90%] mb-12 text-sm px-2 py-4 text-right " v-if="project.text"
+                       v-html="project.text[$i18n.locale]"></p>
 
 
 
