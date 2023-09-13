@@ -1,5 +1,5 @@
 <template>
-    <Navbar class="bg-black fixed z-50 w-full"/>
+    <Navbar class="bg-black fixed z-50 w-full "/>
 
     <div class="container mx-auto ">
         <h1 class="pt-36 px-5 mx-5 mb-5 font-bold">
@@ -13,7 +13,7 @@
 
             <div class="flex-auto  ">
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                    <div class="bg-[#57565B] rounded-lg h-[100%] lg:h-[90%]">
+                    <div class="bg-[#57565B] rounded-xl h-[100%] lg:h-[90%]">
                         <div class="text-dark-brown py-10 rounded-2xl text-lg px-5 text-sm">
                             {{ $t('beInTouch') }}
                         </div>

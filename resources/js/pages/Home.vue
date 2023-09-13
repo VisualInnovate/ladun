@@ -70,13 +70,16 @@
 
                             <div
                                 class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FFFDF6] latest_project mx-5">
-                                <img style="border: 1px solid #d9d5d5;height:80%px;" class="w-full  rounded-xl" v-if="project.attachment" :src="project.attachment"
-                                     alt="Project Photo">
+                                <router-link
+                                        :to="{name: 'Project', params: { id: project.id }}">
+                                        <img style="border: 1px solid #d9d5d5;height:80%px;" class="w-full  rounded-xl" v-if="project.attachment" :src="project.attachment">
+                                </router-link>
                                 <div class="flex   text-right p-2">
-
                                    <div class="flex w-full flex-row-reverse ">
-
-                                    <h3 class=" px-2  text-2xl font-bold text-[#636463] ">{{ project.title[$i18n.locale] }}</h3>
+                                    <router-link
+                                        :to="{name: 'Project', params: { id: project.id }}">
+                                        <h3 class=" px-2  text-2xl font-bold text-[#636463] ">{{ project.title[$i18n.locale] }}</h3>
+                                     </router-link>
                                     <div class="text-dark-brown flex">
                                         <small class=" text-right my-auto " >
                                             <h6 class="flex-initial my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>

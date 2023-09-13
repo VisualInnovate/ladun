@@ -830,10 +830,10 @@
         <div class="container mx-auto">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <div
-                class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
+                class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
             >
                 <div class="flex-auto md:w-1/2 right">
-                    <div class="bg-[#57565B] rounded-lg mb-14 pt-12" >
+                    <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl" >
                         <h3 class="text-center mb-5 text-white">{{$t('pleaseFill')}}</h3>
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
@@ -905,7 +905,7 @@
                                     <option value="Eastern"> {{ $t('easternRegion') }}</option>
                                     <option value="Middle"> {{ $t('middleRegion') }}</option>
                                     <option value="Northern"> {{ $t('westernRegion') }}</option>
-                                    <option value="Western"> {{ $t('northernRegion') }}</option>
+                                    <option value="Western"> {{ $t('SouthernRegion') }}</option>
 
 
                                 </select>
@@ -993,7 +993,7 @@ export default {
          getGallery(gallery) {
 
             if (gallery) {
-                console.log("ce")
+
                 console.log(gallery)
                 return Object.values(gallery).map((image) => {
                     return {
