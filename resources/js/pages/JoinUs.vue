@@ -23,12 +23,12 @@
 
                             <input type="text" id="" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.name"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('fullName')">
                             <div class="text-red-500 " v-if="error.name">{{error.name[0]}}</div>
                             <input type="email" id="helper-text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.email"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('email')">
                             <div class="text-red-500 " v-if="error.email">{{error.email[0]}}</div>
 
@@ -36,7 +36,7 @@
                         <div class="flex justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.phone"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('mobile')">
                             <div class="text-red-500 " v-if="error.phone">{{error.phone[0]}}</div>
 
@@ -55,13 +55,13 @@
                         <div class="flex justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.qualification"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('academicCertification')">
                             <div class="text-red-500 " v-if="error.email">{{error.email[0]}}</div>
 
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.specialization"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('specialization')">
                             <div class="text-red-500 " v-if="error.specialization">{{error.specialization[0]}}</div>
 
@@ -69,13 +69,13 @@
                         <div class="flex justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.jop"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('position')">
                             <div class="text-red-500 " v-if="error.jop">{{error.jop[0]}}</div>
 
                             <input type="file" id="file" aria-describedby="helper-text-explanation"
                                    @change="handleFile" ref="file"
-                                   class=" w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class=" w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('uploadCV')">
                             <div class="text-red-500 " v-if="error.cv">{{error.cv[0]}}</div>
 
