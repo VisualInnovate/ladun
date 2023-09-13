@@ -95,7 +95,7 @@
                             {{ $t('modale') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery.length">
+                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery">
                         <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -623,10 +623,12 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery.length">
+
+
+    <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery">
         <div class="container mx-auto">
             <div class=" ">
-                <div>
+                <div class="mb-5">
                     <div
                         class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
                         <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
@@ -701,11 +703,10 @@
         <div class="flex mx-auto w-[80%]">
             <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
-            <div class=" my-auto text-3xl text-light-brown "><p> {{ $t("project360") }}</p></div>
+            <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
         </div>
-        <div class="container mx-auto">
-            <div class="w-[70%] h-[70%] ">
-                {{project.project_video}}
+        <div class="container mx-auto flex justify-center">
+            <div class="w-[70%] h-[70%] flex  " v-html="project.project_video">
             </div>
 
         </div>
