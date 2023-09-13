@@ -23,7 +23,7 @@
             <list-group-item class="mx-24" @click="showModal('Buy-Eastern Region')">{{ $t('easternRegion') }}</list-group-item>
             <list-group-item class="mx-24" @click="showModal('Rent-Middle Region')">{{ $t('middleRegion') }}</list-group-item>
             <list-group-item class="mx-24" @click="showModal('Rent-Western Region')">{{ $t('westernRegion') }}</list-group-item>
-            <list-group-item class="mx-24" @click="showModal('Rent-Northern Region')">{{ $t('SouthernRegion') }}</list-group-item>
+
 
 
         </list-group>

@@ -71,6 +71,7 @@ export default {
     westernRegion: "Western Region",
     SouthernRegion: "Southern Region",
     acquaCompound: "Acqua Compound",
+    download: "download",
     acquaCompoundText:
         "acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText acquaCompoundText ",
     readMore: "Read more",

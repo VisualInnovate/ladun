@@ -667,8 +667,8 @@
 
     <!-- Video -->
 
-    <section id="video" class="bg-[white]" v-if="videoo!='' && videoo">
-        <div class="flex mx-auto w-[80%]">
+    <section id="video" class=" bg-[white]" v-if="videoo!='' && videoo">
+        <div class="flex mx-auto container">
 
             <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -692,7 +692,7 @@
             <div class="my-auto text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
         </div>
         <div class="container mx-auto">
-            <video class="mx-auto w-[70%] h-[70%] rounded-xl" crossorigin playsinline controls>
+            <video class="mx-auto h-[80%] w-[85%] rounded-xl" crossorigin playsinline controls>
                 <source :src="videoo" type="video/mp4">
             </video>
         </div>
@@ -700,13 +700,13 @@
     </section>
 
     <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video!='' && project.project_video">
-        <div class="flex mx-auto w-[80%]">
+        <div class="flex container mx-auto w-[85%]">
             <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
             <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
         </div>
         <div class="container mx-auto flex justify-center">
-            <div class="w-[70%] h-[70%] flex  " v-html="project.project_video">
+            <div class=" h-[70%] flex  " v-html="project.project_video">
             </div>
 
         </div>
@@ -716,11 +716,11 @@
     <!-- location -->
     <section class="company-info   py-20 bg-[white]" id="location" v-if="project.location">
 
-        <div class="container mx-auto">
+        <div class=" container w-[85%] mx-auto">
 
-            <div class="">
+            <div class="container  m-auto">
 
-                <div class="d-info h-full flex flex-col justify-center right">
+                <div class="d-info h-full flex flex-col justify-center right ">
                     <div class="flex">
                         <svg width="34px" height="34px" viewBox="-4 0 32 32" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -770,7 +770,7 @@
     </section>
     <section class=" company-info  bg-[white]" id="downloads" v-if="project.downloads.length">
 
-        <div class="container mx-auto" >
+        <div class="container mx-auto w-[85%]" >
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("Download_Project_Files") }}</p>
                 <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -811,7 +811,7 @@
 
     <section class=" company-info  bg-[white] mb-5" v-if="project.partner_image != '' && project.partner_image">
 
-        <div class="container mx-auto mt-8" >
+        <div class="container w-[85%] mx-auto mt-8" >
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown ">{{ $t("partners") }}</p>
             </div>
@@ -827,13 +827,13 @@
 
     <!-- ask_us -->
     <section class="text-center py-28" id="ask_us">
-        <div class="container mx-auto">
+        <div class="container mx-auto w-[75%]">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <div
                 class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
             >
-                <div class="flex-auto md:w-1/2 right">
-                    <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl" >
+                <div class="flex-auto  right">
+                    <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl  m-auto" >
                         <h3 class="text-center mb-5 text-white">{{$t('pleaseFill')}}</h3>
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->

@@ -32,7 +32,7 @@
             </button>
         </div>
     </header>
-    <div class="flex justify-center">
+    <div class="flex justify-center bg-white">
         <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp animate__slow"
            href="#" v-scroll-to="{
                             el: '#project-latest',
@@ -69,10 +69,10 @@
                         <slide v-for="project in department.latest" :key="project.id" class="" >
 
                             <div
-                                class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FFFDF6] latest_project mx-5">
+                                class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
                                 <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <img style="border: 1px solid #d9d5d5;height:80%px;" class="w-full  rounded-xl" v-if="project.attachment" :src="project.attachment">
+                                        <img style="border: 1px solid #d9d5d5;height:80%px;" class="w-full bg-[#FBF9F1]  rounded-xl" v-if="project.attachment" :src="project.attachment">
                                 </router-link>
                                 <div class="flex   text-right p-2">
                                    <div class="flex w-full flex-row-reverse ">

@@ -151,6 +151,7 @@ export default {
     paved: "معبدة",
 
     partners: "شركاء المشروع",
+    download: "تحميل",
 
     roads: "طرق",
     sidewalks: "ارصفة",

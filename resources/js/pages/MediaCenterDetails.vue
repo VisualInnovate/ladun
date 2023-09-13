@@ -1,11 +1,12 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <Carsoul />
-    <router-link
+
+
+    <section class="py-20">
+        <router-link
              to="/media-center">
              <p class="w-full m-auto text-center py-[2%] text-4xl font-bold cursor-pointer">{{ $t('mediaCenter') }}</p>
     </router-link>
-    <section class="py-20">
         <div class="container mx-auto">
 
             <div class=" flex flex-wrap flex-col lg:flex-row  ">
@@ -20,19 +21,14 @@
                     <h1 v-if="media[0]" class="font-bold text-dark-brown mb-5">{{ media[0].title[$i18n.locale] }}</h1>
                     <p v-if="media[0]" v-html="media[0].content[$i18n.locale]" class="text-justify text-lg"></p>
                     <div class="company-button ">
-                        <div class="flex flex-wrap justify-between" v-if="media[0]">
+                        <div class="flex flex-wrap justify-between " v-if="media[0]">
 
-                                <!-- <a :href="`${getFile(media[0])?.original_url}`" target="_blank"
-                                   class="hover:bg-green-400 hover:cursor-pointer special-button text-xl button bg-dark-brown  rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
-                                    <ArrowDownTrayIcon class="text-white w-6 h-6 rtl:ml-6 ltr:mr-6"/>
-                                    {{ getFile(media[0])?.name}}
-                                </a> -->
-
-
-
+                                 <a :href="`${getFile(media[0])?.original_url}`" target="_blank"
+                                   class="hover:bg-[#74642a] hover:cursor-pointer  special-button text-xl button bg-dark-brown mx-auto rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">
+                                   <svg fill="white" width="30px" height="30px" viewBox="0 0 24 24" id="download-8" xmlns="http://www.w3.org/2000/svg" class="icon line my-auto"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><polyline id="primary" points="15 14 12 17 9 14" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"></polyline><path id="primary-2" data-name="primary" d="M12,17V3m4,7h3a1,1,0,0,1,1,1v9a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V11a1,1,0,0,1,1-1H8" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"></path></g></svg>
+                                    {{$t('download')}}
+                                </a>
                         </div>
-
-
                     </div>
 
                 </div>
