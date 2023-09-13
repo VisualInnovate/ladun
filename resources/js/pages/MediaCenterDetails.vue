@@ -1,7 +1,10 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
     <Carsoul />
-    <p class="w-full m-auto text-center py-[2%] text-4xl font-bold cursor-pointer">{{ $t('mediaCenter') }}</p>
+    <router-link
+             to="/media-center">
+             <p class="w-full m-auto text-center py-[2%] text-4xl font-bold cursor-pointer">{{ $t('mediaCenter') }}</p>
+    </router-link>
     <section class="py-20">
         <div class="container mx-auto">
 
