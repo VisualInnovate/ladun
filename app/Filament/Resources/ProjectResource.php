@@ -120,7 +120,7 @@ class ProjectResource extends Resource
                             ->numeric(),
                         TextInput::make('mosque')->label(__('mosque'))->numeric(),
                         TextInput::make('video')->label(__('video')),
-                        TextInput::make('project_video')->label(__('project_video')),
+                        TextInput::make('project_video')->hint('this filed take iframe')->columnSpanFull()->label(__('project_video')),
                         CheckboxList::make('utilities')->label(__('utilities'))
                             ->relationship('utilities', 'title')->columns(3),
                         TextInput::make('number')->label(__('number'))
