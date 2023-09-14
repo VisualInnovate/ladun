@@ -3,7 +3,7 @@
     <div class="pt-22">
         <img-banner>
             <img class="p-2"  src="../../img/investors-page.png">
-            <template #text>{{$t('investor_banner')}}  </template>
+            <template #text>{{$t('companyAds')}}  </template>
         </img-banner>
     </div>
 

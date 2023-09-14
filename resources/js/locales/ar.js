@@ -115,7 +115,7 @@ export default {
     "Join Us": "تم ادخال الداتا بنجاح ",
     investorsRelations: "علاقات المستثمرين",
     contactWithInvestorsRelations: "تواصل مع علاقات المستثمرين",
-    highboard: "اعضاء مجلس الادارة",
+    highboard: "أعضاء مجلس الادارة",
     ownership: "تمليك",
     rent: "ايجار",
     FirstName: "الاسم الاول",

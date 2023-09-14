@@ -700,7 +700,7 @@
     </section>
 
     <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video!='' && project.project_video">
-        <div class="flex container mx-auto w-[85%]">
+        <div class="flex container mx-auto ">
             <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
             <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>

@@ -45,34 +45,34 @@
 
     <!-- end of header section -->
     <!-- Latest Project section -->
-    <section id="project-latest  bg-[white]">
-        <div class="grid grid-cols-4 gap-4 my-10">
-            <h2 id="latest_project_header"
+    <section id="project-latest  bg-[white]" class="bg-white">
+        <div class="grid grid-cols-4 gap-4 py-10 bg-white">
+            <h2 id="latest_project_header bg-white"
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
             </h2>
         </div>
         <div
 
-            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
+            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 bg-white [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab
                     v-for="department in fetchedData"
                     :name="department.title['en']"
                     :title="department.title[$i18n.locale]"
-                    class="my-2"
+                    class="py-2  bg-white"
 
                 >
-                    <carousel  v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
+                    <carousel class=" bg-white" v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
-                        <slide v-for="project in department.latest" :key="project.id" class="" >
+                        <slide v-for="project in department.latest" :key="project.id"  >
 
                             <div
                                 class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
                                 <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <img style="border: 1px solid #b6a259;height:80%px;" class="w-full   rounded-xl" v-if="project.attachment" :src="project.attachment">
+                                        <img style="border: 1px height:80%px;" class="w-full   rounded-xl" v-if="project.attachment" :src="project.attachment">
                                 </router-link>
                                 <div class="flex   text-right p-2">
                                    <div class="flex w-full flex-row-reverse ">
@@ -94,7 +94,7 @@
                                    v-html="project.text[$i18n.locale].slice(0, 200)"></p>
                                 <div class=" flex justify-between   ltr:text-start rtl:text-end w-full  ">
 
-                                    <div class="flex my-auto">
+                                    <div class="flex my-auto mx-1">
                                         <div class="flex ">
                                             <p class="my-auto text-gray-500">{{ $t('unit') }}</p>
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
@@ -116,7 +116,7 @@
                                             class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
 
                                     </div>
-                                    <div  class="flex my-auto">
+                                    <div  class="flex my-auto px-1">
                                         <small class=" text-gray-900 px-2">{{
                                                 project?.type[$i18n.locale]
                                         }}</small>
@@ -159,7 +159,7 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class=" bg-[white] relative about-section mt-12" id="aboutSection">
+    <section class=" bg-[white] relative about-section pt-12" id="aboutSection">
         <div class="flex py-5">
             <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
                 class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 font-bold text-3xl"
