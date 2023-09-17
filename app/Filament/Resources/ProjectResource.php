@@ -81,7 +81,7 @@ class ProjectResource extends Resource
 
                         SpatieMediaLibraryFileUpload::make('banner')
                             ->hint('max image dimension 150px * 150px')
-                            ->label(__('banners'))->collection('banner'),
+                            ->label(__('banner'))->collection('banner'),
 
 
                         SpatieMediaLibraryFileUpload::make('project photos')
@@ -90,7 +90,7 @@ class ProjectResource extends Resource
                             ->multiple()
                             ->enableReordering(),
 
-                        FileUpload::make('cover photo')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        FileUpload::make('cover photo')->label(__('cover photo'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),
 
