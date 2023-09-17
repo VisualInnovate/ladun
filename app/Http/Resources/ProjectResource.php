@@ -61,6 +61,7 @@ class ProjectResource extends JsonResource
             ];
            }),
            'gallery' => $this->getMedia('attachments'),
+
            'banner' => $this->getMedia('banner'),
            'logo' => $this->getMedia('projects')->first(),
            'download_image' => $this->getMedia('download_image')->first(),
