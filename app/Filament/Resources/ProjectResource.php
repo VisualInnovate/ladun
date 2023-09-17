@@ -71,7 +71,7 @@ class ProjectResource extends Resource
                         TextInput::make('type')->label(__('type'))
                             ->required(),
 
-                        SpatieMediaLibraryFileUpload::make('Main Image')
+                        SpatieMediaLibraryFileUpload::make('logo')
                             ->hint('max image dimension 150px * 150px')
                             ->label(__('Main Image'))->collection('projects'),
 
@@ -84,13 +84,13 @@ class ProjectResource extends Resource
                             ->label(__('banners'))->collection('banner'),
 
 
-                        SpatieMediaLibraryFileUpload::make('attachments')
+                        SpatieMediaLibraryFileUpload::make('project photos')
                             ->hint('min image dimension 400px * 707px')
                             ->label(__('attachments'))->collection('attachments')
                             ->multiple()
                             ->enableReordering(),
 
-                        FileUpload::make('attachment')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        FileUpload::make('cover photo')->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),
 

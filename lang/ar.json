@@ -61,6 +61,9 @@
     "companies number": "عدد الشركات",
     "developed buildings": "عدد وحدات سكنية تم تطويرها",
     "developing buildings": "عدد وحدات سكنية قيد التطوير",
-    "Accreditation Number": "رقم الاعتماد"
+    "Accreditation Number": "رقم الاعتماد",
+    "logo": "الشعار",
+    "project photos": "صور المشروع",
+    "cover photo": "الصورة الخارجيه"
 
 }
