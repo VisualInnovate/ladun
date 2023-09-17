@@ -73,7 +73,7 @@ class ProjectResource extends Resource
 
                         SpatieMediaLibraryFileUpload::make('logo')
                             ->hint('max image dimension 150px * 150px')
-                            ->label(__('Main Image'))->collection('projects'),
+                            ->label(__('logo'))->collection('projects'),
 
                         SpatieMediaLibraryFileUpload::make('Project partners')
                             ->hint('max image dimension 150px * 150px')
@@ -86,7 +86,7 @@ class ProjectResource extends Resource
 
                         SpatieMediaLibraryFileUpload::make('project photos')
                             ->hint('min image dimension 400px * 707px')
-                            ->label(__('attachments'))->collection('attachments')
+                            ->label(__('project photos'))->collection('attachments')
                             ->multiple()
                             ->enableReordering(),
 
