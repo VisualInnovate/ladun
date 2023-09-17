@@ -74,9 +74,14 @@ class ProjectResource extends Resource
                         SpatieMediaLibraryFileUpload::make('Main Image')
                             ->hint('max image dimension 150px * 150px')
                             ->label(__('Main Image'))->collection('projects'),
+
                         SpatieMediaLibraryFileUpload::make('Project partners')
                             ->hint('max image dimension 150px * 150px')
                             ->label(__('Project partners'))->collection('project_partners'),
+
+                        SpatieMediaLibraryFileUpload::make('banner')
+                            ->hint('max image dimension 150px * 150px')
+                            ->label(__('banners'))->collection('banner'),
 
 
                         SpatieMediaLibraryFileUpload::make('attachments')
@@ -123,7 +128,7 @@ class ProjectResource extends Resource
                         TextInput::make('project_video')->hint('this filed take iframe')->columnSpanFull()->label(__('project_video')),
                         CheckboxList::make('utilities')->label(__('utilities'))
                             ->relationship('utilities', 'title')->columns(3),
-                        TextInput::make('number')->label(__('number'))
+                        TextInput::make('number')->label(__('Accreditation Number'))
                             ->numeric(),
 
                         RichEditor::make('content')->columnSpanFull()->label(__('content')),

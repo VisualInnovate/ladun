@@ -2,7 +2,7 @@
     <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot h-[50vh] md:h-auto">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <img class="h-[50vh] md:h-auto w-[100%]" src="../../img/real-state-management-banner.png">
+        <img class="h-[50vh] md:h-auto w-[100%]" :src="getGallery(project.banner)[0].src" style="height: 400px">
 
         <div
             class="z-40 text-white absolute top-[100%] m-auto -translate-y-[100%] rtl:right-[3%] ltr:left-[20%] -translate-x-[100%] text-justify">

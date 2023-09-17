@@ -60,7 +60,8 @@ class ProjectResource extends JsonResource
                 'image' => $util->media()->first(),
             ];
            }),
-           'gallery' => $this->getMedia('default'),
+           'gallery' => $this->getMedia('attachments'),
+           'banner' => $this->getMedia('banner'),
            'logo' => $this->getMedia('projects')->first(),
            'download_image' => $this->getMedia('download_image')->first(),
            'partner_image' => $this->getMedia('project_partners')->first(),
