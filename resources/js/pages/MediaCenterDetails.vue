@@ -21,7 +21,7 @@
                     <h1 v-if="media[0]" class="font-bold text-dark-brown mb-5">{{ media[0].title[$i18n.locale] }}</h1>
                     <p v-if="media[0]" v-html="media[0].content[$i18n.locale]" class="text-justify text-lg"></p>
                     <div class="company-button ">
-                        <div class="flex flex-wrap justify-between " v-if="media[0]">
+                        <div class="flex flex-wrap justify-between " v-if="!media[0]">
 
                                  <a :href="`${getFile(media[0])?.original_url}`" target="_blank"
                                    class="hover:bg-[#74642a] hover:cursor-pointer  special-button text-xl button bg-dark-brown mx-auto rounded-lg flex items-center text-white px-2 py-2 my-5 mb-14 ml-4 rtl:mr-4">

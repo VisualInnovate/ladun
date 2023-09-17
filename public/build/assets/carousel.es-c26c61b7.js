@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:public/build/assets/carousel.es-c26c61b7.js
 import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-a0d8e61e.js";/**
+========
+import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-b47cf185.js";/**
+>>>>>>>> 31c6983ce7f42c6cf19cf70f7445fa629aad4c8d:public/build/assets/carousel.es-76208253.js
  * Vue 3 Carousel 0.2.12
  * (c) 2023
  * @license MIT
