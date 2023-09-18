@@ -80,7 +80,7 @@ class ProjectResource extends Resource
                             ->label(__('Project partners'))->collection('project_partners'),
 
                         SpatieMediaLibraryFileUpload::make('banner')
-                            ->hint('max image dimension 150px * 150px')
+                            ->hint('max image dimension 1700px * 400px')
                             ->label(__('banner'))->collection('banner'),
 
 
@@ -90,7 +90,7 @@ class ProjectResource extends Resource
                             ->multiple()
                             ->enableReordering(),
 
-                        FileUpload::make('cover photo')->label(__('cover photo'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        FileUpload::make('attachment')->label(__('cover photo'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),
 
