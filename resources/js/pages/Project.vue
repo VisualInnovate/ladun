@@ -735,13 +735,13 @@
             </svg>
             <div class="my-auto  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
         </div>
-        <div class="container mx-auto">
+        <div class="container flex justify-center mx-auto">
 
             <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
             <!--                    :src="videoo">-->
             <!--            </iframe>-->
 
-                <div v-html="videoo" class="mx-auto w-[85%] rounded-xl"></div>
+                <div v-html="videoo" class="mx-auto rounded-xl"></div>
 
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
@@ -754,7 +754,7 @@
             <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
         </div>
         <div class="container mx-auto flex justify-center">
-            <div class=" h-[70%] flex  " v-html="project.project_video">
+            <div class="  flex justify-center " v-html="project.project_video">
             </div>
 
         </div>
