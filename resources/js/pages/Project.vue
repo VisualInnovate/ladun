@@ -740,9 +740,8 @@
             <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
             <!--                    :src="videoo">-->
             <!--            </iframe>-->
-            <div class="w-[90%]">
+
                 <div v-html="videoo" class="mx-auto w-[85%] rounded-xl"></div>
-            </div>
 
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
