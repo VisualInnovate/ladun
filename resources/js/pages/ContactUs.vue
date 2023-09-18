@@ -19,7 +19,7 @@
                         </div>
 
 
-                        <form class="grid gap-y-12 mx-5"
+                        <form class="grid gap-y-12 mx-5 pb-12"
 
                         >
                             <div class="flex justify-center gap-x-5">
@@ -87,7 +87,7 @@
                                     <option value="Eastern"> {{ $t('easternRegion') }}</option>
                                     <option value="Middle"> {{ $t('middleRegion') }}</option>
                                     <option value="Northern"> {{ $t('westernRegion') }}</option>
-                                    <option value="Western"> {{ $t('northernRegion') }}</option>
+                                    <option value="Western"> {{ $t('SouthernRegion') }}</option>
 
 
                                 </select>
@@ -107,8 +107,13 @@
                     </div>
                     <div class="w-full  ">
 
-                        <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"
-                             :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>
+<!--                        <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"-->
+<!--                             :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>-->
+                        <iframe class="w-full h-[100%] rounded-3xl lg:h-[90%]"
+                                :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"
+                                :src="mapLink"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                 </div>
@@ -220,6 +225,11 @@ export default {
                 .catch((error) => console.log(error))
         }
 
+    },
+    computed:{
+        mapLink() {
+            return `https://maps.google.com/maps?key=AIzaSyDWxa_rbz7ccvjsvxmbPR5Q_AEK14-D0sk&q=24.820366950,46.64352462&hl=es&z=14&amp&output=embed`
+        }
     }
 
 }
