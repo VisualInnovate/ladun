@@ -25,16 +25,16 @@
                 >
                     <div class="  mx-auto px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
 
-                        <router-link to="/projects"><p class="text-2xl font-bold truncate"  v-if="project.department">{{ project.department.title[$i18n.locale]}}</p></router-link>
+                        <router-link to="/projects"><p class="text-2xl font-bold truncate" v-if="project.department">
+                            {{ project.department.title[$i18n.locale] }}</p></router-link>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
                         <p v-if="project.number" class="text-lg">{{ $t('certified') }}</p>
                         <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
-                                                                        v-html="project.number"></p>
+                           v-html="project.number"></p>
                     </div>
-                     <p class=" w-[90%] mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
+                    <p class=" w-[90%] mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
-
 
 
                 </div>
@@ -66,7 +66,7 @@
 
                     </div>
 
-                    <div class=" mx-auto mb-3 md:mb-0 flex " >
+                    <div class=" mx-auto mb-3 md:mb-0 flex ">
                         <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -204,9 +204,41 @@
                     </div>
 
 
-
                     <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.partner_image != '' && project.partner_image">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55.415 55.415" xml:space="preserve" width="27px" height="27px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F8CF26;" d="M13.294,25.562l-0.672-0.672c-0.589-0.59-0.914-1.373-0.914-2.207c0-1.684,1.342-3.051,3.011-3.11 c0.058-1.632,1.368-2.942,3-3c0.058-1.632,1.368-2.942,3-3c0.043-1.223,0.787-2.121,1.847-2.593l-1.272-1.126h-1.172L9.708,19.976 v5.172l2,2L13.294,25.562z"></path> <path style="fill:#66CEDB;" d="M14.708,4.976l-9.586,9.586l3.586,3.585l9.586-9.586L14.708,4.976z M12,9.854l2-2l1.414,1.414l-2,2 L12,9.854z"></path> <path style="fill:#66CEDB;" d="M17.708,47.147l3.586-3.586l-9.586-9.585l-3.586,3.586L17.708,47.147z M16.415,40.854l2,2 l-1.414,1.414l-2-2L16.415,40.854z"></path> <polygon style="fill:#F8CF26;" points="41.708,23.976 31.293,13.854 28.122,13.854 41.708,27.147 "></polygon> <path style="fill:#66CEDB;" d="M33.122,42.562l3.586,3.585l9.586-9.586l-3.586-3.585L33.122,42.562z M41.415,39.269L40,37.854l2-2 l1.414,1.414L41.415,39.269z"></path> <path style="fill:#F8CF26;" d="M20.708,36.562v-3.586l-6-6l-2,2v3.172l10.414,10.706h3.172L21,37.415 C20.813,37.227,20.708,36.827,20.708,36.562z"></path> <path style="fill:#F8CF26;" d="M30.415,21.854L29,23.268l-7.379-7.379c-0.212-0.211-0.493-0.328-0.793-0.328 c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793l7.379,7.379L26,26.268l-7.379-7.379 c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793l7.379,7.379L23,29.268 l-7.379-7.379c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793 l11.379,11.379L24,36.268l-1.293-1.292v1.172l5.414,5.706h3.172l10.414-10.707v-1.172L25,13.268l-0.379-0.379 c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793L30.415,21.854z"></path> <path style="fill:#66CEDB;" d="M46.293,18.562l-9.586-9.586l-3.586,3.586l9.586,9.585L46.293,18.562z M38,15.268l-2-2l1.414-1.414 l2,2L38,15.268z"></path> <g> <path d="M43.708,29.562c0-0.265-0.106-0.52-0.293-0.707l-0.293-0.293l0.293-0.293c0.187-0.188,0.293-0.442,0.293-0.707v-3.586 l11.707-11.707L54,10.854l-6.293,6.293l-9.586-9.586l6.293-6.293L43,0L31.293,11.854h-3.586c-0.265,0-0.52-0.041-0.707,0.147 l-0.293,0.22l-0.293-0.329l-0.379-0.397l-3.621-3.484c-0.188-0.189-0.442-0.157-0.707-0.157h-1.586l-7.707-7.853L11,1.342 l2.293,2.256l-9.586,9.568l-2.293-2.302L0,12.273l7.707,7.703v5.586c0,0.265,0.105,0.519,0.293,0.707l2.707,2.707v3.172 L0.001,42.854l1.414,1.414l5.293-5.292l9.586,9.586l-5.293,5.292l1.414,1.56l10.707-10.56h3.586c0.265,0,0.519-0.105,0.707-0.293 l0.707-0.707h3.172l11.707,11.561l1.414-1.487l-6.293-6.33l9.586-9.604L54,44.278l1.414-1.419L43.708,31.147V29.562z M36.708,8.976l9.586,9.586l-3.586,3.585l-9.586-9.586L36.708,8.976z M31.293,13.854l10.414,10.122v3.172L28.122,13.854H31.293z M41.708,29.976v1.172L31.293,41.854h-3.172l-5.414-5.707v-1.172L24,36.268l1.414-1.414L14.035,23.476 c-0.211-0.212-0.328-0.494-0.328-0.793c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328L23,29.269l1.414-1.415 l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328L26,26.269 l1.414-1.415l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328 L29,23.269l1.414-1.415l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121 c0.3,0,0.581,0.117,0.793,0.328L25,13.269L41.708,29.976z M14.708,4.976l3.586,3.586l-9.586,9.585l-3.586-3.586L14.708,4.976z M9.708,19.976L20.122,9.854h1.172l1.272,1.126c-1.06,0.472-1.804,1.443-1.847,2.666c-1.632,0.058-2.942,1.332-3,2.963 c-1.632,0.058-2.942,1.35-3,2.982c-1.669,0.059-3.011,1.417-3.011,3.101c0,0.834,0.325,1.613,0.914,2.202l0.672,0.67l-1.586,1.585 l-2-2.001V19.976z M17.708,47.147l-9.586-9.586l3.586-3.585l9.586,9.586L17.708,47.147z M23.122,42.854L12.708,32.147v-3.172l2-2 l6,6v3.586c0,0.265,0.105,0.666,0.293,0.853l5.293,5.44C26.294,42.854,23.122,42.854,23.122,42.854z M36.708,46.147l-3.586-3.586 l9.586-9.585l3.586,3.586L36.708,46.147z"></path> <rect x="40.294" y="36.562" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -14.3442 40.4935)" width="2.828" height="2"></rect> <rect x="15.707" y="41.147" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -25.2021 24.2795)" width="2" height="2.828"></rect> <rect x="12.293" y="8.562" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.7466 12.4933)" width="2.828" height="2"></rect> <rect x="36.707" y="12.148" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.4547 30.635)" width="2" height="2.828"></rect> </g> </g> </g></svg>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55.415 55.415" xml:space="preserve"
+                             width="27px" height="27px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F8CF26;"
+                                                                   d="M13.294,25.562l-0.672-0.672c-0.589-0.59-0.914-1.373-0.914-2.207c0-1.684,1.342-3.051,3.011-3.11 c0.058-1.632,1.368-2.942,3-3c0.058-1.632,1.368-2.942,3-3c0.043-1.223,0.787-2.121,1.847-2.593l-1.272-1.126h-1.172L9.708,19.976 v5.172l2,2L13.294,25.562z"></path>
+                                <path style="fill:#66CEDB;"
+                                      d="M14.708,4.976l-9.586,9.586l3.586,3.585l9.586-9.586L14.708,4.976z M12,9.854l2-2l1.414,1.414l-2,2 L12,9.854z"></path>
+                                <path style="fill:#66CEDB;"
+                                      d="M17.708,47.147l3.586-3.586l-9.586-9.585l-3.586,3.586L17.708,47.147z M16.415,40.854l2,2 l-1.414,1.414l-2-2L16.415,40.854z"></path>
+                                <polygon style="fill:#F8CF26;"
+                                         points="41.708,23.976 31.293,13.854 28.122,13.854 41.708,27.147 "></polygon>
+                                <path style="fill:#66CEDB;"
+                                      d="M33.122,42.562l3.586,3.585l9.586-9.586l-3.586-3.585L33.122,42.562z M41.415,39.269L40,37.854l2-2 l1.414,1.414L41.415,39.269z"></path>
+                                <path style="fill:#F8CF26;"
+                                      d="M20.708,36.562v-3.586l-6-6l-2,2v3.172l10.414,10.706h3.172L21,37.415 C20.813,37.227,20.708,36.827,20.708,36.562z"></path>
+                                <path style="fill:#F8CF26;"
+                                      d="M30.415,21.854L29,23.268l-7.379-7.379c-0.212-0.211-0.493-0.328-0.793-0.328 c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793l7.379,7.379L26,26.268l-7.379-7.379 c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793l7.379,7.379L23,29.268 l-7.379-7.379c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793 l11.379,11.379L24,36.268l-1.293-1.292v1.172l5.414,5.706h3.172l10.414-10.707v-1.172L25,13.268l-0.379-0.379 c-0.212-0.211-0.493-0.328-0.793-0.328c-0.618,0-1.121,0.503-1.121,1.121c0,0.3,0.117,0.581,0.328,0.793L30.415,21.854z"></path>
+                                <path style="fill:#66CEDB;"
+                                      d="M46.293,18.562l-9.586-9.586l-3.586,3.586l9.586,9.585L46.293,18.562z M38,15.268l-2-2l1.414-1.414 l2,2L38,15.268z"></path>
+                                <g> <path
+                                    d="M43.708,29.562c0-0.265-0.106-0.52-0.293-0.707l-0.293-0.293l0.293-0.293c0.187-0.188,0.293-0.442,0.293-0.707v-3.586 l11.707-11.707L54,10.854l-6.293,6.293l-9.586-9.586l6.293-6.293L43,0L31.293,11.854h-3.586c-0.265,0-0.52-0.041-0.707,0.147 l-0.293,0.22l-0.293-0.329l-0.379-0.397l-3.621-3.484c-0.188-0.189-0.442-0.157-0.707-0.157h-1.586l-7.707-7.853L11,1.342 l2.293,2.256l-9.586,9.568l-2.293-2.302L0,12.273l7.707,7.703v5.586c0,0.265,0.105,0.519,0.293,0.707l2.707,2.707v3.172 L0.001,42.854l1.414,1.414l5.293-5.292l9.586,9.586l-5.293,5.292l1.414,1.56l10.707-10.56h3.586c0.265,0,0.519-0.105,0.707-0.293 l0.707-0.707h3.172l11.707,11.561l1.414-1.487l-6.293-6.33l9.586-9.604L54,44.278l1.414-1.419L43.708,31.147V29.562z M36.708,8.976l9.586,9.586l-3.586,3.585l-9.586-9.586L36.708,8.976z M31.293,13.854l10.414,10.122v3.172L28.122,13.854H31.293z M41.708,29.976v1.172L31.293,41.854h-3.172l-5.414-5.707v-1.172L24,36.268l1.414-1.414L14.035,23.476 c-0.211-0.212-0.328-0.494-0.328-0.793c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328L23,29.269l1.414-1.415 l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328L26,26.269 l1.414-1.415l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121c0.3,0,0.581,0.117,0.793,0.328 L29,23.269l1.414-1.415l-7.379-7.379c-0.211-0.211-0.328-0.493-0.328-0.792c0-0.618,0.503-1.121,1.121-1.121 c0.3,0,0.581,0.117,0.793,0.328L25,13.269L41.708,29.976z M14.708,4.976l3.586,3.586l-9.586,9.585l-3.586-3.586L14.708,4.976z M9.708,19.976L20.122,9.854h1.172l1.272,1.126c-1.06,0.472-1.804,1.443-1.847,2.666c-1.632,0.058-2.942,1.332-3,2.963 c-1.632,0.058-2.942,1.35-3,2.982c-1.669,0.059-3.011,1.417-3.011,3.101c0,0.834,0.325,1.613,0.914,2.202l0.672,0.67l-1.586,1.585 l-2-2.001V19.976z M17.708,47.147l-9.586-9.586l3.586-3.585l9.586,9.586L17.708,47.147z M23.122,42.854L12.708,32.147v-3.172l2-2 l6,6v3.586c0,0.265,0.105,0.666,0.293,0.853l5.293,5.44C26.294,42.854,23.122,42.854,23.122,42.854z M36.708,46.147l-3.586-3.586 l9.586-9.585l3.586,3.586L36.708,46.147z"></path>
+                                    <rect x="40.294" y="36.562"
+                                          transform="matrix(0.7071 -0.7071 0.7071 0.7071 -14.3442 40.4935)"
+                                          width="2.828" height="2"></rect>
+                                    <rect x="15.707" y="41.147"
+                                          transform="matrix(0.7071 -0.7071 0.7071 0.7071 -25.2021 24.2795)" width="2"
+                                          height="2.828"></rect>
+                                    <rect x="12.293" y="8.562"
+                                          transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.7466 12.4933)" width="2.828"
+                                          height="2"></rect>
+                                    <rect x="36.707" y="12.148"
+                                          transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.4547 30.635)" width="2"
+                                          height="2.828"></rect> </g> </g> </g></svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
                             el: '#partner',
@@ -637,7 +669,6 @@
     </section>
 
 
-
     <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery">
         <div class="container mx-auto">
             <div class=" ">
@@ -681,7 +712,7 @@
     <!-- Video -->
 
     <section id="video" class=" bg-[white]" v-if="videoo!='' && videoo">
-        <div class="flex mx-auto container">
+        <div class="flex mx-auto container mb-10">
 
             <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -702,13 +733,17 @@
                         stroke-linejoin="round"></path>
                 </g>
             </svg>
-            <div class="my-auto text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+            <div class="my-auto  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
         </div>
         <div class="container mx-auto">
 
-            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"
-                    :src="videoo">
-            </iframe>
+            <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
+            <!--                    :src="videoo">-->
+            <!--            </iframe>-->
+            <div class="w-[90%]">
+                <div v-html="videoo" class="mx-auto w-[85%] rounded-xl"></div>
+            </div>
+
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
@@ -784,7 +819,7 @@
     </section>
     <section class=" company-info  bg-[white]" id="downloads" v-if="project.downloads.length">
 
-        <div class="container mx-auto w-[85%]" >
+        <div class="container mx-auto w-[85%]">
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("Download_Project_Files") }}</p>
                 <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -823,14 +858,16 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section class=" company-info  bg-[white] mb-5" id ="partner" v-if="project.partner_image != '' && project.partner_image">
+    <section class=" company-info  bg-[white] mb-5" id="partner"
+             v-if="project.partner_image != '' && project.partner_image">
 
-        <div class="container w-[85%] mx-auto mt-8" >
+        <div class="container w-[85%] mx-auto mt-8">
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown ">{{ $t("partners") }}</p>
             </div>
-            <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto " >
-                <img v-for="image in  getGallery(project.partner_image) " :src="image.src" style="width: 100%;height:200px">
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto ">
+                <img v-for="image in  getGallery(project.partner_image) " :src="image.src"
+                     style="width: 100%;height:200px">
 
 
             </div>
@@ -849,8 +886,8 @@
                 class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
             >
                 <div class="flex-auto  right">
-                    <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl  m-auto" >
-                        <h3 class="text-center mb-5 text-white">{{$t('pleaseFill')}}</h3>
+                    <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl  m-auto">
+                        <h3 class="text-center mb-5 text-white">{{ $t('pleaseFill') }}</h3>
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->
@@ -939,7 +976,9 @@
             </div>
 
             <p dir="">
-                {{ $t('ifYouFaceAProplem') }} <router-link to="/contact-us"> <a href="#" class="text-dark-brown">{{ $t('sendUsNow') }}</a></router-link>
+                {{ $t('ifYouFaceAProplem') }}
+                <router-link to="/contact-us"><a href="#" class="text-dark-brown">{{ $t('sendUsNow') }}</a>
+                </router-link>
             </p>
         </div>
 
@@ -1006,7 +1045,7 @@ export default {
         }
     },
     methods: {
-         getGallery(gallery) {
+        getGallery(gallery) {
 
             if (gallery) {
 
