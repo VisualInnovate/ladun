@@ -62,6 +62,10 @@ class Project extends  Model implements HasMedia
     {
         return $this->belongsToMany(Utility::class, 'project_utility');
     }
+    public function services()
+    {
+        return $this->belongsToMany(Service::class, 'project_services');
+    }
 
     public function downloads()
     {

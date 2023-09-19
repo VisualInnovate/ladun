@@ -66,6 +66,9 @@
     "project photos": "صور المشروع",
     "cover photo": "الصورة الخارجيه",
     "banner": "بانر",
-    "Project partners": "شركاء المشروع"
+    "Project partners": "شركاء المشروع",
+    "service_title": "خدمات المشروع",
+    "service_image": "صورة الخدمه",
+    "project_service": "خدمات المشروع"
 
 }

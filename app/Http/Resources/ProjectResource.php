@@ -60,6 +60,13 @@ class ProjectResource extends JsonResource
                 'image' => $util->media()->first(),
             ];
            }),
+            'services' => $this->services->map(function($util){
+            return [
+                'id' => $util->id,
+                'title' => $util->title,
+                'image' => $util->media()->first(),
+            ];
+           }),
            'gallery' => $this->getMedia('attachments'),
 
            'banner' => $this->getMedia('banner'),

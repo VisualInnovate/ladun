@@ -85,7 +85,7 @@ export default {
     boradOfDirectors: "Board Of Directors",
     project: "Completion rate",
     gallary_project: "Media Project Gallery",
-    high_level_utility: "high level utility",
+    high_level_utility: "Project Services",
     high_level_utility_p: "for more information please contact on email",
     Download_Project_Files: "Download Project Files",
     partners: "partners project",
