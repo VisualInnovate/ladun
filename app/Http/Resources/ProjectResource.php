@@ -63,7 +63,10 @@ class ProjectResource extends JsonResource
             'services' => $this->services->map(function($util){
             return [
                 'id' => $util->id,
-                'title' => $util->title,
+                'title' => [
+                    'en' => $util->getTranslation('title', 'en'),
+                    'ar' => $util->getTranslation('title', 'ar'),
+                ],
                 'image' => $util->media()->first(),
             ];
            }),
