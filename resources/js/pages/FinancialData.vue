@@ -19,7 +19,7 @@
                                 <div
                                     class=" h-16 w-[90%] flex items-center px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6]  text-center my-auto truncate	">
                                             {{ $t('header_finncial') }}
                                         </div>
 
@@ -67,7 +67,7 @@
                                 <div
                                     class=" h-16 w-[80%] flex items-center px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6] w-[49%] text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6]  text-center my-auto truncate	">
                                             {{ $t('reports') }}
                                         </div>
 
