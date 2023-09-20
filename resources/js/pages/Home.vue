@@ -76,7 +76,7 @@
                                         <img style="border: 1px height:80%px;" class="w-full  lg:h-[356px] rounded-xl" v-if="project.attachment" :src="project.attachment">
                                 </router-link>
                                 <div class="flex   text-right p-2">
-                                   <div class="flex w-full flex-row-reverse ">
+                                   <div class="flex w-full rtl:flex-row-reverse ">
                                     <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
                                         <h3 class="ltr:text-start rtl:text-end my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
