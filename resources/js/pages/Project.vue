@@ -556,7 +556,7 @@
                     </div>
                 </div>
                 <div class="flex  w-[85%] m-auto " id="carsoul-project">
-                    <div class=" width[80%] lg:w-[1200px] lg:h-[600px] m-auto">
+                    <div class=" max-w-[1200px] max-h-[600px] m-auto">
 
                         <Carousel :pictures="getGallery(project.gallery)"/>
                     </div>
