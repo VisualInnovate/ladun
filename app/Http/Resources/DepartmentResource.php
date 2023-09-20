@@ -31,7 +31,7 @@ class DepartmentResource extends JsonResource
                         'en' => $region->getTranslation('title', 'en'),
                         'ar' => $region->getTranslation('title', 'ar'),
                     ],
-                    'projects' => ProjectResource::collection(Project::where('region_id', $region->id)->get()),
+                    'projects' => ProjectResource::collection(Project::where('region_id', $region->id)->where('is_published',1)->get()),
                 ];
             }),
         ];
