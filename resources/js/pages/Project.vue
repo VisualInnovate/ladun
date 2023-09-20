@@ -556,7 +556,7 @@
                     </div>
                 </div>
                 <div class="flex  w-[85%] m-auto " id="carsoul-project">
-                    <div class=" sm:width[80%] lg:w-[1200px] lg:h-[600px] m-auto">
+                    <div class=" width[80%] lg:w-[1200px] lg:h-[600px] m-auto">
 
                         <Carousel :pictures="getGallery(project.gallery)"/>
                     </div>
@@ -595,7 +595,7 @@
                         stroke-linejoin="round"></path>
                 </g>
             </svg>
-            <div class="my-auto  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+            <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
         </div>
         <div class="container flex justify-center mx-auto">
 
@@ -603,7 +603,7 @@
             <!--                    :src="videoo">-->
             <!--            </iframe>-->
 
-                <div v-html="videoo" class="mx-auto rounded-xl"></div>
+                <div v-html="videoo"  class="mx-auto width[80%]  rounded-xl"></div>
 
         </div>
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
