@@ -95,7 +95,7 @@
                             {{ $t('modale') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery">
+                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery != '' && project.gallery">
                         <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -531,7 +531,7 @@
     </section>
 
 
-    <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery">
+    <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery != '' && project.gallery">
         <div class="container mx-auto">
             <div class=" ">
                 <div class="mb-5">
