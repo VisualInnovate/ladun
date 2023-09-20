@@ -123,7 +123,7 @@ Route::group(['prefix' => 'projects'], function () {
     });
     // latest 4 projects
     Route::get('/latest',function (){
-        $latest = Project::orderBy('created_at', 'DESC')
+        $latest = Project::orderBy('created_at', 'DESC')->where('is_published','=',1)
 
         ->get();
         return ProjectResource::collection($latest);
