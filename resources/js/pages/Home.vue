@@ -35,9 +35,10 @@
     <div class="flex justify-center bg-white">
         <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp animate__slow"
            href="#" v-scroll-to="{
-                            el: '#project-latest',
+                            el: '#project-latst',
                             offset: -128
                         }">
+
             {{ $t('scrollDown') }}
             <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2"/>
         </a>
@@ -45,7 +46,7 @@
 
     <!-- end of header section -->
     <!-- Latest Project section -->
-    <section id="project-latest  bg-[white]" class="bg-white">
+    <section id="project-latst"   class="bg-white">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white">
             <h2 id="latest_project_header bg-white"
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
@@ -78,7 +79,7 @@
                                    <div class="flex w-full flex-row-reverse ">
                                     <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <h3 class=" px-2  text-2xl font-bold text-[#636463] ">{{ project.title[$i18n.locale] }}</h3>
+                                        <h3 class="flex-initial my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
                                      </router-link>
                                     <div class="text-dark-brown flex">
                                         <small class=" text-right my-auto " >

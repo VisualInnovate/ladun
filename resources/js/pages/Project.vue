@@ -556,7 +556,7 @@
                     </div>
                 </div>
                 <div class="flex  w-[85%] m-auto " id="carsoul-project">
-                    <div class=" aspect-[9/16] m-auto">
+                    <div class=" aspect-[16/9] m-auto">
 
                         <Carousel :pictures="getGallery(project.gallery)"/>
                     </div>
