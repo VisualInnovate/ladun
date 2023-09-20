@@ -30,7 +30,7 @@ class LatestProjectsResource extends JsonResource
         $allProjects = collect([]);
          $allRegions->each(function($region)use ($allProjects){
             $allProjects->push(...ProjectResource::collection(
-                Project::where('region_id', $region->id)->get()
+                Project::where('region_id', $region->id)->where('is_published',1)->get()
             ));
 
         });
