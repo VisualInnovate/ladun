@@ -77,7 +77,7 @@ export default {
     readMore: "Read more",
     financialData: "Financial Data",
     list_money: "Financial Statements",
-    header_finncial: "Private financial statements for the year",
+    header_finncial: "financial reports",
     investor_banner: "Investor Relations",
     finncial_banner: "Financial Statements",
     call_us: "Call Us",

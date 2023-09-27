@@ -74,7 +74,7 @@ export default {
     readMore: "قراءة المزيد",
     financialData: "البيانات المالية",
     list_money: "القوائم الماليه",
-    header_finncial: "البيانات المالية الخاصة لعام",
+    header_finncial: "التقارير المالية",
     investor_banner: "علاقات المستثمرين",
     finncial_banner: "البيانات المالية ",
     call_us: "اتصل بنا",

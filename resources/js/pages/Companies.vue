@@ -16,10 +16,10 @@
     <section class="company py-28 bg-background-section">
         <div class=" px-[5%] mx-auto ">
             <div class="grid lg:grid-cols-4 gap-3 w-full " >
-                <div v-for=" company in companies" :key="company.id"
+                <div  v-for=" company in companies" :key="company.id"
 
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class=" rounded-2xl border border-light-brown overflow-hidden  border-gray-border-light  content-center p-2  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
+                     class="relative rounded-2xl border border-light-brown overflow-hidden  border-gray-border-light  content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[50%]  m-auto">
                         <img class="img-companies  rounded-full border-2 mb-4 m-auto"  :src="company.media[0].original_url"
                          alt="Sunset in the mountains">
@@ -30,8 +30,8 @@
                         <p class=" text-[#6e6b6b] text-justify justify-start py-6 text-xs"
                         v-html="company.content[$i18n.locale]"></p>
 
-                    <div class="flex content-start flex-row justify-center w-full roun" v-if="company.url!=''">
-                        <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown rounded-3xl text-white px-4 py-2  ml-4 rtl:mr-4">{{ $t('visit') }} </a>
+                    <div class=" absolute bottom-4 left-[50%] -translate-x-[50%] w-full " v-if="company.url!=''">
+                        <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown rounded-3xl text-white px-4 py-2  ml-4 ">{{ $t('visit') }} </a>
                     </div>
                     </div>
                 </div>

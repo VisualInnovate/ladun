@@ -39,7 +39,7 @@
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
+                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-white">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
