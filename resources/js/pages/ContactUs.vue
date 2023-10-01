@@ -8,7 +8,7 @@
         </h1>
 
         <div
-            class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5"
+            class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap lg:mx-10 my-5"
         >
 
             <div class="flex-auto  ">
@@ -22,13 +22,13 @@
                         <form class="grid gap-y-12 mx-5 pb-12"
 
                         >
-                            <div class="flex justify-center gap-x-5">
+                            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5">
                                 <input
                                     type="text"
                                     id="first_name" maxlength="40" name="first_name"
                                     aria-describedby="helper-text-explanation"
                                     v-model="first_name"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="lg:w-full w-[95%] mx-auto  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('FirstName')"
                                 />
 
@@ -37,13 +37,13 @@
                                 id="mobile" maxlength="40" name="mobile"
                                 v-model="mobile"
                                 aria-describedby="helper-text-explanation"
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('PhoneNumber')"
                             />
 
 
                             </div>
-                            <div class="flex justify-center gap-x-5">
+                            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5">
                                 <input type=hidden name="oid" value="00D3G0000008knU">
                                 <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
                                 <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
@@ -55,7 +55,7 @@
                                 id="last_name" maxlength="80" name="last_name"
                                 aria-describedby="helper-text-explanation"
                                 v-model="last_name"
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 :placeholder="$t('LastName')"
                             />
 
@@ -64,14 +64,14 @@
                                     id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
                                     v-model="email"
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
 
                             </div>
-                            <div class="flex justify-center gap-x-5">
+                            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2  gap-x-5">
                                 <select
-                                class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                 v-model="status"
                             >
                                 <option value="Buy"> {{ $t('ownership') }}</option>
@@ -81,7 +81,7 @@
 
                             </select>
                                 <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="lg:w-full  mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="region"
                                 >
                                     <option value="Eastern"> {{ $t('easternRegion') }}</option>
@@ -109,7 +109,7 @@
 
 <!--                        <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"-->
 <!--                             :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>-->
-                        <iframe class="w-full h-[100%] rounded-3xl lg:h-[90%]"
+                        <iframe class="w-full  h-[555px] rounded-3xl lg:h-[90%]"
                                 :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"
                                 :src="mapLink"
                                 style="border:0;" allowfullscreen="" loading="lazy"

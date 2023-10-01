@@ -10,7 +10,7 @@
                               d="M19 9l-7 7-7-7"></path></svg>
                     </span>
         </template>
-        <list-group class="w-full">
+        <list-group class="w-[150%] m-auto lg:w-full ">
 
             <div class="mx-11 font-bold">{{ $t('ownership') }}</div>
 

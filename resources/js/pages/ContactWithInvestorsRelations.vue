@@ -1,14 +1,12 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
     <div class="pt-[5rem]"></div>
-    <img-banner>
+    <img-banner >
     <div >
         <img  src="../../img/investors-page.png">
     </div>
         <template #text>{{$t('investor_banner')}}  </template>
     </img-banner>
-
-
         <div class="container mx-auto py-10">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <div class="flex justify-center md:justify-end">
@@ -23,17 +21,13 @@
                 <div class="d-info h-full flex flex-col justify-center"
                     :class="($i18n.locale=='en' )  ?  'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <h1
-
                         class="font-bold text-3xl mb-4 text-center md:text-start text-dark-brown"
                     >
                         {{ $t('contactUs') }}
                     </h1>
-
                     <div class="flex flex-col">
                         <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
                             <p class="font-bold inline">{{ $t('phone') }}</p> <a class="underline" target="_blank" href="https://wa.me/920011560">: {{settings[0].phone}} </a>
-
-
                             <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline" :href="settings[0].convert" target="_blank"> : {{settings[0].convert}}</a>
                         </div>
                         <div class="my-auto">
