@@ -54,7 +54,7 @@
             <div class=" w-full  m-auto ">
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 mx-auto items-center ">
-                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.phases.length">
+                    <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="project.phases.length">
                         <img src="../../img/project_percentage.png" style="width: 28px;height: 28px">
 
 
@@ -68,7 +68,7 @@
 
                     </div>
 
-                    <div class=" mx-auto mb-3 md:mb-0 flex " v-if="project?.services?.length">
+                    <div class=" lg:mx-auto mb-3 md:mb-0 flex " v-if="project?.services?.length">
                         <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -87,7 +87,7 @@
                             {{ $t('utilities') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex truncate" v-if="project.phases.length">
+                    <div class="lg:mx-auto mb-3 md:mb-0 flex truncate" v-if="project.phases.length">
                         <img src="../../img/models_icon.png" style="width: 26px;height: 26px">
                         <a class="  truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
                            href="#" v-scroll-to="{
@@ -97,7 +97,7 @@
                             {{ $t('modale') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="project.gallery != '' && project.gallery">
+                    <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="project.gallery != '' && project.gallery">
                         <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                              fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -115,7 +115,7 @@
                             {{ $t('Image') }}
                         </a>
                     </div>
-                    <div class="mx-auto mb-3 md:mb-0 flex" v-if="videoo!='' && videoo">
+                    <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="videoo!='' && videoo">
                         <svg class="px-1" width="26px" height="26px" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -145,7 +145,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex truncate"
+                    <div class="lg:mx-auto  mb-3 md:mb-0 flex truncate"
                          v-if="project.project_video!='' && project.project_video">
                         <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
@@ -158,7 +158,7 @@
                         </a>
                     </div>
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
+                    <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
                         <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -184,7 +184,7 @@
                     </div>
 
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads.length">
+                    <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads.length">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -206,7 +206,7 @@
                     </div>
 
 
-                    <div class="mx-auto  mb-3 md:mb-0 flex" v-if="project.partner_image != '' && project.partner_image">
+                    <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.partner_image != '' && project.partner_image">
                         <img src="../../img/Group.svg" style="width: 30px;height: 30px">
 
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
@@ -219,7 +219,7 @@
                     </div>
 
                     <a
-                        class="mx-auto button bg-light-brown text-white rounded-2xl w-full text-center py-2 hover:bg-dark-brown hover:shadow"
+                        class="lg:mx-auto button bg-light-brown text-white rounded-2xl w-full text-center py-2 hover:bg-dark-brown hover:shadow"
                         href="#" v-scroll-to="{
                             el: '#ask_us',
                             offset: -128
@@ -606,7 +606,7 @@
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
     
-                    <div v-html="videoo"  class="mx-auto width[80%]  rounded-xl"></div>
+                    <div v-html="videoo"  class="mx-auto   rounded-xl"></div>
     
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
