@@ -26,6 +26,7 @@
 
                                                 </div>
                                             </div>
+                                            {{ reports[0][index] }}
                                             <span class="text-dark-brown" v-if="reports[0][index] == undefined">{{ index[2] }}{{ index[3] }}</span><span>{{
                                                 index[0]
                                             }}{{ index[1] }}</span>
