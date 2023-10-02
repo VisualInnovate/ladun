@@ -73,7 +73,7 @@
                                 class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
                                 <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <img style="height:800px;" class="w-full   rounded-xl" v-if="project.attachment" :src="project.attachment">
+                                        <img style="height:331px;" class="w-full   rounded-xl" v-if="project.attachment" :src="project.attachment">
                                 </router-link>
                                 <div class="flex   text-right p-2">
                                    <div class="flex w-full rtl:flex-row-reverse ">
