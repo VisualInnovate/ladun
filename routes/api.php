@@ -10,6 +10,7 @@ use App\Models\Project;
 use App\Models\Structure;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -43,7 +44,6 @@ Route::get('/financials',function (){
     $financials = \App\Models\Financial::orderBy('created_at','DESC')->get();
     $year = \App\Models\Year::orderBy('created_at','DESC')->get();
 
-
     return response ([
         'financials'=>$financials->groupBy(function($val) {
 
@@ -52,7 +52,13 @@ Route::get('/financials',function (){
         'reports'=>$year->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
         }),
+        'financialsAndYear'=>\App\Models\Financial::select('financial_file',DB::raw('YEAR(financials.financial_date)'),DB::raw('financials.title'))->addSelect(
+            [
+                'years'=> \App\Models\Year::select('year_file')->where(DB::raw('YEAR(years_report.year_date)'),DB::raw('YEAR(financials.financial_date)')),
+                'years_title'=> \App\Models\Year::select(DB::raw('years_report.title'))->where(DB::raw('YEAR(years_report.year_date)'),DB::raw('YEAR(financials.financial_date)')),
 
+            ]
+        )->get()
 
     ]);
 });
