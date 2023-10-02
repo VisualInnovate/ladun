@@ -2,10 +2,10 @@
     <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot h-[50vh] md:h-auto">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <img class="h-[50vh] md:h-auto w-[100%]" :src="getGallery(project.banner)[0]?.src" style="height: 400px">
-
+        <img class="h-full md:h-auto w-[100%] lg:h-[400px]" :src="getGallery(project.banner)[0]?.src"  >
+        <!-- :src="getGallery(project.banner)[0]?.src" -->
         <div
-            class="z-40 text-white absolute top-[100%] m-auto -translate-y-[100%] rtl:right-[3%] ltr:left-[20%] -translate-x-[100%] text-justify">
+            class="z-40 text-white lg:absolute lg:top-[100%] m-auto -translate-y-[100%] lg:rtl:right-[3%] lg:ltr:left-[20%] -translate-x-[100%] text-justify">
 
             <img class="animate__animated animate__backInDown max-w-[170px] "
                  id="logo-project"
@@ -21,20 +21,22 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full justify-between items-center py-4 flex"
+                <div class=" h-full grid grid-cols-1 ga lg:grid-cols-8 items-center py-4 "
                 >
-                    <div class="  mx-auto px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
+                    <div class=" lg:col-span-2  px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
 
                         <router-link to="/projects"><p class="text-2xl font-bold truncate" v-if="project.department">
                             {{ project.department.title[$i18n.locale] }}</p></router-link>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
                         <p v-if="project.number" class="text-lg">{{ $t('certified') }}</p>
-                        <p class=" w-[90%] mb-12 text-sm px-2 py-4  " v-if="project.number"
+                        <p class="  mb-12 text-sm px-2 py-4  " v-if="project.number"
                            v-html="project.number"></p>
                     </div>
-                    <p class=" w-[90%] mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
+                    <div class="lg:col-span-6 ">
+                        <p class=" mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
+                    </div>
 
 
                 </div>
@@ -626,9 +628,9 @@
     <!-- location -->
     <section class="company-info   py-20 bg-[white]" id="location" v-if="project.location">
 
-        <div class=" container w-[85%] mx-auto">
+        <div class=" container lg:w-[75%] mx-auto">
 
-            <div class="container  m-auto">
+            <div class="  m-auto">
 
                 <div class="d-info h-full flex flex-col justify-center right ">
                     <div class="flex">
@@ -664,7 +666,7 @@
 
                 </div>
 
-                <div class="img-company-info lg:w-[90%] m-auto left">
+                <div class="img-company-info w-full m-auto left">
                     <iframe class="w-full h-[350px]"
                             :src="mapLink"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -743,11 +745,11 @@
     </section>
 
     <!-- ask_us -->
-    <section class="text-center py-28" id="ask_us">
-        <div class="container mx-auto w-[75%]">
+    <section class="text-center py-8" id="ask_us">
+        <div class="container mx-auto lg:w-[75%]">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <div
-                class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5 w- pt-5"
+                class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap  my-5 w- pt-5"
             >
                 <div class="flex-auto  right">
                     <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl  m-auto">
@@ -759,7 +761,7 @@
 
                         >
 
-                            <div class="flex justify-center gap-x-5">
+                            <div class=" grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
                                 <input type=hidden name="oid" value="00D3G0000008knU">
                                 <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
                                 <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
@@ -772,7 +774,7 @@
                                     id="first_name" maxlength="40" name="first_name"
                                     aria-describedby="helper-text-explanation"
                                     v-model="first_name"
-                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('FirstName')"
                                 />
                                 <input
@@ -780,17 +782,17 @@
                                     id="last_name" maxlength="80" name="last_name"
                                     aria-describedby="helper-text-explanation"
                                     v-model="last_name"
-                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('LastName')"
                                 />
                             </div>
-                            <div class="flex justify-center gap-x-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
                                 <input
                                     type="text"
                                     id="mobile" maxlength="40" name="mobile"
                                     v-model="mobile"
                                     aria-describedby="helper-text-explanation"
-                                    class="w-full md:w-1/2 bg-gray-50 border rounded-3xl border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full  bg-gray-50 border rounded-3xl border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('PhoneNumber')"
                                 />
                                 <input
@@ -798,14 +800,14 @@
                                     id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
                                     v-model="email"
-                                    class="rounded-3xl w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
                             </div>
-                            <div class="flex justify-center gap-x-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
 
                                 <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="status"
                                 >
                                     <option value="Buy"> {{ $t('ownership') }}</option>
@@ -816,7 +818,7 @@
                                 </select>
 
                                 <select
-                                    class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="region"
                                 >
                                     <option value="Eastern"> {{ $t('easternRegion') }}</option>
@@ -830,7 +832,7 @@
                             </div>
                             <button
                                 type="submit" @click="submit"
-                                class="bg-dark-brown mb-[1%] py-2 m-auto text-white lg:w-[45%] rounded-3xl"
+                                class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl"
                             >
                                 {{ $t("sendNow") }}
                             </button>
