@@ -13,7 +13,7 @@
                 <div class="d-info h-full flex flex-col justify-center"  :class="($i18n.locale=='en' )  ?  'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <h1
 
-                        class="font-bold text-3xl mb-4 text-center md:text-start"
+                        class="font-bold  lg:text-3xl mb-4 text-center md:text-start"
                         v-if="investor.title"
                     >
                         {{ investor.title[$i18n.locale] }}

@@ -8,10 +8,10 @@
 
 
         <div
-            class="flex justify-between gap-x-14 flex-wrap md:flex-nowrap mx-10 my-5"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14"
         >
-            <div class="flex-auto md:w-1/2 ">
-                <div class="bg-[#57565B] rounded-xl mb-14 pt-12">
+            <div class="lg:w-[95%]">
+                <div class="bg-[#57565B] rounded-xl h-full mb-14 pt-12">
                     <div class="text-dark-brown py-2  roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
@@ -22,29 +22,29 @@
                     </div>
                     <form class="grid gap-y-10 mx-5" @submit.prevent="submit"
                           :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
-                        <div class="flex justify-center gap-x-5">
+                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5">
 
                             <input type="text" id="" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.name"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('fullName')">
                             <div class="text-red-500 " v-if="error.name">{{ error.name[0] }}</div>
                             <input type="email" id="helper-text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.email"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('email')">
                             <div class="text-red-500 " v-if="error.email">{{ error.email[0] }}</div>
 
                         </div>
-                        <div class="flex justify-center gap-x-5">
+                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2  justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.phone"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('mobile')">
                             <div class="text-red-500 " v-if="error.phone">{{ error.phone[0] }}</div>
 
                             <select id="countries" v-model="joinUs.gender"
-                                    class="bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    class="lg:w-full w-[95%] mx-auto bg-dark-brown text-white [&>option]:bg-white [&>option]:text-black   border border-dark-brown  text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected value="choosen">{{ $t('gender') }}</option>
                                 <option value="Male">{{ $t('male') }}</option>
                                 <option value="Female">{{ $t('female') }}</option>
@@ -53,32 +53,32 @@
 
 
                         </div>
-                        <div class="flex justify-center gap-x-5">
+                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2  justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.qualification"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('academicCertification')">
                             <div class="text-red-500 " v-if="error.email">{{ error.email[0] }}</div>
 
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.specialization"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('specialization')">
                             <div class="text-red-500 " v-if="error.specialization">{{ error.specialization[0] }}</div>
 
                         </div>
-                        <div class="flex justify-center gap-x-5">
+                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2  justify-center gap-x-5">
                             <input type="text" aria-describedby="helper-text-explanation"
                                    v-model="joinUs.jop"
-                                   class="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                   class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                    :placeholder="$t('position')">
                             <div class="text-red-500 " v-if="error.jop">{{ error.jop[0] }}</div>
                             <div
-                                class="cursor-pointer relative w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-dark-brown focus:border-dark-brown block   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown">
+                                class="cursor-pointer relative lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-dark-brown focus:border-dark-brown block   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown">
                                 <input type="file" id="file"
                                        @change="handleFile" ref="file"
                                        style="opacity: 0"
-                                       class="cursor-pointer"
+                                       class="lg:w-full w-[95%] mx-auto cursor-pointer"
                                        :placeholder="$t('uploadCV')">
                                 <span class="cursor-pointer  absolute top-[30%] left-[50%] -translate-y-[20%] font-thin" style="font-size: 16px">{{ $t('uploadCV') }}</span>
 
@@ -88,7 +88,7 @@
 
                         </div>
 
-                        <button type="submit" class="bg-dark-brown rounded-3xl h-10 mb-10 mx-2 text-white ">{{
+                        <button type="submit" class="bg-dark-brown rounded-3xl  h-10 mb-10 mx-2 text-white ">{{
                                 $t('sendNow')
                             }}
                         </button>
@@ -98,7 +98,7 @@
 
             </div>
             <div
-                class="w-full md:w-1/2 mb-5 bg-about-us-page-image bg-no-repeat bg-cover bg-center h-[555px] rounded-lg">
+                class="w-full lg:w-[95%] pt-12  mb-12 bg-about-us-page-image bg-no-repeat bg-cover bg-center h-[555px] lg:h-full rounded-xl">
             </div>
 
 
