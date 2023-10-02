@@ -5,9 +5,9 @@
         <img class="h-full md:h-auto w-[100%] lg:h-[400px]" :src="getGallery(project.banner)[0]?.src"  >
         <!-- :src="getGallery(project.banner)[0]?.src" -->
         <div
-            class="z-40 text-white lg:absolute lg:top-[100%] m-auto -translate-y-[100%] lg:rtl:right-[3%] lg:ltr:left-[20%] -translate-x-[100%] text-justify">
+            class="z-40   text-white absolute top-[100%] mx-auto -translate-y-[100%] :rtl:right-[3%] ltr:left-[3%] rtl:-translate-x-[30%] ">
 
-            <img class="animate__animated animate__backInDown max-w-[170px] "
+            <img class="animate__animated animate__backInDown max-w-[170px] m-auto"
                  id="logo-project"
                  v-if="project.logo"
                  :src="project.logo.original_url">
@@ -21,7 +21,7 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full grid grid-cols-1 ga lg:grid-cols-8 items-center py-4 "
+                <div class=" h-full grid grid-cols-1  lg:grid-cols-9 items-center py-4 "
                 >
                     <div class=" lg:col-span-2  px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
 
@@ -33,7 +33,7 @@
                         <p class="  mb-12 text-sm px-2 py-4  " v-if="project.number"
                            v-html="project.number"></p>
                     </div>
-                    <div class="lg:col-span-6 ">
+                    <div class="lg:col-span-7 ">
                         <p class=" mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
                        v-html="project.text[$i18n.locale]"></p>
                     </div>
@@ -576,53 +576,57 @@
     <!-- Video -->
 
     <section id="video" class=" bg-[white]" v-if="videoo!='' && videoo">
-        <div class="flex mx-auto container mb-10">
+        <div class="container lg:w-[75%] m-auto">
+            <div class="flex mx-auto  mb-10">
 
-            <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
-                          stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                    <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                    <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                    <path
-                        d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
-                        stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </g>
-            </svg>
-            <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+                <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
+                              stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
+                        <path
+                            d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
+                            stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+                <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+            </div>
+            <div class=" flex justify-center mx-auto">
+    
+                <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
+                <!--                    :src="videoo">-->
+                <!--            </iframe>-->
+    
+                    <div v-html="videoo"  class="mx-auto width[80%]  rounded-xl"></div>
+    
+            </div>
+            <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
-        <div class="container flex justify-center mx-auto">
-
-            <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
-            <!--                    :src="videoo">-->
-            <!--            </iframe>-->
-
-                <div v-html="videoo"  class="mx-auto width[80%]  rounded-xl"></div>
-
-        </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
     <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video!='' && project.project_video">
-        <div class="flex container mx-auto ">
-            <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
-
-            <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
-        </div>
-        <div class="container mx-auto flex justify-center">
-            <div class="  flex justify-center " v-html="project.project_video">
+        <div class="container lg:w-[75%] mx-auto">
+            <div class="flex  mx-auto ">
+                <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+    
+                <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
             </div>
-
+            <div class=" mx-auto w-full flex justify-center">
+                <div class="  flex justify-center "  v-html="project.project_video">
+                </div>
+    
+            </div>
+            <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
     <!-- end Video -->
     <!-- location -->
