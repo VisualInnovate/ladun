@@ -26,9 +26,9 @@
 
                                     </div>
                                 </div>
-                                <div class="year flex items-center text-[50px] font-bold " dir="rtl">
+                                <div class="year flex items-center text-[50px] font-bold " dir="rtl" v-if="reports[0][index] == undefined">
 
-                                    <span class="text-dark-brown" v-if="reports[0][index] == undefined">{{
+                                    <span class="text-dark-brown" >{{
                                             index[2]
                                         }}{{ index[3] }}</span><span>{{
                                         index[0]
