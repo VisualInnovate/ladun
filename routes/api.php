@@ -52,13 +52,14 @@ Route::get('/financials',function (){
         'reports'=>$year->groupBy(function($val) {
             return Carbon::parse($val->financial_date)->format('Y');
         }),
-        'financialsAndYear'=>\App\Models\Financial::select('financial_file',DB::raw('YEAR(financials.financial_date)'),DB::raw('financials.title'))->addSelect(
+        'financialsAndYear'=>\App\Models\Financial::select('financial_file',DB::raw('YEAR(financials.financial_date) AS Date'),DB::raw('financials.title'))->addSelect(
+
             [
                 'years'=> \App\Models\Year::select('year_file')->where(DB::raw('YEAR(years_report.year_date)'),DB::raw('YEAR(financials.financial_date)')),
                 'years_title'=> \App\Models\Year::select(DB::raw('years_report.title'))->where(DB::raw('YEAR(years_report.year_date)'),DB::raw('YEAR(financials.financial_date)')),
 
             ]
-        )->get()
+        )->get()->groupBy('Date')
 
     ]);
 });
