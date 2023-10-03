@@ -123,7 +123,7 @@
                             <header class="flex  justify-between  mb-5  "
                                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                 <div
-                                    class=" h-16  flex items-center px-4 text-xl  justify-between">
+                                    class=" h-16 w-[80%] text-right mt-2 flex items-start px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
                                         <div class="bg-[#E6E6E6] w-full text-center my-auto truncate	">
                                             {{ $t('reports') }}
