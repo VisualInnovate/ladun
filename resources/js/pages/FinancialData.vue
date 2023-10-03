@@ -65,14 +65,14 @@
                     </div>
                 </div>
                 <div class="" v-else>
-                    <div v-for="f  in financials" :key="index" class="mb-12">
+                    <div v-for="f  in financials" :key="index" class="mb-12 ">
                         <div v-for="(financial,index ) in f">
                             <header class="flex flex-wrap justify-between  mb-5  "
                                     :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                 <div
-                                    class=" h-16 w-[80%] flex items-center px-4 text-xl  justify-between">
+                                    class=" h-16 w-[80%]  items-center px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6]  text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6] w-[80%] text-center my-auto truncate	">
                                             {{ $t('header_finncial') }}
                                         </div>
 
