@@ -6,12 +6,10 @@
         <!-- :src="getGallery(project.banner)[0]?.src" -->
         <div
             class="z-40   text-white absolute top-[100%] mx-auto -translate-y-[100%] :rtl:right-[3%] ltr:left-[3%] rtl:-translate-x-[30%] ">
-
             <img class="animate__animated animate__backInDown max-w-[170px] m-auto"
                  id="logo-project"
                  v-if="project.logo"
                  :src="project.logo.original_url">
-
         </div>
 
     </div>
@@ -601,13 +599,13 @@
                 <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
             <div class=" flex justify-center mx-auto">
-    
+
                 <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
-    
+
                     <div v-html="videoo"  class="mx-auto   rounded-xl"></div>
-    
+
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
@@ -617,13 +615,13 @@
         <div class="container lg:w-[75%] mx-auto">
             <div class="flex  mx-auto ">
                 <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
-    
+
                 <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
             </div>
             <div class=" mx-auto w-full flex justify-center">
                 <div class="  flex justify-center "  v-html="project.project_video">
                 </div>
-    
+
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
