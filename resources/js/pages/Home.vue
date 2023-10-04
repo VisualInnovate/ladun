@@ -109,8 +109,9 @@
 
                                     </div>
                                     <div class="flex my-auto" >
-                                        <small class="whitespace-nowrap text-gray-500 px-2">{{ project.land_area }}
-                                            {{ $t('areaUnit') }}</small>
+                                        <small class="whitespace-nowrap text-gray-500 px-2">
+
+                                            {{ $t('areaUnit') }} {{ project.land_area }}</small>
                                             <img class="w-7 h-7" src="../mm.jpeg">
                                             <!-- <svg width="24px" height="24px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#C4A94C"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="16" height="16" id="icon-bound" fill="none"></rect> <path d="M4,12L4,13L12,13L12,12L13,12L13,4L12,4L12,3L4,3L4,4L3,4L3,12L4,12ZM7,7L9,7L9,9L7,9L7,7ZM16,12L16,16L12,16L12,15L4,15L4,16L0,16L0,12L1,12L1,4L0,4L0,0L4,0L4,1L12,1L12,0L16,0L16,4L15,4L15,12L16,12Z"></path> </g></svg> -->
                                         <!-- <BuildingOffice2Icon
@@ -118,9 +119,9 @@
 
                                     </div>
                                     <div  class="flex my-auto px-1">
-                                        <small class=" text-gray-900 px-2">{{
-                                                project?.type[$i18n.locale]
-                                        }}</small>
+                                        <small class=" text-gray-900 px-2">
+                                            {{project?.type[$i18n.locale] }}
+                                        </small>
                                         <img class="w-6 h-6" src="../rrr.jpeg">
                                             <!-- <svg class="my-auto" width="32px" height="32px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.5 7.5H20.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 12H17.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 16.5H20.5" stroke="#000000" stroke-linecap="round"></path> </g></svg> -->
                                         <!-- <BuildingOffice2Icon
