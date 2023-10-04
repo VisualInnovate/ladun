@@ -4,10 +4,10 @@
         <div class="grid grid-cols-1 md:grid-cols-8  px-11 py-12">
             <div class="flex flex-col mx-auto ">
                 <img :src="DarkLogo" alt="Logo_darK" class=" mb-5  h-[52%]" />
-                <div class="inline-flex justify-between">
+                <div class="inline-flex  justify-between">
                     <template v-for="icon in icons">
                         <a :href="icon.href" target="_blank" >
-                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 h-6" />
+                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 md:mx-3 h-6" />
                         </a>
                     </template>
                 </div>
@@ -16,12 +16,6 @@
             <div class="flex flex-col justify-between h-32 pt-8">
                 <router-link :to="{ name: 'About Us' }">
                     <small>{{ $t('aboutLadun') }}</small>
-                </router-link>
-                <router-link :to="{ name: 'About Us' }">
-                    <small>{{ $t('whoWeAre') }}</small>
-                </router-link>
-                <router-link :to="{ name: 'About Us' }">
-                    <small>{{ $t('aboutOurCompany') }}</small>
                 </router-link>
             </div>
             <div class="flex flex-col justify-between h-32 pt-8">

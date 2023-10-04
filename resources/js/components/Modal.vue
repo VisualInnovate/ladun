@@ -10,7 +10,7 @@
                               d="M19 9l-7 7-7-7"></path></svg>
                     </span>
         </template>
-        <list-group class="w-[150%] m-auto lg:w-full ">
+        <list-group class="w-[90%] m-auto lg:w-full   ">
 
             <div class="mx-11 font-bold">{{ $t('ownership') }}</div>
 
@@ -28,13 +28,13 @@
 
         </list-group>
     </dropdown>
-    <Modal :size="size" v-if="isShowModal" @close="closeModal">
+    <Modal size="size" v-if="isShowModal" @close="closeModal">
         <template #header>
             <div class="flex items-center space-x-4 text-lg">
                 {{$t('shareYourInterests')}}
             </div>
         </template>
-            <template #body>
+            <template #body >
                 <form class=" space-y-4" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D3G0000008knU">
