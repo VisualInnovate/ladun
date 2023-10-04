@@ -119,6 +119,7 @@
                                                 {{ project.land_area }}
                                             </small>
                                         </div>
+                                        <img class="h-6 w-6" src="../mm.jpeg">
                                     </div>
 
 
