@@ -108,6 +108,8 @@
 
 
                                     </div>
+
+
                                     <div class="flex my-auto mx-1">
                                         <div class="flex ">
                                             <p class="my-auto text-gray-500">
@@ -117,6 +119,9 @@
                                                 {{ project.land_area }}
                                             </small>
                                         </div>
+                                    </div>
+
+
                                     <div  class="flex my-auto px-1">
                                         <small class=" text-gray-900 px-2">
                                             {{project?.type[$i18n.locale] }}
