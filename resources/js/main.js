@@ -17,6 +17,7 @@ const axiosInstance = axios.create({
 })
 
 import router from "./router";
+import {useAppLangStore} from "@/stores/AppLang";
 
 const pinia = createPinia();
 
@@ -28,4 +29,9 @@ app.use(VueScrollTo)
 app.use(VueNumber)
 app.config.globalProperties.$axios = { ...axiosInstance }
 document.body.dir='rtl'
+
+i18n.global.locale.value = "ar"
+const appLang = useAppLangStore()
+appLang.appLang="ar"
+
 app.mount("#app");
