@@ -127,11 +127,12 @@
                         <img class="h-16" src="../../img/contact_us/icons/phone.png"/>
                         <div class="flex flex-col">
                             <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
-                                <p class="font-bold inline">{{ $t('phone') }}</p> <a  class="underline" target="_blank" href="https://wa.me/920011560">: 920011560 </a>
-                                <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  href="tel:+4888567,1555" target="_blank"> : 1555</a>
+
+                                <p class="font-bold inline">{{ $t('phone') }}</p> <a  class="underline" target="_blank" :href="'tel:' + contact[0]?.phone ">{{ contact[0]?.phone }}</a>
+                                <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  :href="'tel:'+contact[0]?.convert" target="_blank"> : {{ contact[0]?.convert }}</a>
                             </div>
                             <div class="my-auto">
-                                <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" href="tel:+4888567"> : 4888567 - 011</a>
+                                <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" :href="'tel:'+ contact[0]?.fax "> : {{ contact[0]?.fax }}</a>
                             </div>
                         </div>
 
@@ -139,7 +140,7 @@
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/email.png"/>
                         <div class="my-auto flex flex-row">
-                            <p class="font-bold">{{ $t('email') }}</p><a href="investor@ladun.com" class="underline "> : investor@ladun.com</a>
+                            <p class="font-bold">{{ $t('email') }}</p><a :href="contact[0]?.email" class="underline "> : {{ contact[0]?.email }}</a>
                         </div>
 
                     </div>
@@ -167,13 +168,10 @@ export default {
     }
     , data() {
         return {
+
             contact:
                 {
-                    'name': '',
-                    'email': '',
-                    'phone': '',
-                    'subject': '',
-                    'content': '',
+
                 },
             error:
                 {
@@ -193,6 +191,7 @@ export default {
 
         }
     },
+
     methods: {
         // submit(){
         //     axios.post("/api/contact",this.contact).then(res =>{
@@ -230,7 +229,14 @@ export default {
         mapLink() {
             return `https://maps.google.com/maps?key=AIzaSyDWxa_rbz7ccvjsvxmbPR5Q_AEK14-D0sk&q=24.820366950,46.64352462&hl=es&z=14&amp&output=embed`
         }
-    }
+    },
+    mounted() {
+        axios.get('/api/settings')
+        .then((response) => {
+       this.contact=response.data.settings
+
+        })
+  },
 
 }
 </script>

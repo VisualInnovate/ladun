@@ -24,11 +24,7 @@
                     <img
                         class="object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
                         :src="investor.media[0].original_url" alt="">
-
                 </card-link>
-
-
-
             </div>
         </div>
 

@@ -18,7 +18,7 @@
                     >
                         {{ investor.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-4 text-xl   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	"  v-if="investor.content" v-html="investor.content[$i18n.locale]">
+                    <p class="mb-4 text-[text]   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	"  v-if="investor.content" v-html="investor.content[$i18n.locale]">
 
                     </p>
 

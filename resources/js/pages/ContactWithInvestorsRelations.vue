@@ -10,10 +10,10 @@
         <div class="container mx-auto py-10">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <div class="flex justify-center md:justify-end">
-                    <div class="img-company-info border-[1px] border-dark-brown rounded-xl w-[15rem] h-[15rem] md:w-[25rem] md:h-[25rem] flex flex-col justify-center"
+                    <div class="img-company-info border-[1px]  border-dark-brown rounded-xl w-[15rem] h-[15rem] md:w-[25rem] md:h-[25rem] flex flex-col justify-center"
                         :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                         <img
-                            :src="DarkLogo" alt="Logo_darK"
+                            src="../../js/lolo1.png" alt="Logo_darK"
                             class="w-[8rem] md:w-[16rem] mx-auto"
                         />
                     </div>

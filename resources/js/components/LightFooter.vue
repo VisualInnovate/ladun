@@ -81,7 +81,7 @@
 </template>
 
 <script setup>
-import DarkLogo from "../../img/png ladun vertical-01.png";
+import DarkLogo from "../../js/lolo1.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
 import twitterIcon from "../../img/light_footer_twitter.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";

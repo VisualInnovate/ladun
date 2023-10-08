@@ -10,7 +10,7 @@
             autoplay
             loop
             muted
-            class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+            class="absolute z-10 min-w-full min-h-screen  max-w-none"
         >
             <source
                 src="../../videos/28mb_home_page_video.mp4"
@@ -233,7 +233,7 @@
                 </div>
             </div>
 
-            <img class="w-[91%] left" src="../../img/about_ladun_image.png" alt="About Ladun">
+            <img class="w-[91%] left rounded-xl" src="../new.jpg" alt="About Ladun">
         </div>
 
 

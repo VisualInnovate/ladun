@@ -27,7 +27,7 @@
                     </p>
                     <div
                         class="company-button flex items-center flex-wrap w-full justify-center md:justify-start">
-                        <a class="flex items-center special-button text-2xl button rounded-3xl bg-dark-brown hover:bg-[#5d5a2e] cursor-pointer text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-[200px] ">
+                        <a class="flex items-center special-button text-2xl button rounded-3xl bg-dark-brown hover:bg-[#5d5a2e] cursor-pointer text-white px-11 py-2 my-5 rtl:ml-6 ltr:mr-6 rtl:md:ml-28 ltr:md:mr-28 ml-4 rtl:mr-4 w-[200px] " href="https://wa.me/920011560" target="_blank">
                             <PhoneIcon
                                 class="h-6 w-6 rtl:ml-2 ltr:mr-2 text-white "/>
                             <span>{{ $t('call_us') }}</span>
