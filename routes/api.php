@@ -143,7 +143,13 @@ Route::group(['prefix' => 'projects'], function () {
 
 });
 
+
+
+Route::get('/pages-banners',function (){
+   return response(['pages'=>\App\Models\page::all()]);
+});
 // board of directors
+
 
 Route::get('/structure',function (){
     $structure = Structure::all();
@@ -176,7 +182,7 @@ Route::get('/units/{id}',function ($id){
 
 
 Route::get("/settings",function (){
-    return response(["settings"=>\App\Models\setting::all()]);
+    return response(["settings"=>\App\Models\setting::with('media')->get()]);
 });
 
 // pages api

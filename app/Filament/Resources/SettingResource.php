@@ -6,6 +6,7 @@ use App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource\RelationManagers;
 use App\Models\setting;
 use Filament\Forms;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -29,13 +30,43 @@ class SettingResource extends Resource
                 TextInput::make('fax')->required(),
                 TextInput::make('email')->required(),
                 TextInput::make('convert')->label(__("convert")),
+
                 TextInput::make('experience')->label(__("experience")),
+
+                SpatieMediaLibraryFileUpload::make('experience_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('experience'))->collection('experience'),
+
                 TextInput::make('project')->label(__("projects number")),
+
+                SpatieMediaLibraryFileUpload::make('project_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('projects number'))->collection('project'),
+
                 TextInput::make('companies')->label(__("companies number")),
+
+                SpatieMediaLibraryFileUpload::make('companies_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('companies number'))->collection('companies'),
+
                 TextInput::make('developed_buildings')->label(__("developed buildings")),
+
+                SpatieMediaLibraryFileUpload::make('developed_buildings_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('developed buildings'))->collection('developed_buildings'),
+
                 TextInput::make('developing_buildings')->label(__("developing buildings")),
+
+                SpatieMediaLibraryFileUpload::make('developing_buildings_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('developing buildings'))->collection('developing_buildings'),
+
                 TextInput::make('investments')->label(__('investments'))
                     ->numeric(),
+
+                SpatieMediaLibraryFileUpload::make('investments_image')
+                    ->hint('max image dimension 150px * 150px')
+                    ->label(__('investments'))->collection('investments'),
 
             ]);
     }
