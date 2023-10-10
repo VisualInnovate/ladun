@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Models\Department;
-use App\Models\Page;
+use App\Models\page;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Select;
@@ -24,7 +24,7 @@ class PageResource extends Resource
 {
     use Translatable;
 
-    protected static ?string $model = Page::class;
+    protected static ?string $model = page::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
