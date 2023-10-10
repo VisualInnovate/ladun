@@ -45,11 +45,12 @@ class Project extends  Model implements HasMedia
         'project_video',
         'video',
         'type',
-        'number'
+        'number',
+        'unit_type'
 
 
     ];
-    public $translatable = ['name','slug','address','content','Land_area', 'downloads_text','type'];
+    public $translatable = ['name','slug','address','content','Land_area', 'downloads_text','type','unit_type'];
     protected $casts = [
         'is_published' => 'boolean',
         'attachment' => 'array',
@@ -65,6 +66,16 @@ class Project extends  Model implements HasMedia
     public function services()
     {
         return $this->belongsToMany(Service::class, 'project_services');
+    }
+
+    public function mediable()
+    {
+        return $this->morphMany(mediaLink::class,'mediable');
+    }
+
+    public function mediable360()
+    {
+        return $this->morphMany(mediableVideo360::class,'mediable');
     }
 
     public function downloads()

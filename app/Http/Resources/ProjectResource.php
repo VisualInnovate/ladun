@@ -39,6 +39,10 @@ class ProjectResource extends JsonResource
            'land_area' => $this->Land_area,
            'building_area' => $this->building_area,
            'units_number' => $this->units_number,
+           'unit_type' => [
+               'en' => $this->getTranslation('unit_type', 'en'),
+               'ar' => $this->getTranslation('unit_type', 'ar'),
+           ],
            'models_number' => $this->models_number,
            'number' => $this->number,
            'project_models' => $this->projectModelsWithUtilities,
@@ -51,8 +55,8 @@ class ProjectResource extends JsonResource
             'trade'=>$this->trade,
             'gardens'=>$this->gardens,
             'mosque'=>$this->mosque,
-            'video'=>$this->video,
-            'project_video'=>$this->project_video,
+            'video'=>$this->mediable,
+            'project_video'=>$this->mediable360,
            'utilities' => $this->utilities->map(function($util){
             return [
                 'id' => $util->id,

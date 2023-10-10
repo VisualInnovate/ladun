@@ -42,6 +42,8 @@ class InvestorResource extends Resource
                     ->multiple()
                     ->enableReordering()->required(),
 
+                    TextInput::make('video')->label(__('video')),
+
 
 
 

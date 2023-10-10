@@ -102,6 +102,7 @@ class ProjectResource extends Resource
 
                         TextInput::make('units_number')->label(__('units_number'))
                             ->numeric(),
+                        TextInput::make('unit_type')->label(__('units_type')),
 
                         TextInput::make('models_number')->label(__('models_number'))
                             ->numeric(),
@@ -126,8 +127,8 @@ class ProjectResource extends Resource
                         TextInput::make('gardens')->label(__('gardens'))
                             ->numeric(),
                         TextInput::make('mosque')->label(__('mosque'))->numeric(),
-                        TextInput::make('video')->label(__('video')),
-                        TextInput::make('project_video')->hint('this filed take iframe')->columnSpanFull()->label(__('project_video')),
+//                        TextInput::make('video')->label(__('video')),
+//                        TextInput::make('project_video')->hint('this filed take iframe')->columnSpanFull()->label(__('project_video')),
 
 
                         CheckboxList::make('project_service')->label(__('project_service'))
@@ -143,7 +144,26 @@ class ProjectResource extends Resource
 
                     ])
                     ->columns(3),
+                Section::make(__('video'))
+                    ->schema([
+                        Repeater::make('video')
+                            ->relationship('mediable')
+                            ->schema([
+                                TextInput::make('url')->label(__('video')),
+                            ])
+                    ])
+                    ->collapsed()->columns(1),
 
+
+                Section::make(__('project_video'))
+                    ->schema([
+                        Repeater::make('video360')
+                            ->relationship('mediable360')
+                            ->schema([
+                                TextInput::make('url')->label(__('video')),
+                            ])
+                    ])
+                    ->collapsed()->columns(1),
                 //===========================
                 // Department for peoject
                 //=======================
@@ -157,6 +177,10 @@ class ProjectResource extends Resource
                             ->getOptionLabelFromRecordUsing(fn(Region $record) => "{$record->title}, {$record->department->title}"),
 
                     ]),
+
+
+
+                //-------------------------------------------section videos ----------------------------------------------------------------------------------
 
                 //===========================
                 // Downloads field for peoject

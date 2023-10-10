@@ -17,7 +17,7 @@ class Investor extends Model implements HasMedia
     use InteractsWithMedia;
     use HasTranslations;
 
-    protected $fillable = ['title','content'];
+    protected $fillable = ['title','content','video'];
     public $translatable = ['title','content'];
     protected $casts=[
       "created_at"=>'date:Y/m/d'

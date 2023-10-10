@@ -26,6 +26,13 @@
             </div>
         </div>
     </section>
+    <section class="flex content-center  ">
+
+        <div v-html="investor.video">
+
+        </div>
+    </section>
+
     <LightFooter />
 </template>
 
