@@ -23,9 +23,10 @@
                     </p>
 
                 </div>
-                <div class="my-2 w-full m-auto" v-html="investor.video">
 
-                </div>
+            </div>
+            <div class="my-2 w-full m-auto" v-html="investor.video">
+
             </div>
         </div>
     </section>
