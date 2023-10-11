@@ -17,16 +17,16 @@ class setting extends Model implements HasMedia
 
     protected $guarded=array();
     protected $appends=[
-      'experience',
-      'project',
-      'companies',
-      'developed_buildings',
-      'developing_buildings',
-      'investments'
+      'experience_image',
+      'project_image',
+      'companies_image',
+      'developed_buildings_image',
+      'developing_buildings_image',
+      'investments_image'
     ];
 
 
-    public function getExperienceAttribute()
+    public function getExperienceImageAttribute()
     {
         $file = $this->getMedia('experience')->last();
 
@@ -37,7 +37,7 @@ class setting extends Model implements HasMedia
         return $file;
     }
 
-    public function getProjectAttribute()
+    public function getProjectImageAttribute()
     {
         $file = $this->getMedia('project')->last();
 
@@ -48,7 +48,7 @@ class setting extends Model implements HasMedia
         return $file;
     }
 
-        public function getCompaniesAttribute()
+        public function getCompaniesImageAttribute()
     {
         $file = $this->getMedia('companies')->last();
 
@@ -59,7 +59,7 @@ class setting extends Model implements HasMedia
         return $file;
     }
 
-        public function getDevelopedBuildingsAttribute()
+        public function getDevelopedBuildingsImageAttribute()
     {
         $file = $this->getMedia('developed_buildings')->last();
 
@@ -70,7 +70,7 @@ class setting extends Model implements HasMedia
         return $file;
     }
 
-        public function getDevelopingBuildingsAttribute()
+        public function getDevelopingBuildingsImageAttribute()
     {
         $file = $this->getMedia('developing_buildings')->last();
 
@@ -81,7 +81,7 @@ class setting extends Model implements HasMedia
         return $file;
     }
 
-        public function getInvestmentsAttribute()
+        public function getInvestmentsImageAttribute()
     {
         $file = $this->getMedia('investments')->last();
 
