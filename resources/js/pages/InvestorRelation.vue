@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <section class="company-info py-24 bg-background-section pt-40">
+    <section class="company-info py-24 bg-background-section pt-40 mx-auto">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <div class="img-company-info flex justify-center  "    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
@@ -21,13 +21,16 @@
                     <p class="mb-4 text-[text]   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	"  v-if="investor.content" v-html="investor.content[$i18n.locale]">
 
                     </p>
+                    <div class="my-2 w-full mx-auto" v-html="investor.video">
+
+
+                     </div>
 
                 </div>
 
             </div>
-            <div class="my-2 w-full m-auto" v-html="investor.video">
 
-            </div>
+
         </div>
     </section>
     <section class="flex content-center  ">
@@ -59,3 +62,9 @@ onBeforeMount(async () => {
 
 });
 </script>
+<style>
+iframe{
+    width:100%;
+    height:500px
+}
+</style>

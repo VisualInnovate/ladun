@@ -14,7 +14,7 @@
 
                 <card-link v-for="investor in investors" :key="investor.id" >
 <!--                    <template #date>الخميس 15 مايو 2022</template>-->
-                    <template #head>{{investor.title[$i18n.locale]}}</template>
+                    <!-- <template #head>{{investor.title[$i18n.locale]}}</template> -->
                     <!--  -->
                     <template #text>
                         <div class="text-sm mb-2">{{investor.created_at}}</div>
