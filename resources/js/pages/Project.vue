@@ -557,11 +557,8 @@
                 </div>
                 <div class="flex  w-[85%]  m-auto " id="carsoul-project">
                     <div class=" w-[1200px]  m-auto">
-
                         <Carousel class="w-full h-full [&>div]:md:h-[600px]  [&>div]:h-[417px] [&>div>div>img]:h-[417px] [&>div>div>img]:md:h-[600px]" :pictures="getGallery(project.gallery)"/>
                     </div>
-
-
                 </div>
 
             </div>
@@ -599,12 +596,17 @@
                 <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
             <div class=" flex justify-center mx-auto">
-
                 <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
+                <div class=" max-w-sm w-full  ">
+               <div class="grid grid-cols-1" v-for="por in project.video ">
+                <div class=" mt-4 rounded-md  "  v-html="por.url">
+                </div>
+               </div>
+            </div>
 
-                    <div v-html="videoo"  class="mx-auto   rounded-xl"></div>
+                    <div   class="mx-auto   rounded-xl"></div>
 
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
@@ -618,9 +620,11 @@
 
                 <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
             </div>
-            <div class=" mx-auto w-full flex justify-center">
-                <div class="  flex justify-center "  v-html="project.project_video">
+            <div class=" max-w-sm w-full  ">
+               <div class="grid grid-cols-1" v-for="por in project.project_video ">
+                <div class=" mt-4 rounded-md  "  v-html="por.url">
                 </div>
+               </div>
 
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
@@ -978,7 +982,9 @@ export default {
             .then(res => {
                 // this.project = Vue.util.extend({}, res.data.data)
                 this.project = res.data.data
+                 console.log(this.project.project_video[0].url)
                 this.videoo = this.project.video
+
                 console.log(this.project.video)
                 this.activeTab = this.project?.project_models[0]?.title['en']
 

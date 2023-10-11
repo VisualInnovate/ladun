@@ -181,14 +181,14 @@
                    v-html="aboutData.content[$i18n.locale]"></p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                     <div class="grid grid-cols-3 justify-center ">
-                        <img src="../../img/experience_years.svg" alt="experience_years" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;"   :src="setting.experience_image?.url" alt="experience_years" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number1" :from="0" :to="setting?.experience" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block " style="font-size: 14px;">{{ $t('experienceYears') }}</p></div>
                     </div>
                     <div class="grid grid-cols-3 justify-center ">
-                        <img src="../../img/projects_units.svg" alt="projects_units" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting.developed_buildings_image?.url" alt="projects_units" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2  text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="grid grid-cols-3 justify-center ">
-                        <img src="../../img/affiliate.svg" alt="affiliate" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting.companies_image?.url" alt="affiliate" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number3" :from="0" :to="setting?.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
@@ -206,16 +206,16 @@
                     </div>
 
                      <div class="grid grid-cols-3 justify-center ">
-                        <img src="../romte.png" alt="projects_areas" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
-                            <number ref="number5" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3"
+                            <number ref="number5" :from="0" :to="setting?.investments" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
                         <p class="block " style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
                     </div>
 
                     <div class="grid grid-cols-3 justify-center ">
-                        <img src="../../img/projects_areas.svg" alt="projects_areas" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
                             <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
@@ -223,9 +223,9 @@
                             <p class="block text-sm" style="font-size: 12px;">{{ $t('unitsUnderProcess') }}</p></div>
                     </div>
                     <div class="grid grid-cols-3 justify-center ">
-                        <img src="../../img/projects_revenue.svg" alt="projects_investment" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting.project_image?.url"  alt="projects_investment" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number2" :from="0" :to="setting?.investments" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                            <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-sm" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
                     </div>

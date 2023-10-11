@@ -1,7 +1,7 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
     <img-banner>
-        <img src="../../img/finncial-banner.png">
+        <img :src="banner">
         <template #text>{{ $t('finncial_banner') }}</template>
 
     </img-banner>
@@ -203,10 +203,17 @@ export default {
 
             financials: [],
             reports: [],
-            financialAndReports: []
+            financialAndReports: [],
+            banner:''
         }
     },
     methods: {
+        callbanner(){
+            axios.get("/api/banners-pages").then(res => {
+                this.banner= res.data.pages[1].media[1].original_url
+                console.log(this.banner)
+            })
+        },
         getAllFincials() {
             axios.get("/api/financials").then(res => {
                 // this.financials=res.data.financials
@@ -243,6 +250,7 @@ export default {
     },
     mounted() {
         this.getAllFincials()
+        callbanner()
     }
 }
 

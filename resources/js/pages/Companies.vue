@@ -4,7 +4,8 @@
     <div class="pt-[4rem]">
         <div class="relative img-banner-slot">
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-            <img class="w-full" src="../../img/companies-banner.png">
+
+            <img class="w-full" :src="banner">
             <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
                 <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
                      src="../../img/ladun-logo-banner.png">
@@ -39,6 +40,7 @@
         </div>
     </section>
     <LightFooter/>
+    
 </template>
 
 <script>
@@ -49,13 +51,20 @@ export default {
 
     data() {
         return {
-            companies: []
+            companies: [],
+            banner:''
         }
     },
     components: {
         ImgBanner, Navbar, LightFooter
     },
     methods: {
+        callbanner(){
+            axios.get("/api/banners-pages").then(res => {
+                this.banner= res.data.pages[0].media[0].original_url
+                console.log(this.banner)
+            })
+        },
 
         getAllCompanies() {
             axios.get("/api/companies").then(res => {
@@ -68,6 +77,7 @@ export default {
     },
     mounted() {
         this.getAllCompanies()
+        this.callbanner()
     }
 }
 

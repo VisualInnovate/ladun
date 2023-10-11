@@ -145,7 +145,7 @@ Route::group(['prefix' => 'projects'], function () {
 
 
 
-Route::get('/pages-banners',function (){
+Route::get('/banners-pages',function (){
    return response(['pages'=>\App\Models\page::with('media')->get()]);
 });
 // board of directors
