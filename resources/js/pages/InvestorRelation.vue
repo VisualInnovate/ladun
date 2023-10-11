@@ -21,16 +21,16 @@
                     <p class="mb-4 text-[text]   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	"  v-if="investor.content" v-html="investor.content[$i18n.locale]">
 
                     </p>
+                    <div class="my-2 w-full" v-html="investor.video">
 
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="flex content-center  ">
 
-        <div v-html="investor.video">
 
-        </div>
     </section>
 
     <LightFooter />
