@@ -9,6 +9,7 @@ use App\Models\page;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Form;
@@ -34,7 +35,7 @@ class PageResource extends Resource
             ->schema([
                 Card::make()
                     ->schema([
-                        TextInput::make('img_url')->required(),
+                        SpatieMediaLibraryFileUpload::make('banner')->label(__('Banner'))->collection('banner'),
 
 
                     ])
@@ -47,7 +48,7 @@ class PageResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')->label(__('id'))->sortable(),
                 Tables\Columns\TextColumn::make('page_name')->label(__('name'))->limit('50')->sortable(),
-                Tables\Columns\TextColumn::make('image_url')->label(__('img'))->limit('50'),
+                SpatieMediaLibraryImageColumn::make('banner')->label(__('Banner'))->collection('banner'),
 
             ])
             ->filters([
