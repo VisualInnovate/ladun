@@ -5,7 +5,7 @@
         <div class="relative img-banner-slot">
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
 
-            <img class="w-full" :src="banner">
+            <img class="w-full " style="height: 450px;"   :src="banner">
             <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
                 <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
                      src="../../img/ladun-logo-banner.png">
@@ -40,7 +40,7 @@
         </div>
     </section>
     <LightFooter/>
-    
+
 </template>
 
 <script>

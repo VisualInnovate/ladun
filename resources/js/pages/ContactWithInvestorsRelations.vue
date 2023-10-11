@@ -3,7 +3,7 @@
     <div class="pt-[5rem]"></div>
     <img-banner >
     <div >
-        <img  src="../../img/investors-page.png">
+        <img class="w-full" style="height: 450px;"  :src="banner">
     </div>
         <template #text>{{$t('investor_banner')}}  </template>
     </img-banner>
@@ -52,9 +52,17 @@ import ImgBanner from "@/components/ImgBanner.vue";
 import LightFooter from "../components/LightFooter.vue";
 import DarkLogo from "../../img/ladun_logo_dark.png";
 
-import { ref, onBeforeMount } from "vue";
+import { ref, onBeforeMount ,onMounted } from "vue";
 import axios from "axios";
 const settings= ref('')
+const banner =ref(2)
+onMounted(() => {
+  axios.get("/api/banners-pages").then((res)=>{
+    banner.value= res.data.pages[3].media[3].original_url
+
+  });
+
+})
 
 onBeforeMount(async () => {
 

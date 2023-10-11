@@ -2,7 +2,7 @@
     <Navbar class="bg-black fixed z-50 w-full" />
     <div class="pt-22">
         <img-banner>
-            <img class="p-2"  src="../../img/investors-page.png">
+            <img class="w-full" style="height: 450px;"  :src="banner">
             <template #text>{{$t('companyAds')}}  </template>
         </img-banner>
     </div>
@@ -42,13 +42,21 @@ import LightFooter from "../components/LightFooter.vue";
 export default {
     data() {
       return {
-          investors:[]
+          investors:[],
+          banner:''
       }
     },
     components:{
         Navbar,ImgBanner,CardLink,LightFooter
     },
+
     methods:{
+        callbanner(){
+            axios.get("/api/banners-pages").then(res => {
+                this.banner= res.data.pages[2].media[2].original_url
+                console.log(this.banner)
+            })
+        },
         getAllInvestors(){
             axios.get("/api/investors").then(res =>{
                 this.investors=res.data.investors
@@ -59,6 +67,7 @@ export default {
     },
     mounted() {
         this.getAllInvestors()
+        this.callbanner()
 
     }
 }
