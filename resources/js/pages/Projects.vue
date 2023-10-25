@@ -74,19 +74,21 @@
 
                                     </div>
                                     <div class="flex my-auto mx-1">
-                                        <img class="h-6 w-6" src="../../img/buildings-icon.png">
-
+                                         <img class="h-6 w-6" src="../../img/buildings-icon.png">
                                         <div class="flex ">
-                                            <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
+
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
                                            </small>
+                                           <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
                                         </div>
+
 
                                             <!-- <BuildingOffice2Icon
                                             class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
 
 
                                     </div>
+
                                 </div>
                                 <div class="flex flex-row-reverse">
                                     <router-link
