@@ -12,7 +12,7 @@
                          :title="region.title[$i18n.locale]">
                         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 pt-2 container mx-auto  [&>div]:lg:h-[574px]  [&>div]:md:h-[635px] [&>div]:h-[560px]">
                             <div v-for="project in region.projects"
-                                 class=" rounded-xl  bg-[#fff8f8]  mx-2 "
+                                 class=" rounded-xl  bg-[#FFF8F8]  mx-2 "
                                  :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
                                 <div class="w-full relative z-10">
                                     <router-link :to="{name: 'Project', params: { id: project.id }}">
@@ -64,9 +64,9 @@
                                     <div class="flex my-auto mx-1">
                                         <img class="h-6 w-6" src="../../img/buildings-icon.png">
                                         <div class="flex ">
-                                            <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
                                             </small>
+                                            <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
                                         </div>
                                         <!-- <BuildingOffice2Icon
                                         class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
