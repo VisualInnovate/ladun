@@ -247,7 +247,7 @@
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black ">{{ $t('areaOfLand') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} m2</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} {{ $t('areaUnit') }}</p>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,10 @@
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.building_area }} m2</p>
+                            <p class="flex font-bold text-center text-lg text-black">
+                               <p>{{ project.building_area }}</p>
+                               <p class="px-1">{{ $t('areaUnit') }}</p>
+                             </p>
                         </div>
                     </div>
                 </div>
@@ -555,7 +558,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex  w-[85%]  m-auto " id="carsoul-project">
+                <div class="flex  w-[100%] lg:w-[85%]  m-auto " id="carsoul-project">
                     <div class=" w-[1200px]  m-auto">
                         <Carousel class="w-full h-full [&>div]:md:h-[600px]  [&>div]:h-[417px] [&>div>div>img]:h-[417px] [&>div>div>img]:md:h-[600px]" :pictures="getGallery(project.gallery)"/>
                     </div>
@@ -730,7 +733,7 @@
     <section class=" company-info  bg-[white] mb-5" id="partner"
              v-if="project.partner_image != '' && project.partner_image">
 
-        <div class="container w-[85%] mx-auto mt-8">
+        <div class="container w-[85%]  mx-auto mt-8">
             <div class="flex pb-[5%]">
                 <img src="../../img/Group.svg" style="width: 40px;height: 40px">
 
