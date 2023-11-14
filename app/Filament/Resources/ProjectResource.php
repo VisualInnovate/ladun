@@ -87,7 +87,7 @@ class ProjectResource extends Resource
 
 
                         SpatieMediaLibraryFileUpload::make('project photos')
-                            ->hint('min image dimension 400px * 707px')
+                            ->hint('min image dimension 417px * 417px')
                             ->label(__('project photos'))->collection('attachments')
                             ->multiple()
                             ->enableReordering(),
