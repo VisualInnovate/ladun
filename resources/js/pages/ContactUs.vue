@@ -107,15 +107,17 @@
 
                     </div>
                     <div class="w-full  ">
+                        <iframe   :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"  src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d28970.176731153726!2d46.643525!3d24.820367!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzEzLjMiTiA0NsKwMzgnMzYuNyJF!5e0!3m2!1sar!2seg!4v1700991156021!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--                        <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"-->
 <!--                             :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>-->
-                        <iframe class="w-full  h-[555px] rounded-3xl lg:h-[90%]"
+                        <!-- <iframe class="w-full  h-[555px] rounded-3xl lg:h-[90%]"
                                 :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"
                                 :src="mapLink"
 
+                                frameborder="0"
                                 style="border:0;"  loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
                     </div>
                 </div>
