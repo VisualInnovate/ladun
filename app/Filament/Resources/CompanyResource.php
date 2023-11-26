@@ -44,9 +44,11 @@ class CompanyResource extends Resource
                             ->afterStateUpdated(function (Closure $set, $state) {
                                 $set('slug', Str::slug($state));
                             })->required(),
-                        TextInput::make('url')->label(__('url'))->afterStateHydrated(function(TextInput $component, $state) {
-                            $component->state('https://'.$state);
-                        }),
+                        TextInput::make('url')->label(__('url')),
+                        
+                        // ->afterStateHydrated(function(TextInput $component, $state) {
+                        //     $component->state('https://'.$state);
+                        // }),
                         TextInput::make('slug')->label(__('slug'))->required(),
                         SpatieMediaLibraryFileUpload::make('thumbnail')->hint('image dimension should not exceed 120px * 120px')->label(__('Main Image'))->collection('companies'),
                         RichEditor::make('content')->label(__('content')),
