@@ -28,14 +28,14 @@
 
         </list-group>
     </dropdown>
-    <Modal size="size" v-if="isShowModal" @close="closeModal">
+    <Modal   v-if="isShowModal" @close="closeModal">
         <template #header>
             <div class="flex items-center space-x-4 text-lg">
                 {{$t('shareYourInterests')}}
             </div>
         </template>
             <template #body >
-                <form class=" space-y-4 max-w-md" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class=" space-y-4" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D3G0000008knU">
                     <input type=hidden name="retURL" value="http://google.com">

@@ -31,15 +31,15 @@
                                     class="lg:w-full w-[95%] mx-auto  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('FirstName')"
                                 />
-
                                 <input
                                 type="text"
-                                id="mobile" maxlength="40" name="mobile"
-                                v-model="mobile"
+                                id="last_name" maxlength="80" name="last_name"
                                 aria-describedby="helper-text-explanation"
+                                v-model="last_name"
                                 class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                :placeholder="$t('PhoneNumber')"
+                                :placeholder="$t('LastName')"
                             />
+
 
 
                             </div>
@@ -52,12 +52,13 @@
                                 <!-- choose your inquiry -->
                                 <input
                                 type="text"
-                                id="last_name" maxlength="80" name="last_name"
+                                id="mobile" maxlength="40" name="mobile"
+                                v-model="mobile"
                                 aria-describedby="helper-text-explanation"
-                                v-model="last_name"
                                 class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                :placeholder="$t('LastName')"
+                                :placeholder="$t('PhoneNumber')"
                             />
+
 
                                 <input
                                     type="email"
@@ -112,7 +113,8 @@
                         <iframe class="w-full  h-[555px] rounded-3xl lg:h-[90%]"
                                 :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"
                                 :src="mapLink"
-                                style="border:0;" allowfullscreen="" loading="lazy"
+
+                                style="border:0;"  loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
@@ -121,7 +123,7 @@
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/location.png"/>
-                        <a  href="geo:latitude,longitude" target="_blank" class="underline my-auto">{{ $t('location') }}</a>
+                        <a  href="https://maps.app.goo.gl/8p13Sqxo4kJMFtfy9" target="_blank" class="underline my-auto">{{ $t('location') }}</a>
                     </div>
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/phone.png"/>

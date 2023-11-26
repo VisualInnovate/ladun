@@ -32,7 +32,7 @@
                         <p class=" text-[#6e6b6b] text-justify justify-start py-6 text-xs"
                         v-html="company.content[$i18n.locale]"></p>
 
-                    <div class=" absolute bottom-4 left-[50%] -translate-x-[50%] w-full " v-if="company.url!=''">
+                    <div class=" absolute bottom-4 left-[50%] -translate-x-[50%] w-full " v-if="company.url != null">
                         <a :href="company.url" target="_blank" class=" special-button button bg-dark-brown rounded-3xl text-white px-4 py-2  ml-4 ">{{ $t('visit') }} </a>
                     </div>
                     </div>
