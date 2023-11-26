@@ -107,7 +107,10 @@
 
                     </div>
                     <div class="w-full  ">
-                        <iframe   :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"  src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d28970.176731153726!2d46.643525!3d24.820367!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzEzLjMiTiA0NsKwMzgnMzYuNyJF!5e0!3m2!1sar!2seg!4v1700991156021!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe   :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d344.2481956219834!2d31.16179031626547!3d30.966030113535098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1698230142745!5m2!1sar!2seg"
+
+                       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--                        <img src="../../img/contact_us/map.png" class="w-full h-[100%] lg:h-[90%]"-->
 <!--                             :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'"/>-->
