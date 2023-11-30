@@ -250,7 +250,7 @@ export default {
     },
     mounted() {
         this.getAllFincials()
-        callbanner()
+        this.callbanner()
     }
 }
 

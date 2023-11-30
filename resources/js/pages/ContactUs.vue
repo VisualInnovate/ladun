@@ -51,7 +51,7 @@
                                 <!-- This field should not appear to the user and shall be filled automatically -->
                                 <!-- choose your inquiry -->
                                 <input
-                                type="text"
+                                type="number"
                                 id="mobile" maxlength="40" name="mobile"
                                 v-model="mobile"
                                 aria-describedby="helper-text-explanation"

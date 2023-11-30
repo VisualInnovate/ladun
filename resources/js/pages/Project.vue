@@ -812,6 +812,7 @@
                                     class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
+                                
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
 
@@ -830,15 +831,33 @@
                                     class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="region"
                                 >
-                                    <option value="Eastern"> {{ $t('easternRegion') }}</option>
-                                    <option value="Middle"> {{ $t('middleRegion') }}</option>
-                                    <option value="Northern"> {{ $t('westernRegion') }}</option>
-                                    <option value="Western"> {{ $t('SouthernRegion') }}</option>
+                                
+                                <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Eastern">{{$t('Buy_Middle_Region')}} </option>
+                                <option value="Eastern">{{$t('Buy_Western_Region')}} </option>
+                                <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
+                                <option value="Eastern">{{$t('Rent_Middle_Region')}} </option>
+                                <option value="Eastern">{{$t('Rent_Western_Region')}} </option>
+                                <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
 
 
                                 </select>
 
                             </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
+                            <input 
+                                    
+                                    type="text"
+                                    readonly
+                                    id="project_name" maxlength="80" name="project_name"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="project_name"
+                                    class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    :placeholder=" project.title[$i18n.locale]"
+                                />
+                            </div>
+                             
                             <button
                                 type="submit" @click="submit"
                                 class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl"
@@ -908,6 +927,7 @@ export default {
             first_name: "",
             last_name: "",
             mobile: "",
+            
             email: "",
             region: "Eastern",
             status: "Buy",
