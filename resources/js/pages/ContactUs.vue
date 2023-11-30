@@ -52,7 +52,7 @@
                                 <!-- choose your inquiry -->
                                 <input
                                 type="number"
-                                style="-moz-appearance: textfield; !important"
+                               
                                 id="mobile" maxlength="40" name="mobile"
                                 v-model="mobile"
                                 aria-describedby="helper-text-explanation"
@@ -256,7 +256,5 @@ input::-webkit-inner-spin-button {
     margin: 0 !important; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
-    -moz-appearance:textfield !important;  /* Firefox */
-}
+
 </style>
