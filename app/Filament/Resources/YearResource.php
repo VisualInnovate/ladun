@@ -97,7 +97,7 @@ class YearResource extends Resource
 
     public static function getPluralLabel(): ?string
     {
-        return __('year');
+        return __('Annual Reports');
     }
 
     public static function getNavigationSort(): ?int
