@@ -89,12 +89,12 @@ class PageResource extends Resource
 
     public static function getLabel(): ?string
     {
-        return __('page banners');
+        return __('page_banners');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('pages banners');
+        return __('page_banners');
     }
 
     public static function getNavigationSort(): ?int

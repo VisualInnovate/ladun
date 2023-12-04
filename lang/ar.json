@@ -1,8 +1,12 @@
 {
     "Projects": "المشروعات",
     "Project": "المشروع",
+    "Settings":"إعدادات",
+    "Admin_Management":"ssss",
+    "page_banners":"لافتات الصفحة",
     "Customer": "العميل",
     "Permissions": "الصلاحيات",
+    "Roles":"الأدوار",
     "Admin Managemnt": " ادارة الادمن",
     "title": "العنوان",
     "name": "الاسم",
@@ -44,6 +48,7 @@
     "Region": "المنطقة",
     "Departments": "الأقسام",
     "Regions": "المناطق",
+
     "Department title": "عنوان القسم",
     "Department image": "صورة القسم",
     "Add Department": "إضافة قسم",

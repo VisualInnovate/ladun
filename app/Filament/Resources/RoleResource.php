@@ -80,4 +80,23 @@ class RoleResource extends Resource
             'edit' => Pages\EditRole::route('/{record}/edit'),
         ];
     }
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return __('Roles');
+    }
+
+    public static function getLabel(): ?string
+    {
+        return __('Roles');
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return __('Roles');
+    }
 }

@@ -114,11 +114,15 @@ class SettingResource extends Resource
             'edit' => Pages\EditSetting::route('/{record}/edit'),
         ];
     }
-
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
     protected static function getNavigationGroup(): ?string
     {
         return __('Settings');
     }
+
 
     public static function getLabel(): ?string
     {

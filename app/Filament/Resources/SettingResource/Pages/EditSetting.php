@@ -16,4 +16,5 @@ class EditSetting extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+    
 }

@@ -139,11 +139,11 @@
 
                             </header>
 
-                            <div class="grid  grid-cols-4  ">
-                                <div class="card flex flex-wrap lg:flex-nowrap  ">
+                            <div class="grid  grid-cols-3  ">
+                                <div class="card flex flex-wrap  lg:flex-nowrap  ">
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.year_file"
-                                       class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
+                                       class="animate__animated animate__bounceIn mx-5 p-10   w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                                         <div class="flex flex-col items-center ">
                                             <div
                                                 class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">

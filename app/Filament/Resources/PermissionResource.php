@@ -64,4 +64,23 @@ class PermissionResource extends Resource
             'index' => Pages\ManagePermissions::route('/'),
         ];
     }
+    public static function getTranslatableLocales(): array
+    {
+        return ['en', 'ar'];
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return __('Permissions');
+    }
+
+    public static function getLabel(): ?string
+    {
+        return __('Permissions');
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return __('Permissions');
+    }
 }
