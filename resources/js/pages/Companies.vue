@@ -20,10 +20,10 @@
                 <div  v-for=" company in companies" :key="company.id"
 
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class="relative rounded-2xl  overflow-hidden   content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
+                     class="relative rounded-2xl border border-light-brown overflow-hidden  border-gray-border-light  content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[70%]  m-auto">
 
-                        <img style="transform: scale(1.2);" class="img-companies h-full p-2 rounded-full  mb-4 m-auto"  :src="company.media[0]?.original_url"
+                        <img style="transform: scale(1.3);" class="img-companies h-full p-2 rounded-3xl border-2 mb-4 m-auto"  :src="company.media[0]?.original_url"
                          alt="Sunset in the mountains">
 
                     </div>
