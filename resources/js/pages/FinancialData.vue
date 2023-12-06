@@ -141,6 +141,7 @@
 
                             <div class=" ">
                                 <div class="card grid grid-cols-1 lg:grid-cols-3  gap-2 px-10  ">
+                                    <p>{{ financial[0].year_file }}</p>
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.year_file"
                                        :class="{ 'invisible': 'storage/'+item.year_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-1">
