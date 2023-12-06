@@ -53,9 +53,8 @@
                                     <div class="flex my-auto mx-1">
                                         <img class="h-6 w-6" src="../mm.jpeg">
                                         <div class="flex ">
-
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">
-                                                {{ project.land_area[$i18n.locale] }}
+                                                {{ project.land_area.en }}
                                             </small>
                                             <p class="my-auto text-gray-500">
                                                 {{ $t('areaUnit') }}
