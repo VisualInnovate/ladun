@@ -92,7 +92,7 @@ class YearResource extends Resource
 
     public static function getLabel(): ?string
     {
-        return __('year');
+        return __('years');
     }
 
     public static function getPluralLabel(): ?string
