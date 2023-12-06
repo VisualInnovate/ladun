@@ -35,7 +35,7 @@ class YearResource extends Resource
             ->schema([
                 TextInput::make('title')->label(__('title')),
                 DatePicker::make('year_date')->required(),
-                FileUpload::make('year_file')->acceptedFileTypes(['application/pdf'])->required()
+                FileUpload::make('year_file')->acceptedFileTypes(['application/pdf'])
                 ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                     return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
                 })
