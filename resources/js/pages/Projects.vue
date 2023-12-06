@@ -67,7 +67,7 @@
                                         <div class="flex ">
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
                                             </small>
-                                            <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
+                                            <!-- <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p> -->
                                         </div>
                                         <!-- <BuildingOffice2Icon
                                         class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
