@@ -55,7 +55,7 @@
                                         <div class="flex ">
 
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">
-                                                {{ project.land_area }}
+                                                {{ project.land_area[$i18n.locale] }}
                                             </small>
                                             <p class="my-auto text-gray-500">
                                                 {{ $t('areaUnit') }}
