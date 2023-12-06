@@ -403,13 +403,13 @@
         </div>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto " v-if="project.phases">
 
-            <div class=" progress " v-for="phase in phases">
+            <div class=" progress " v-for="phase in project.phases">
 
 
                 <div class="  p-5 font-bold ">
 
                     <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
-                    <CircleProgressBar :value="phase.achieve_percentage " style="color: #213350" :max="100" percentage
+                    <CircleProgressBar :value="phase?.achieve_percentage " style="color: #213350" :max="100" percentage
                                        colorUnfilled="rgba(25,83,177,1)"
                                        animationDuration="2s"
                                        rounded>
@@ -812,7 +812,7 @@
                                     class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
-                                
+
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
 
@@ -831,7 +831,7 @@
                                     class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     v-model="region"
                                 >
-                                
+
                                 <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
                                 <option value="Eastern">{{$t('Buy_Middle_Region')}} </option>
                                 <option value="Eastern">{{$t('Buy_Western_Region')}} </option>
@@ -846,8 +846,8 @@
 
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
-                            <input 
-                                    
+                            <input
+
                                     type="text"
                                     readonly
                                     id="project_name" maxlength="80" name="project_name"
@@ -857,7 +857,7 @@
                                     :placeholder=" project.title[$i18n.locale]"
                                 />
                             </div>
-                             
+
                             <button
                                 type="submit" @click="submit"
                                 class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl"
@@ -927,7 +927,7 @@ export default {
             first_name: "",
             last_name: "",
             mobile: "",
-            
+
             email: "",
             region: "Eastern",
             status: "Buy",
