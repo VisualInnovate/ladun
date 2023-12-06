@@ -35,7 +35,7 @@ class FinancialResource extends Resource
             ->schema([
                 TextInput::make('title')->label(__('title')),
                 DatePicker::make('financial_date')->required(),
-                FileUpload::make('financial_file')->acceptedFileTypes(['application/pdf'])->required()
+                FileUpload::make('financial_file')->acceptedFileTypes(['application/pdf'])
                 ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                     return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
                 })
