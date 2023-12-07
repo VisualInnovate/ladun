@@ -77,8 +77,8 @@
                                 class="cursor-pointer relative lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-dark-brown focus:border-dark-brown block   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown">
                                 <input type="file" id="file"
                                        @change="handleFile" ref="file"
-                                       style="opacity: 0"
-                                       class="lg:w-full w-[95%] mx-auto cursor-pointer"
+                                       style="opacity: 0 ; z-index:50 !important"
+                                       class="lg:w-full lg:absolute w-[95%] mx-auto cursor-pointer"
                                        :placeholder="$t('uploadCV')">
                                 <span class="cursor-pointer  absolute top-[30%] left-[50%] -translate-y-[20%] font-thin" style="font-size: 16px">{{ $t('uploadCV') }}</span>
 

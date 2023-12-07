@@ -56,7 +56,7 @@ export default {
     phone: "الهاتف",
     location: "الموقع",
     followUs: "تابعنا على منصات التواصل الإجتماعي",
-    pleaseFill: "الرجاء مليء البيانات بالاسفل",
+    pleaseFill: "الرجاء تعبئة البيانات بالاسفل",
     gender: "الجنس",
     academicCertification: "المؤهل التعليمي",
     specialization: "مجال التخصص",
