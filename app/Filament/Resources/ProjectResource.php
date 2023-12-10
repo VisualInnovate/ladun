@@ -97,6 +97,7 @@ class ProjectResource extends Resource
                         }),
 
                         TextInput::make('Land_area')->label(__('Land_area')),
+						 TextInput::make('crm_id')->label(__('crm_id')),
                         TextInput::make('building_area')->label(__('building_area'))
                             ->numeric(),
 

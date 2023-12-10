@@ -33,7 +33,7 @@ class Project extends  Model implements HasMedia
         'region_id',
         'downloads_text',
 
-
+        'crm_id',
         'facilities',
         'commercial',
         'investment',
