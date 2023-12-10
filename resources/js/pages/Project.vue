@@ -771,8 +771,8 @@
                         >
 
                             <div class=" grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
-                                <input type=hidden name="oid" value="00D3G0000008knU">
-                                <input type=hidden name="retURL" value="https://ladun.visualinnovate.net/">
+                                <input type=hidden name="oid" value="00D8d0000060W7M">
+                                <input type=hidden name="retURL" value="https://www.ladun.sa/ar">
                                 <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
                                        type="hidden"/>  <!-- Object Of Interest -->
                                 <!-- This field should not appear to the user and shall be filled automatically -->
@@ -832,14 +832,14 @@
                                     v-model="region"
                                 >
 
-                                <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
-                                <option value="Eastern">{{$t('Buy_Middle_Region')}} </option>
-                                <option value="Eastern">{{$t('Buy_Western_Region')}} </option>
-                                <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
-                                <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
-                                <option value="Eastern">{{$t('Rent_Middle_Region')}} </option>
-                                <option value="Eastern">{{$t('Rent_Western_Region')}} </option>
-                                <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
+                                <option value="Buy-Eastern Region">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Buy-Middle Region">{{$t('Buy_Middle_Region')}} </option>
+                                <option value="Buy-Western Region">{{$t('Buy_Western_Region')}} </option>
+                                <option value="Buy-Northern Region">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Rent-Eastern Region">{{$t('Rent_Eastern_Region')}} </option>
+                                <option value="Rent-Middle Region">{{$t('Rent_Middle_Region')}} </option>
+                                <option value="Rent-Western Region">{{$t('Rent_Western_Region')}} </option>
+                                <option value="Rent-Northern Region">{{$t('Rent_Eastern_Region')}} </option>
 
 
                                 </select>
@@ -958,7 +958,7 @@ export default {
         },
         submit() {
             // alert(this.status)
-            axios.post(`https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`, {
+            axios.post(`https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D8d0000060W7M`, {
                 "first_name": this.first_name,
                 "last_name": this.last_name,
                 "mobile": this.mobile,
