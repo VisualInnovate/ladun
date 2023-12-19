@@ -34,7 +34,7 @@
                             <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" :href="settings[0].fax" target="_blank"> : {{settings[0].fax}}</a>
                         </div>
                         <div class="my-auto">
-                            <p class="font-bold inline">{{ $t('email') }}</p><a class="underline" target="_blank" :href="settings[0].email"> : {{settings[0].email}}</a>
+                            <p class="font-bold inline">{{ $t('email') }}</p><a class="underline" target="_blank" href="investor@ladun.sa"> investor@ladun.sa</a>
                         </div>
                     </div>
                 </div>
