@@ -52,7 +52,7 @@
                                 <!-- choose your inquiry -->
                                 <input
                                 type="number"
-                               
+
                                 id="mobile" maxlength="40" name="mobile"
                                 v-model="mobile"
                                 aria-describedby="helper-text-explanation"
@@ -137,7 +137,7 @@
                             <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
 
                                 <p class="font-bold inline">{{ $t('phone') }}</p> <a  class="underline" target="_blank" :href="'tel:' + contact[0]?.phone ">{{ contact[0]?.phone }}</a>
-                                <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  :href="'tel:'+contact[0]?.convert" target="_blank"> : {{ contact[0]?.convert }}</a>
+                                <!-- <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  :href="'tel:'+contact[0]?.convert" target="_blank"> : {{ contact[0]?.convert }}</a> -->
                             </div>
                             <div class="my-auto">
                                 <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" :href="'tel:'+ contact[0]?.fax "> : {{ contact[0]?.fax }}</a>

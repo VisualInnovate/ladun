@@ -12,8 +12,8 @@
                         <!--                    <template #date>{{item.creted_at}}</template>-->
                         <template #head ><p class="text-xl">{{ item.title[$i18n.locale] }}</p></template>
                         <template #text>
-                            <div v-html="item.content[$i18n.locale].slice(0,150)+'...'"></div>
-                            <div class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }}</button></div>
+                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
+                            <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }}</button></div>
                         </template>
                         <img
                             class="md:h-full object-cover img-media-center
