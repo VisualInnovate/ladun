@@ -15,6 +15,9 @@
     <div v-if="isOpen == q.id " class="p-4 bg-[#F6F3EB]">
       <slot>{{  q.answer[$i18n.locale]}}</slot>
     </div>
+
+
+
         </div>
       </div>
     </div>
