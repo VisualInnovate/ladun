@@ -149,7 +149,9 @@ Route::get('/banners-pages',function (){
    return response(['pages'=>\App\Models\page::with('media')->get()]);
 });
 // board of directors
-
+Route::get("/faqs",function (){
+    return response(["faqs"=>\App\Models\faq::all()]);
+});
 
 Route::get('/structure',function (){
     $structure = Structure::all();

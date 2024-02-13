@@ -43,6 +43,11 @@
                 </router-link>
             </div>
             <div class="flex flex-col justify-between md:h-32 pt-8">
+                <router-link :to="{ name: 'questions' }">
+                    <small>{{ $t('questions') }}</small>
+                </router-link>
+            </div>
+            <div class="flex flex-col justify-between md:h-32 pt-8">
                 <router-link :to="{ name: 'Join Us' }">
                     <small>{{ $t('joinUs') }}</small>
                 </router-link>

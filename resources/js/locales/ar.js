@@ -20,6 +20,7 @@ export default {
     areaUnit: "م2",
     unit: "وحدة",
     aboutLadun: "عن لدن",
+    questions:"الاسئله",
     experienceYears: "سنوات الخبرة",
     projectsUnits: " وحـــــــــــــدة مطـــــــــورة  ",
     waiting: "وقــــــــــــيد التطـــــــــوير",
@@ -74,7 +75,7 @@ export default {
     Rent_Middle_Region:"إيجار-المنطقة الوسطى",
     Rent_Western_Region:"إيجار-المنطقة الغربية",
     Rent_Eastern_Region:"إيجار المنطقة الشرقية",
-   
+
     easternRegion: "المنطقة الشرقية",
     middleRegion: "المنطقة الوسطى",
     westernRegion: "المنطقة الغربية",

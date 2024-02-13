@@ -46,6 +46,91 @@
 
     <!-- end of header section -->
     <!-- Latest Project section -->
+
+    <!-- End of Latest Project section -->
+
+    <!-- About Us section -->
+    <section class=" bg-[white] relative about-section pt-12" id="aboutSection">
+        <div class="flex py-5">
+            <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
+                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 font-bold text-3xl"
+                id="aboutLadunHeader"
+            >
+                {{ $t('aboutLadun') }}
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2  mx-auto  lg:w-[95%] px-5 ">
+            <div class="right">
+                <p class="px-2 my-auto text-grey text-justify text-lg mb-7  md:w-[80%]" v-if="aboutData.content"
+                   v-html="aboutData.content[$i18n.locale]"></p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
+                    <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;"   :src="setting.experience_image?.url" alt="experience_years" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
+                            <number ref="number1" :from="0" :to="setting?.experience" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                        </strong>
+                            <p class="block " style="font-size: 14px;">{{ $t('experienceYears') }}</p></div>
+                    </div>
+                    <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;" :src="setting.developed_buildings_image?.url" alt="projects_units" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2  text-center"><strong class="text-3xl text-dark-brown">+
+                            <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                        </strong>
+                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('projectsUnits') }}</p>
+                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('waiting') }}</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;" :src="setting.companies_image?.url" alt="affiliate" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
+                            <number ref="number3" :from="0" :to="setting?.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                        </strong>
+                            <p class="block text-sm" style="font-size: 12px;">{{ $t('affiliate') }}</p></div>
+                    </div>
+
+                     <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;" :src="setting.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
+                            <number ref="number5" :from="0" :to="setting?.investments" :delay="3" :duration="3"
+                                    easing="Power1.easeOut"/>
+                        </strong>
+                        <p class="block " style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
+                    </div>
+
+                    <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;" :src="setting.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
+                            <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
+                                    easing="Power1.easeOut"/>
+                        </strong>
+                            <p class="block text-sm" style="font-size: 12px;">{{ $t('unitsUnderProcess') }}</p></div>
+                    </div>
+                    <div class="grid grid-cols-3 justify-center ">
+                        <img style="width: 60px; height: 60px;" :src="setting.project_image?.url"  alt="projects_investment" class="my-auto mx-auto"/>
+                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
+                            <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
+                        </strong>
+                            <p class="block text-sm" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <img class="w-[91%] left rounded-xl" src="../new.jpg" alt="About Ladun">
+        </div>
+
+
+
+        <!-- share your interest -->
+        <div
+            class="rounded-2xl border-2 border-yellow-300 mt-20 bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            {{ $t('shareYourInterestWithUs') }}
+        </div>
+
+
+    </section>
+    <Modal :formShow="isShowModal"/>
     <section id="project-latst"   class="bg-white">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white">
             <h2 id="latest_project_header bg-white"
@@ -163,91 +248,7 @@
             </tabs>
         </div>
     </section>
-    <!-- End of Latest Project section -->
 
-    <!-- About Us section -->
-    <section class=" bg-[white] relative about-section pt-12" id="aboutSection">
-        <div class="flex py-5">
-            <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
-                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 font-bold text-3xl"
-                id="aboutLadunHeader"
-            >
-                {{ $t('aboutLadun') }}
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2  mx-auto  lg:w-[95%] px-5 ">
-            <div class="right">
-                <p class="px-2 my-auto text-grey text-justify text-lg mb-7  md:w-[80%]" v-if="aboutData.content"
-                   v-html="aboutData.content[$i18n.locale]"></p>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
-                    <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;"   :src="setting.experience_image?.url" alt="experience_years" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number1" :from="0" :to="setting?.experience" :delay="3" :duration="3" easing="Power1.easeOut"/>
-                        </strong>
-                            <p class="block " style="font-size: 14px;">{{ $t('experienceYears') }}</p></div>
-                    </div>
-                    <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.developed_buildings_image?.url" alt="projects_units" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2  text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
-                        </strong>
-                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('projectsUnits') }}</p>
-                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('waiting') }}</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.companies_image?.url" alt="affiliate" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number3" :from="0" :to="setting?.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
-                        </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('affiliate') }}</p></div>
-                    </div>
-
-                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
-                            <number ref="number5" :from="0" :to="setting?.investments" :delay="3" :duration="3"
-                                    easing="Power1.easeOut"/>
-                        </strong>
-                        <p class="block " style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
-                    </div>
-
-                    <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
-                            <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
-                                    easing="Power1.easeOut"/>
-                        </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('unitsUnderProcess') }}</p></div>
-                    </div>
-                    <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.project_image?.url"  alt="projects_investment" class="my-auto mx-auto"/>
-                        <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
-                            <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
-                        </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
-                    </div>
-
-                </div>
-            </div>
-
-            <img class="w-[91%] left rounded-xl" src="../new.jpg" alt="About Ladun">
-        </div>
-
-
-
-        <!-- share your interest -->
-        <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
-            {{ $t('shareYourInterestWithUs') }}
-        </div>
-
-
-    </section>
-
-    <Modal :formShow="isShowModal"/>
 
 
     <!-- End About Us section -->

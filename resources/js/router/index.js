@@ -14,6 +14,12 @@ const routes = [
         meta:{title:"Companies"}
     },
     {
+        path: "/questions",
+        component: () => import("@/pages/questions.vue"),
+        name: 'questions',
+        meta:{title:"questions"}
+    },
+    {
         path: "/join-us",
         component: () => import("@/pages/JoinUs.vue"),
         name: 'Join Us',
