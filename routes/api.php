@@ -187,6 +187,10 @@ Route::get("/settings",function (){
     return response(["settings"=>\App\Models\setting::all()]);
 });
 
+Route::get("/faqs",function (){
+    return response(["faqs"=>\App\Models\faq::all()]);
+});
+
 // pages api
 
 Route::get('/pages/{slug}', function($slug){
