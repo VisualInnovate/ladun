@@ -14,6 +14,6 @@ class Faq extends  Model implements HasMedia
     use InteractsWithMedia;
     use HasTranslations;
     protected $guarded = [];
-    public $translatable = ['question,answer'];
+    public $translatable = ['question','answer'];
     protected  $table = 'faq';
 }
