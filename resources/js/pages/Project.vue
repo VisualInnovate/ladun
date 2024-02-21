@@ -616,18 +616,21 @@
         </div>
     </section>
 
-    <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video!='' && project.project_video">
+    <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video || project.video_url" >
         <div class="container lg:w-[75%] mx-auto">
             <div class="flex  mx-auto ">
                 <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
                 <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
             </div>
-            <div class=" max-w-sm w-full  ">
-               <div class="grid grid-cols-1" v-for="por in project.project_video ">
+            <div class=" w-full  ">
+               <div v-if="project.project_video != ''" class="grid grid-cols-1"  v-for="por in project.project_video ">
                 <div class=" mt-4 rounded-md  "  v-html="por.url">
                 </div>
                </div>
+              <a v-else :href="project.video_url" target="_blank">
+                <img :src="project.video_img ">
+              </a>
 
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>

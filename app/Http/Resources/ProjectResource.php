@@ -57,6 +57,9 @@ class ProjectResource extends JsonResource
             'mosque'=>$this->mosque,
             'video'=>$this->mediable,
             'project_video'=>$this->mediable360,
+
+            'video_img'=>$this->video_img,
+            'video_url'=>$this->video_url,
            'utilities' => $this->utilities->map(function($util){
             return [
                 'id' => $util->id,

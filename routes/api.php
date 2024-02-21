@@ -150,7 +150,7 @@ Route::get('/banners-pages',function (){
 });
 // board of directors
 Route::get("/faqs",function (){
-    return response(["faqs"=>\App\Models\faq::all()]);
+    return response(["faqs"=>\App\Models\Faq::all()]);
 });
 
 Route::get('/structure',function (){
@@ -187,9 +187,6 @@ Route::get("/settings",function (){
     return response(["settings"=>\App\Models\setting::all()]);
 });
 
-Route::get("/faqs",function (){
-    return response(["faqs"=>\App\Models\faq::all()]);
-});
 
 // pages api
 

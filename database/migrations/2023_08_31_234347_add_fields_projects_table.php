@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             $table->string("video");
             $table->string("project_video");
+
+            $table->string("video_url");
+            $table->string("video_img");
         });
     }
 

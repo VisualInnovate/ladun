@@ -95,7 +95,7 @@ class ProjectResource extends Resource
                         FileUpload::make('attachment')->label(__('cover photo'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),
-                         
+
                         TextInput::make('Land_area')->label(__('Land_area')),
 						 TextInput::make('crm_id')->label(__('crm_id')),
                         TextInput::make('building_area')->label(__('building_area'))

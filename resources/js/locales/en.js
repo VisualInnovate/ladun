@@ -15,7 +15,7 @@ export default {
     project360: "project 360",
     aboutUs: "About us",
     companies: "Subsidiaries",
-    questions:"Questions",
+    questions:"FAQ",
     projects: "Projects",
     companyAds: "Company Announcements",
     contactUs: "Contact us",
