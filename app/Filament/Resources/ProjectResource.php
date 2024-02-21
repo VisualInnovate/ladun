@@ -95,7 +95,7 @@ class ProjectResource extends Resource
                         FileUpload::make('attachment')->label(__('cover photo'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
                         }),
-
+                         
                         TextInput::make('Land_area')->label(__('Land_area')),
 						 TextInput::make('crm_id')->label(__('crm_id')),
                         TextInput::make('building_area')->label(__('building_area'))
@@ -158,11 +158,18 @@ class ProjectResource extends Resource
 
                 Section::make(__('project_video'))
                     ->schema([
+                       Toggle::make('is_image')->label(trans('Image')),
+
                         Repeater::make('video360')
                             ->relationship('mediable360')
+                            ->disabled( fn(Closure $get) => !$get('is_image'))
                             ->schema([
                                 TextInput::make('url')->label(__('video')),
-                            ])
+                            ]),
+                            FileUpload::make('video_img')->label(__('video img'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                            return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
+                        }),
+                        TextInput::make('video_url')->label(__('video url')),
                     ])
                     ->collapsed()->columns(1),
                 //===========================

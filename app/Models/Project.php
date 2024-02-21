@@ -23,6 +23,8 @@ class Project extends  Model implements HasMedia
         'email',
         'address',
         'attachment',
+         'video_url',
+         'video_img',
         'content',
         'is_published',
         'Land_area',
