@@ -679,6 +679,7 @@
                 </div>
 
                 <div class="img-company-info w-full m-auto left">
+
                     <iframe class="w-full h-[350px]"
                             :src="mapLink"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -998,7 +999,8 @@ export default {
             return this.project.phases
         },
         mapLink() {
-            return `https://maps.google.com/maps?key=AIzaSyDWxa_rbz7ccvjsvxmbPR5Q_AEK14-D0sk&q=${this.project.location.Latitude},${this.project.location.Longitude}&hl=es&z=14&amp&output=embed`
+            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d906.3230424820638!2d${this.project.location.Latitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
+
         }
     },
     beforeMount() {
