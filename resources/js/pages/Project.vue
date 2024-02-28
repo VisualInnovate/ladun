@@ -629,7 +629,8 @@
                 </div>
                </div>
               <a v-else :href="project.video_url" target="_blank">
-                <img :src="project.video_img ">
+                <img :src="'https://ladun.sa/storage/' +project.video_img ">
+                <p>{{  }}</p>
               </a>
 
             </div>
