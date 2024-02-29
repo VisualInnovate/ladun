@@ -1,87 +1,49 @@
 <template>
-    <div class="bg-light-footer text-grey ">
-
-        <div class="grid grid-cols-1 md:grid-cols-8  px-11 py-12">
-            <div class="flex flex-col mx-auto ">
-                <img :src="DarkLogo" alt="Logo_darK" class=" mb-5  h-[52%]" />
-                <div class="inline-flex  justify-between">
+    <div class="bg-light-footer text-grey py-1 md:py-1 px-1 md:px-2 mb-1 md:mb-2" >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-8  py-0 md:py-0" >
+            <!-- Logo and Social Icons -->
+            <div class="flex flex-col justify-center items-center md:items-start">
+                <img :src="DarkLogo" alt="Logo_darK" class="mb-4 h-[52%]" style="width:40%;padding-top:30px" />
+                <div class="flex justify-center md:justify-start space-x-4 mb-4">
                     <template v-for="icon in icons">
-                        <a :href="icon.href" target="_blank" >
-                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 md:mx-3 h-6" />
+                        <a :href="icon.href" target="_blank">
+                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 h-6" />
                         </a>
                     </template>
                 </div>
+                <a href="https://wa.me/920011560" target="_blank" class="flex items-center text-gray-600 hover:text-gray-900">
+                    <p class="mr-2" style="font-size: 20px;">920011560</p>
+                    <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6" />
+                </a>
             </div>
-            <div></div>
-            <div class="flex flex-col justify-between h-32 pt-8">
-                <router-link :to="{ name: 'About Us' }">
-                    <small>{{ $t('aboutLadun') }}</small>
-                </router-link>
+            
+            <!-- Navigation Links -->
+            <div class="flex flex-col space-y-4  py-2 md:py-0 " style="padding-top:30px">
+                <router-link :to="{ name: 'About Us' }" class="text-gray-600 hover:text-gray-900">{{ $t('aboutLadun') }}</router-link>
+                <router-link :to="{ name: 'Projects' }" class="text-gray-600 hover:text-gray-900">{{ $t('projects') }}</router-link>
+                <router-link :to="{ name: 'Projects' }" class="text-gray-600 hover:text-gray-900">{{ $t('realEstateManagement') }}</router-link>
+                <router-link :to="{ name: 'Projects' }" class="text-gray-600 hover:text-gray-900">{{ $t('realEstateAssetManagement') }}</router-link>
             </div>
-            <div class="flex flex-col justify-between h-32 pt-8">
-                <router-link :to="{ name: 'Projects' }">
-
-                    <small>{{ $t('projects') }}</small>
-                </router-link>
-                <router-link :to="{ name: 'Projects' }">
-
-                    <small>{{ $t('realEstateManagement') }}</small>
-                </router-link>
-                <router-link :to="{ name: 'Projects' }">
-
-                    <small>{{ $t('realEstateAssetManagement') }}</small>
-                </router-link>
+            
+            <!-- Additional Links -->
+            <div class="flex flex-col space-y-1  py-0 md:py-0" style="padding-top:30px">
+                <router-link :to="{ name: 'Investors Ads' }" class="text-gray-600 hover:text-gray-900">{{ $t('investorsRelations') }}</router-link>
+                <router-link :to="{ name: 'Media Center' }" class="text-gray-600 hover:text-gray-900">{{ $t('mediaCenter') }}</router-link>
+                <router-link :to="{ name: 'questions' }" class="text-gray-600 hover:text-gray-900">{{ $t('questions') }}</router-link>
+                <router-link :to="{ name: 'Join Us' }" class="text-gray-600 hover:text-gray-900">{{ $t('joinUs') }}</router-link>
+                <router-link :to="{ name: 'Contact Us' }" class="text-gray-600 hover:text-gray-900">{{ $t('contactUs') }}</router-link>
             </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8">
-                <router-link :to="{ name: 'Investors Ads' }">
-                    <small>{{ $t('investorsRelations') }}</small>
-                </router-link>
-            </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8">
-                <router-link :to="{ name: 'Media Center' }">
-                    <small>{{ $t('mediaCenter') }}</small>
-                </router-link>
-            </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8">
-                <router-link :to="{ name: 'questions' }">
-                    <small>{{ $t('questions') }}</small>
-                </router-link>
-            </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8">
-                <router-link :to="{ name: 'Join Us' }">
-                    <small>{{ $t('joinUs') }}</small>
-                </router-link>
-            </div>
-            <div class="flex flex-col justify-between md:h-32 pt-8">
-                <router-link :to="{ name: 'Contact Us' }">
-                    <small>{{ $t('contactUs') }}</small>
-                </router-link>
-            </div>
-            <div class="flex flex-col-reverse justify-between md:h-17 mt-4 text-center pt-2">
-                <div class="flex items-center justify-center">
-
-                    <a class="flex" href="https://wa.me/920011560" target="_blank">
-                        <p>920011560</p>
-                        <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6 mx-2" />
-                    </a>
-                </div>
-            </div>
-
         </div>
-        <hr class="border-gray-300 mx-11"/>
-        <div class="mx-11 py-5 flex justify-center">
-            <small class="ltr:mr-2 rtl:ml-2 flex text-center after:content-['']  after:w-[1.5px] after:h-5   after:bg-dark-brown after:rounded rtl:after:mr-2 ltr:after:ml-2 after:my-auto">
-                    {{ $t('termsConditions') }}
-                </small>
-
-                <small class="ltr:mr-2 rtl:ml-2 flex text-center after:content-['']  after:w-[1.5px] after:h-5   after:bg-dark-brown after:rounded rtl:after:mr-2 ltr:after:ml-2 after:my-auto">
-                    {{ $t('privacyPolicy') }}
-                </small>
-                <small class="ltr:mr-2 rtl:ml-2">
-                    {{ $t('copyRights') }}
-                </small>
+        
+        <hr class="border-gray-300 mx-6 md:mx-12" />
+        
+        <div class="mx-6 md:mx-12 py-5 flex justify-center space-x-4">
+            <small class="flex after:content-[''] after:w-[1.5px] after:h-5 after:bg-dark-brown after:rounded after:my-auto">{{ $t('termsConditions') }}</small>
+            <small class="flex after:content-[''] after:w-[1.5px] after:h-5 after:bg-dark-brown after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small>
+            <small>{{ $t('copyRights') }}</small>
         </div>
     </div>
+    
 
 </template>
 

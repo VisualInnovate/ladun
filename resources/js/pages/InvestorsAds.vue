@@ -2,10 +2,17 @@
     <Navbar class="bg-black fixed z-50 w-full" />
     <div class="pt-22">
         <img-banner>
-            <img class="w-full" style="height: 450px;"  :src="banner">
-            <template #text>{{$t('companyAds')}}  </template>
+            <img class="w-full" style="height: 300px;"  :src="banner">
+      
+            <template  #text>{{$t('companyAds')}} 
+                <div style="color:rgb(0, 0, 0); padding-top:20px; font-size:16px" > 
+                    <router-link :to="{ name: 'Home' }"> <a href="">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
+                </div>
+            </template>
+        
         </img-banner>
     </div>
+
 
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">

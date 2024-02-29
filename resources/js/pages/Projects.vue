@@ -40,38 +40,32 @@
                                        v-html="project.text[$i18n.locale].slice(0, 190)">
                                     </p>
                                 </div>
-                                <div class=" flex justify-between  py-4 ltr:text-start rtl:text-end w-full  ">
-                                    <div  class="flex my-auto px-1">
+                                <div class="flex justify-between py-4 ltr:text-start rtl:text-end w-full">
+                                    <div class="flex my-auto px-1 items-center">
                                         <img class="w-6 h-6" src="../rrr.jpeg">
-                                        <small class=" text-gray-900 px-2">
-                                            {{project?.type[$i18n.locale] }}
+                                        <small class="text-gray-900 px-2">
+                                            {{ project?.type[$i18n.locale] }}
                                         </small>
-                                        <!-- <svg class="my-auto" width="32px" height="32px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.5 7.5H20.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 12H17.5" stroke="#000000" stroke-linecap="round"></path> <path d="M3.5 16.5H20.5" stroke="#000000" stroke-linecap="round"></path> </g></svg> -->
-                                        <!-- <BuildingOffice2Icon
-                                            class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
                                     </div>
-                                    <div class="flex my-auto mx-1">
+                                    <div class="flex my-auto mx-1 items-center">
                                         <img class="h-6 w-6" src="../mm.jpeg">
-                                        <div class="flex ">
-                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2">
+                                        <div class="flex items-center">
+                                            <small class="whitespace-nowrap text-gray-800 px-2">
                                                 {{ project.land_area }}
                                             </small>
-                                            <p class="my-auto text-gray-500">
+                                            <p class="text-gray-500">
                                                 {{ $t('areaUnit') }}
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="flex my-auto mx-1">
+                                    <div class="flex my-auto mx-1 items-center">
                                         <img class="h-6 w-6" src="../../img/buildings-icon.png">
-                                        <div class="flex ">
-                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
-                                            </small>
-                                            <!-- <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p> -->
+                                        <div class="flex items-center">
+                                            <small class="whitespace-nowrap text-gray-800 px-2">{{ project.units_number }}</small>
                                         </div>
-                                        <!-- <BuildingOffice2Icon
-                                        class="inline-block h-6 w-6 ltr:mr-2 rtl:ml-2 text-light-brown"/> -->
                                     </div>
                                 </div>
+                                
                                 <div class="flex flex-row-reverse">
                                     <router-link
                                         class="w-[100px] bg-dark-brown text-white rounded-2xl h-8 max-w-20  text-center flex flex-col justify-center mx-2 "
