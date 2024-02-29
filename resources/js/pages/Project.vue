@@ -1,13 +1,15 @@
 <template>
-    <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top }" />
+    <Navbar class=" fixed z-50 w-full" :class="{ 'bg-black': !top}"/>
     <div class="relative img-banner-slot h-[50vh] md:h-auto">
         <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
-        <img class="h-full md:h-auto w-[100%] lg:h-[400px]" :src="getGallery(project.banner)[0]?.src">
+        <img class="h-full md:h-auto w-[100%] lg:h-[400px]" :src="getGallery(project.banner)[0]?.src"  >
         <!-- :src="getGallery(project.banner)[0]?.src" -->
         <div
             class="z-40   text-white absolute top-[100%] mx-auto -translate-y-[100%] :rtl:right-[3%] ltr:left-[3%] rtl:-translate-x-[30%] ">
-            <img class="animate__animated animate__backInDown max-w-[170px] m-auto" id="logo-project" v-if="project.logo"
-                :src="project.logo.original_url">
+            <img class="animate__animated animate__backInDown max-w-[170px] m-auto"
+                 id="logo-project"
+                 v-if="project.logo"
+                 :src="project.logo.original_url">
         </div>
 
     </div>
@@ -17,21 +19,21 @@
 
             <div class="lg:w-[90%]">
 
-                <div class=" h-full grid grid-cols-1  lg:grid-cols-9 items-center py-4 ">
+                <div class=" h-full grid grid-cols-1  lg:grid-cols-9 items-center py-4 "
+                >
                     <div class=" lg:col-span-2  px-4 ltr:border-l-2 rtl:border-r-2 border-dark-brown">
 
-                        <router-link to="/projects">
-                            <p class="text-2xl font-bold truncate" v-if="project.department">
-                                {{ project.department.title[$i18n.locale] }}</p>
-                        </router-link>
+                        <router-link to="/projects"><p class="text-2xl font-bold truncate" v-if="project.department">
+                            {{ project.department.title[$i18n.locale] }}</p></router-link>
                         <h1 class=" text-3xl text-[#AF9751] truncate" v-if="project.title">
                             {{ project.title[$i18n.locale] }}</h1>
                         <p v-if="project.number" class="text-lg">{{ $t('certified') }}</p>
-                        <p class="  mb-12 text-sm px-2 py-4  " v-if="project.number" v-html="project.number"></p>
+                        <p class="  mb-12 text-sm px-2 py-4  " v-if="project.number"
+                           v-html="project.number"></p>
                     </div>
                     <div class="lg:col-span-7 ">
                         <p class=" mb-12 text-xl px-2 py-4  h-full flex items-center" v-if="project.text"
-                            v-html="project.text[$i18n.locale]"></p>
+                       v-html="project.text[$i18n.locale]"></p>
                     </div>
 
 
@@ -48,16 +50,17 @@
     <section class=" text-sm m-auto ">
         <div class="container mx-auto pb-4">
             <div class=" w-full  m-auto ">
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 mx-auto items-center ">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 mx-auto items-center ">
                     <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="project.phases.length">
                         <img src="../../img/project_percentage.png" style="width: 28px;height: 28px">
 
 
                         <a class="   relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#project_phases',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#project_phases',
+                            offset: -128
+                        }">
                             {{ $t('project') }}
                         </a>
 
@@ -65,7 +68,7 @@
 
                     <div class=" lg:mx-auto mb-3 md:mb-0 flex " v-if="project?.services?.length">
                         <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon my-auto" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                             xmlns="http://www.w3.org/2000/svg" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
@@ -75,56 +78,56 @@
                             </g>
                         </svg>
                         <a class="relative px-1 inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#serves',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#serves',
+                            offset: -128
+                        }">
                             {{ $t('utilities') }}
                         </a>
                     </div>
                     <div class="lg:mx-auto mb-3 md:mb-0 flex truncate" v-if="project.phases.length">
                         <img src="../../img/models_icon.png" style="width: 26px;height: 26px">
                         <a class="  truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#modale',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#modale',
+                            offset: -128
+                        }">
                             {{ $t('modale') }}
                         </a>
                     </div>
                     <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="project.gallery != '' && project.gallery">
-                        <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                             fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01">
-                                </path>
+                                      d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path>
                             </g>
                         </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#images',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#images',
+                            offset: -128
+                        }">
                             {{ $t('Image') }}
                         </a>
                     </div>
-                    <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="videoo != '' && videoo">
+                    <div class="lg:mx-auto mb-3 md:mb-0 flex" v-if="videoo!='' && videoo">
                         <svg class="px-1" width="26px" height="26px" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
-                                    stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                                <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
+                                      stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
+                                <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path
                                     d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
                                     stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -132,66 +135,70 @@
                             </g>
                         </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#video',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#video',
+                            offset: -128
+                        }">
                             {{ $t('video') }}
                         </a>
                     </div>
 
                     <div class="lg:mx-auto  mb-3 md:mb-0 flex truncate"
-                        v-if="project.project_video != '' && project.project_video">
+                         v-if="project.project_video!='' && project.project_video">
                         <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
                         <a class="px-1 truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#video3d',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#video3d',
+                            offset: -128
+                        }">
                             {{ $t('video_360') }}
                         </a>
                     </div>
 
                     <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
                         <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                             xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path
                                     d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
-                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
                                 <path
                                     d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
                             </g>
                         </svg>
                         <a class="relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#location',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#location',
+                            offset: -128
+                        }">
                             {{ $t('location') }}
                         </a>
                     </div>
 
 
                     <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.downloads.length">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path
                                     d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.1198 22 8.79986 22H12.5M14 11H8M10 15H8M16 7H8M15 19L18 22M18 22L21 19M18 22V16"
-                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    stroke="#AF9751" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
                             </g>
                         </svg>
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#downloads',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#downloads',
+                            offset: -128
+                        }">
                             {{ $t('downloads') }}
                         </a>
                     </div>
@@ -201,15 +208,16 @@
                         <img src="../../img/Group.svg" style="width: 30px;height: 30px">
 
                         <a class="relative inline-block px-1 after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                            href="#" v-scroll-to="{
-                                el: '#partner',
-                                offset: -128
-                            }">
+                           href="#" v-scroll-to="{
+                            el: '#partner',
+                            offset: -128
+                        }">
                             {{ $t('partners') }}
                         </a>
                     </div>
 
-                    <a class="lg:mx-auto button bg-light-brown text-white rounded-2xl w-full text-center py-2 hover:bg-dark-brown hover:shadow"
+                    <a
+                        class="lg:mx-auto button bg-light-brown text-white rounded-2xl w-full text-center py-2 hover:bg-dark-brown hover:shadow"
                         href="#" v-scroll-to="{
                             el: '#ask_us',
                             offset: -128
@@ -230,60 +238,52 @@
         <div class="container mx-auto ">
             <div class="grid grid-cols-1  gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
 
-                <div v-if="project.land_area && project.land_area != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
+                <div v-if="project.land_area && project.land_area!=0"
+
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%]"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black ">{{ $t('areaOfLand') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} {{ $t('areaUnit') }}
-                            </p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} {{ $t('areaUnit') }}</p>
                         </div>
                     </div>
                 </div>
-                <div v-if="project.building_area && project.building_area != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.building_area && project.building_area!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img class="w-[24%] md:w-[50%]"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
+                        <img class="w-[24%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
                             <p class="flex font-bold text-center text-lg text-black">
-                            <p>{{ project.building_area }}</p>
-                            <p class="px-1">{{ $t('areaUnit') }}</p>
-                            </p>
+                               <p>{{ project.building_area }}</p>
+                               <p class="px-1">{{ $t('areaUnit') }}</p>
+                             </p>
                         </div>
                     </div>
                 </div>
-                <div v-if="project.units_number && project.units_number != 0"
-     class="grid grid-cols-1 gap-2 md:gap-1 w-56  utility-group animate__animated animate__backInDown"
-     style="padding: 1px">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center" style="padding: 1px">
-        <img class="md:w-[50%] pr-1"
-             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png"
-             alt="icon"> <!-- Adjust the right padding as needed -->
-        <div class="my-auto mx-auto text-[14px]">
-            <p class="text-black">{{ $t('Floors_Number') }}</p>
-            <p class="font-bold text-center text-lg text-black" style="margin-left: 2px;"> <!-- Adjust the left margin as needed -->
-                {{ project.units_number }}
-            </p>
-        </div>
-    </div>
-</div>
-
-           
-           
-
-
-                <div v-if="project.models_number && project.models_number != 0"
-                    class="grid grid-cols-1 gap-1  md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.units_number && project.units_number!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                    <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[20%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png">
+                        <div class="my-auto mx-auto text-[14px]">
+                            <p class="text-black ">{{ $t('Floors_Number') }}</p>
+                            <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="project.models_number && project.models_number!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-1">
-                        <img class="w-[35%] md:w-[50%] "
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img class="w-[35%] md:w-[50%] m-auto"
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black ">{{ $t('Units_Number') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
@@ -291,12 +291,12 @@
                     </div>
                 </div>
 
-                <div v-if="project.facilities && project.facilities != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.facilities && project.facilities!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  ">{{ $t('facilities') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
@@ -304,12 +304,12 @@
                     </div>
                 </div>
 
-                <div v-if="project.commercial && project.commercial != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.commercial && project.commercial!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  ">{{ $t('commercial') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
@@ -317,12 +317,13 @@
                     </div>
                 </div>
 
-                <div v-if="project.investment && project.investment != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.investment && project.investment!=0"
+
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black ">{{ $t('investment') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
@@ -330,12 +331,12 @@
                     </div>
                 </div>
 
-                <div v-if="project.government && project.government != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.government && project.government!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center">{{ $t('government') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
@@ -343,12 +344,12 @@
                     </div>
                 </div>
 
-                <div v-if="project.government && project.government != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.government && project.government!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <diV class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center">{{ $t('educational') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
@@ -356,12 +357,12 @@
                     </diV>
                 </div>
 
-                <div v-if="project.gardens && project.gardens != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.gardens && project.gardens!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black ">{{ $t('gardens') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
@@ -369,12 +370,12 @@
                     </div>
                 </div>
 
-                <div v-if="project.mosque && project.mosque != 0"
-                    class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div v-if="project.mosque && project.mosque!=0"
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
-                            src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
+                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  ">{{ $t('mosque') }}</p>
                             <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
@@ -408,13 +409,15 @@
                 <div class="  p-5 font-bold ">
 
                     <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
-                    <CircleProgressBar :value="phase?.achieve_percentage" style="color: #213350" :max="100" percentage
-                        colorUnfilled="rgba(25,83,177,1)" animationDuration="2s" rounded>
+                    <CircleProgressBar :value="phase?.achieve_percentage " style="color: #213350" :max="100" percentage
+                                       colorUnfilled="rgba(25,83,177,1)"
+                                       animationDuration="2s"
+                                       rounded>
                     </CircleProgressBar>
 
                     <h5 class="pb-2 text-center mt-4 font-light" style="color: #213350">{{
-                        phase.name[$i18n.locale]
-                    }}</h5>
+                            phase.name[$i18n.locale]
+                        }}</h5>
 
 
                 </div>
@@ -423,11 +426,11 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section id="serves" class="bg-[white]  py-[3%]" v-if="project?.services?.length">
+    <section id="serves" class="bg-[white]  py-[3%]" v-if="project?.services?.length" >
         <div class="container  mx-auto">
             <div class="flex">
                 <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                     xmlns="http://www.w3.org/2000/svg" fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -439,10 +442,9 @@
                 <h2 class="text-3xl font-bold text-light-brown ">{{ $t("high_level_utility") }}</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-20 gap-5 lg:w-[70%] m-auto py-[3%]">
-                <div v-for="service in project.services " style="border-bottom:1px solid rgb(76, 73, 73);"
-                    class="m-auto flex w-full">
+                <div v-for="service in project.services " style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <img :src="service.image.original_url" style="width: 80px ;height: 80px">
-                    <p class="mx-4 text-xl"> {{ service.title[$i18n.locale] }}</p>
+                    <p class="mx-4 text-xl"> {{service.title[$i18n.locale]}}</p>
                 </div>
 
 
@@ -462,7 +464,8 @@
 
 
     <!-- project models -->
-    <section id="modale" class="company-info   py-20 pt-16  bg-background-section " v-if="project.project_models.length">
+    <section id="modale" class="company-info   py-20 pt-16  bg-background-section "
+             v-if="project.project_models.length">
 
         <div class="container mx-auto">
 
@@ -481,8 +484,8 @@
                         <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
                             <!-- class appends to content DIV for all tabs -->
                             <tab v-for="model in project.project_models" :name="model.title['en']"
-                                :title="model.title[$i18n.locale]"
-                                class=" [&>div]:grid [&>div]:grid-cols-1 [&>div]:gap-12 [&>div]:lg:grid-cols-2 [&>div]:lg:gap-2">
+                                 :title="model.title[$i18n.locale]"
+                                 class=" [&>div]:grid [&>div]:grid-cols-1 [&>div]:gap-12 [&>div]:lg:grid-cols-2 [&>div]:lg:gap-2">
                                 <div>
                                     <div class="text mb-5">
                                         <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
@@ -491,12 +494,14 @@
                                         <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
                                     </div>
                                     <div class="flex flex-wrap">
-                                        <div v-if="model.utilities" v-for="utility in model.utilities"
+                                        <div
+                                            v-if="model.utilities"
+                                            v-for="utility in model.utilities"
                                             class=" ltr:mr-14 rtl:ml-14 flex flex-wrap flex-col items-center justify-center w-[96px]">
 
                                             <div class=" p-7 rounded-full border-2 bg-white z-20 mb-2">
                                                 <img v-if="utility.media[0]" :src="utility.media[0].original_url"
-                                                    class="w-[35px] h-[35px] z-40">
+                                                     class="w-[35px] h-[35px] z-40">
                                                 <!--                                            add dinamic img -->
                                             </div>
 
@@ -510,7 +515,7 @@
 
                                 <div class="  left">
                                     <Carousel :pictures="getGallery(model.media)"
-                                        class="about-us-carousel w-full   [&>div<li<img]:w-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  " />
+                                              class="about-us-carousel w-full   [&>div<li<img]:w-full [&>div>button]:mx-2 [&>div>button]:w-10 [&>button>span]:group-focus:ring-black [&>button>span]:group-focus:ring-1  "/>
 
                                 </div>
 
@@ -538,13 +543,13 @@
                         <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
                         <div class="flex">
                             <svg class="my-auto" width="36px" height="36px" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg" fill="none">
+                                 xmlns="http://www.w3.org/2000/svg" fill="none">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
-                                    <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01">
-                                    </path>
+                                    <path stroke="#AF9751" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path>
                                 </g>
                             </svg>
                             <p class="text-dark-brown text-4xl right">
@@ -555,9 +560,7 @@
                 </div>
                 <div class="flex  w-[100%] lg:w-[85%]  m-auto " id="carsoul-project">
                     <div class=" w-[1200px]  m-auto">
-                        <Carousel
-                            class="w-full h-full [&>div]:md:h-[600px]  [&>div]:h-[417px] [&>div>div>img]:h-[417px] [&>div>div>img]:md:h-[600px]"
-                            :pictures="getGallery(project.gallery)" />
+                        <Carousel class="w-full h-full [&>div]:md:h-[600px]  [&>div]:h-[417px] [&>div>div>img]:h-[417px] [&>div>div>img]:md:h-[600px]" :pictures="getGallery(project.gallery)"/>
                     </div>
                 </div>
 
@@ -570,75 +573,71 @@
 
     <!-- Video -->
 
-    <section id="video" class=" bg-[white]" v-if="videoo != '' && videoo">
+    <section id="video" class=" bg-[white]" v-if="videoo!='' && videoo">
         <div class="container lg:w-[75%] m-auto">
             <div class="flex mx-auto  mb-10">
 
                 <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                     xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
                         <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
-                            stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              stroke="#AF9751" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M2.52002 7.11011H21.48" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                              stroke-linejoin="round"></path>
                         <path d="M8.52002 2.11011V6.97011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                              stroke-linejoin="round"></path>
                         <path d="M15.48 2.11011V6.52011" stroke="#AF9751" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                              stroke-linejoin="round"></path>
                         <path
                             d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
                             stroke="#AF9751" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                             stroke-linejoin="round"></path>
                     </g>
                 </svg>
-                <div class="my-auto   text-3xl text-light-brown">
-                    <p> {{ $t("video") }}</p>
-                </div>
+                <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
             <div class=" flex justify-center mx-auto">
                 <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
                 <div class=" max-w-sm w-full  ">
-                    <div class="grid grid-cols-1" v-for="por in project.video ">
-                        <div class=" mt-4 rounded-md  " v-html="por.url">
-                        </div>
-                    </div>
+               <div class="grid grid-cols-1" v-for="por in project.video ">
+                <div class=" mt-4 rounded-md  "  v-html="por.url">
                 </div>
+               </div>
+            </div>
 
-                <div class="mx-auto   rounded-xl"></div>
+                    <div   class="mx-auto   rounded-xl"></div>
 
             </div>
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
     </section>
-    <div v-if="project.project_video != ''">
-        <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video || project.video_url">
-            <div class="container lg:w-[75%] mx-auto">
-                <div class="flex  mx-auto ">
-                    <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+<div  v-if=" project.video_url!=null">  
+    <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video || project.video_url" >
+        <div class="container lg:w-[75%] mx-auto">
+            <div class="flex  mx-auto ">
+                <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
-                    <div class=" my-auto text-3xl text-light-brown mb-5 ">
-                        <p> {{ $t("project360") }}</p>
-                    </div>
-                </div>
-                <div class=" w-full  ">
-                    <div v-if="project.project_video != ''" class="grid grid-cols-1" v-for="por in project.project_video ">
-                        <div class=" mt-4 rounded-md  " v-html="por.url">
-                        </div>
-                    </div>
-                    <a v-else :href="project.video_url" target="_blank">
-                        <img :src="'https://ladun.sa/storage/' + project.video_img">
-
-                    </a>
-
-                </div>
-                <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+                <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
             </div>
-        </section>
-    </div>
+            <div class=" w-full  ">
+               <div v-if="project.project_video != ''" class="grid grid-cols-1"  v-for="por in project.project_video ">
+                <div class=" mt-4 rounded-md  "  v-html="por.url">
+                </div>
+               </div>
+              <a v-else :href="project.video_url" target="_blank">
+                <img :src="'https://ladun.sa/storage/' +project.video_img ">
+                <p>{{  }}</p>
+              </a>
+
+            </div>
+            <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+        </div>
+    </section>
+</div>
     <!-- end Video -->
     <!-- location -->
     <section class="company-info   py-20 bg-[white]" id="location" v-if="project.location">
@@ -650,18 +649,17 @@
                 <div class="d-info h-full flex flex-col justify-center right ">
                     <div class="flex">
                         <svg width="34px" height="34px" viewBox="-4 0 32 32" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>location</title>
+                            <g id="SVGRepo_iconCarrier"><title>location</title>
                                 <desc>Created with Sketch Beta.</desc>
                                 <defs></defs>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                    sketch:type="MSPage">
+                                   sketch:type="MSPage">
                                     <g id="Icon-Set-Filled" sketch:type="MSLayerGroup"
-                                        transform="translate(-106.000000, -413.000000)" fill="#AF9751">
+                                       transform="translate(-106.000000, -413.000000)" fill="#AF9751">
                                         <path
                                             d="M118,422 C116.343,422 115,423.343 115,425 C115,426.657 116.343,428 118,428 C119.657,428 121,426.657 121,425 C121,423.343 119.657,422 118,422 L118,422 Z M118,430 C115.239,430 113,427.762 113,425 C113,422.238 115.239,420 118,420 C120.761,420 123,422.238 123,425 C123,427.762 120.761,430 118,430 L118,430 Z M118,413 C111.373,413 106,418.373 106,425 C106,430.018 116.005,445.011 118,445 C119.964,445.011 130,429.95 130,425 C130,418.373 124.627,413 118,413 L118,413 Z"
                                             id="location" sketch:type="MSShapeGroup"></path>
@@ -684,8 +682,10 @@
 
                 <div class="img-company-info w-full m-auto left">
 
-                    <iframe class="w-full h-[350px]" :src="mapLink" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="w-full h-[350px]"
+                            :src="mapLink"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!--                    map location  langtud and  -->
                 </div>
 
@@ -708,13 +708,13 @@
                             d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
                             stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path>
                         <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
+                              stroke-linecap="round" stroke-linejoin="round"></path>
                     </g>
                 </svg>
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 lg:grid-cols-3 m-auto">
                 <a :href="`/storage/${download.project_attachment}`" target="_blank" class="flex"
-                    v-for="download in project.downloads">
+                   v-for="download in project.downloads">
                     <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -723,7 +723,7 @@
                                 d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
                                 stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path>
                             <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
                         </g>
                     </svg>
                     <p class="text-2xl p-2 font-bold my-auto">{{ download.name[$i18n.locale] }}</p>
@@ -737,7 +737,7 @@
     </section>
 
     <section class=" company-info  bg-[white] mb-5" id="partner"
-        v-if="project.partner_image != '' && project.partner_image">
+             v-if="project.partner_image != '' && project.partner_image">
 
         <div class="container w-[85%]  mx-auto mt-8">
             <div class="flex pb-[5%]">
@@ -747,7 +747,8 @@
 
             </div>
             <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto ">
-                <img v-for="image in  getGallery(project.partner_image) " :src="image.src" style="width: 100%;height:200px">
+                <img v-for="image in  getGallery(project.partner_image) " :src="image.src"
+                     style="width: 100%;height:200px">
 
 
             </div>
@@ -762,48 +763,69 @@
     <section class="text-center py-8" id="ask_us">
         <div class="container mx-auto lg:w-[75%]">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
-            <div class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap  my-5 w- pt-5">
+            <div
+                class="flex rounded-3xl justify-between gap-x-14 flex-wrap md:flex-nowrap  my-5 w- pt-5"
+            >
                 <div class="flex-auto  right">
                     <div class="bg-[#57565B] rounded- mb-14 pt-12 rounded-xl  m-auto">
                         <h3 class="text-center mb-5 text-white">{{ $t('pleaseFill') }}</h3>
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->
-                        <form class="grid gap-y-10 mx-5">
+                        <form class="grid gap-y-10 mx-5"
+
+                        >
 
                             <div class=" grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
                                 <input type=hidden name="oid" value="00D8d0000060W7M">
                                 <input type=hidden name="retURL" value="https://www.ladun.sa/ar">
                                 <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
-                                    type="hidden" /> <!-- Object Of Interest -->
+                                       type="hidden"/>  <!-- Object Of Interest -->
                                 <!-- This field should not appear to the user and shall be filled automatically -->
                                 <!-- choose your inquiry -->
 
-                                <input type="text" id="first_name" maxlength="40" name="first_name"
-                                    aria-describedby="helper-text-explanation" v-model="first_name"
+                                <input
+                                    type="text"
+                                    id="first_name" maxlength="40" name="first_name"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="first_name"
                                     class="rounded-3xl w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('FirstName')" />
-                                <input type="text" id="last_name" maxlength="80" name="last_name"
-                                    aria-describedby="helper-text-explanation" v-model="last_name"
+                                    :placeholder="$t('FirstName')"
+                                />
+                                <input
+                                    type="text"
+                                    id="last_name" maxlength="80" name="last_name"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="last_name"
                                     class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('LastName')" />
+                                    :placeholder="$t('LastName')"
+                                />
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
-                                <input type="text" id="mobile" maxlength="40" name="mobile" v-model="mobile"
+                                <input
+                                    type="text"
+                                    id="mobile" maxlength="40" name="mobile"
+                                    v-model="mobile"
                                     aria-describedby="helper-text-explanation"
                                     class="w-full  bg-gray-50 border rounded-3xl border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('PhoneNumber')" />
-                                <input type="email" id="email" maxlength="80" name="email"
-                                    aria-describedby="helper-text-explanation" v-model="email"
+                                    :placeholder="$t('PhoneNumber')"
+                                />
+                                <input
+                                    type="email"
+                                    id="email" maxlength="80" name="email"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="email"
                                     class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="$t('Email')" />
+                                    :placeholder="$t('Email')"
+                                />
 
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
 
                                 <select
                                     class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    v-model="status">
+                                    v-model="status"
+                                >
                                     <option value="Buy"> {{ $t('ownership') }}</option>
                                     <option value="Rent"> {{ $t('rent') }}</option>
                                     <option value="Other"> {{ $t('other') }}</option>
@@ -813,30 +835,39 @@
 
                                 <select
                                     class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    v-model="region">
+                                    v-model="region"
+                                >
 
-                                    <option value="Buy-Eastern Region">{{ $t('Buy_Eastern_Region') }} </option>
-                                    <option value="Buy-Middle Region">{{ $t('Buy_Middle_Region') }} </option>
-                                    <option value="Buy-Western Region">{{ $t('Buy_Western_Region') }} </option>
-                                    <option value="Buy-Northern Region">{{ $t('Buy_Eastern_Region') }} </option>
-                                    <option value="Rent-Eastern Region">{{ $t('Rent_Eastern_Region') }} </option>
-                                    <option value="Rent-Middle Region">{{ $t('Rent_Middle_Region') }} </option>
-                                    <option value="Rent-Western Region">{{ $t('Rent_Western_Region') }} </option>
-                                    <option value="Rent-Northern Region">{{ $t('Rent_Eastern_Region') }} </option>
+                                <option value="Buy-Eastern Region">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Buy-Middle Region">{{$t('Buy_Middle_Region')}} </option>
+                                <option value="Buy-Western Region">{{$t('Buy_Western_Region')}} </option>
+                                <option value="Buy-Northern Region">{{$t('Buy_Eastern_Region')}} </option>
+                                <option value="Rent-Eastern Region">{{$t('Rent_Eastern_Region')}} </option>
+                                <option value="Rent-Middle Region">{{$t('Rent_Middle_Region')}} </option>
+                                <option value="Rent-Western Region">{{$t('Rent_Western_Region')}} </option>
+                                <option value="Rent-Northern Region">{{$t('Rent_Eastern_Region')}} </option>
 
 
                                 </select>
 
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
-                                <input type="text" readonly id="project_name" maxlength="80" name="project_name"
-                                    aria-describedby="helper-text-explanation" v-model="project_name"
+                            <input
+
+                                    type="text"
+                                    readonly
+                                    id="project_name" maxlength="80" name="project_name"
+                                    aria-describedby="helper-text-explanation"
+                                    v-model="project_name"
                                     class="rounded-3xl w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    :placeholder="project.title[$i18n.locale]" />
+                                    :placeholder=" project.title[$i18n.locale]"
+                                />
                             </div>
 
-                            <button type="submit" @click="submit"
-                                class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl">
+                            <button
+                                type="submit" @click="submit"
+                                class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl"
+                            >
                                 {{ $t("sendNow") }}
                             </button>
                         </form>
@@ -854,27 +885,27 @@
     </section>
 
 
-    <LightFooter />
+    <LightFooter/>
 </template>
 
 <script>
 
-import { useRoute } from 'vue-router';
+import {useRoute} from 'vue-router';
 
-import { Input, Dropdown } from 'flowbite-vue'
-import { ArrowDownTrayIcon } from "@heroicons/vue/24/solid";
-import { Tabs, Tab } from 'flowbite-vue'
-import { Carousel } from 'flowbite-vue'
-import { MapPinIcon } from "@heroicons/vue/24/solid";
+import {Input, Dropdown} from 'flowbite-vue'
+import {ArrowDownTrayIcon} from "@heroicons/vue/24/solid";
+import {Tabs, Tab} from 'flowbite-vue'
+import {Carousel} from 'flowbite-vue'
+import {MapPinIcon} from "@heroicons/vue/24/solid";
 import Navbar from '../components/Navbar.vue';
 import LightFooter from '../components/LightFooter.vue';
 import VueCarousel from "@/components/VueCarousel.vue";
-import { Progress } from 'flowbite-vue'
-import { ref } from "vue";
-import { element } from "tw-elements/dist/src/js/util";
+import {Progress} from 'flowbite-vue'
+import {ref} from "vue";
+import {element} from "tw-elements/dist/src/js/util";
 
 
-import { CircleProgressBar } from 'circle-progress.vue';
+import {CircleProgressBar} from 'circle-progress.vue';
 
 export default {
     components: {
@@ -981,7 +1012,7 @@ export default {
             .then(res => {
                 // this.project = Vue.util.extend({}, res.data.data)
                 this.project = res.data.data
-                console.log(this.project.project_video[0].url)
+                 console.log(this.project.project_video[0].url)
                 this.videoo = this.project.video
 
                 console.log(this.project.video)
@@ -1076,6 +1107,7 @@ export default {
 </script>
 
 <style scoped>
+
 .carousel img {
     width: 100%;
 }

@@ -1,8 +1,8 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="media-center py-28 bg-background-section" style="height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
-        {{$t('companyAds')}} 
-        <div style="color:rgb(0, 0, 0); padding-top:20px; font-size:16px" > 
+    <section class="media-center py-28 bg-background-section" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
+        {{$t('mediaCenter')}} 
+        <div style="color:rgb(255, 255, 255); padding-top:20px; font-size:16px" > 
             <router-link :to="{ name: 'Home' }"> <a href="">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
         </div>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
@@ -24,7 +24,7 @@
                         
                         <template #date>
                             <p class="text-xl">
-                                <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="">
+                                <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="" style="width:100%">
                             </p>
                         </template>
                         
