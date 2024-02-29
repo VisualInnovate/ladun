@@ -20,7 +20,7 @@
                 <img :src="darkFooterLogo" alrt="darkFooterLogo" /> <h3 class="self-center md:px-5">{{ $t('darkFooterTitle') }}</h3>
             </div>
             <p class="text-dark-footer-text-color py-5 md:py-10 text-justify" >{{ $t('darkFooterText') }}</p>
-            <h class="py-2">{{ $t('darkFooterPhone') }}: 920011560 </h>
+            <h class="py-2">{{ $t('darkFooterPhone') }}: 920011560</h>
             <h3 class="py-2">{{ $t('darkFooterEmail') }}: investor@ladun.sa</h3>
         </div>
 
@@ -67,7 +67,7 @@ const icons = [
     },
     {
         image:whatsappIcon ,
-        href: 'https://wa.me/920011560',
+        href: 'https://wa.me/',
     },
     {
         image:facebookIcon ,

@@ -1,24 +1,42 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class="pt-[73px]"></div>
+    <section class="media-center py-28 bg-background-section" style="height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
+        {{$t('companyAds')}} 
+        <div style="color:rgb(0, 0, 0); padding-top:20px; font-size:16px" > 
+            <router-link :to="{ name: 'Home' }"> <a href="">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
+        </div>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
+            <template>
+                <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" src="" alt="">
+            </template>
+        </div>
+    </section>
+    
 
 
     <section class="media-center py-28 bg-background-section">
         <div class="container mx-auto">
             <h1 class="text-4xl text-center  mb-10">{{ $t('mediaCenter') }}</h1>
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
                 <template v-if="media.length">
                     <card-link v-for="item in media" :key="item.id" >
                         <!--                    <template #date>{{item.creted_at}}</template>-->
-                        <template #head ><p class="text-xl">{{ item.title[$i18n.locale] }}</p></template>
-                        <template #text>
-                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
-                            <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-right">{{ $t('readMore') }}</button></div>
+                        
+                        <template #date>
+                            <p class="text-xl">
+                                <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="">
+                            </p>
                         </template>
-                        <img
-                            class="md:h-full object-cover img-media-center
-                         lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg  w-full md:w-48 rounded-b-lg md:rounded-b-none rtl:pl-2 ltr:pr-2"
-                            :src="getpic(item)" alt="">
+                        
+                        <template #text>
+
+                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
+                            <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-cecter">{{ $t('readMore') }}</button></div>
+                        </template>
+                    <template #head>
+                            
+                        <p>{{ formatDate(item.created_at) }}</p>
+                        </template>
                     </card-link>
 
                 </template>
@@ -53,6 +71,14 @@ const pictures = [
     },
 ]
 
+const formatDate = (dateString) => {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = months[date.getMonth()];
+  const day = ('0' + date.getDate()).slice(-2);
+  return `${month} ${day}, ${year}`;
+};
 
 const details = (id) => {
     router.push({
@@ -82,6 +108,10 @@ onBeforeMount(() => {
 </script>
 
 <style>
-
+button
+{
+    width: 100%;
+  color: rgb(0, 0, 0);
+}
 
 </style>
