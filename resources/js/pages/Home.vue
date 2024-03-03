@@ -32,7 +32,7 @@
             </button>
         </div>
     </header>
-    <div class="flex justify-center bg-white">
+    <div class="flex justify-center bg-white dark:bg-black">
         <a class="bg-dark-brown text-center text-white rounded-full z-20 py-1 -mt-[2rem] w-72 h-14  animate__animated animate__fadeInUp animate__slow"
            href="#" v-scroll-to="{
                             el: '#project-latst',
@@ -40,7 +40,7 @@
                         }">
 
             {{ $t('scrollDown') }}
-            <ChevronDownIcon class="h-6 w-6 text-white mx-auto my-1/2"/>
+            <ChevronDownIcon class="h-6 w-6   text-white mx-auto my-1/2"/>
         </a>
     </div>
 
@@ -50,10 +50,10 @@
     <!-- End of Latest Project section -->
 
     <!-- About Us section -->
-    <section class=" bg-[white] relative about-section pt-12" id="aboutSection">
+    <section class=" bg-[white] relative about-section pt-12 dark:bg-black" id="aboutSection">
         <div class="flex py-5">
             <h2 :class="{ 'animate__animated animate__fadeInLeft animate__slow': !view.aboutLadunSection}"
-                class="flex-initial w-64 text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 font-bold text-3xl"
+                class="flex-initial w-64 text-black before:content-[''] before:m-0.5 dark:text-[white]  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 font-bold text-3xl"
                 id="aboutLadunHeader"
             >
                 {{ $t('aboutLadun') }}
@@ -61,57 +61,57 @@
         </div>
         <div class="grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2  mx-auto  lg:w-[95%] px-5 ">
             <div class="right">
-                <p class="px-2 my-auto text-grey text-justify text-lg mb-7  md:w-[80%]" v-if="aboutData.content"
+                <p class="px-2 my-auto text-grey text-justify text-lg mb-7 dark:bg-black dark:text-[white] md:w-[80%]" v-if="aboutData.content"
                    v-html="aboutData.content[$i18n.locale]"></p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mx-auto container">
                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;"   :src="setting.experience_image?.url" alt="experience_years" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;"   :src="setting?.experience_image?.url" alt="experience_years" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number1" :from="0" :to="setting?.experience" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
-                            <p class="block " style="font-size: 14px;">{{ $t('experienceYears') }}</p></div>
+                            <p class="block dark:text-[white]" style="font-size: 14px;">{{ $t('experienceYears') }}</p></div>
                     </div>
                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.developed_buildings_image?.url" alt="projects_units" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting?.developed_buildings_image?.url" alt="projects_units" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2  text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
-                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('projectsUnits') }}</p>
-                            <p class="block text-sm  " style="font-size: 12px;">{{ $t('waiting') }}</p>
+                            <p class="block text-sm dark:text-[white] " style="font-size: 12px;">{{ $t('projectsUnits') }}</p>
+                            <p class="block text-sm  dark:text-[white]" style="font-size: 12px;">{{ $t('waiting') }}</p>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.companies_image?.url" alt="affiliate" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting?.companies_image?.url" alt="affiliate" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number3" :from="0" :to="setting?.companies" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('affiliate') }}</p></div>
+                            <p class="block text-sm dark:text-[white]" style="font-size: 12px;">{{ $t('affiliate') }}</p></div>
                     </div>
 
                      <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting?.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
                             <number ref="number5" :from="0" :to="setting?.investments" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
-                        <p class="block " style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
+                        <p class="block dark:text-[white]" style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
                     </div>
 
                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting?.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
                             <number ref="number5" :from="0" :to="setting?.developing_buildings" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('unitsUnderProcess') }}</p></div>
+                            <p class="block text-sm dark:text-[white]" style="font-size: 12px;">{{ $t('unitsUnderProcess') }}</p></div>
                     </div>
                     <div class="grid grid-cols-3 justify-center ">
-                        <img style="width: 60px; height: 60px;" :src="setting.project_image?.url"  alt="projects_investment" class="my-auto mx-auto"/>
+                        <img style="width: 60px; height: 60px;" :src="setting?.project_image?.url"  alt="projects_investment" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl text-dark-brown">+
                             <number ref="number2" :from="0" :to="setting?.project" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
-                            <p class="block text-sm" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
+                            <p class="block text-sm dark:text-[white]" style="font-size: 12px;">{{ $t('projectsInvestment') }}</p></div>
                     </div>
 
                 </div>
@@ -124,15 +124,15 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black dark:text-[white] bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
 
     </section>
-    <Modal :formShow="isShowModal"/>
-    <section id="project-latst"   class="bg-white">
-        <div class="grid grid-cols-4 gap-4 py-10 bg-white">
+    <Modal  :formShow="isShowModal"/>
+    <section id="project-latst"   class="bg-white dark:bg-black">
+        <div class="grid grid-cols-4 gap-4 py-10 bg-white dark:bg-black">
             <h2 id="latest_project_header bg-white"
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
@@ -140,17 +140,17 @@
         </div>
         <div
 
-            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 bg-white [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
+            class="[&>div>div>ul]:justify-center [&>div>div]:border-0 bg-white dark:bg-black [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
             <tabs variant="underline" v-model="activeTab">
                 <!-- class appends to content DIV for all tabs -->
                 <tab
                     v-for="department in fetchedData"
-                    :name="department.title['en']"
-                    :title="department.title[$i18n.locale]"
-                    class="py-2  bg-white"
+                    :name="department?.title['en']"
+                    :title="department?.title[$i18n.locale]"
+                    class="py-2  bg-white dark:bg-black"
 
                 >
-                    <carousel class=" bg-white" v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
+                    <carousel class=" bg-white dark:bg-black" v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
                         <slide v-for="project in department.latest" :key="project.id"  >
 
@@ -158,7 +158,7 @@
                                 class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
                                 <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <img style="height:331px;" class="w-full   rounded-xl" v-if="project.attachment" :src="project.attachment">
+                                        <img style="height:331px;" class="w-full dark:bg-[white]  rounded-xl" v-if="project.attachment" :src="project.attachment">
                                 </router-link>
                                 <div class="flex   text-right p-2">
                                    <div class="flex w-full rtl:flex-row-reverse ">
@@ -167,10 +167,10 @@
                                         <h3 class="ltr:text-start rtl:text-end my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
                                      </router-link>
                                     <div class="text-dark-brown flex">
-                                        <small class=" text-right my-auto " >
-                                            <h6 class="ltr:text-start rtl:text-end my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>
+                                        <small class=" text-right my-auto dark:text-[white] " >
+                                            <h6 class="ltr:text-start rtl:text-end  my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>
 
-                                            </small>
+                                        </small>
                                         <svg class="my-auto " version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#AF9751" d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M48.087,39h-0.01L32,61L15.923,39 h-0.01C13.469,35.469,10,29.799,10,24c0-12.15,9.85-22,22-22s22,9.85,22,22C54,29.799,50.281,35.781,48.087,39z"></path> <path fill="#AF9751" d="M32,14c-5.523,0-10,4.478-10,10s4.477,10,10,10s10-4.478,10-10S37.523,14,32,14z M32,32 c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> <path fill="#AF9751" d="M32,10c-7.732,0-14,6.268-14,14s6.268,14,14,14s14-6.268,14-14S39.732,10,32,10z M32,36 c-6.627,0-12-5.373-12-12s5.373-12,12-12s12,5.373,12,12S38.627,36,32,36z"></path> </g> </g></svg>
                                     </div>
                                    </div>
@@ -197,7 +197,7 @@
 
                                     <div class="flex my-auto mx-1">
                                         <div class="flex ">
-                                            <p class="my-auto text-gray-500">
+                                            <p class="my-auto dark:text-[white] text-gray-500">
                                                 {{ $t('areaUnit') }}
                                             </p>
                                             <small class="whitespace-nowrap my-auto text-gray-800 px-2">
@@ -220,7 +220,7 @@
                                     </div>
                                 </div>
                                 <div class=" ltr:text-end rtl:text-start w-full my-4 ">
-                                    <button class="bg-dark-brown text-white mx-4 rounded-2xl w-36 h-8"
+                                    <button class="bg-dark-brown  text-white mx-4 rounded-2xl w-36 h-8"
                                             @click.prevent="$router.push({ name: 'Project', params:{ id:project.id } })">
                                         <small class="">
                                             <MagnifyingGlassIcon

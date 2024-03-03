@@ -1,7 +1,7 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="company-manager py-36 bg-background-section">
-        <h1 class="text-center font-bold mb-12 text-3xl">{{ $t('boradOfDirectors') }}</h1>
+    <section class="company-manager py-36 bg-background-section dark:bg-black pt-40">
+        <h1 class="text-center font-bold mb-12 text-3xl dark:text-[white]">{{ $t('boradOfDirectors') }}</h1>
         <div class="container mx-auto flex justify-center">
             <div
                 class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20" id="header-strucre"
@@ -12,7 +12,7 @@
                         class="max-w-sm  rounded-xl p-2 strucre animate__animated animate__fadeInUp"
                     >
                         <div
-                            class="bg-white border border-light-brown rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
+                            class="bg-white border border-light-brown rounded-xl shadow  dark:border-gray-700 pb-12 pt-7 h-full"
                         >
                             <div class="flex justify-center px-4 pt-4">
                                 <div class="flex flex-col items-center pb-10">

@@ -67,6 +67,12 @@ module.exports = {
         container: {
             padding: '2rem',
         },
+        variants: {
+            extend: {
+              backgroundColor: ['dark'],
+              textColor: ['dark'],
+            },
+          },
 
     },
 

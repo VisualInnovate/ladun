@@ -1,6 +1,6 @@
 <template>
     <dropdown
-        class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
+        class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top dark:text-[white] rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
         <template #trigger>
                     <span class="w-full inline-flex justify-between px-4 text-white">
                         <span>{{ $t('choose') }}</span>
@@ -28,7 +28,7 @@
 
         </list-group>
     </dropdown>
-    <Modal   v-if="isShowModal" @close="closeModal">
+    <Modal class="dark:bg-black"  v-if="isShowModal" @close="closeModal">
         <template #header>
             <div class="flex items-center  text-lg">
                 {{$t('shareYourInterests')}}
@@ -41,7 +41,7 @@
                     <input type=hidden name="retURL" value="http://google.com">
                     <input type=hidden name="00N3G00000IEQrA" :value="data">
                     <input type=hidden name="00N3G00000FV0J9" value="">
-                    
+
                     <Input size="md" maxlength="40" name="first_name" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
                     <Input size="md"  maxlength="80" name="last_name" :placeholder="$t('LastName')" :label="$t('LastName')"/>
 
@@ -50,9 +50,9 @@
                     <label class="my-auto">{{ $t('Buy_Rent') }}</label>
                      <select
                            :aria-label="saccsa"       class="lg:w-full  mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
-                                    
+
                                 >
-                               
+
 
                                 <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
                                 <option value="Eastern">{{$t('Buy_Middle_Region')}} </option>
@@ -62,9 +62,9 @@
                                 <option value="Eastern">{{$t('Rent_Middle_Region')}} </option>
                                 <option value="Eastern">{{$t('Rent_Western_Region')}} </option>
                                 <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
-                                   
+
                      </select>
-                     
+
 
                     <input type="submit" class="text-white bg-[#AF9744] hover:bg-[#764522] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" :value="$t('submit')">
                 </form>

@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="company-info py-24 bg-background-section pt-40">
+    <section class="company-info py-24 bg-background-section dark:bg-black pt-40">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-10">
                 <div class="img-company-info flex justify-center  "
@@ -16,12 +16,12 @@
                      :class="($i18n.locale=='en' )  ?  'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <h1
 
-                        class="font-bold text-3xl mb-4 text-center md:text-start"
+                        class="font-bold text-3xl mb-4 text-center dark:text-[white] md:text-start"
                         v-if="about.title"
                     >
                         {{ about.title[$i18n.locale] }}
                     </h1>
-                    <p class="mb-4 text-xl   text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	" v-if="about.content"
+                    <p class="mb-4 text-xl dark:text-[white]  text-justify lg:rtl:pl-16 lg:ltr:pr-16 leading-7	" v-if="about.content"
                        v-html="about.content[$i18n.locale]">
 
                     </p>
