@@ -1,9 +1,9 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="media-center py-28 bg-background-section" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
-        {{$t('mediaCenter')}} 
-        <div style="color:rgb(255, 255, 255); padding-top:20px; font-size:16px" > 
-            <router-link :to="{ name: 'Home' }"> <a href="">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
+    <section class="media-center py-28 bg-background-section dark:bg-black dark:text-[white]" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
+        {{$t('mediaCenter')}}
+        <div style="color:rgb(255, 255, 255); padding-top:20px; font-size:16px" >
+            <router-link :to="{ name: 'Home' }"> <a href="" class="dark:text-[white]">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
         </div>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
             <template>
@@ -11,30 +11,30 @@
             </template>
         </div>
     </section>
-    
 
 
-    <section class="media-center py-28 bg-background-section">
+
+    <section class="media-center py-28 bg-background-section dark:bg-black">
         <div class="container mx-auto">
-            <h1 class="text-4xl text-center  mb-10">{{ $t('mediaCenter') }}</h1>
+            <h1 class="text-4xl text-center  mb-10 dark:text-[white]">{{ $t('mediaCenter') }}</h1>
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
                 <template v-if="media.length">
-                    <card-link v-for="item in media" :key="item.id" >
+                    <card-link v-for="item in media" :key="item.id" class=" dark:[&>div]:bg-background-section [&>div]:rounded-lg" >
                         <!--                    <template #date>{{item.creted_at}}</template>-->
-                        
+
                         <template #date>
                             <p class="text-xl">
-                                <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="" style="width:100%">
+                                <img class="md:h-full object-cover img-media-center  lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="" style="width:100%">
                             </p>
                         </template>
-                        
+
                         <template #text>
 
                             <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
                             <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-cecter">{{ $t('readMore') }}</button></div>
                         </template>
                     <template #head>
-                            
+
                         <p>{{ formatDate(item.created_at) }}</p>
                         </template>
                     </card-link>

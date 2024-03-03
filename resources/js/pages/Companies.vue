@@ -14,13 +14,13 @@
     </div>
 
 
-    <section class="company py-28 bg-background-section">
+    <section class="company py-28 bg-background-section dark:bg-black">
         <div class=" px-[5%] mx-auto ">
             <div class="grid lg:grid-cols-4 gap-3 w-full " >
-                <div  v-for=" company in companies" :key="company.id"
+                <div  v-for=" company in companies" :key="company.id" style="border: 1px solid #AE9643;"
 
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class="relative rounded-2xl border border-light-brown overflow-hidden  border-gray-border-light  content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
+                     class="relative rounded-2xl border border-light-brown overflow-hidden    content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[70%]  m-auto">
 
                         <img style="transform: scale(1.05);" class="img-companies h-full  rounded-full border-2 mb-4 m-auto"  :src="company.media[0]?.original_url"

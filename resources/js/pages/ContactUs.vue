@@ -129,18 +129,18 @@
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInRight':'animate__animated animate__fadeInLeft'">
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/location.png"/>
-                        <a  href="https://maps.app.goo.gl/8p13Sqxo4kJMFtfy9" target="_blank" class="underline my-auto">{{ $t('location') }}</a>
+                        <a  href="https://maps.app.goo.gl/8p13Sqxo4kJMFtfy9" target="_blank" class="underline my-auto dark:text-[white]">{{ $t('location') }}</a>
                     </div>
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/phone.png"/>
                         <div class="flex flex-col">
                             <div class="flex flex-col md:flex md:flex-row my-auto gap-x-2">
 
-                                <p class="font-bold inline">{{ $t('phone') }}</p> <a  class="underline" target="_blank" :href="'tel:' + contact[0]?.phone ">{{ contact[0]?.phone }}</a>
+                                <p class="font-bold inline dark:text-[white]">{{ $t('phone') }}</p> <a  class="underline dark:text-[white]" target="_blank" :href="'tel:' + contact[0]?.phone ">{{ contact[0]?.phone }}</a>
                                 <!-- <p class="font-bold inline">{{ $t('ext') }}</p><a class="underline"  :href="'tel:'+contact[0]?.convert" target="_blank"> : {{ contact[0]?.convert }}</a> -->
                             </div>
                             <div class="my-auto">
-                                <p class="font-bold inline">{{ $t('fax') }}</p><a class="underline" :href="'tel:'+ contact[0]?.fax "> : {{ contact[0]?.fax }}</a>
+                                <p class="font-bold inline dark:text-[white]">{{ $t('fax') }}</p><a class="underline dark:text-[white]" :href="'tel:'+ contact[0]?.fax "> : {{ contact[0]?.fax }}</a>
                             </div>
                         </div>
 
@@ -148,7 +148,7 @@
                     <div class="flex flex-row justify-start gap-x-5">
                         <img class="h-16" src="../../img/contact_us/icons/email.png"/>
                         <div class="my-auto flex flex-row">
-                            <p class="font-bold">{{ $t('email') }}</p><a :href="contact[0]?.email" class="underline "> : {{ contact[0]?.email }}</a>
+                            <p class="font-bold dark:text-[white]">{{ $t('email') }}</p><a :href="contact[0]?.email" class="underline dark:text-[white]"> : {{ contact[0]?.email }}</a>
                         </div>
 
                     </div>
