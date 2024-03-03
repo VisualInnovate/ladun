@@ -1,25 +1,23 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <div class="pt-22">
+    <div class="pt-22 dark:text-white dark:bg-black ">
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
-      
-            <template  #text>{{$t('companyAds')}} 
-                <div style="color:rgb(0, 0, 0); padding-top:20px; font-size:16px" > 
-                    <router-link :to="{ name: 'Home' }"> <a href="">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
-                </div>
+
+            <template  #text>{{$t('companyAds')}}
+               
             </template>
-        
+
         </img-banner>
     </div>
 
 
-    <section class="media-center py-28 bg-background-section">
-        <div class="container mx-auto">
+    <section class="media-center py-28 bg-background-section dark:text-white dark:bg-black">
+        <div class="container mx-auto dark:text-white dark:bg-black">
 
-            <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10">
+            <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10 dark:text-white dark:bg-black">
 
-                <card-link v-for="investor in investors" :key="investor.id" >
+                <card-link v-for="investor in investors" :key="investor.id" class="dark:text-white dark:bg-black" >
 <!--                    <template #date>الخميس 15 مايو 2022</template>-->
                     <template #head>{{investor.title[$i18n.locale]}}</template>
                     <!--  -->

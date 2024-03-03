@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="media-center py-28 bg-background-section dark:bg-black dark:text-[white]" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
+    <section class="media-center dark py-28 bg-background-section dark:bg-black dark:text-[white]" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
         {{$t('mediaCenter')}}
         <div style="color:rgb(255, 255, 255); padding-top:20px; font-size:16px" >
             <router-link :to="{ name: 'Home' }"> <a href="" class="dark:text-[white]">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>

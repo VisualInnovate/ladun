@@ -2,7 +2,7 @@
     <Navbar class="bg-black fixed z-50 w-full "/>
 
     <div class="container mx-auto ">
-        <h1 class="pt-36 px-5 mx-5 mb-5 font-bold">
+        <h1 class="pt-36 px-5 mx-5 mb-5 font-bold  dark:text-white dark:bg-black">
 
             {{ $t("contactUs") }}
         </h1>

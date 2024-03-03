@@ -1,11 +1,11 @@
 <template>
 
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div class="pt-[4rem]">
+    <div class="pt-[4rem]  dark:text-white dark:bg-black" >
         <div class="relative img-banner-slot">
             <div class=" overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"></div>
 
-            <img class="w-full " style="height: 450px;"   :src="banner">
+            <img class="w-full " style="height: 450px; "   :src="banner">
             <div class="z-40 text-white text-3xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2">
                 <img class="w-[30%] md:w-[45%] lg:w-[53%] mx-auto md:mb-3 "
                      src="../../img/ladun-logo-banner.png">
@@ -14,10 +14,10 @@
     </div>
 
 
-    <section class="company py-28 bg-background-section dark:bg-black">
+    <section class="company py-28 bg-background-section dark:bg-black ">
         <div class=" px-[5%] mx-auto ">
-            <div class="grid lg:grid-cols-4 gap-3 w-full " >
-                <div  v-for=" company in companies" :key="company.id" style="border: 1px solid #AE9643;"
+            <div class="grid lg:grid-cols-4 gap-3 w-full  " >
+                <div  v-for=" company in companies" :key="company.id" style="border: 1px solid #AE9643; "
 
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
                      class="relative rounded-2xl border border-light-brown overflow-hidden    content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">

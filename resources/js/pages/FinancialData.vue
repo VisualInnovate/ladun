@@ -6,7 +6,7 @@
 
     </img-banner>
 
-    <section class="media-center py-28 bg-background-section pt-32">
+    <section class="media-center py-28 bg-background-section pt-32 dark:text-white dark:bg-black">
         <div class="container mx-auto">
 
             <!--                        {{financials}}-->
