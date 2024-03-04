@@ -5,7 +5,7 @@
             <img class="w-full" style="height: 300px;"  :src="banner">
 
             <template  #text>{{$t('companyAds')}}
-               
+
             </template>
 
         </img-banner>
@@ -15,9 +15,9 @@
     <section class="media-center py-28 bg-background-section dark:text-white dark:bg-black">
         <div class="container mx-auto dark:text-white dark:bg-black">
 
-            <div class="grid grid-cols-1 gap-12  lg:grid-cols-2 lg:gap-10 dark:text-white dark:bg-black">
+            <div class="grid grid-cols-1 gap-12  lg:grid-cols-4 lg:gap-10 dark:text-white dark:bg-black">
 
-                <card-link v-for="investor in investors" :key="investor.id" class="dark:text-white dark:bg-black" >
+                <card-link v-for="investor in investors" :key="investor.id" class="dark:text-black dark:bg-white" >
 <!--                    <template #date>الخميس 15 مايو 2022</template>-->
                     <template #head>{{investor.title[$i18n.locale]}}</template>
                     <!--  -->
