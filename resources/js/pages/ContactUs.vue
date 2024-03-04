@@ -13,13 +13,13 @@
 
             <div class="flex-auto  ">
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                    <div class="bg-[#57565B] rounded-xl h-[100%] lg:h-[90%]">
+                    <div class="bg-[#57565B] dark:bg-white rounded-xl h-[100%] lg:h-[90%]">
                         <div class="text-dark-brown py-10 rounded-2xl text-lg px-5 text-sm">
                             {{ $t('beInTouch') }}
                         </div>
 
 
-                        <form class="grid gap-y-12 mx-5 pb-12"
+                        <form class="grid gap-y-12 mx-5 pb-12 "
 
                         >
                             <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5">

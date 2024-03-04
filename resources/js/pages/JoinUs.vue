@@ -11,7 +11,7 @@
             class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14"
         >
             <div class="lg:w-[95%]">
-                <div class="bg-[#57565B] rounded-xl h-full mb-14 pt-12">
+                <div class="bg-[#57565B] rounded-xl h-full mb-14 pt-12 dark:bg-white">
                     <div class="text-dark-brown py-2  roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>

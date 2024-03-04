@@ -19,7 +19,7 @@
                                 <div
                                     class=" h-16 w-[80%] flex items-center px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6]  text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6]  text-center my-auto truncate	dark:text-black">
                                             {{ $t('header_finncial') }}
                                         </div>
 
@@ -39,14 +39,14 @@
                                 <div class="card grid grid-cols-1 lg:grid-cols-3 gap-3 px-10  ">
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.financial_file"
-                                       class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-1">
+                                       class="animate__animated animate__bounceIn dark:bg-white  dark:text-black  w-full h-60 bg-white border border-gray-200  rounded-lg shadow  dark:border-gray-700 p-1">
                                         <div class="flex flex-col items-center ">
                                             <div
                                                 class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-white">
+                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-black">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
@@ -72,7 +72,7 @@
                                 <div
                                     class=" h-16 w-[80%]  items-center px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6] w-[80%] text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6] w-[80%] text-center my-auto truncate	dark:text-black">
                                             {{ $t('header_finncial') }}
                                         </div>
 
@@ -90,14 +90,14 @@
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.financial_file"
 
-                                       class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-10">
+                                       class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-white dark:border-gray-700 p-10">
                                         <div class="space-y-4 flex flex-col items-center ">
                                             <div
                                                 class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-white">
+                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-gray-900">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
@@ -125,7 +125,7 @@
                                 <div
                                     class=" h-16 w-[80%] text-right mt-2 flex items-start px-4 text-xl  justify-between">
                                     <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
-                                        <div class="bg-[#E6E6E6] w-full text-center my-auto truncate	">
+                                        <div class="bg-[#E6E6E6] w-full text-center my-auto truncate	dark:text-black">
                                             {{ $t('reports') }}
                                         </div>
                                     </div>
@@ -144,14 +144,14 @@
 
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.year_file"
-                                       :class="{ 'invisible': item.year_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-1">
+                                       :class="{ 'invisible': item.year_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-white dark:border-gray-700 p-1">
                                         <div class="flex flex-col items-center ">
                                             <div
                                                 class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-white">
+                                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-gray-900">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
