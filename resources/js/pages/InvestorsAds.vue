@@ -18,11 +18,13 @@
             <div class="grid grid-cols-1 gap-12  lg:grid-cols-4 lg:gap-10 dark:text-white dark:bg-black">
 
                 <card-link v-for="investor in investors" :key="investor.id" class="dark:text-black dark:bg-white" >
-                    <template #img>
-                        <div> <img
+
+
+                        <template #date>
+                            <div> <img
                         class="object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
                         :src="investor.media[0].original_url" alt=""></div>
-                    </template>
+                        </template>
 
                     <template #head>
 
