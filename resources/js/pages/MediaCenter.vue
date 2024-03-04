@@ -24,7 +24,7 @@
                         <!-- :src="getpic(item)" -->
                         <template #date>
                             <p class="text-xl">
-                                <img class="rounded-t-lg" :src="getpic(item)" alt="" style="width:100%">
+                                <img class="rounded-t-lg" :src="getpic(item)" alt="" style="width:218px; height: 210px;">
                             </p>
                         </template>
 
