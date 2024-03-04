@@ -38,8 +38,8 @@
         <hr class="border-gray-300 mx-6 md:mx-12" />
 
         <div class="mx-6 md:mx-12 py-5 flex justify-center space-x-4">
-            <small class="flex after:content-[''] after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('termsConditions') }}</small>
-            <small class="flex after:content-[''] after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small>
+            <small  @click="download" class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('termsConditions') }}</small>
+            <small @click="downloadFile" class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small>
             <small class="dark:text-[white]">{{ $t('copyRights') }}</small>
         </div>
     </div>
@@ -56,6 +56,52 @@ import linkedinIcon from "../../img/light_footer_linkedin.svg";
 import youtubeIcon from "../../img/light_footer_youtube.svg";
 import whatsappIcon from "../../img/light_footer_whatsapp.svg";
 
+
+const downloadFile = () => {
+    if(localStorage.appLang == 'ar'){
+        const filePath = '../../سياسة الخصوصية باللغة العربيه.pdf';
+      console.log(localStorage.appLang)
+      const link = document.createElement('a');
+
+      link.href = "https://ladun.sa/"+ filePath;
+      link.download = ' سياسة الخصوصية باللغة العربيه.pdf';
+
+      link.click();
+    }
+    if(localStorage.appLang == 'en'){
+        const filePath = '../../سياسة الخصوصية باللغة الانجليزية.pdf';
+      console.log(localStorage.appLang)
+      const link = document.createElement('a');
+
+      link.href = "https://ladun.sa/"+ filePath;
+      link.download = 'سياسة الخصوصية باللغة الانجليزية.pdf';
+
+      link.click();
+    }
+    };
+
+    const download = () => {
+    if(localStorage.appLang == 'ar'){
+        const filePath = '../../الشروط والأحكام للموقع والمنصات .pdf';
+      console.log(localStorage.appLang)
+      const link = document.createElement('a');
+
+      link.href = "https://ladun.sa/"+ filePath;
+      link.download = ' الشروط والأحكام للموقع والمنصات .pdf';
+
+      link.click();
+    }
+    if(localStorage.appLang == 'en'){
+        const filePath = '../../الشروط والاحكام باللغة الانجليزية.pdf';
+      console.log(localStorage.appLang)
+      const link = document.createElement('a');
+
+      link.href = "https://ladun.sa/"+ filePath;
+      link.download = 'الشروط والاحكام باللغة الانجليزية.pdf';
+
+      link.click();
+    }
+    };
 const icons = [
     {
         image:facebookIcon ,
