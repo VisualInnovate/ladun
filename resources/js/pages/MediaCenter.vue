@@ -24,13 +24,13 @@
                         <!-- :src="getpic(item)" -->
                         <template #date>
                             <p class="text-xl">
-                                <img class="rounded-t-lg" :src="getpic(item)" alt="" style="width:218px; height: 210px;">
+                                <img class="rounded-t-lg" :src="getpic(item)" alt="" style="width:250px; height: 210px;">
                             </p>
                         </template>
 
                         <template #text>
 
-                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
+                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'" class="mb-3 font-normal text-gray-700 dark:text-gray-400"></div>
                             <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-cecter">{{ $t('readMore') }}</button></div>
                         </template>
                     <template #head>
