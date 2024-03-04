@@ -11,22 +11,22 @@
     "file": "assets/Navbar-5f295404.css",
     "src": "Navbar.css"
   },
-  "_CardLink-f6d9c637.js": {
-    "file": "assets/CardLink-f6d9c637.js",
+  "_CardLink-0339bdcf.js": {
+    "file": "assets/CardLink-0339bdcf.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_ImgBanner-23d9041c.js": {
+  "_ImgBanner-19617739.js": {
     "css": [
       "assets/ImgBanner-71f45506.css"
     ],
-    "file": "assets/ImgBanner-23d9041c.js",
+    "file": "assets/ImgBanner-19617739.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_LightFooter-23a1ac12.js": {
+  "_LightFooter-d8184a91.js": {
     "assets": [
       "assets/lolo1-24b7331b.png",
       "assets/light_footer_facebook-aa51b9d1.svg",
@@ -39,12 +39,12 @@
     "css": [
       "assets/LightFooter-ae2c38f2.css"
     ],
-    "file": "assets/LightFooter-23a1ac12.js",
+    "file": "assets/LightFooter-d8184a91.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_Navbar-a93d0400.js": {
+  "_Navbar-b443be2e.js": {
     "assets": [
       "assets/logo-83269753.png",
       "assets/logo-0a387a5b.svg"
@@ -52,31 +52,31 @@
     "css": [
       "assets/Navbar-5f295404.css"
     ],
-    "file": "assets/Navbar-a93d0400.js",
+    "file": "assets/Navbar-b443be2e.js",
     "imports": [
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ]
   },
-  "_carousel.es-ea180bdf.js": {
+  "_carousel.es-d9272f6f.js": {
     "css": [
       "assets/carousel-3df69408.css"
     ],
-    "file": "assets/carousel.es-ea180bdf.js",
+    "file": "assets/carousel.es-d9272f6f.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_flowbite-vue-8b4f2790.js": {
-    "file": "assets/flowbite-vue-8b4f2790.js",
+  "_flowbite-vue-6ab7cd57.js": {
+    "file": "assets/flowbite-vue-6ab7cd57.js",
     "imports": [
       "resources/js/main.js"
     ]
   },
-  "_index-c98d2e23.js": {
-    "file": "assets/index-c98d2e23.js",
+  "_index-2dbcd640.js": {
+    "file": "assets/index-2dbcd640.js",
     "imports": [
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ]
   },
   "_ladun-logo-banner-c65359a1.js": {
@@ -290,7 +290,7 @@
       "resources/js/pages/UploadExcel.vue",
       "resources/js/pages/Page.vue"
     ],
-    "file": "assets/main-1e5d0168.js",
+    "file": "assets/main-ee5d489f.js",
     "isEntry": true,
     "src": "resources/js/main.js"
   },
@@ -306,26 +306,26 @@
     "assets": [
       "assets/play-button-682e1928.png"
     ],
-    "file": "assets/AboutPage-a55ffd51.js",
+    "file": "assets/AboutPage-05cea338.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_index-c98d2e23.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
+      "_index-2dbcd640.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/AboutPage.vue"
   },
   "resources/js/pages/Companies.vue": {
-    "file": "assets/Companies-20c17b3e.js",
+    "file": "assets/Companies-61a7f282.js",
     "imports": [
-      "_ImgBanner-23d9041c.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_ImgBanner-19617739.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "_ladun-logo-banner-c65359a1.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Companies.vue"
@@ -343,11 +343,11 @@
     "css": [
       "assets/ContactUs-b3258222.css"
     ],
-    "file": "assets/ContactUs-a65f6524.js",
+    "file": "assets/ContactUs-2525761b.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -357,13 +357,13 @@
     "assets": [
       "assets/financial-logo-770a3116.png"
     ],
-    "file": "assets/FinancialData-1a182d63.js",
+    "file": "assets/FinancialData-118ebfde.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_ImgBanner-23d9041c.js",
+      "_Navbar-b443be2e.js",
+      "_ImgBanner-19617739.js",
       "resources/js/main.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/FinancialData.vue"
@@ -380,14 +380,14 @@
     "css": [
       "assets/Home-926648dd.css"
     ],
-    "file": "assets/Home-2cde5f1f.js",
+    "file": "assets/Home-21f8d4e1.js",
     "imports": [
       "resources/js/main.js",
       "_rrr-2b801080.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_carousel.es-ea180bdf.js"
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
+      "_carousel.es-d9272f6f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Home.vue"
@@ -400,46 +400,46 @@
     "css": [
       "assets/InvestorRelation-53edf2c9.css"
     ],
-    "file": "assets/InvestorRelation-f57812ff.js",
+    "file": "assets/InvestorRelation-5efec4d6.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/InvestorRelation.vue"
   },
   "resources/js/pages/InvestorsAds.vue": {
-    "file": "assets/InvestorsAds-01f02e65.js",
+    "file": "assets/InvestorsAds-9025ac05.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_ImgBanner-23d9041c.js",
-      "_CardLink-f6d9c637.js",
-      "_LightFooter-23a1ac12.js",
+      "_Navbar-b443be2e.js",
+      "_ImgBanner-19617739.js",
+      "_CardLink-0339bdcf.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/InvestorsAds.vue"
   },
   "resources/js/pages/JoinUs.vue": {
-    "file": "assets/JoinUs-aab97bef.js",
+    "file": "assets/JoinUs-3a32d69e.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/JoinUs.vue"
   },
   "resources/js/pages/Latest.vue": {
-    "file": "assets/Latest-a643a9fe.js",
+    "file": "assets/Latest-034c9153.js",
     "imports": [
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_index-c98d2e23.js"
+      "_flowbite-vue-6ab7cd57.js",
+      "_index-2dbcd640.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Latest.vue"
@@ -455,12 +455,12 @@
     "css": [
       "assets/MediaCenter-cbb959e4.css"
     ],
-    "file": "assets/MediaCenter-c890198c.js",
+    "file": "assets/MediaCenter-3abdf0d0.js",
     "imports": [
-      "_CardLink-f6d9c637.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_CardLink-0339bdcf.js",
+      "_flowbite-vue-6ab7cd57.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -472,34 +472,34 @@
       "assets/real-state-management-banner-c1fa3f23.png",
       "assets/real-managent-utility-section-6c40516b.png"
     ],
-    "file": "assets/MediaCenterDetails-615ab644.js",
+    "file": "assets/MediaCenterDetails-ec358877.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/MediaCenterDetails.vue"
   },
   "resources/js/pages/Page.vue": {
-    "file": "assets/Page-c417959f.js",
+    "file": "assets/Page-4e2fb322.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Page.vue"
   },
   "resources/js/pages/Phase.vue": {
-    "file": "assets/Phase-02f5b4b6.js",
+    "file": "assets/Phase-022e6714.js",
     "imports": [
-      "_LightFooter-23a1ac12.js",
-      "_Navbar-a93d0400.js",
+      "_LightFooter-d8184a91.js",
+      "_Navbar-b443be2e.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Phase.vue"
@@ -518,25 +518,25 @@
     "css": [
       "assets/Project-d3f5c8f9.css"
     ],
-    "file": "assets/Project-ed969cd9.js",
+    "file": "assets/Project-a2347d66.js",
     "imports": [
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_index-c98d2e23.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_carousel.es-ea180bdf.js"
+      "_flowbite-vue-6ab7cd57.js",
+      "_index-2dbcd640.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_carousel.es-d9272f6f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/Project.vue"
   },
   "resources/js/pages/Projects.vue": {
-    "file": "assets/Projects-83a3a60f.js",
+    "file": "assets/Projects-4558d904.js",
     "imports": [
       "_rrr-2b801080.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -550,18 +550,18 @@
       "assets/dark_footer_whatsapp-80ed9c56.svg",
       "assets/dark_footer_facebook-a39dc3d7.svg"
     ],
-    "file": "assets/ProjectsNew-d7a7baa0.js",
+    "file": "assets/ProjectsNew-4d71d288.js",
     "imports": [
       "_locationIcon-3842aafb.js",
-      "_Navbar-a93d0400.js",
+      "_Navbar-b443be2e.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/ProjectsNew.vue"
   },
   "resources/js/pages/UploadExcel.vue": {
-    "file": "assets/UploadExcel-1db09b6f.js",
+    "file": "assets/UploadExcel-e8628152.js",
     "imports": [
       "resources/js/main.js"
     ],
@@ -569,24 +569,24 @@
     "src": "resources/js/pages/UploadExcel.vue"
   },
   "resources/js/pages/contactWithInvestorsRelations.vue": {
-    "file": "assets/contactWithInvestorsRelations-bd2a7cf7.js",
+    "file": "assets/contactWithInvestorsRelations-f2890863.js",
     "imports": [
-      "_LightFooter-23a1ac12.js",
-      "_Navbar-a93d0400.js",
-      "_ImgBanner-23d9041c.js",
+      "_LightFooter-d8184a91.js",
+      "_Navbar-b443be2e.js",
+      "_ImgBanner-19617739.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/contactWithInvestorsRelations.vue"
   },
   "resources/js/pages/highboard.vue": {
-    "file": "assets/highboard-ae691199.js",
+    "file": "assets/highboard-9eaf8af1.js",
     "imports": [
       "resources/js/main.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/highboard.vue"
@@ -599,12 +599,12 @@
     "css": [
       "assets/questions-b7e0137d.css"
     ],
-    "file": "assets/questions-b2aeb9de.js",
+    "file": "assets/questions-99695293.js",
     "imports": [
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js",
-      "_flowbite-vue-8b4f2790.js"
+      "_flowbite-vue-6ab7cd57.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/questions.vue"
@@ -613,13 +613,13 @@
     "assets": [
       "assets/real-state-management-banner-c1fa3f23.png"
     ],
-    "file": "assets/search-d441c04d.js",
+    "file": "assets/search-e8b60348.js",
     "imports": [
       "_locationIcon-3842aafb.js",
-      "_CardLink-f6d9c637.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_Navbar-a93d0400.js",
-      "_LightFooter-23a1ac12.js",
+      "_CardLink-0339bdcf.js",
+      "_flowbite-vue-6ab7cd57.js",
+      "_Navbar-b443be2e.js",
+      "_LightFooter-d8184a91.js",
       "resources/js/main.js"
     ],
     "isDynamicEntry": true,
@@ -630,12 +630,12 @@
       "assets/companies-banner-2f481594.png",
       "assets/projects_3-85fe373b.png"
     ],
-    "file": "assets/unities-bcad1f9c.js",
+    "file": "assets/unities-2bb67940.js",
     "imports": [
-      "_carousel.es-ea180bdf.js",
-      "_Navbar-a93d0400.js",
-      "_flowbite-vue-8b4f2790.js",
-      "_index-c98d2e23.js",
+      "_carousel.es-d9272f6f.js",
+      "_Navbar-b443be2e.js",
+      "_flowbite-vue-6ab7cd57.js",
+      "_index-2dbcd640.js",
       "_ladun-logo-banner-c65359a1.js",
       "resources/js/main.js"
     ],
