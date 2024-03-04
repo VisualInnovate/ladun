@@ -24,7 +24,7 @@
                         <!-- :src="getpic(item)" -->
                         <template #date>
                             <p class="text-xl">
-                                <img class="rounded-t-lg" src="https://www.ladun.sa//storage/264/7rnQag3zlGszCViRRaRPPs5pbmPjqT-metaZ3ZQU2tVS1RZQndpcWVvM2NzSTYuanBlZw==-.jpg" alt="" style="width:100%">
+                                <img class="rounded-t-lg" :src="getpic(item)" alt="" style="width:100%">
                             </p>
                         </template>
 
