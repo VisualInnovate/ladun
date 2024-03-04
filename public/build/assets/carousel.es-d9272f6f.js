@@ -1,12 +1,12 @@
-<<<<<<<< Updated upstream:public/build/assets/carousel.es-d61d3f26.js
-import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-ff77f37e.js";/**
-========
+<<<<<<< HEAD:public/build/assets/carousel.es-ea180bdf.js
 <<<<<<<< HEAD:public/build/assets/carousel.es-9111eaf2.js
 import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-5c61c48d.js";/**
 ========
 import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-1e5d0168.js";/**
 >>>>>>>> d3fc8fef8196535a9e5af1de517ce3a379c10f18:public/build/assets/carousel.es-ea180bdf.js
->>>>>>>> Stashed changes:public/build/assets/carousel.es-9111eaf2.js
+=======
+import{C as te,z as m,g as u,y as p,I as L,H as y,D as be,K as xe,G as ye,B as Q,E as J,x as fe}from"./main-ee5d489f.js";/**
+>>>>>>> 5222decf2fd1b719b5776cb8772fca51a02c25e5:public/build/assets/carousel.es-d9272f6f.js
  * Vue 3 Carousel 0.2.12
  * (c) 2023
  * @license MIT
