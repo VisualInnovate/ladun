@@ -21,7 +21,7 @@
                         <template #date>
                             <div> <img
                         class="object-cover img-media-center rounded-t-lg h-96 md:h-auto top-0 w-full md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
-                        alt="" src="../new.jpg" ></div>
+                        alt="" :src="investor.media[0].original_url"  ></div>
                         </template>
                         <!-- :src="investor.media[0].original_url" -->
                     <template #head>
