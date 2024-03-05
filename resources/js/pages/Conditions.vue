@@ -41,7 +41,7 @@
             <h3 class="py-2 font-bold">{{ $t('Consent') }}</h3>
             <p>{{ $t('Consent_text') }}</p>
         </div>
-        <div class="pb-8">
+        <div class="pb-16">
             <h3 class="py-2 font-bold">{{ $t('Disclaimer') }}</h3>
             <p>{{ $t('Disclaimer_text') }}</p>
         </div>
