@@ -38,8 +38,8 @@
         <hr class="border-gray-300 mx-6 md:mx-12" />
 
         <div class="mx-6 md:mx-12 py-5 flex justify-center space-x-4">
-            <small  @click="download" class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('termsConditions') }}</small>
-            <small @click="downloadFile" class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small>
+            <router-link :to="{ name: 'Conditions' }"><small  class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('termsConditions') }}</small></router-link>
+            <small  class="flex after:content-[''] cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:bg-dark-brown after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small>
             <small class="dark:text-[white]">{{ $t('copyRights') }}</small>
         </div>
     </div>

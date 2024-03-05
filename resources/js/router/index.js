@@ -37,6 +37,12 @@ const routes = [
         name: 'Contact Us',
         meta:{title:"Contact Us"}
     },
+    {
+        path: "/Conditions",
+        component: () => import("@/pages/Conditions.vue"),
+        name: 'Conditions',
+        meta:{title:"Conditions"}
+    },
 
     {
         path: "/media-center",
