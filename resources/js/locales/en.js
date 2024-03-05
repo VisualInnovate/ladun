@@ -5,13 +5,7 @@ export default {
     salutation:"salutation",
     Buy_Rent:"Buy-Rent",
     Buy_Western_Region:"Buy-Western Region",
-    Buy_Eastern_Region:"Buy-Middle Region",
-    Buy_Middle_Region:"Buy-Western Region",
-    Buy_Eastern_Region:"Buy-Eastern Region",
-    Rent_Eastern_Region:"Rent-Eastern Region",
-    Rent_Middle_Region:"Rent-Middle Region",
-    Rent_Western_Region:"Rent-Western Region",
-    Rent_Eastern_Region:"Rent-Eastern Region",
+
     project360: "project 360",
     aboutUs: "About us",
     companies: "Subsidiaries",
@@ -175,4 +169,41 @@ export default {
 
     rain: "Rain",
     drainage: "drainage",
+
+    Privacy_Statement: "PrivacyStatement",
+    Privacy_Statement_text: "This Privacy Statement describes how Ladun Investment Company(“LADUN”, “we”, “our”, “us”) a company established under the laws of the Kingdom of Saudi Arabia, with its registered office address at LADUN Group, Sultan Center – Al Amir Sultan Ibn Abdul Aziz st., North Mathar Dist., Building No. 2751, Unit No. 1, Additional No. 6769, Zip Code 12312, Riyadh, Kingdom of Saudi Arabia ,processes, collects, uses, treats, and protects personal data (the “Data”) when you visit our website and other platforms and applications (the “Platforms”).",
+
+
+    Data_we_collect_text: "LADUN will collect and receive information when you send us an enquiry about our offerings, visit our Platforms or through other interactions with LADUN. We process, collect, or use the Data only as reasonably necessary to ensure the provision of the best possible services to our users.\n" +
+        "\n" +
+        "Such Data may include (and not limited to) name, ID/iqama details, data of birth, email address, phone number, nationality, gender, income details, geographical location, age, reputation, occupation details, financing details, Ministry of Municipal & Rural Affairs & Housing “MOMRAH” beneficiary, government support history, internet protocol (IP) address, device information, device event information such as crashes, system activity, hardware settings, browser type, browser language, the date and time of your request and referral URL, cookies that may uniquely identify your browser or any of your accounts on our Platforms and details of your enquiry.\n",
+    Data_we_collect:"Data we collect",
+
+
+    Reasons_we_collect_your_data_text: "LADUN processes, collects, and uses the Data only as reasonably necessary to ensure the provision of the best services to our users. The purposes for which we collect Data include, but are not limited to, the following: (a) to respond to any queries or expressions of interest made by you; (b) to enter into or to conclude any type of contract and agreement; (c) to request your feedback, and to respond to complaints (d) to keep you informed and provide you with information about LADUN's services and offers; (e) to manage and provide services to you via our Platforms; (f) to facilitate email campaigns carried out by our sales and marketing departments; (g) to facilitate advertisements; (h) to manage your loyalty program membership; (i) to fulfil any maintenance and service requests through our applications; (j) to respond to any queries by third party service providers; (k) to comply with our obligations under the KSA Laws and Regulations (“the Applicable Law”); and (l) to notify you about changes to one or all our Platforms.",
+    Reasons_we_collect_your_data: "Reasons we collect your data",
+
+
+    Disclosure_of_your_Data_text: "LADUN may disclose your Data as required by the Applicable Law to government bodies, law enforcement agencies and other institutions that have the authority to request such information, including for the purposes of the Wafi Program. LADUN may disclose your Data where we have a legitimate interest, including partnering with third party providers.\n" +
+        "\n" +
+        "Under certain circumstances, LADUN may have to transfer your Data outside the country you are residing in. In this event, LADUN will implement appropriate measures to ensure that your Data remains protected and secure while and for as long as it remains under our control. The Data that you submit will be processed and stored on servers and disclosed to recipients based in the KSA. You can choose not to provide certain Data that we request. However, this may affect access and functionality of our Platforms.\n",
+    Disclosure_of_your_Data: "Disclosure of your Data",
+
+
+    Your_rights_text: "Your right as a Data owner may include the following: (a) the right to access your Data; (b) the right to delete your Data; (c) the right to correct, complete and update your Data; (d) the right to be informed about how and why we process your Data; (e) the right to obtain your Data in a format that is readable and clear; (f) the right to withdraw consent at any time; and (g) any other rights granted by the Applicable Law. We will make every reasonable effort to honors your request in line with the Applicable Law.\n" +
+        "\n" +
+        "Contact us: In case of any queries related to this Privacy Statement, or if you want to exercise any of your rights with respect to your Data, you can contact our Data Privacy Office in one of the following ways: email us at info@Ladun.sa or call us at 920011560.\n" +
+        "\n" +
+        "Cookies and tracking technologies.\n" +
+        "In some cases, we may also collect your data using cookies. The term “cookie” refers to a small piece of text which is downloaded and stored on your hard drive designed primarily to improve the services we provide. Cookies will not be stored on your browser without your permission. Cookies only occupy a minimal part of your hard drive. When you access our platforms, we may send a cookie to your device. There are other forms of tracking technologies we may use, that may be used in conjunction with cookies, such as pixel tags. These cookies and other tracking technologies enable us to recognize your device and customize your online experience. It also helps us keep track of the services you view so that we can send you news about those services. We also use cookies to measure traffic patterns to determine which areas of our site have been visited, and to measure transaction patterns in aggregate forms. We use this to research and gain insights on our users’ habits so that we can improve the services we provide while ensuring that we reasonably safeguard our users’ data. If you do not wish to receive cookies, you can set your browser so that your device does not accept them.\n",
+    Your_rights: "Your rights",
+
+    Consent_text: "By using our platforms, you agree to be bound by the terms of this Privacy Policy and to us using your data in the manner described in this Privacy Policy.",
+    Consent: "Consent",
+
+
+    Disclaimer_text: "LADUN is not responsible if the information made available on our platforms is not accurate, complete, or current. The information provided is for general information purposes only. Any reliance you place on such information is strictly at your own risk. You agree that it is your responsibility to monitor changes on our platforms. You understand that, as of today, there are no general and comprehensive rules on personal data protection in the Kingdom of Saudi Arabia. As such, our treatment of your data is based on our reasonable interpretation of rules which we believe are relevant and the market practices of similar market participants. You understand and agree that, to the extent permissible by law, we will classify the data as Level 2 or Level 1, as the case may be, for the purposes of, and pursuant to, the Regulatory Framework on Cloud Computing, dated 14 March 2019 issued by Saudi Arabian Communications and Information Technology Commission. You agree to indemnify, defend and hold harmless LADUN and its affiliates and their officers, directors, employees, contractors, agents, licensors from and against any and all losses, liabilities, expenses, damages and costs, including reasonable attorneys' fees and court costs, arising or resulting from your use of our platforms and any violation of this Privacy Policy and our Terms & Conditions of use. If you cause a technical disruption to any of our platforms or the systems transmitting the platforms to you or others, you agree to be responsible for any and all losses, liabilities, expenses, damages and costs, including reasonable attorneys' fees and court costs, arising or resulting from that disruption.",
+    Disclaimer: "Disclaimer",
+
+
 };
