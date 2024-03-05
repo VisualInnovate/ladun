@@ -43,6 +43,12 @@ const routes = [
         name: 'Conditions',
         meta:{title:"Conditions"}
     },
+    {
+        path: "/Policy",
+        component: () => import("@/pages/Policy.vue"),
+        name: 'Policy',
+        meta:{title:"Policy"}
+    },
 
     {
         path: "/media-center",
