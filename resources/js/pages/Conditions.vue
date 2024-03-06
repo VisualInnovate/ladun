@@ -1,7 +1,7 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <div  class="lg:w-[80%] pt-40 m-auto px-4">
-        <div>
+    <div  class="dark:text-white lg:w-[80%] pt-40 m-auto px-4">
+        <div class="">
             <h3 class="py-2 font-bold">{{ $t('Privacy_Statement') }}</h3>
             <p>{{ $t('Privacy_Statement_text') }}</p>
 
