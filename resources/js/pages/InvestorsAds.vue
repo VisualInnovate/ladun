@@ -20,7 +20,7 @@
                 <card-link v-for="investor in investors" :key="investor.id" class="dark:text-black dark:bg-white [&>div>p>div>h3]:text-[16px]   [&>div>p>]:min-h-[200px] [&>div>h5]:text-[18px]  [&>div>h5]:min-h-[170px]" >
                         <template #date>
                             <div> <img
-                        class="object-cover img-media-center rounded-t-lg h-96 md:h-auto top-0 w-full md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
+                        class="object-cover img-media-center rounded-t-lg h-70 md:h-auto top-0 w-full md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
                         alt="" :src="investor.media[0].original_url" ></div>
                         </template>
                         <!-- :src="investor.media[0].original_url" -->
