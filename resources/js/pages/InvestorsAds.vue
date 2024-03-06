@@ -1,10 +1,10 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full" />
-    <div class="pt-22 dark:text-white dark:bg-black ">
+    <div class="pt-26 dark:text-white dark:bg-black ">
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
 
-            <template  #text>{{$t('companyAds')}}
+            <template   #text>{{$t('companyAds')}}
 
             </template>
 
