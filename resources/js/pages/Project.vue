@@ -615,7 +615,7 @@
             <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
         </div>
     </section>
-<div  v-if=" project.video_url!=null">  
+<div  v-if=" project.video_url!=null">
     <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video || project.video_url" >
         <div class="container lg:w-[75%] mx-auto">
             <div class="flex  mx-auto ">
@@ -1001,7 +1001,8 @@ export default {
             return this.project.phases
         },
         mapLink() {
-            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d906.3230424820638!2d${this.project.location.Latitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
+
+            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d906.32304248205555638!2d${this.project.location.Latitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
 
         }
     },

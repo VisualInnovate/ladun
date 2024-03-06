@@ -68,7 +68,8 @@ export default {
     methods:{
         callbanner(){
             axios.get("/api/banners-pages").then(res => {
-                this.banner= res.data.pages[2].media[2].original_url
+
+                this.banner= res.data.pages[2].media[0].original_url
                 console.log(this.banner)
             })
         },
