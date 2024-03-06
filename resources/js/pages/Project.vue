@@ -414,7 +414,7 @@
                                        animationDuration="2s"
                                        class=" dark:text-white dark:bg-black"
                                        rounded>
-                                       
+
                     </CircleProgressBar>
 
                     <h5 class="pb-2 text-center mt-4 font-light  dark:text-white dark:bg-black" style="color: #213350">{{
@@ -1004,7 +1004,7 @@ export default {
         },
         mapLink() {
 
-            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d906.32304248205555638!2d${this.project.location.Latitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
+            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d${this.project.location.Latitude}!2d${this.project.location.Longitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
 
         }
     },
