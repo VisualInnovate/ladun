@@ -15,7 +15,7 @@
 
 <!--        <div class="">-->
 <!--            <p></p>-->
-<!--        </div>-->
+       </div>
         <div class="py-8">
             <h3 class="py-2 font-bold">{{ $t('Age_Restriction') }}</h3>
             <p>{{ $t('Age_Restriction_text') }}</p>

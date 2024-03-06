@@ -19,6 +19,29 @@
             <h1 class="text-4xl text-center  mb-10 dark:text-[white]">{{ $t('mediaCenter') }}</h1>
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-8">
                 <template v-if="media.length">
+
+
+                        <div v-for="item in media" :key="item.id" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+                                <img class="rounded-t-lg" style="width: 100%; height: 150px;" :src="getpic(item)" alt="" />
+
+                            <div class="p-5">
+                                <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
+
+
+                            <p v-html="item.content[$i18n.locale].slice(0,155)+'...'" style="height:105px ; font-size: 18px;" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></p>
+
+
+                            </div>
+                            <div>
+                                <p  @click="details(item.id)" class="  mx-4 cursor-pointer py-2 my-2 w-[90%]  text-sm font-medium text-center text-white bg-dark-brown rounded-lg hover:bg-dark-brownfocus:ring-4 focus:outline-none focus:bg-dark-brown dark:bg-dark-brown dark:hover:bg-dark-brown dark:focus:bg-dark-brown">
+                                    {{ $t('readMore') }}
+
+                                </p>
+                            </div>
+                        </div>
+
+
                     <card-link v-for="item in media" :key="item.id" class=" dark:[&>div]:bg-background-section [&>div]:rounded-lg" >
                         <!--                    <template #date>{{item.creted_at}}</template>-->
 
