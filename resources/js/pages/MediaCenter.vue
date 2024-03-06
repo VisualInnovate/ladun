@@ -38,7 +38,7 @@
                                 <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
 
 
-                            <p v-html="item?.title[$i18n.locale].slice(0,155)+'...'" style="min-height:135px ; font-size: 18px;" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></p>
+                            <p v-html="convertToString(item?.title[$i18n.locale])" style="min-height:90px ; font-size: 15px;" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></p>
 
 
                             </div>
@@ -85,7 +85,16 @@ const pictures = [
         alt: 'Picture 2',
     },
 ]
+const convertToString=(id)=>{
+    const stringContent = String(id);
+    const words = stringContent.split(/\s+/);
 
+// Extract the first 15 words and join them back into a string
+const truncatedWords = words.slice(0, 15).join(' ');
+
+return truncatedWords;
+
+}
 const formatDate = (dateString) => {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const date = new Date(dateString);
