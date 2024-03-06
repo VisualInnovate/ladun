@@ -23,9 +23,9 @@
 
                         <div v-for="item in media" :key="item.id" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-                                <img class="rounded-t-lg" style="width: 100%; height: 150px;" :src="getpic(item)" alt="" />
+                                <img class="rounded-t-lg" style="width: 100%; height: 200px;" :src="getpic(item)" alt="" />
 
-                            <div class="p-5">
+                            <div class="p-1">
                                 <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
 
 
@@ -42,25 +42,6 @@
                         </div>
 
 
-                    <card-link v-for="item in media" :key="item.id" class=" dark:[&>div]:bg-background-section [&>div]:rounded-lg" >
-                        <!--                    <template #date>{{item.creted_at}}</template>-->
-
-                        <template #date>
-                            <p class="text-xl">
-                                <img class="md:h-full object-cover img-media-center  lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" :src="getpic(item)" alt="" style="width:100%">
-                            </p>
-                        </template>
-
-                        <template #text>
-
-                            <div v-html="item.content[$i18n.locale].slice(0,155)+'...'"></div>
-                            <div style="opacity: 80% !important;" class="rtl:text-end ltr:text-end"> <button @click="details(item.id)" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown text-cecter">{{ $t('readMore') }}</button></div>
-                        </template>
-                    <template #head>
-
-                        <p>{{ formatDate(item.created_at) }}</p>
-                        </template>
-                    </card-link>
 
                 </template>
 
