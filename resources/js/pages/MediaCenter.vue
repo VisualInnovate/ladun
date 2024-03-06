@@ -23,7 +23,7 @@
 
                         <div v-for="item in media" :key="item.id" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-                                <img class="rounded-t-lg" style="width: 100%;min-height: 200px;" :src="getpic(item)" alt="" />
+                                <img class="rounded-t-lg" style="width: 100%;height: 200px;" :src="getpic(item)" alt="" />
 
                             <div class="p-1 px-3">
                                 <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
