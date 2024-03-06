@@ -29,7 +29,7 @@
                                 <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
 
 
-                            <p v-html="item?.title[$i18n.locale].slice(0,155)+'...'" style="min-height:105px ; font-size: 18px;" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></p>
+                            <p v-html="item?.title[$i18n.locale].slice(0,155)+'...'" style="min-height:135px ; font-size: 18px;" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></p>
 
 
                             </div>
