@@ -13,7 +13,7 @@
         </div>
 
     </div>
-    <section class="  bg-background-section" id="project">
+    <section class="  bg-background-section  dark:text-white dark:bg-black"  id="project">
 
         <div class="container mx-auto">
 
@@ -47,7 +47,7 @@
     </section>
 
 
-    <section class=" text-sm m-auto ">
+    <section class="  dark:text-white dark:bg-black text-sm m-auto ">
         <div class="container mx-auto pb-4">
             <div class=" w-full  m-auto ">
                 <div
@@ -234,47 +234,47 @@
     </section>
 
 
-    <section class="genaral-info bg-white lg:p-[5%]">
+    <section class="genaral-info  dark:text-white dark:bg-black bg-white lg:p-[5%]">
         <div class="container mx-auto ">
-            <div class="grid grid-cols-1  gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
+            <div class="grid grid-cols-1   dark:text-white dark:bg-black  gap-12 md:grid-cols-2 md:gap-20  lg:grid-cols-4 lg:gap-16 text-white p-3">
 
                 <div v-if="project.land_area && project.land_area!=0"
 
                      class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown ">
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2  dark:text-white dark:bg-black">
                         <img class="w-[24%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black ">{{ $t('areaOfLand') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.land_area }} {{ $t('areaUnit') }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black ">{{ $t('areaOfLand') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.land_area }} {{ $t('areaUnit') }}</p>
                         </div>
                     </div>
                 </div>
                 <div v-if="project.building_area && project.building_area!=0"
-                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown  dark:text-white dark:bg-black">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/area-svgrepo-com.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area-net.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-center ">{{ $t('Building_Area') }}</p>
-                            <p class="flex font-bold text-center text-lg text-black">
-                               <p>{{ project.building_area }}</p>
-                               <p class="px-1">{{ $t('areaUnit') }}</p>
+                            <p class="text-black text-center  dark:text-white dark:bg-black ">{{ $t('Building_Area') }}</p>
+                            <p class="flex font-bold text-center text-lg text-black ">
+                               <p >{{ project.building_area }}</p>
+                               <p class="px-1  dark:text-white dark:bg-black">{{ $t('areaUnit') }}</p>
                              </p>
                         </div>
                     </div>
                 </div>
-                <div v-if="project.units_number && project.units_number!=0"
-                     class="grid grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  utility-group animate__animated animate__backInDown">
+                <div  v-if="project.units_number && project.units_number!=0"
+                     class="grid  grid-cols-1 gap-2 md:gap-1 w-56 mx-auto  dark:text-white dark:bg-black utility-group animate__animated animate__backInDown">
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2  dark:text-white dark:bg-black">
                         <img class="w-[20%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black ">{{ $t('Floors_Number') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.units_number }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black  ">{{ $t('Floors_Number') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.units_number }}</p>
                         </div>
                     </div>
                 </div>
@@ -285,8 +285,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-resendial.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black ">{{ $t('Units_Number') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.models_number }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black ">{{ $t('Units_Number') }}</p>
+                            <p class="font-bold text-center text-lg  text-black  dark:text-white dark:bg-black">{{ project.models_number }}</p>
                         </div>
                     </div>
                 </div>
@@ -298,8 +298,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black  ">{{ $t('facilities') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.facilities }}</p>
+                            <p class="text-black    dark:text-white dark:bg-black">{{ $t('facilities') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.facilities }}</p>
                         </div>
                     </div>
                 </div>
@@ -311,8 +311,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black  ">{{ $t('commercial') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.commercial }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black ">{{ $t('commercial')  }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.commercial }}</p>
                         </div>
                     </div>
                 </div>
@@ -325,8 +325,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black ">{{ $t('investment') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.investment }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black ">{{ $t('investment') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.investment }}</p>
                         </div>
                     </div>
                 </div>
@@ -338,8 +338,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-center">{{ $t('government') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.government }}</p>
+                            <p class="text-black text-center  dark:text-white dark:bg-black">{{ $t('government') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black" >{{ project.government }}</p>
                         </div>
                     </div>
                 </div>
@@ -351,8 +351,8 @@
                         <img class="w-[35%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black text-center">{{ $t('educational') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.educational }}</p>
+                            <p class="text-black text-center  dark:text-white dark:bg-black">{{ $t('educational') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.educational }}</p>
                         </div>
                     </diV>
                 </div>
@@ -364,8 +364,8 @@
                         <img class="w-[24%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black ">{{ $t('gardens') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.gardens }}</p>
+                            <p class="text-black  dark:text-white dark:bg-black ">{{ $t('gardens') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.gardens }}</p>
                         </div>
                     </div>
                 </div>
@@ -377,8 +377,8 @@
                         <img class="w-[24%] md:w-[50%] m-auto"
                              src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
                         <div class="my-auto mx-auto text-[14px]">
-                            <p class="text-black  ">{{ $t('mosque') }}</p>
-                            <p class="font-bold text-center text-lg text-black">{{ project.mosque }}</p>
+                            <p class="text-black   dark:text-white dark:bg-black ">{{ $t('mosque') }}</p>
+                            <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.mosque }}</p>
                         </div>
                     </div>
                 </div>
@@ -387,7 +387,7 @@
             </div>
 
         </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+        <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style="border-bottom: 2px solid black; "></div>
     </section>
 
 
@@ -396,26 +396,28 @@
 
     <!-- project section -->
     <!-- project phases section -->
-    <section id="project_phases" class="py-16 bg-[white]" v-if="project.phases.length">
-        <div class="flex w-[80%] m-auto">
+    <section id="project_phases" class="py-16 bg-[white]  dark:text-white dark:bg-black " v-if="project.phases.length">
+        <div class="flex w-[80%] m-auto  dark:text-white dark:bg-black">
             <img src="../../img/project_percentage.png" style="width: 30px;height: 30px">
             <h1 class="my-auto font-bold text-light-brown  ">{{ $t('projectPhases') }}</h1>
         </div>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto " v-if="project.phases">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3 container mx-auto  dark:text-white dark:bg-black  dark:text-white dark:bg-black " v-if="project.phases">
 
-            <div class=" progress " v-for="phase in project.phases">
+            <div class="progress  dark:text-white dark:bg-black " v-for="phase in project.phases">
 
 
-                <div class="  p-5 font-bold ">
+                <div class="  p-5 font-bold  dark:text-white dark:bg-black ">
 
                     <!--                        <Progress labelProgress="true" labelPosition="outside" :label="$t('achieve_percentage')" :progress="phase.achieve_percentage"></Progress>-->
                     <CircleProgressBar :value="phase?.achieve_percentage " style="color: #213350" :max="100" percentage
                                        colorUnfilled="rgba(25,83,177,1)"
                                        animationDuration="2s"
+                                       class=" dark:text-white dark:bg-black"
                                        rounded>
+                                       
                     </CircleProgressBar>
 
-                    <h5 class="pb-2 text-center mt-4 font-light" style="color: #213350">{{
+                    <h5 class="pb-2 text-center mt-4 font-light  dark:text-white dark:bg-black" style="color: #213350">{{
                             phase.name[$i18n.locale]
                         }}</h5>
 
@@ -423,10 +425,10 @@
                 </div>
             </div>
         </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+        <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section id="serves" class="bg-[white]  py-[3%]" v-if="project?.services?.length" >
+    <section id="serves" class="bg-[white]   dark:text-white dark:bg-black py-[3%]" v-if="project?.services?.length" >
         <div class="container  mx-auto">
             <div class="flex">
                 <svg width="30px" height="30px" viewBox="0 0 1024 1024" class="icon px-1 my-auto" version="1.1"
@@ -439,21 +441,21 @@
                             fill="#AF9751"></path>
                     </g>
                 </svg>
-                <h2 class="text-3xl font-bold text-light-brown ">{{ $t("high_level_utility") }}</h2>
+                <h2 class="text-3xl font-bold text-light-brown  dark:text-white dark:bg-black ">{{ $t("high_level_utility") }}</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-20 gap-5 lg:w-[70%] m-auto py-[3%]">
                 <div v-for="service in project.services " style="border-bottom:1px solid rgb(76, 73, 73);" class="m-auto flex w-full">
                     <img :src="service.image.original_url" style="width: 80px ;height: 80px">
-                    <p class="mx-4 text-xl"> {{service.title[$i18n.locale]}}</p>
+                    <p class="mx-4 text-xl  dark:text-white dark:bg-black"> {{service.title[$i18n.locale]}}</p>
                 </div>
 
 
             </div>
 
         </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+        <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style="border-bottom: 2px solid black;"></div>
 
-    </section>
+    </section >
 
 
     <!-- gallery section -->
@@ -464,33 +466,33 @@
 
 
     <!-- project models -->
-    <section id="modale" class="company-info   py-20 pt-16  bg-background-section "
+    <section id="modale" class="company-info  dark:text-white dark:bg-black   py-20 pt-16  bg-background-section "
              v-if="project.project_models.length">
 
-        <div class="container mx-auto">
+        <div class="container mx-auto  dark:text-white dark:bg-black">
 
             <div class="">
 
-                <div class="d-info h-full flex flex-col justify-center right">
+                <div class="d-info h-full flex flex-col justify-center right  dark:text-white dark:bg-black">
                     <div class="flex">
                         <img src="../../img/models_icon.png" style="width: 26px;height: 26px">
-                        <h1 class=" my-auto font-bold text-3xl  text-center md:text-start text-[#AF9744]">
+                        <h1 class=" my-auto font-bold text-3xl  text-center md:text-start text-[#AF9744]  dark:text-white dark:bg-black">
                             {{ $t('modale') }} </h1>
                     </div>
                     <div
-                        class=" [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
+                        class=" [&>div>div]:border-0 [&>div>div>ul>li>.text-blue-600]:text-dark-brown  dark:text-white dark:bg-black [&>div>div>ul>li>.text-blue-600]:hover:text-dark-brown [&>div>div>ul>li>.border-blue-600]:border-dark-brown">
 
 
-                        <tabs variant="underline" v-model="activeTab" class="p-5 text-lg">
+                        <tabs variant="underline" v-model="activeTab" class="p-5 text-lg  dark:text-white dark:bg-black">
                             <!-- class appends to content DIV for all tabs -->
                             <tab v-for="model in project.project_models" :name="model.title['en']"
                                  :title="model.title[$i18n.locale]"
                                  class=" [&>div]:grid [&>div]:grid-cols-1 [&>div]:gap-12 [&>div]:lg:grid-cols-2 [&>div]:lg:gap-2">
                                 <div>
                                     <div class="text mb-5">
-                                        <p class="mb-3">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
-                                        <p class="mb-3">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
-                                        <p class="mb-3">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
+                                        <p class="mb-3  dark:text-white dark:bg-black">{{ $t('Land_Area') }}: {{ model.Land_area }}</p>
+                                        <p class="mb-3  dark:text-white dark:bg-black">{{ $t('Building_Area') }}: {{ model.building_area }}</p>
+                                        <p class="mb-3  dark:text-white dark:bg-black">{{ $t('Floors_Number') }}: {{ model.floors_number }}</p>
                                         <p>{{ $t('Units_Number') }}: {{ model.units_number }}</p>
                                     </div>
                                     <div class="flex flex-wrap">
@@ -505,7 +507,7 @@
                                                 <!--                                            add dinamic img -->
                                             </div>
 
-                                            <p class="text-sm whitespace-nowrap">{{ utility.title[$i18n.locale] }}</p>
+                                            <p class="text-sm whitespace-nowrap  dark:text-white dark:bg-black">{{ utility.title[$i18n.locale] }}</p>
 
                                         </div>
 
@@ -534,14 +536,14 @@
     </section>
 
 
-    <section id="images" class="py-12 pb-16 bg-[white]" v-if="project.gallery != '' && project.gallery">
+    <section id="images" class="py-12 pb-16 bg-[white]  dark:text-white dark:bg-black" v-if="project.gallery != '' && project.gallery">
         <div class="container mx-auto">
             <div class=" ">
                 <div class="mb-5">
                     <div
                         class="lg:w-[50%] flex items-center mb-5 lg:mb-0 text-center lg:text-start w-[100%] justify-center lg:justify-start ">
                         <!--                    <p class="text-dark-brown text-4xl">{{ $t('gallary_project') }}</p>-->
-                        <div class="flex">
+                        <div class="flex  dark:text-white dark:bg-black">
                             <svg class="my-auto" width="36px" height="36px" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg" fill="none">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -552,14 +554,14 @@
                                           d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"></path>
                                 </g>
                             </svg>
-                            <p class="text-dark-brown text-4xl right">
+                            <p class="text-dark-brown text-4xl right  dark:text-white dark:bg-black ">
                                 {{ $t("Image") }}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="flex  w-[100%] lg:w-[85%]  m-auto " id="carsoul-project">
-                    <div class=" w-[1200px]  m-auto">
+                <div class="flex  w-[100%] lg:w-[85%]  dark:text-white dark:bg-black  m-auto " id="carsoul-project">
+                    <div class=" w-[1200px]  dark:text-white dark:bg-black  m-auto">
                         <Carousel class="w-full h-full [&>div]:md:h-[600px]  [&>div]:h-[417px] [&>div>div>img]:h-[417px] [&>div>div>img]:md:h-[600px]" :pictures="getGallery(project.gallery)"/>
                     </div>
                 </div>
@@ -567,15 +569,15 @@
             </div>
 
         </div>
-        <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+        <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style=" border-bottom: 2px solid black;"></div>
     </section>
 
 
     <!-- Video -->
 
-    <section id="video" class=" bg-[white]" v-if="videoo!='' && videoo">
-        <div class="container lg:w-[75%] m-auto">
-            <div class="flex mx-auto  mb-10">
+    <section id="video" class=" bg-[white]  dark:text-white dark:bg-black" v-if="videoo!='' && videoo">
+        <div class="container lg:w-[75%] m-auto  dark:text-white dark:bg-black">
+            <div class="flex mx-auto  mb-10  dark:text-white dark:bg-black">
 
                 <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -596,15 +598,15 @@
                             stroke-linejoin="round"></path>
                     </g>
                 </svg>
-                <div class="my-auto   text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
+                <div class="my-auto  dark:text-white dark:bg-black  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
-            <div class=" flex justify-center mx-auto">
+            <div class="   dark:text-white dark:bg-black flex justify-center mx-auto">
                 <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
-                <div class=" max-w-sm w-full  ">
-               <div class="grid grid-cols-1" v-for="por in project.video ">
-                <div class=" mt-4 rounded-md  "  v-html="por.url">
+                <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
+               <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
+                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
                 </div>
                </div>
             </div>
@@ -612,11 +614,11 @@
                     <div   class="mx-auto   rounded-xl"></div>
 
             </div>
-            <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+            <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style="border-bottom: 2px solid black;"></div>
         </div>
     </section>
-<div  v-if=" project.video_url!=null">
-    <section id="video3d" class="py-[3%] bg-[white]" v-if="project.project_video || project.video_url" >
+<div class=" dark:text-white dark:bg-black"  v-if=" project.video_url!=null">
+    <section id="video3d" class="py-[3%] bg-[white]  dark:text-white dark:bg-black" v-if="project.project_video || project.video_url" >
         <div class="container lg:w-[75%] mx-auto">
             <div class="flex  mx-auto ">
                 <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
@@ -640,7 +642,7 @@
 </div>
     <!-- end Video -->
     <!-- location -->
-    <section class="company-info   py-20 bg-[white]" id="location" v-if="project.location">
+    <section class="company-info   dark:text-white dark:bg-black  py-20 bg-[white]" id="location" v-if="project.location">
 
         <div class=" container lg:w-[75%] mx-auto">
 
@@ -695,7 +697,7 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
 
     </section>
-    <section class=" company-info  bg-[white]" id="downloads" v-if="project.downloads.length">
+    <section class=" dark:text-white dark:bg-black company-info  bg-[white]" id="downloads" v-if="project.downloads.length">
 
         <div class="container mx-auto w-[85%]">
             <div class="flex pb-[5%]">
@@ -736,7 +738,7 @@
         <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
     </section>
 
-    <section class=" company-info  bg-[white] mb-5" id="partner"
+    <section class=" company-info  dark:text-white dark:bg-black  bg-[white] mb-5" id="partner"
              v-if="project.partner_image != '' && project.partner_image">
 
         <div class="container w-[85%]  mx-auto mt-8">
@@ -760,7 +762,7 @@
     </section>
 
     <!-- ask_us -->
-    <section class="text-center py-8" id="ask_us">
+    <section class="text-center py-8  dark:text-white dark:bg-black" id="ask_us">
         <div class="container mx-auto lg:w-[75%]">
             <h2 class="mb-5">{{ $t('inquiriesNotes') }}</h2>
             <div
