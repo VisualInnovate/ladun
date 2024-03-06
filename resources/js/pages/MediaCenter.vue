@@ -93,7 +93,7 @@ const details = (id) => {
     })
 }
 const getpic = (media) => {
-    return media.media[0].collection_name=='attachments'?media.media[0].original_url:media.media[1].original_url
+    return media.media[0].collection_name=='attachments'?media.media[0]?.original_url:media.media[1]?.original_url
 }
 
 
