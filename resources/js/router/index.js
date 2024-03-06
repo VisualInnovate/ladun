@@ -38,15 +38,15 @@ const routes = [
         meta:{title:"Contact Us"}
     },
     {
-        path: "/Conditions",
+        path: "/privacy-policy",
         component: () => import("@/pages/Conditions.vue"),
-        name: 'Conditions',
+        name: 'privacy-policy',
         meta:{title:"Conditions"}
     },
     {
-        path: "/Policy",
+        path: "/terms-conditions",
         component: () => import("@/pages/Policy.vue"),
-        name: 'Policy',
+        name: 'terms-conditions',
         meta:{title:"Policy"}
     },
 

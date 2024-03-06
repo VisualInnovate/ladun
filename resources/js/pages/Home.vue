@@ -77,7 +77,7 @@
                             <number ref="number4" :from="0" :to="setting?.developed_buildings" :delay="3" :duration="3" easing="Power1.easeOut"/>
                         </strong>
                             <p class="block text-sm dark:text-[white] " style="font-size: 12px;">{{ $t('projectsUnits') }}</p>
-                            <p class="block text-sm  dark:text-[white]" style="font-size: 12px;">{{ $t('waiting') }}</p>
+
                         </div>
                     </div>
 
@@ -124,13 +124,13 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black dark:text-[white] bg-gray-100 w-3/4 h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black dark:text-[white] bg-gray-100 w-[60%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
 
     </section>
-    <Modal  :formShow="isShowModal"/>
+      <Modal  :formShow="isShowModal"/>
     <section id="project-latst"   class="bg-white dark:bg-black">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white dark:bg-black">
             <h2 id="latest_project_header bg-white"

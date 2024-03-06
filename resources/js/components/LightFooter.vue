@@ -1,6 +1,6 @@
 <template>
     <div class="bg-light-footer dark:bg-black  text-grey py-1 md:py-1 px-1 md:px-2 mb-1 md:mb-2" >
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-8  py-0 md:py-0" >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-8  py-0 md:py-4" >
             <!-- Logo and Social Icons -->
             <div class="flex flex-col justify-center items-center md:items-start">
                 <img :src="DarkLogo" alt="Logo_darK" class="mb-4 h-[52%]" style="width:40%;padding-top:30px" />
@@ -12,7 +12,7 @@
                     </template>
                 </div>
                 <a href="https://wa.me/920011560" target="_blank" class="flex items-center text-gray-600 hover:text-gray-900">
-                    <p class="mr-2 dark:text-[white]" style="font-size: 20px;">920011560</p>
+                    <p class="mr-2 ml-2  dark:text-[white]" style="font-size: 20px;">920011560</p>
                     <img :src="`${whatsappIcon}`" :alt="`${whatsappIcon}`" class="w-4 h-6" />
                 </a>
             </div>
@@ -38,8 +38,8 @@
         <hr class="border-gray-300 mx-6 md:mx-12" />
 
         <div class="mx-6 md:mx-12 py-5 flex justify-center space-x-4">
-            <router-link  :to="{ name: 'Policy' }" class="px-2">     <small style="border-left: 1px solid #AE9643;" class="flex after:content-[''] px-2 cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:rounded after:my-auto">{{ $t('termsConditions') }}</small></router-link>
-            <router-link :to="{ name: 'Conditions' } " class="px-2">            <small  style="border-left: 1px solid #AE9643;"  class="flex after:content-[''] px-2 cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white]  after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small></router-link>
+            <router-link  :to="{ name: 'terms-conditions' }" class="px-2">     <small style="border-left: 1px solid #AE9643;" class="flex after:content-[''] px-2 cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white] after:rounded after:my-auto">{{ $t('termsConditions') }}</small></router-link>
+            <router-link :to="{ name: 'privacy-policy' } " class="px-2">            <small  style="border-left: 1px solid #AE9643;"  class="flex after:content-[''] px-2 cursor-pointer after:w-[1.5px] after:h-5 dark:text-[white]  after:rounded after:my-auto">{{ $t('privacyPolicy') }}</small></router-link>
             <small  class="dark:text-[white]">{{ $t('copyRights') }}</small>
         </div>
     </div>
