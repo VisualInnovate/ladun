@@ -16,30 +16,25 @@
         <div class="container mx-auto dark:text-white dark:bg-black">
 
             <div class="grid grid-cols-1 gap-4  lg:grid-cols-4 lg:gap-4 dark:text-white dark:bg-black">
+                <div v-for="investor in investors" :key="investor.id" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-                <card-link v-for="investor in investors" :key="investor.id" class="dark:text-black dark:bg-white [&>div>p>div>h3]:text-[16px]   [&>div>p>]:min-h-[200px] [&>div>h5]:text-[18px]  [&>div>h5]:min-h-[170px]" >
-                        <template #date>
-                            <div> <img
-                        class="object-cover img-media-center rounded-t-lg h-70 md:h-auto top-0 w-full md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
-                        alt="" :src="investor.media[0].original_url" ></div>
-                        </template>
-                        <!-- :src="investor.media[0].original_url" -->
-                    <template #head>
+<img class="rounded-t-lg" style="width: 100%;height: 200px;" :src="investor.media[0]?.original_url" alt="" />
 
-                        {{investor.title[$i18n.locale]}}
-                    </template>
+<div class="p-1 px-3">
+    <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{investor.created_at}}</p>
+    <p style="min-height: 144px;" class=" font-normal text-gray-700 dark:text-gray-400">{{investor.title[$i18n.locale]}}</p>
+    <div style="min-height: 120px;" v-html="convertToString(investor.content[$i18n.locale])"></div>
+</div>
 
-                    <template > <img
-                        class="object-cover img-media-center rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg rtl:pl-2 ltr:pr-2"
-                        :src="investor.media[0].original_url" alt="">
-                    </template>
-                    <template #text>
-                        <div class="text-sm mb-2">{{investor.created_at}}</div>
-                        <div v-html="investor.content[$i18n.locale].slice(0,100)+'...'"></div>
-                        <div class="rtl:text-end ltr:text-end"> <button @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class="p-2 my-2 text-xs rounded-lg text-white bg-dark-brown">{{$t('readMore')}}</button></div>
-                    </template>
+<div>
+<p  @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class="  mx-4 cursor-pointer py-2 my-2 w-[90%]  text-sm font-medium text-center text-white bg-dark-brown rounded-lg hover:bg-dark-brownfocus:ring-4 focus:outline-none focus:bg-dark-brown dark:bg-dark-brown dark:hover:bg-dark-brown dark:focus:bg-dark-brown">
+    {{ $t('readMore') }}
 
-                </card-link>
+</p>
+</div>
+</div>
+
+
             </div>
         </div>
 
@@ -66,10 +61,18 @@ export default {
     },
 
     methods:{
+
+        convertToString(content) {
+                    // Use String() function to ensure content is treated as a string
+                    const stringContent = String(content);
+
+                    // Return the string content
+                    return stringContent.slice(0,100)+'...';
+                },
         callbanner(){
             axios.get("/api/banners-pages").then(res => {
 
-                this.banner= res.data.pages[2].media[0].original_url
+                this.banner= res.data.pages[2].media[0]?.original_url
                 console.log(this.banner)
             })
         },
