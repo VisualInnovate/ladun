@@ -25,7 +25,7 @@
 
                                 <img class="rounded-t-lg" style="width: 100%; height: 200px;" :src="getpic(item)" alt="" />
 
-                            <div class="p-1">
+                            <div class="p-1 px-3">
                                 <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{ formatDate(item.created_at) }}</p>
 
 
