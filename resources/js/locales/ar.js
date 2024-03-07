@@ -20,7 +20,7 @@ export default {
     areaUnit: "م2",
     unit: "وحدة",
     aboutLadun: "عن لدن",
-    questions:"الاسئله الشائعة",
+    questions:"الاسئلة الشائعة",
     experienceYears: "سنوات الخبرة",
     projectsUnits: " وحـــــــــــــدة مطـــــــــورة  ",
     waiting: "وقــــــــــــيد التطـــــــــوير",

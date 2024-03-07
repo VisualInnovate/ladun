@@ -1,6 +1,6 @@
 <template>
     <dropdown
-        class="hover:cursor-pointer [&>div]:w-full w-1/2 h-10 bottom-0 origin-top dark:text-[white] rtl:-translate-x-1/2 ltr:translate-x-1/2 -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
+        class="hover:cursor-pointer [&>div]:w-full w-[30%] h-10 bottom-0 origin-top z-50 dark:text-[white] rtl:-translate-x-[115%] ltr:translate-x-[115%] -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
         <template #trigger>
                     <span class="w-full inline-flex justify-between px-4 text-white">
                         <span>{{ $t('choose') }}</span>
@@ -12,7 +12,7 @@
         </template>
         <list-group class="w-[137%] m-auto lg:w-full   ">
 
-            <div class="mx-11 font-bold">{{ $t('ownership') }}</div>
+            <div class="mx-11 font-bold z-50">{{ $t('ownership') }}</div>
 
             <list-group-item class="mx-24" @click="showModal('Buy-Eastern Region')">{{ $t('easternRegion') }}</list-group-item>
             <list-group-item class="mx-24" @click="showModal('Buy-Middle Region')">{{ $t('middleRegion') }}</list-group-item>
@@ -28,14 +28,14 @@
 
         </list-group>
     </dropdown>
-    <Modal class="dark:bg-black"  v-if="isShowModal" @close="closeModal">
+    <Modal class="dark:bg-black z-50"  v-if="isShowModal" @close="closeModal">
         <template #header>
             <div class="flex items-center  text-lg">
                 {{$t('shareYourInterests')}}
             </div>
         </template>
             <template #body >
-                <form class=" space-y-2" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class=" space-y-2 z-50" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D3G0000008knU">
                     <input type=hidden name="retURL" value="http://google.com">

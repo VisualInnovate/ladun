@@ -124,14 +124,14 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black dark:text-[white] bg-gray-100 w-[60%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black z-50 dark:text-[white] bg-gray-100 lg:w-[50%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
 
     </section>
       <Modal  :formShow="isShowModal"/>
-    <section id="project-latst"   class="bg-white dark:bg-black">
+    <section id="project-latst"   class="bg-white z-1 dark:bg-black">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white dark:bg-black">
             <h2 id="latest_project_header bg-white"
                 class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
@@ -150,7 +150,7 @@
                     class="py-2  bg-white dark:bg-black"
 
                 >
-                    <carousel class=" bg-white dark:bg-black" v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
+                    <carousel class=" bg-white dark:bg-black z-1" v-bind="settings" :autoplay="false" :wrap-around="true" :breakpoints="breakpoints">
 
                         <slide v-for="project in department.latest" :key="project.id"  >
 
