@@ -5,7 +5,7 @@ export default {
     projects: "المشاريع",
     companyAds: "إعلانات الشركة",
     contactUs: "تواصل معنا",
-    joinUs: "انضم إلينا",
+    joinUs: "الوظائف",
     shareYourInterests: "سجل اهتماماتك",
     scrollDown: "تصفح للأسفل",
     latestProjects: "أحدث المشاريع",

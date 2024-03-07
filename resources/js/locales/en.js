@@ -13,7 +13,7 @@ export default {
     projects: "Projects",
     companyAds: "Company Announcements",
     contactUs: "Contact us",
-    joinUs: "Join us",
+    joinUs: "Career",
     shareYourInterests: "Share Your Interests",
     scrollDown: "SCROLL DOWN",
     latestProjects: "Latest Projects",
