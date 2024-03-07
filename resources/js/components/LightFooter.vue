@@ -3,10 +3,11 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-8  py-0 md:py-4" >
             <!-- Logo and Social Icons -->
             <div class="flex flex-col justify-center items-center md:items-start">
-                <img :src="DarkLogo" alt="Logo_darK" class="mb-4 h-[52%]" style="width:40%;padding-top:30px" />
-                <div class="flex justify-center md:justify-start space-x-4 mb-4">
+                <img :src="DarkLogo" alt="Logo_darK" class="mb-4 h-[52%] dark:hidden" style="width:40%;padding-top:30px" />
+                <img :src="Lightlogo" alt="Logo_darK" class="mb-4 h-[52%] hidden dark:block" style="width:40%;padding-top:30px" />
+                <div class="flex justify-center md:justify-start space-x-2 mb-4">
                     <template v-for="icon in icons">
-                        <a :href="icon.href" target="_blank">
+                        <a :href="icon.href" target="_blank" class="px-2">
                             <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 h-6" />
                         </a>
                     </template>
@@ -49,6 +50,7 @@
 
 <script setup>
 import DarkLogo from "../../js/lolo1.png";
+import Lightlogo from "../../img/logo.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
 import twitterIcon from "../../img/light_footer_twitter.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";
