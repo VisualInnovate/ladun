@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav
-            class="z-50 flex items-center py-4 top-0 h-[100px] w-full max-w-[1500px] mx-auto"
+            class="z-50 flex items-center  py-4 top-0 h-[100px] w-full max-w-[1500px] mx-auto"
             aria-label="Global">
 
             <div class="flex lg:hidden mx-2">
@@ -15,10 +15,10 @@
             </div>
 
 
-            <div class="flex pt-2">
+            <div class=" flex pt-2">
                 <router-link :to="{ name: 'Home' }" class="flex -m-1.5 p-1.5">
                     <!-- <span class="sr-only">Ladun</span> -->
-                    <img v-show="!mobileMenuOpen" src="../../img/logo.png" alt="" class="p-5 pt-4 w-[11rem]"/>
+                    <img v-show="!mobileMenuOpen" src="../../img/logo.png" alt="" class="p-2 pb-5 pt-4 w-[9rem] "/>
                 </router-link>
             </div>
 
@@ -61,7 +61,7 @@
                 </template>
 
             </div>
-            <div class="cursor-pointer">
+            <div class="cursor-pointer px-1">
             <svg  @click="toggleDarkMode" v-if="x==0"  width="20" height="20" xmlns="http://www.w3.org/2000/svg">
             <path class="fill-white" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
             <path class="fill-white" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
