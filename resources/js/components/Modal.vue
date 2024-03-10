@@ -35,21 +35,19 @@
             </div>
         </template>
             <template #body >
-                <form class=" space-y-2 z-50" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class=" space-y-2 z-50" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-                    <input type=hidden name="oid" value="00D3G0000008knU">
-                    <input type=hidden name="retURL" value="http://google.com">
-                    <input type=hidden name="00N3G00000IEQrA" :value="data">
-                    <input type=hidden name="00N3G00000FV0J9" value="">
+                    <input type=hidden name="oid" value="00D8d0000060W7M">
+                      <input type=hidden name="retURL" value="https://www.ladun.sa/ar">
 
-                    <Input size="md" maxlength="40" name="first_name" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
-                    <Input size="md"  maxlength="80" name="last_name" :placeholder="$t('LastName')" :label="$t('LastName')"/>
+                    <Input size="md" id="first_name" maxlength="40" name="first_name" :placeholder="$t('FirstName')" :label="$t('FirstName')"/>
+                    <Input size="md"  maxlength="80" id="last_name" name="last_name" :placeholder="$t('LastName')" :label="$t('LastName')"/>
 
-                    <Input size="md" maxlength="40" name="mobile" :placeholder="$t('PhoneNumber')" :label="$t('PhoneNumber')"/>
-                    <Input size="md" maxlength="80" name="email" :placeholder="$t('Email')" :label="$t('Email')"/>
+                    <Input size="md" maxlength="40" id="mobile" name="mobile" :placeholder="$t('PhoneNumber')" :label="$t('PhoneNumber')"/>
+                    <Input size="md" maxlength="80" id="email" name="email" :placeholder="$t('Email')" :label="$t('Email')"/>
                     <label class="my-auto">{{ $t('Buy_Rent') }}</label>
                      <select
-                           :aria-label="saccsa"       class="lg:w-full  mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                           :aria-label="saccsa"  id="salutation"     class="lg:w-full  mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
 
                                 >
 
