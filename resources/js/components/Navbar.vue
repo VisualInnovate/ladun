@@ -22,7 +22,7 @@
                 </router-link>
             </div>
 
-            <div style="font-family: SuisseIntl-Regular;" class="hidden lg:flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-auto rtl:ml-auto m-auto ">
+            <div style="font-family: SuisseIntl-Regular;" class="hidden :flex lg:gap-x-6 ltr:right-0 rtl:left-0 ltr:mr-auto rtl:ml-auto m-auto ">
 
                 <template
                     v-for="item in navigation"
