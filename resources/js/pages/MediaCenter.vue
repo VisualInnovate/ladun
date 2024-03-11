@@ -75,7 +75,7 @@ import axios from "axios";
 
 const router = useRouter()
 const media = ref({})
-const banner = ref({})
+const banner = ref('')
 const projects_2 = new URL('../../img/real-state-management-banner.png', import.meta.url).href
 const pic = ref('')
 const pictures = [
@@ -119,6 +119,7 @@ const fetchBanner = () => {
   axios.get("/api/banners-pages")
     .then(res => {
         banner.value= res.data.pages[3].media[0].original_url;
+        console.log(banner.value)
     })
     .then(bannerUrl => {
       banner.value = bannerUrl;
