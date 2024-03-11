@@ -1,6 +1,6 @@
 <template>
     <Navbar class="bg-black fixed z-50 w-full"/>
-    <section class="media-center dark py-28 bg-background-section dark:bg-black dark:text-[white]" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
+    <!-- <section class="media-center dark py-28 bg-background-section dark:bg-black dark:text-[white]" style=" color:rgb(255, 255, 255);height: 300px; background-image: url('http://[::1]:5173/resources/js/new.jpg'); background-size: cover; background-position: center; text-align: center;">
         {{$t('mediaCenter')}}
         <div style="color:rgb(255, 255, 255); padding-top:20px; font-size:16px" >
             <router-link :to="{ name: 'Home' }"> <a href="" class="dark:text-[white]">{{$t('companyAds')}}</a>  /   {{$t('main')}} </router-link>
@@ -10,17 +10,17 @@
                 <img class="md:h-full object-cover img-media-center lg:rtl:rounded-l-lg lg:ltr:rounded-r-lg w-full md:w-48 rounded-t-lg md:rounded-t-none rtl:pl-2 ltr:pr-2" src="" alt="">
             </template>
         </div>
-    </section>
-    <!-- <div class="pt-26 dark:text-white dark:bg-black ">
+    </section> -->
+    <div class="pt-26 dark:text-white dark:bg-black ">
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
 
-            <template   #text>{{$t('companyAds')}}
+            <template   #text> {{$t('main')}}
 
             </template>
 
         </img-banner>
-    </div> -->
+    </div>
 
 
     <section class="media-center py-28 bg-background-section dark:bg-black">
@@ -118,7 +118,7 @@ const getpic = (media) => {
 const fetchBanner = () => {
   axios.get("/api/banners-pages")
     .then(res => {
-      return res.data.pages[2].media[0].original_url;
+        banner.value= res.data.pages[5].media[0].original_url;
     })
     .then(bannerUrl => {
       banner.value = bannerUrl;
@@ -136,6 +136,9 @@ onBeforeMount(() => {
         // console.log(res.data.mediaCenter[0].media[0])
 
     })
+
+
+    fetchBanner()
 })
 
 
