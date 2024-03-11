@@ -11,7 +11,6 @@
             </template>
         </div>
     </section> -->
-    <img :src="banner">
     <div class="pt-26 dark:text-white dark:bg-black ">
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
@@ -78,7 +77,7 @@ const router = useRouter()
 const media = ref({})
 const banner = ref('')
 const projects_2 = new URL('../../img/real-state-management-banner.png', import.meta.url).href
-const pic = ref('')
+const pic = ref("")
 const pictures = [
 
     {
@@ -122,12 +121,7 @@ const fetchBanner = () => {
         banner.value= res.data.pages[3].media[0].original_url;
         console.log(banner.value)
     })
-    .then(bannerUrl => {
-      banner.value = bannerUrl;
-    })
-    .catch(error => {
-      console.error('Error fetching banner:', error);
-    });
+
 };
 
 
