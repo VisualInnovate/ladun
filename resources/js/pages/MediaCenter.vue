@@ -118,7 +118,7 @@ const getpic = (media) => {
 const fetchBanner = () => {
   axios.get("/api/banners-pages")
     .then(res => {
-        banner.value= res.data.pages[4].media[0].original_url;
+        banner.value= res.data.pages[3].media[0].original_url;
     })
     .then(bannerUrl => {
       banner.value = bannerUrl;
