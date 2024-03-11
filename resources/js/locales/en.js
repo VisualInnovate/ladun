@@ -4,7 +4,18 @@ export default {
     modale: "Models",
     salutation:"salutation",
     Buy_Rent:"Buy-Rent",
-    Buy_Western_Region:"Buy-Western Region",
+    Buy_Western_Region:"Buy Western Region",
+
+    Buy_Eastern_Region:"Buy Eastern Region",
+    Buy_Middle_Region:"Buy Middle Region",
+    Buy_Eastern_Region:"Buy Eastern Region",
+    Rent_Eastern_Region:"Rent Eastern Region",
+    Rent_Middle_Region:"Rent Middle Region",
+    Rent_Western_Region:"Rent Western Region",
+    Rent_Eastern_Region:"Rent Eastern Region",
+
+
+
 
     project360: "project 360",
     aboutUs: "About us",

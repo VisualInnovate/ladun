@@ -69,6 +69,12 @@ export default {
     female: "أنثى",
     Buy_Western_Region:"شراء المنطقة الغربية",
 
+    Buy_Eastern_Region:"شراء المنطقة الشرقية ",
+    Buy_Middle_Region:" شراء المنطقة الوسطي ",
+    Buy_Eastern_Region:"شراء المنطقة الشرقية  ",
+    Rent_Middle_Region:"ايجار المنطقة الوسطي",
+    Rent_Western_Region:"ايجار المنطقة الغربيه  ",
+    Rent_Eastern_Region:"ايجار المنطقة الشرقية",
 
     easternRegion: "المنطقة الشرقية",
     middleRegion: "المنطقة الوسطى",

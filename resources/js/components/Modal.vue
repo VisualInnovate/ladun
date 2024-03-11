@@ -55,11 +55,11 @@
                                 <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
                                 <option value="Eastern">{{$t('Buy_Middle_Region')}} </option>
                                 <option value="Eastern">{{$t('Buy_Western_Region')}} </option>
-                                <option value="Eastern">{{$t('Buy_Eastern_Region')}} </option>
+
                                 <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
                                 <option value="Eastern">{{$t('Rent_Middle_Region')}} </option>
                                 <option value="Eastern">{{$t('Rent_Western_Region')}} </option>
-                                <option value="Eastern">{{$t('Rent_Eastern_Region')}} </option>
+
 
                      </select>
 
