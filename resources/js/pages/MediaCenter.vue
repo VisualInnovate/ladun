@@ -15,7 +15,7 @@
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
 
-            <template   #text> {{$t('main')}}
+            <template   #text> {{ $t('mediaCenter') }}
 
             </template>
 
@@ -118,7 +118,7 @@ const getpic = (media) => {
 const fetchBanner = () => {
   axios.get("/api/banners-pages")
     .then(res => {
-        banner.value= res.data.pages[5].media[0].original_url;
+        banner.value= res.data.pages[4].media[0].original_url;
     })
     .then(bannerUrl => {
       banner.value = bannerUrl;
