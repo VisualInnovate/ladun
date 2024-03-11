@@ -11,6 +11,7 @@
             </template>
         </div>
     </section> -->
+    <img :src="banner">
     <div class="pt-26 dark:text-white dark:bg-black ">
         <img-banner>
             <img class="w-full" style="height: 300px;"  :src="banner">
