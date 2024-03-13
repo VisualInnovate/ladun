@@ -2,15 +2,15 @@
     <!-- header section -->
     <Navbar class="fixed z-30 w-full animate__animated animate__backInDown animate__slow"
             :class="{ 'bg-black': !view.topOfPage}"/>
-    <header class="relative flex h-screen overflow-hidden">
+    <header class="relative flex  sm:max-h-screen  overflow-hidden">
         <div
-            class="overlay absolute top-0 right-0 w-full h-full bg-background-overlay z-20"
+            class="overlay absolute top-0 right-0 w-full h-screen bg-background-overlay z-20"
         ></div>
         <video
             autoplay
             loop
             muted
-            class="absolute z-10 min-w-full min-h-screen  max-w-none"
+            style="width: 100% !important;height: 100%;"
         >
             <source
                 src="../../videos/28mb_home_page_video.mp4"
