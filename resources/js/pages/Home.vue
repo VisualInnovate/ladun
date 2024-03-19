@@ -124,7 +124,7 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black z-50 dark:text-[white] bg-gray-100 w-[80%] lg:w-[50%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black z-50 dark:text-[white] bg-gray-100 w-[80%] lg:w-[40%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
