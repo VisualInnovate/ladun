@@ -47,7 +47,7 @@ export default {
     projectsRevenue: "projects Revenue",
     choose: "Choose",
     shareYourInterestWithUs:
-        "share Your Interest With Us, and we will reply you soon",
+        "Share Your Interest With Us, and we will reply you soon",
     whoWeAre: "Who we are",
     aboutOurCompany: "About our Company",
     mediaCenter: "Media Center",
