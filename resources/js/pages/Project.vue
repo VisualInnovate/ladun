@@ -1003,8 +1003,7 @@ export default {
             return this.project.phases
         },
         mapLink() {
-
-            return `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d${this.project.location.Latitude}!2d${this.project.location.Longitude}!3d${this.project.location.Longitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f034b35533327%3A0x815af65663dafe63!2zUkdNQjI3NTHYjCAyNzUxINi02KfYsdi5INin2YTYo9mF2YrYsSDYs9mE2LfYp9mGINio2YYg2LnYqNiv2KfZhNi52LLZitiy2IwgNjc2OdiMINit2Yog2KfZhNmF2LnYsNixINin2YTYtNmF2KfZhNmKLCBSaXlhZGggMTIzMTIsIFNhdWRpIEFyYWJpYQ!5e0!3m2!1sen!2seg!4v1701034421466!5m2!1sen!2seg`;
+            return `https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d226.5815642852766!2d${this.project.location.Longitude}!3d${this.project.location.Latitude}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1711451887994!5m2!1sar!2seg`
 
         }
     },
