@@ -134,7 +134,7 @@
     <section id="project-latst"   class="bg-white z-1 dark:bg-black">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white dark:bg-black">
             <h2 id="latest_project_header bg-white"
-                class=" flex text-black before:content-[''] before:m-0.5  before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
+                class=" flex text-black before:content-[''] before:m-0.5 dark:text-[white] before:w-16 before:h-1 before:inline-block before:left-0 before:bg-dark-brown before:rounded before:mx-3 before:my-auto ">
                 {{ $t('latestProjects') }}
             </h2>
         </div>
