@@ -7,8 +7,8 @@
                 <img :src="Lightlogo" alt="Logo_darK" class="mb-4 h-[52%] hidden dark:block" style="width:40%;padding-top:30px" />
                 <div class="flex justify-center md:justify-start space-x-2 mb-4">
                     <template v-for="icon in icons">
-                        <a :href="icon.href" target="_blank" class="px-2">
-                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class="w-4 h-6" />
+                        <a :href="icon.href" target="_blank" class="px-2 justify-between">
+                            <img :src="`${icon.image}`" :alt="`${icon.image}`" class=" h-5" />
                         </a>
                     </template>
                 </div>
