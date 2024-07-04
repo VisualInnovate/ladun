@@ -20,16 +20,16 @@
                 <div  v-for=" company in companies" :key="company.id" style="border: 1px solid #AE9643; "
 
                      :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'"
-                     class="relative rounded-2xl border border-light-brown overflow-hidden    content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
+                     class="relative rounded-2xl border border-light-brown overflow-hidden  dark:bg-gray-800  content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[70%]  m-auto">
 
                         <img style="transform: scale(1.05);" class="img-companies h-full  rounded-full border-2 mb-4 m-auto"  :src="company.media[0]?.original_url"
                          alt="Sunset in the mountains">
 
                     </div>
-                    <div class="text-center w-full p-2">
-                        <h3 class="justify-center font-bold text-[16x]  " > {{ company.title[$i18n.locale] }} </h3>
-                        <p class=" text-[#6e6b6b] text-justify justify-start py-6 text-xs"
+                    <div class="text-center w-full lg:h-[90%] p-2">
+                        <h3 class="justify-center font-bold text-[16x] dark:text-gray-300 " > {{ company.title[$i18n.locale] }} </h3>
+                        <p class=" text-[#6e6b6b] text-justify justify-start py-6 text-xs dark:text-gray-400"
                         v-html="company.content[$i18n.locale]"></p>
 
                     <div class=" absolute bottom-4 left-[50%] -translate-x-[50%] w-full " v-if="company.url != null">
