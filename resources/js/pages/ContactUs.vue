@@ -12,17 +12,17 @@
         >
 
             <div class="flex-auto  ">
-                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                    <div class="bg-[#57565B] dark:bg-white rounded-xl h-[100%] lg:h-[90%]">
+                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 ">
+                    <div class="bg-[#57565B]  rounded-xl h-[100%] lg:h-[90%] dark:bg-gray-600">
                         <div class="text-dark-brown py-10 rounded-2xl text-lg px-5 text-sm">
                             {{ $t('beInTouch') }}
                         </div>
 
 
-                        <form class="grid gap-y-12 mx-5 pb-12 "
+                        <form class="grid gap-y-12 mx-5 pb-12  "
 
                         >
-                            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5">
+                            <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center gap-x-5 ">
                                 <input
                                     type="text"
                                     id="first_name" maxlength="40" name="first_name"
@@ -66,7 +66,7 @@
                                     id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
                                     v-model="email"
-                                    class="lg:w-full w-[95%] mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
+                                    class="lg:w-full w-[95%]  mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
                                     :placeholder="$t('Email')"
                                 />
 
