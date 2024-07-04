@@ -39,14 +39,14 @@
                                 <div class="card grid grid-cols-1 lg:grid-cols-3 gap-3 px-10  ">
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.financial_file"
-                                       class="animate__animated animate__bounceIn dark:bg-white  dark:text-black  w-full h-60 bg-white border border-gray-200  rounded-lg shadow  dark:border-gray-700 p-1">
-                                        <div class="flex flex-col items-center ">
+                                       class="animate__animated  dark:bg-gray-800  animate__bounceIn   dark:text-black  w-full h-60 bg-white border border-gray-200  rounded-lg shadow  dark:border-gray-700 p-1">
+                                        <div class="flex flex-col items-center   ">
                                             <div
-                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
+                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg dark:bg-[white] flex justify-center items-center">
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-lg font-medium text-gray-900 dark:text-black">
+                                            <h5 class="mb-1 dark:text-gray-300  text-center text-lg font-medium text-gray-900 dark:text-black lg:h-14">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
@@ -90,7 +90,7 @@
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.financial_file"
 
-                                       class="animate__animated animate__bounceIn mx-5  w-60 h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-white dark:border-gray-700 p-10">
+                                       class="animate__animated animate__bounceIn mx-5 dark:bg-gray-800 w-60 h-60 bg-white border border-gray-200  rounded-lg shadow  dark:border-gray-700 p-10">
                                         <div class="space-y-4 flex flex-col items-center ">
                                             <div
                                                 class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
@@ -144,14 +144,14 @@
 
                                     <a v-for="item in financial"
                                        :href="'storage/'+item.year_file"
-                                       :class="{ 'invisible': item.year_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-white dark:border-gray-700 p-1">
+                                       :class="{ 'invisible': item.year_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-1">
                                         <div class="flex flex-col items-center ">
                                             <div
-                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center">
+                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center dark:bg-gray-100">
                                                 <img class=" w-12 h-12 " src="../../img/financial-logo.png"
                                                      alt="Bonnie image"/>
                                             </div>
-                                            <h5 class="mb-1 text-center text-xl font-medium text-gray-900 dark:text-gray-900">
+                                            <h5 class="mb-1 dark:text-gray-300 text-center text-xl font-medium text-gray-900 lg:h-14 ">
                                                 {{
                                                     item.title[$i18n.locale]
                                                 }}
