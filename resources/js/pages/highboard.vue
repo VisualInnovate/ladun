@@ -12,18 +12,18 @@
                         class="max-w-sm  rounded-xl p-2 strucre animate__animated animate__fadeInUp"
                     >
                         <div
-                            class="bg-white border border-light-brown rounded-xl shadow  dark:border-gray-700 pb-12 pt-7 h-full"
+                            class="bg-white border border-light-brown rounded-xl shadow  dark:bg-gray-800 dark:border-gray-700 pb-12 pt-7 h-full"
                         >
-                            <div class="flex justify-center px-4 pt-4">
+                            <div class="flex justify-center px-4 pt-4 ">
                                 <div class="flex flex-col items-center pb-10">
                                     <img
-                                        class="w-[120px] h-[120px] mb-3 rounded-full border-2 border-light-brown p-1 shadow-lg"
+                                        class="w-[120px] h-[120px]  dark:bg-[white] mb-3 rounded-full border-2 border-light-brown p-1 shadow-lg"
                                         :src="`/storage/${employee.image}`"
                                         :alt="`/storage/${employee.image}`"
 
                                     />
                                     <h5
-                                        class="mb-1 text-xl text-gray-900 dark:text-white font-bold"
+                                        class="mb-1 text-xl text-gray-900 dark:text-gray-300 font-bold"
                                     >
                                         {{ employee.name[$i18n.locale] }}
                                     </h5>
@@ -31,7 +31,7 @@
                                         class="text-sm text-gray-500 dark:text-gray-400 "
                                     >{{ employee.position[$i18n.locale] }}</span
                                     >
-                                    <div class="flex text-justify mt-2"
+                                    <div class="flex text-justify mt-2 dark:text-gray-400"
                                          v-html="employee.qualification[$i18n.locale]"></div>
                                 </div>
                             </div>

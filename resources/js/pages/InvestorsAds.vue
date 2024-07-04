@@ -22,12 +22,12 @@
 
 <div class="p-1 px-3">
     <p  class="mb-2 font-normal text-gray-700 dark:text-gray-400">{{investor.created_at}}</p>
-    <p style="min-height: 144px;" class=" font-normal text-gray-700 dark:text-gray-400">{{investor.title[$i18n.locale]}}</p>
+    <p style="min-height: 144px;" class=" font-normal  text-gray-700 dark:text-gray-400">{{investor.title[$i18n.locale]}}</p>
     <div style="min-height: 120px;" v-html="convertToString(investor.content[$i18n.locale])"></div>
 </div>
 
 <div>
-<p  @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class="  mx-4 cursor-pointer py-2 my-2 w-[90%]  text-sm font-medium text-center text-white bg-dark-brown rounded-lg hover:bg-dark-brownfocus:ring-4 focus:outline-none focus:bg-dark-brown dark:bg-dark-brown dark:hover:bg-dark-brown dark:focus:bg-dark-brown">
+<p  @click.prevent="$router.push({ name: 'Investors Relation' , params: { id: investor.id } })" class=" dark:text-gray-300  mx-4 cursor-pointer py-2 my-2 w-[90%]  text-sm font-medium text-center text-white bg-dark-brown rounded-lg hover:bg-dark-brownfocus:ring-4 focus:outline-none focus:bg-dark-brown dark:bg-dark-brown dark:hover:bg-dark-brown dark:focus:bg-dark-brown">
     {{ $t('readMore') }}
 
 </p>

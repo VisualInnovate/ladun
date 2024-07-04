@@ -155,7 +155,7 @@
                         <slide v-for="project in department.latest" :key="project.id"  >
 
                             <div
-                                class=" w-full lg:w-[80%] h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
+                                class=" w-full lg:w-[80%] dark:bg-gray-800 h-full rounded-xl bg-[#FBF9F1] latest_project mx-5">
                                 <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
                                         <img style="height:331px;" class="w-full dark:bg-[white]  rounded-xl" v-if="project.attachment" :src="project.attachment">
@@ -164,11 +164,11 @@
                                    <div class="flex w-full rtl:flex-row-reverse ">
                                     <router-link
                                         :to="{name: 'Project', params: { id: project.id }}">
-                                        <h3 class="ltr:text-start rtl:text-end my-auto text-[#636463] p-2 font-bold">{{ project.title[$i18n.locale] }}</h3>
+                                        <h3 class="ltr:text-start rtl:text-end my-auto text-[#636463] p-2 font-bold dark:text-gray-300 ">{{ project.title[$i18n.locale] }}</h3>
                                      </router-link>
                                     <div class="text-dark-brown flex">
                                         <small class=" text-right my-auto dark:text-[white] " >
-                                            <h6 class="ltr:text-start rtl:text-end  my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>
+                                            <h6 class="ltr:text-start rtl:text-end dark:text-gray-400 my-auto text-[#636463] p-2 font-bold text-dark-brown">{{ project.address[$i18n.locale] }}</h6>
 
                                         </small>
                                         <svg class="my-auto " version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#AF9751" d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M48.087,39h-0.01L32,61L15.923,39 h-0.01C13.469,35.469,10,29.799,10,24c0-12.15,9.85-22,22-22s22,9.85,22,22C54,29.799,50.281,35.781,48.087,39z"></path> <path fill="#AF9751" d="M32,14c-5.523,0-10,4.478-10,10s4.477,10,10,10s10-4.478,10-10S37.523,14,32,14z M32,32 c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> <path fill="#AF9751" d="M32,10c-7.732,0-14,6.268-14,14s6.268,14,14,14s14-6.268,14-14S39.732,10,32,10z M32,36 c-6.627,0-12-5.373-12-12s5.373-12,12-12s12,5.373,12,12S38.627,36,32,36z"></path> </g> </g></svg>
@@ -182,8 +182,8 @@
 
                                     <div class="flex my-auto mx-1">
                                         <div class="flex ">
-                                            <p class="my-auto text-gray-500">{{ project?.unit_type[$i18n.locale] }}</p>
-                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2">  {{ project.units_number }}
+                                            <p class="my-auto text-gray-500 dark:text-gray-400">{{ project?.unit_type[$i18n.locale] }}</p>
+                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2 dark:text-gray-400">  {{ project.units_number }}
                                            </small>
                                         </div>
                                             <img class="h-6 w-6" src="../../img/buildings-icon.png">
@@ -197,10 +197,10 @@
 
                                     <div class="flex my-auto mx-1">
                                         <div class="flex ">
-                                            <p class="my-auto dark:text-[white] text-gray-500">
+                                            <p class="my-auto dark:text-[white] text-gray-500 dark:text-gray-400">
                                                 {{ $t('areaUnit') }}
                                             </p>
-                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2">
+                                            <small class="whitespace-nowrap my-auto text-gray-800 px-2 dark:text-gray-400">
                                                 {{ project?.land_area  }}
                                             </small>
                                         </div>
@@ -209,7 +209,7 @@
 
 
                                     <div  class="flex my-auto px-1">
-                                        <small class=" text-gray-900 px-2">
+                                        <small class=" text-gray-900 px-2 dark:text-gray-400">
                                             {{project?.type[$i18n.locale] }}
                                         </small>
                                         <img class="w-6 h-6" src="../rrr.jpeg">
