@@ -2,7 +2,7 @@
     <Navbar class="bg-black fixed z-50 w-full"/>
     <div class="container mx-auto">
 
-        <h1 class="pt-36 mx-6 mb-5 font-bold">
+        <h1 class="pt-36 mx-6 mb-5 font-bold dark:text-gray-300">
             {{ $t("joinUs") }}
         </h1>
 
@@ -11,7 +11,7 @@
             class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14"
         >
             <div class="lg:w-[95%]">
-                <div class="bg-[#57565B] rounded-xl h-full mb-14 pt-12 dark:bg-white">
+                <div class="bg-[#57565B] rounded-xl h-full mb-14 pt-12 dark:bg-gray-600 ">
                     <div class="text-dark-brown py-2  roun px-5 text-sm">
                         {{ $t('pleaseFill') }}
                     </div>
