@@ -71,7 +71,7 @@ class AnnualReportsAuditCommitteeResource extends Resource
 
     protected static function getNavigationGroup(): ?string
     {
-        return __('Annual_reports_audit_committee');
+        return __('years');
     }
 
     public static function getLabel(): ?string
