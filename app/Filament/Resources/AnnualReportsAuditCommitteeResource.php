@@ -18,7 +18,6 @@ class AnnualReportsAuditCommitteeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-report';
 
-    protected static ?string $navigationLabel = 'Annual Reports Audit Committee';
 
     public static function form(Form $form): Form
     {
@@ -68,6 +67,26 @@ class AnnualReportsAuditCommitteeResource extends Resource
             'create' => Pages\CreateAnnualReportsAuditCommittee::route('/create'),
             'edit' => Pages\EditAnnualReportsAuditCommittee::route('/{record}/edit'),
         ];
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return __('Annual_reports_audit_committee');
+    }
+
+    public static function getLabel(): ?string
+    {
+        return __('Annual_reports_audit_committee');
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return __('Annual_reports_audit_committee');
+    }
+
+    public static function getNavigationSort(): ?int
+    {
+        return 0;
     }
 }
 
