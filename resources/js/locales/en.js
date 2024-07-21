@@ -13,7 +13,7 @@ export default {
     Rent_Middle_Region:"Rent Middle Region",
     Rent_Western_Region:"Rent Western Region",
     Rent_Eastern_Region:"Rent Eastern Region",
-
+    annual_reports:"Annual audit report",
 
 
 

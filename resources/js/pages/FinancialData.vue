@@ -139,6 +139,8 @@
 
                             </header>
 
+
+
                             <div class=" ">
                                 <div class="card grid grid-cols-1 lg:grid-cols-3  gap-2 px-10  ">
 
@@ -171,10 +173,65 @@
                 </div>
 
             </div>
+            <div class="grid grid-cols-2">
+                    <div v-for="f  in annual_report" :key="index" class="mb-12">
+                        <div v-for="(annual,index ) in f">
+
+                            <header class="flex  justify-between  mb-5  "
+                                    :class="($i18n.locale=='en' )  ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'">
+                                <div
+                                    class=" h-16 w-[80%] text-right mt-2 flex items-start px-4 text-xl  justify-between">
+                                    <div class="w-[100%]  flex bg-[#E6E6E6] justify-between p-2">
+                                        <div class="bg-[#E6E6E6] w-full text-center my-auto truncate	dark:text-black">
+                                            {{ $t('annual_reports') }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="year flex items-center text-[50px] font-bold " dir="rtl">
+                                    <span class="text-dark-brown">{{ index[2] }}{{ index[3] }}</span><span>{{
+                                        index[0]
+                                    }}{{ index[1] }}</span>
+                                </div>
+
+                            </header>
+
+                            <div class=" ">
+                                <div v-for="x in annual">
+
+                                </div>
+                                <div class="card grid grid-cols-1 lg:grid-cols-3  gap-2 px-10  ">
+
+                                    <a v-for="item in annual"
+                                       :href="'storage/'+item.report_file"
+                                       :class="{ 'invisible': item.report_file == null}"    class="animate__animated animate__bounceIn   w-full h-60 bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-1">
+                                        <div class="flex flex-col items-center ">
+                                            <div
+                                                class=" w-24 h-24 mb-3 rounded-full p-5 shadow-lg flex justify-center items-center dark:bg-gray-100">
+                                                <img class=" w-12 h-12 " src="../../img/financial-logo.png"
+                                                     alt="Bonnie image"/>
+                                            </div>
+                                            <h5 class="mb-1 dark:text-gray-300 text-center text-xl font-medium text-gray-900 lg:h-14 ">
+                                                {{
+                                                  item.title[$i18n.locale]
+                                                }}
+                                            </h5>
+                                            <div class="flex  space-x-3 text-dark-brown font-bold">
+                                                {{ index }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="justify-items-start card card flex flex-wrap lg:flex-nowrap ">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
 
         </div>
-
 
     </section>
 
@@ -204,6 +261,7 @@ export default {
 
             financials: [],
             reports: [],
+            annual_report:[],
             financialAndReports: [],
             banner:''
         }
@@ -223,6 +281,8 @@ export default {
                 var reverseBaseonKeys = Object.keys(res.data.financials).reverse();
                 const reverseBaseonValues2 = Object.values(res.data.reports).reverse();
                 var reverseBaseonKeys2 = Object.keys(res.data.reports).reverse();
+                const reverseBaseonValues3 = Object.values(res.data.annual_report).reverse();
+                var reverseBaseonKeys3 = Object.keys(res.data.annual_report).reverse();
                 console.log(res.data.financials)
                 var i = 0;
 
@@ -242,8 +302,14 @@ export default {
                         i += 1
                     }
                 )
-
-
+                i = 0
+                reverseBaseonValues3.forEach((elem) => {
+                        let obj = {}
+                        obj[reverseBaseonKeys3[i]] = elem
+                        this.annual_report.push(obj);
+                        i += 1
+                    }
+                )
                 console.log(this.financialAndReports)
 
             })
