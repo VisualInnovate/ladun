@@ -244,7 +244,7 @@
                     <!-- <img class="w-[24%] mx-auto" src="../../img/icon-area.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2  dark:text-white dark:bg-black">
                         <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-area.png">
+                             src="../../img/project_icon/Area.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  dark:text-white dark:bg-black ">{{ $t('areaOfLand') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.land_area }} {{ $t('areaUnit') }}</p>
@@ -271,7 +271,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/buildings-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2  dark:text-white dark:bg-black">
                         <img class="w-[20%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-commercials1.png">
+                           src="../../img/project_icon/Residential.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  dark:text-white dark:bg-black  ">{{ $t('Floors_Number') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.units_number }}</p>
@@ -296,7 +296,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-services.png">
+                                 src="../../img/project_icon/Facilities.svg">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black    dark:text-white dark:bg-black">{{ $t('facilities') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.facilities }}</p>
@@ -309,7 +309,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mall.png">
+                           src="../../img/project_icon/Commercial.svg">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  dark:text-white dark:bg-black ">{{ $t('commercial')  }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.commercial }}</p>
@@ -336,7 +336,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-goverment.png">
+                          src="../../img/project_icon/untitled.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center  dark:text-white dark:bg-black">{{ $t('government') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black" >{{ project.government }}</p>
@@ -349,7 +349,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <diV class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[35%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-learning.png">
+                             src="../../img/project_icon/Educational.svg">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black text-center  dark:text-white dark:bg-black">{{ $t('educational') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.educational }}</p>
@@ -362,7 +362,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-gardens.png">
+                             src="../../img/project_icon/Garden.png">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black  dark:text-white dark:bg-black ">{{ $t('gardens') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.gardens }}</p>
@@ -375,7 +375,7 @@
                     <!-- <img class="w-[20%] mx-auto" src="../../img/pyramid-icon.png"> -->
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <img class="w-[24%] md:w-[50%] m-auto"
-                             src="https://sauditharwa.com/wp-content/uploads/2016/09/p-icons-c-mosques.png">
+                        src="../../img/project_icon/Mosque.svg">
                         <div class="my-auto mx-auto text-[14px]">
                             <p class="text-black   dark:text-white dark:bg-black ">{{ $t('mosque') }}</p>
                             <p class="font-bold text-center text-lg text-black  dark:text-white dark:bg-black">{{ project.mosque }}</p>
