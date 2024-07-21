@@ -43,6 +43,7 @@ Route::get('/financials',function (){
 
     $financials = \App\Models\Financial::orderBy('created_at','DESC')->get();
     $year = \App\Models\Year::orderBy('created_at','DESC')->get();
+    $annual_report = \App\Models\AnnualReportsAuditCommittee::orderBy('created_at','DESC')->get();
 
     return response ([
         'financials'=>$financials->groupBy(function($val) {
@@ -50,6 +51,9 @@ Route::get('/financials',function (){
             return Carbon::parse($val->financial_date)->format('Y');
         }),
         'reports'=>$year->groupBy(function($val) {
+            return Carbon::parse($val->report_date)->format('Y');
+        }),
+        'annual_report'=>$annual_report->groupBy(function($val) {
             return Carbon::parse($val->year_date)->format('Y');
         }),
         'financialsAndYear'=>\App\Models\Financial::select('financial_file',DB::raw('YEAR(financials.financial_date) AS Date'),DB::raw('financials.title'))->addSelect(

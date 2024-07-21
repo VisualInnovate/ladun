@@ -5,10 +5,12 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\AnnualReportsAuditCommitteeResource\Pages;
 use App\Models\AnnualReportsAuditCommittee;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Livewire\TemporaryUploadedFile;
 
 class AnnualReportsAuditCommitteeResource extends Resource
 {
@@ -28,7 +30,10 @@ class AnnualReportsAuditCommitteeResource extends Resource
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\DatePicker::make('report_date')
                     ->required(),
-                Forms\Components\FileUpload::make('report_file')
+                FileUpload::make('report_file')->acceptedFileTypes(['application/pdf'])
+                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        return (string) str($file->getClientOriginalName())->prepend('custom-prefix-');
+                    })
                     ->label('Upload Report'),
             ]);
     }
