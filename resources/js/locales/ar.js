@@ -88,7 +88,7 @@ export default {
     list_money: "القوائم الماليه",
     header_finncial: " القوائم المالية",
     investor_banner: "علاقات المستثمرين",
-    finncial_banner: "البيانات المالية ",
+    finncial_banner: "القوائم المالية ",
     call_us: "اتصل بنا",
     video: "الفيديو",
     modale: "النماذج",
