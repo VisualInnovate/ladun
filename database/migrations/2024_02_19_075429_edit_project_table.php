@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('projects',function (Blueprint $table){
-            $table->string('video_url');
-            $table->string('video_img');
+//            $table->string('video_url');
+//            $table->string('video_img');
         });
     }
 

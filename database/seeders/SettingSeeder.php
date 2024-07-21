@@ -26,6 +26,7 @@ class SettingSeeder extends Seeder
             'companies'=>'11',
             'developed_buildings'=>'250',
             'developing_buildings'=>'19673',
+            'investments'=>'500',
         ]);
     }
 }
