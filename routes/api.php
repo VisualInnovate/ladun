@@ -51,10 +51,10 @@ Route::get('/financials',function (){
             return Carbon::parse($val->financial_date)->format('Y');
         }),
         'reports'=>$year->groupBy(function($val) {
-            return Carbon::parse($val->report_date)->format('Y');
+            return Carbon::parse($val->year_date)->format('Y');
         }),
         'annual_report'=>$annual_report->groupBy(function($val) {
-            return Carbon::parse($val->year_date)->format('Y');
+            return Carbon::parse($val->report_date)->format('Y');
         }),
         'financialsAndYear'=>\App\Models\Financial::select('financial_file',DB::raw('YEAR(financials.financial_date) AS Date'),DB::raw('financials.title'))->addSelect(
 
