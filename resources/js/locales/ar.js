@@ -28,7 +28,7 @@ export default {
     projectsInvestment: "مليار ريال سعودي إجمالي قيمة المشاريع ",
     unitsUnderProcess: "   مليون متر مربع   إجمالي مساحة المشاريع",
     projectsRevenue: "مليار ريال سعودي إجمالي قيمة المشاريع",
-    choose: "إختر",
+    choose: "اختر",
     shareYourInterestWithUs: "سجل اهتمامك معنا وسيتم التواصل معكم قريباً !",
     whoWeAre: "من نحن",
     aboutOurCompany: "عن شركتنا",
