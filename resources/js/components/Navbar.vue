@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="z-50">
         <nav
             class="z-50 flex items-center  py-4 top-0 h-[100px] w-full max-w-[1500px] mx-auto"
             aria-label="Global">

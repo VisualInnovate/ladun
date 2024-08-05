@@ -1,6 +1,6 @@
 <template>
     <dropdown
-        class="hover:cursor-pointer [&>div]:w-full w-[30%] lg:w-[20%] h-10 bottom-0 origin-top  dark:text-[white] rtl:-translate-x-[100%] ltr:translate-x-[100%] lg:rtl:-translate-x-[199%] lg:ltr:translate-x-[199%] -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
+        class="hover:cursor-pointer z-30 [&>div]:w-full w-[30%] lg:w-[20%] h-10 bottom-0 origin-top  dark:text-[white] rtl:-translate-x-[100%] ltr:translate-x-[100%] lg:rtl:-translate-x-[199%] lg:ltr:translate-x-[199%] -translate-y-10 rounded-full hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-50  dark:bg-brown-600 dark:hover:bg-brown-700 dark:focus:ring-dark-brown-800  bg-dark-brown ">
         <template #trigger>
                     <span class="w-full inline-flex justify-between px-4 text-white">
                         <span class="m-auto">{{ $t('choose') }}</span>
@@ -26,14 +26,14 @@
 
         </list-group>
     </dropdown>
-    <Modal class="dark:bg-black z-50"  v-if="isShowModal" @close="closeModal">
+    <Modal class="dark:bg-black z-30"  v-if="isShowModal" @close="closeModal">
         <template #header>
             <div class="flex items-center  text-lg">
                 {{$t('shareYourInterests')}}
             </div>
         </template>
             <template #body >
-                <form class=" space-y-2 z-50" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class=" space-y-2 z-30" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D8d0000060W7M">
                       <input type=hidden name="retURL" value="https://www.ladun.sa/ar">
