@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-light-footer dark:bg-black  text-grey py-1 md:py-1 px-1 md:px-2 mb-1 md:mb-2" >
+    <div class="bg-light-footer dark:bg-black  text-grey py-1 md:py-1 px-1 md:px-2 mb-1 md:mb-2 shadow-md" >
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-8  py-0 md:py-4" >
             <!-- Logo and Social Icons -->
             <div class="flex flex-col justify-center items-center md:items-start">
-                <img :src="DarkLogo" alt="Logo_darK" class="mb-4 h-[52%] dark:hidden" style="width:40%;padding-top:30px" />
-                <img :src="Lightlogo" alt="Logo_darK" class="mb-4 h-[52%] hidden dark:block" style="width:40%;padding-top:30px" />
+                <img :src="DarkLogo" alt="Logo_darK" class="mb-4 w-[190px] h-[100px] dark:hidden"  />
+                <img :src="Lightlogo" alt="Logo_darK" class="mb-4 w-[190px] h-[100px] hidden dark:block" />
                 <div class="flex justify-center md:justify-start space-x-2 mb-4">
                     <template v-for="icon in icons">
                         <a :href="icon.href" target="_blank" class="px-2 justify-between">
@@ -50,7 +50,7 @@
 
 <script setup>
 import DarkLogo from "../../js/lolo1.png";
-import Lightlogo from "../../img/logo.png";
+import Lightlogo from "../../js/lolo2.png";
 import facebookIcon from "../../img/light_footer_facebook.svg";
 import twitterIcon from "../../img/x.svg";
 import instagramIcon from "../../img/light_footer_instagram.svg";

@@ -23,7 +23,7 @@
                      class="relative rounded-2xl border border-light-brown overflow-hidden  dark:bg-gray-800  content-center p-2 pb-8  pt-5 items-center bg-[#fbfbfb] mb-12 w-[100%]   mx-auto">
                     <div class="w-full md:w-[70%]  m-auto">
 
-                        <img style="transform: scale(1.05);" class="img-companies h-full bg-[white] rounded-full border-2 mb-4 m-auto"  :src="company.media[0]?.original_url"
+                        <img style="transform: scale(1.05);" class="img-companies max-h-[171px] bg-[white] rounded-full border-2 mb-4 m-auto"  :src="company.media[0]?.original_url"
                          alt="Sunset in the mountains">
 
                     </div>
