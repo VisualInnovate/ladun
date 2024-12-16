@@ -124,13 +124,13 @@
 
         <!-- share your interest -->
         <div
-            class="rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black z-50 dark:text-[white] bg-gray-100 w-[80%] lg:w-[40%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
+            class="hidden rounded-2xl border-2 border-yellow-300 mt-20 dark:bg-black z-50 dark:text-[white] bg-gray-100 w-[80%] lg:w-[40%] h-14  mx-auto text-center font-light py-2 my-5" id="form">
             {{ $t('shareYourInterestWithUs') }}
         </div>
 
 
     </section>
-      <Modal  :formShow="isShowModal"/>
+      <!-- <Modal  :formShow="isShowModal"/> -->
     <section id="project-latst"   class="bg-white z-1 dark:bg-black">
         <div class="grid grid-cols-4 gap-4 py-10 bg-white dark:bg-black">
             <h2 id="latest_project_header bg-white"
