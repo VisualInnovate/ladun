@@ -89,14 +89,14 @@
                             <p class="block text-sm dark:text-[white]" style="font-size: 12px;">{{ $t('affiliate') }}</p></div>
                     </div>
 
-                     <div class="grid grid-cols-3 justify-center ">
+                     <!-- <div class="grid grid-cols-3 justify-center ">
                         <img style="width: 60px; height: 60px;" :src="setting?.investments_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
                         <div class="my-auto col-span-2 text-center"><strong class="text-3xl truncate text-dark-brown">+
                             <number ref="number5" :from="0" :to="setting?.investments" :delay="3" :duration="3"
                                     easing="Power1.easeOut"/>
                         </strong>
                         <p class="block dark:text-[white]" style="font-size: 12px;">{{ $t('Investment_project') }}</p></div>
-                    </div>
+                    </div> -->
 
                     <div class="grid grid-cols-3 justify-center ">
                         <img style="width: 60px; height: 60px;" :src="setting?.developing_buildings_image?.url" alt="projects_areas" class="my-auto mx-auto"/>
