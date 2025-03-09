@@ -150,7 +150,12 @@ class ProjectResource extends Resource
                         Repeater::make('video')
                             ->relationship('mediable')
                             ->schema([
-                                TextInput::make('url')->label(__('video')),
+                                TextInput::make('url')
+                                ->label(__('Video URL'))
+                                ->required()
+                                ->url() // Ensures the input is a valid URL
+                                ->placeholder('https://example.com/video')
+                                ->hint('Enter a valid video URL'),
                             ])
                     ])
                     ->collapsed()->columns(1),
@@ -164,7 +169,8 @@ class ProjectResource extends Resource
                             ->relationship('mediable360')
                             ->disabled( fn(Closure $get) => !$get('is_image'))
                             ->schema([
-                                TextInput::make('url')->label(__('video')),
+
+
                             ]),
                             FileUpload::make('video_img')->label(__('video img'))->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
                             return (string)str($file->getClientOriginalName())->prepend('custom-prefix-');
