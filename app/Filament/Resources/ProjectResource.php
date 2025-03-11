@@ -147,16 +147,17 @@ class ProjectResource extends Resource
                     ->columns(3),
                 Section::make(__('video'))
                     ->schema([
-                        Repeater::make('video360')
-                        ->relationship('mediable360')
-                        ->schema([
-                            TextInput::make('url') // Ensure this field exists
+                        Repeater::make('video')
+                            ->relationship('mediable')
+                            ->schema([
+                                TextInput::make('url')
                                 ->label(__('Video URL'))
                                 ->required()
-                                ->url()
+                                ->url() // Ensures the input is a valid URL
                                 ->placeholder('https://example.com/video')
                                 ->hint('Enter a valid video URL'),
-                        ])
+                            ])
+                    ])
                     ->collapsed()->columns(1),
 
 
