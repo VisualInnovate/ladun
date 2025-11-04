@@ -60,31 +60,30 @@ class ConnectResource extends Resource
                             ->label(__('Region'))
                             ->maxLength(255),
 
-                        Textarea::make('message')
-                            ->label(__('Message'))
-                            ->rows(4)
-                            ->maxLength(500),
+                        TextInput::make('message')
+                            ->label(__('Project name'))
+                            ->maxLength(255),
                     ])
                     ->columns(2),
             ]);
     }
 
 
-public static function table(Table $table): Table
-{
-    return $table
-        ->columns([
-            TextColumn::make('id')->label(__('id'))->sortable(),
-            TextColumn::make('first_name')->label(__('First name'))->searchable(),
-            TextColumn::make('last_name')->label(__('Last name'))->searchable(),
-            TextColumn::make('email')->label(__('email')),
-            TextColumn::make('phone')->label(__('phone')),
-            TextColumn::make('ownership')->label(__('Ownership')),
-            TextColumn::make('area')->label(__('Region')),
-            TextColumn::make('created_at')->label(__('created_at'))->dateTime()->sortable(),
-        ])
-        ->filters([]);
-}
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('id')->label(__('id'))->sortable(),
+                TextColumn::make('first_name')->label(__('First name'))->searchable(),
+                TextColumn::make('last_name')->label(__('Last name'))->searchable(),
+                TextColumn::make('email')->label(__('email')),
+                TextColumn::make('phone')->label(__('phone')),
+                TextColumn::make('ownership')->label(__('Ownership')),
+                TextColumn::make('area')->label(__('Region')),
+                TextColumn::make('created_at')->label(__('created_at'))->dateTime()->sortable(),
+            ])
+            ->filters([]);
+    }
 
 
 

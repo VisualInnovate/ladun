@@ -14,8 +14,8 @@ class ConnectController extends Controller
             'last_name' => 'required|string|max:100',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
-            'ownership' => 'required|string|max:255',
-            'area' => 'required|string|max:255',
+            'ownership' => 'nullable|string|max:255',
+            'area' => 'nullable|string|max:255',
             'message' => 'required|string|max:500',
         ]);
 
