@@ -210,3 +210,7 @@ Route::post('/search ',function (Request $request){
        'mediaCenter'=>  \App\Models\MediaCenter::with('media')->where('content->'.$request->local, 'LIKE','%'.$request->q.'%')->orWhere('title->'.$request->local, 'LIKE','%'.$request->q.'%')->get()
     ]);
 });
+
+
+
+Route::post('/connect',[\App\Http\Controllers\ConnectController::class,'store']);
