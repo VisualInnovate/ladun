@@ -774,19 +774,17 @@
 
                         <!--                              action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"-->
                         <!--                              method="POST"-->
-                        <form class="grid gap-y-10 mx-5"
+                        <form @submit.prevent="submit" class="grid gap-y-10 mx-5"
 
                         >
 
                             <div class=" grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
-                                <input type=hidden name="oid" value="00D8d0000060W7M">
-                                <input type=hidden name="retURL" value="https://www.ladun.sa/ar">
-                                <input id="a013G000001hMGOQA2" maxlength="255" name="a013G000001hMGOQA2" size="20"
-                                       type="hidden"/>  <!-- Object Of Interest -->
+                                <!-- Object Of Interest -->
                                 <!-- This field should not appear to the user and shall be filled automatically -->
                                 <!-- choose your inquiry -->
 
                                 <input
+                                    required
                                     type="text"
                                     id="first_name" maxlength="40" name="first_name"
                                     aria-describedby="helper-text-explanation"
@@ -795,6 +793,7 @@
                                     :placeholder="$t('FirstName')"
                                 />
                                 <input
+                                    required
                                     type="text"
                                     id="last_name" maxlength="80" name="last_name"
                                     aria-describedby="helper-text-explanation"
@@ -805,6 +804,7 @@
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
                                 <input
+
                                     type="text"
                                     id="mobile" maxlength="40" name="mobile"
                                     v-model="mobile"
@@ -813,6 +813,7 @@
                                     :placeholder="$t('PhoneNumber')"
                                 />
                                 <input
+
                                     type="email"
                                     id="email" maxlength="80" name="email"
                                     aria-describedby="helper-text-explanation"
@@ -867,7 +868,7 @@
                             </div>
 
                             <button
-                                type="submit" @click="submit"
+                                type="submit"
                                 class="bg-dark-brown mb-[1%] py-2 m-auto text-white w-[45%] rounded-3xl"
                             >
                                 {{ $t("sendNow") }}
@@ -910,6 +911,7 @@ import {element} from "tw-elements/dist/src/js/util";
 import {CircleProgressBar} from 'circle-progress.vue';
 
 export default {
+
     components: {
         Input,
         Dropdown,
@@ -966,19 +968,27 @@ export default {
         },
         submit() {
             // alert(this.status)
-            axios.post(`https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D8d0000060W7M`, {
+            axios.post(`/api/connect`, {
                 "first_name": this.first_name,
                 "last_name": this.last_name,
-                "mobile": this.mobile,
+                "phone": this.mobile,
                 "email": this.email,
-                "oid": "00D3G0000008knU",
-                "retURL": "http://google.com",
-                "00N3G00000IEQrA": this.status + "-" + this.region + " Region",
-                "00N3G00000FV0J9": '',
+                "ownership": this.status,
+                "area": this.region,
+                "message": this.project.title[this.$i18n.locale],
+
+
 
             })
                 .then(res => {
-                    // this.project = Vue.util.extend({}, res.data.data)
+
+                this.first_name='',
+                 this.last_name='',
+                 this.mobile='',
+                 this.email='',
+                 this.status='',
+                 this.region=''
+
 
                 })
                 .catch((error) => console.log(error))
@@ -1114,7 +1124,5 @@ export default {
     width: 100%;
 }
 
-.circle-progress__percentage {
-    color:
-}
+
 </style>
