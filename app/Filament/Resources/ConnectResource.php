@@ -13,6 +13,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ConnectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -69,21 +70,28 @@ class ConnectResource extends Resource
     }
 
 
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                TextColumn::make('id')->label(__('id'))->sortable(),
-                TextColumn::make('first_name')->label(__('First name'))->searchable(),
-                TextColumn::make('last_name')->label(__('Last name'))->searchable(),
-                TextColumn::make('email')->label(__('email')),
-                TextColumn::make('phone')->label(__('phone')),
-                TextColumn::make('ownership')->label(__('Ownership')),
-                TextColumn::make('area')->label(__('Region')),
-                TextColumn::make('created_at')->label(__('created_at'))->dateTime()->sortable(),
+public static function table(Table $table): Table
+{
+    return $table
+        ->columns([
+            TextColumn::make('id')->label(__('ID'))->sortable(),
+            TextColumn::make('first_name')->label(__('First name'))->searchable(),
+            TextColumn::make('last_name')->label(__('Last name'))->searchable(),
+            TextColumn::make('email')->label(__('Email')),
+            TextColumn::make('phone')->label(__('Phone')),
+            TextColumn::make('ownership')->label(__('Ownership')),
+            TextColumn::make('area')->label(__('Region')),
+            TextColumn::make('created_at')->label(__('Created at'))->dateTime()->sortable(),
+        ])
+        ->filters([
+            //
             ])
-            ->filters([]);
-    }
+        ->actions([
+            DeleteAction::make(),
+        ])
+        ->bulkActions([]);
+}
+
 
 
 
