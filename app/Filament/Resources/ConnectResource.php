@@ -102,4 +102,21 @@ class ConnectResource extends Resource
             'edit' => Pages\EditConnect::route('/{record}/edit'),
         ];
     }
+
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return __('Connects');
+    }
+
+
+    public static function getLabel(): ?string
+    {
+        return __('Connects');
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return __('Connects');
+    }
 }
