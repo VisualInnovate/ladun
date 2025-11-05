@@ -120,7 +120,10 @@ export default {
     utilities: "خدمات المشروع",
     downloads: "التنزيلات",
     project360: "جوله افتراضيه 360",
-
+ "messageSentSuccessfully": "تم تسجيل الإهتمام  بنجاح!",
+    "weWillContactYouSoon": "سنتواصل معك قريباً",
+    "errorSendingMessage": "حدث خطأ أثناء إرسال الرسالة",
+    "pleaseTryAgain": "الرجاء المحاولة مرة أخرى",
     askUs: "استفسر الآن",
     ifYouFaceAProplem: "اذا واجهتك أي مشكلة في التقديم ",
     sendUsNow: "راسلنا الآن",
