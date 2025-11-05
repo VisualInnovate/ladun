@@ -127,7 +127,10 @@ export default {
     downloads: "Downloads",
     projectModels: "Project Models",
     askUs: "INQUIRE NOW",
-
+ "messageSentSuccessfully": "Message Sent Successfully!",
+    "weWillContactYouSoon": "We will contact you soon",
+    "errorSendingMessage": "Error Sending Message",
+    "pleaseTryAgain": "Please try again later",
     ifYouFaceAProplem: "If You face A problem, please ",
     sendUsNow: "email us now",
     submitted: "data submitted successfully",

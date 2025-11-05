@@ -886,7 +886,18 @@
         </div>
 
     </section>
-
+<div class="toast-container">
+  <Toast
+    v-for="toast in toasts"
+    :key="toast.id"
+    :message="toast.message"
+    :description="toast.description"
+    :type="toast.type"
+    :position="toast.position"
+    :duration="toast.duration"
+    @close="removeToast(toast.id)"
+  />
+</div>
 
     <LightFooter/>
 </template>
@@ -906,6 +917,7 @@ import VueCarousel from "@/components/VueCarousel.vue";
 import {Progress} from 'flowbite-vue'
 import {ref} from "vue";
 import {element} from "tw-elements/dist/src/js/util";
+import Toast from '../components/Toast.vue'
 
 
 import {CircleProgressBar} from 'circle-progress.vue';
@@ -913,6 +925,7 @@ import {CircleProgressBar} from 'circle-progress.vue';
 export default {
 
     components: {
+        Toast,
         Input,
         Dropdown,
         LightFooter,
@@ -944,8 +957,8 @@ export default {
             videoo: "",
             recompute: 0,
             rephases: [],
-            flag: 1
-
+            flag: 1,
+            toasts: []
 
         }
     },
@@ -957,7 +970,7 @@ export default {
                 console.log(gallery)
                 return Object.values(gallery).map((image) => {
                     return {
-                        src: image.original_url,
+                        src: image?.original_url,
                         alt: image.name
                     }
                 })
@@ -966,33 +979,57 @@ export default {
             }
 
         },
-        submit() {
-            // alert(this.status)
-            axios.post(`/api/connect`, {
-                "first_name": this.first_name,
-                "last_name": this.last_name,
-                "phone": this.mobile,
-                "email": this.email,
-                "ownership": this.status,
-                "area": this.region,
-                "message": this.project.title[this.$i18n.locale],
-
-
-
+       showToast(message, type = 'info', description = '', duration = 3000) {
+            const id = Date.now()
+            this.toasts.push({
+                id,
+                message,
+                description,
+                type,
+                position: 'top-right',
+                duration
             })
-                .then(res => {
+            },
+    removeToast(id) {
+      this.toasts = this.toasts.filter(toast => toast.id !== id)
+    },
+    submit() {
+      axios.post(`/api/connect`, {
+        "first_name": this.first_name,
+        "last_name": this.last_name,
+        "phone": this.mobile,
+        "email": this.email,
+        "ownership": this.status,
+        "area": this.region,
+        "message": this.project.title[this.$i18n.locale],
+      })
+      .then(res => {
+        // Success toast
+        this.showToast(
+          this.$t('messageSentSuccessfully'),
+          'success',
+          this.$t('weWillContactYouSoon')
+        )
 
-                this.first_name='',
-                 this.last_name='',
-                 this.mobile='',
-                 this.email='',
-                 this.status='',
-                 this.region=''
+        // Reset form
+        this.first_name = ''
+        this.last_name = ''
+        this.mobile = ''
+        this.email = ''
+        this.status = 'Buy'
+        this.region = 'Eastern'
+      })
+      .catch((error) => {
+        console.log(error)
+        // Error toast
+        this.showToast(
+          this.$t('errorSendingMessage') || 'Error sending message',
+          'error',
+          this.$t('pleaseTryAgain') || 'Please try again later'
+        )
+      })
+    }
 
-
-                })
-                .catch((error) => console.log(error))
-        }
 
     },
     computed: {
