@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Connect;
 use Illuminate\Http\Request;
+use App\Mail\NewContactCreated;
+use Illuminate\Support\Facades\Mail;
 
 class ConnectController extends Controller
 {
@@ -20,6 +22,8 @@ class ConnectController extends Controller
         ]);
 
         $connect = Connect::create($validated);
+
+        Mail::send(new NewContactCreated($connect));
 
 
         return response()->json(['message' => 'Connect request submitted successfully.', 'data' => $connect], 200);
