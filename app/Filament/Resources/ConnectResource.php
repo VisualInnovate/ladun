@@ -17,6 +17,7 @@ use Filament\Tables\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ConnectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use App\Filament\Resources\ConnectResource\RelationManagers;
 
 class ConnectResource extends Resource
@@ -70,27 +71,32 @@ class ConnectResource extends Resource
     }
 
 
-public static function table(Table $table): Table
-{
-    return $table
-        ->columns([
-            TextColumn::make('id')->label(__('ID'))->sortable(),
-            TextColumn::make('first_name')->label(__('First name'))->searchable(),
-            TextColumn::make('last_name')->label(__('Last name'))->searchable(),
-            TextColumn::make('email')->label(__('Email')),
-            TextColumn::make('phone')->label(__('Phone')),
-            TextColumn::make('ownership')->label(__('Ownership')),
-            TextColumn::make('area')->label(__('Region')),
-            TextColumn::make('created_at')->label(__('Created at'))->dateTime()->sortable(),
-        ])
-        ->filters([
-            //
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('id')->label(__('ID'))->sortable(),
+                TextColumn::make('first_name')->label(__('First name'))->searchable(),
+                TextColumn::make('last_name')->label(__('Last name'))->searchable(),
+                TextColumn::make('message')->label(__('Project name'))->limit(50),
+                TextColumn::make('email')->label(__('email')),
+                TextColumn::make('phone')->label(__('phone')),
+                TextColumn::make('ownership')->label(__('Ownership')),
+                TextColumn::make('area')->label(__('Region')),
+                TextColumn::make('created_at')->label(__('created at'))->dateTime()->sortable(),
             ])
-        ->actions([
-            DeleteAction::make(),
-        ])
-        ->bulkActions([]);
-}
+            ->filters([
+                //
+            ])
+            ->actions([
+                DeleteAction::make(),
+            ])
+            ->headerActions([
+                ExportAction::make(),
+            ])
+
+            ->bulkActions([]);
+    }
 
 
 
