@@ -23,18 +23,16 @@ class Project extends  Model implements HasMedia
         'email',
         'address',
         'attachment',
-         'video_url',
-         'video_img',
+        'video_url',
+        'video_img',
         'content',
         'is_published',
         'Land_area',
         'building_area',
         'units_number',
         'models_number',
-        // 'department_id',
         'region_id',
         'downloads_text',
-
         'crm_id',
         'facilities',
         'commercial',
@@ -101,12 +99,38 @@ class Project extends  Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('projects')
-             ->singleFile();
+             ->singleFile()
+             ->useDisk('public')
+             ->withResponsiveImages();
              
-        $this->addMediaCollection('project_partners');
-        $this->addMediaCollection('banner')->singleFile();
-        $this->addMediaCollection('attachments');
-        $this->addMediaCollection('download_image')->singleFile();
+        $this->addMediaCollection('project_partners')
+             ->useDisk('public');
+             
+        $this->addMediaCollection('banner')
+             ->singleFile()
+             ->useDisk('public');
+             
+        $this->addMediaCollection('attachments')
+             ->useDisk('public');
+             
+        $this->addMediaCollection('download_image')
+             ->singleFile()
+             ->useDisk('public');
+    }
+    
+    public function registerMediaConversions(\Spatie\MediaLibrary\MediaCollections\Models\Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(150)
+            ->height(150)
+            ->sharpen(10)
+            ->nonQueued();
+            
+        $this->addMediaConversion('preview')
+            ->width(300)
+            ->height(300)
+            ->sharpen(10)
+            ->nonQueued();
     }
 
     // public function department()

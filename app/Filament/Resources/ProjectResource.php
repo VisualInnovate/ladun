@@ -29,7 +29,6 @@ use Filament\Forms\Components\FileUpload;
 use Livewire\TemporaryUploadedFile;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Resources\Concerns\Translatable;
-use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Section;
@@ -37,12 +36,17 @@ use Filament\Forms\Components\Repeater;
 
 class ProjectResource extends Resource
 {
-    use Translatable;
-
-    protected static ?string $model = Project::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-office-building';
     protected static ?int $NavigationSort = 1;
+    
+    protected function boot()
+    {
+        parent::boot();
+        
+        // Ensure URLs are generated with HTTPS in production
+        if (app()->environment('production')) {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+    }
 
 
     public static function form(Form $form): Form
@@ -73,7 +77,23 @@ class ProjectResource extends Resource
 
                         SpatieMediaLibraryFileUpload::make('logo')
                             ->hint('max image dimension 150px * 150px')
-                            ->label(__('logo'))->collection('projects'),
+                            ->label(__('logo'))
+                            ->collection('projects')
+                            ->image()
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('1:1')
+                            ->imageResizeTargetWidth(300)
+                            ->imageResizeTargetHeight(300)
+                            ->conversion('preview')
+                            ->preserveFilenames()
+                            ->openable()
+                            ->downloadable()
+                            ->imageEditor()
+                            ->panelLayout('grid')
+                            ->panelAspectRatio('1:1')
+                            ->panelColumns(1)
+                            ->visibility('public')
+                            ->imagePreviewHeight('300px'),
 
                         SpatieMediaLibraryFileUpload::make('Project partners')
                             ->hint('max image dimension 150px * 150px')
@@ -282,9 +302,11 @@ class ProjectResource extends Resource
                 SpatieMediaLibraryImageColumn::make('logo')
                     ->label(__('Logo'))
                     ->collection('projects')
+                    ->conversion('thumb')
                     ->width(80)
                     ->height(80)
-                    ->circular(),
+                    ->circular()
+                    ->grow(false),
             ])
             ->filters([
                 //
@@ -292,7 +314,6 @@ class ProjectResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -301,9 +322,7 @@ class ProjectResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
