@@ -37,11 +37,11 @@ use Filament\Forms\Components\Repeater;
 class ProjectResource extends Resource
 {
     protected static ?int $NavigationSort = 1;
-    
+
     protected function boot()
     {
         parent::boot();
-        
+
         // Ensure URLs are generated with HTTPS in production
         if (app()->environment('production')) {
             \Illuminate\Support\Facades\URL::forceScheme('https');
@@ -338,6 +338,16 @@ class ProjectResource extends Resource
     public static function getTranslatableLocales(): array
     {
         return ['en', 'ar'];
+    }
+
+    public static function getTranslatableAttributes(): array
+    {
+        return [
+            'name',
+            'content',
+            'address',
+            'downloads_text'
+        ];
     }
 
 
