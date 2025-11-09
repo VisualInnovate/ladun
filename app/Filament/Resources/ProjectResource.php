@@ -8,7 +8,6 @@ use App\Models\Department;
 use App\Models\Project;
 use App\Models\Region;
 use Filament\Forms;
-use Filament\Forms\Components\Fieldset;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -353,7 +352,7 @@ class ProjectResource extends Resource
 
     public static function getDefaultTranslatableLocale(): ?string
     {
-        return 'ar';
+        return 'ar'; 
     }
 
 
