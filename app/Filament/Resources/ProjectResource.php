@@ -279,12 +279,7 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('name')->label(__('name'))->limit('50')->sortable(),
                 Tables\Columns\TextColumn::make('slug')->label(__('slug'))->limit('50'),
                 IconColumn::make('is_published')->label(trans('is_published'))->boolean(),
-                SpatieMediaLibraryImageColumn::make('logo')
-                    ->label(__('Logo'))
-                    ->collection('projects')
-                    ->width(80)
-                    ->height(80)
-                    ->circular(),
+                SpatieMediaLibraryImageColumn::make('Main Image')->label(__('Main Image'))->collection('projects'),
             ])
             ->filters([
                 //

@@ -98,17 +98,6 @@ class Project extends  Model implements HasMedia
         return $this->hasOne(Location::class);
     }
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('projects')
-             ->singleFile();
-             
-        $this->addMediaCollection('project_partners');
-        $this->addMediaCollection('banner')->singleFile();
-        $this->addMediaCollection('attachments');
-        $this->addMediaCollection('download_image')->singleFile();
-    }
-
     // public function department()
     // {
     //     return $this->belongsTo(Department::class, 'department_id');
