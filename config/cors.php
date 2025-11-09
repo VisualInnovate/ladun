@@ -15,11 +15,26 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie','https://ladun.sa/',],
+    'paths' => [
+        'api/*',
+        'sanctum/csrf-cookie',
+        'storage/*',
+        'media/*',
+        'images/*',
+        'img/*',
+        'uploads/*',
+    ],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'http://localhost',
+        'http://localhost:8000',
+        'https://ladun.sa',
+        'http://ladun.sa',
+        'https://www.ladun.sa',
+        'http://www.ladun.sa',
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -27,8 +42,8 @@ return [
 
     'exposed_headers' => [],
 
-    'max_age' => 0,
+    'max_age' => 60 * 60 * 24, // Cache for 24 hours
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
