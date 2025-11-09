@@ -350,11 +350,6 @@ class ProjectResource extends Resource
         ];
     }
 
-    public static function getDefaultTranslatableLocale(): ?string
-    {
-        return 'ar'; 
-    }
-
 
     protected static function getNavigationGroup(): ?string
     {
