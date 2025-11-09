@@ -823,7 +823,7 @@
                                 />
 
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
+                            <div class="grid hidden  grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
 
                                 <select
                                     class="w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-dark-brown focus:border-dark-brown block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-dark-brown dark:focus:border-dark-brown"
@@ -854,7 +854,7 @@
                                 </select>
 
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
+                            <div class="grid  grid-cols-1 md:grid-cols-2 gap-5 justify-center gap-x-5">
                             <input
 
                                     type="text"
@@ -999,8 +999,6 @@ export default {
         "last_name": this.last_name,
         "phone": this.mobile,
         "email": this.email,
-        "ownership": this.status,
-        "area": this.region,
         "message": this.project.title[this.$i18n.locale],
       })
       .then(res => {
