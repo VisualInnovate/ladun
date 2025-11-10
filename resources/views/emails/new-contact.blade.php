@@ -11,7 +11,5 @@
     <p><strong>Mail:</strong> {{ $contact->email ?? '' }}</p>
     <p><strong>Phone:</strong> {{ $contact->phone ?? '' }}</p>
     <p><strong>Project name:</strong> {{ $contact->message ?? '' }}</p>
-    <p><strong>Ownership:</strong> {{ $contact->ownership ?? '' }}</p>
-    <p><strong>Area:</strong> {{ $contact->area ?? '' }}</p>
 </body>
 </html>

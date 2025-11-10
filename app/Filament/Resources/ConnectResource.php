@@ -53,14 +53,14 @@ class ConnectResource extends Resource
                             ->tel()
                             ->required(),
 
-                        TextInput::make('ownership')
-                            ->label(__('Ownership'))
-                            ->maxLength(255)
-                            ->required(),
+                        // TextInput::make('ownership')
+                        //     ->label(__('Ownership'))
+                        //     ->maxLength(255)
+                        //     ->required(),
 
-                        TextInput::make('area')
-                            ->label(__('Region'))
-                            ->maxLength(255),
+                        // TextInput::make('area')
+                        //     ->label(__('Region'))
+                        //     ->maxLength(255),
 
                         TextInput::make('message')
                             ->label(__('Project name'))
@@ -81,8 +81,8 @@ class ConnectResource extends Resource
                 TextColumn::make('message')->label(__('Project name'))->limit(50),
                 TextColumn::make('email')->label(__('email')),
                 TextColumn::make('phone')->label(__('phone')),
-                TextColumn::make('ownership')->label(__('Ownership')),
-                TextColumn::make('area')->label(__('Region')),
+                // TextColumn::make('ownership')->label(__('Ownership')),
+                // TextColumn::make('area')->label(__('Region')),
                 TextColumn::make('created_at')->label(__('created at'))->dateTime()->sortable(),
             ])
             ->filters([

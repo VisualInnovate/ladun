@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Connect extends Model
 {
     use HasFactory;
-    protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'ownership', 'area', 'message'];
+    protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'message'];
 }
