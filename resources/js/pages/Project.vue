@@ -143,16 +143,18 @@
                         </a>
                     </div>
 
-                    <div v-if="project.project_video">
-                        <iframe
-                            width="560"
-                            height="315"
-                            :src="`https://www.youtube.com/embed/${project.project_video.split('/').pop()}`"
-                            frameborder="0"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                    <div class="lg:mx-auto  mb-3 md:mb-0 flex truncate"
+                         v-if="project.project_video!='' && project.project_video">
+                        <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
 
+                        <a class="px-1 truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
+                           href="#" v-scroll-to="{
+                            el: '#video3d',
+                            offset: -128
+                        }">
+                            {{ $t('video_360') }}
+                        </a>
+                    </div>
 
                     <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
                         <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
@@ -616,27 +618,41 @@
         </div>
     </section>
 <div class=" dark:text-white dark:bg-black"  v-if=" project.video_url!=null">
-    <section id="video3d" class="py-[3%] bg-[white]  dark:text-white dark:bg-black" v-if="project.project_video || project.video_url" >
-        <div class="container lg:w-[75%] mx-auto">
-            <div class="flex  mx-auto ">
-                <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+ <section id="video3d" class="py-8 bg-[white] dark:text-white dark:bg-black" v-if="project.project_video && project.project_video.length && project.project_video[0].url">
+    <div class="container lg:w-[75%] mx-auto">
+      <div class="flex mx-auto mb-5">
+        <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+        <div class="my-auto text-3xl text-light-brown"><p>{{ $t("project360") }}</p></div>
+      </div>
 
-                <div class=" my-auto text-3xl text-light-brown mb-5 "><p> {{ $t("project360") }}</p></div>
-            </div>
-            <div class=" w-full  ">
-               <div v-if="project.project_video != ''" class="grid grid-cols-1"  v-for="por in project.project_video ">
-                <div class=" mt-4 rounded-md  "  v-html="por.url">
-                </div>
-               </div>
-              <a v-else :href="project.video_url" target="_blank">
-                <img :src="'https://ladun.sa/storage/' +project.video_img ">
-                <p>{{  }}</p>
-              </a>
-
-            </div>
-            <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+      <div class="grid grid-cols-1" v-for="vid in project.project_video" :key="vid.id">
+        <div class="relative pt-[56.25%] rounded-md overflow-hidden shadow-lg">
+          <iframe
+            :src="getYouTubeEmbedUrl(vid.url)"
+            class="absolute top-0 left-0 w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr"
+            allowfullscreen>
+          </iframe>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+  </section>
+
+  <!-- Fallback for video_url (external link) -->
+  <section v-else-if="project.video_url" id="video3d" class="py-8 bg-[white] dark:text-white dark:bg-black">
+    <div class="container lg:w-[75%] mx-auto">
+      <div class="flex mx-auto mb-5">
+        <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
+        <div class="my-auto text-3xl text-light-brown"><p>{{ $t("project360") }}</p></div>
+      </div>
+      <a :href="project.video_url" target="_blank" class="block">
+        <img :src="'https://ladun.sa/storage/' + project.video_img" class="w-full rounded-lg shadow-lg" alt="360 Video">
+      </a>
+    </div>
+    <div class="lg:w-[60%] m-auto py-4" style="border-bottom: 2px solid black;"></div>
+  </section>
 </div>
     <!-- end Video -->
     <!-- location -->
