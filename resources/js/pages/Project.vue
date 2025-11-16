@@ -143,18 +143,16 @@
                         </a>
                     </div>
 
-                    <div class="lg:mx-auto  mb-3 md:mb-0 flex truncate"
-                         v-if="project.project_video!='' && project.project_video">
-                        <img src="../../img/360_video.jpg" style="width: 26px;height: 26px">
-
-                        <a class="px-1 truncate relative inline-block after:content-[''] after:absolute after:w-full after:h-[1.5px]  font-normal leading-6 after:rounded-lg after:bg-black after:-bottom-2 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition after:ease-linear after:duration-200 hover:after:origin-bottom-left hover:after:scale-x-100"
-                           href="#" v-scroll-to="{
-                            el: '#video3d',
-                            offset: -128
-                        }">
-                            {{ $t('video_360') }}
-                        </a>
+                    <div v-if="project.project_video">
+                        <iframe
+                            width="560"
+                            height="315"
+                            :src="`https://www.youtube.com/embed/${project.project_video.split('v=')[1]}`"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
 
                     <div class="lg:mx-auto  mb-3 md:mb-0 flex" v-if="project.location">
                         <svg class="my-auto" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
