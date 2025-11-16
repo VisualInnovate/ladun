@@ -147,7 +147,7 @@
                         <iframe
                             width="560"
                             height="315"
-                            :src="`https://www.youtube.com/embed/${project.project_video.split('v=')[1]}`"
+                            :src="`https://www.youtube.com/embed/${project.project_video.split('/').pop()}`"
                             frameborder="0"
                             allowfullscreen>
                         </iframe>
