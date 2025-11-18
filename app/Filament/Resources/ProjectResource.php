@@ -153,7 +153,6 @@ class ProjectResource extends Resource
                                 TextInput::make('url')
                                 ->label(__('Video URL'))
                                 ->required()
-                                ->url() // Ensures the input is a valid URL
                                 ->placeholder('https://example.com/video')
                                 ->hint('Enter a valid video URL'),
                             ])
