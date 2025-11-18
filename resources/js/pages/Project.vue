@@ -603,20 +603,9 @@
             <div class="   dark:text-white dark:bg-black flex justify-center mx-auto">
 
                 <div class="  dark:text-white dark:bg-black">
-             <div
-                v-for="por in project.video"
-                :key="por.id"
-                class="mt-8"
-                >
-                <div class="relative overflow-hidden rounded-lg shadow-lg aspect-video">
-                    <iframe
-                    :src="getYouTubeEmbedUrl(por.url)"
-                    class="absolute top-0 left-0 w-full h-full"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                    ></iframe>
+             <div class="mt-8">
+                <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <div class="w-full h-full" v-html="por.url"></div>
                 </div>
                 </div>
             </div>
@@ -1201,6 +1190,11 @@ export default {
 .carousel img {
     width: 100%;
 }
-
+.aspect-video > div > iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0; left: 0;
+}
 
 </style>
