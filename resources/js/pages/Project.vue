@@ -605,11 +605,10 @@
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
                 <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
-              <div class="mt-8">
-                <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-                    <div class="w-full h-full" v-html="por.url"></div>
+               <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
+                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
                 </div>
-                </div>
+               </div>
             </div>
 
                     <div   class="mx-auto   rounded-xl"></div>
@@ -1173,11 +1172,6 @@ export default {
 .carousel img {
     width: 100%;
 }
-aspect-video > div > iframe {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-  top: 0; left: 0;
-}
+
 
 </style>
