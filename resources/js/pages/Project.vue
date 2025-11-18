@@ -604,13 +604,29 @@
                 <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
                 <!--                    :src="videoo">-->
                 <!--            </iframe>-->
-                <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
-               <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
-                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
-                </div>
-               </div>
-            </div>
+             <section id="video" class="bg-[white] dark:text-white dark:bg-black py-12" v-if="project.video && project.video.length">
+  <div class="container lg:w-[75%] mx-auto">
+    <div class="flex mx-auto mb-10 items-center gap-3">
+      <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- your video icon SVG -->
+        <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z" stroke="#AF9751" stroke-width="1.5"/>
+        <path d="M9.75 14.45V13.25C9.75 11.71 10.84 11.08 12.17 11.85L13.21 12.45L14.25 13.05C15.58 13.82 15.58 15.08 14.25 15.85L13.21 16.45L12.17 17.05C10.84 17.82 9.75 17.19 9.75 15.65V14.45Z" stroke="#AF9751" stroke-width="1.5"/>
+      </svg>
+      <h2 class="text-3xl font-bold text-light-brown">{{ $t("video") }}</h2>
+    </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div v-for="(video, index) in project.video" :key="index" class="w-full">
+        <!-- Responsive Video Wrapper -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg aspect-video bg-black">
+          <div v-html="video.url"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:w-[60%] mx-auto py-4 border-b-2 border-black"></div>
+</section>
                     <div   class="mx-auto   rounded-xl"></div>
 
             </div>
@@ -1173,5 +1189,27 @@ export default {
     width: 100%;
 }
 
+#video iframe,
+#video3d iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+}
 
+/* Responsive container with 16:9 aspect ratio */
+.aspect-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+}
+.aspect-video > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
