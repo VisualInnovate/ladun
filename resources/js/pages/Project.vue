@@ -601,14 +601,24 @@
                 <div class="my-auto  dark:text-white dark:bg-black  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
             <div class="   dark:text-white dark:bg-black flex justify-center mx-auto">
-                <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
-                <!--                    :src="videoo">-->
-                <!--            </iframe>-->
-                <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
-               <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
-                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
+
+                <div class="  dark:text-white dark:bg-black">
+             <div
+                v-for="por in project.video"
+                :key="por.id"
+                class="mt-8"
+                >
+                <div class="relative overflow-hidden rounded-lg shadow-lg aspect-video">
+                    <iframe
+                    :src="getYouTubeEmbedUrl(por.url)"
+                    class="absolute top-0 left-0 w-full h-full"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    ></iframe>
                 </div>
-               </div>
+                </div>
             </div>
 
                     <div   class="mx-auto   rounded-xl"></div>
@@ -993,6 +1003,25 @@ export default {
             }
 
         },
+        getYouTubeEmbedUrl(url) {
+            if (!url) return '';
+
+            let videoId = '';
+
+            // Handle different YouTube URL formats
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|^v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+
+            if (match && match[2].length === 11) {
+            videoId = match[2];
+            } else {
+            // Fallback: try to extract from any string
+            videoId = url.split('v=')[1]?.split('&')[0] || url.split('/').pop();
+            }
+
+            return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
+        },
+
        showToast(message, type = 'info', description = '', duration = 3000) {
             const id = Date.now()
             this.toasts.push({
