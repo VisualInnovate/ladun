@@ -606,10 +606,8 @@
                 <!--            </iframe>-->
                 <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
                <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
-                           <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"
-                            :src="por.url">
-                       </iframe>
-
+                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
+                </div>
                </div>
             </div>
 
