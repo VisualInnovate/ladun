@@ -601,9 +601,11 @@
                 <div class="my-auto  dark:text-white dark:bg-black  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
             </div>
             <div class="   dark:text-white dark:bg-black flex justify-center mx-auto">
-
-                <div class="  dark:text-white dark:bg-black">
-             <div class="mt-8">
+                <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
+                <!--                    :src="videoo">-->
+                <!--            </iframe>-->
+                <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
+              <div class="mt-8">
                 <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
                     <div class="w-full h-full" v-html="por.url"></div>
                 </div>
@@ -992,25 +994,6 @@ export default {
             }
 
         },
-        getYouTubeEmbedUrl(url) {
-            if (!url) return '';
-
-            let videoId = '';
-
-            // Handle different YouTube URL formats
-            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|^v=)([^#&?]*).*/;
-            const match = url.match(regExp);
-
-            if (match && match[2].length === 11) {
-            videoId = match[2];
-            } else {
-            // Fallback: try to extract from any string
-            videoId = url.split('v=')[1]?.split('&')[0] || url.split('/').pop();
-            }
-
-            return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
-        },
-
        showToast(message, type = 'info', description = '', duration = 3000) {
             const id = Date.now()
             this.toasts.push({
@@ -1190,7 +1173,7 @@ export default {
 .carousel img {
     width: 100%;
 }
-.aspect-video > div > iframe {
+aspect-video > div > iframe {
   width: 100% !important;
   height: 100% !important;
   position: absolute;
