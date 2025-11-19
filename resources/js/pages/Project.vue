@@ -575,10 +575,9 @@
 
     <!-- Video -->
 
-    <section id="video" class=" bg-[white]  dark:text-white dark:bg-black" v-if="videoo!='' && videoo">
-        <div class="container lg:w-[75%] m-auto  dark:text-white dark:bg-black">
-            <div class="flex mx-auto  mb-10  dark:text-white dark:bg-black">
-
+      <section id="video" class="bg-[white] dark:text-white dark:bg-black" v-if="videoo!='' && videoo">
+        <div class="container lg:w-[75%] m-auto dark:text-white dark:bg-black">
+            <div class="flex mx-auto mb-10 dark:text-white dark:bg-black">
                 <svg class="my-auto px-1" width="36px" height="36px" viewBox="0 0 24 24" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -598,23 +597,37 @@
                             stroke-linejoin="round"></path>
                     </g>
                 </svg>
-                <div class="my-auto  dark:text-white dark:bg-black  text-3xl text-light-brown"><p> {{ $t("video") }}</p></div>
-            </div>
-            <div class="   dark:text-white dark:bg-black flex justify-center mx-auto">
-                <!--            <iframe class="mx-auto h-[80%] w-[85%] rounded-xl"-->
-                <!--                    :src="videoo">-->
-                <!--            </iframe>-->
-                <div class=" max-w-sm w-full    dark:text-white dark:bg-black">
-               <div class="grid grid-cols-1  dark:text-white dark:bg-black" v-for="por in project.video ">
-                <div class=" mt-4 rounded-md  dark:text-white dark:bg-black  "  v-html="por.url">
+                <div class="my-auto dark:text-white dark:bg-black text-3xl text-light-brown">
+                    <p>{{ $t("video") }}</p>
                 </div>
-               </div>
             </div>
-
-                    <div   class="mx-auto   rounded-xl"></div>
-
+            <div class="dark:text-white dark:bg-black flex justify-center mx-auto">
+                <div class="w-full max-w-4xl">
+                    <div class="grid grid-cols-1 gap-6 dark:text-white dark:bg-black">
+                        <div v-for="por in project.video" :key="por.id" class="w-full">
+                            <!-- Video container with responsive aspect ratio -->
+                            <div class="relative w-full" style="padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+                                <div class="absolute inset-0 w-full h-full">
+                                    <!-- Extract YouTube video ID and create responsive iframe -->
+                                    <iframe
+                                        v-if="getYouTubeId(por.url)"
+                                        :src="'https://www.youtube.com/embed/' + getYouTubeId(por.url)"
+                                        class="w-full h-full rounded-lg shadow-lg"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                    <!-- Fallback for non-YouTube URLs -->
+                                    <div v-else class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
+                                        <p class="text-gray-500">Video content</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="lg:w-[60%] m-auto py-4  dark:text-white dark:bg-black" style="border-bottom: 2px solid black;"></div>
+            <div class="lg:w-[60%] m-auto py-4 dark:text-white dark:bg-black" style="border-bottom: 2px solid black;"></div>
         </div>
     </section>
 <div class=" dark:text-white dark:bg-black"  v-if=" project.video_url!=null">
@@ -716,32 +729,29 @@
         <div class="container mx-auto w-[85%]">
             <div class="flex pb-[5%]">
                 <p class="text-2xl my-auto px-2 text-dark-brown">{{ $t("Download_Project_Files") }}</p>
-                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                        <path
-                            d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
-                            stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path>
-                        <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5"
-                              stroke-linecap="round" stroke-linejoin="round"></path>
-                    </g>
-                </svg>
-            </div>
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="#AAAAAA" stroke="#000000" stroke-width="6"/>
+
+                            <path
+                                d="M 30 40 L 50 70 L 70 40 L 60 40 L 60 30 L 40 30 L 40 40 Z"
+                                fill="#FFFFFF"
+                                stroke="#000000"
+                    stroke-width="3"
+                            />
+                </svg>            </div>
             <div class="lg:w-[60%] grid grid-cols-1 lg:grid-cols-3 m-auto">
                 <a :href="`/storage/${download.project_attachment}`" target="_blank" class="flex"
                    v-for="download in project.downloads">
-                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
-                                stroke="#C4A94C" stroke-width="1.5" stroke-linecap="round"></path>
-                            <path d="M12 2L12 15M12 15L9 11.5M12 15L15 11.5" stroke="#C4A94C" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" >
+                <circle cx="50" cy="50" r="45" fill="#AAAAAA"  stroke-width="6"  stroke="#000000" />
+
+                <path
+                    d="M 30 40 L 50 70 L 70 40 L 60 40 L 60 30 L 40 30 L 40 40 Z"
+                    fill="#FFFFFF"
+                    stroke="#000000"
+                    stroke-width="3"
+                />
+                </svg>
                     <p class="text-2xl p-2 font-bold my-auto">{{ download.name[$i18n.locale] }}</p>
                 </a>
 
@@ -1007,6 +1017,21 @@ export default {
     removeToast(id) {
       this.toasts = this.toasts.filter(toast => toast.id !== id)
     },
+      getYouTubeId(url) {
+            if (!url) return null;
+
+            // Handle iframe embed code
+            const iframeMatch = url.match(/src="[^"]*youtube\.com\/embed\/([^"?]+)/);
+            if (iframeMatch) return iframeMatch[1];
+
+            // Handle YouTube URLs
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[7].length === 11) ? match[7] : null;
+        },
+
+        // ... your existing methods ...
+
     submit() {
       axios.post(`/api/connect`, {
         "first_name": this.first_name,
