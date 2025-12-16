@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('fax');
             $table->text('convert');
             $table->text('email');
+            $table->text('gtm_id')->nullable();
+            $table->text('whatsapp_number')->nullable();
 
         });
     }
