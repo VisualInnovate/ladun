@@ -5,64 +5,91 @@
     <!-- WhatsApp Floating Button - Shown only if whatsappNumber is available -->
     <a
       v-if="whatsappNumber"
-      :href="`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=&type=phone_number&app_absent=0`"
+      :href="whatsappLink"
       target="_blank"
-      class="fixed ltr:right-14 ltr:bottom-16 rtl:left-14 rtl:bottom-16 z-50 transition-transform hover:scale-110"
+      rel="noopener noreferrer"
+      class="fixed ltr:right-6 ltr:bottom-6 rtl:left-6 rtl:bottom-6 z-50 transition-transform hover:scale-110"
     >
-      <img src="../img/whatsaap.png" alt="WhatsApp" class="w-16 h-16 drop-shadow-lg" />
+      <img
+        src="../img/whatsaap.png"
+        alt="Chat on WhatsApp"
+        class="w-16 h-16 drop-shadow-2xl"
+      />
     </a>
   </div>
 </template>
 
-<script>
-import { ref, onMounted } from 'vue';
+<script setup>
+import { ref, computed, onMounted } from 'vue';
 import axios from 'axios';
 
-export default {
-  name: 'AppLayout', // or whatever your component name is
+// Reactive WhatsApp number (fallback if API fails)
+const whatsappNumber = ref('1234567890');
 
-  setup() {
+// Computed WhatsApp link (cleaner and safer)
+const whatsappLink = computed(() => {
+  if (!whatsappNumber.value) return '#';
+  // Remove any non-digit characters and ensure proper formatting
+  const cleanNumber = whatsappNumber.value.replace(/\D/g, '');
+  return `https://api.whatsapp.com/send/?phone=${cleanNumber}&text=Hi!&type=phone_number&app_absent=0`;
+});
 
-    const fetchSettings = async () => {
-      try {
-        const response = await axios.get('/api/settings');
-
-        // The response structure: { settings: [ { ... } ] }
-        const settings = response.data.settings;
-        whatsappNumber.value = settings.whatsapp_number || whatsappNumber.value;
-      } catch (error) {
-        console.error('Failed to fetch settings:', error);
-        // Keep the fallback number if API fails
-      }
-    };
-
-    // Fetch settings when component is mounted
-    onMounted(() => {
-      fetchSettings();
-    });
-
-    return {
-      whatsappNumber,
-    };
-  },
+// Fetch settings from API
+const fetchSettings = async () => {
+  try {
+    const response = await axios.get('/api/settings');
+    const settings = response.data.settings[0] ;
+    console.log(settings.whatsapp_number)
+    if (settings?.whatsapp_number) {
+      whatsappNumber.value = settings.whatsapp_number;
+    }
+  } catch (error) {
+    console.error('Failed to fetch settings:', error);
+    // Fallback number already set above, so we keep it
+  }
 };
+
+// Fetch on component mount
+onMounted(() => {
+  fetchSettings();
+});
 </script>
 
 <style scoped>
-/* Optional: Add a subtle pulse animation for the WhatsApp button */
+/* Pulse animation for WhatsApp button */
 a img {
-  animation: pulse 2s infinite;
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes pulse {
-  0% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.15);
+  }
+}
+
+/* Optional: add a green WhatsApp-like ring */
+a::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.3);
+  animation: ripple 3s infinite;
+  z-index: -1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.6);
+    opacity: 0;
   }
 }
 </style>
