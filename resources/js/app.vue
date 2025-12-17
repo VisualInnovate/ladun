@@ -30,7 +30,7 @@ const whatsappNumber = ref('1234567890');
 const whatsappLink = computed(() => {
   if (!whatsappNumber.value) return '#';
   // Remove any non-digit characters and ensure proper formatting
-  const cleanNumber = whatsappNumber.value.replace(/\D/g, '');
+  const cleanNumber = whatsappNumber.value;
   return `https://api.whatsapp.com/send/?phone=${cleanNumber}&text=Hi!&type=phone_number&app_absent=0`;
 });
 
