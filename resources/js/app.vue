@@ -22,7 +22,6 @@ export default {
   name: 'AppLayout', // or whatever your component name is
 
   setup() {
-    const whatsappNumber = ref('920011560'); // Default fallback number (from your original code)
 
     const fetchSettings = async () => {
       try {
@@ -30,21 +29,7 @@ export default {
 
         // The response structure: { settings: [ { ... } ] }
         const settings = response.data.settings;
-
-        if (settings && settings.length > 0) {
-          const mainSetting = settings[0];
-
-          // Update whatsappNumber if available and valid
-          if (mainSetting.whatsapp_number && mainSetting.whatsapp_number.trim() !== '') {
-            // Remove any non-digit characters if needed (optional)
-            const cleanedNumber = mainSetting.whatsapp_number.replace(/\D/g, '');
-            if (cleanedNumber) {
-              whatsappNumber.value = cleanedNumber.startsWith('966')
-                ? cleanedNumber
-                : '966' + cleanedNumber.replace(/^0/, ''); // Ensure Saudi format if needed
-            }
-          }
-        }
+        whatsappNumber.value = settings.whatsapp_number || whatsappNumber.value;
       } catch (error) {
         console.error('Failed to fetch settings:', error);
         // Keep the fallback number if API fails
