@@ -37,6 +37,8 @@ const whatsappLink = computed(() => {
 // Fetch settings from API
 const fetchSettings = async () => {
   try {
+
+    // Make API call to fetch settings
     const response = await axios.get('/api/settings');
     const settings = response.data.settings[0] ;
     console.log(settings.whatsapp_number)
@@ -48,6 +50,7 @@ const fetchSettings = async () => {
     // Fallback number already set above, so we keep it
   }
 };
+
 
 // Fetch on component mount
 onMounted(() => {
