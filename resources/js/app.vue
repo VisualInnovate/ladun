@@ -45,11 +45,82 @@ const fetchSettings = async () => {
     if (settings?.whatsapp_number) {
       whatsappNumber.value = settings.whatsapp_number;
     }
+    // If GTM ID exists in settings, inject GTM client-side (avoids relying only on server-side rendering)
+    if (settings?.gtm_id) {
+      injectGtm(settings.gtm_id);
+    }
   } catch (error) {
     console.error('Failed to fetch settings:', error);
     // Fallback number already set above, so we keep it
   }
 };
+
+/**
+ * Inject Google Tag Manager script (head) and noscript iframe (body)
+ * This is safe to call multiple times; it checks for existing elements.
+ */
+function injectGtm(gtmId) {
+  try {
+    if (!gtmId) return;
+
+    // Avoid duplicate injection
+    if (document.getElementById('gtm-script') || window.dataLayer && window.dataLayer.__gtm_injected) {
+      return;
+    }
+
+    // Create dataLayer and mark as injected
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    // mark to avoid duplicate attempt
+    window.dataLayer.__gtm_injected = true;
+
+    // Head script
+    const script = document.createElement('script');
+    script.id = 'gtm-script';
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+    // Show debug alert only when explicitly requested by ?gtm_debug=1 or localStorage.gtm_debug = '1'
+    const shouldShowDebugAlert = () => {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('gtm_debug') === '1') return true;
+        if (localStorage.getItem('gtm_debug') === '1') return true;
+      } catch (e) {
+        // ignore
+      }
+      return false;
+    };
+
+    // When script loads, optionally show an alert for debugging and log to console
+    script.onload = () => {
+      try {
+        console.log('GTM script loaded:', gtmId);
+        if (shouldShowDebugAlert()) {
+          alert(`GTM loaded: ${gtmId}`);
+        }
+      } catch (e) {
+        console.error('GTM onload handler error:', e);
+      }
+    };
+
+    document.head.appendChild(script);
+
+    // Noscript fallback
+    if (!document.getElementById('gtm-noscript')) {
+      const nos = document.createElement('noscript');
+      nos.id = 'gtm-noscript';
+      nos.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+      // insert as first child of body for parity with GTM recommended placement
+      if (document.body.firstChild) {
+        document.body.insertBefore(nos, document.body.firstChild);
+      } else {
+        document.body.appendChild(nos);
+      }
+    }
+  } catch (e) {
+    console.error('Failed to inject GTM:', e);
+  }
+}
 
 
 // Fetch on component mount
