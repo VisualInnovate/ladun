@@ -12,16 +12,20 @@ class NewJobApplicationCreated extends Mailable
 
     public $joinUs;
 
-    public function __construct($joinUs)
+    public $locale;
+
+    public function __construct($joinUs, $locale = 'ar')
     {
         $this->joinUs = $joinUs;
+        $this->locale = $locale;
     }
 
     public function build()
     {
         $mail = $this->to('career@ladun.sa')
             ->subject('New Job Application - '.$this->joinUs->name)
-            ->view('emails.new-job-application');
+            ->view('emails.new-job-application')
+            ->with(['locale' => $this->locale]);
 
         $media = $this->joinUs->getFirstMedia('join');
         if ($media) {

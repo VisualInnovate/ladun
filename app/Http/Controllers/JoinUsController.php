@@ -25,8 +25,14 @@ class JoinUsController extends Controller
         );
         $joinUs->addMedia($request->cv)->toMediaCollection('join');
 
-        // Send email
-        Mail::send(new NewJobApplicationCreated($joinUs));
+        // Send email with current locale
+        $locale = $request->input('locale', $request->header('Accept-Language', 'ar'));
+        // Extract primary language if header contains multiple languages
+        $locale = explode(',', $locale)[0];
+        $locale = explode('-', $locale)[0]; // Get 'en' from 'en-US'
+        $locale = in_array($locale, ['ar', 'en']) ? $locale : 'ar';
+        
+        Mail::send(new NewJobApplicationCreated($joinUs, $locale));
 
         return response([
             'message' => 'success',
