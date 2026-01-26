@@ -133,7 +133,7 @@ export default {
     "pleaseTryAgain": "Please try again later",
     ifYouFaceAProplem: "If You face A problem, please ",
     sendUsNow: "email us now",
-    submitted: "data submitted successfully",
+    submitted: "The CV has been submitted successfully",
     investorsRelations: "Investors Relations",
     contactWithInvestorsRelations: "Contact With InvestorsRelations",
     highboard: "Board Of Directors",
