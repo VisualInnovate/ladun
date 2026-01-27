@@ -23,6 +23,7 @@ class NewJobApplicationCreated extends Mailable
     public function build()
     {
         $mail = $this->to('career@ladun.sa')
+            ->cc('Sufian@visualinnovate.com')
             ->subject('New Job Application - '.$this->joinUs->name)
             ->view('emails.new-job-application')
             ->with(['locale' => $this->locale]);
